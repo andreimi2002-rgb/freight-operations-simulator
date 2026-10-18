@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.7.0 — 2026-10-19
+
+- Replaced the route-line schematic with a Geoapify/OpenStreetMap road map with fitted route geometry and A/B markers.
+- Reduced the default route panel to the map, countries, toll status, traffic model, and three main roads; road classes, surfaces, and key turns are now collapsed under “More route details.”
+- Simplified the printed report to include the road map and a short route summary instead of listing every route segment.
+- Reduced route instructions to key maneuver entries and retained map images only for the five latest saved scenarios.
+- Added disclosure that Geoapify Static Maps requests consume additional API credits.
+
+## 0.6.0 — 2026-10-19
+
+- Narrowed random city draws to the 40 most-populated GeoNames places per supported country; the catalog now contains 1,150 records across the current ATS/ETS2 region set.
+- Added a route geometry schematic, country coverage, road-class and road-name summaries, surface data, and turn-by-turn segments to generated reports.
+- Grouped consecutive Geoapify road fragments into readable stretches so long routes are not truncated near the origin; reports retain up to 300 grouped stretches and disclose the source fragment count.
+- Requested Geoapify's heavy-truck route profile and approximated traffic; reports disclose the modeled 40 t / 4.1 m profile limits and that traffic is not live.
+- Added route detail data to print reports and retained provider source/timestamp attribution.
+- Note: Geoapify documents that `route_details` increases API credit consumption.
+
 ## 0.5.0 — 2026-10-19
 
 - Restored random route generation using 10,264 real GeoNames city records across the ATS and ETS2 regions.

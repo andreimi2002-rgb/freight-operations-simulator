@@ -49,6 +49,17 @@ try {
         worlds = @($worlds)
       })
     }
+
+    $topCities = [System.Collections.Generic.List[object]]::new()
+    foreach ($group in ($cities | Group-Object { $_["countryCode"] })) {
+      $rank = 0
+      foreach ($city in ($group.Group | Sort-Object { [long]$_["population"] } -Descending | Select-Object -First 40)) {
+        $rank += 1
+        $city["countryRank"] = $rank
+        $topCities.Add($city)
+      }
+    }
+    $cities = $topCities
   } finally {
     $reader.Dispose()
   }
@@ -63,7 +74,7 @@ $payload = [ordered]@{
     license = "CC BY 4.0"
     attribution = "GeoNames geographical database"
     importedAt = [DateTime]::UtcNow.ToString("o")
-    selection = "Populated places in cities15000; contiguous United States for ATS and selected European countries for ETS2."
+    selection = "Top 40 populated places per country in cities15000; contiguous United States for ATS and selected European countries for ETS2."
     count = $cities.Count
   }
   cities = @($cities)

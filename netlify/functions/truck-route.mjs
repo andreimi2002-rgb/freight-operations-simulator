@@ -6,6 +6,29 @@ const json = (body, status = 200) => new Response(JSON.stringify(body), {
 const validPoint = point => point && Number.isFinite(point.lat) && Number.isFinite(point.lon)
   && point.lat >= -90 && point.lat <= 90 && point.lon >= -180 && point.lon <= 180;
 
+function encodePolyline6(lines) {
+  let previousLat = 0;
+  let previousLon = 0;
+  let encoded = "";
+  const append = value => {
+    let chunk = value < 0 ? ~(value << 1) : value << 1;
+    while (chunk >= 0x20) {
+      encoded += String.fromCharCode((0x20 | (chunk & 0x1f)) + 63);
+      chunk >>= 5;
+    }
+    encoded += String.fromCharCode(chunk + 63);
+  };
+  for (const line of lines) for (const [lon, lat] of line) {
+    const scaledLat = Math.round(lat * 1e6);
+    const scaledLon = Math.round(lon * 1e6);
+    append(scaledLat - previousLat);
+    append(scaledLon - previousLon);
+    previousLat = scaledLat;
+    previousLon = scaledLon;
+  }
+  return encoded;
+}
+
 export default async function truckRoute(request) {
   if (request.method !== "POST") return json({ error: "Use POST." }, 405);
   const apiKey = process.env.GEOAPIFY_API_KEY;
@@ -17,8 +40,11 @@ export default async function truckRoute(request) {
 
   const url = new URL("https://api.geoapify.com/v1/routing");
   url.searchParams.set("waypoints", `${body.origin.lat},${body.origin.lon}|${body.destination.lat},${body.destination.lon}`);
-  url.searchParams.set("mode", "truck");
-  url.searchParams.set("format", "json");
+  url.searchParams.set("mode", "heavy_truck");
+  url.searchParams.set("traffic", "approximated");
+  url.searchParams.set("details", "route_details,instruction_details");
+  url.searchParams.set("lang", "ro");
+  url.searchParams.set("format", "geojson");
   url.searchParams.set("apiKey", apiKey);
 
   try {
@@ -26,13 +52,129 @@ export default async function truckRoute(request) {
     if (upstream.status === 429) return json({ error: "Truck routing is temporarily rate limited. Try again shortly." }, 429);
     if (!upstream.ok) return json({ error: "The routing provider could not calculate this truck route." }, 502);
     const payload = await upstream.json();
-    const route = payload.features?.[0]?.properties || payload.results?.[0];
+    const feature = payload.features?.[0];
+    const route = feature?.properties || payload.results?.[0];
     if (!Number.isFinite(route?.distance) || !Number.isFinite(route?.time)) return json({ error: "The routing provider returned no usable truck route." }, 502);
+
+    const rawLegs = Array.isArray(route.legs) ? route.legs : [];
+    const allSteps = rawLegs.flatMap((leg, legIndex) => (Array.isArray(leg.steps) ? leg.steps : []).map(step => ({ ...step, legIndex })));
+    const roadClassTotals = new Map();
+    const namedRoadTotals = new Map();
+    const surfaceTotals = new Map();
+    const countries = new Set();
+    for (const leg of rawLegs) {
+      const values = Array.isArray(leg.country_code) ? leg.country_code : leg.country_code ? [leg.country_code] : [];
+      values.forEach(code => countries.add(String(code).toUpperCase()));
+    }
+    for (const step of allSteps) {
+      const distance = Number.isFinite(step.distance) ? step.distance : 0;
+      if (step.road_class) roadClassTotals.set(step.road_class, (roadClassTotals.get(step.road_class) || 0) + distance);
+      if (step.name) namedRoadTotals.set(step.name, (namedRoadTotals.get(step.name) || 0) + distance);
+      if (step.surface) surfaceTotals.set(step.surface, (surfaceTotals.get(step.surface) || 0) + distance);
+    }
+    const summarize = totals => [...totals.entries()]
+      .map(([name, distanceMeters]) => ({ name, distanceMeters, share: route.distance ? distanceMeters / route.distance : 0 }))
+      .sort((a, b) => b.distanceMeters - a.distanceMeters);
+    const geometry = feature?.geometry?.type === "MultiLineString"
+      ? feature.geometry.coordinates
+      : feature?.geometry?.type === "LineString" ? [feature.geometry.coordinates] : [];
+    const sampledGeometry = geometry.map(line => {
+      if (!Array.isArray(line) || line.length <= 500) return line;
+      const interval = Math.ceil(line.length / 500);
+      return line.filter((_, index) => index === 0 || index === line.length - 1 || index % interval === 0);
+    });
+    let mapImageDataUrl = null;
+    let mapError = null;
+    try {
+      const routePolyline = encodePolyline6(sampledGeometry);
+      if (routePolyline.length > 0) {
+        const mapUrl = new URL("https://maps.geoapify.com/v1/staticmap");
+        mapUrl.searchParams.set("apiKey", apiKey);
+        const mapResponse = await fetch(mapUrl, {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            style: "osm-bright",
+            width: 760,
+            height: 390,
+            format: "jpeg",
+            lang: "ro",
+            geometries: [{ type: "polyline6", value: routePolyline, linecolor: "#e7832e", lineopacity: 0.95, linewidth: 5 }],
+            markers: [
+              { lat: body.origin.lat, lon: body.origin.lon, type: "circle", color: "#28a66a", size: 32, text: "A" },
+              { lat: body.destination.lat, lon: body.destination.lon, type: "circle", color: "#e3aa31", size: 32, text: "B" },
+            ],
+          }),
+          signal: AbortSignal.timeout(12000),
+        });
+        const contentType = mapResponse.headers.get("content-type") || "";
+        if (mapResponse.ok && contentType.startsWith("image/")) {
+          const image = Buffer.from(await mapResponse.arrayBuffer());
+          mapImageDataUrl = `data:${contentType};base64,${image.toString("base64")}`;
+        } else {
+          mapError = "Geoapify did not return a map image for this route.";
+        }
+      }
+    } catch {
+      mapError = "The route map could not be loaded right now.";
+    }
+    const rawSegments = allSteps.map(step => ({
+      distanceMeters: Number.isFinite(step.distance) ? step.distance : null,
+      durationSeconds: Number.isFinite(step.time) ? step.time : null,
+      roadName: typeof step.name === "string" ? step.name.slice(0, 120) : null,
+      roadClass: typeof step.road_class === "string" ? step.road_class : null,
+      surface: typeof step.surface === "string" ? step.surface : null,
+      speedLimit: Number.isFinite(step.speed_limit) ? step.speed_limit : null,
+      truckLimit: Number.isFinite(step.truck_limit) ? step.truck_limit : null,
+      laneCount: Number.isFinite(step.lane_count) ? step.lane_count : null,
+      toll: step.toll === true,
+      ferry: step.ferry === true,
+      bridge: step.bridge === true,
+      tunnel: step.tunnel === true,
+      instruction: typeof step.instruction?.text === "string" ? step.instruction.text.slice(0, 300) : null,
+      maneuver: typeof step.instruction?.type === "string" ? step.instruction.type : null,
+    }));
+    const groupedSegments = [];
+    for (const step of rawSegments) {
+      const previous = groupedSegments.at(-1);
+      const sameRoadProperties = previous
+        && ["roadName", "roadClass", "surface", "speedLimit", "truckLimit"].every(key => previous[key] === step[key]);
+      if (sameRoadProperties && !step.instruction) {
+        previous.distanceMeters += step.distanceMeters || 0;
+        previous.durationSeconds += step.durationSeconds || 0;
+        if (previous.laneCount !== step.laneCount) previous.laneCount = null;
+        previous.toll ||= step.toll;
+        previous.ferry ||= step.ferry;
+        previous.bridge ||= step.bridge;
+        previous.tunnel ||= step.tunnel;
+      } else {
+        groupedSegments.push({ ...step });
+      }
+    }
+    const maneuvers = groupedSegments.filter(step => step.instruction);
+    const segments = maneuvers.slice(0, 20);
     return json({
       distanceMeters: route.distance,
       durationSeconds: route.time,
       provider: "Geoapify Routing API",
-      profile: "truck",
+      profile: "heavy_truck",
+      modeledMaximumGrossWeightKg: 40000,
+      modeledMaximumHeightMeters: 4.1,
+      trafficModel: "approximated",
+      hasTolls: route.toll === true || allSteps.some(step => step.toll === true),
+      hasFerries: route.ferry === true || allSteps.some(step => step.ferry === true),
+      countries: [...countries],
+      roadClasses: summarize(roadClassTotals),
+      namedRoads: summarize(namedRoadTotals).slice(0, 12),
+      surfaces: summarize(surfaceTotals),
+      segmentCount: groupedSegments.length,
+      maneuverCount: maneuvers.length,
+      providerSegmentCount: allSteps.length,
+      omittedSegmentCount: Math.max(0, maneuvers.length - segments.length),
+      segments,
+      geometry: sampledGeometry,
+      mapImageDataUrl,
+      mapError,
       sourceUrl: "https://apidocs.geoapify.com/docs/routing/",
       retrievedAt: new Date().toISOString(),
     });
