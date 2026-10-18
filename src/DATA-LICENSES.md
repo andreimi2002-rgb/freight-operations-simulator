@@ -2,7 +2,7 @@
 
 ## GeoNames city catalog
 
-`data/geonames-cities.json` is a filtered export of the official GeoNames `cities15000.zip` gazetteer. It contains populated places for the contiguous United States (ATS pool) and selected ETS2 European countries. The catalog currently contains 10,264 records. Coordinates, population and time-zone fields retain GeoNames identifiers so each selected city links back to its source record.
+`data/geonames-cities.json` is a filtered export of the official GeoNames `cities15000.zip` gazetteer. It contains the 40 highest-population available city records in the contiguous United States (ATS pool) and selected ETS2 European countries. Countries with fewer than 40 eligible records contribute all eligible records. The catalog currently contains 1,150 records. Coordinates, population, country rank, and time-zone fields retain GeoNames identifiers so each selected city links back to its source record.
 
 - Attribution: GeoNames geographical database
 - License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)

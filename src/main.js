@@ -21,6 +21,71 @@ function esc(value) {
 function safeHref(value, fallback) {
   return /^https?:\/\//i.test(String(value || "")) ? value : fallback;
 }
+function formatRouteDistance(meters, unit) {
+  const distance = unit === "mi" ? meters / 1609.344 : meters / 1000;
+  return `${formatNum(distance)} ${unit}`;
+}
+function routeMapSvg(geometry) {
+  const lines = Array.isArray(geometry) ? geometry.filter(line => Array.isArray(line) && line.length > 1) : [];
+  const points = lines.flat().filter(point => Array.isArray(point) && Number.isFinite(point[0]) && Number.isFinite(point[1]));
+  if (points.length < 2) return `<p class="route-map-empty">Route geometry was not returned for this result.</p>`;
+  const longitudes = points.map(point => point[0]);
+  const latitudes = points.map(point => point[1]);
+  const meanLat = (Math.min(...latitudes) + Math.max(...latitudes)) / 2 * Math.PI / 180;
+  const project = ([lon, lat]) => [lon * Math.cos(meanLat), -lat];
+  const projected = points.map(project);
+  const minX = Math.min(...projected.map(point => point[0]));
+  const maxX = Math.max(...projected.map(point => point[0]));
+  const minY = Math.min(...projected.map(point => point[1]));
+  const maxY = Math.max(...projected.map(point => point[1]));
+  const width = 800, height = 220, pad = 24;
+  const scale = Math.min((width - pad * 2) / Math.max(maxX - minX, 0.0001), (height - pad * 2) / Math.max(maxY - minY, 0.0001));
+  const mapPoint = point => {
+    const [x, y] = project(point);
+    return [pad + (x - minX) * scale, pad + (y - minY) * scale];
+  };
+  const path = lines.map(line => line.map((point, index) => {
+    if (!Array.isArray(point) || !Number.isFinite(point[0]) || !Number.isFinite(point[1])) return "";
+    const [x, y] = mapPoint(point);
+    return `${index === 0 ? "M" : "L"}${x.toFixed(1)} ${y.toFixed(1)}`;
+  }).join(" ")).filter(Boolean).join(" ");
+  const [startX, startY] = mapPoint(points[0]);
+  const [endX, endY] = mapPoint(points[points.length - 1]);
+  return `<svg class="route-map-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="Geoapify route geometry"><path class="route-map-line" d="${path}"/><circle class="route-map-start" cx="${startX}" cy="${startY}" r="6"/><circle class="route-map-end" cx="${endX}" cy="${endY}" r="6"/></svg>`;
+}
+function renderRoadDetails(route, unit, originName, destinationName) {
+  const details = route.routeDetails || {};
+  const classRows = (details.roadClasses || []).map(item => `
+    <div class="road-class-row"><span>${esc(String(item.name).replaceAll("_", " "))}</span><div><i style="width:${Math.min(100, Math.max(0, item.share * 100)).toFixed(1)}%"></i></div><b>${formatRouteDistance(item.distanceMeters, unit)}</b></div>`).join("");
+  const namedRoads = (details.namedRoads || []).map(item => `<li><span>${esc(item.name)}</span><b>${formatRouteDistance(item.distanceMeters, unit)}</b></li>`).join("");
+  const surfaces = (details.surfaces || []).map(item => `<li><span>${esc(String(item.name).replaceAll("_", " "))}</span><b>${formatRouteDistance(item.distanceMeters, unit)}</b></li>`).join("");
+  const segments = (details.segments || []).map((step, index) => {
+    const attributes = [step.roadName, step.roadClass?.replaceAll("_", " "), step.surface?.replaceAll("_", " ")].filter(Boolean).join(" · ");
+    const flags = [step.toll && "Toll", step.ferry && "Ferry", step.bridge && "Bridge", step.tunnel && "Tunnel"].filter(Boolean).join(" · ");
+    const speed = Number.isFinite(step.speedLimit) ? `Speed limit ${formatNum(unit === "mi" ? step.speedLimit * 0.621371 : step.speedLimit)} ${unit === "mi" ? "mph" : "km/h"}` : "";
+    const truckLimit = Number.isFinite(step.truckLimit) ? `Truck speed limit ${formatNum(unit === "mi" ? step.truckLimit * 0.621371 : step.truckLimit)} ${unit === "mi" ? "mph" : "km/h"}` : "";
+    const lanes = Number.isFinite(step.laneCount) ? `${step.laneCount} lanes` : "";
+    const duration = Number.isFinite(step.durationSeconds) ? `${formatNum(step.durationSeconds / 60)} min` : "";
+    return `<li class="route-step"><span class="route-step-index">${index + 1}</span><div><b>${esc(step.instruction || attributes || "Continue on route")}</b><small>${esc([attributes, formatRouteDistance(step.distanceMeters || 0, unit), duration, speed, truckLimit, lanes, flags].filter(Boolean).join(" · "))}</small></div></li>`;
+  }).join("");
+  const countries = (details.countries || []).map(code => new Intl.DisplayNames(["en"], { type: "region" }).of(code)).join(", ");
+  const profileWeight = details.modeledMaximumGrossWeightKg ? `${formatNum(details.modeledMaximumGrossWeightKg / 1000)} t` : "not returned";
+  const profileHeight = details.modeledMaximumHeightMeters ? `${formatNum(details.modeledMaximumHeightMeters)} m` : "not returned";
+  return `<section class="route-detail-panel">
+    <div class="route-detail-heading"><div><div class="eyebrow">ROUTE PROFILE</div><h4>Road and route details</h4></div><span class="mini-pill">${esc(route.profile || "truck")} · Geoapify</span></div>
+    <div class="route-map-frame">${routeMapSvg(details.geometry)}<div class="route-map-labels"><span>START · ${esc(originName)}</span><span>FINISH · ${esc(destinationName)}</span></div></div>
+    <div class="route-detail-facts">
+      <div><small>ROAD SEGMENTS</small><b>${formatNum(details.segmentCount || 0)}</b></div>
+      <div><small>TRAFFIC MODEL</small><b>${esc(details.trafficModel || "Not returned")}</b></div>
+      <div><small>ROUTE FLAGS</small><b>${details.hasTolls ? "Tolls" : "No toll reported"}${details.hasFerries ? " · Ferry" : ""}</b></div>
+      <div><small>ROUTE COUNTRIES</small><b>${esc(countries || "Not returned")}</b></div>
+      <div><small>PROFILE LIMITS</small><b>${esc(profileWeight)} gross · ${esc(profileHeight)} height</b></div>
+    </div>
+    ${classRows ? `<div class="route-detail-columns"><div><h5>Road classes</h5>${classRows}</div><div>${namedRoads ? `<h5>Major named roads</h5><ul class="named-road-list">${namedRoads}</ul>` : ""}${surfaces ? `<h5>Road surfaces</h5><ul class="named-road-list">${surfaces}</ul>` : ""}</div></div>` : "<p class="route-map-empty">Road class details were not returned.</p>"}
+    ${(details.segments || []).length ? `<details class="route-steps"><summary>Turn-by-turn route segments · ${formatNum(details.segmentCount || segments.length)} total</summary><ol>${segments}</ol>${details.omittedSegmentCount ? `<p class="field-help">${formatNum(details.omittedSegmentCount)} additional segments were omitted from this saved report.</p>` : ""}</details>` : "<p class=\"route-map-empty\">Turn-by-turn segment details were not returned.</p>"}
+    <p class="field-help">Road properties and instructions are provider data. The route uses a 40 t / 4.1 m heavy-truck profile with approximated traffic; it is not a vehicle-specific clearance or live traffic report.</p>
+  </section>`;
+}
 function loadHistory() {
   try {
     const saved = JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
@@ -190,8 +255,9 @@ function renderMission(mission) {
       <div class="metric"><b>${hours}h ${minutes}m</b><small>ROUTED DURATION · GEOAPIFY</small></div>
       <div class="metric"><b>Not assigned</b><small>LOAD WEIGHT</small></div>
     </div>
+    ${renderRoadDetails(mission.route, mission.route.unit, mission.origin.name, mission.destination.name)}
     <div class="mission-section"><h4>GENERATED FREIGHT SCENARIO</h4><p><b>${esc(mission.cargo.name)}</b> — ${esc(mission.cargo.description)}. Suggested equipment: <b>${esc(mission.equipment.name)}</b>. This pairing is a planning prompt; the app has not verified a real shipment, payload, facility capability, or commercial relationship.</p></div>
-    <div class="mission-section"><h4>DATA SOURCES</h4><p>Origin record: <a href="${esc(originUrl)}" target="_blank" rel="noopener">${esc(mission.origin.sourceName)}</a>. Destination record: <a href="${esc(destinationUrl)}" target="_blank" rel="noopener">${esc(mission.destination.sourceName)}</a>. Attribution: ${esc(mission.origin.attribution || "Geoapify")}. Retrieved ${esc(new Date(mission.origin.retrievedAt || mission.createdAt).toLocaleString())}. Route: <a href="${esc(routeUrl)}" target="_blank" rel="noopener">Geoapify Routing API</a> · truck profile · retrieved ${esc(new Date(mission.route.retrievedAt).toLocaleString())}.</p></div>
+    <div class="mission-section"><h4>DATA SOURCES</h4><p>Origin record: <a href="${esc(originUrl)}" target="_blank" rel="noopener">${esc(mission.origin.sourceName)}</a>. Destination record: <a href="${esc(destinationUrl)}" target="_blank" rel="noopener">${esc(mission.destination.sourceName)}</a>. Attribution: ${esc(mission.origin.attribution || "Geoapify")}. Retrieved ${esc(new Date(mission.origin.retrievedAt || mission.createdAt).toLocaleString())}. Route: <a href="${esc(routeUrl)}" target="_blank" rel="noopener">Geoapify Routing API</a> · ${esc(mission.route.profile || "truck")} profile · retrieved ${esc(new Date(mission.route.retrievedAt).toLocaleString())}.</p></div>
     <div class="mission-section"><h4>REAL-WORLD LIMITS</h4><p>The truck profile returns a routed distance and duration, but this route is not confirmed for a specific truck, trailer, cargo, road restriction, appointment, or driver-hours rule. Confirm the actual vehicle dimensions, gross weight, permits, facility access, cargo requirements, and route before dispatch.</p></div>
     <div class="output-actions"><button class="primary" id="printReport">↧ EXPORT / PRINT REPORT</button><button id="regenerate">⟳ NEW SCENARIO</button></div>
     <p class="form-note">A real place or route result does not mean a real booking. Geoapify-provided place attributes are linked to their source where available.</p>`;
@@ -209,7 +275,9 @@ function printMission(mission) {
     <header><div style="color:#ffc45b;font-size:11px;font-weight:bold;letter-spacing:2px">FREIGHT OPERATIONS SIMULATOR</div><h1>GENERATED FREIGHT SCENARIO</h1><p>${esc(mission.id)} · ${esc(mode.label)} · ${esc(new Date(mission.createdAt).toLocaleString())}</p></header>
     <div class="route"><div><small>ORIGIN</small><h2>${esc(mission.origin.name)}</h2><p>${esc(mission.origin.address)}</p></div><div>→</div><div><small>DESTINATION</small><h2>${esc(mission.destination.name)}</h2><p>${esc(mission.destination.address)}</p></div></div>
     <div class="grid"><div class="card"><small>GENERATED FREIGHT CATEGORY</small><h3>${esc(mission.cargo.name)}</h3></div><div class="card"><small>SUGGESTED EQUIPMENT</small><h3>${esc(mission.equipment.name)}</h3></div><div class="card"><small>TRUCK ROUTE</small><h3>${formatNum(mission.route.distance)} ${mission.route.unit} · ${duration}</h3></div></div>
-    <h2>Source & limits</h2><p>Locations returned by Geoapify Geocoding API. Distance and duration returned by Geoapify Routing API using a truck profile. Verify vehicle dimensions, payload, permits, restrictions, facility access, and driver-hours rules before use.</p>
+    <h2>Route details</h2><p>Profile: ${esc(mission.route.profile || "truck")} · traffic: ${esc(mission.route.trafficModel || "not returned")} · modeled limits: ${formatNum((mission.route.routeDetails?.modeledMaximumGrossWeightKg || 0) / 1000)} t gross / ${formatNum(mission.route.routeDetails?.modeledMaximumHeightMeters || 0)} m high. Route crosses: ${esc((mission.route.routeDetails?.countries || []).join(", ") || "not returned")}. Tolls: ${mission.route.routeDetails?.hasTolls ? "reported" : "not reported"}; ferries: ${mission.route.routeDetails?.hasFerries ? "reported" : "not reported"}.</p>
+    <ol>${(mission.route.routeDetails?.segments || []).map(segment => `<li>${esc(segment.instruction || segment.roadName || "Continue on route")} — ${esc([segment.roadName, segment.roadClass, segment.surface, Number.isFinite(segment.distanceMeters) ? formatRouteDistance(segment.distanceMeters, mission.route.unit) : "", segment.toll && "toll", segment.ferry && "ferry", segment.bridge && "bridge", segment.tunnel && "tunnel"].filter(Boolean).join(" · "))}</li>`).join("")}</ol>
+    <h2>Source & limits</h2><p>Locations returned by Geoapify Geocoding API. Distance and duration returned by Geoapify Routing API using the heavy-truck profile. Traffic is approximated, not live. Verify vehicle dimensions, payload, permits, restrictions, facility access, and driver-hours rules before use.</p>
     <div class="warning"><b>GENERATED SCENARIO — NOT A SHIPMENT</b><br>No commercial relationship, contract, booking, cargo weight, or dispatch authorization is represented.</div>
     <script>window.onload=()=>window.print()</script></body></html>`);
   win.document.close();

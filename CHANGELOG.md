@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.0 — 2026-10-19
+
+- Narrowed random city draws to the 40 most-populated GeoNames places per supported country; the catalog now contains 1,150 records across the current ATS/ETS2 region set.
+- Added a route geometry schematic, country coverage, road-class and road-name summaries, surface data, and turn-by-turn segments to generated reports.
+- Requested Geoapify's heavy-truck route profile and approximated traffic; reports disclose the modeled 40 t / 4.1 m profile limits and that traffic is not live.
+- Added route detail data to print reports and retained provider source/timestamp attribution.
+- Note: Geoapify documents that `route_details` increases API credit consumption.
+
 ## 0.5.0 — 2026-10-19
 
 - Restored random route generation using 10,264 real GeoNames city records across the ATS and ETS2 regions.
