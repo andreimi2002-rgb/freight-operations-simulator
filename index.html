@@ -1,0 +1,165 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#11161b" />
+  <meta name="description" content="Freight Operations Simulator — generate detailed trucking missions and logistics reports." />
+  <title>Freight Operations Simulator</title>
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">F<span>OS</span></div>
+        <div><strong>FREIGHT OPS</strong><small>SIMULATOR / 0.3</small></div>
+      </div>
+      <div class="side-label">WORKSPACE</div>
+      <button class="nav-item active" type="button" aria-current="page"><span>▦</span> Mission generator</button>
+      <button class="nav-item" id="historyNav" type="button"><span>◷</span> Mission history <em id="historyCount" aria-label="0 saved missions">0</em></button>
+      <button class="nav-item" id="databaseNav" type="button"><span>⌖</span> Data directory</button>
+      <div class="sidebar-bottom">
+        <div class="status-dot"></div>
+        <div><strong>LOCAL DEMO</strong><small>No account required</small></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">OPERATIONS CENTER <span>/</span> MISSION BUILDER</div>
+          <h1>Freight Operations <span>Simulator</span></h1>
+          <p>Build a mission. Plan the movement. Generate the paperwork.</p>
+        </div>
+        <div class="top-status"><span class="pulse"></span> SYSTEM ONLINE <b>DEMO</b></div>
+      </header>
+
+      <section class="hero-strip">
+        <div class="hero-copy">
+          <div class="hero-tag">FREIGHT MISSION CONTROL</div>
+          <h2>Every mile has<br/><span>a paper trail.</span></h2>
+          <p>ATS and ETS2 trucking scenarios, structured dispatch data, stops and detailed mission briefs — in one workspace.</p>
+        </div>
+        <div class="hero-graphic" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="truck-symbol">▰</div>
+          <div class="route-line"></div><div class="route-node node-a"></div><div class="route-node node-b"></div>
+          <span class="map-label label-a">ORIGIN</span><span class="map-label label-b">DESTINATION</span>
+        </div>
+        <div class="hero-index">FOS<br/><b>001</b></div>
+      </section>
+
+      <section class="workspace-grid">
+        <div class="panel builder-panel">
+          <div class="panel-head">
+            <div><div class="eyebrow">01 / CONFIGURATION</div><h3>Mission parameters</h3></div>
+            <span class="mini-pill">MISSION ENGINE V1</span>
+          </div>
+          <form id="missionForm">
+            <label for="world">Simulation mode</label>
+            <div class="segmented">
+              <label><input type="radio" name="world" value="ATS" checked/><span>🇺🇸 American Truck Simulator</span></label>
+              <label><input type="radio" name="world" value="ETS2"/><span>🇪🇺 Euro Truck Simulator 2</span></label>
+            </div>
+
+            <div class="field-grid">
+              <div class="field">
+                <label for="cargo">Cargo category</label>
+                <select id="cargo">
+                  <option value="random">Random cargo</option>
+                  <option value="industrial">Industrial materials</option>
+                  <option value="food">Food & refrigerated</option>
+                  <option value="vehicles">Vehicles & machinery</option>
+                  <option value="timber">Timber & building materials</option>
+                  <option value="chemicals">Chemicals and tank cargo</option>
+                  <option value="containers">Container freight</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="detail">Report format</label>
+                <select id="detail">
+                  <option value="detailed">Detailed report</option>
+                  <option value="quick">Quick mission brief</option>
+                  <option value="full">Full operations dossier</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="difficulty">Operating style</label>
+                <select id="difficulty">
+                  <option value="realistic">Realistic</option>
+                  <option value="casual">Casual</option>
+                  <option value="hardcore">Hardcore simulation</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="region">Region preference</label>
+                <select id="region">
+                  <option value="any">Any region</option>
+                  <option value="west">Western USA / Pacific Northwest</option>
+                  <option value="south">Southern USA</option>
+                  <option value="midwest">Midwest USA</option>
+                  <option value="north">Northern / Central Europe</option>
+                  <option value="south-eu">Southern Europe</option>
+                </select>
+              </div>
+            </div>
+            <div class="toggle-row">
+              <div><strong>Include a simulated break stop</strong><small>Generic waypoint only. No real facility is assigned.</small></div>
+              <label class="switch"><input id="includeStop" type="checkbox" checked/><span></span></label>
+            </div>
+            <div class="toggle-row">
+              <div><strong>Include in-game company references</strong><small>Names come from ATS/ETS2 reference catalog; generated contracts are fictional.</small></div>
+              <label class="switch"><input id="includeCompanies" type="checkbox" checked/><span></span></label>
+            </div>
+            <button class="generate-btn" type="submit"><span>✦</span> GENERATE FREIGHT MISSION <b>↗</b></button>
+            <p class="form-note">Generated missions are simulations. Routes, addresses, timings and cost figures must be verified before real-world use.</p>
+          </form>
+        </div>
+
+        <div class="panel result-panel" id="resultPanel">
+          <div class="panel-head">
+            <div><div class="eyebrow">02 / GENERATED MISSION OUTPUT</div><h3>Mission preview</h3></div>
+            <span class="live-pill"><i></i> READY</span>
+          </div>
+          <div class="empty-state" id="emptyState">
+            <div class="empty-icon">↗</div>
+            <h3>Your next mission starts here.</h3>
+            <p>Choose your world and parameters, then generate a freight assignment. The dispatch summary and route plan will appear in this panel.</p>
+            <div class="empty-stats"><span>01 <small>MISSION</small></span><span>02 <small>ROUTE</small></span><span>03 <small>REPORT</small></span></div>
+          </div>
+          <div id="missionOutput" class="mission-output hidden"></div>
+        </div>
+      </section>
+
+      <section class="lower-grid">
+        <div class="panel">
+          <div class="panel-head"><div><div class="eyebrow">03 / DATA COVERAGE</div><h3>Prototype directory</h3></div><span class="mini-pill">SAMPLE DATA</span></div>
+          <div id="coverage" class="coverage-list" tabindex="-1">
+            <div><span class="coverage-icon">⌖</span><span><b>Route corridors</b><small>Illustrative city pairs for ATS / ETS2-style missions</small></span><em>DEMO</em></div>
+            <div><span class="coverage-icon">▤</span><span><b>Cargo catalogue</b><small>Commodity classes, weight ranges and trailer concepts</small></span><em>DEMO</em></div>
+            <div><span class="coverage-icon">⌂</span><span><b>Stops & facilities</b><small>Generic simulated break stop; no address</small></span><em>LIMITED</em></div>
+            <div><span class="coverage-icon">▣</span><span><b>In-game company references</b><small>Sample names and industries from ATS/ETS2</small></span><em>LIMITED</em></div>
+          </div>
+        </div>
+        <div class="panel principle-panel">
+          <div class="eyebrow">DATA INTEGRITY</div>
+          <h3>Real places.<br/><span>Clearly marked simulations.</span></h3>
+          <p>The simulator uses real city names as scenario endpoints and selected in-game cargo and company references. Routes, freight assignments and operating figures are generated samples, not records of actual transport.</p>
+          <div class="principle-footer"><span class="integrity-dot"></span> SIMULATION ≠ VERIFIED TRANSPORT RECORD</div>
+        </div>
+      </section>
+
+      <footer><span>FOS / FREIGHT OPERATIONS SIMULATOR</span><span>INDEPENDENT CONCEPT • NOT AFFILIATED WITH SCS SOFTWARE</span><span>BUILD 0.3.0</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
