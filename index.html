@@ -13,7 +13,7 @@
     <aside class="sidebar">
       <div class="brand">
         <div class="brand-mark">F<span>OS</span></div>
-        <div><strong>FREIGHT OPS</strong><small>SIMULATOR / 0.3</small></div>
+        <div><strong>FREIGHT OPS</strong><small>SIMULATOR / 0.4</small></div>
       </div>
       <div class="side-label">WORKSPACE</div>
       <button class="nav-item active" type="button" aria-current="page"><span>▦</span> Mission generator</button>
@@ -21,7 +21,7 @@
       <button class="nav-item" id="databaseNav" type="button"><span>⌖</span> Data directory</button>
       <div class="sidebar-bottom">
         <div class="status-dot"></div>
-        <div><strong>LOCAL DEMO</strong><small>No account required</small></div>
+        <div><strong>DATA SOURCED</strong><small>Real places + generated loads</small></div>
       </div>
     </aside>
 
@@ -39,7 +39,7 @@
         <div class="hero-copy">
           <div class="hero-tag">FREIGHT MISSION CONTROL</div>
           <h2>Every mile has<br/><span>a paper trail.</span></h2>
-          <p>ATS and ETS2 trucking scenarios, structured dispatch data, stops and detailed mission briefs — in one workspace.</p>
+          <p>ATS and ETS2-inspired freight scenarios built around real places and truck-route data, with generated loads clearly identified.</p>
         </div>
         <div class="hero-graphic" aria-hidden="true">
           <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
@@ -54,66 +54,45 @@
         <div class="panel builder-panel">
           <div class="panel-head">
             <div><div class="eyebrow">01 / CONFIGURATION</div><h3>Mission parameters</h3></div>
-            <span class="mini-pill">MISSION ENGINE V1</span>
+            <span class="mini-pill">REAL-DATA PREVIEW</span>
           </div>
           <form id="missionForm">
-            <label for="world">Simulation mode</label>
+            <label for="world">World reference</label>
             <div class="segmented">
               <label><input type="radio" name="world" value="ATS" checked/><span>🇺🇸 American Truck Simulator</span></label>
               <label><input type="radio" name="world" value="ETS2"/><span>🇪🇺 Euro Truck Simulator 2</span></label>
             </div>
 
-            <div class="field-grid">
+            <div class="field-grid location-grid">
               <div class="field">
-                <label for="cargo">Cargo category</label>
+                <label for="originQuery">Origin city, facility or company</label>
+                <div class="search-control"><input id="originQuery" type="search" autocomplete="off" placeholder="e.g. Seattle, Washington"/><button id="searchOrigin" type="button">SEARCH</button></div>
+                <select id="originPlace" aria-label="Choose an origin result" disabled><option value="">Search for a real place</option></select>
+                <small class="field-help" id="originStatus" aria-live="polite">Results come from Geoapify.</small>
+              </div>
+              <div class="field">
+                <label for="destinationQuery">Destination city, facility or company</label>
+                <div class="search-control"><input id="destinationQuery" type="search" autocomplete="off" placeholder="e.g. Spokane, Washington"/><button id="searchDestination" type="button">SEARCH</button></div>
+                <select id="destinationPlace" aria-label="Choose a destination result" disabled><option value="">Search for a real place</option></select>
+                <small class="field-help" id="destinationStatus" aria-live="polite">Choose the exact result before generating.</small>
+              </div>
+              <div class="field cargo-field">
+                <label for="cargo">Generated freight category</label>
                 <select id="cargo">
-                  <option value="random">Random cargo</option>
-                  <option value="industrial">Industrial materials</option>
-                  <option value="food">Food & refrigerated</option>
-                  <option value="vehicles">Vehicles & machinery</option>
-                  <option value="timber">Timber & building materials</option>
-                  <option value="chemicals">Chemicals and tank cargo</option>
-                  <option value="containers">Container freight</option>
+                  <option value="random">Random freight category</option>
+                  <option value="dryGoods">Palletized dry goods</option>
+                  <option value="chilledFood">Chilled food products</option>
+                  <option value="freshProduce">Fresh produce</option>
+                  <option value="buildingMaterials">Building materials</option>
+                  <option value="machinery">Industrial machinery</option>
+                  <option value="containerFreight">Containerized freight</option>
+                  <option value="bulkGrain">Bulk grain</option>
                 </select>
-              </div>
-              <div class="field">
-                <label for="detail">Report format</label>
-                <select id="detail">
-                  <option value="detailed">Detailed report</option>
-                  <option value="quick">Quick mission brief</option>
-                  <option value="full">Full operations dossier</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="difficulty">Operating style</label>
-                <select id="difficulty">
-                  <option value="realistic">Realistic</option>
-                  <option value="casual">Casual</option>
-                  <option value="hardcore">Hardcore simulation</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="region">Region preference</label>
-                <select id="region">
-                  <option value="any">Any region</option>
-                  <option value="west">Western USA / Pacific Northwest</option>
-                  <option value="south">Southern USA</option>
-                  <option value="midwest">Midwest USA</option>
-                  <option value="north">Northern / Central Europe</option>
-                  <option value="south-eu">Southern Europe</option>
-                </select>
+                <small class="field-help">This is a generated scenario category, not a verified booking.</small>
               </div>
             </div>
-            <div class="toggle-row">
-              <div><strong>Include a simulated break stop</strong><small>Generic waypoint only. No real facility is assigned.</small></div>
-              <label class="switch"><input id="includeStop" type="checkbox" checked/><span></span></label>
-            </div>
-            <div class="toggle-row">
-              <div><strong>Include in-game company references</strong><small>Names come from ATS/ETS2 reference catalog; generated contracts are fictional.</small></div>
-              <label class="switch"><input id="includeCompanies" type="checkbox" checked/><span></span></label>
-            </div>
-            <button class="generate-btn" type="submit"><span>✦</span> GENERATE FREIGHT MISSION <b>↗</b></button>
-            <p class="form-note">Generated missions are simulations. Routes, addresses, timings and cost figures must be verified before real-world use.</p>
+            <button class="generate-btn" type="submit"><span>✦</span> GENERATE TRUCK-ROUTE SCENARIO <b>↗</b></button>
+            <p class="form-note">Add <code>GEOAPIFY_API_KEY</code> in Netlify environment variables for Production and Deploy Previews. Keys stay server-side.</p>
           </form>
         </div>
 
@@ -125,7 +104,7 @@
           <div class="empty-state" id="emptyState">
             <div class="empty-icon">↗</div>
             <h3>Your next mission starts here.</h3>
-            <p>Choose your world and parameters, then generate a freight assignment. The dispatch summary and route plan will appear in this panel.</p>
+            <p>Search two real locations, choose a freight category, then generate a scenario using a truck route from Geoapify.</p>
             <div class="empty-stats"><span>01 <small>MISSION</small></span><span>02 <small>ROUTE</small></span><span>03 <small>REPORT</small></span></div>
           </div>
           <div id="missionOutput" class="mission-output hidden"></div>
@@ -134,23 +113,23 @@
 
       <section class="lower-grid">
         <div class="panel">
-          <div class="panel-head"><div><div class="eyebrow">03 / DATA COVERAGE</div><h3>Prototype directory</h3></div><span class="mini-pill">SAMPLE DATA</span></div>
+          <div class="panel-head"><div><div class="eyebrow">03 / DATA COVERAGE</div><h3>Connected data</h3></div><span class="mini-pill">SOURCE TRACKED</span></div>
           <div id="coverage" class="coverage-list" tabindex="-1">
-            <div><span class="coverage-icon">⌖</span><span><b>Route corridors</b><small>Illustrative city pairs for ATS / ETS2-style missions</small></span><em>DEMO</em></div>
-            <div><span class="coverage-icon">▤</span><span><b>Cargo catalogue</b><small>Commodity classes, weight ranges and trailer concepts</small></span><em>DEMO</em></div>
-            <div><span class="coverage-icon">⌂</span><span><b>Stops & facilities</b><small>Generic simulated break stop; no address</small></span><em>LIMITED</em></div>
-            <div><span class="coverage-icon">▣</span><span><b>In-game company references</b><small>Sample names and industries from ATS/ETS2</small></span><em>LIMITED</em></div>
+            <div><span class="coverage-icon">⌖</span><span><b>Places and facilities</b><small>Search results sourced through Geoapify</small></span><em>LIVE</em></div>
+            <div><span class="coverage-icon">↗</span><span><b>Truck route</b><small>Distance and duration returned by a truck routing profile</small></span><em>LIVE</em></div>
+            <div><span class="coverage-icon">▤</span><span><b>Freight category</b><small>Generated planning concept; no weight or contract assigned</small></span><em>SIMULATED</em></div>
+            <div><span class="coverage-icon">▣</span><span><b>Trailer suggestion</b><small>Generic equipment match; confirm for the actual load</small></span><em>ADVISORY</em></div>
           </div>
         </div>
         <div class="panel principle-panel">
           <div class="eyebrow">DATA INTEGRITY</div>
-          <h3>Real places.<br/><span>Clearly marked simulations.</span></h3>
-          <p>The simulator uses real city names as scenario endpoints and selected in-game cargo and company references. Routes, freight assignments and operating figures are generated samples, not records of actual transport.</p>
-          <div class="principle-footer"><span class="integrity-dot"></span> SIMULATION ≠ VERIFIED TRANSPORT RECORD</div>
+          <h3>Real place data.<br/><span>Generated shipment scenario.</span></h3>
+          <p>Locations and truck-route distance/time are provider results. Freight category and trailer suggestion are generated for planning and do not represent a real load, company agreement, weight, or legal route clearance.</p>
+          <div class="principle-footer"><span class="integrity-dot"></span> SOURCE FACTS ≠ SHIPMENT RECORD</div>
         </div>
       </section>
 
-      <footer><span>FOS / FREIGHT OPERATIONS SIMULATOR</span><span>INDEPENDENT CONCEPT • NOT AFFILIATED WITH SCS SOFTWARE</span><span>BUILD 0.3.0</span></footer>
+      <footer><span>FOS / FREIGHT OPERATIONS SIMULATOR</span><span>INDEPENDENT CONCEPT • NOT AFFILIATED WITH SCS SOFTWARE</span><span>BUILD 0.4.0</span></footer>
     </main>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>

@@ -1,41 +1,36 @@
-﻿import test from 'node:test';
+import test from 'node:test';
 import assert from 'node:assert/strict';
-import {CARGO, EQUIPMENT, ROUTES, generateMission, validateMission} from '../src/mission-engine.mjs';
+import {CARGO, EQUIPMENT, WORLD_MODES, generateMission, validateMission} from '../src/mission-engine.mjs';
 
+const origin = {id:'place-a', name:'Seattle', address:'Seattle, WA, USA', lat:47.6062, lon:-122.3321, sourceName:'Geoapify', retrievedAt:'2026-10-19T09:00:00.000Z'};
+const destination = {id:'place-b', name:'Spokane', address:'Spokane, WA, USA', lat:47.6588, lon:-117.4260, sourceName:'Geoapify', retrievedAt:'2026-10-19T09:00:00.000Z'};
+const route = {distanceMeters:450000, durationSeconds:18000, provider:'Geoapify Routing API', profile:'truck', sourceUrl:'https://apidocs.geoapify.com/docs/routing/', retrievedAt:'2026-10-19T09:00:00.000Z'};
 const fixedNow = new Date('2026-10-19T09:00:00.000Z');
 const stableRandom = () => 0.42;
 
-for (const world of ['ATS', 'ETS2']) {
-  test(`${world} generated missions satisfy cargo/equipment and numeric invariants`, () => {
+for (const world of Object.keys(WORLD_MODES)) {
+  test(`${world} scenarios retain real sourced endpoints and route data`, () => {
     for (const cargoId of Object.keys(CARGO)) {
-      const mission = generateMission({world, cargoId, region:'any', operatingStyle:'realistic', random:stableRandom, now:fixedNow});
+      const mission = generateMission({world, origin, destination, route, cargoId, random:stableRandom, now:fixedNow});
       assert.deepEqual(validateMission(mission), []);
-      assert.ok((mission.cargo.gameReference?.equipmentIds ?? mission.cargo.equipmentIds).includes(mission.equipment.id));
-      assert.ok(mission.weightKg <= EQUIPMENT[mission.equipment.id].samplePayloadLimitKg);
-      assert.ok(mission.weightKg >= mission.cargo.weightKg[0]);
-      assert.ok(mission.distance.value > 0);
-      assert.ok(mission.travel.drivingHours > 0);
-      assert.ok(mission.travel.deadline > mission.createdAt);
-      assert.equal(mission.distance.unit, world === 'ATS' ? 'mi' : 'km');
-      assert.equal(mission.fuel.unit, world === 'ATS' ? 'gal US' : 'L');
-      assert.equal(mission.route.status, 'illustrative');
-      if (mission.cargo.gameReference) assert.ok(mission.cargo.gameReference.id);
-      assert.match(mission.carrier.status, /game-reference-only/);
+      assert.equal(mission.origin.id, origin.id);
+      assert.equal(mission.destination.id, destination.id);
+      assert.equal(mission.route.distanceMeters, route.distanceMeters);
+      assert.ok(CARGO[mission.cargo.id].equipmentIds.includes(mission.equipment.id));
+      assert.ok(EQUIPMENT[mission.equipment.id]);
+      assert.equal(mission.isSimulated, true);
+      assert.equal(mission.route.unit, world === 'ATS' ? 'mi' : 'km');
+      assert.equal(mission.cargo.status, 'generated-planning-scenario');
     }
   });
 }
 
-test('catalog contains only ATS and ETS2 routes for this milestone', () => {
-  assert.ok(ROUTES.length > 0);
-  assert.deepEqual([...new Set(ROUTES.map(route => route.world))].sort(), ['ATS','ETS2']);
+test('only ATS and ETS2 modes are supported at this stage', () => {
+  assert.deepEqual(Object.keys(WORLD_MODES).sort(), ['ATS','ETS2']);
 });
 
-test('route region mismatch fails clearly instead of silently changing the selection', () => {
-  assert.throws(() => generateMission({world:'ATS', region:'north', random:stableRandom, now:fixedNow}), /No sample routes/);
+test('unknown cargo, missing route, and future modes are rejected', () => {
+  assert.throws(() => generateMission({world:'ATS', origin, destination, route, cargoId:'unknown', random:stableRandom, now:fixedNow}), /Unknown cargo/);
+  assert.throws(() => generateMission({world:'ATS', origin, destination, cargoId:'dryGoods', random:stableRandom, now:fixedNow}), /Search for a real origin/);
+  assert.throws(() => generateMission({world:'REAL', origin, destination, route, random:stableRandom, now:fixedNow}), /Unknown transport world/);
 });
-
-test('invalid cargo and future logistics mode are rejected', () => {
-  assert.throws(() => generateMission({world:'ATS', cargoId:'unknown', random:stableRandom, now:fixedNow}), /Unknown cargo/);
-  assert.throws(() => generateMission({world:'REAL', random:stableRandom, now:fixedNow}), /Unknown transport world/);
-});
-

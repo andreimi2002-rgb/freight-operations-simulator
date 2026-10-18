@@ -1,18 +1,22 @@
-﻿# Changelog
+# Changelog
+
+## 0.4.0 — 2026-10-19
+
+- Reframed ATS/ETS2 as the initial world modes for real-data freight scenarios.
+- Added server-side Geoapify place search and truck-route functions; API keys stay in Netlify environment variables.
+- Replaced in-game companies and static route corridors in the generator with selected provider locations and a provider-returned truck route.
+- Replaced game cargo references in the live generator with generic freight categories and advisory trailer matches.
+- Removed sample load weights, fuel, and deadlines from generated scenarios; shipment assignment remains clearly simulated.
+- Retained the CC BY-SA 4.0 game catalog separately as an unused reference archive.
 
 ## 0.3.0 — 2026-10-19
 
-- Limited this milestone to ATS and ETS2, per product direction.
-- Extracted mission generation into a pure engine with validation and versioned mission records.
-- Added compatible cargo/equipment profiles, mode-aware units, illustrative fuel estimates, driving-time models, and simulated delivery windows.
-- Added a small ATS/ETS2 cargo and in-game company reference catalog with CC BY-SA 4.0 attribution in a separate file.
-- Replaced named facility stops with an explicitly simulated generic break point.
-- Added automated consistency tests.
+- Limited the initial milestone to ATS and ETS2.
+- Added a coherent sample mission engine and a separately attributed game reference catalog.
 
 ## 0.2.0 — 2026-10-19
 
 - Persisted up to 30 generated missions in browser local storage.
-- Added clear handling for region/world combinations with no sample route.
 - Improved text escaping, focus styles, and status announcements.
 
 ## 0.1.0 — Initial prototype
