@@ -2,14 +2,16 @@
 
 FOS is an early real-data freight scenario generator. ATS and ETS2 are the initial world modes; the generated freight scenario is not a real booking or dispatch.
 
-## Current version: 0.7.0 preview
+## Current version: 0.8.0 preview
 
 - Generate random routes between the 40 most-populated available GeoNames cities per country for ATS and ETS2 regions; exact facility or company searches remain optional.
 - Search real cities, addresses, facilities, or businesses through Geoapify Geocoding when choosing locations manually.
 - Calculate routes with Geoapify's heavy-truck profile and approximated traffic. Display a Geoapify/OpenStreetMap road map, a compact route summary, and optional collapsed road classes, surfaces, and key turns.
-- Generate a freight category and suggest compatible trailer equipment from a generic real-world planning taxonomy.
+- Generate a random or selected cargo from a curated catalog spanning agriculture and food, building materials, industrial goods, regulated goods, retail freight, vehicles, and livestock. Show load form, handling notes, applicable reference frameworks, and candidate trailer types.
 - Keep place and route data separate from the generated shipment scenario; do not invent a company contract, load weight, or booking.
 - Save up to 30 scenarios in browser local storage and print a sourced scenario brief.
+
+Cargo names are curated real-world examples organized with reference to UNECE NST 2007. Cargo-to-trailer matches and handling notes are planning heuristics, not verified product instructions. Hazardous-goods status is product-specific and is never inferred by the generator. Perishable-food carriage has rules and equipment requirements that depend on the product and applicable jurisdiction.
 
 The provider's heavy-truck mode models a maximum gross weight of 40 t and height of 4.1 m. This is not a vehicle-specific clearance. Traffic is approximated, not live; routes do not verify permits, every restriction, facility access, driver-hours compliance, or actual cargo compatibility. Confirm those details before dispatch use.
 
@@ -49,6 +51,7 @@ The previous Truck Simulator Wiki reference catalog remains separate in `src/dat
 - `src/styles.css` — responsive dashboard styling.
 - `src/main.js` — place search, route request, scenario display, history, and print rendering.
 - `src/mission-engine.mjs` — ATS/ETS2 scenario composition and generic freight/equipment taxonomy.
+- `src/data/cargo-catalog.mjs` — curated commodity examples, planning notes, compatibility suggestions, and source references.
 - `src/data/geonames-cities.json` — sourced random city pools for ATS and ETS2.
 - `scripts/import-geonames-cities.ps1` — GeoNames dump filter/import utility.
 - `netlify/functions/search-places.mjs` — server-side Geoapify place search.

@@ -1,51 +1,6 @@
-/**
- * FOS scenario composition. Place and route facts are supplied by providers;
- * cargo and equipment are generated planning concepts, not a real booking.
- */
-export const CARGO = {
-  dryGoods: {
-    id: "dryGoods",
-    name: "Palletized dry goods",
-    description: "General non-hazardous packaged freight",
-    equipmentIds: ["dryVan", "curtainsider"],
-  },
-  chilledFood: {
-    id: "chilledFood",
-    name: "Chilled food products",
-    description: "Temperature-controlled food freight",
-    equipmentIds: ["reefer"],
-  },
-  freshProduce: {
-    id: "freshProduce",
-    name: "Fresh produce",
-    description: "Fresh fruit and vegetables; handling needs vary by product",
-    equipmentIds: ["reefer", "curtainsider"],
-  },
-  buildingMaterials: {
-    id: "buildingMaterials",
-    name: "Building materials",
-    description: "Packaged or secured construction materials",
-    equipmentIds: ["flatbed", "curtainsider"],
-  },
-  machinery: {
-    id: "machinery",
-    name: "Industrial machinery",
-    description: "Machinery; dimensions and permits depend on the actual item",
-    equipmentIds: ["lowboy", "flatbed"],
-  },
-  containerFreight: {
-    id: "containerFreight",
-    name: "Containerized freight",
-    description: "Intermodal container movement",
-    equipmentIds: ["containerChassis"],
-  },
-  bulkGrain: {
-    id: "bulkGrain",
-    name: "Bulk grain",
-    description: "Dry agricultural bulk; unloading and commodity rules vary",
-    equipmentIds: ["grainHopper"],
-  },
-};
+/** FOS cargo and equipment suggestions are scenario planning concepts, never booking facts. */
+import { CARGO } from "./data/cargo-catalog.mjs";
+export { CARGO } from "./data/cargo-catalog.mjs";
 
 export const EQUIPMENT = {
   dryVan: { id: "dryVan", name: "Dry van" },
@@ -55,6 +10,15 @@ export const EQUIPMENT = {
   lowboy: { id: "lowboy", name: "Lowboy trailer" },
   containerChassis: { id: "containerChassis", name: "Container chassis" },
   grainHopper: { id: "grainHopper", name: "Bulk hopper trailer" },
+  walkingFloor: { id: "walkingFloor", name: "Walking-floor trailer" },
+  bulkTanker: { id: "bulkTanker", name: "Pneumatic bulk tanker" },
+  foodTanker: { id: "foodTanker", name: "Food-grade liquid tanker" },
+  chemicalTanker: { id: "chemicalTanker", name: "Chemical tanker (specification required)" },
+  fuelTanker: { id: "fuelTanker", name: "Fuel tanker (specification required)" },
+  tipper: { id: "tipper", name: "Tipper trailer" },
+  logTrailer: { id: "logTrailer", name: "Log trailer" },
+  carTransporter: { id: "carTransporter", name: "Vehicle transporter" },
+  livestockTrailer: { id: "livestockTrailer", name: "Livestock trailer" },
 };
 
 export const WORLD_MODES = {
@@ -63,6 +27,12 @@ export const WORLD_MODES = {
 };
 
 const pick = (items, random) => items[Math.min(items.length - 1, Math.floor(random() * items.length))];
+function pickCargo(random) {
+  const records = Object.values(CARGO);
+  const families = [...new Set(records.map(item => item.family))];
+  const family = pick(families, random);
+  return pick(records.filter(item => item.family === family), random);
+}
 
 function distanceKm(a, b) {
   const radians = degrees => degrees * Math.PI / 180;
@@ -120,8 +90,7 @@ export function generateMission({ world = "ATS", origin, destination, route, car
   const mode = WORLD_MODES[world];
   if (!mode) throw new Error(`Unknown transport world: ${world}`);
   if (!origin || !destination || !route) throw new Error("Search for a real origin, destination, and truck route first.");
-  const cargoKey = cargoId === "random" ? pick(Object.keys(CARGO), random) : cargoId;
-  const cargo = CARGO[cargoKey];
+  const cargo = cargoId === "random" ? pickCargo(random) : CARGO[cargoId];
   if (!cargo) throw new Error(`Unknown cargo category: ${cargoId}`);
   const equipment = pick(cargo.equipmentIds.map(id => EQUIPMENT[id]), random);
   const distance = mode.distanceUnit === "mi" ? route.distanceMeters / 1609.344 : route.distanceMeters / 1000;

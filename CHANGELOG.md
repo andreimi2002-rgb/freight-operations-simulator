@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.8.0 — 2026-10-19
+
+- Replaced seven broad freight categories with a curated catalog of 51 real-world commodity examples across agriculture and food, building materials, industrial goods, regulated goods, retail freight, vehicles, and livestock.
+- Added load forms, practical handling prompts, product-specific caution notes, and suggested trailer families to each cargo profile.
+- Added random selection across the full cargo catalog and family-grouped manual selection.
+- Added an expanded cargo profile to generated scenarios, including source frameworks and explicit confidence limits for trailer matches and regulated-goods classification.
+- Added official UNECE references for transport-goods classification, perishable-food transport, and ADR dangerous-goods context.
+
 ## 0.7.0 — 2026-10-19
 
 - Replaced the route-line schematic with a Geoapify/OpenStreetMap road map with fitted route geometry and A/B markers.

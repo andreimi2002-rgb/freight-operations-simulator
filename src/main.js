@@ -1,4 +1,5 @@
-import { chooseRandomCityPair, generateMission as buildMission, validateMission, WORLD_MODES } from "./mission-engine.mjs";
+import { CARGO, chooseRandomCityPair, generateMission as buildMission, validateMission, WORLD_MODES } from "./mission-engine.mjs";
+import { CARGO_SOURCES } from "./data/cargo-catalog.mjs";
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -20,6 +21,32 @@ function esc(value) {
 }
 function safeHref(value, fallback) {
   return /^https?:\/\//i.test(String(value || "")) ? value : fallback;
+}
+function populateCargoOptions() {
+  const select = $("#cargo");
+  const groups = new Map();
+  for (const cargo of Object.values(CARGO)) {
+    if (!groups.has(cargo.family)) groups.set(cargo.family, []);
+    groups.get(cargo.family).push(cargo);
+  }
+  for (const [family, items] of groups) {
+    const group = document.createElement("optgroup");
+    group.label = family;
+    for (const cargo of items) group.append(new Option(cargo.name, cargo.id));
+    select.append(group);
+  }
+}
+function renderCargoDetails(cargo) {
+  const handling = (cargo.handling || []).map(item => `<li>${esc(item)}</li>`).join("");
+  const sources = (cargo.sourceIds || []).map(id => CARGO_SOURCES[id]).filter(Boolean)
+    .map(source => `<a href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.name)}</a>`).join(" · ");
+  return `<div class="mission-section"><h4>CARGO PROFILE · ${esc(cargo.family.toUpperCase())}</h4>
+    <p><b>${esc(cargo.name)}</b> — ${esc(cargo.description)}</p>
+    <p><b>Typical load form:</b> ${esc(cargo.loadForm)}${cargo.temperature ? ` · <b>Temperature:</b> ${esc(cargo.temperature)}` : ""}</p>
+    ${handling ? `<ul class="cargo-handling">${handling}</ul>` : ""}
+    ${cargo.regulatoryReview ? `<p class="cargo-caution"><b>Verification needed:</b> ${esc(cargo.regulatoryReview)}</p>` : ""}
+    <p class="field-help">Commodity name: curated real-world example. Trailer match: planning heuristic, not verified compatibility. ${sources ? `Reference framework: ${sources}.` : ""}</p>
+  </div>`;
 }
 function formatRouteDistance(meters, unit) {
   const distance = unit === "mi" ? meters / 1609.344 : meters / 1000;
@@ -230,7 +257,8 @@ function renderMission(mission) {
       <div class="metric"><b>Not assigned</b><small>LOAD WEIGHT</small></div>
     </div>
     ${renderRoadDetails(mission.route, mission.route.unit, mission.origin.name, mission.destination.name)}
-    <div class="mission-section"><h4>GENERATED FREIGHT SCENARIO</h4><p><b>${esc(mission.cargo.name)}</b> — ${esc(mission.cargo.description)}. Suggested equipment: <b>${esc(mission.equipment.name)}</b>. This pairing is a planning prompt; the app has not verified a real shipment, payload, facility capability, or commercial relationship.</p></div>
+    ${renderCargoDetails(mission.cargo)}
+    <div class="mission-section"><h4>TRAILER SUGGESTION</h4><p><b>${esc(mission.equipment.name)}</b>. This is a generic planning match. The app has not checked a specific trailer, payload, compartment, equipment certification, facility capability, or commercial relationship.</p></div>
     <div class="mission-section"><h4>DATA SOURCES</h4><p>Origin record: <a href="${esc(originUrl)}" target="_blank" rel="noopener">${esc(mission.origin.sourceName)}</a>. Destination record: <a href="${esc(destinationUrl)}" target="_blank" rel="noopener">${esc(mission.destination.sourceName)}</a>. Attribution: ${esc(mission.origin.attribution || "Geoapify")}. Retrieved ${esc(new Date(mission.origin.retrievedAt || mission.createdAt).toLocaleString())}. Route: <a href="${esc(routeUrl)}" target="_blank" rel="noopener">Geoapify Routing API</a> · ${esc(mission.route.profile || "truck")} profile · retrieved ${esc(new Date(mission.route.retrievedAt).toLocaleString())}.</p></div>
     <div class="mission-section"><h4>REAL-WORLD LIMITS</h4><p>The truck profile returns a routed distance and duration, but this route is not confirmed for a specific truck, trailer, cargo, road restriction, appointment, or driver-hours rule. Confirm the actual vehicle dimensions, gross weight, permits, facility access, cargo requirements, and route before dispatch.</p></div>
     <div class="output-actions"><button class="primary" id="printReport">↧ EXPORT / PRINT REPORT</button><button id="regenerate">⟳ NEW SCENARIO</button></div>
@@ -258,6 +286,7 @@ function printMission(mission) {
 }
 
 $("#missionForm").addEventListener("submit", event => { event.preventDefault(); generateMission(); });
+populateCargoOptions();
 $("#searchOrigin").addEventListener("click", () => searchPlaces("origin"));
 $("#searchDestination").addEventListener("click", () => searchPlaces("destination"));
 $("#originPlace").addEventListener("change", () => selectPlace("origin"));
