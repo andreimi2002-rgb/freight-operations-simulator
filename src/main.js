@@ -75,14 +75,14 @@ function renderRoadDetails(route, unit, originName, destinationName) {
     <div class="route-detail-heading"><div><div class="eyebrow">ROUTE PROFILE</div><h4>Road and route details</h4></div><span class="mini-pill">${esc(route.profile || "truck")} · Geoapify</span></div>
     <div class="route-map-frame">${routeMapSvg(details.geometry)}<div class="route-map-labels"><span>START · ${esc(originName)}</span><span>FINISH · ${esc(destinationName)}</span></div></div>
     <div class="route-detail-facts">
-      <div><small>ROAD SEGMENTS</small><b>${formatNum(details.segmentCount || 0)}</b></div>
+      <div><small>GROUPED ROAD STRETCHES</small><b>${formatNum(details.segmentCount || 0)} · ${formatNum(details.providerSegmentCount || details.segmentCount || 0)} raw</b></div>
       <div><small>TRAFFIC MODEL</small><b>${esc(details.trafficModel || "Not returned")}</b></div>
       <div><small>ROUTE FLAGS</small><b>${details.hasTolls ? "Tolls" : "No toll reported"}${details.hasFerries ? " · Ferry" : ""}</b></div>
       <div><small>ROUTE COUNTRIES</small><b>${esc(countries || "Not returned")}</b></div>
       <div><small>PROFILE LIMITS</small><b>${esc(profileWeight)} gross · ${esc(profileHeight)} height</b></div>
     </div>
     ${classRows ? `<div class="route-detail-columns"><div><h5>Road classes</h5>${classRows}</div><div>${namedRoads ? `<h5>Major named roads</h5><ul class="named-road-list">${namedRoads}</ul>` : ""}${surfaces ? `<h5>Road surfaces</h5><ul class="named-road-list">${surfaces}</ul>` : ""}</div></div>` : "<p class="route-map-empty">Road class details were not returned.</p>"}
-    ${(details.segments || []).length ? `<details class="route-steps"><summary>Turn-by-turn route segments · ${formatNum(details.segmentCount || segments.length)} total</summary><ol>${segments}</ol>${details.omittedSegmentCount ? `<p class="field-help">${formatNum(details.omittedSegmentCount)} additional segments were omitted from this saved report.</p>` : ""}</details>` : "<p class=\"route-map-empty\">Turn-by-turn segment details were not returned.</p>"}
+    ${(details.segments || []).length ? `<details class="route-steps"><summary>Road-by-road route details · ${formatNum(details.segmentCount || segments.length)} grouped stretches</summary><ol>${segments}</ol>${details.omittedSegmentCount ? `<p class="field-help">${formatNum(details.omittedSegmentCount)} additional grouped stretches were omitted from this saved report.</p>` : ""}</details>` : "<p class=\"route-map-empty\">Turn-by-turn segment details were not returned.</p>"}
     <p class="field-help">Road properties and instructions are provider data. The route uses a 40 t / 4.1 m heavy-truck profile with approximated traffic; it is not a vehicle-specific clearance or live traffic report.</p>
   </section>`;
 }

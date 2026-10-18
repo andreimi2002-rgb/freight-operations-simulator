@@ -60,7 +60,7 @@ export default async function truckRoute(request) {
       const interval = Math.ceil(line.length / 500);
       return line.filter((_, index) => index === 0 || index === line.length - 1 || index % interval === 0);
     });
-    const segments = allSteps.slice(0, 100).map(step => ({
+    const rawSegments = allSteps.map(step => ({
       distanceMeters: Number.isFinite(step.distance) ? step.distance : null,
       durationSeconds: Number.isFinite(step.time) ? step.time : null,
       roadName: typeof step.name === "string" ? step.name.slice(0, 120) : null,
@@ -76,6 +76,24 @@ export default async function truckRoute(request) {
       instruction: typeof step.instruction?.text === "string" ? step.instruction.text.slice(0, 300) : null,
       maneuver: typeof step.instruction?.type === "string" ? step.instruction.type : null,
     }));
+    const groupedSegments = [];
+    for (const step of rawSegments) {
+      const previous = groupedSegments.at(-1);
+      const sameRoadProperties = previous
+        && ["roadName", "roadClass", "surface", "speedLimit", "truckLimit"].every(key => previous[key] === step[key]);
+      if (sameRoadProperties && !step.instruction) {
+        previous.distanceMeters += step.distanceMeters || 0;
+        previous.durationSeconds += step.durationSeconds || 0;
+        if (previous.laneCount !== step.laneCount) previous.laneCount = null;
+        previous.toll ||= step.toll;
+        previous.ferry ||= step.ferry;
+        previous.bridge ||= step.bridge;
+        previous.tunnel ||= step.tunnel;
+      } else {
+        groupedSegments.push({ ...step });
+      }
+    }
+    const segments = groupedSegments.slice(0, 300);
     return json({
       distanceMeters: route.distance,
       durationSeconds: route.time,
@@ -90,8 +108,9 @@ export default async function truckRoute(request) {
       roadClasses: summarize(roadClassTotals),
       namedRoads: summarize(namedRoadTotals).slice(0, 12),
       surfaces: summarize(surfaceTotals),
-      segmentCount: allSteps.length,
-      omittedSegmentCount: Math.max(0, allSteps.length - segments.length),
+      segmentCount: groupedSegments.length,
+      providerSegmentCount: allSteps.length,
+      omittedSegmentCount: Math.max(0, groupedSegments.length - segments.length),
       segments,
       geometry: sampledGeometry,
       sourceUrl: "https://apidocs.geoapify.com/docs/routing/",

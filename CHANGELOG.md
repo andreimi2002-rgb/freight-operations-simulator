@@ -4,6 +4,7 @@
 
 - Narrowed random city draws to the 40 most-populated GeoNames places per supported country; the catalog now contains 1,150 records across the current ATS/ETS2 region set.
 - Added a route geometry schematic, country coverage, road-class and road-name summaries, surface data, and turn-by-turn segments to generated reports.
+- Grouped consecutive Geoapify road fragments into readable stretches so long routes are not truncated near the origin; reports retain up to 300 grouped stretches and disclose the source fragment count.
 - Requested Geoapify's heavy-truck route profile and approximated traffic; reports disclose the modeled 40 t / 4.1 m profile limits and that traffic is not live.
 - Added route detail data to print reports and retained provider source/timestamp attribution.
 - Note: Geoapify documents that `route_details` increases API credit consumption.

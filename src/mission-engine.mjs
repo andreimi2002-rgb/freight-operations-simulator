@@ -154,6 +154,7 @@ export function generateMission({ world = "ATS", origin, destination, route, car
         namedRoads: route.namedRoads || [],
         surfaces: route.surfaces || [],
         segmentCount: route.segmentCount || 0,
+        providerSegmentCount: route.providerSegmentCount || route.segmentCount || 0,
         omittedSegmentCount: route.omittedSegmentCount || 0,
         segments: route.segments || [],
         geometry: route.geometry || [],

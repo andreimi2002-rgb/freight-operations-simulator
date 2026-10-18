@@ -6,7 +6,7 @@ FOS is an early real-data freight scenario generator. ATS and ETS2 are the initi
 
 - Generate random routes between the 40 most-populated available GeoNames cities per country for ATS and ETS2 regions; exact facility or company searches remain optional.
 - Search real cities, addresses, facilities, or businesses through Geoapify Geocoding when choosing locations manually.
-- Calculate routes with Geoapify's heavy-truck profile and approximated traffic. Show a route schematic, countries, road classes, named roads, surfaces, toll/ferry flags, and up to 100 route segments with instructions and road attributes.
+- Calculate routes with Geoapify's heavy-truck profile and approximated traffic. Show a route schematic, countries, road classes, named roads, surfaces, toll/ferry flags, and up to 300 grouped road stretches with route instructions and road attributes.
 - Generate a freight category and suggest compatible trailer equipment from a generic real-world planning taxonomy.
 - Keep place and route data separate from the generated shipment scenario; do not invent a company contract, load weight, or booking.
 - Save up to 30 scenarios in browser local storage and print a sourced scenario brief.
