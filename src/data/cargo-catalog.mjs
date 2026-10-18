@@ -80,4 +80,3 @@ const records = [
 
 export const CARGO = Object.fromEntries(records.map(record => [record.id, Object.freeze(record)]));
 export const CARGO_FAMILIES = [...new Set(records.map(record => record.family))];
-
