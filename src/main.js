@@ -81,7 +81,7 @@ function renderRoadDetails(route, unit, originName, destinationName) {
       <div><small>ROUTE COUNTRIES</small><b>${esc(countries || "Not returned")}</b></div>
       <div><small>PROFILE LIMITS</small><b>${esc(profileWeight)} gross · ${esc(profileHeight)} height</b></div>
     </div>
-    ${classRows ? `<div class="route-detail-columns"><div><h5>Road classes</h5>${classRows}</div><div>${namedRoads ? `<h5>Major named roads</h5><ul class="named-road-list">${namedRoads}</ul>` : ""}${surfaces ? `<h5>Road surfaces</h5><ul class="named-road-list">${surfaces}</ul>` : ""}</div></div>` : "<p class="route-map-empty">Road class details were not returned.</p>"}
+    ${classRows ? `<div class="route-detail-columns"><div><h5>Road classes</h5>${classRows}</div><div>${namedRoads ? `<h5>Major named roads</h5><ul class="named-road-list">${namedRoads}</ul>` : ""}${surfaces ? `<h5>Road surfaces</h5><ul class="named-road-list">${surfaces}</ul>` : ""}</div></div>` : '<p class="route-map-empty">Road class details were not returned.</p>'}
     ${(details.segments || []).length ? `<details class="route-steps"><summary>Road-by-road route details · ${formatNum(details.segmentCount || segments.length)} grouped stretches</summary><ol>${segments}</ol>${details.omittedSegmentCount ? `<p class="field-help">${formatNum(details.omittedSegmentCount)} additional grouped stretches were omitted from this saved report.</p>` : ""}</details>` : "<p class=\"route-map-empty\">Turn-by-turn segment details were not returned.</p>"}
     <p class="field-help">Road properties and instructions are provider data. The route uses a 40 t / 4.1 m heavy-truck profile with approximated traffic; it is not a vehicle-specific clearance or live traffic report.</p>
   </section>`;
