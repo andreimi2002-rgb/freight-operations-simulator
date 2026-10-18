@@ -25,65 +25,32 @@ function formatRouteDistance(meters, unit) {
   const distance = unit === "mi" ? meters / 1609.344 : meters / 1000;
   return `${formatNum(distance)} ${unit}`;
 }
-function routeMapSvg(geometry) {
-  const lines = Array.isArray(geometry) ? geometry.filter(line => Array.isArray(line) && line.length > 1) : [];
-  const points = lines.flat().filter(point => Array.isArray(point) && Number.isFinite(point[0]) && Number.isFinite(point[1]));
-  if (points.length < 2) return `<p class="route-map-empty">Route geometry was not returned for this result.</p>`;
-  const longitudes = points.map(point => point[0]);
-  const latitudes = points.map(point => point[1]);
-  const meanLat = (Math.min(...latitudes) + Math.max(...latitudes)) / 2 * Math.PI / 180;
-  const project = ([lon, lat]) => [lon * Math.cos(meanLat), -lat];
-  const projected = points.map(project);
-  const minX = Math.min(...projected.map(point => point[0]));
-  const maxX = Math.max(...projected.map(point => point[0]));
-  const minY = Math.min(...projected.map(point => point[1]));
-  const maxY = Math.max(...projected.map(point => point[1]));
-  const width = 800, height = 220, pad = 24;
-  const scale = Math.min((width - pad * 2) / Math.max(maxX - minX, 0.0001), (height - pad * 2) / Math.max(maxY - minY, 0.0001));
-  const mapPoint = point => {
-    const [x, y] = project(point);
-    return [pad + (x - minX) * scale, pad + (y - minY) * scale];
-  };
-  const path = lines.map(line => line.map((point, index) => {
-    if (!Array.isArray(point) || !Number.isFinite(point[0]) || !Number.isFinite(point[1])) return "";
-    const [x, y] = mapPoint(point);
-    return `${index === 0 ? "M" : "L"}${x.toFixed(1)} ${y.toFixed(1)}`;
-  }).join(" ")).filter(Boolean).join(" ");
-  const [startX, startY] = mapPoint(points[0]);
-  const [endX, endY] = mapPoint(points[points.length - 1]);
-  return `<svg class="route-map-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="Geoapify route geometry"><path class="route-map-line" d="${path}"/><circle class="route-map-start" cx="${startX}" cy="${startY}" r="6"/><circle class="route-map-end" cx="${endX}" cy="${endY}" r="6"/></svg>`;
-}
 function renderRoadDetails(route, unit, originName, destinationName) {
   const details = route.routeDetails || {};
   const classRows = (details.roadClasses || []).map(item => `
     <div class="road-class-row"><span>${esc(String(item.name).replaceAll("_", " "))}</span><div><i style="width:${Math.min(100, Math.max(0, item.share * 100)).toFixed(1)}%"></i></div><b>${formatRouteDistance(item.distanceMeters, unit)}</b></div>`).join("");
-  const namedRoads = (details.namedRoads || []).map(item => `<li><span>${esc(item.name)}</span><b>${formatRouteDistance(item.distanceMeters, unit)}</b></li>`).join("");
+  const namedRoads = (details.namedRoads || []).slice(0, 5).map(item => `<li><span>${esc(item.name)}</span><b>${formatRouteDistance(item.distanceMeters, unit)}</b></li>`).join("");
   const surfaces = (details.surfaces || []).map(item => `<li><span>${esc(String(item.name).replaceAll("_", " "))}</span><b>${formatRouteDistance(item.distanceMeters, unit)}</b></li>`).join("");
   const segments = (details.segments || []).map((step, index) => {
-    const attributes = [step.roadName, step.roadClass?.replaceAll("_", " "), step.surface?.replaceAll("_", " ")].filter(Boolean).join(" · ");
-    const flags = [step.toll && "Toll", step.ferry && "Ferry", step.bridge && "Bridge", step.tunnel && "Tunnel"].filter(Boolean).join(" · ");
-    const speed = Number.isFinite(step.speedLimit) ? `Speed limit ${formatNum(unit === "mi" ? step.speedLimit * 0.621371 : step.speedLimit)} ${unit === "mi" ? "mph" : "km/h"}` : "";
-    const truckLimit = Number.isFinite(step.truckLimit) ? `Truck speed limit ${formatNum(unit === "mi" ? step.truckLimit * 0.621371 : step.truckLimit)} ${unit === "mi" ? "mph" : "km/h"}` : "";
-    const lanes = Number.isFinite(step.laneCount) ? `${step.laneCount} lanes` : "";
-    const duration = Number.isFinite(step.durationSeconds) ? `${formatNum(step.durationSeconds / 60)} min` : "";
-    return `<li class="route-step"><span class="route-step-index">${index + 1}</span><div><b>${esc(step.instruction || attributes || "Continue on route")}</b><small>${esc([attributes, formatRouteDistance(step.distanceMeters || 0, unit), duration, speed, truckLimit, lanes, flags].filter(Boolean).join(" · "))}</small></div></li>`;
+    const road = step.roadName ? ` · ${esc(step.roadName)}` : "";
+    return `<li class="route-step"><span class="route-step-index">${index + 1}</span><div><b>${esc(step.instruction)}</b><small>${formatRouteDistance(step.distanceMeters || 0, unit)}${road}</small></div></li>`;
   }).join("");
   const countries = (details.countries || []).map(code => new Intl.DisplayNames(["en"], { type: "region" }).of(code)).join(", ");
-  const profileWeight = details.modeledMaximumGrossWeightKg ? `${formatNum(details.modeledMaximumGrossWeightKg / 1000)} t` : "not returned";
-  const profileHeight = details.modeledMaximumHeightMeters ? `${formatNum(details.modeledMaximumHeightMeters)} m` : "not returned";
+  const mapMarkup = details.mapImageDataUrl
+    ? `<img class="route-map-image" src="${esc(details.mapImageDataUrl)}" alt="Road map from ${esc(originName)} to ${esc(destinationName)}" loading="eager"/>`
+    : `<div class="route-map-fallback">${esc(details.mapError || "A road map is not available for this saved route.")}</div>`;
+  const topRoads = (details.namedRoads || []).slice(0, 3).map(item => `<span class="route-road-pill">${esc(item.name)}</span>`).join("");
   return `<section class="route-detail-panel">
-    <div class="route-detail-heading"><div><div class="eyebrow">ROUTE PROFILE</div><h4>Road and route details</h4></div><span class="mini-pill">${esc(route.profile || "truck")} · Geoapify</span></div>
-    <div class="route-map-frame">${routeMapSvg(details.geometry)}<div class="route-map-labels"><span>START · ${esc(originName)}</span><span>FINISH · ${esc(destinationName)}</span></div></div>
-    <div class="route-detail-facts">
-      <div><small>GROUPED ROAD STRETCHES</small><b>${formatNum(details.segmentCount || 0)} · ${formatNum(details.providerSegmentCount || details.segmentCount || 0)} raw</b></div>
-      <div><small>TRAFFIC MODEL</small><b>${esc(details.trafficModel || "Not returned")}</b></div>
-      <div><small>ROUTE FLAGS</small><b>${details.hasTolls ? "Tolls" : "No toll reported"}${details.hasFerries ? " · Ferry" : ""}</b></div>
-      <div><small>ROUTE COUNTRIES</small><b>${esc(countries || "Not returned")}</b></div>
-      <div><small>PROFILE LIMITS</small><b>${esc(profileWeight)} gross · ${esc(profileHeight)} height</b></div>
-    </div>
-    ${classRows ? `<div class="route-detail-columns"><div><h5>Road classes</h5>${classRows}</div><div>${namedRoads ? `<h5>Major named roads</h5><ul class="named-road-list">${namedRoads}</ul>` : ""}${surfaces ? `<h5>Road surfaces</h5><ul class="named-road-list">${surfaces}</ul>` : ""}</div></div>` : '<p class="route-map-empty">Road class details were not returned.</p>'}
-    ${(details.segments || []).length ? `<details class="route-steps"><summary>Road-by-road route details · ${formatNum(details.segmentCount || segments.length)} grouped stretches</summary><ol>${segments}</ol>${details.omittedSegmentCount ? `<p class="field-help">${formatNum(details.omittedSegmentCount)} additional grouped stretches were omitted from this saved report.</p>` : ""}</details>` : "<p class=\"route-map-empty\">Turn-by-turn segment details were not returned.</p>"}
-    <p class="field-help">Road properties and instructions are provider data. The route uses a 40 t / 4.1 m heavy-truck profile with approximated traffic; it is not a vehicle-specific clearance or live traffic report.</p>
+    <div class="route-detail-heading"><div><div class="eyebrow">ROUTE MAP</div><h4>${esc(originName)} → ${esc(destinationName)}</h4></div><span class="mini-pill">${esc(route.profile || "truck")} profile</span></div>
+    <figure class="route-map-frame">${mapMarkup}<figcaption><span>A · ${esc(originName)}</span><span>B · ${esc(destinationName)}</span></figcaption></figure>
+    <div class="route-quick-summary"><span>${esc(countries || "Countries unavailable")}</span><span>${details.hasTolls ? "Tolls on route" : "No tolls reported"}</span><span>${esc(details.trafficModel || "Traffic model unavailable")} traffic</span></div>
+    ${topRoads ? `<div class="route-major-roads"><small>MAIN ROADS</small><div>${topRoads}</div></div>` : ""}
+    <details class="route-data-more"><summary>More route details</summary>
+      <div class="route-detail-columns"><div><h5>Road classes</h5>${classRows || "<p class=\"field-help\">Not returned</p>"}</div><div><h5>Road surfaces</h5><ul class="named-road-list">${surfaces || "<li>Not returned</li>"}</ul></div></div>
+      <div class="route-detail-columns"><div><h5>Major roads</h5><ul class="named-road-list">${namedRoads || "<li>Not returned</li>"}</ul></div><div><h5>Route profile</h5><p class="field-help">40 t gross / 4.1 m modeled height. Approximated traffic is not live, and the profile is not a vehicle-specific clearance.</p><p class="field-help">${formatNum(details.segmentCount || 0)} grouped road stretches from ${formatNum(details.providerSegmentCount || 0)} source records.</p></div></div>
+      ${(details.segments || []).length ? `<details class="route-steps"><summary>Key turns · ${formatNum(details.maneuverCount || segments.length)} total</summary><ol>${segments}</ol>${details.omittedSegmentCount ? `<p class="field-help">${formatNum(details.omittedSegmentCount)} additional turns were omitted.</p>` : ""}</details>` : ""}
+      <p class="field-help">Map and route data: Geoapify · OpenStreetMap contributors.</p>
+    </details>
   </section>`;
 }
 function loadHistory() {
@@ -93,7 +60,14 @@ function loadHistory() {
   } catch { return []; }
 }
 function saveHistory() {
-  try { localStorage.setItem(HISTORY_KEY, JSON.stringify(history)); }
+  try {
+    const persisted = history.map((mission, index) => {
+      const routeDetails = mission.route?.routeDetails;
+      if (index < 5 || !routeDetails?.mapImageDataUrl) return mission;
+      return { ...mission, route: { ...mission.route, routeDetails: { ...routeDetails, mapImageDataUrl: null } } };
+    });
+    localStorage.setItem(HISTORY_KEY, JSON.stringify(persisted));
+  }
   catch { showToast("Scenario created, but browser storage is unavailable."); }
 }
 async function postJson(path, body) {
@@ -271,13 +245,13 @@ function printMission(mission) {
   const mode = WORLD_MODES[mission.world];
   const duration = `${Math.floor(mission.route.durationSeconds / 3600)}h ${Math.round((mission.route.durationSeconds % 3600) / 60)}m`;
   win.document.write(`<!doctype html><html><head><title>${esc(mission.id)} Freight Scenario</title><style>
-    body{font:14px Arial,sans-serif;color:#17212a;margin:36px;line-height:1.5}header{background:#17212a;color:white;padding:25px;border-bottom:7px solid #f28c28}h1{margin:0;font-size:28px}header p{color:#d6dee4}.route{display:grid;grid-template-columns:1fr 30px 1fr;gap:12px;background:#f1f3f4;padding:18px;margin:18px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.card{border:1px solid #ddd;padding:12px}.muted{color:#687681;font-size:12px}.warning{background:#fff2dd;padding:12px;border-left:4px solid #f28c28}h2{font-size:15px;color:#b8641c;border-bottom:1px solid #ddd;padding-bottom:6px;margin-top:26px}</style></head><body>
+    body{font:14px Arial,sans-serif;color:#17212a;margin:36px;line-height:1.5}header{background:#17212a;color:white;padding:25px;border-bottom:7px solid #f28c28}h1{margin:0;font-size:28px}header p{color:#d6dee4}.route{display:grid;grid-template-columns:1fr 30px 1fr;gap:12px;background:#f1f3f4;padding:18px;margin:18px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.card{border:1px solid #ddd;padding:12px}.muted{color:#687681;font-size:12px}.warning{background:#fff2dd;padding:12px;border-left:4px solid #f28c28}h2{font-size:15px;color:#b8641c;border-bottom:1px solid #ddd;padding-bottom:6px;margin-top:26px}.route-map-print{width:100%;max-height:420px;object-fit:contain;border:1px solid #ddd;border-radius:6px}.map-attribution{font-size:10px;color:#687681}</style></head><body>
     <header><div style="color:#ffc45b;font-size:11px;font-weight:bold;letter-spacing:2px">FREIGHT OPERATIONS SIMULATOR</div><h1>GENERATED FREIGHT SCENARIO</h1><p>${esc(mission.id)} · ${esc(mode.label)} · ${esc(new Date(mission.createdAt).toLocaleString())}</p></header>
     <div class="route"><div><small>ORIGIN</small><h2>${esc(mission.origin.name)}</h2><p>${esc(mission.origin.address)}</p></div><div>→</div><div><small>DESTINATION</small><h2>${esc(mission.destination.name)}</h2><p>${esc(mission.destination.address)}</p></div></div>
+    ${mission.route.routeDetails?.mapImageDataUrl ? `<img class="route-map-print" src="${esc(mission.route.routeDetails.mapImageDataUrl)}" alt="Map from ${esc(mission.origin.name)} to ${esc(mission.destination.name)}"/><p class="map-attribution">Map: Geoapify · © OpenStreetMap contributors</p>` : ""}
     <div class="grid"><div class="card"><small>GENERATED FREIGHT CATEGORY</small><h3>${esc(mission.cargo.name)}</h3></div><div class="card"><small>SUGGESTED EQUIPMENT</small><h3>${esc(mission.equipment.name)}</h3></div><div class="card"><small>TRUCK ROUTE</small><h3>${formatNum(mission.route.distance)} ${mission.route.unit} · ${duration}</h3></div></div>
-    <h2>Route details</h2><p>Profile: ${esc(mission.route.profile || "truck")} · traffic: ${esc(mission.route.trafficModel || "not returned")} · modeled limits: ${formatNum((mission.route.routeDetails?.modeledMaximumGrossWeightKg || 0) / 1000)} t gross / ${formatNum(mission.route.routeDetails?.modeledMaximumHeightMeters || 0)} m high. Route crosses: ${esc((mission.route.routeDetails?.countries || []).join(", ") || "not returned")}. Tolls: ${mission.route.routeDetails?.hasTolls ? "reported" : "not reported"}; ferries: ${mission.route.routeDetails?.hasFerries ? "reported" : "not reported"}.</p>
-    <ol>${(mission.route.routeDetails?.segments || []).map(segment => `<li>${esc(segment.instruction || segment.roadName || "Continue on route")} — ${esc([segment.roadName, segment.roadClass, segment.surface, Number.isFinite(segment.distanceMeters) ? formatRouteDistance(segment.distanceMeters, mission.route.unit) : "", segment.toll && "toll", segment.ferry && "ferry", segment.bridge && "bridge", segment.tunnel && "tunnel"].filter(Boolean).join(" · "))}</li>`).join("")}</ol>
-    <h2>Source & limits</h2><p>Locations returned by Geoapify Geocoding API. Distance and duration returned by Geoapify Routing API using the heavy-truck profile. Traffic is approximated, not live. Verify vehicle dimensions, payload, permits, restrictions, facility access, and driver-hours rules before use.</p>
+    <h2>Route summary</h2><p>${esc((mission.route.routeDetails?.namedRoads || []).slice(0, 3).map(road => road.name).join(" · ") || "Main road names were not returned")}. ${esc((mission.route.routeDetails?.countries || []).join(" → ") || "Route countries unavailable")}. Tolls: ${mission.route.routeDetails?.hasTolls ? "reported" : "not reported"}; estimated traffic is approximated, not live.</p>
+    <h2>Sources & limits</h2><p>Locations, road route, and map are provider data from Geoapify/OpenStreetMap. The heavy-truck profile models up to 40 t gross and 4.1 m height; it is not a specific vehicle clearance. Confirm dimensions, payload, permits, restrictions, facility access, and driver-hours rules before use.</p>
     <div class="warning"><b>GENERATED SCENARIO — NOT A SHIPMENT</b><br>No commercial relationship, contract, booking, cargo weight, or dispatch authorization is represented.</div>
     <script>window.onload=()=>window.print()</script></body></html>`);
   win.document.close();

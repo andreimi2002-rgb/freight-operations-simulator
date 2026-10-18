@@ -2,11 +2,11 @@
 
 FOS is an early real-data freight scenario generator. ATS and ETS2 are the initial world modes; the generated freight scenario is not a real booking or dispatch.
 
-## Current version: 0.6.0 preview
+## Current version: 0.7.0 preview
 
 - Generate random routes between the 40 most-populated available GeoNames cities per country for ATS and ETS2 regions; exact facility or company searches remain optional.
 - Search real cities, addresses, facilities, or businesses through Geoapify Geocoding when choosing locations manually.
-- Calculate routes with Geoapify's heavy-truck profile and approximated traffic. Show a route schematic, countries, road classes, named roads, surfaces, toll/ferry flags, and up to 300 grouped road stretches with route instructions and road attributes.
+- Calculate routes with Geoapify's heavy-truck profile and approximated traffic. Display a Geoapify/OpenStreetMap road map, a compact route summary, and optional collapsed road classes, surfaces, and key turns.
 - Generate a freight category and suggest compatible trailer equipment from a generic real-world planning taxonomy.
 - Keep place and route data separate from the generated shipment scenario; do not invent a company contract, load weight, or booking.
 - Save up to 30 scenarios in browser local storage and print a sourced scenario brief.
@@ -17,7 +17,7 @@ The provider's heavy-truck mode models a maximum gross weight of 40 t and height
 
 The Netlify Functions read `GEOAPIFY_API_KEY` on the server. Add the key in Netlify project environment variables and include both **Production** and **Deploy Previews** scopes. The key is not stored in this repository or exposed in browser JavaScript. The UI reports a configuration error until the key exists.
 
-Geoapify requires an API key for place search and routing. Requesting `route_details` increases API credit consumption; review current usage limits and terms in the [Geoapify Routing API documentation](https://apidocs.geoapify.com/docs/routing/).
+Geoapify requires an API key for place search, routing, and static maps. Requesting `route_details` and rendering a Static Maps image use additional API credits; review current usage and terms in the [Geoapify Routing API documentation](https://apidocs.geoapify.com/docs/routing/) and [Static Maps documentation](https://apidocs.geoapify.com/docs/maps/static/).
 
 ## Real city catalog
 
