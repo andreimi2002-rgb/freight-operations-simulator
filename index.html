@@ -13,7 +13,7 @@
     <aside class="sidebar">
       <div class="brand">
         <div class="brand-mark">F<span>OS</span></div>
-        <div><strong>FREIGHT OPS</strong><small>SIMULATOR / 0.4</small></div>
+        <div><strong>FREIGHT OPS</strong><small>SIMULATOR / 0.5</small></div>
       </div>
       <div class="side-label">WORKSPACE</div>
       <button class="nav-item active" type="button" aria-current="page"><span>▦</span> Mission generator</button>
@@ -63,7 +63,9 @@
               <label><input type="radio" name="world" value="ETS2"/><span>🇪🇺 Euro Truck Simulator 2</span></label>
             </div>
 
-            <div class="field-grid location-grid">
+            <details class="manual-location-settings">
+              <summary>Choose locations manually (optional)</summary>
+              <div class="field-grid location-grid">
               <div class="field">
                 <label for="originQuery">Origin city, facility or company</label>
                 <div class="search-control"><input id="originQuery" type="search" autocomplete="off" placeholder="e.g. Seattle, Washington"/><button id="searchOrigin" type="button">SEARCH</button></div>
@@ -76,23 +78,25 @@
                 <select id="destinationPlace" aria-label="Choose a destination result" disabled><option value="">Search for a real place</option></select>
                 <small class="field-help" id="destinationStatus" aria-live="polite">Choose the exact result before generating.</small>
               </div>
-              <div class="field cargo-field">
-                <label for="cargo">Generated freight category</label>
-                <select id="cargo">
-                  <option value="random">Random freight category</option>
-                  <option value="dryGoods">Palletized dry goods</option>
-                  <option value="chilledFood">Chilled food products</option>
-                  <option value="freshProduce">Fresh produce</option>
-                  <option value="buildingMaterials">Building materials</option>
-                  <option value="machinery">Industrial machinery</option>
-                  <option value="containerFreight">Containerized freight</option>
-                  <option value="bulkGrain">Bulk grain</option>
-                </select>
-                <small class="field-help">This is a generated scenario category, not a verified booking.</small>
               </div>
+            </details>
+            <div class="field cargo-field">
+              <label for="cargo">Generated freight category</label>
+              <select id="cargo">
+                <option value="random">Random freight category</option>
+                <option value="dryGoods">Palletized dry goods</option>
+                <option value="chilledFood">Chilled food products</option>
+                <option value="freshProduce">Fresh produce</option>
+                <option value="buildingMaterials">Building materials</option>
+                <option value="machinery">Industrial machinery</option>
+                <option value="containerFreight">Containerized freight</option>
+                <option value="bulkGrain">Bulk grain</option>
+              </select>
+              <small class="field-help">This is a generated planning suggestion, not a verified shipment.</small>
             </div>
-            <button class="generate-btn" type="submit"><span>✦</span> GENERATE TRUCK-ROUTE SCENARIO <b>↗</b></button>
-            <p class="form-note">Add <code>GEOAPIFY_API_KEY</code> in Netlify environment variables for Production and Deploy Previews. Keys stay server-side.</p>
+            <p class="catalog-status" id="catalogStatus" aria-live="polite">Loading real city catalog…</p>
+            <button class="generate-btn" type="submit"><span>✦</span> GENERATE RANDOM REAL-WORLD ROUTE <b>↗</b></button>
+            <p class="form-note">Cities are drawn randomly from the sourced GeoNames catalog. Cargo and equipment are generated planning suggestions.</p>
           </form>
         </div>
 
@@ -104,7 +108,7 @@
           <div class="empty-state" id="emptyState">
             <div class="empty-icon">↗</div>
             <h3>Your next mission starts here.</h3>
-            <p>Search two real locations, choose a freight category, then generate a scenario using a truck route from Geoapify.</p>
+            <p>Choose ATS or ETS2, then generate a random route between real cities. Open the manual location option only when you want specific places.</p>
             <div class="empty-stats"><span>01 <small>MISSION</small></span><span>02 <small>ROUTE</small></span><span>03 <small>REPORT</small></span></div>
           </div>
           <div id="missionOutput" class="mission-output hidden"></div>
@@ -129,7 +133,7 @@
         </div>
       </section>
 
-      <footer><span>FOS / FREIGHT OPERATIONS SIMULATOR</span><span>INDEPENDENT CONCEPT • NOT AFFILIATED WITH SCS SOFTWARE</span><span>BUILD 0.4.0</span></footer>
+      <footer><span>FOS / FREIGHT OPERATIONS SIMULATOR</span><span>INDEPENDENT CONCEPT • NOT AFFILIATED WITH SCS SOFTWARE</span><span>BUILD 0.5.0</span></footer>
     </main>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>

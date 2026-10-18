@@ -64,6 +64,58 @@ export const WORLD_MODES = {
 
 const pick = (items, random) => items[Math.min(items.length - 1, Math.floor(random() * items.length))];
 
+function distanceKm(a, b) {
+  const radians = degrees => degrees * Math.PI / 180;
+  const dLat = radians(b.latitude - a.latitude);
+  const dLon = radians(b.longitude - a.longitude);
+  const lat1 = radians(a.latitude);
+  const lat2 = radians(b.latitude);
+  const value = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
+  return 6371 * 2 * Math.atan2(Math.sqrt(value), Math.sqrt(1 - value));
+}
+
+function asSourcedPlace(city, importedAt) {
+  const country = new Intl.DisplayNames(["en"], { type: "region" }).of(city.countryCode);
+  return {
+    id: String(city.id),
+    name: city.name,
+    address: `${city.name}, ${country}`,
+    city: city.name,
+    country,
+    countryCode: city.countryCode,
+    lat: city.latitude,
+    lon: city.longitude,
+    sourceName: "GeoNames",
+    sourceUrl: `https://www.geonames.org/${city.id}/`,
+    attribution: "GeoNames, CC BY 4.0",
+    retrievedAt: importedAt,
+    population: city.population,
+    timeZone: city.timeZone,
+  };
+}
+
+export function chooseRandomCityPair({ world = "ATS", cityCatalog, random = Math.random, attempts = 120 } = {}) {
+  if (!WORLD_MODES[world]) throw new Error(`Unknown transport world: ${world}`);
+  const cities = cityCatalog?.cities?.filter(city => city.worlds?.includes(world)) || [];
+  if (cities.length < 2) throw new Error(`No GeoNames city catalog is loaded for ${world}.`);
+  const minKm = world === "ATS" ? 80 : 45;
+  const maxKm = world === "ATS" ? 2400 : 1450;
+
+  for (let attempt = 0; attempt < attempts; attempt += 1) {
+    const origin = pick(cities, random);
+    const destination = pick(cities, random);
+    if (origin.id === destination.id) continue;
+    const straightLineKm = distanceKm(origin, destination);
+    if (straightLineKm < minKm || straightLineKm > maxKm) continue;
+    return {
+      origin: asSourcedPlace(origin, cityCatalog.metadata?.importedAt),
+      destination: asSourcedPlace(destination, cityCatalog.metadata?.importedAt),
+      straightLineKm,
+    };
+  }
+  throw new Error(`Could not draw a usable random ${world} city pair. Generate another scenario.`);
+}
+
 export function generateMission({ world = "ATS", origin, destination, route, cargoId = "random", now = new Date(), random = Math.random } = {}) {
   const mode = WORLD_MODES[world];
   if (!mode) throw new Error(`Unknown transport world: ${world}`);

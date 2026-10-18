@@ -2,9 +2,10 @@
 
 FOS is an early real-data freight scenario generator. ATS and ETS2 are the initial world modes; the generated freight scenario is not a real booking or dispatch.
 
-## Current version: 0.4.0 preview
+## Current version: 0.5.0 preview
 
-- Search real cities, addresses, facilities, or businesses through Geoapify Geocoding.
+- Generate random routes between 10,264 GeoNames populated-place records for ATS and ETS2 regions; exact facility or company searches remain optional.
+- Search real cities, addresses, facilities, or businesses through Geoapify Geocoding when choosing locations manually.
 - Calculate route distance and duration with Geoapify's truck routing profile.
 - Generate a freight category and suggest compatible trailer equipment from a generic real-world planning taxonomy.
 - Keep place and route data separate from the generated shipment scenario; do not invent a company contract, load weight, or booking.
@@ -17,6 +18,10 @@ The route profile does not verify a particular vehicle's height, weight, permits
 The Netlify Functions read `GEOAPIFY_API_KEY` on the server. Add the key in Netlify project environment variables and include both **Production** and **Deploy Previews** scopes. The key is not stored in this repository or exposed in browser JavaScript. The UI reports a configuration error until the key exists.
 
 Geoapify requires an API key for place search and routing. Review its current usage limits and terms in the [Geoapify API documentation](https://apidocs.geoapify.com/docs/).
+
+## Real city catalog
+
+The random city pool is sourced from the official GeoNames `cities15000` dump and filtered to the contiguous United States for ATS plus selected European countries for ETS2. Each city retains its GeoNames ID, coordinates, population, time zone, and source link. The city catalog is licensed CC BY 4.0; see [data attribution and licenses](src/DATA-LICENSES.md). Its coordinates are city centroids, not verified freight terminals.
 
 ## Deploy and develop
 
@@ -44,6 +49,8 @@ The previous Truck Simulator Wiki reference catalog remains separate in `src/dat
 - `src/styles.css` — responsive dashboard styling.
 - `src/main.js` — place search, route request, scenario display, history, and print rendering.
 - `src/mission-engine.mjs` — ATS/ETS2 scenario composition and generic freight/equipment taxonomy.
+- `src/data/geonames-cities.json` — sourced random city pools for ATS and ETS2.
+- `scripts/import-geonames-cities.ps1` — GeoNames dump filter/import utility.
 - `netlify/functions/search-places.mjs` — server-side Geoapify place search.
 - `netlify/functions/truck-route.mjs` — server-side Geoapify truck route request.
 - `netlify.toml` — Netlify publish, function, and API path configuration.

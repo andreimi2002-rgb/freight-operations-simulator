@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.0 — 2026-10-19
+
+- Restored random route generation using 10,264 real GeoNames city records across the ATS and ETS2 regions.
+- Made manual Geoapify place selection optional and collapsed it behind a secondary control.
+- Added GeoNames CC BY 4.0 attribution and a repeatable city-catalog importer.
+
 ## 0.4.0 — 2026-10-19
 
 - Reframed ATS/ETS2 as the initial world modes for real-data freight scenarios.

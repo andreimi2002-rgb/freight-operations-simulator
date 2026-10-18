@@ -1,10 +1,11 @@
-import { generateMission as buildMission, validateMission, WORLD_MODES } from "./mission-engine.mjs";
+import { chooseRandomCityPair, generateMission as buildMission, validateMission, WORLD_MODES } from "./mission-engine.mjs";
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 const HISTORY_KEY = "fos-mission-history-v3";
 let history = loadHistory();
 const selectedPlaces = { origin: null, destination: null };
+let cityCatalog = null;
 
 function getWorld() { return $("input[name=world]:checked")?.value || "ATS"; }
 function formatNum(value) { return Number(value).toLocaleString("en-US", { maximumFractionDigits: 1 }); }
@@ -91,23 +92,62 @@ function selectPlace(kind) {
   }
 }
 
-async function generateMission() {
-  const origin = selectedPlaces.origin;
-  const destination = selectedPlaces.destination;
-  if (!origin || !destination) {
-    showToast("Search for and select an exact origin and destination first.");
+async function loadCityCatalog() {
+  const status = $("#catalogStatus");
+  try {
+    const response = await fetch("/src/data/geonames-cities.json", { cache: "force-cache" });
+    if (!response.ok) throw new Error("The real-city catalog could not be loaded.");
+    cityCatalog = await response.json();
+    updateCatalogStatus();
+  } catch (error) {
+    status.textContent = "Random city catalog unavailable. Manual location search is still available.";
+    showToast(error.message);
+  }
+}
+
+function updateCatalogStatus() {
+  if (!cityCatalog) return;
+  const world = getWorld();
+  const count = cityCatalog.cities.filter(city => city.worlds?.includes(world)).length;
+  $("#catalogStatus").textContent = `${formatNum(count)} random real-city options for ${world} · GeoNames CC BY 4.0`;
+}
+
+async function generateMission({ forceRandom = false } = {}) {
+  const hasManualOrigin = Boolean(selectedPlaces.origin);
+  const hasManualDestination = Boolean(selectedPlaces.destination);
+  if (!forceRandom && hasManualOrigin !== hasManualDestination) {
+    showToast("Choose both manual locations, or clear them to use random locations.");
     return;
   }
+  const useManual = !forceRandom && hasManualOrigin && hasManualDestination;
   const submit = $(".generate-btn");
   submit.disabled = true;
   submit.setAttribute("aria-busy", "true");
-  submit.querySelector("span").textContent = "…";
   try {
-    const route = await postJson("/api/truck-route", {
-      origin: { lat: origin.lat, lon: origin.lon },
-      destination: { lat: destination.lat, lon: destination.lon },
-    });
+    let origin = useManual ? selectedPlaces.origin : null;
+    let destination = useManual ? selectedPlaces.destination : null;
+    let route = null;
+    let lastRouteError = null;
+    for (let attempt = 0; attempt < (useManual ? 1 : 3); attempt += 1) {
+      if (!useManual) {
+        const pair = chooseRandomCityPair({ world: getWorld(), cityCatalog });
+        origin = pair.origin;
+        destination = pair.destination;
+      }
+      try {
+        route = await postJson("/api/truck-route", {
+          origin: { lat: origin.lat, lon: origin.lon },
+          destination: { lat: destination.lat, lon: destination.lon },
+        });
+        break;
+      } catch (error) {
+        lastRouteError = error;
+        if (useManual || /rate limit/i.test(error.message)) throw error;
+      }
+    }
+    if (!route) throw new Error(lastRouteError?.message || "Could not route a random city pair. Generate another scenario.");
     const mission = buildMission({ world: getWorld(), origin, destination, route, cargoId: $("#cargo").value });
+    mission.locationSelection = useManual ? "manual-geocoding" : "random-geonames";
     const errors = validateMission(mission);
     if (errors.length) throw new Error(`Scenario data error: ${errors.join(" ")}`);
     history.unshift(mission);
@@ -115,13 +155,12 @@ async function generateMission() {
     saveHistory();
     renderMission(mission);
     $("#historyCount").textContent = history.length;
-    showToast("Truck route loaded. Freight assignment is a generated scenario.");
+    showToast(useManual ? "Manual locations routed. Freight assignment is a generated scenario." : "Random real-city route generated.");
   } catch (error) {
     showToast(error.message);
   } finally {
     submit.disabled = false;
     submit.removeAttribute("aria-busy");
-    submit.querySelector("span").textContent = "✦";
   }
 }
 
@@ -138,7 +177,7 @@ function renderMission(mission) {
   const minutes = Math.round((mission.route.durationSeconds % 3600) / 60);
   out.innerHTML = `
     <div class="mission-banner">
-      <div class="mission-id">${esc(mission.id)} · ${esc(mode.label)}</div>
+      <div class="mission-id">${esc(mission.id)} · ${esc(mode.label)} · ${mission.locationSelection === "random-geonames" ? "RANDOM GEONAMES DRAW" : "MANUAL PLACES"}</div>
       <div class="mission-route">
         <div><small>ORIGIN · SOURCE PLACE</small><strong>${esc(mission.origin.name)}</strong><span class="location-address">${esc(mission.origin.address)}</span></div>
         <div class="route-arrow">→</div>
@@ -157,7 +196,7 @@ function renderMission(mission) {
     <div class="output-actions"><button class="primary" id="printReport">↧ EXPORT / PRINT REPORT</button><button id="regenerate">⟳ NEW SCENARIO</button></div>
     <p class="form-note">A real place or route result does not mean a real booking. Geoapify-provided place attributes are linked to their source where available.</p>`;
   $("#printReport").addEventListener("click", () => printMission(mission));
-  $("#regenerate").addEventListener("click", generateMission);
+  $("#regenerate").addEventListener("click", () => generateMission({ forceRandom: true }));
 }
 
 function printMission(mission) {
@@ -181,6 +220,7 @@ $("#searchOrigin").addEventListener("click", () => searchPlaces("origin"));
 $("#searchDestination").addEventListener("click", () => searchPlaces("destination"));
 $("#originPlace").addEventListener("change", () => selectPlace("origin"));
 $("#destinationPlace").addEventListener("change", () => selectPlace("destination"));
+$$('input[name="world"]').forEach(input => input.addEventListener("change", updateCatalogStatus));
 for (const kind of ["origin", "destination"]) {
   $(`#${kind}Query`).addEventListener("input", () => {
     selectedPlaces[kind] = null;
@@ -189,9 +229,10 @@ for (const kind of ["origin", "destination"]) {
   });
 }
 $("#historyNav").addEventListener("click", () => {
-  if (!history.length) { showToast("No saved scenarios yet. Search two places and generate one."); return; }
+  if (!history.length) { showToast("No saved scenarios yet. Generate a random route or choose manual places."); return; }
   renderMission(history[0]);
   showToast(`Showing latest of ${history.length} saved scenarios.`);
 });
 $("#databaseNav").addEventListener("click", () => $("#coverage").scrollIntoView({ behavior: "smooth", block: "center" }));
 $("#historyCount").textContent = history.length;
+loadCityCatalog();
