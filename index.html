@@ -13,7 +13,7 @@
     <aside class="sidebar">
       <div class="brand">
         <div class="brand-mark">F<span>OS</span></div>
-        <div><strong>FREIGHT OPS</strong><small>SIMULATOR / 0.8</small></div>
+        <div><strong>FREIGHT OPS</strong><small>SIMULATOR / 0.9</small></div>
       </div>
       <div class="side-label">WORKSPACE</div>
       <button class="nav-item active" type="button" aria-current="page"><span>▦</span> Mission generator</button>
@@ -79,17 +79,39 @@
                 <small class="field-help" id="destinationStatus" aria-live="polite">Choose the exact result before generating.</small>
               </div>
               </div>
+              <div class="company-picker">
+                <label for="companyPreset">Real company directory · search suggestion only</label>
+                <div class="search-control">
+                  <select id="companyPreset" aria-label="Choose a company search suggestion"></select>
+                  <button id="companyOrigin" type="button">SEARCH ORIGIN</button>
+                  <button id="companyDestination" type="button">SEARCH DESTINATION</button>
+                </div>
+                <small class="field-help">Select a company to search its public name through Geoapify, then confirm the exact address. A brand match does not verify ownership, a contract, or an operating facility.</small>
+                <div id="companyDirectoryLinks" class="company-directory-links"></div>
+              </div>
             </details>
+            <div class="field cargo-field">
+              <label for="freightLane">Freight corridor</label>
+              <select id="freightLane" aria-describedby="laneStatus"></select>
+              <small class="field-help" id="laneStatus" aria-live="polite">Choose an illustrative industry corridor. Cities are sourced reference points, not company terminals.</small>
+            </div>
             <div class="field cargo-field">
               <label for="cargo">Cargo type</label>
               <select id="cargo">
-                <option value="random">Random cargo from all families</option>
+                <option value="random">Random cargo for the selected corridor</option>
               </select>
               <small class="field-help">Choose a cargo or draw randomly. Handling notes and trailer matches are planning guidance, not a verified load.</small>
             </div>
+            <div class="field cargo-field">
+              <label for="equipment">Trailer type</label>
+              <select id="equipment">
+                <option value="random">Random compatible trailer</option>
+              </select>
+              <small class="field-help">Choose a trailer configuration or let the scenario select one compatible planning suggestion.</small>
+            </div>
             <p class="catalog-status" id="catalogStatus" aria-live="polite">Loading real city catalog…</p>
-            <button class="generate-btn" type="submit"><span>✦</span> GENERATE RANDOM REAL-WORLD ROUTE <b>↗</b></button>
-            <p class="form-note">Cities are drawn randomly from the sourced GeoNames catalog. Cargo and equipment are generated planning suggestions.</p>
+            <button class="generate-btn" type="submit"><span>✦</span> GENERATE FREIGHT SCENARIO <b>↗</b></button>
+            <p class="form-note">Corridors use real GeoNames city reference points. Cargo and trailer assignments are detailed planning suggestions, not shipment records.</p>
           </form>
         </div>
 
@@ -101,7 +123,7 @@
           <div class="empty-state" id="emptyState">
             <div class="empty-icon">↗</div>
             <h3>Your next mission starts here.</h3>
-            <p>Choose ATS or ETS2, then generate a random route between real cities. Open the manual location option only when you want specific places.</p>
+            <p>Choose ATS or ETS2, then select a cargo and a plausible freight corridor. Open manual locations to search real companies, facilities, or exact addresses.</p>
             <div class="empty-stats"><span>01 <small>MISSION</small></span><span>02 <small>ROUTE</small></span><span>03 <small>REPORT</small></span></div>
           </div>
           <div id="missionOutput" class="mission-output hidden"></div>
@@ -126,16 +148,12 @@
         </div>
       </section>
 
-      <footer><span>FOS / FREIGHT OPERATIONS SIMULATOR</span><span>INDEPENDENT CONCEPT • NOT AFFILIATED WITH SCS SOFTWARE</span><span>BUILD 0.8.0</span></footer>
+      <footer><span>FOS / FREIGHT OPERATIONS SIMULATOR</span><span>INDEPENDENT CONCEPT • NOT AFFILIATED WITH SCS SOFTWARE</span><span>BUILD 0.9.0</span></footer>
     </main>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>
-
-
-
-
 
 

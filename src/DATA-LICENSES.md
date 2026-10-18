@@ -22,6 +22,12 @@ Cargo-to-trailer pairings and handling prompts are planning heuristics written f
 - Reference frameworks: UNECE NST 2007, ATP, and ADR as linked per record where relevant.
 - Maintenance: keep product-specific requirements marked unknown until linked to an authoritative source and jurisdiction.
 
+## Freight corridor context and company search suggestions
+
+`data/freight-network.mjs` contains original, illustrative corridor descriptions and a directory of company names, official website links, and generic Geoapify search terms. It is not a business-location dataset: the app does not copy a company's facility list, and provider search results must be checked by the user. A company suggestion or a corridor must never be interpreted as a verified supplier relationship, facility, shipment, or contract.
+
+Some corridor background is linked to public references, including [USDA NASS charts and maps](https://www.nass.usda.gov/Charts_and_Maps/), the [USDA Census of Agriculture](https://www.nass.usda.gov/AgCensus/), [Port of Rotterdam maps](https://www.portofrotterdam.com/en/doing-business/port-maps), and [Duisport transport connections](https://www.duisport.de/en/location-and-transport/transport-connections/). These contextual sources do not substantiate a particular generated truck trip or company trade lane. Company names and links direct users to the respective official websites; they are not endorsements.
+
 ## Truck Simulator Wiki reference catalog
 
 `data/game-reference-catalog.mjs` is a small, separately maintained selection of cargo names, trailer associations, company names, and industry labels derived from the Truck Simulator Wiki pages listed in that file.
