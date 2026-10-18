@@ -95,9 +95,9 @@ export default async function truckRoute(request) {
           headers: { "content-type": "application/json" },
           body: JSON.stringify({
             style: "osm-bright",
-            width: 820,
-            height: 420,
-            format: "png",
+            width: 760,
+            height: 390,
+            format: "jpeg",
             lang: "ro",
             geometries: [{ type: "polyline6", value: routePolyline, linecolor: "#e7832e", lineopacity: 0.95, linewidth: 5 }],
             markers: [
