@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.9.0 — 2026-10-19
+
+- Expanded produce and food cargo profiles with named fruit, vegetable, meat, and seafood examples plus variety examples, load forms, and product-specific handling caveats.
+- Expanded trailer suggestions into detailed equipment profiles with common configurations, intended uses, and checks to confirm before dispatch; the UI filters equipment by selected cargo.
+- Added nine illustrative ATS/ETS2 freight corridors with cargo-specific profiles, relevant real-brand research suggestions, and source-linked context for selected US agriculture and European port/intermodal regions.
+- Added a directory of more than 20 real company brands that supplies search hints for Geoapify place search; exact addresses still require provider selection, and company ownership or a real shipment is not asserted.
+- Added corridor, cargo variety, company search-suggestion, and trailer configuration details to generated and printed reports.
+- Added consistency tests for cargo/trailer links, corridor locations, and official company URL records.
+
+## 0.8.0 — 2026-10-19
+
+- Replaced seven broad freight categories with a curated catalog of 51 real-world commodity examples across agriculture and food, building materials, industrial goods, regulated goods, retail freight, vehicles, and livestock.
+- Added load forms, practical handling prompts, product-specific caution notes, and suggested trailer families to each cargo profile.
+- Added random selection across the full cargo catalog and family-grouped manual selection.
+- Added an expanded cargo profile to generated scenarios, including source frameworks and explicit confidence limits for trailer matches and regulated-goods classification.
+- Added official UNECE references for transport-goods classification, perishable-food transport, and ADR dangerous-goods context.
+
 ## 0.7.0 — 2026-10-19
 
 - Replaced the route-line schematic with a Geoapify/OpenStreetMap road map with fitted route geometry and A/B markers.

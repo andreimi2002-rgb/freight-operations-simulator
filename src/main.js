@@ -1,10 +1,13 @@
-import { chooseRandomCityPair, generateMission as buildMission, validateMission, WORLD_MODES } from "./mission-engine.mjs";
+import { CARGO, chooseRandomCityPair, EQUIPMENT, generateMission as buildMission, toSourcedPlace, validateMission, WORLD_MODES } from "./mission-engine.mjs";
+import { CARGO_SOURCES } from "./data/cargo-catalog.mjs";
+import { COMPANY_DIRECTORY, FREIGHT_LANES, getFreightLane, NETWORK_SOURCES } from "./data/freight-network.mjs";
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 const HISTORY_KEY = "fos-mission-history-v3";
 let history = loadHistory();
 const selectedPlaces = { origin: null, destination: null };
+const selectedCompanyHints = { origin: null, destination: null };
 let cityCatalog = null;
 
 function getWorld() { return $("input[name=world]:checked")?.value || "ATS"; }
@@ -20,6 +23,131 @@ function esc(value) {
 }
 function safeHref(value, fallback) {
   return /^https?:\/\//i.test(String(value || "")) ? value : fallback;
+}
+function populateCargoOptions() {
+  const select = $("#cargo");
+  const previous = select.value || "random";
+  const lane = getFreightLane($("#freightLane").value);
+  const allowedIds = lane ? new Set(lane.cargoIds) : null;
+  const groups = new Map();
+  for (const cargo of Object.values(CARGO)) {
+    if (allowedIds && !allowedIds.has(cargo.id)) continue;
+    if (!groups.has(cargo.family)) groups.set(cargo.family, []);
+    groups.get(cargo.family).push(cargo);
+  }
+  select.replaceChildren(new Option(lane ? "Random cargo for this corridor" : "Random cargo for any corridor", "random"));
+  for (const [family, items] of groups) {
+    const group = document.createElement("optgroup");
+    group.label = family;
+    for (const cargo of items) group.append(new Option(cargo.name, cargo.id));
+    select.append(group);
+  }
+  select.value = previous === "random" || !allowedIds?.has(previous) ? "random" : previous;
+  populateEquipmentOptions();
+}
+function populateEquipmentOptions() {
+  const select = $("#equipment");
+  const previous = select.value || "random";
+  const cargo = CARGO[$("#cargo").value];
+  const records = cargo
+    ? cargo.equipmentIds.map(id => EQUIPMENT[id]).filter(Boolean)
+    : Object.values(EQUIPMENT);
+  const groups = new Map();
+  for (const equipment of records) {
+    if (!groups.has(equipment.category)) groups.set(equipment.category, []);
+    groups.get(equipment.category).push(equipment);
+  }
+  select.replaceChildren(new Option("Random compatible trailer", "random"));
+  for (const [category, items] of groups) {
+    const group = document.createElement("optgroup");
+    group.label = category;
+    for (const equipment of items) group.append(new Option(equipment.name, equipment.id));
+    select.append(group);
+  }
+  select.value = records.some(item => item.id === previous) ? previous : "random";
+}
+function populateLaneOptions() {
+  const select = $("#freightLane");
+  const previous = select.value;
+  const cargoId = $("#cargo")?.value || "random";
+  const equipmentId = $("#equipment")?.value || "random";
+  const lanes = FREIGHT_LANES.filter(lane => lane.world === getWorld()
+    && (cargoId === "random" || lane.cargoIds.includes(cargoId))
+    && (equipmentId === "random" || lane.cargoIds.some(id => CARGO[id]?.equipmentIds.includes(equipmentId))));
+  select.replaceChildren(new Option("Random compatible industry corridor", "random-lane"));
+  for (const lane of lanes) select.add(new Option(lane.label, lane.id));
+  select.value = lanes.some(lane => lane.id === previous) ? previous : "random-lane";
+  populateCargoOptions();
+  updateLaneStatus();
+}
+function updateLaneStatus() {
+  const lane = getFreightLane($("#freightLane").value);
+  const cargoId = $("#cargo").value;
+  const equipmentId = $("#equipment").value;
+  const hasCompatibleLane = FREIGHT_LANES.some(item => item.world === getWorld()
+    && (cargoId === "random" || item.cargoIds.includes(cargoId))
+    && (equipmentId === "random" || item.cargoIds.some(id => CARGO[id]?.equipmentIds.includes(equipmentId))));
+  $("#laneStatus").textContent = lane
+    ? `${lane.rationale} Lane context: ${(lane.sourceIds || []).map(id => NETWORK_SOURCES[id]?.name).filter(Boolean).join("; ") || "illustrative planning scenario, not a verified trade flow"}.`
+    : !hasCompatibleLane
+      ? "No curated industry corridor matches this cargo and trailer yet. A general real-city pair will be routed instead."
+      : "A compatible corridor is drawn from the selected world, cargo, and trailer. These are illustrative city-to-city scenarios, not booked company routes.";
+}
+function populateCompanyDirectory() {
+  const select = $("#companyPreset");
+  const previous = select.value;
+  const companies = COMPANY_DIRECTORY.filter(company => company.worlds.includes(getWorld()));
+  select.replaceChildren(new Option("Choose a company search suggestion", ""));
+  for (const company of companies) {
+    select.add(new Option(`${company.name} · ${company.sector}`, company.id));
+  }
+  select.value = companies.some(company => company.id === previous) ? previous : "";
+  $("#companyDirectoryLinks").innerHTML = companies.map(company =>
+    `<a href="${esc(company.website)}" target="_blank" rel="noopener">${esc(company.name)}</a>`
+  ).join(" · ");
+}
+function renderCargoDetails(cargo) {
+  const handling = (cargo.handling || []).map(item => `<li>${esc(item)}</li>`).join("");
+  const sources = (cargo.sourceIds || []).map(id => CARGO_SOURCES[id]).filter(Boolean)
+    .map(source => `<a href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.name)}</a>`).join(" · ");
+  return `<div class="mission-section"><h4>CARGO PROFILE · ${esc(cargo.family.toUpperCase())}</h4>
+    <p><b>${esc(cargo.name)}</b> — ${esc(cargo.description)}</p>
+    <p><b>Typical load form:</b> ${esc(cargo.loadForm)}${cargo.temperature ? ` · <b>Temperature:</b> ${esc(cargo.temperature)}` : ""}</p>
+    ${cargo.varietyExamples?.length ? `<p><b>Examples / varieties:</b> ${cargo.varietyExamples.map(esc).join(", ")}</p>` : ""}
+    ${handling ? `<ul class="cargo-handling">${handling}</ul>` : ""}
+    ${cargo.regulatoryReview ? `<p class="cargo-caution"><b>Verification needed:</b> ${esc(cargo.regulatoryReview)}</p>` : ""}
+    ${cargo.planningNote ? `<p class="field-help">${esc(cargo.planningNote)}</p>` : ""}
+    <p class="field-help">Commodity name: curated real-world example. Trailer match: planning heuristic, not verified compatibility. ${sources ? `Reference framework: ${sources}.` : ""}</p>
+  </div>`;
+}
+function renderEquipmentDetails(equipment) {
+  const variants = (equipment.variants || []).map(item => `<li>${esc(item)}</li>`).join("");
+  const checks = (equipment.checks || []).map(item => `<li>${esc(item)}</li>`).join("");
+  return `<div class="mission-section"><h4>TRAILER PROFILE · ${esc(equipment.category || "Equipment")}</h4>
+    <p><b>${esc(equipment.name)}</b> — ${esc(equipment.uses || "Equipment match is a planning suggestion, not a verified specification.")}</p>
+    ${variants ? `<p><b>Common configurations:</b></p><ul class="cargo-handling">${variants}</ul>` : ""}
+    ${checks ? `<p><b>Confirm before use:</b></p><ul class="cargo-handling">${checks}</ul>` : ""}
+    <p class="field-help">Equipment labels describe common trailer types; dimensions, payload, certification, and compatibility vary by vehicle, jurisdiction, and shipment.</p>
+  </div>`;
+}
+function renderLaneDetails(lane) {
+  if (!lane) return "";
+  const sources = (lane.sourceIds || []).map(id => NETWORK_SOURCES[id]).filter(Boolean)
+    .map(source => `<a href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.name)}</a>`).join(" · ");
+  const companies = (lane.companyIds || []).map(id => COMPANY_DIRECTORY.find(company => company.id === id)).filter(Boolean)
+    .map(company => `<a href="${esc(safeHref(company.website, "#"))}" target="_blank" rel="noopener">${esc(company.name)}</a>`).join(" · ");
+  return `<div class="mission-section"><h4>FREIGHT CORRIDOR CONTEXT</h4>
+    <p><b>${esc(lane.label)}</b></p><p>${esc(lane.rationale)}</p>
+    ${companies ? `<p><b>Relevant real brands to explore (not route parties):</b> ${companies}</p>` : ""}
+    <p class="field-help">${sources ? `Background sources: ${sources}. ` : ""}Illustrative corridor between city reference points. Company examples are sector research prompts only; they are not claimed to operate at either endpoint or participate in the route.</p>
+  </div>`;
+}
+function renderCompanyHints(hints = []) {
+  const entries = hints.map(item => COMPANY_DIRECTORY.find(company => company.id === item?.id)).filter(Boolean);
+  if (!entries.length) return "";
+  return `<div class="mission-section"><h4>COMPANY SEARCH SUGGESTIONS</h4>
+    <ul class="cargo-handling">${entries.map(company => `<li><a href="${esc(safeHref(company.website, "#"))}" target="_blank" rel="noopener">${esc(company.name)}</a> · ${esc(company.sector)}. Search inspiration only; the selected place is a separate provider result and is not verified as company-owned or operated.</li>`).join("")}</ul>
+  </div>`;
 }
 function formatRouteDistance(meters, unit) {
   const distance = unit === "mi" ? meters / 1609.344 : meters / 1000;
@@ -114,6 +242,19 @@ async function searchPlaces(kind) {
   }
 }
 
+async function searchCompany(kind) {
+  const company = COMPANY_DIRECTORY.find(item => item.id === $("#companyPreset").value);
+  if (!company) {
+    showToast("Choose a company search suggestion first.");
+    return;
+  }
+  const disclosure = $(".manual-location-settings");
+  disclosure.open = true;
+  selectedCompanyHints[kind] = company;
+  $(`#${kind}Query`).value = company.query;
+  await searchPlaces(kind);
+}
+
 function selectPlace(kind) {
   const select = $(`#${kind}Place`);
   const value = select.value;
@@ -148,7 +289,7 @@ function updateCatalogStatus() {
   if (!cityCatalog) return;
   const world = getWorld();
   const count = cityCatalog.cities.filter(city => city.worlds?.includes(world)).length;
-  $("#catalogStatus").textContent = `${formatNum(count)} random real-city options for ${world} · GeoNames CC BY 4.0`;
+  $("#catalogStatus").textContent = `${formatNum(count)} sourced city records available for ${world} · GeoNames CC BY 4.0`;
 }
 
 async function generateMission({ forceRandom = false } = {}) {
@@ -165,28 +306,54 @@ async function generateMission({ forceRandom = false } = {}) {
   try {
     let origin = useManual ? selectedPlaces.origin : null;
     let destination = useManual ? selectedPlaces.destination : null;
+    let cargoId = $("#cargo").value;
+    const equipmentId = $("#equipment").value;
+    let freightLane = null;
     let route = null;
-    let lastRouteError = null;
-    for (let attempt = 0; attempt < (useManual ? 1 : 3); attempt += 1) {
-      if (!useManual) {
+    if (!useManual) {
+      const lanes = FREIGHT_LANES.filter(lane => lane.world === getWorld()
+        && (cargoId === "random" || lane.cargoIds.includes(cargoId))
+        && (equipmentId === "random" || lane.cargoIds.some(id => CARGO[id]?.equipmentIds.includes(equipmentId))));
+      const requestedLane = getFreightLane($("#freightLane").value);
+      if (requestedLane) {
+        if (!lanes.some(lane => lane.id === requestedLane.id)) {
+          throw new Error("The selected corridor is not compatible with this cargo and trailer. Choose another corridor or a random cargo/trailer.");
+        }
+        freightLane = requestedLane;
+      } else if (lanes.length) {
+        freightLane = lanes[Math.floor(Math.random() * lanes.length)];
+      } else {
         const pair = chooseRandomCityPair({ world: getWorld(), cityCatalog });
         origin = pair.origin;
         destination = pair.destination;
       }
-      try {
-        route = await postJson("/api/truck-route", {
-          origin: { lat: origin.lat, lon: origin.lon },
-          destination: { lat: destination.lat, lon: destination.lon },
-        });
-        break;
-      } catch (error) {
-        lastRouteError = error;
-        if (useManual || /rate limit/i.test(error.message)) throw error;
+      if (freightLane && cargoId === "random") {
+        const compatibleCargo = freightLane.cargoIds.filter(id => CARGO[id]
+          && (equipmentId === "random" || CARGO[id].equipmentIds.includes(equipmentId)));
+        if (!compatibleCargo.length) throw new Error("No cargo in this corridor matches the selected trailer.");
+        cargoId = compatibleCargo[Math.floor(Math.random() * compatibleCargo.length)];
+      }
+      if (freightLane) {
+        if (!cityCatalog) throw new Error("The real-city catalog is still loading. Try again shortly.");
+        const locate = point => cityCatalog.cities.find(city =>
+          city.name === point.city && city.countryCode === point.countryCode && city.worlds?.includes(getWorld()));
+        const originCity = locate(freightLane.origin);
+        const destinationCity = locate(freightLane.destination);
+        if (!originCity || !destinationCity) throw new Error(`The city catalog does not contain both locations for ${freightLane.label}.`);
+        origin = toSourcedPlace(originCity, cityCatalog.metadata?.importedAt);
+        destination = toSourcedPlace(destinationCity, cityCatalog.metadata?.importedAt);
       }
     }
-    if (!route) throw new Error(lastRouteError?.message || "Could not route a random city pair. Generate another scenario.");
-    const mission = buildMission({ world: getWorld(), origin, destination, route, cargoId: $("#cargo").value });
-    mission.locationSelection = useManual ? "manual-geocoding" : "random-geonames";
+    route = await postJson("/api/truck-route", {
+      origin: { lat: origin.lat, lon: origin.lon },
+      destination: { lat: destination.lat, lon: destination.lon },
+    });
+    const mission = buildMission({ world: getWorld(), origin, destination, route, cargoId, equipmentId, now: new Date() });
+    mission.locationSelection = useManual ? "manual-geocoding" : freightLane ? "freight-corridor" : "random-geonames";
+    if (freightLane) mission.freightLane = freightLane;
+    mission.companySearchHints = useManual
+      ? [selectedCompanyHints.origin, selectedCompanyHints.destination].filter(Boolean)
+      : [];
     const errors = validateMission(mission);
     if (errors.length) throw new Error(`Scenario data error: ${errors.join(" ")}`);
     history.unshift(mission);
@@ -194,7 +361,11 @@ async function generateMission({ forceRandom = false } = {}) {
     saveHistory();
     renderMission(mission);
     $("#historyCount").textContent = history.length;
-    showToast(useManual ? "Manual locations routed. Freight assignment is a generated scenario." : "Random real-city route generated.");
+    showToast(useManual
+      ? "Manual locations routed. Freight assignment is a generated scenario."
+      : freightLane
+        ? "Illustrative freight corridor routed with the selected cargo and trailer."
+        : "General real-city route generated; no curated corridor matched this cargo and trailer.");
   } catch (error) {
     showToast(error.message);
   } finally {
@@ -216,7 +387,7 @@ function renderMission(mission) {
   const minutes = Math.round((mission.route.durationSeconds % 3600) / 60);
   out.innerHTML = `
     <div class="mission-banner">
-      <div class="mission-id">${esc(mission.id)} · ${esc(mode.label)} · ${mission.locationSelection === "random-geonames" ? "RANDOM GEONAMES DRAW" : "MANUAL PLACES"}</div>
+      <div class="mission-id">${esc(mission.id)} · ${esc(mode.label)} · ${mission.locationSelection === "manual-geocoding" ? "MANUAL PLACES" : mission.freightLane ? "ILLUSTRATIVE FREIGHT CORRIDOR" : "RANDOM GEONAMES DRAW"}</div>
       <div class="mission-route">
         <div><small>ORIGIN · SOURCE PLACE</small><strong>${esc(mission.origin.name)}</strong><span class="location-address">${esc(mission.origin.address)}</span></div>
         <div class="route-arrow">→</div>
@@ -224,13 +395,16 @@ function renderMission(mission) {
       </div>
       <div class="mission-tags"><span class="tag">${esc(mission.cargo.name)}</span><span class="tag">${esc(mission.equipment.name)} · suggested</span><span class="tag">GENERATED SCENARIO</span></div>
     </div>
+    ${renderLaneDetails(mission.freightLane)}
     <div class="mission-metrics">
       <div class="metric"><b>${formatNum(mission.route.distance)} ${mission.route.unit}</b><small>TRUCK ROUTE · GEOAPIFY</small></div>
       <div class="metric"><b>${hours}h ${minutes}m</b><small>ROUTED DURATION · GEOAPIFY</small></div>
       <div class="metric"><b>Not assigned</b><small>LOAD WEIGHT</small></div>
     </div>
     ${renderRoadDetails(mission.route, mission.route.unit, mission.origin.name, mission.destination.name)}
-    <div class="mission-section"><h4>GENERATED FREIGHT SCENARIO</h4><p><b>${esc(mission.cargo.name)}</b> — ${esc(mission.cargo.description)}. Suggested equipment: <b>${esc(mission.equipment.name)}</b>. This pairing is a planning prompt; the app has not verified a real shipment, payload, facility capability, or commercial relationship.</p></div>
+    ${renderCargoDetails(mission.cargo)}
+    ${renderEquipmentDetails(mission.equipment)}
+    ${renderCompanyHints(mission.companySearchHints)}
     <div class="mission-section"><h4>DATA SOURCES</h4><p>Origin record: <a href="${esc(originUrl)}" target="_blank" rel="noopener">${esc(mission.origin.sourceName)}</a>. Destination record: <a href="${esc(destinationUrl)}" target="_blank" rel="noopener">${esc(mission.destination.sourceName)}</a>. Attribution: ${esc(mission.origin.attribution || "Geoapify")}. Retrieved ${esc(new Date(mission.origin.retrievedAt || mission.createdAt).toLocaleString())}. Route: <a href="${esc(routeUrl)}" target="_blank" rel="noopener">Geoapify Routing API</a> · ${esc(mission.route.profile || "truck")} profile · retrieved ${esc(new Date(mission.route.retrievedAt).toLocaleString())}.</p></div>
     <div class="mission-section"><h4>REAL-WORLD LIMITS</h4><p>The truck profile returns a routed distance and duration, but this route is not confirmed for a specific truck, trailer, cargo, road restriction, appointment, or driver-hours rule. Confirm the actual vehicle dimensions, gross weight, permits, facility access, cargo requirements, and route before dispatch.</p></div>
     <div class="output-actions"><button class="primary" id="printReport">↧ EXPORT / PRINT REPORT</button><button id="regenerate">⟳ NEW SCENARIO</button></div>
@@ -244,12 +418,23 @@ function printMission(mission) {
   if (!win) { showToast("Pop-up blocked. Allow pop-ups to print the scenario."); return; }
   const mode = WORLD_MODES[mission.world];
   const duration = `${Math.floor(mission.route.durationSeconds / 3600)}h ${Math.round((mission.route.durationSeconds % 3600) / 60)}m`;
+  const laneSources = (mission.freightLane?.sourceIds || []).map(id => NETWORK_SOURCES[id]).filter(Boolean);
+  const laneCompanies = (mission.freightLane?.companyIds || []).map(id => COMPANY_DIRECTORY.find(company => company.id === id)).filter(Boolean);
+  const companyHints = (mission.companySearchHints || []).map(item => COMPANY_DIRECTORY.find(company => company.id === item?.id)).filter(Boolean);
   win.document.write(`<!doctype html><html><head><title>${esc(mission.id)} Freight Scenario</title><style>
     body{font:14px Arial,sans-serif;color:#17212a;margin:36px;line-height:1.5}header{background:#17212a;color:white;padding:25px;border-bottom:7px solid #f28c28}h1{margin:0;font-size:28px}header p{color:#d6dee4}.route{display:grid;grid-template-columns:1fr 30px 1fr;gap:12px;background:#f1f3f4;padding:18px;margin:18px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.card{border:1px solid #ddd;padding:12px}.muted{color:#687681;font-size:12px}.warning{background:#fff2dd;padding:12px;border-left:4px solid #f28c28}h2{font-size:15px;color:#b8641c;border-bottom:1px solid #ddd;padding-bottom:6px;margin-top:26px}.route-map-print{width:100%;max-height:420px;object-fit:contain;border:1px solid #ddd;border-radius:6px}.map-attribution{font-size:10px;color:#687681}</style></head><body>
     <header><div style="color:#ffc45b;font-size:11px;font-weight:bold;letter-spacing:2px">FREIGHT OPERATIONS SIMULATOR</div><h1>GENERATED FREIGHT SCENARIO</h1><p>${esc(mission.id)} · ${esc(mode.label)} · ${esc(new Date(mission.createdAt).toLocaleString())}</p></header>
     <div class="route"><div><small>ORIGIN</small><h2>${esc(mission.origin.name)}</h2><p>${esc(mission.origin.address)}</p></div><div>→</div><div><small>DESTINATION</small><h2>${esc(mission.destination.name)}</h2><p>${esc(mission.destination.address)}</p></div></div>
     ${mission.route.routeDetails?.mapImageDataUrl ? `<img class="route-map-print" src="${esc(mission.route.routeDetails.mapImageDataUrl)}" alt="Map from ${esc(mission.origin.name)} to ${esc(mission.destination.name)}"/><p class="map-attribution">Map: Geoapify · © OpenStreetMap contributors</p>` : ""}
     <div class="grid"><div class="card"><small>GENERATED FREIGHT CATEGORY</small><h3>${esc(mission.cargo.name)}</h3></div><div class="card"><small>SUGGESTED EQUIPMENT</small><h3>${esc(mission.equipment.name)}</h3></div><div class="card"><small>TRUCK ROUTE</small><h3>${formatNum(mission.route.distance)} ${mission.route.unit} · ${duration}</h3></div></div>
+    ${mission.freightLane ? `<h2>Illustrative freight corridor</h2><p><b>${esc(mission.freightLane.label)}</b></p><p>${esc(mission.freightLane.rationale)}</p>${laneSources.length ? `<p>Background sources: ${laneSources.map(source => `<a href="${esc(safeHref(source.url, "#"))}">${esc(source.name)}</a>`).join(" · ")}</p>` : ""}${laneCompanies.length ? `<p>Relevant real brands to explore, not route parties: ${laneCompanies.map(company => `<a href="${esc(safeHref(company.website, "#"))}">${esc(company.name)}</a>`).join(" · ")}</p>` : ""}` : ""}
+    <h2>Cargo detail</h2><p>${esc(mission.cargo.description)} Typical form: ${esc(mission.cargo.loadForm)}. ${esc(mission.cargo.temperature || "")}</p>
+    ${mission.cargo.varietyExamples?.length ? `<p>Examples / varieties: ${mission.cargo.varietyExamples.map(esc).join(", ")}</p>` : ""}
+    ${mission.cargo.handling?.length ? `<ul>${mission.cargo.handling.map(item => `<li>${esc(item)}</li>`).join("")}</ul>` : ""}
+    <h2>Trailer profile</h2><p>${esc(mission.equipment.uses || "")}</p>
+    ${(mission.equipment.variants || []).length ? `<ul>${mission.equipment.variants.map(item => `<li>${esc(item)}</li>`).join("")}</ul>` : ""}
+    ${(mission.equipment.checks || []).length ? `<p>Checks: ${mission.equipment.checks.map(esc).join("; ")}</p>` : ""}
+    ${companyHints.length ? `<h2>Company search suggestions</h2><ul>${companyHints.map(company => `<li><a href="${esc(safeHref(company.website, "#"))}">${esc(company.name)}</a> · ${esc(company.sector)}. Search inspiration only; the selected place is not verified as company-owned or operated.</li>`).join("")}</ul>` : ""}
     <h2>Route summary</h2><p>${esc((mission.route.routeDetails?.namedRoads || []).slice(0, 3).map(road => road.name).join(" · ") || "Main road names were not returned")}. ${esc((mission.route.routeDetails?.countries || []).join(" → ") || "Route countries unavailable")}. Tolls: ${mission.route.routeDetails?.hasTolls ? "reported" : "not reported"}; estimated traffic is approximated, not live.</p>
     <h2>Sources & limits</h2><p>Locations, road route, and map are provider data from Geoapify/OpenStreetMap. The heavy-truck profile models up to 40 t gross and 4.1 m height; it is not a specific vehicle clearance. Confirm dimensions, payload, permits, restrictions, facility access, and driver-hours rules before use.</p>
     <div class="warning"><b>GENERATED SCENARIO — NOT A SHIPMENT</b><br>No commercial relationship, contract, booking, cargo weight, or dispatch authorization is represented.</div>
@@ -258,14 +443,34 @@ function printMission(mission) {
 }
 
 $("#missionForm").addEventListener("submit", event => { event.preventDefault(); generateMission(); });
+populateCompanyDirectory();
+populateLaneOptions();
 $("#searchOrigin").addEventListener("click", () => searchPlaces("origin"));
 $("#searchDestination").addEventListener("click", () => searchPlaces("destination"));
+$("#companyOrigin").addEventListener("click", () => searchCompany("origin"));
+$("#companyDestination").addEventListener("click", () => searchCompany("destination"));
 $("#originPlace").addEventListener("change", () => selectPlace("origin"));
 $("#destinationPlace").addEventListener("change", () => selectPlace("destination"));
-$$('input[name="world"]').forEach(input => input.addEventListener("change", updateCatalogStatus));
+$("#freightLane").addEventListener("change", () => {
+  populateCargoOptions();
+  updateLaneStatus();
+});
+$("#cargo").addEventListener("change", () => {
+  populateEquipmentOptions();
+  populateLaneOptions();
+});
+$("#equipment").addEventListener("change", () => {
+  populateLaneOptions();
+});
+$$('input[name="world"]').forEach(input => input.addEventListener("change", () => {
+  populateCompanyDirectory();
+  populateLaneOptions();
+  updateCatalogStatus();
+}));
 for (const kind of ["origin", "destination"]) {
   $(`#${kind}Query`).addEventListener("input", () => {
     selectedPlaces[kind] = null;
+    selectedCompanyHints[kind] = null;
     $(`#${kind}Place`).disabled = true;
     $(`#${kind}Status`).textContent = "Search again after editing this query.";
   });
