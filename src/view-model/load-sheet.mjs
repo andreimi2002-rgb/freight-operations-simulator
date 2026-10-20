@@ -1,7 +1,7 @@
 // The ONLY place that knows the shape of a mission. Everything the page shows comes
 // from buildLoadSheet(mission). In phase 1B this function will read the new Load model
 // instead; the UI modules do not change.
-import { countryName, formatDate, formatDuration, formatKm, formatNumber, t, tOr } from "../i18n/i18n.mjs";
+import { countryName, formatDate, formatDuration, formatKm, formatNumber, formatTime, t, tOr } from "../i18n/i18n.mjs";
 import { cityCode, cityName } from "../data/scope.mjs";
 import { NST_ESTIMATES } from "../data/nst-estimates.mjs";
 import { LEVELS, UNAVAILABLE, computedFact, estimatedFact, levelHelp, levelLabel, phaseText, simulatedFact, sourcedFact, unavailableFact } from "./provenance.mjs";
@@ -95,7 +95,7 @@ export function buildLoadSheet(mission) {
     row("trailer", names.trailer, computedFact({
       formula: t("row.trailer.formula"),
       inputs: [{ label: t("meta.cargo"), value: names.cargo }, { label: t("meta.trailerOptions"), value: String((cargo.equipmentIds || []).length) }],
-    }), { explanation: t("row.trailer.detail"), meta: [{ label: t("chip.trailer"), value: equipmentCategory(equipment) }] }),
+    }), { explanation: t("row.trailer.detail"), meta: [{ label: t("meta.category"), value: equipmentCategory(equipment) }] }),
     pending("windows", "1B"),
     pending("shipper", "1B"),
   ];
@@ -126,6 +126,8 @@ export function buildLoadSheet(mission) {
         chip("adr", null, "3"),
       ],
       generatedAt: formatDate(mission.createdAt, { time: true }),
+      generatedTime: formatTime(mission.createdAt),
+      generatedDate: formatDate(mission.createdAt),
     },
     kpis: [
       kpi("distance", formatKm(km)),
@@ -142,6 +144,12 @@ export function buildLoadSheet(mission) {
       loadForm: cargo.loadForm || null,
       verify,
       notes: cargo.handling || [],
+      facts: [
+        { label: t("card.family"), value: names.family },
+        { label: t("card.loadForm"), value: cargo.loadForm || t("ui.noValue"), english: Boolean(cargo.loadForm) },
+        { label: t("card.packaging"), value: phaseText("1B"), pending: true },
+        { label: t("row.temperature.label"), value: phaseText("3"), pending: true },
+      ],
     },
     map: {
       geometry: details.geometry || [],
@@ -154,4 +162,11 @@ export function buildLoadSheet(mission) {
     rows,
     legend: [...LEVELS, UNAVAILABLE].map(level => ({ level, label: levelLabel(level), help: levelHelp(level) })),
   };
+}
+
+// Small entry for the "recent loads" chips in the top bar.
+export function buildRecentEntry(mission) {
+  const code = `${cityCode(mission.origin)}→${cityCode(mission.destination)}`;
+  const label = cargoName(mission.cargo);
+  return { id: mission.id, code, label, aria: t("history.recentFor", { code, cargo: label }) };
 }

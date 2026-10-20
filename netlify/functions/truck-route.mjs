@@ -6,29 +6,6 @@ const json = (body, status = 200) => new Response(JSON.stringify(body), {
 const validPoint = point => point && Number.isFinite(point.lat) && Number.isFinite(point.lon)
   && point.lat >= -90 && point.lat <= 90 && point.lon >= -180 && point.lon <= 180;
 
-function encodePolyline6(lines) {
-  let previousLat = 0;
-  let previousLon = 0;
-  let encoded = "";
-  const append = value => {
-    let chunk = value < 0 ? ~(value << 1) : value << 1;
-    while (chunk >= 0x20) {
-      encoded += String.fromCharCode((0x20 | (chunk & 0x1f)) + 63);
-      chunk >>= 5;
-    }
-    encoded += String.fromCharCode(chunk + 63);
-  };
-  for (const line of lines) for (const [lon, lat] of line) {
-    const scaledLat = Math.round(lat * 1e6);
-    const scaledLon = Math.round(lon * 1e6);
-    append(scaledLat - previousLat);
-    append(scaledLon - previousLon);
-    previousLat = scaledLat;
-    previousLon = scaledLon;
-  }
-  return encoded;
-}
-
 export default async function truckRoute(request) {
   if (request.method !== "POST") return json({ error: "Use POST." }, 405);
   const apiKey = process.env.GEOAPIFY_API_KEY;
@@ -83,41 +60,6 @@ export default async function truckRoute(request) {
       const interval = Math.ceil(line.length / 500);
       return line.filter((_, index) => index === 0 || index === line.length - 1 || index % interval === 0);
     });
-    let mapImageDataUrl = null;
-    let mapError = null;
-    try {
-      const routePolyline = encodePolyline6(sampledGeometry);
-      if (routePolyline.length > 0) {
-        const mapUrl = new URL("https://maps.geoapify.com/v1/staticmap");
-        mapUrl.searchParams.set("apiKey", apiKey);
-        const mapResponse = await fetch(mapUrl, {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify({
-            style: "osm-bright",
-            width: 760,
-            height: 390,
-            format: "jpeg",
-            lang: "ro",
-            geometries: [{ type: "polyline6", value: routePolyline, linecolor: "#e7832e", lineopacity: 0.95, linewidth: 5 }],
-            markers: [
-              { lat: body.origin.lat, lon: body.origin.lon, type: "circle", color: "#28a66a", size: 32, text: "A" },
-              { lat: body.destination.lat, lon: body.destination.lon, type: "circle", color: "#e3aa31", size: 32, text: "B" },
-            ],
-          }),
-          signal: AbortSignal.timeout(12000),
-        });
-        const contentType = mapResponse.headers.get("content-type") || "";
-        if (mapResponse.ok && contentType.startsWith("image/")) {
-          const image = Buffer.from(await mapResponse.arrayBuffer());
-          mapImageDataUrl = `data:${contentType};base64,${image.toString("base64")}`;
-        } else {
-          mapError = "Geoapify did not return a map image for this route.";
-        }
-      }
-    } catch {
-      mapError = "The route map could not be loaded right now.";
-    }
     const rawSegments = allSteps.map(step => ({
       distanceMeters: Number.isFinite(step.distance) ? step.distance : null,
       durationSeconds: Number.isFinite(step.time) ? step.time : null,
@@ -173,8 +115,6 @@ export default async function truckRoute(request) {
       omittedSegmentCount: Math.max(0, maneuvers.length - segments.length),
       segments,
       geometry: sampledGeometry,
-      mapImageDataUrl,
-      mapError,
       sourceUrl: "https://apidocs.geoapify.com/docs/routing/",
       retrievedAt: new Date().toISOString(),
     });

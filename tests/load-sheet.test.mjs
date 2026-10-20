@@ -150,7 +150,7 @@ test("every translation key used in the code exists in ro.json", () => {
     let source;
     try { source = readFileSync(file, "utf8"); } catch { continue; }
     for (const m of source.matchAll(/\bt(?:Or)?\(\s*["']([a-zA-Z][\w.]*)["']/g)) used.add(m[1]);
-    for (const m of source.matchAll(/data-i18n(?:-[a-z]+)?="([^"]+)"/g)) used.add(m[1]);
+    for (const m of source.matchAll(/data-i18n(?:-[a-z-]+)?="([^"]+)"/g)) used.add(m[1]);
   }
   assert.ok(used.size > 20, "the scan found the keys");
   for (const key of used) assert.ok(has(key), `missing translation key: ${key}`);
@@ -160,4 +160,14 @@ test("ro.json declares its locale and has no empty strings", () => {
   assert.equal(dictionary._locale, "ro-RO");
   for (const [key, value] of Object.entries(dictionary)) assert.ok(String(value).length > 0, key);
   assert.equal(t("unavailable.phase", { phase: "1B" }), "Indisponibil încă — Etapa 1B");
+});
+
+test("ro.json has no duplicate keys (JSON.parse would silently keep the last one)", () => {
+  const raw = readFileSync(new URL("../src/i18n/ro.json", import.meta.url), "utf8");
+  const seen = new Set();
+  for (const match of raw.matchAll(/^\s*"([^"]+)"\s*:/gm)) {
+    assert.ok(!seen.has(match[1]), `duplicate key: ${match[1]}`);
+    seen.add(match[1]);
+  }
+  assert.ok(seen.size > 200);
 });

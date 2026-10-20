@@ -45,6 +45,11 @@ export function formatDate(value, { time = false, weekday = true } = {}) {
   if (time) Object.assign(options, { hour: "2-digit", minute: "2-digit" });
   return new Intl.DateTimeFormat(localeTag, options).format(date);
 }
+export function formatTime(value) {
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) return t("ui.noValue");
+  return new Intl.DateTimeFormat(localeTag, { hour: "2-digit", minute: "2-digit" }).format(date);
+}
 export function countryName(code) {
   try { return new Intl.DisplayNames([localeTag], { type: "region" }).of(String(code).toUpperCase()) || code; } catch { return String(code); }
 }
