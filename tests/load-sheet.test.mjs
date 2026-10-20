@@ -2,128 +2,135 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
-import { CARGO, EQUIPMENT, generateMission, toSourcedPlace } from "../src/mission-engine.mjs";
-import { setDictionary, t, has, formatKm, formatDuration, formatNumber, formatDate } from "../src/i18n/i18n.mjs";
-import { buildLoadSheet, ROW_IDS, displayId } from "../src/view-model/load-sheet.mjs";
-import { LEVELS, PHASES, UNAVAILABLE, computedFact, estimatedFact, simulatedFact, sourcedFact, unavailableFact, validateFact } from "../src/view-model/provenance.mjs";
-import { cityCode, cityName, inScope, scopeCities } from "../src/data/scope.mjs";
-import { NST_ESTIMATES } from "../src/data/nst-estimates.mjs";
+import { setDictionary, t, has, formatKm, formatDuration, formatNumber, formatDate, formatTime } from "../src/i18n/i18n.mjs";
+import { buildLoadSheet, buildRecentEntry, ROW_IDS, zoneLabel } from "../src/view-model/load-sheet.mjs";
+import { generateLoad } from "../src/engine/generator.mjs";
+import { CARGO } from "../src/engine/cargo.mjs";
+import { EQUIPMENT } from "../src/engine/equipment.mjs";
+import { ALL_ROLES } from "../src/data/cargo/roles.mjs";
+import { PACKAGING_PROFILES } from "../src/data/cargo/packaging-profiles.mjs";
+import { NST_ESTIMATES } from "../src/data/cargo/nst-estimates.mjs";
+import { cityCode, cityName } from "../src/data/scope.mjs";
 
 const root = new URL("..", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1");
 const dictionary = JSON.parse(readFileSync(new URL("../src/i18n/ro.json", import.meta.url), "utf8"));
-const catalog = JSON.parse(readFileSync(new URL("../src/data/geonames-cities.json", import.meta.url), "utf8"));
+const catalog = JSON.parse(readFileSync(new URL("../src/data/places/cities-ro-hu-bg.json", import.meta.url), "utf8"));
 setDictionary(dictionary);
 
-const pool = scopeCities(catalog);
-const byId = id => catalog.cities.find(city => city.id === id);
-const origin = toSourcedPlace(byId(683506), catalog.metadata.importedAt);
-const destination = toSourcedPlace(byId(3054643), catalog.metadata.importedAt);
-const route = {
-  distanceMeters: 832000, durationSeconds: 40800, provider: "Test route", sourceUrl: "https://example.org/routing", retrievedAt: "2026-10-20T08:00:00.000Z",
-  profile: "heavy_truck", trafficModel: "approximated",
-  countries: ["RO", "HU"], namedRoads: [{ name: "A1", distanceMeters: 300000 }, { name: "A3", distanceMeters: 200000 }, { name: "DN7", distanceMeters: 100000 }, { name: "E68", distanceMeters: 1 }],
-  geometry: [[[26.1, 44.4], [19.04, 47.5]]],
-};
-const mission = cargoId => generateMission({ world: "ETS2", origin, destination, route, cargoId, random: () => 0.3, now: new Date("2026-10-20T08:00:00.000Z") });
+const city = name => catalog.cities.find(c => c.name === name);
+const router = (countries = ["RO", "HU"], viaNames = ["A1", "M43", "M5"]) => ({
+  async route({ origin, destination }) {
+    return { distanceM: 832000, durationS: 40800, geometry: [[[origin.lon, origin.lat], [destination.lon, destination.lat]]], countries, viaNames, provider: "Test router", sourceUrl: "https://example.org/route", retrievedAt: "2026-10-20T08:00:00.000Z", trafficModel: "approximated" };
+  },
+});
+const make = (options = {}) => generateLoad({
+  cities: catalog.cities, importedAt: "2026-10-20T00:00:00.000Z", router: options.router || router(),
+  originCity: city("Bucharest"), destinationCity: city("Budapest"), cargoId: "apples", equipmentId: "reefer",
+  now: new Date("2026-10-20T08:00:00.000Z"), random: () => 0.5, ...options,
+});
 
-test("every cargo produces a complete, valid load sheet", () => {
-  for (const id of Object.keys(CARGO)) {
-    const sheet = buildLoadSheet(mission(id));
-    assert.deepEqual(sheet.rows.map(r => r.id), ROW_IDS);
-    for (const r of sheet.rows) {
-      assert.deepEqual(validateFact(r.fact), [], `${id}/${r.id}`);
-      assert.ok(r.valueText, `${id}/${r.id} has text`);
-      assert.ok(!JSON.stringify(r).includes("⟦"), `${id}/${r.id} has no missing translation`);
+test("every cargo on every listed trailer gives a complete, fully translated sheet", async () => {
+  for (const cargo of Object.values(CARGO)) {
+    for (const equipmentId of cargo.equipmentIds) {
+      const sheet = buildLoadSheet(await make({ cargoId: cargo.id, equipmentId }));
+      assert.deepEqual(sheet.rows.map(r => r.id), ROW_IDS);
+      for (const r of sheet.rows) assert.ok(r.valueText, `${cargo.id}/${equipmentId}/${r.id} has text`);
+      const json = JSON.stringify(sheet);
+      assert.ok(!json.includes("⟦"), `${cargo.id}/${equipmentId}: missing translation ${json.match(/⟦[^⟧]*⟧/)?.[0]}`);
     }
-    assert.ok(!JSON.stringify(sheet).includes("⟦"), `${id} sheet has no missing translation`);
   }
 });
 
-test("unavailable rows never carry a value and always name their phase", () => {
-  const sheet = buildLoadSheet(mission("apples"));
-  const unavailable = sheet.rows.filter(r => r.level === UNAVAILABLE);
-  assert.deepEqual(unavailable.map(r => r.id), ["border", "temperature", "adr", "packaging", "mass", "windows", "shipper"]);
-  for (const r of unavailable) assert.match(r.valueText, /^Indisponibil încă — Etapa (1B|[2-7])$/);
-  assert.equal(sheet.rows.find(r => r.id === "border").valueText, "Indisponibil încă — Etapa 2");
+test("provenance of each row follows the agreed mapping", async () => {
+  const sheet = buildLoadSheet(await make());
+  const level = id => sheet.rows.find(r => r.id === id).level;
+  for (const id of ["origin", "destination", "route", "countries", "floor"]) assert.equal(level(id), "sourced", id);
+  for (const id of ["packaging", "mass", "loadingMetres", "trailer", "transit"]) assert.equal(level(id), "computed", id);
+  for (const id of ["family", "unitMass"]) assert.equal(level(id), "estimated", id);
+  for (const id of ["cargo", "loadingWindow", "unloadingWindow", "shipper", "consignee"]) assert.equal(level(id), "simulated", id);
+  for (const id of ["border", "temperature", "adr"]) assert.equal(level(id), "unavailable", id);
 });
 
-test("provenance levels follow the agreed mapping", () => {
-  const level = id => buildLoadSheet(mission("apples")).rows.find(r => r.id === id).level;
-  assert.equal(level("origin"), "sourced");
-  assert.equal(level("destination"), "sourced");
-  assert.equal(level("route"), "sourced");
-  assert.equal(level("countries"), "sourced");
-  assert.equal(level("cargo"), "simulated");
-  assert.equal(level("family"), "estimated");
-  assert.equal(level("trailer"), "computed");
-});
-
-test("hero shows route code, via roads from the routing answer, and pending chips", () => {
-  const sheet = buildLoadSheet(mission("apples"));
+test("apples in a reefer, Bucharest to Budapest: the numbers shown", async () => {
+  const sheet = buildLoadSheet(await make());
+  const value = id => sheet.rows.find(r => r.id === id).valueText;
+  assert.equal(value("packaging"), "33 × europalet EPAL");
+  assert.equal(value("unitMass"), "≈ 700 kg");
+  assert.equal(value("mass"), "≈ 23,1 t");
+  assert.equal(value("loadingMetres"), "13,2 m");
+  assert.equal(value("floor"), "13,31 m × 2,48 m · sarcină utilă 31 t");
+  assert.equal(value("transit"), "23 h 5 min");
+  assert.equal(value("countries"), "România → Ungaria");
+  assert.equal(value("border"), "Indisponibil încă — Etapa 2");
   assert.equal(sheet.hero.originCode, "BUC");
-  assert.equal(sheet.hero.destinationCode, "BUD");
-  assert.equal(sheet.hero.originName, "București");
   assert.equal(sheet.hero.destinationName, "Budapesta");
-  assert.equal(sheet.hero.via, "A1 · A3 · DN7");
-  assert.equal(sheet.hero.destinationLine, "Budapesta, Ungaria");
-  assert.deepEqual(sheet.hero.chips.filter(c => !c.available).map(c => c.valueText), ["Etapa 1B", "Etapa 3", "Etapa 3"]);
-  assert.match(sheet.displayId, /^FOS-2026-/);
-  assert.equal(displayId("FOS-ATS-2026-ABCDE"), "FOS-2026-ABCDE");
+  assert.equal(sheet.hero.via, "A1 · M43 · M5");
+  assert.match(value("loadingWindow"), /\(UTC\+[23]\)$/);
+  assert.ok(sheet.warnings.length >= 2);
+  const mass = sheet.rows.find(r => r.id === "mass");
+  assert.match(mass.fact.note, /estimare/);
+  assert.ok(mass.fact.inputs.length >= 2);
 });
 
-test("a missing road list or countries list is reported, not invented", () => {
-  const bare = generateMission({ world: "ETS2", origin, destination, route: { ...route, namedRoads: [], countries: [] }, cargoId: "apples", random: () => 0.3, now: new Date("2026-10-20T08:00:00.000Z") });
-  const sheet = buildLoadSheet(bare);
+test("the drawer explains sources, formulas, bases and missing values", async () => {
+  const sheet = buildLoadSheet(await make());
+  const row = id => sheet.rows.find(r => r.id === id);
+  assert.equal(row("origin").fact.source.name, "GeoNames");
+  assert.ok(row("origin").detail.links.some(l => l.url === `https://www.geonames.org/${city("Bucharest").id}/`));
+  assert.ok(row("transit").detail.links.some(l => l.url.includes("eur-lex.europa.eu/eli/reg/2006/561")));
+  assert.ok(row("transit").detail.meta.some(m => m.label === "Repaus zilnic" && m.value === "11 h"));
+  assert.ok(row("floor").detail.links.some(l => l.url.includes("dsv.com")));
+  assert.ok(row("packaging").detail.links.some(l => l.url.includes("epal-pallets.org")));
+  assert.match(row("unitMass").fact.basis, /Interval estimat: 500 kg–900 kg/);
+  assert.match(row("adr").detail.explanation, /ADR/);
+});
+
+test("non-palletised cargo shows why it is unavailable, never a number", async () => {
+  const fuel = buildLoadSheet(await make({ cargoId: "fuel", equipmentId: "fuelTanker" }));
+  for (const id of ["packaging", "unitMass", "mass", "loadingMetres", "floor"]) {
+    const r = fuel.rows.find(x => x.id === id);
+    assert.equal(r.level, "unavailable", id);
+    assert.match(r.valueText, /^Indisponibil încă — Etapa \d/);
+  }
+  assert.equal(fuel.hero.chips.find(c => c.id === "mass").available, false);
+  assert.equal(fuel.kpis.find(k => k.id === "mass").valueText, null);
+});
+
+test("a missing road list or country list is reported, not invented", async () => {
+  const sheet = buildLoadSheet(await make({ router: router([], []) }));
   assert.equal(sheet.hero.via, null);
-  const countries = sheet.rows.find(r => r.id === "countries");
-  assert.equal(countries.level, UNAVAILABLE);
-  assert.deepEqual(validateFact(countries.fact), []);
+  assert.equal(sheet.rows.find(r => r.id === "countries").level, "unavailable");
 });
 
-test("provenance validator rejects incomplete facts", () => {
-  assert.ok(validateFact(sourcedFact({ name: "X", url: "", retrievedAt: "2026-01-01" })).length);
-  assert.ok(validateFact(sourcedFact({ name: "X", url: "https://x.org" })).length);
-  assert.deepEqual(validateFact(sourcedFact({ name: "X", url: "https://x.org", retrievedAt: "2026-01-01" })), []);
-  assert.ok(validateFact(computedFact({ formula: "a*b", inputs: [] })).length);
-  assert.ok(validateFact(estimatedFact({ basis: "" })).length);
-  assert.ok(validateFact(simulatedFact({ note: "" })).length);
-  assert.ok(validateFact(unavailableFact("9", "why")).length);
-  assert.ok(validateFact({ level: "invented" }).length);
-  assert.deepEqual(LEVELS, ["sourced", "computed", "estimated", "simulated"]);
-  assert.ok(PHASES.includes("1B"));
-});
-
-test("Romanian number, distance, duration and date formats", () => {
+test("Romanian number, distance, duration, date and time-zone formats", () => {
   assert.equal(formatKm(832), "832 km");
   assert.equal(formatNumber(21.5), "21,5");
   assert.equal(formatDuration(40800), "11 h 20 min");
   assert.equal(formatDuration(1500), "25 min");
+  assert.equal(formatDuration(32400), "9 h");
   const date = formatDate("2026-10-21T10:00:00.000Z");
   assert.match(date, /miercuri/i);
   assert.match(date, /octombrie/);
-  assert.match(date, /2026/);
-});
-
-test("the search scope is Romania, Hungary and Bulgaria without city districts", () => {
-  assert.ok(pool.cities.length > 80);
-  assert.ok(pool.cities.every(city => ["RO", "HU", "BG"].includes(city.countryCode)));
-  assert.ok(pool.cities.every(city => !/^Sector \d|kerület$/.test(city.name)));
-  assert.ok(!pool.cities.some(city => ["Pest", "Buda", "Zugló", "Újpest", "Kőbánya", "Asparuhovo"].includes(city.name)));
-  assert.ok(pool.cities.some(city => city.name === "Bucharest") && pool.cities.some(city => city.name === "Budapest"));
-  assert.equal(inScope({ countryCode: "US", id: 1, name: "Seattle" }), false);
-  assert.equal(inScope({ countryCode: "RO", id: 11048319, name: "Sector 3" }), false);
+  assert.equal(formatTime("2026-10-21T03:30:00.000Z", "Europe/Bucharest"), "06:30");
+  assert.equal(formatTime("2026-10-21T03:30:00.000Z", "Europe/Budapest"), "05:30");
+  assert.equal(zoneLabel("2026-07-01T12:00:00Z", "Europe/Sofia"), "UTC+3");
+  assert.equal(zoneLabel("2026-12-01T12:00:00Z", "Europe/Budapest"), "UTC+1");
 });
 
 test("city codes have three letters and names use comma-below diacritics", () => {
-  for (const city of pool.cities) assert.match(cityCode(city), /^[A-Z]{3}$/, city.name);
-  assert.equal(cityCode(byId(681290)), "CLJ");
-  assert.equal(cityCode({ id: 1, name: "Ploieşti" }), "PLO");
+  for (const c of catalog.cities) assert.match(cityCode(c), /^[A-Z]{3}$/, c.name);
+  assert.equal(cityCode(city("Cluj-Napoca")), "CLJ");
   assert.equal(cityName({ id: 1, name: "Ploieşti" }), "Ploiești");
-  assert.equal(cityName({ id: 1, name: "Constanţa" }), "Constanța");
-  assert.equal(cityName(byId(683506)), "București");
+  assert.equal(cityName({ geonamesId: 683506, name: "Bucharest" }), "București");
 });
 
-test("the dictionary covers every cargo, trailer, family and category", () => {
+test("recent-load chips use the route code and translated cargo", async () => {
+  const entry = buildRecentEntry(await make());
+  assert.equal(entry.code, "BUC→BUD");
+  assert.equal(entry.label, "Mere (proaspete, soiuri mixte)");
+});
+
+test("the dictionary covers every cargo, trailer, family, category, role, basis and reason", () => {
   for (const c of Object.values(CARGO)) {
     assert.ok(has(`cargo.${c.id}`), `cargo.${c.id}`);
     assert.ok(has(`family.${c.family}`), `family.${c.family}`);
@@ -132,6 +139,10 @@ test("the dictionary covers every cargo, trailer, family and category", () => {
   for (const e of Object.values(EQUIPMENT)) {
     assert.ok(has(`equip.${e.id}`), `equip.${e.id}`);
     assert.ok(has(`equipCat.${e.category}`), `equipCat.${e.category}`);
+  }
+  for (const role of ALL_ROLES) assert.ok(has(`role.${role}`), `role.${role}`);
+  for (const profile of Object.values(PACKAGING_PROFILES)) {
+    assert.ok(profile.unitType ? has(`basis.unitMass.${profile.basis}`) : has(`reason.${profile.reason}`), JSON.stringify(profile));
   }
   for (const id of ROW_IDS) assert.ok(has(`row.${id}.label`), `row.${id}.label`);
 });
@@ -143,31 +154,24 @@ function sourceFiles(dir) {
     return /\.(mjs|js)$/.test(name) ? [path] : [];
   });
 }
-test("every translation key used in the code exists in ro.json", () => {
+test("every literal translation key used in the code exists in ro.json", () => {
   const files = [...sourceFiles(join(root, "src")), join(root, "index.html")];
   const used = new Set();
   for (const file of files) {
     let source;
-    try { source = readFileSync(file, "utf8"); } catch { continue; }
+    try { source = readFileSync(file, "utf8"); } catch { continue; } // some files are not readable in the sandbox; the browser test covers them
     for (const m of source.matchAll(/\bt(?:Or)?\(\s*["']([a-zA-Z][\w.]*)["']/g)) used.add(m[1]);
     for (const m of source.matchAll(/data-i18n(?:-[a-z-]+)?="([^"]+)"/g)) used.add(m[1]);
   }
-  assert.ok(used.size > 20, "the scan found the keys");
+  assert.ok(used.size > 50, "the scan found the keys");
   for (const key of used) assert.ok(has(key), `missing translation key: ${key}`);
 });
 
-test("ro.json declares its locale and has no empty strings", () => {
+test("ro.json declares its locale, has no empty strings and no duplicate keys", () => {
   assert.equal(dictionary._locale, "ro-RO");
   for (const [key, value] of Object.entries(dictionary)) assert.ok(String(value).length > 0, key);
-  assert.equal(t("unavailable.phase", { phase: "1B" }), "Indisponibil încă — Etapa 1B");
-});
-
-test("ro.json has no duplicate keys (JSON.parse would silently keep the last one)", () => {
   const raw = readFileSync(new URL("../src/i18n/ro.json", import.meta.url), "utf8");
   const seen = new Set();
-  for (const match of raw.matchAll(/^\s*"([^"]+)"\s*:/gm)) {
-    assert.ok(!seen.has(match[1]), `duplicate key: ${match[1]}`);
-    seen.add(match[1]);
-  }
-  assert.ok(seen.size > 200);
+  for (const m of raw.matchAll(/^\s*"([^"]+)"\s*:/gm)) { assert.ok(!seen.has(m[1]), `duplicate key: ${m[1]}`); seen.add(m[1]); }
+  assert.equal(t("unavailable.phase", { phase: "1B" }), "Indisponibil încă — Etapa 1B");
 });

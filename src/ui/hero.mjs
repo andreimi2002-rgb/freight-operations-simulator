@@ -5,7 +5,6 @@ const DECO = `<svg class="hero-deco" width="420" height="420" viewBox="0 0 420 4
 
 export function heroHtml(sheet) {
   const hero = sheet.hero;
-  const windows = sheet.rows.find(row => row.id === "windows");
   const chips = hero.chips.map(chip => `<span class="chip${chip.available ? "" : " pending"}"><small>${esc(chip.label)}</small><strong>${esc(chip.valueText)}</strong></span>`).join("");
   return `<div class="hero" role="group" aria-label="${esc(t("hero.aria"))}">${DECO}
     <div class="hero-grid">
@@ -22,13 +21,11 @@ export function heroHtml(sheet) {
       </div>
       <div class="hero-side">
         <div>
-          <div class="eyebrow">${esc(t("hero.generatedAt"))}</div>
-          <div class="gen-time">${esc(hero.generatedTime)}</div>
-          <div class="gen-date">${esc(hero.generatedDate)}</div>
-        </div>
-        <div>
           <div class="eyebrow">${esc(t("hero.loadingWindow"))}</div>
-          <div class="pending-line">${esc(windows.valueText)}</div>
+          <div class="gen-time">${esc(hero.loading.time)}</div>
+          <div class="gen-date">${esc(hero.loading.date)}</div>
+          <div class="pending-line mono">${esc(hero.unloadingLine)}</div>
+          <div class="pending-line">${esc(t("hero.generatedAt"))}: ${esc(hero.generatedAt)}</div>
         </div>
       </div>
     </div>

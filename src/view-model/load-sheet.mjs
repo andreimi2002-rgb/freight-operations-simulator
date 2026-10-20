@@ -1,40 +1,71 @@
-// The ONLY place that knows the shape of a mission. Everything the page shows comes
-// from buildLoadSheet(mission). In phase 1B this function will read the new Load model
-// instead; the UI modules do not change.
-import { countryName, formatDate, formatDuration, formatKm, formatNumber, formatTime, t, tOr } from "../i18n/i18n.mjs";
+// The ONLY place that knows the shape of a Load. Everything the page shows comes from
+// buildLoadSheet(load): translated, formatted text plus the provenance of each row.
+import { countryName, formatDate, formatDuration, formatKm, formatNumber, formatTime, formatTonnes, t, tOr } from "../i18n/i18n.mjs";
 import { cityCode, cityName } from "../data/scope.mjs";
-import { NST_ESTIMATES } from "../data/nst-estimates.mjs";
-import { LEVELS, UNAVAILABLE, computedFact, estimatedFact, levelHelp, levelLabel, phaseText, simulatedFact, sourcedFact, unavailableFact } from "./provenance.mjs";
+import { offsetMin } from "../engine/time-windows.mjs";
+import { LEVELS, UNAVAILABLE, levelHelp, levelLabel, phaseText } from "./provenance.mjs";
 
-export const ROW_IDS = ["origin", "destination", "route", "countries", "border", "cargo", "family", "temperature", "adr", "packaging", "mass", "trailer", "windows", "shipper"];
+export const ROW_IDS = [
+  "origin", "destination", "route", "countries", "border",
+  "cargo", "family", "temperature", "adr",
+  "packaging", "unitMass", "mass", "loadingMetres",
+  "trailer", "floor", "transit",
+  "loadingWindow", "unloadingWindow", "shipper", "consignee",
+];
 
 const cargoName = cargo => tOr(`cargo.${cargo.id}`, cargo.name);
-const familyName = cargo => tOr(`family.${cargo.family}`, cargo.family);
+const familyName = family => tOr(`family.${family}`, family);
 const equipmentName = equipment => tOr(`equip.${equipment.id}`, equipment.name);
-const equipmentCategory = equipment => tOr(`equipCat.${equipment.category}`, equipment.category);
+const categoryName = category => tOr(`equipCat.${category}`, category);
+const roleName = role => tOr(`role.${role}`, role);
+const mm = value => t("fmt.mm", { value: formatNumber(value, { maximumFractionDigits: 0 }) });
+const kg = value => t("fmt.kg", { value: formatNumber(value, { maximumFractionDigits: 0 }) });
+const metres = value => t("fmt.m", { value: formatNumber(value, { maximumFractionDigits: 2 }) });
+export const isFixtureRoute = summary => /fixture/i.test(summary?.provider || "");
 
-export const displayId = id => String(id).replace(/^FOS-(?:ATS|ETS2)-/, "FOS-");
-export const isFixtureRoute = route => /fixture/i.test(route?.provider || "");
+export function zoneLabel(iso, timeZone) {
+  const minutes = offsetMin(Date.parse(iso), timeZone);
+  const sign = minutes >= 0 ? "+" : "−";
+  const h = Math.floor(Math.abs(minutes) / 60), m = Math.abs(minutes) % 60;
+  return t("fmt.utc", { offset: `${sign}${h}${m ? `:${String(m).padStart(2, "0")}` : ""}` });
+}
+const windowText = w => `${formatDate(w.from, { short: true, timeZone: w.timeZone })}, ${formatTime(w.from, w.timeZone)}–${formatTime(w.to, w.timeZone)} (${zoneLabel(w.from, w.timeZone)})`;
 
-function placeFact(place, fallbackDate) {
-  return sourcedFact({
-    name: place.sourceName || "GeoNames",
-    url: place.sourceUrl,
-    retrievedAt: place.retrievedAt || fallbackDate,
-    license: place.attribution || null,
-  });
+// Inputs of a computed fact, labelled and formatted.
+function inputValue(key, value) {
+  if (key === "cargo") return tOr(`cargo.${value}`, value);
+  if (/Mm$/.test(key)) return mm(value);
+  if (/Kg$/.test(key)) return kg(value);
+  if (/Min$/.test(key)) return formatDuration(value * 60);
+  return typeof value === "number" ? formatNumber(value) : String(value);
 }
 
-function placeDetail(place, mission, explanationKey) {
-  const meta = [{ label: t("meta.source"), value: place.sourceName || "GeoNames" }];
-  if (place.attribution) meta.push({ label: t("meta.license"), value: place.attribution });
-  meta.push({ label: t("meta.retrieved"), value: formatDate(place.retrievedAt || mission.createdAt, { weekday: false }) });
-  if (Number.isFinite(place.population)) meta.push({ label: t("meta.population"), value: formatNumber(place.population, { maximumFractionDigits: 0 }) });
-  return { explanation: t(explanationKey), meta, links: place.sourceUrl ? [{ label: t("drawer.openSource"), url: place.sourceUrl }] : [] };
+// Turns an engine fact into what the drawer shows (all text translated).
+function displayFact(fact) {
+  const shown = { level: fact.level };
+  if (fact.source) shown.source = { name: fact.source.name, url: fact.source.url, retrievedAt: fact.source.retrievedAt, license: fact.source.license || null };
+  if (fact.formula) shown.formula = t(`formula.${fact.formula}`);
+  if (fact.inputs) shown.inputs = Object.entries(fact.inputs).map(([key, value]) => ({ label: t(`input.${key}`), value: inputValue(key, value) }));
+  if (fact.basis) shown.basis = t(`basis.${fact.basis}`) + (fact.range ? ` ${t("basis.range", { min: kg(fact.range.min), max: kg(fact.range.max) })}` : "");
+  if (fact.note) shown.note = t(`note.${fact.note}`);
+  if (fact.dependsOnEstimate) shown.note = [shown.note, t("note.dependsOnEstimate")].filter(Boolean).join(" ");
+  if (fact.level === UNAVAILABLE) { shown.phase = fact.phase; shown.reason = t(`reason.${fact.reason}`); }
+  return shown;
 }
 
-function row(id, valueText, fact, detail = {}) {
+function sourceMeta(fact) {
+  if (!fact?.source) return [];
+  const meta = []; // the source name itself is shown in the drawer's source section
+  if (fact.source.license) meta.push({ label: t("meta.license"), value: fact.source.license });
+  meta.push({ label: t("meta.retrieved"), value: formatDate(fact.source.retrievedAt, { weekday: false }) });
+  if (fact.source.note) meta.push({ label: t("meta.sourceNote"), value: t(`sourceNote.${fact.source.note}`) });
+  return meta;
+}
+const sourceLinks = fact => (fact?.source?.url ? [{ label: t("drawer.openSource"), url: fact.source.url }] : []);
+
+function row(id, fact, valueText, { explanation, meta = [], links = [] } = {}) {
   const available = fact.level !== UNAVAILABLE;
+  const shown = displayFact(fact);
   return {
     id,
     label: t(`row.${id}.label`),
@@ -42,131 +73,162 @@ function row(id, valueText, fact, detail = {}) {
     level: fact.level,
     levelLabel: levelLabel(fact.level),
     available,
-    fact,
-    detail: { explanation: "", meta: [], links: [], ...detail },
+    fact: shown,
+    detail: {
+      explanation: available ? (explanation ?? tOr(`row.${id}.detail`, "")) : shown.reason,
+      meta: [...meta, ...sourceMeta(fact)],
+      links: [...links, ...sourceLinks(fact)],
+    },
   };
 }
-const pending = (id, phase) => row(id, "", unavailableFact(phase, t(`row.${id}.unavailable`)), { explanation: t(`row.${id}.unavailable`) });
 
-export function buildLoadSheet(mission) {
-  const { origin, destination, route, cargo, equipment } = mission;
-  const details = route.routeDetails || {};
-  const fixture = isFixtureRoute(route);
-  const km = route.distanceMeters / 1000;
-  const duration = formatDuration(route.durationSeconds);
-  const roads = (details.namedRoads || []).slice(0, 3).map(road => road.name);
-  const countries = (details.countries || []).map(countryName);
-  const chapters = NST_ESTIMATES[cargo.family];
-  const names = { cargo: cargoName(cargo), trailer: equipmentName(equipment), family: familyName(cargo) };
+function transitMeta(transit) {
+  const names = { drive: t("transit.drive"), break: t("transit.break"), dailyRest: t("transit.dailyRest") };
+  return [
+    ...transit.segments.map(s => ({ label: names[s.type], value: formatDuration(s.min * 60) })),
+    { label: t("transit.breaks"), value: String(transit.breaks) },
+    { label: t("transit.dailyRests"), value: String(transit.dailyRests) },
+  ];
+}
 
-  const routeFact = sourcedFact({ name: route.provider || "Geoapify Routing API", url: route.sourceUrl, retrievedAt: route.retrievedAt || mission.createdAt });
-  const trafficText = route.trafficModel === "approximated" ? t("meta.trafficApprox") : route.trafficModel === "free_flow" ? t("meta.trafficFree") : t("meta.trafficUnknown");
+export function buildLoadSheet(load) {
+  const origin = load.origin.value;
+  const destination = load.destination.value;
+  const summaryFact = load.route.summary;
+  const route = summaryFact.value;
+  const cargo = load.cargo.selection.value;
+  const equipment = load.equipment.selection.value;
+  const p = load.packaging;
+  const transit = load.transit.value;
+  const loading = load.timeWindows.loading.value;
+  const unloading = load.timeWindows.unloading.value;
+  const duration = formatDuration(route.durationS);
+  const transitText = formatDuration(transit.totalMin * 60);
+  const countries = route.countries.map(countryName);
+  const packagingOk = p.unitCount.level !== UNAVAILABLE;
+  const massText = packagingOk ? t("fmt.approx", { value: formatTonnes(p.totalMassKg.value / 1000) }) : null;
+  const floor = load.equipment.floor;
+  const names = { cargo: cargoName(cargo), trailer: equipmentName(equipment), family: familyName(cargo.family) };
+  const originLine = `${cityName(origin)}, ${countryName(origin.countryCode)}`;
+  const destinationLine = `${cityName(destination)}, ${countryName(destination.countryCode)}`;
+  const placeMeta = place => [
+    { label: t("meta.population"), value: formatNumber(place.population, { maximumFractionDigits: 0 }) },
+    { label: t("meta.timeZone"), value: place.timeZone },
+  ];
+
   const rows = [
-    row("origin", `${cityName(origin)}, ${countryName(origin.countryCode)}`, placeFact(origin, mission.createdAt), placeDetail(origin, mission, "row.origin.detail")),
-    row("destination", `${cityName(destination)}, ${countryName(destination.countryCode)}`, placeFact(destination, mission.createdAt), placeDetail(destination, mission, "row.destination.detail")),
-    row("route", `${formatKm(km)} · ${duration}`, routeFact, {
-      explanation: t("row.route.detail"),
+    row("origin", load.origin, originLine, { meta: placeMeta(origin) }),
+    row("destination", load.destination, destinationLine, { meta: placeMeta(destination) }),
+    row("route", summaryFact, `${formatKm(route.distanceKm)} · ${duration}`, {
       meta: [
-        { label: t("meta.provider"), value: route.provider || "Geoapify Routing API" },
-        { label: t("meta.profile"), value: t("meta.profileTruck") },
-        { label: t("meta.distance"), value: formatKm(km) },
+        { label: t("meta.provider"), value: route.provider },
+        { label: t("meta.distance"), value: formatKm(route.distanceKm) },
         { label: t("meta.duration"), value: duration },
-        { label: t("meta.traffic"), value: trafficText },
-        { label: t("meta.tolls"), value: details.hasTolls ? t("meta.tollsYes") : t("meta.tollsNo") },
-        { label: t("meta.retrieved"), value: formatDate(route.retrievedAt || mission.createdAt, { time: true, weekday: false }) },
+        { label: t("meta.traffic"), value: route.trafficModel === "approximated" ? t("meta.trafficApprox") : t("meta.trafficUnknown") },
+        { label: t("meta.tolls"), value: route.hasTolls ? t("meta.tollsYes") : t("meta.tollsNo") },
       ],
-      links: route.sourceUrl ? [{ label: t("drawer.openSource"), url: route.sourceUrl }] : [],
     }),
     countries.length
-      ? row("countries", countries.join(" → "), routeFact, { explanation: t("row.countries.detail"), links: route.sourceUrl ? [{ label: t("drawer.openSource"), url: route.sourceUrl }] : [] })
-      : row("countries", "", unavailableFact("5", t("row.countries.unavailable")), { explanation: t("row.countries.unavailable") }),
-    pending("border", "2"),
-    row("cargo", names.cargo, simulatedFact({ note: t("row.cargo.note") }), { explanation: t("row.cargo.detail"), meta: [{ label: t("meta.cargoCatalog"), value: cargo.id }] }),
-    chapters
-      ? row("family", `${names.family} · NST ${chapters.join(", ")}`, estimatedFact({ basis: t("row.family.basis") }), {
-        explanation: t("row.family.detail"),
-        meta: [{ label: t("meta.family"), value: names.family }, { label: t("meta.nstChapters"), value: chapters.join(", ") }],
-      })
-      : row("family", "", unavailableFact("3", t("row.family.noEstimate")), { explanation: t("row.family.noEstimate") }),
-    pending("temperature", "3"),
-    pending("adr", "3"),
-    pending("packaging", "1B"),
-    pending("mass", "1B"),
-    row("trailer", names.trailer, computedFact({
-      formula: t("row.trailer.formula"),
-      inputs: [{ label: t("meta.cargo"), value: names.cargo }, { label: t("meta.trailerOptions"), value: String((cargo.equipmentIds || []).length) }],
-    }), { explanation: t("row.trailer.detail"), meta: [{ label: t("meta.category"), value: equipmentCategory(equipment) }] }),
-    pending("windows", "1B"),
-    pending("shipper", "1B"),
+      ? row("countries", summaryFact, countries.join(" → "))
+      : row("countries", { value: null, level: UNAVAILABLE, phase: "5", reason: "countriesMissing" }, ""),
+    row("border", load.route.borderCrossings, ""),
+    row("cargo", load.cargo.selection, names.cargo, { meta: [{ label: t("meta.cargoCatalog"), value: cargo.id }] }),
+    row("family", load.cargo.nstChapters, load.cargo.nstChapters.value ? `${names.family} · NST ${load.cargo.nstChapters.value.join(", ")}` : ""),
+    row("temperature", load.cargo.temperature, ""),
+    row("adr", load.cargo.adr, ""),
+    row("packaging", p.unitCount, packagingOk ? t("fmt.palletCount", { count: p.unitCount.value }) : "", {
+      meta: packagingOk ? [{ label: t("meta.unit"), value: t("fmt.palletDims", { l: mm(p.unitType.value.lengthMm), w: mm(p.unitType.value.widthMm) }) }, ...sourceMeta(p.unitType)] : [],
+      links: packagingOk ? sourceLinks(p.unitType) : [],
+    }),
+    row("unitMass", p.unitMassKg, packagingOk ? t("fmt.approx", { value: kg(p.unitMassKg.value) }) : ""),
+    row("mass", p.totalMassKg, massText || ""),
+    row("loadingMetres", p.loadingMetres, packagingOk ? metres(p.loadingMetres.value) : ""),
+    row("trailer", load.equipment.selection, names.trailer, { meta: [{ label: t("meta.category"), value: categoryName(equipment.category) }] }),
+    row("floor", floor, floor.value ? t("fmt.floor", { l: metres(floor.value.lengthMm / 1000), w: metres(floor.value.widthMm / 1000), payload: formatTonnes(floor.value.payloadKg / 1000) }) : ""),
+    row("transit", load.transit, transitText, {
+      meta: [...transitMeta(transit), ...sourceMeta({ source: load.transit.regulation })],
+      links: sourceLinks({ source: load.transit.regulation }),
+    }),
+    row("loadingWindow", load.timeWindows.loading, windowText(loading), { meta: [{ label: t("meta.timeZone"), value: loading.timeZone }] }),
+    row("unloadingWindow", load.timeWindows.unloading, windowText(unloading), {
+      meta: [{ label: t("meta.timeZone"), value: unloading.timeZone }, { label: t("meta.slack"), value: formatDuration(unloading.slackMin * 60) }],
+    }),
+    row("shipper", load.parties.shipperRole, roleName(load.parties.shipperRole.value)),
+    row("consignee", load.parties.consigneeRole, roleName(load.parties.consigneeRole.value)),
   ];
 
   const chip = (id, valueText, phase = null) => ({ id, label: t(`chip.${id}`), valueText: valueText ?? t("chip.pending", { phase }), available: valueText != null });
-  const kpi = (id, valueText, phase) => ({ id, label: t(`kpi.${id}`), valueText: valueText ?? null, pendingText: valueText == null ? (phase.text || t("kpi.pending", { phase: phase.phase })) : null });
-  const verify = cargo.regulatoryReview || null;
+  const kpi = (id, valueText, pendingText = null, foot = null) => ({ id, label: t(`kpi.${id}`), valueText, pendingText, foot });
+  const pendingPhase = fact => t("kpi.pending", { phase: fact.phase });
 
   return {
-    id: mission.id,
-    displayId: displayId(mission.id),
-    fixture,
+    id: load.id,
+    displayId: load.id,
+    fixture: isFixtureRoute(route),
     hero: {
       originCode: cityCode(origin),
       destinationCode: cityCode(destination),
       originName: cityName(origin),
       destinationName: cityName(destination),
-      originLine: `${cityName(origin)}, ${countryName(origin.countryCode)}`,
-      destinationLine: `${cityName(destination)}, ${countryName(destination.countryCode)}`,
-      via: roads.length ? roads.join(" · ") : null,
+      originLine,
+      destinationLine,
+      via: route.viaNames.length ? route.viaNames.join(" · ") : null,
       chips: [
-        chip("distance", formatKm(km)),
+        chip("distance", formatKm(route.distanceKm)),
         chip("duration", duration),
+        chip("transit", transitText),
         chip("cargo", names.cargo),
         chip("trailer", names.trailer),
-        chip("mass", null, "1B"),
-        chip("temperature", null, "3"),
-        chip("adr", null, "3"),
+        chip("mass", massText, p.totalMassKg.phase),
+        chip("temperature", null, load.cargo.temperature.phase),
+        chip("adr", null, load.cargo.adr.phase),
       ],
-      generatedAt: formatDate(mission.createdAt, { time: true }),
-      generatedTime: formatTime(mission.createdAt),
-      generatedDate: formatDate(mission.createdAt),
+      generatedAt: formatDate(load.createdAt, { time: true }),
+      loading: {
+        time: `${formatTime(loading.from, loading.timeZone)}–${formatTime(loading.to, loading.timeZone)}`,
+        date: `${formatDate(loading.from, { timeZone: loading.timeZone })} · ${zoneLabel(loading.from, loading.timeZone)}`,
+      },
+      unloadingLine: t("hero.unloadingLine", { value: windowText(unloading) }),
     },
     kpis: [
-      kpi("distance", formatKm(km)),
-      kpi("duration", duration, null),
-      kpi("mass", null, { phase: "1B" }),
-      kpi("loadMeters", null, { phase: "1B" }),
-      kpi("cost", null, { text: t("kpi.costPhase") }),
-      kpi("breaks", null, { text: t("kpi.breaksPhase") }),
-      kpi("documents", null, { text: t("kpi.documentsPhase") }),
+      kpi("distance", formatKm(route.distanceKm)),
+      kpi("duration", duration),
+      kpi("transit", transitText, null, t("kpi.transitFoot")),
+      kpi("mass", massText, packagingOk ? null : pendingPhase(p.totalMassKg)),
+      kpi("loadingMetres", packagingOk ? metres(p.loadingMetres.value) : null, packagingOk ? null : pendingPhase(p.loadingMetres)),
+      kpi("breaks", String(transit.breaks + transit.dailyRests), null, t("kpi.breaksFoot", { breaks: transit.breaks, rests: transit.dailyRests })),
+      kpi("cost", null, t("kpi.costPhase")),
+      kpi("documents", null, t("kpi.documentsPhase")),
     ],
     cargo: {
       name: names.cargo,
       family: names.family,
-      loadForm: cargo.loadForm || null,
-      verify,
-      notes: cargo.handling || [],
+      verify: cargo.regulatoryReview,
+      notes: cargo.handling,
       facts: [
         { label: t("card.family"), value: names.family },
         { label: t("card.loadForm"), value: cargo.loadForm || t("ui.noValue"), english: Boolean(cargo.loadForm) },
-        { label: t("card.packaging"), value: phaseText("1B"), pending: true },
-        { label: t("row.temperature.label"), value: phaseText("3"), pending: true },
+        { label: t("card.packaging"), value: packagingOk ? t("fmt.palletCount", { count: p.unitCount.value }) : phaseText(p.unitCount.phase), pending: !packagingOk },
+        { label: t("row.temperature.label"), value: phaseText(load.cargo.temperature.phase), pending: true },
       ],
     },
     map: {
-      geometry: details.geometry || [],
+      geometry: route.geometry,
       origin: { lat: origin.lat, lon: origin.lon },
       destination: { lat: destination.lat, lon: destination.lon },
       originName: cityName(origin),
       destinationName: cityName(destination),
-      provider: route.provider || "Geoapify Routing API",
+      provider: route.provider,
     },
     rows,
+    warnings: load.warnings.map(w => t(`warning.${w.id}`)),
     legend: [...LEVELS, UNAVAILABLE].map(level => ({ level, label: levelLabel(level), help: levelHelp(level) })),
   };
 }
 
 // Small entry for the "recent loads" chips in the top bar.
-export function buildRecentEntry(mission) {
-  const code = `${cityCode(mission.origin)}→${cityCode(mission.destination)}`;
-  const label = cargoName(mission.cargo);
-  return { id: mission.id, code, label, aria: t("history.recentFor", { code, cargo: label }) };
+export function buildRecentEntry(load) {
+  const code = `${cityCode(load.origin.value)}→${cityCode(load.destination.value)}`;
+  const label = cargoName(load.cargo.selection.value);
+  return { id: load.id, code, label, aria: t("history.recentFor", { code, cargo: label }) };
 }

@@ -11,7 +11,7 @@ import { fileURLToPath } from "node:url";
 const root = fileURLToPath(new URL("..", import.meta.url));
 const port = Number(process.env.PORT || 8080);
 const types = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".mjs": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8", ".json": "application/json; charset=utf-8", ".woff2": "font/woff2", ".txt": "text/plain; charset=utf-8" };
-const cities = JSON.parse(await readFile(join(root, "src/data/geonames-cities.json"), "utf8")).cities;
+const cities = JSON.parse(await readFile(join(root, "src/data/places/cities-ro-hu-bg.json"), "utf8")).cities;
 
 const rad = d => d * Math.PI / 180;
 function haversineKm(a, b) {
