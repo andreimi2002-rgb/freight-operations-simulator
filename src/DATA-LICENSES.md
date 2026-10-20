@@ -13,6 +13,12 @@ Every value FOS displays carries its provenance (sourced, computed, estimated, s
 
 GeoNames provides the data as-is without warranty. Coordinates are city centroids, not loading points (real loading points come in phase 2).
 
+## Borders, crossings and UN/LOCODE (phase 2A)
+- **Natural Earth** 1:10m admin-0 countries: public domain (https://www.naturalearthdata.com/about/terms-of-use/). Simplified by `scripts/build-borders.mjs`.
+- **OpenStreetMap** border control / customs points via the Overpass API: © OpenStreetMap contributors, ODbL 1.0. Only names and positions are kept (`src/data/geo/border-crossings.json`); the facts that use them link the OSM objects and the data sets are listed in the detail drawer. The ODbL share-alike and attribution terms apply to this derived database.
+- **Schengen area** member list (29 states): official information of the European Commission (`src/data/geo/schengen.json`, with check date).
+- **UN/LOCODE** (UNECE): the reuse terms are **not clearly stated**; UNECE blocks automated downloads and the `datasets/un-locode` mirror declares no clear licence. Only the identifier codes of our own cities are stored (`src/data/places/locodes.json`). To be confirmed with UNECE before any broader use.
+
 ## City photos (phase 1D)
 
 `src/data/photos/cities-<CC>.json` is built by `scripts/build-city-photos.mjs` from **Wikidata** (CC0: GeoNames ID P1566 → image P18 / Wikivoyage banner P948), the lead image of the city's **Wikipedia** article when Wikidata has none, a short hand-picked list (`src/data/photos/curated.json`, 15 large cities), and **Wikimedia Commons** (author, licence, size, page of each file). Only free licences that allow display with credit are used: public domain, CC0, CC BY, CC BY-SA, Commons {{Attribution}}, Free Art License. Every photo is shown with its author, licence and a link to its Commons page; the images are loaded from Wikimedia's servers (no referrer). Every city in the catalog has a photo; towns without a usable free photo are left out of the catalog (`src/data/places/exclusions.json`). A styled panel still appears if a photo fails to load.

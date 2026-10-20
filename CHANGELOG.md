@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.14.0 — 2026-10-20 (phase 2A: distance by country, border crossings, UN/LOCODE)
+
+- **Distance by country** ("Distanță pe țări", Hartă și rută and Prezentare): the route geometry is split by country with Natural Earth 1:10m borders (public domain, simplified; point-in-polygon, border found by bisection, segments densified to ≤ 2 km). The provider's distance is shared in proportion to the geometry; kilometres add up exactly. Computed fact with formula, inputs and data sets.
+- **Border crossings** ("Punct de frontieră"): where the route leaves one country and enters another, matched to the nearest OpenStreetMap border control/customs point within 5 km (name shown as mapped, never an operator); otherwise "Punct de frontieră X–Y". Each crossing shows its regime — internal Schengen or external (control) — from a list of 29 Schengen states (Romania and Bulgaria included since 1 January 2025). No waiting-time estimates. Crossings are drawn on the map and in the print snapshot.
+- **UN/LOCODE** for the header codes (ARW → SOF): 241 of the 254 cities matched to GeoNames by country, name and distance; the rest keep the provisional code. Only codes are kept. The reuse terms of UN/LOCODE are not clearly stated by UNECE (see `src/DATA-LICENSES.md`); the build script uses the `datasets/un-locode` mirror or a file downloaded by hand.
+- New offline scripts: `build-borders.mjs`, `build-border-crossings.mjs` (Overpass, retries), `build-locodes.mjs`; data in `src/data/geo/` and `src/data/places/locodes.json`.
+- Without the geo data (file missing) both facts show "Indisponibil încă — Etapa 2" with the reason. Load schema version 3 (two new required route facts: `countryDistances`; `borderCrossings` now computed); older saved loads need regenerating.
+- 12 new tests (`tests/borders.test.mjs`).
+
 ## 0.13.0 — 2026-10-20 (phase 1D: city photos and weather)
 
 - **City cards** for the origin and the destination (Prezentare, Hartă și rută): photo, name, country, population, and the photo credit (author · licence · Wikimedia Commons, linked). A styled fallback (gradient + city code) when there is no free photo or it does not load.
