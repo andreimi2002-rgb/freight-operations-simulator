@@ -5,7 +5,7 @@ import { drawCounterpart } from "./data/selection.mjs";
 import { buildLoadSheet, buildRecentEntry } from "./view-model/load-sheet.mjs";
 import { levelLabel } from "./view-model/provenance.mjs";
 import { createRouteMap } from "./map/route-map.mjs";
-import { $, applyStaticTranslations, esc, showToast } from "./ui/dom.mjs";
+import { $, applyStaticTranslations, showToast } from "./ui/dom.mjs";
 import { closeLayer, openLayer, wireLayer } from "./ui/layers.mjs";
 import { emptyHeroHtml, heroHtml } from "./ui/hero.mjs";
 import { cargoCardHtml, detailHtml, kpisHtml, legendHtml, recentHtml, sheetHtml } from "./ui/panels.mjs";

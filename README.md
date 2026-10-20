@@ -54,4 +54,4 @@ See [src/DATA-LICENSES.md](src/DATA-LICENSES.md). FOS is unofficial and not affi
 
 ## Limits
 
-The route is a heavy-truck estimate (modelled 40 t, 4.1 m). It is not confirmed for a specific vehicle, trailer, cargo, road restriction, permit, facility or driver-hours rule. Marfa and trailer suggestions are planning heuristics, not verified compatibility. Hazardous-goods status is never inferred.
+The route is a heavy-truck estimate (modelled 40 t, 4.1 m). It is not confirmed for a specific vehicle, trailer, cargo, road restriction, permit, facility or driver-hours rule. Cargo and trailer suggestions are planning heuristics, not verified compatibility. Hazardous-goods status is never inferred.

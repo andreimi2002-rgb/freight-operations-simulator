@@ -20,7 +20,7 @@ export function createGenerator({ body, onSubmit, onPick }) {
     <div class="field"><label for="genCargo">${esc(t("gen.cargo"))}</label><select id="genCargo"></select></div>
     <div class="field"><label for="genTrailer">${esc(t("gen.trailer"))}</label><select id="genTrailer"></select></div>
     <p class="catalog-status" id="genStatus" aria-live="polite"></p>
-    <button type="submit" class="primary wide" id="genSubmit" data-autofocus>${esc(t("gen.submit"))}</button>
+    <button type="submit" class="primary wide" id="genSubmit">${esc(t("gen.submit"))}</button>
     <p class="hint">${esc(t("gen.hint"))}</p>
   </form>`;
   const $ = selector => body.querySelector(selector);
