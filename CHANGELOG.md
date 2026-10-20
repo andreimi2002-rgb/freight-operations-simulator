@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.15.0 — 2026-10-21 (phase 2B: real loading places from OpenStreetMap)
+
+- **Loading and unloading places** ("Loc de încărcare", "Loc de descărcare", Hartă și rută): a real place in the city from OpenStreetMap — industrial zone, port, rail terminal, logistics park or silo — chosen by the cargo (`src/data/places/site-kinds.mjs`; grain prefers a silo or port, fuel a port or industrial zone, machinery an industrial zone…). The route runs between the places and the A/B pins sit on them. Without a suitable place the route runs between the cities as before (row shows "Indisponibil" with the reason).
+- **No company names.** A name is shown only when it is a public place term (`src/data/places/public-name-terms.json`: "Zonă industrială", "Parc industrial", "Port", "Ipari park", "Индустриална зона"…) plus words that cannot name a company — city names, compass words, numerals, short connecting words. Legal forms, `operator`/`brand` matches and any other word make the place generic ("Zonă industrială, Arad"). The original name is not stored.
+- **Data prepared offline** by `scripts/build-locations.mjs` (Overpass, retries, optional `FOS_OVERPASS_CACHE`): `src/data/places/locations-RO/HU/BG.json` — 696 / 722 / 321 places (industrial zones, ports, silos; OSM has few tagged rail terminals and logistics parks, so those kinds are rare), at most 6 per city and kind, within 15 km of a catalog city; 111 of 112 RO, all 88 HU and 54 BG cities have at least one. Named places: 24 / 14 / 46; the rest are shown generically. ODbL 1.0, © OpenStreetMap contributors.
+- Load: optional facts `originSite` / `destinationSite` (sourced with OSM link and licence, or unavailable with reason `noSite`); loads saved before this release render without them. Schema version unchanged.
+- 15 new tests (`tests/sites.test.mjs`): name filter in three languages, classification, city assignment and limits, choice by cargo, routing between places, view rows, and a check of the data files for company-like names.
+
 ## 0.14.0 — 2026-10-20 (phase 2A: distance by country, border crossings, UN/LOCODE)
 
 - **Distance by country** ("Distanță pe țări", Hartă și rută and Prezentare): the route geometry is split by country with Natural Earth 1:10m borders (public domain, simplified; point-in-polygon, border found by bisection, segments densified to ≤ 2 km). The provider's distance is shared in proportion to the geometry; kilometres add up exactly. Computed fact with formula, inputs and data sets.

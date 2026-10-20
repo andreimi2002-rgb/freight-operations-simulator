@@ -1,6 +1,6 @@
 # Etapa 2B — locații reale din OpenStreetMap (plan)
 
-Stare: **plan de aprobat** (nimic implementat). Branch: `feature/v2b-osm-locations`. Un singur PR.
+Stare: **aprobat de proprietar la 21 octombrie 2026; implementat** (0.15.0). Abateri față de plan: terminalele feroviare și parcurile logistice sunt rare în OSM, deci apar puține; silozurile nu au niciodată nume afișat. Branch: `feature/v2b-osm-locations`. Un singur PR.
 
 ## 1. Ce rezolvă
 Azi o cursă pornește și ajunge „în oraș” (centrul din GeoNames). 2B adaugă **locuri reale de încărcare și descărcare** din OpenStreetMap, în orașele din catalog: zone industriale, porturi, terminale, parcuri logistice. Cursa devine, de exemplu, „Zona industrială X, Arad → Portul Y, Constanța”, cu coordonatele locului folosite pentru rută.
