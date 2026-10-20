@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Freight Ops — fișa cursei</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0b1017;color:#eef4fa;font-family:Inter,system-ui,sans-serif;letter-spacing:-.011em;-webkit-font-smoothing:antialiased}
+a{color:#8ce0bd}a:hover{color:#b6f0d6}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:2px solid #8ce0bd;outline-offset:2px}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.eyebrow{font-size:11px;color:#91a0b2;text-transform:uppercase;letter-spacing:.14em;font-weight:700}
+.chip{display:flex;align-items:baseline;gap:7px;border:1px solid #ffffff1a;background:#0b10178c;border-radius:10px;padding:8px 11px;font-size:12px}
+.chip small{font-size:10px;color:#91a0b2;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.chip strong{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:12px}
+.qchip{flex:none;display:flex;align-items:center;gap:7px;border:1px solid #243140;background:#121b25;border-radius:999px;padding:7px 12px 7px 10px;font-size:12px;color:#91a0b2;white-space:nowrap}
+.qchip b{font-family:"JetBrains Mono",monospace;color:#eef4fa}
+.card{background:linear-gradient(150deg,#141f2b,#0f1620);border:1px solid #243140;border-radius:20px;box-shadow:0 1px 0 #ffffff08 inset,0 18px 50px -24px #000c}
+.kpi-n{font-size:32px;font-weight:780;letter-spacing:-.06em;margin-top:10px;line-height:1;font-variant-numeric:tabular-nums}
+.kpi-n small{font-size:15px;color:#91a0b2;font-weight:600;margin-left:3px;letter-spacing:-.02em}
+.frow{position:relative;width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid #1d2834;padding:13px 18px 13px 22px;display:grid;grid-template-columns:minmax(120px,1fr) minmax(160px,1.6fr) minmax(130px,1fr) 18px;gap:14px;align-items:center;min-height:60px}
+.frow:hover{background:#16212c}
+.frow.sel{background:#162330}
+.stripe{position:absolute;left:0;top:10px;bottom:10px;width:3px;border-radius:0 3px 3px 0}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.04em;padding:4px 9px;border-radius:7px;border:1px solid;justify-self:start}
+.dot{width:7px;height:7px;border-radius:50%;background:#8ce0bd;animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 #8ce0bd80}70%{box-shadow:0 0 0 9px #8ce0bd00}100%{box-shadow:0 0 0 0 #8ce0bd00}}
+.trow{display:flex;justify-content:space-between;gap:12px;font-size:13px;padding:9px 0;border-top:1px solid #1b2733}
+.trow span{color:#91a0b2}
+.trow b{font-family:"JetBrains Mono",monospace;font-weight:700;text-align:right}
+@media (max-width:720px){
+ .frow{grid-template-columns:1fr 18px;gap:6px 12px}
+ .frow .fval{grid-column:1/2}
+ .frow .badge{grid-column:1/2}
+ .hide-sm{display:none}
+}
+</style>
+</helmet>
+
+<div style="min-height: 100vh; background: radial-gradient(1200px 600px at 10% -10%, #1b2b3a 0, transparent 60%), radial-gradient(900px 500px at 110% 10%, #13263022 0, transparent 60%), #0b1017;">
+
+  <!-- top bar -->
+  <header style="position: sticky; top: 0; z-index: 20; background: #0b1017d9; border-bottom: 1px solid #ffffff0d;">
+    <div style="max-width: 1480px; margin: 0 auto; display: flex; align-items: center; gap: 18px; padding: 12px 28px; flex-wrap: wrap;">
+      <a href="#top" style="display: flex; align-items: center; gap: 11px; text-decoration: none; color: #eef4fa;">
+        <span style="height: 38px; width: 38px; display: grid; place-items: center; border-radius: 12px; background: linear-gradient(145deg, #a4f0cf, #6ccaa2); color: #092017; box-shadow: 0 6px 20px -6px #8ce0bd80;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h11v9H2z"></path><path d="M13 9h4l4 3.5V15h-8z"></path><circle cx="6" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle></svg>
+        </span>
+        <span>
+          <span style="display: block; font-size: 16px; font-weight: 750; letter-spacing: -.035em;">Freight Ops</span>
+          <span style="display: block; font-size: 10px; color: #91a0b2; margin-top: 2px; letter-spacing: .14em; text-transform: uppercase;">Real-world load generator</span>
+        </span>
+      </a>
+      <nav aria-label="Curse recente" style="display: flex; gap: 6px; overflow-x: auto; flex: 1; min-width: 0;">
+        <a class="qchip" href="#top" style="background: #10201c; border-color: #3d7e66; color: #eef4fa; text-decoration: none;"><b>BUC→BUD</b> Mere Gala</a>
+        <a class="qchip" href="#top" style="text-decoration: none;"><b>CND→SOF</b> Îngrășăminte</a>
+        <a class="qchip" href="#top" style="text-decoration: none;"><b>CLJ→DEB</b> Piese auto</a>
+        <a class="qchip" href="#top" style="text-decoration: none;"><b>TM→SZE</b> Cereale</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button type="button" style="display: flex; align-items: center; gap: 10px; border: 1px solid #243140; background: #0d151e; border-radius: 12px; padding: 9px 10px 9px 13px; color: #91a0b2; font-size: 13px; min-width: 210px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+          <span style="flex: 1; text-align: left;">Caută oraș sau loc</span>
+          <kbd class="mono" style="font-size: 11px; border: 1px solid #2e3d4e; border-bottom-width: 2px; border-radius: 6px; padding: 1px 6px; background: #151f2b;">Ctrl K</kbd>
+        </button>
+        <button type="button" style="border: 1px solid #8ce0bd; background: #8ce0bd; color: #092017; border-radius: 12px; padding: 10px 15px; font-weight: 750; white-space: nowrap;">Generează cursă</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" style="max-width: 1480px; margin: 0 auto; padding: 22px 28px 48px; box-sizing: border-box;">
+
+    <!-- hero -->
+    <section aria-label="Cursa curentă" style="position: relative; overflow: hidden; border-radius: 26px; border: 1px solid #243140; background: radial-gradient(circle at 82% 8%, #25394b 0, transparent 55%), linear-gradient(145deg, #172431, #0f1720); box-shadow: 0 18px 50px -24px #000c;">
+      <svg width="420" height="420" viewBox="0 0 420 420" aria-hidden="true" style="position: absolute; right: -120px; top: -150px; opacity: .6;"><circle cx="210" cy="210" r="200" fill="none" stroke="#344657"></circle><circle cx="210" cy="210" r="150" fill="none" stroke="#1b2a38"></circle><circle cx="210" cy="210" r="100" fill="none" stroke="#1b2a38"></circle></svg>
+      <div style="position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; padding: 30px 32px 28px; min-height: 300px; box-sizing: border-box;">
+        <div style="flex: 999 1 560px; min-width: 0;">
+          <div class="eyebrow" style="display: flex; align-items: center; gap: 8px;"><span class="dot"></span> Cursă generată · <span class="mono">FOS-0142</span> · date de exemplu</div>
+          <div style="display: flex; align-items: flex-end; gap: 20px; margin: 16px 0 18px; flex-wrap: wrap;">
+            <h1 style="margin: 0; font-size: clamp(56px, 8.5vw, 124px); font-weight: 800; letter-spacing: -.075em; line-height: .84; color: #f4f8fc;">BUC <span style="color: #8ce0bd;">→</span> BUD</h1>
+            <div style="padding-bottom: 6px;">
+              <div style="font-size: clamp(18px, 2vw, 24px); font-weight: 700; letter-spacing: -.03em;">București, România → Budapesta, Ungaria</div>
+              <div style="font-size: 14px; color: #b3c2d0; margin-top: 5px;">Via Pitești · Sibiu · Deva · Arad · Nădlac · Szeged</div>
+            </div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span class="chip"><small>Distanță</small><strong>832 km</strong></span>
+            <span class="chip"><small>Condus</small><strong>11 h 20 min</strong></span>
+            <span class="chip"><small>Marfă</small><strong>21,5 t</strong></span>
+            <span class="chip"><small>Trailer</small><strong>Frigorific</strong></span>
+            <span class="chip"><small>Temp.</small><strong>+1…+4 °C</strong></span>
+            <span class="chip"><small>ADR</small><strong>Nu</strong></span>
+          </div>
+        </div>
+        <div style="flex: 1 1 240px; display: flex; flex-direction: column; align-items: flex-end; gap: 18px; text-align: right;">
+          <div>
+            <div class="eyebrow">Fereastră încărcare</div>
+            <div class="mono" style="font-size: clamp(38px, 4.6vw, 60px); font-weight: 700; letter-spacing: -.04em; line-height: 1; margin-top: 8px; font-variant-numeric: tabular-nums;">06:30<span style="font-size: .42em; color: #8ce0bd; margin-left: 4px; vertical-align: top;">–08:00</span></div>
+            <div style="font-size: 13px; color: #c3d1dd; margin-top: 8px;">Miercuri, 21 octombrie 2026</div>
+            <div class="mono" style="font-size: 12px; color: #91a0b2; margin-top: 6px;">Descărcare: joi 09:00–12:00 (UTC+2)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- glance: map + cargo -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 16px; margin-top: 16px;">
+      <section class="card" aria-label="Hartă rută" style="overflow: hidden; grid-column: span 2; min-height: 300px; position: relative; background: #0e161f;">
+        <svg viewBox="0 0 800 340" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Schiță de traseu București – Budapesta; în aplicație va fi hartă MapLibre" style="display: block; width: 100%; height: 100%; min-height: 300px;">
+          <defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#15202b" stroke-width="1"></path></pattern></defs>
+          <rect width="800" height="340" fill="url(#g)"></rect>
+          <path d="M60 300 C 180 250, 260 280, 380 230 S 600 180, 760 210" fill="none" stroke="#1d2a37" stroke-width="10"></path>
+          <path d="M120 40 C 220 120, 330 110, 420 170 S 560 290, 700 320" fill="none" stroke="#1a2531" stroke-width="7"></path>
+          <path d="M690 250 L 600 228 L 505 175 L 430 150 L 330 132 L 250 118 L 175 92 L 110 70" fill="none" stroke="#8ce0bd33" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M690 250 L 600 228 L 505 175 L 430 150 L 330 132 L 250 118 L 175 92 L 110 70" fill="none" stroke="#8ce0bd" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <g font-family="JetBrains Mono, monospace" font-size="12" fill="#91a0b2">
+            <circle cx="600" cy="228" r="4" fill="#0e161f" stroke="#8ce0bd" stroke-width="2"></circle><text x="608" y="246">Pitești</text>
+            <circle cx="505" cy="175" r="4" fill="#0e161f" stroke="#8ce0bd" stroke-width="2"></circle><text x="512" y="195">Sibiu</text>
+            <circle cx="430" cy="150" r="4" fill="#0e161f" stroke="#8ce0bd" stroke-width="2"></circle><text x="420" y="172">Deva</text>
+            <circle cx="330" cy="132" r="4" fill="#0e161f" stroke="#8ce0bd" stroke-width="2"></circle><text x="318" y="155">Arad</text>
+            <circle cx="250" cy="118" r="5" fill="#f3c477"></circle><text x="214" y="142" fill="#f3c477">Nădlac · RO/HU</text>
+            <circle cx="175" cy="92" r="4" fill="#0e161f" stroke="#8ce0bd" stroke-width="2"></circle><text x="186" y="88">Szeged</text>
+          </g>
+          <g font-family="Inter, sans-serif" font-weight="800" font-size="13">
+            <circle cx="690" cy="250" r="14" fill="#8ce0bd"></circle><text x="685" y="255" fill="#092017">A</text>
+            <circle cx="110" cy="70" r="14" fill="#8bbcff"></circle><text x="105" y="75" fill="#08182c">B</text>
+          </g>
+        </svg>
+        <div style="position: absolute; left: 18px; top: 16px;" class="eyebrow">Rută · profil camion</div>
+        <div style="position: absolute; right: 14px; bottom: 10px; font-size: 10px; color: #91a0b2;">Schiță demo · în aplicație: MapLibre + OpenFreeMap · © OpenStreetMap contributors</div>
+      </section>
+
+      <section class="card" aria-label="Marfă" style="padding: 22px 24px; display: flex; flex-direction: column; gap: 14px;">
+        <div class="eyebrow">Marfă</div>
+        <div>
+          <div style="font-size: 26px; font-weight: 750; letter-spacing: -.045em;">Mere Gala, proaspete</div>
+          <div style="font-size: 13px; color: #91a0b2; margin-top: 6px;">Fructe · NST 2007 cap. 01 · transport frigorific</div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;">
+          <div style="border-top: 1px solid #243140; padding-top: 10px;"><div class="eyebrow" style="font-size: 10px;">Ambalare</div><div style="font-size: 14px; font-weight: 600; margin-top: 5px;">33 europaleți</div></div>
+          <div style="border-top: 1px solid #243140; padding-top: 10px;"><div class="eyebrow" style="font-size: 10px;">Masă / palet</div><div style="font-size: 14px; font-weight: 600; margin-top: 5px;">≈ 650 kg</div></div>
+          <div style="border-top: 1px solid #243140; padding-top: 10px;"><div class="eyebrow" style="font-size: 10px;">Temperatură</div><div style="font-size: 14px; font-weight: 600; margin-top: 5px;">+1…+4 °C</div></div>
+          <div style="border-top: 1px solid #243140; padding-top: 10px;"><div class="eyebrow" style="font-size: 10px;">Cod CN</div><div style="font-size: 14px; font-weight: 600; margin-top: 5px; color: #91a0b2;">Etapa 3</div></div>
+        </div>
+        <div style="font-size: 12px; color: #f3c477; line-height: 1.5;">De verificat: setpoint-ul exact depinde de soi și de durata depozitării.</div>
+      </section>
+    </div>
+
+    <!-- KPIs -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 12px; margin-top: 16px;">
+      <div class="card" style="padding: 16px 18px;"><div style="font-size: 12px; color: #91a0b2; font-weight: 600;">Distanță</div><div class="kpi-n">832<small>km</small></div><div style="height: 4px; border-radius: 4px; background: #8ce0bd; margin-top: 12px; width: 100%;"></div></div>
+      <div class="card" style="padding: 16px 18px;"><div style="font-size: 12px; color: #91a0b2; font-weight: 600;">Timp de condus</div><div class="kpi-n">11:20<small>h</small></div><div style="height: 4px; border-radius: 4px; background: #8ce0bd; margin-top: 12px; width: 100%;"></div></div>
+      <div class="card" style="padding: 16px 18px;"><div style="font-size: 12px; color: #91a0b2; font-weight: 600;">Masă marfă</div><div class="kpi-n" style="color: #f3c477;">21,5<small>t</small></div><div style="height: 4px; border-radius: 4px; background: #f3c477; margin-top: 12px; width: 100%;"></div></div>
+      <div class="card" style="padding: 16px 18px;"><div style="font-size: 12px; color: #91a0b2; font-weight: 600;">Metri de încărcare</div><div class="kpi-n" style="color: #8bbcff;">13,2<small>m</small></div><div style="height: 4px; border-radius: 4px; background: #8bbcff; margin-top: 12px; width: 100%;"></div></div>
+      <div class="card" style="padding: 16px 18px; opacity: .55;"><div style="font-size: 12px; color: #91a0b2; font-weight: 600;">Cost estimat</div><div class="kpi-n" style="color: #91a0b2;">—</div><div style="font-size: 11px; color: #91a0b2; margin-top: 8px;">Etapa 6 · motorină + taxe</div></div>
+      <div class="card" style="padding: 16px 18px; opacity: .55;"><div style="font-size: 12px; color: #91a0b2; font-weight: 600;">Pauze șofer</div><div class="kpi-n" style="color: #91a0b2;">—</div><div style="font-size: 11px; color: #91a0b2; margin-top: 8px;">Etapa 6 · Reg. UE 561/2006</div></div>
+    </div>
+
+    <!-- load sheet -->
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin: 34px 0 14px; flex-wrap: wrap;">
+      <div>
+        <h2 style="font-size: 20px; margin: 0; letter-spacing: -.04em;">Fișa cursei</h2>
+        <div style="font-size: 12px; color: #91a0b2; margin-top: 6px;">Apasă pe un rând ca să vezi sursa sau calculul.</div>
+      </div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;" aria-label="Legendă proveniență">
+        <span class="badge" style="color: #8ce0bd; border-color: #8ce0bd55; background: #8ce0bd12;">● Din sursă</span>
+        <span class="badge" style="color: #8bbcff; border-color: #8bbcff55; background: #8bbcff12;">● Calculat</span>
+        <span class="badge" style="color: #f3c477; border-color: #f3c47755; background: #f3c47712;">● Estimat</span>
+        <span class="badge" style="color: #c3a6ff; border-color: #c3a6ff55; background: #c3a6ff12;">● Simulat</span>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start;">
+      <section style="flex: 999 1 560px; min-width: 0; background: #111923; border: 1px solid #243140; border-radius: 20px; overflow: hidden;">
+        <div class="hide-sm" style="display: grid; grid-template-columns: minmax(120px, 1fr) minmax(160px, 1.6fr) minmax(130px, 1fr) 18px; gap: 14px; padding: 0 18px 0 22px; height: 38px; align-items: center; font-size: 10px; text-transform: uppercase; letter-spacing: .12em; color: #91a0b2; font-weight: 700; background: #0d141c; border-bottom: 1px solid #243140;">
+          <span>Câmp</span><span>Valoare</span><span>Proveniență</span><span></span>
+        </div>
+        <sc-for list="{{rows}}" as="r" hint-placeholder-count="10">
+          <button type="button" class="{{r.cls}}" onClick="{{r.pick}}" aria-label="{{r.aria}}">
+            <span class="stripe" style="background: {{r.color}};"></span>
+            <span style="font-size: 13px; color: #91a0b2; font-weight: 600;">{{r.label}}</span>
+            <span class="fval" style="font-size: 14px; font-weight: 600; min-width: 0;"><span class="mono">{{r.value}}</span></span>
+            <span class="badge" style="color: {{r.color}}; border-color: {{r.border}}; background: {{r.bg}};">{{r.provLabel}}</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#91a0b2" stroke-width="2" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>
+          </button>
+        </sc-for>
+      </section>
+
+      <!-- detail drawer (inline panel in the demo) -->
+      <aside aria-label="Detalii rând" style="flex: 1 1 330px; min-width: 0; background: #0d151e; border: 1px solid #2e3d4e; border-radius: 20px; overflow: hidden; box-shadow: -30px 0 80px #0006;">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #243140;">
+          <span class="eyebrow">Detalii</span>
+          <span class="badge" style="color: {{sel.color}}; border-color: {{sel.border}}; background: {{sel.bg}};">{{sel.provLabel}}</span>
+        </div>
+        <div style="padding: 20px 22px 24px;">
+          <div style="font-size: 13px; color: #91a0b2;">{{sel.label}}</div>
+          <div class="mono" style="font-size: 22px; font-weight: 700; letter-spacing: -.03em; margin-top: 6px;">{{sel.value}}</div>
+          <p style="font-size: 13px; line-height: 1.6; color: #c3d1dd; margin: 14px 0 6px;">{{sel.detail}}</p>
+          <div style="margin-top: 12px;">
+            <sc-for list="{{sel.meta}}" as="m" hint-placeholder-count="3">
+              <div class="trow"><span>{{m.k}}</span><b>{{m.v}}</b></div>
+            </sc-for>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer style="margin-top: 36px; padding-top: 18px; border-top: 1px solid #1d2834; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 12px; color: #91a0b2;">
+      <span>Freight Ops · lumea e reală, cursa e simulată. Fiecare valoare își arată proveniența.</span>
+      <span>Surse: GeoNames (CC BY 4.0) · OpenStreetMap (ODbL) · UNECE NST 2007</span>
+    </footer>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2050}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { picked: 'mass' }; }
+  renderVals() {
+    var P = {
+      sourced:   { provLabel: 'Din sursă', color: '#8ce0bd', border: '#8ce0bd55', bg: '#8ce0bd12' },
+      computed:  { provLabel: 'Calculat',  color: '#8bbcff', border: '#8bbcff55', bg: '#8bbcff12' },
+      estimated: { provLabel: 'Estimat',   color: '#f3c477', border: '#f3c47755', bg: '#f3c47712' },
+      simulated: { provLabel: 'Simulat',   color: '#c3a6ff', border: '#c3a6ff55', bg: '#c3a6ff12' }
+    };
+    var data = [
+      { id: 'origin', label: 'Origine', value: 'București, RO', p: 'sourced', detail: 'Oraș din catalogul GeoNames (centroid). De la Etapa 2, punctul de încărcare va fi o locație reală din OpenStreetMap (depozit, zonă industrială).', meta: [{k:'Sursă',v:'GeoNames'},{k:'Licență',v:'CC BY 4.0'},{k:'Preluat',v:'2026-10-19'}] },
+      { id: 'dest', label: 'Destinație', value: 'Budapesta, HU', p: 'sourced', detail: 'Oraș din catalogul GeoNames (centroid).', meta: [{k:'Sursă',v:'GeoNames'},{k:'Licență',v:'CC BY 4.0'},{k:'Preluat',v:'2026-10-19'}] },
+      { id: 'route', label: 'Rută', value: '832 km · 11 h 20 min', p: 'sourced', detail: 'Distanță și durată de la furnizorul de rutare, profil camion. Temporar Geoapify; din Etapa 5, graf propriu din OpenStreetMap.', meta: [{k:'Furnizor',v:'Geoapify (temporar)'},{k:'Profil',v:'camion'},{k:'Țări',v:'RO, HU'}] },
+      { id: 'border', label: 'Frontieră', value: 'Nădlac II – Csanádpalota', p: 'computed', detail: 'Punctul de trecere dedus din geometria rutei, unde traseul intersectează granița RO/HU.', meta: [{k:'Intrări',v:'geometria rutei'},{k:'Metodă',v:'intersecție cu granița'}] },
+      { id: 'cargo', label: 'Marfă', value: 'Mere Gala, proaspete', p: 'sourced', detail: 'Produs din catalogul FOS, clasificat după UNECE NST 2007 (capitolul 01: produse agricole). Codul vamal CN vine în Etapa 3.', meta: [{k:'Clasificare',v:'NST 2007 · 01'},{k:'Cod CN',v:'Etapa 3'}] },
+      { id: 'temp', label: 'Temperatură', value: '+1…+4 °C', p: 'estimated', detail: 'Interval tipic pentru mere proaspete în transport. Setpoint-ul exact depinde de soi, maturitate și instrucțiunile expeditorului.', meta: [{k:'Bază',v:'interval tipic produs'},{k:'De verificat',v:'instrucțiuni expeditor'}] },
+      { id: 'pallets', label: 'Ambalare', value: '33 europaleți 1200×800', p: 'computed', detail: 'Numărul de paleți rezultă din podeaua trailerului (13,6 m × 2,46 m) și amprenta europaletului, așezat pe lungime câte trei.', meta: [{k:'Amprentă palet',v:'1200×800 mm'},{k:'Formulă',v:'loc pe podea / amprentă'},{k:'Rezultat',v:'33 buc.'}] },
+      { id: 'mass', label: 'Masă marfă', value: '21,5 t', p: 'computed', detail: 'Masa totală = număr paleți × masă estimată pe palet. Pentru că masa pe palet e o estimare, și totalul trebuie verificat la încărcare. Comparația cu masa maximă legală vine în Etapa 4.', meta: [{k:'Paleți',v:'33'},{k:'Masă / palet',v:'≈ 650 kg (estimat)'},{k:'Total',v:'≈ 21 450 kg'}] },
+      { id: 'trailer', label: 'Trailer', value: 'Frigorific monotemperatură', p: 'computed', detail: 'Ales după regula de compatibilitate marfă → echipament din catalog: produs perisabil, o singură zonă de temperatură.', meta: [{k:'Regulă',v:'perisabil → frigorific'},{k:'Alternativă',v:'multi-temperatură'}] },
+      { id: 'window', label: 'Ferestre orare', value: 'Mi 06:30 / Jo 09:00', p: 'simulated', detail: 'Ferestrele de încărcare și descărcare sunt generate pentru scenariu. Nu reprezintă o rezervare reală.', meta: [{k:'Încărcare',v:'Mi 06:30–08:00'},{k:'Descărcare',v:'Jo 09:00–12:00'}] },
+      { id: 'client', label: 'Expeditor', value: 'Distribuitor de fructe', p: 'simulated', detail: 'Rolul expeditorului este simulat. De la Etapa 2, locația va fi reală (din OSM), dar relația comercială rămâne simulată.', meta: [{k:'Tip',v:'distribuitor'},{k:'Companie',v:'nespecificată'}] }
+    ];
+    var self = this;
+    var rows = data.map(function (d) {
+      var p = P[d.p];
+      return { id: d.id, label: d.label, value: d.value, provLabel: p.provLabel, color: p.color, border: p.border, bg: p.bg,
+        cls: d.id === self.state.picked ? 'frow sel' : 'frow',
+        aria: d.label + ': ' + d.value + ' — ' + p.provLabel,
+        pick: function () { self.setState({ picked: d.id }); } };
+    });
+    var s = data.filter(function (d) { return d.id === self.state.picked; })[0] || data[0];
+    var sp = P[s.p];
+    var sel = { label: s.label, value: s.value, detail: s.detail, meta: s.meta, provLabel: sp.provLabel, color: sp.color, border: sp.border, bg: sp.bg };
+    return { rows: rows, sel: sel };
+  }
+}
+</script>
+</body>
+</html>
