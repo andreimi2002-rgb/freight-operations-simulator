@@ -1,0 +1,33 @@
+{
+  "about": "Words that make an OSM name a public place name (used by scripts/lib/site-names.mjs). Per country: terms by kind, connecting words and compass words. Everything else in a name makes the place appear generically.",
+  "RO": {
+    "terms": {
+      "industrialZone": ["zona industriala", "zonă industrială", "parc industrial", "parcul industrial", "platforma industriala", "platformă industrială", "zona industriala"],
+      "port": ["port", "portul", "dana", "danele"],
+      "railTerminal": ["terminal", "terminalul", "gara de marfa", "gară de marfă", "terminal intermodal", "terminal containere"],
+      "logisticsPark": ["parc logistic", "parcul logistic", "centru logistic", "zona logistica", "zonă logistică"]
+    },
+    "fillers": ["de", "din", "la", "al", "si", "și", "cel", "mare", "mic", "nou", "noua", "veche", "vechi"],
+    "directions": ["nord", "sud", "est", "vest", "centru", "central", "centrala", "nordic", "sudic"]
+  },
+  "HU": {
+    "terms": {
+      "industrialZone": ["ipari park", "ipari terulet", "ipari terület", "iparterulet", "ipartelep", "ipari zona"],
+      "port": ["kikoto", "kikötő", "kozforgalmu kikoto", "folyami kikoto"],
+      "railTerminal": ["terminal", "kontener terminal", "konténer terminál", "teherpalyaudvar", "teherpályaudvar", "rakodo", "rakodó"],
+      "logisticsPark": ["logisztikai park", "logisztikai kozpont", "logisztikai központ"]
+    },
+    "fillers": ["es", "és", "a", "az", "uj", "új", "regi", "régi", "nagy", "kis"],
+    "directions": ["eszak", "észak", "del", "dél", "kelet", "nyugat", "kozep", "közép", "keleti", "nyugati", "eszaki", "északi", "deli", "déli"]
+  },
+  "BG": {
+    "terms": {
+      "industrialZone": ["индустриална зона", "промишлена зона", "индустриален парк", "промишлен парк", "индустриален район"],
+      "port": ["пристанище", "пристанищен терминал"],
+      "railTerminal": ["терминал", "контейнерен терминал", "товарна гара"],
+      "logisticsPark": ["логистичен парк", "логистичен център"]
+    },
+    "fillers": ["и", "на", "от", "нов", "стар", "голям", "малък"],
+    "directions": ["север", "юг", "изток", "запад", "център", "централен", "северна", "южна", "източна", "западна"]
+  }
+}

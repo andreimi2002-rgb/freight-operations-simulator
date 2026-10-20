@@ -10,6 +10,11 @@ export const DATASETS = {
     url: "https://www.openstreetmap.org/copyright",
     license: "ODbL 1.0, © OpenStreetMap contributors",
   },
+  osmSites: {
+    name: "OpenStreetMap — locuri de încărcare (zone industriale, porturi, terminale)",
+    url: "https://www.openstreetmap.org/copyright",
+    license: "ODbL 1.0, © OpenStreetMap contributors",
+  },
   schengen: {
     name: "Spațiul Schengen — statele membre",
     url: "https://home-affairs.ec.europa.eu/policies/schengen/schengen-area_en",
