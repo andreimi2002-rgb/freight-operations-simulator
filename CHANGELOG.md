@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.13.0 — 2026-10-20 (phase 1D: city photos and weather)
+
+- **City cards** for the origin and the destination (Prezentare, Hartă și rută): photo, name, country, population, and the photo credit (author · licence · Wikimedia Commons, linked). A styled fallback (gradient + city code) when there is no free photo or it does not load.
+- **Photos prepared offline** by `scripts/build-city-photos.mjs` (country codes as arguments): GeoNames ID → Wikidata (P1566) → P18 (preferred first) or the Wikivoyage banner (P948) → Commons information; the lead image of the city's Wikipedia article when Wikidata has none; free licences only (PD, CC0, CC BY, CC BY-SA, Attribution, FAL), ≥ 500 px, maps/flags/coats of arms/collages excluded, thumbnail link checked; several Wikidata items → only a clearly dominant one (≥ 3× sitelinks). For the 15 largest cities still without a photo (Craiova, Oradea, Suceava, Botoșani, Reșița, Bistrița, Hunedoara, Giurgiu, Hódmezővásárhely, Câmpina, Mangalia, Odorheiu Secuiesc, Sighișoara, Huși, Petrila) a file was hand-picked from Commons (`src/data/photos/curated.json`) and checked by the same rules. Files: `src/data/photos/cities-<CC>.json`.
+- **Every city in the catalog now has a photo.** The 16 small or ambiguous towns left without a usable free photo were removed (owner's decision) and recorded with the reason in `src/data/places/exclusions.json`; the GeoNames importer keeps them out (`scripts/prune-cities-without-photo.mjs`). The catalog has 254 cities (RO 112, HU 88, BG 54).
+- **Live weather** for both cities from MET Norway Locationforecast (CC BY 4.0, no key): now (temperature, sky, wind, precipitation), the next three local days (min/max, sky) and the forecast at the loading and unloading windows. New function `/api/weather/:id` (GeoNames ID; the city is looked up on the server in `src/data/places/lookup.json`), CDN cache 20 min, rate limit, User-Agent per MET terms; loading / error (with retry) / "actualizat HH:MM" states; refreshed every 20 minutes while the page is visible; never stored in the load. The weather drawer shows the source, licence and times.
+- Own weather icons (8 sky states, day/night), °C, km/h, mm.
+- `scripts/build-places-lookup.mjs` (also run by the GeoNames importer) builds the city index used by server functions.
+- About the data and the footer list Wikimedia Commons and MET Norway.
+
 ## 0.12.0 — 2026-10-20 (phase 1C: tabs + countries as data)
 
 - **Tabs:** the load page has eight tabs under the route header — Prezentare, Hartă și rută, Marfă, Camion și trailer, Program și pauze, Costuri, Documente, Surse și calcule (tablist keyboard support, active tab in the address as `#cargo`, scrollable on phones). Every fact of the Load sits in exactly one tab; "Surse și calcule" lists them all with the legend and "De verificat". Prezentare shows cards that link to the other tabs.

@@ -8,6 +8,11 @@
 import { writeFile } from "node:fs/promises";
 import { inflateRawSync } from "node:zlib";
 import { ACTIVE_COUNTRIES, COUNTRIES } from "../src/data/countries.mjs";
+import { buildPlacesLookup } from "./lib/places-lookup.mjs";
+import { readFile } from "node:fs/promises";
+
+// Cities left out on purpose (e.g. no usable free photo): see src/data/places/exclusions.json.
+const EXCLUDED_IDS = new Set(Object.keys(JSON.parse(await readFile(new URL("../src/data/places/exclusions.json", import.meta.url), "utf8").catch(() => '{"cities":{}}')).cities || {}).map(Number));
 
 const SOURCE = "https://download.geonames.org/export/dump/cities15000.zip";
 const EXCLUDED_CODES = new Set(["PPLX", "PPLH", "PPLQ", "PPLW", "PPLCH"]);
@@ -59,7 +64,7 @@ for (const code of codes) {
       id: Number(f[0]), name: f[1], latitude: Number(f[4]), longitude: Number(f[5]),
       countryCode: f[8], adminCode: f[10], featureCode: f[7], population: Number(f[14]), timeZone: f[17],
     };
-    if (EXCLUDED_CODES.has(record.featureCode) || record.population < MIN_POPULATION) excluded.push(record);
+    if (EXCLUDED_CODES.has(record.featureCode) || record.population < MIN_POPULATION || EXCLUDED_IDS.has(record.id)) excluded.push(record);
     else cities.push(record);
   }
   cities.sort((a, b) => b.population - a.population);
@@ -92,3 +97,5 @@ for (const code of codes) {
   console.log(`${code}: wrote ${cities.length} cities (${excluded.length} excluded)`);
 }
 if (failed) process.exit(1);
+const lookup = await buildPlacesLookup();
+console.log(`lookup.json: ${lookup.count} places from ${lookup.countries.join(", ")}`);

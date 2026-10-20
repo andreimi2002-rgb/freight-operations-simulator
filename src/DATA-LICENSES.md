@@ -4,7 +4,7 @@ Every value FOS displays carries its provenance (sourced, computed, estimated, s
 
 ## GeoNames city catalog
 
-`src/data/places/cities-<CC>.json` (one file per country listed in `src/data/countries.mjs`: today RO 126, HU 89, BG 55 places) is built by `scripts/import-geonames.mjs` from the official GeoNames `cities15000.zip` dump. It keeps every populated place of the country with at least 15,000 inhabitants, excluding feature code `PPLX` (sections of populated places, e.g. Bucharest sectors and Budapest districts) and historical, abandoned or destroyed places. Each record keeps its GeoNames ID, coordinates, population, time zone and feature code.
+`src/data/places/cities-<CC>.json` (one file per country listed in `src/data/countries.mjs`: today RO 126, HU 89, BG 55 places) is built by `scripts/import-geonames.mjs` from the official GeoNames `cities15000.zip` dump. It keeps every populated place of the country with at least 15,000 inhabitants (except the towns listed in `src/data/places/exclusions.json`: no usable free photo), excluding feature code `PPLX` (sections of populated places, e.g. Bucharest sectors and Budapest districts) and historical, abandoned or destroyed places. Each record keeps its GeoNames ID, coordinates, population, time zone and feature code.
 
 - Attribution: GeoNames geographical database
 - License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
@@ -12,6 +12,14 @@ Every value FOS displays carries its provenance (sourced, computed, estimated, s
 - Format: [GeoNames dump readme](https://download.geonames.org/export/dump/readme.txt)
 
 GeoNames provides the data as-is without warranty. Coordinates are city centroids, not loading points (real loading points come in phase 2).
+
+## City photos (phase 1D)
+
+`src/data/photos/cities-<CC>.json` is built by `scripts/build-city-photos.mjs` from **Wikidata** (CC0: GeoNames ID P1566 → image P18 / Wikivoyage banner P948), the lead image of the city's **Wikipedia** article when Wikidata has none, a short hand-picked list (`src/data/photos/curated.json`, 15 large cities), and **Wikimedia Commons** (author, licence, size, page of each file). Only free licences that allow display with credit are used: public domain, CC0, CC BY, CC BY-SA, Commons {{Attribution}}, Free Art License. Every photo is shown with its author, licence and a link to its Commons page; the images are loaded from Wikimedia's servers (no referrer). Every city in the catalog has a photo; towns without a usable free photo are left out of the catalog (`src/data/places/exclusions.json`). A styled panel still appears if a photo fails to load.
+
+## Weather (phase 1D)
+
+City weather comes live from **MET Norway — Locationforecast 2.0** (https://api.met.no/), licensed **CC BY 4.0** (credited on each card and in the weather drawer), through the Netlify function `/api/weather/:id`, which identifies itself with a User-Agent and caches answers as MET Norway's terms ask. The weather is not stored in saved loads. `tests/fixtures/met-locationforecast-bucharest.json` is a trimmed recorded MET answer used only by the tests.
 
 ## Load planning sources (phase 1B)
 

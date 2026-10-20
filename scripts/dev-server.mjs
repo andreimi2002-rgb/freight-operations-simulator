@@ -12,6 +12,7 @@ const root = fileURLToPath(new URL("..", import.meta.url));
 const port = Number(process.env.PORT || 8080);
 const types = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".mjs": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8", ".json": "application/json; charset=utf-8", ".woff2": "font/woff2", ".txt": "text/plain; charset=utf-8" };
 import { activeCountries } from "../src/data/countries.mjs";
+import { handleWeather } from "../netlify/functions/weather.mjs";
 const cities = (await Promise.all(activeCountries().map(async c => JSON.parse(await readFile(join(root, "src/data", c.cityFile), "utf8")).cities))).flat();
 
 const rad = d => d * Math.PI / 180;
@@ -72,6 +73,13 @@ createServer(async (request, response) => {
     } catch {
       response.writeHead(400).end(JSON.stringify({ error: "bad request" }));
     }
+    return;
+  }
+  const weatherMatch = url.pathname.match(/^\/api\/weather\/([^/]+)$/);
+  if (weatherMatch && request.method === "GET") {
+    const answer = await handleWeather(decodeURIComponent(weatherMatch[1])); // real MET Norway data, not a fixture
+    response.writeHead(answer.status, { "content-type": "application/json", "cache-control": "no-store" });
+    response.end(await answer.text());
     return;
   }
   const relative = normalize(decodeURIComponent(url.pathname)).replace(/^([/\\])+/, "");

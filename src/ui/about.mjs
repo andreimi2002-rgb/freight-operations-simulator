@@ -8,6 +8,8 @@ const SOURCES = [
   { id: "geoapify", url: "https://apidocs.geoapify.com/docs/routing/" },
   { id: "openfreemap", url: "https://openfreemap.org/" },
   { id: "maplibre", url: "https://maplibre.org/" },
+  { id: "commons", url: "https://commons.wikimedia.org/" },
+  { id: "met", url: "https://api.met.no/" },
   { id: "epal", url: "https://www.epal-pallets.org/eu-en/load-carriers/epal-euro-pallet" },
   { id: "dsv", url: "https://www.dsv.com/en/our-solutions/modes-of-transport/road-transport/trailer-sizes" },
   { id: "reg561", url: "https://eur-lex.europa.eu/eli/reg/2006/561/oj" },
