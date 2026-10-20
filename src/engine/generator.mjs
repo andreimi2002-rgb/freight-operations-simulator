@@ -22,7 +22,7 @@ export async function generateLoad({
   cities, importedAt, router,
   originCity = null, destinationCity = null,
   family = "all", cargoId = "random", equipmentId = "random",
-  now = new Date(), random = Math.random,
+  now = new Date(), random = Math.random, countries,
 }) {
   let a = originCity;
   let b = destinationCity;
@@ -62,8 +62,9 @@ export async function generateLoad({
     timeWindows: windowFacts(windows),
     parties: partyFacts(cargo, random),
     warnings,
+    ...(countries ? { countries } : {}),
   });
-  const problems = validateLoad(load);
+  const problems = validateLoad(load, countries ? { countries } : undefined);
   if (problems.length) throw new GenerationError("invalidLoad", problems.join("; "));
   return load;
 }

@@ -55,6 +55,10 @@ export function formatTime(value, timeZone) {
   if (Number.isNaN(date.getTime())) return t("ui.noValue");
   return new Intl.DateTimeFormat(localeTag, { hour: "2-digit", minute: "2-digit", ...(timeZone ? { timeZone } : {}) }).format(date);
 }
+export const languageTag = () => dictionary._language || "ro";
+export function formatList(items) {
+  try { return new Intl.ListFormat(localeTag, { style: "long", type: "conjunction" }).format(items); } catch { return items.join(", "); }
+}
 export function countryName(code) {
   try { return new Intl.DisplayNames([localeTag], { type: "region" }).of(String(code).toUpperCase()) || code; } catch { return String(code); }
 }

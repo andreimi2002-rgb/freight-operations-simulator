@@ -9,7 +9,8 @@ export function printHtml(sheet, mapImage) {
   const map = mapImage
     ? `<img class="pr-map" src="${esc(mapImage)}" alt="${esc(t("print.mapAlt", { origin: hero.originName, destination: hero.destinationName }))}" /><div class="pr-map-note">${esc(t("map.attribution"))}</div>`
     : `<div class="pr-map-note">${esc(t("print.noMap"))}</div>`;
-  const rows = sheet.rows.map(row => `<tr><td>${esc(row.label)}</td><td>${esc(row.valueText)}</td><td class="pr-lv-${esc(row.level)}">${esc(row.levelLabel)}</td></tr>`).join("");
+  // only the facts of the load; rows for later stages are not part of the printed sheet
+  const rows = sheet.rows.filter(row => !row.placeholder).map(row => `<tr><td>${esc(row.label)}</td><td>${esc(row.valueText)}</td><td class="pr-lv-${esc(row.level)}">${esc(row.levelLabel)}</td></tr>`).join("");
   return `<div class="pr-head">
       <div class="pr-eyebrow">${esc(t("brand.name"))} · ${esc(t("print.subtitle"))} · ${esc(sheet.displayId)}</div>
       <div class="pr-code">${esc(hero.originCode)} → ${esc(hero.destinationCode)}</div>

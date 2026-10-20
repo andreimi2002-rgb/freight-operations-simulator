@@ -1,5 +1,5 @@
 import { t } from "../i18n/i18n.mjs";
-import { esc } from "./dom.mjs";
+import { activeCountriesText, esc } from "./dom.mjs";
 
 const DECO = `<svg class="hero-deco" width="420" height="420" viewBox="0 0 420 420" aria-hidden="true"><circle cx="210" cy="210" r="200" fill="none" stroke="#344657"/><circle cx="210" cy="210" r="150" fill="none" stroke="#1b2a38"/><circle cx="210" cy="210" r="100" fill="none" stroke="#1b2a38"/></svg>`;
 
@@ -37,7 +37,7 @@ export function emptyHeroHtml() {
     <div class="hero-empty">
       <div class="eyebrow"><span class="live-dot" aria-hidden="true"></span>${esc(t("hero.simulated"))}</div>
       <h1>${esc(t("hero.emptyTitle"))}</h1>
-      <p>${esc(t("hero.emptyText"))}</p>
+      <p>${esc(t("hero.emptyText", { countries: activeCountriesText() }))}</p>
       <div class="row">
         <button type="button" class="primary" data-action="generate">${esc(t("hero.emptyAction"))}</button>
         <button type="button" class="ghost" data-action="new-load">${esc(t("hero.emptyOther"))}</button>

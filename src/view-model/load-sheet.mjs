@@ -3,15 +3,34 @@
 import { countryName, formatDate, formatDuration, formatKm, formatNumber, formatTime, formatTonnes, t, tOr } from "../i18n/i18n.mjs";
 import { cityCode, cityName } from "../data/scope.mjs";
 import { offsetMin } from "../engine/time-windows.mjs";
+import { scheduleFact } from "../engine/schedule.mjs";
 import { LEVELS, UNAVAILABLE, levelHelp, levelLabel, phaseText } from "./provenance.mjs";
 
-export const ROW_IDS = [
-  "origin", "destination", "route", "countries", "border",
-  "cargo", "family", "temperature", "adr",
-  "packaging", "unitMass", "mass", "loadingMetres",
-  "trailer", "floor", "transit",
-  "loadingWindow", "unloadingWindow", "shipper", "consignee",
-];
+// The tabs of a load, in order. Ids are language-neutral (they appear in the page address: #cargo).
+export const TABS = ["overview", "map", "cargo", "equipment", "schedule", "costs", "documents", "sources"];
+
+// Every fact of the Load belongs to exactly one tab ("Surse și calcule" lists them all).
+export const REAL_ROWS_BY_TAB = {
+  overview: ["shipper", "consignee"],
+  map: ["origin", "destination", "route", "countries", "border"],
+  cargo: ["cargo", "family", "cnCode", "temperature", "adr", "packaging", "unitMass", "mass", "loadingMetres"],
+  equipment: ["trailer", "floor"],
+  schedule: ["transit", "schedule", "loadingWindow", "unloadingWindow"],
+  costs: [],
+  documents: [],
+  sources: [],
+};
+// Things the finished product will show, with the stage that adds them. Not facts of the Load yet.
+export const PLACEHOLDERS_BY_TAB = {
+  map: [["borderDistance", "2"], ["elevation", "5"]],
+  cargo: [["volume", "3"]],
+  equipment: [["truck", "4"], ["truckSpecs", "4"]],
+  schedule: [["weekendBans", "6"], ["driverPlan", "6"]],
+  costs: [["fuel", "6"], ["tolls", "5"], ["totalCost", "6"], ["currency", "6"]],
+  documents: [["cmr", "7"], ["adrDocument", "7"]],
+};
+export const ROW_IDS = Object.values(REAL_ROWS_BY_TAB).flat();
+export const PLACEHOLDER_IDS = Object.values(PLACEHOLDERS_BY_TAB).flat().map(([id]) => id);
 
 const cargoName = cargo => tOr(`cargo.${cargo.id}`, cargo.name);
 const familyName = family => tOr(`family.${family}`, family);
@@ -91,6 +110,21 @@ function transitMeta(transit) {
   ];
 }
 
+const eventWhen = (iso, zone) => `${formatDate(iso, { short: true, timeZone: zone })}, ${formatTime(iso, zone)}`;
+function timelineOf(events) {
+  return events.map(e => {
+    const start = e.from ?? e.at;
+    return {
+      type: e.type,
+      label: t(`event.${e.type}`),
+      when: eventWhen(start, e.timeZone),
+      until: e.to ? formatTime(e.to, e.timeZone) : null,
+      zone: zoneLabel(start, e.timeZone),
+      duration: e.min ? formatDuration(e.min * 60) : (e.type === "loading" || e.type === "unloading" ? formatDuration((Date.parse(e.to) - Date.parse(e.from)) / 60000 * 60) : null),
+    };
+  });
+}
+
 export function buildLoadSheet(load) {
   const origin = load.origin.value;
   const destination = load.destination.value;
@@ -157,6 +191,28 @@ export function buildLoadSheet(load) {
     row("consignee", load.parties.consigneeRole, roleName(load.parties.consigneeRole.value)),
   ];
 
+  const schedule = scheduleFact(load);
+  const events = schedule.value.events;
+  const scheduleText = t("fmt.scheduleSummary", { depart: eventWhen(schedule.value.departAt, loading.timeZone), arrive: eventWhen(schedule.value.arrivalAt, unloading.timeZone) });
+  const extraRows = [
+    row("cnCode", load.cargo.cnCode, ""),
+    row("schedule", schedule, scheduleText, {
+      meta: events.map(e => ({
+        label: t(`event.${e.type}`),
+        value: e.to ? `${eventWhen(e.from, e.timeZone)} → ${formatTime(e.to, e.timeZone)} (${zoneLabel(e.from, e.timeZone)})` : `${eventWhen(e.at, e.timeZone)} (${zoneLabel(e.at, e.timeZone)})`,
+      })),
+    }),
+  ];
+  const rowMap = Object.fromEntries([...rows, ...extraRows].map(r => [r.id, r]));
+  const placeholderRow = ([id, phase]) => ({ ...row(id, { value: null, level: UNAVAILABLE, phase, reason: id }, ""), placeholder: true });
+  const rowsByTab = Object.fromEntries(TABS.map(tab => [tab, [
+    ...REAL_ROWS_BY_TAB[tab].map(id => ({ ...rowMap[id], tab })),
+    ...(PLACEHOLDERS_BY_TAB[tab] || []).map(entry => ({ ...placeholderRow(entry), tab })),
+  ]]));
+  const allRows = TABS.flatMap(tab => rowsByTab[tab]);
+  const listedTrailers = cargo.equipmentIds.map(id => ({ id, name: tOr(`equip.${id}`, id), chosen: id === equipment.id }));
+  const stopsText = t("kpi.breaksFoot", { breaks: transit.breaks, rests: transit.dailyRests });
+
   const chip = (id, valueText, phase = null) => ({ id, label: t(`chip.${id}`), valueText: valueText ?? t("chip.pending", { phase }), available: valueText != null });
   const kpi = (id, valueText, pendingText = null, foot = null) => ({ id, label: t(`kpi.${id}`), valueText, pendingText, foot });
   const pendingPhase = fact => t("kpi.pending", { phase: fact.phase });
@@ -220,7 +276,37 @@ export function buildLoadSheet(load) {
       destinationName: cityName(destination),
       provider: route.provider,
     },
-    rows,
+    tabs: TABS.map(id => ({ id, label: t(`tab.${id}`) })),
+    rows: allRows,
+    rowsByTab,
+    timeline: timelineOf(events),
+    trailers: listedTrailers,
+    overview: {
+      route: [
+        { label: t("chip.distance"), value: formatKm(route.distanceKm) },
+        { label: t("chip.duration"), value: duration },
+        { label: t("chip.transit"), value: transitText },
+        { label: t("row.countries.label"), value: countries.length ? countries.join(" → ") : phaseText("5") },
+        { label: t("hero.via"), value: route.viaNames.length ? route.viaNames.join(" · ") : t("ui.noValue") },
+        { label: t("meta.tolls"), value: route.hasTolls ? t("meta.tollsYes") : t("meta.tollsNo") },
+      ],
+      roles: [
+        { label: t("row.shipper.label"), value: roleName(load.parties.shipperRole.value) },
+        { label: t("row.consignee.label"), value: roleName(load.parties.consigneeRole.value) },
+      ],
+      trailer: {
+        name: names.trailer,
+        category: categoryName(equipment.category),
+        floor: floor.value ? t("fmt.floor", { l: metres(floor.value.lengthMm / 1000), w: metres(floor.value.widthMm / 1000), payload: formatTonnes(floor.value.payloadKg / 1000) }) : null,
+        floorPending: floor.value ? null : phaseText(floor.phase),
+      },
+      schedule: [
+        { label: t("row.loadingWindow.label"), value: windowText(loading) },
+        { label: t("row.unloadingWindow.label"), value: windowText(unloading) },
+        { label: t("row.transit.label"), value: transitText },
+        { label: t("kpi.breaks"), value: stopsText },
+      ],
+    },
     warnings: load.warnings.map(w => t(`warning.${w.id}`)),
     legend: [...LEVELS, UNAVAILABLE].map(level => ({ level, label: levelLabel(level), help: levelHelp(level) })),
   };

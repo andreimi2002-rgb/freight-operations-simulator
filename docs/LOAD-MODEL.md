@@ -24,7 +24,7 @@ Ids (formula, basis, note, reason, source note) are language-neutral; the UI tra
 id                       "FOS-2026-XXXXX"
 createdAt                ISO time
 schemaVersion            3
-scope.countries          ["RO","HU","BG"]
+scope.countries          the active countries (src/data/countries.mjs)
 origin / destination     sourced  { geonamesId, name, countryCode, lat, lon, timeZone, population,
                                     placeType: "city", locode: null }            GeoNames, CC BY 4.0
 route.summary            sourced  { distanceKm, durationS, countries[], viaNames[], geometry,
@@ -51,6 +51,11 @@ truck: null (phase 4) · driver: null (phase 6) · costs: null (phase 6) · docu
 warnings[]               [{ id }]  routeDurationNotTachograph, massDependsOnEstimate,
                                    weekendUnloading, weeklyDrivingLimit, regulatoryReview
 ```
+
+## Derived views (not stored in the Load)
+
+- **Schedule** (`src/engine/schedule.mjs`, `scheduleFact(load)`): a computed fact built from `timeWindows.loading` and `transit.segments`: loading, departure at the end of the loading window, each drive/break/daily-rest segment back to back, arrival, an optional wait until the unloading window, unloading. Formula id `schedule`; inputs: driving, transit, breaks, daily rests. Times of the segments carry the origin's time zone; arrival, wait and unloading the destination's.
+- **Tabs:** `buildLoadSheet` groups the Load's facts into eight tabs (each fact in exactly one). Rows for later stages (placeholders) are defined in the view model with their phase and reason; they are not facts of the Load.
 
 ## Rules
 

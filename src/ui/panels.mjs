@@ -29,15 +29,16 @@ export function legendHtml(sheet) {
   return sheet.legend.map(item => `<span class="badge lv-${esc(item.level)}" title="${esc(item.help)}">${esc(item.label)}</span>`).join("");
 }
 
-export function sheetHtml(sheet, selectedId = null) {
+// A list of load-sheet rows (each opens the detail drawer). Used by every tab.
+export function rowListHtml(rows, selectedId = null) {
   const chevron = `<svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>`;
   const head = `<div class="sheet-head" aria-hidden="true"><span>${esc(t("sheet.colField"))}</span><span>${esc(t("sheet.colValue"))}</span><span>${esc(t("sheet.colProvenance"))}</span><span></span></div>`;
-  const rows = sheet.rows.map(row => `<button type="button" class="frow lv-${esc(row.level)}${row.id === selectedId ? " sel" : ""}" data-row="${esc(row.id)}" aria-label="${esc(t("sheet.openRow", { label: row.label, value: row.valueText, provenance: row.levelLabel }))}">
+  const items = rows.map(row => `<button type="button" class="frow lv-${esc(row.level)}${row.id === selectedId ? " sel" : ""}" data-row="${esc(row.id)}" aria-label="${esc(t("sheet.openRow", { label: row.label, value: row.valueText, provenance: row.levelLabel }))}">
       <span class="fl">${esc(row.label)}</span>
       <span class="fv${row.available ? " mono" : ""}">${esc(row.valueText)}</span>
       <span class="badge lv-${esc(row.level)}">${esc(row.levelLabel)}</span>${chevron}
     </button>`).join("");
-  return head + rows;
+  return `<div class="sheet">${head}${items}</div>`;
 }
 
 export function detailHtml(row) {

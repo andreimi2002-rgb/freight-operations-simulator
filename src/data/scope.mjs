@@ -1,6 +1,5 @@
 // Display helpers for cities: three-letter codes and Romanian names.
-// The catalog (src/data/places/cities-ro-hu-bg.json) already contains only RO/HU/BG places without
-// city sections; works with a catalog city ({ id }) or a Load place ({ geonamesId }).
+// The city catalogs (src/data/places/cities-<CC>.json) contain only places without city sections; works with a catalog city ({ id }) or a Load place ({ geonamesId }).
 import { has, t } from "../i18n/i18n.mjs";
 
 const idOf = place => Number(place.geonamesId ?? place.id);

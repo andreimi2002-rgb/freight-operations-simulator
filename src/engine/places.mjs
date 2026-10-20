@@ -31,6 +31,7 @@ export function randomPair(cities, random = Math.random, attempts = 200) {
   throw new Error("no usable city pair");
 }
 
+// importedAt: the import date of the city's catalog (each city may carry its own: city.importedAt)
 export function toPlace(city, importedAt) {
   return sourced({
     geonamesId: city.id,
@@ -42,5 +43,5 @@ export function toPlace(city, importedAt) {
     population: city.population,
     placeType: "city",
     locode: null, // TODO(phase 2): UN/LOCODE
-  }, { name: "GeoNames", url: `https://www.geonames.org/${city.id}/`, retrievedAt: importedAt, license: "CC BY 4.0" });
+  }, { name: "GeoNames", url: `https://www.geonames.org/${city.id}/`, retrievedAt: city.importedAt || importedAt, license: "CC BY 4.0" });
 }

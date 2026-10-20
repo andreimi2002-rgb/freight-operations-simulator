@@ -1,8 +1,8 @@
 // The Load: one generated truck load. Documented in docs/LOAD-MODEL.md.
 import { collectFacts, validateFact } from "./provenance.mjs";
+import { ACTIVE_COUNTRIES } from "../data/countries.mjs";
 
 export const SCHEMA_VERSION = 3;
-export const SCOPE_COUNTRIES = ["RO", "HU", "BG"];
 
 // Paths that every load must have (each is a fact, possibly "unavailable").
 const REQUIRED = [
@@ -13,12 +13,12 @@ const REQUIRED = [
   "transit", "timeWindows.loading", "timeWindows.unloading", "parties.shipperRole", "parties.consigneeRole",
 ];
 
-export function createLoad({ id, createdAt, origin, destination, route, cargo, packaging, equipment, transit, timeWindows, parties, warnings = [] }) {
+export function createLoad({ id, createdAt, origin, destination, route, cargo, packaging, equipment, transit, timeWindows, parties, warnings = [], countries = ACTIVE_COUNTRIES }) {
   return {
     id,
     createdAt,
     schemaVersion: SCHEMA_VERSION,
-    scope: { countries: [...SCOPE_COUNTRIES] },
+    scope: { countries: [...countries] },
     origin, destination, route, cargo, packaging, equipment, transit, timeWindows, parties,
     truck: null,      // TODO(phase 4): real truck model with sourced specifications
     driver: null,     // TODO(phase 6): full driver-hours plan (Reg. 561/2006, weekend bans)
@@ -30,7 +30,7 @@ export function createLoad({ id, createdAt, origin, destination, route, cargo, p
 
 const get = (load, path) => path.split(".").reduce((node, key) => node?.[key], load);
 
-export function validateLoad(load) {
+export function validateLoad(load, { countries = ACTIVE_COUNTRIES } = {}) {
   const problems = [];
   if (!load || load.schemaVersion !== SCHEMA_VERSION) return ["unsupported load schema"];
   if (!load.id || !load.createdAt) problems.push("load without id or creation time");
@@ -38,7 +38,7 @@ export function validateLoad(load) {
   for (const { path, fact } of collectFacts(load)) for (const problem of validateFact(fact)) problems.push(`${path}: ${problem}`);
   for (const end of ["origin", "destination"]) {
     const place = load[end]?.value;
-    if (!place || !SCOPE_COUNTRIES.includes(place.countryCode)) problems.push(`${end} outside the RO/HU/BG scope`);
+    if (!place || !countries.includes(place.countryCode)) problems.push(`${end} outside the active countries`);
     if (place && (!Number.isFinite(place.lat) || !Number.isFinite(place.lon))) problems.push(`${end} without coordinates`);
   }
   const cargo = load.cargo?.selection?.value;

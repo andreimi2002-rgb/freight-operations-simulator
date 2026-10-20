@@ -35,27 +35,19 @@
   <main class="app" id="main">
     <section id="hero"></section>
     <div id="results" hidden>
-    <div class="glance" id="glance">
-      <section class="card map-card" id="mapCard" data-i18n-aria-label="map.title">
-        <div class="map" id="routeMap"></div>
-        <div class="map-overlay eyebrow" data-i18n="map.title"></div>
-        <div class="map-status" id="mapStatus" role="status"></div>
-        <div class="map-attrib" data-i18n="map.attribution"></div>
-      </section>
-      <section class="card cargo-card" id="cargoCard"></section>
-    </div>
-
-    <section class="kpis" id="kpis"></section>
-
-    <div class="section-head">
-      <div>
-        <h2 data-i18n="sheet.title"></h2>
-        <div class="section-note" data-i18n="sheet.hint"></div>
+      <div class="tabbar-wrap">
+        <div class="tabbar" id="tabbar" role="tablist" data-i18n-aria-label="tab.listLabel"></div>
+        <button type="button" class="ghost" id="printBtn" data-i18n="print.button"></button>
       </div>
-      <div class="section-actions"><div class="legend" id="legend" data-i18n-aria-label="sheet.legend"></div><button type="button" class="ghost" id="printBtn" data-i18n="print.button"></button></div>
-    </div>
-    <section class="sheet" id="sheet"></section>
-    <section class="warnings" id="warnings" role="note"></section>
+      <div id="panels"></div>
+      <div id="mapStash" hidden>
+        <section class="card map-card" id="mapCard" data-i18n-aria-label="map.title">
+          <div class="map" id="routeMap"></div>
+          <div class="map-overlay eyebrow" data-i18n="map.title"></div>
+          <div class="map-status" id="mapStatus" role="status"></div>
+          <div class="map-attrib" data-i18n="map.attribution"></div>
+        </section>
+      </div>
     </div>
 
     <footer class="footer">
@@ -108,7 +100,7 @@
     <h2 class="sr-only" id="paletteTitle" data-i18n="topbar.search"></h2>
     <div class="palette-input">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input class="modal-search" id="paletteInput" type="search" autocomplete="off" spellcheck="false" data-i18n-placeholder="palette.placeholder" data-i18n-aria-label="topbar.searchAria" aria-controls="paletteList" />
+      <input class="modal-search" id="paletteInput" type="search" autocomplete="off" spellcheck="false" data-i18n-aria-label="topbar.searchAria" aria-controls="paletteList" />
       <button type="button" class="kbd-btn" data-close data-i18n-aria-label="palette.close">esc</button>
     </div>
     <div class="palette-mode" id="paletteMode"></div>

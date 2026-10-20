@@ -1,4 +1,8 @@
-import { t } from "../i18n/i18n.mjs";
+import { countryName, formatList, t } from "../i18n/i18n.mjs";
+import { ACTIVE_COUNTRIES } from "../data/countries.mjs";
+
+// "România, Ungaria și Bulgaria": the active countries as one phrase, built from data.
+export const activeCountriesText = () => formatList(ACTIVE_COUNTRIES.map(countryName));
 
 export const $ = (selector, root = document) => root.querySelector(selector);
 export const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
