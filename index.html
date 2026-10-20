@@ -1,159 +1,121 @@
 ﻿<!doctype html>
-<html lang="en">
+<html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#11161b" />
-  <meta name="description" content="Freight Operations Simulator — generate detailed trucking missions and logistics reports." />
-  <title>Freight Operations Simulator</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1017" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%238ce0bd'/%3E%3Cpath d='M6 10h11v9H6zM17 13h4l4 3.5V19H17z' fill='none' stroke='%23092017' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <title>Freight Ops</title>
+  <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/src/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.css" integrity="sha384-MinO0mNliZ3vwppuPOUnGa+iq619pfMhLVUXfC4LHwSCvF9H+6P/KO4Q7qBOYV5V" crossorigin="anonymous" />
+  <script type="module" src="/src/main.js"></script>
 </head>
 <body>
-  <div class="app-shell">
-    <aside class="sidebar">
-      <div class="brand">
-        <div class="brand-mark">F<span>OS</span></div>
-        <div><strong>FREIGHT OPS</strong><small>SIMULATOR / 0.9</small></div>
+<div id="app">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/">
+        <span class="logo" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h11v9H2z"/><path d="M13 9h4l4 3.5V15h-8z"/><circle cx="6" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></span>
+        <span><span class="brandname" data-i18n="brand.name"></span><span class="brandline" data-i18n="brand.tagline"></span></span>
+      </a>
+      <nav class="quick" id="recent" data-i18n-aria-label="topbar.recent"></nav>
+      <div class="top-actions">
+        <button type="button" class="searchbtn" id="searchBtn" data-i18n-aria-label="topbar.searchAria">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <span class="searchbtn-text" data-i18n="topbar.search"></span><kbd>Ctrl K</kbd>
+        </button>
+        <button type="button" class="ghost" id="newLoadBtn" data-i18n="topbar.newLoad"></button>
+        <button type="button" class="ghost" id="aboutBtn" data-i18n="topbar.about"></button>
+        <button type="button" class="primary" id="generateBtn" data-i18n="topbar.generate"></button>
       </div>
-      <div class="side-label">WORKSPACE</div>
-      <button class="nav-item active" type="button" aria-current="page"><span>▦</span> Mission generator</button>
-      <button class="nav-item" id="historyNav" type="button"><span>◷</span> Mission history <em id="historyCount" aria-label="0 saved missions">0</em></button>
-      <button class="nav-item" id="databaseNav" type="button"><span>⌖</span> Data directory</button>
-      <div class="sidebar-bottom">
-        <div class="status-dot"></div>
-        <div><strong>DATA SOURCED</strong><small>Real places + generated loads</small></div>
+    </div>
+  </header>
+
+  <main class="app" id="main">
+    <section id="hero"></section>
+    <div id="results" hidden>
+    <div class="glance" id="glance">
+      <section class="card map-card" id="mapCard" data-i18n-aria-label="map.title">
+        <div class="map" id="routeMap"></div>
+        <div class="map-overlay eyebrow" data-i18n="map.title"></div>
+        <div class="map-status" id="mapStatus" role="status"></div>
+        <div class="map-attrib" data-i18n="map.attribution"></div>
+      </section>
+      <section class="card cargo-card" id="cargoCard"></section>
+    </div>
+
+    <section class="kpis" id="kpis"></section>
+
+    <div class="section-head">
+      <div>
+        <h2 data-i18n="sheet.title"></h2>
+        <div class="section-note" data-i18n="sheet.hint"></div>
       </div>
-    </aside>
+      <div class="section-actions"><div class="legend" id="legend" data-i18n-aria-label="sheet.legend"></div><button type="button" class="ghost" id="printBtn" data-i18n="print.button"></button></div>
+    </div>
+    <section class="sheet" id="sheet"></section>
+    </div>
 
-    <main class="main">
-      <header class="topbar">
-        <div>
-          <div class="eyebrow">OPERATIONS CENTER <span>/</span> MISSION BUILDER</div>
-          <h1>Freight Operations <span>Simulator</span></h1>
-          <p>Build a mission. Plan the movement. Generate the paperwork.</p>
-        </div>
-        <div class="top-status"><span class="pulse"></span> SYSTEM ONLINE <b>DEMO</b></div>
-      </header>
+    <footer class="footer">
+      <span data-i18n="footer.left"></span>
+      <span data-i18n="footer.sources"></span>
+      <span><span data-i18n="footer.independent"></span> <span id="versionLabel"></span></span>
+    </footer>
+  </main>
+</div>
 
-      <section class="hero-strip">
-        <div class="hero-copy">
-          <div class="hero-tag">FREIGHT MISSION CONTROL</div>
-          <h2>Every mile has<br/><span>a paper trail.</span></h2>
-          <p>ATS and ETS2-inspired freight scenarios built around real places and truck-route data, with generated loads clearly identified.</p>
-        </div>
-        <div class="hero-graphic" aria-hidden="true">
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <div class="truck-symbol">▰</div>
-          <div class="route-line"></div><div class="route-node node-a"></div><div class="route-node node-b"></div>
-          <span class="map-label label-a">ORIGIN</span><span class="map-label label-b">DESTINATION</span>
-        </div>
-        <div class="hero-index">FOS<br/><b>001</b></div>
-      </section>
+<!-- Row detail drawer -->
+<div class="drawer-backdrop" id="detailLayer" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+  <aside class="drawer">
+    <div class="drawer-bar">
+      <button type="button" class="iconbtn" data-close data-i18n-aria-label="drawer.close">×</button>
+      <span class="eyebrow" id="detailTitle" data-i18n="drawer.details"></span>
+      <span class="badge" id="detailBadge"></span>
+    </div>
+    <div class="drawer-body" id="detailBody"></div>
+  </aside>
+</div>
 
-      <section class="workspace-grid">
-        <div class="panel builder-panel">
-          <div class="panel-head">
-            <div><div class="eyebrow">01 / CONFIGURATION</div><h3>Mission parameters</h3></div>
-            <span class="mini-pill">REAL-DATA PREVIEW</span>
-          </div>
-          <form id="missionForm">
-            <label for="world">World reference</label>
-            <div class="segmented">
-              <label><input type="radio" name="world" value="ATS" checked/><span>🇺🇸 American Truck Simulator</span></label>
-              <label><input type="radio" name="world" value="ETS2"/><span>🇪🇺 Euro Truck Simulator 2</span></label>
-            </div>
+<!-- New load drawer -->
+<div class="drawer-backdrop" id="generatorLayer" role="dialog" aria-modal="true" aria-labelledby="generatorTitle">
+  <aside class="drawer drawer-narrow">
+    <div class="drawer-bar">
+      <button type="button" class="iconbtn" data-close data-i18n-aria-label="gen.close">×</button>
+      <span class="eyebrow" id="generatorTitle" data-i18n="gen.title"></span>
+      <span></span>
+    </div>
+    <div class="drawer-body" id="generatorBody"></div>
+  </aside>
+</div>
 
-            <details class="manual-location-settings">
-              <summary>Choose locations manually (optional)</summary>
-              <div class="field-grid location-grid">
-              <div class="field">
-                <label for="originQuery">Origin city, facility or company</label>
-                <div class="search-control"><input id="originQuery" type="search" autocomplete="off" placeholder="e.g. Seattle, Washington"/><button id="searchOrigin" type="button">SEARCH</button></div>
-                <select id="originPlace" aria-label="Choose an origin result" disabled><option value="">Search for a real place</option></select>
-                <small class="field-help" id="originStatus" aria-live="polite">Results come from Geoapify.</small>
-              </div>
-              <div class="field">
-                <label for="destinationQuery">Destination city, facility or company</label>
-                <div class="search-control"><input id="destinationQuery" type="search" autocomplete="off" placeholder="e.g. Spokane, Washington"/><button id="searchDestination" type="button">SEARCH</button></div>
-                <select id="destinationPlace" aria-label="Choose a destination result" disabled><option value="">Search for a real place</option></select>
-                <small class="field-help" id="destinationStatus" aria-live="polite">Choose the exact result before generating.</small>
-              </div>
-              </div>
-              <div class="company-picker">
-                <label for="companyPreset">Real company directory · search suggestion only</label>
-                <div class="search-control">
-                  <select id="companyPreset" aria-label="Choose a company search suggestion"></select>
-                  <button id="companyOrigin" type="button">SEARCH ORIGIN</button>
-                  <button id="companyDestination" type="button">SEARCH DESTINATION</button>
-                </div>
-                <small class="field-help">Select a company to search its public name through Geoapify, then confirm the exact address. A brand match does not verify ownership, a contract, or an operating facility.</small>
-                <div id="companyDirectoryLinks" class="company-directory-links"></div>
-              </div>
-            </details>
-            <div class="field cargo-field">
-              <label for="freightLane">Freight corridor</label>
-              <select id="freightLane" aria-describedby="laneStatus"></select>
-              <small class="field-help" id="laneStatus" aria-live="polite">Choose an illustrative industry corridor. Cities are sourced reference points, not company terminals.</small>
-            </div>
-            <div class="field cargo-field">
-              <label for="cargo">Cargo type</label>
-              <select id="cargo">
-                <option value="random">Random cargo for the selected corridor</option>
-              </select>
-              <small class="field-help">Choose a cargo or draw randomly. Handling notes and trailer matches are planning guidance, not a verified load.</small>
-            </div>
-            <div class="field cargo-field">
-              <label for="equipment">Trailer type</label>
-              <select id="equipment">
-                <option value="random">Random compatible trailer</option>
-              </select>
-              <small class="field-help">Choose a trailer configuration or let the scenario select one compatible planning suggestion.</small>
-            </div>
-            <p class="catalog-status" id="catalogStatus" aria-live="polite">Loading real city catalog…</p>
-            <button class="generate-btn" type="submit"><span>✦</span> GENERATE FREIGHT SCENARIO <b>↗</b></button>
-            <p class="form-note">Corridors use real GeoNames city reference points. Cargo and trailer assignments are detailed planning suggestions, not shipment records.</p>
-          </form>
-        </div>
+<!-- About the data drawer -->
+<div class="drawer-backdrop" id="aboutLayer" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+  <aside class="drawer">
+    <div class="drawer-bar">
+      <button type="button" class="iconbtn" data-close data-i18n-aria-label="about.close">×</button>
+      <span class="eyebrow" id="aboutTitle" data-i18n="about.title"></span>
+      <span></span>
+    </div>
+    <div class="drawer-body" id="aboutBody"></div>
+  </aside>
+</div>
 
-        <div class="panel result-panel" id="resultPanel">
-          <div class="panel-head">
-            <div><div class="eyebrow">02 / GENERATED MISSION OUTPUT</div><h3>Mission preview</h3></div>
-            <span class="live-pill"><i></i> READY</span>
-          </div>
-          <div class="empty-state" id="emptyState">
-            <div class="empty-icon">↗</div>
-            <h3>Your next mission starts here.</h3>
-            <p>Choose ATS or ETS2, then select a cargo and a plausible freight corridor. Open manual locations to search real companies, facilities, or exact addresses.</p>
-            <div class="empty-stats"><span>01 <small>MISSION</small></span><span>02 <small>ROUTE</small></span><span>03 <small>REPORT</small></span></div>
-          </div>
-          <div id="missionOutput" class="mission-output hidden"></div>
-        </div>
-      </section>
-
-      <section class="lower-grid">
-        <div class="panel">
-          <div class="panel-head"><div><div class="eyebrow">03 / DATA COVERAGE</div><h3>Connected data</h3></div><span class="mini-pill">SOURCE TRACKED</span></div>
-          <div id="coverage" class="coverage-list" tabindex="-1">
-            <div><span class="coverage-icon">⌖</span><span><b>Places and facilities</b><small>Search results sourced through Geoapify</small></span><em>LIVE</em></div>
-            <div><span class="coverage-icon">↗</span><span><b>Truck route</b><small>Distance and duration returned by a truck routing profile</small></span><em>LIVE</em></div>
-            <div><span class="coverage-icon">▤</span><span><b>Detailed cargo catalog</b><small>Commodity examples, handling notes, and advisory trailer matches</small></span><em>CURATED</em></div>
-            <div><span class="coverage-icon">▣</span><span><b>Trailer suggestion</b><small>Generic equipment match; confirm for the actual load</small></span><em>ADVISORY</em></div>
-          </div>
-        </div>
-        <div class="panel principle-panel">
-          <div class="eyebrow">DATA INTEGRITY</div>
-          <h3>Real place data.<br/><span>Generated shipment scenario.</span></h3>
-          <p>Locations and truck-route distance/time are provider results. Freight category and trailer suggestion are generated for planning and do not represent a real load, company agreement, weight, or legal route clearance.</p>
-          <div class="principle-footer"><span class="integrity-dot"></span> SOURCE FACTS ≠ SHIPMENT RECORD</div>
-        </div>
-      </section>
-
-      <footer><span>FOS / FREIGHT OPERATIONS SIMULATOR</span><span>INDEPENDENT CONCEPT • NOT AFFILIATED WITH SCS SOFTWARE</span><span>BUILD 0.9.0</span></footer>
-    </main>
+<!-- City search palette -->
+<div class="modal-backdrop" id="paletteLayer" role="dialog" aria-modal="true" aria-labelledby="paletteTitle">
+  <div class="modal">
+    <h2 class="sr-only" id="paletteTitle" data-i18n="topbar.search"></h2>
+    <div class="palette-input">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input class="modal-search" id="paletteInput" type="search" autocomplete="off" spellcheck="false" data-i18n-placeholder="palette.placeholder" data-i18n-aria-label="topbar.searchAria" aria-controls="paletteList" />
+      <button type="button" class="kbd-btn" data-close data-i18n-aria-label="palette.close">esc</button>
+    </div>
+    <div class="palette-mode" id="paletteMode"></div>
+    <div class="palette-list" id="paletteList" role="listbox" data-i18n-aria-label="palette.listLabel"></div>
   </div>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script type="module" src="/src/main.js"></script>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<section class="print-only" id="printSheet" aria-hidden="true"></section>
 </body>
 </html>
-
-

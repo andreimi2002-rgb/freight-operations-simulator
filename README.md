@@ -1,67 +1,57 @@
 # Freight Operations Simulator (FOS)
 
-FOS is an early real-data freight scenario generator. ATS and ETS2 are the initial world modes; the generated freight scenario is not a real booking or dispatch.
+FOS is becoming a **real-world road freight load generator**: one generated truck load, as close to reality as possible and very detailed. First scope: Romania, Hungary, Bulgaria. The world is real; the load is simulated. Rules for contributors and tools are in [AGENTS.md](AGENTS.md); the roadmap and the current plan are in [docs/](docs/).
 
-## Current version: 0.9.0 preview
+## Current version: 0.10.0 (phase 1A: redesign)
 
-- Generate illustrative, cargo-compatible industry corridors for ATS and ETS2 using city reference points from the GeoNames catalog; general random city-pair routing remains available for cargo without a curated corridor.
-- Search real cities, addresses, facilities, or businesses through Geoapify Geocoding when choosing locations manually.
-- Use a directory of real company brands as search suggestions, then confirm the exact place through Geoapify; the directory does not claim that a result is company-owned or a real customer lane.
-- Calculate routes with Geoapify's heavy-truck profile and approximated traffic. Display a Geoapify/OpenStreetMap road map, a compact route summary, and optional collapsed road classes, surfaces, and key turns.
-- Generate from a detailed commodity catalog with specific produce examples and varieties (for example Gala, Fuji, and Granny Smith apples), load forms, handling prompts, temperature caveats, and applicable reference frameworks.
-- Choose from detailed trailer profiles, including reefers, multi-temperature equipment, curtainsiders, coil carriers, low-loaders, intermodal chassis, tankers, dump trailers, and vehicle carriers. The UI filters trailer suggestions to the selected cargo.
-- Print corridor context, cargo varieties, and trailer configurations alongside the route map.
-- Keep place and route data separate from the generated shipment scenario; do not invent a company contract, load weight, or booking.
-- Save up to 30 scenarios in browser local storage and print a sourced scenario brief.
+- **New look** in the Airport Live visual system: sticky top bar with recent loads and a city search (Ctrl/⌘+K or `/`), a hero with the route code (`BUC → BUD`), glance cards (map and cargo), KPI cards and the **load sheet**.
+- **Provenance on every row.** Each fact is *sourced* (public dataset or service), *computed* (derived by a rule), *estimated* (reasoned approximation, with its basis) or *simulated* (the generated shipment itself). A row the engine cannot fill yet says "Indisponibil încă — Etapa N" instead of showing an invented value. Click a row for its source, formula, basis and inputs.
+- **Route map** with MapLibre GL JS and OpenFreeMap vector tiles (no key). Route geometry still comes from Geoapify (temporary, behind the route function).
+- **Romanian interface**, all text in `src/i18n/ro.json`, numbers and dates formatted with `Intl` (`ro-RO`). Another language means adding a JSON file, not editing components.
+- **One-page print / PDF** (light theme) with a map snapshot and the provenance labels; works without a pop-up.
+- Cities: the 120 GeoNames records for RO/HU/BG minus city districts (Bucharest sectors, Budapest districts). Cargo names, trailer names and families are translated; the long handling notes are still English and marked "(în engleză)".
+- Still the old engine: random city pair or picked cities, Geoapify heavy-truck route, the 79-cargo catalog and trailer suggestions. The ATS/ETS2 modes are hidden in the UI (removed in phase 1B).
 
-Cargo names are curated real-world examples organized with reference to UNECE NST 2007. Commodity variety examples and handling notes are planning prompts, not shipment data or product instructions. Freight corridors are illustrative regional scenarios; their city-centroid routes do not identify a company facility, specific trade flow, or contract. The real-company directory contains brand names and links to official company websites, and only supplies search terms for the provider-backed place search. It does not certify that a returned place is operated by that company. Cargo-to-trailer matches are heuristics, not verified compatibility. Hazardous-goods status is product-specific and is never inferred by the generator. Perishable-food carriage has rules and equipment requirements that depend on the product and applicable jurisdiction.
+### Not available yet (shown as such in the UI)
+Border crossing point (phase 2), temperature ranges and ADR data (phase 3), packaging, mass, loading metres, time windows and shipper role (phase 1B), cost and driver breaks (phase 6), documents (phase 7).
 
-The provider's heavy-truck mode models a maximum gross weight of 40 t and height of 4.1 m. This is not a vehicle-specific clearance. Traffic is approximated, not live; routes do not verify permits, every restriction, facility access, driver-hours compliance, or actual cargo compatibility. Confirm those details before dispatch use.
+## Run and test
+
+```sh
+node --test                      # automated tests
+node scripts/dev-server.mjs      # http://localhost:8080 with a FIXTURE route (local testing only)
+netlify dev                      # real routes: needs GEOAPIFY_API_KEY in a local .env (not committed)
+```
+
+The dev server returns a synthetic route labelled "FIXTURE" and the page shows a "local test data" notice; it is never used in production.
 
 ## Configure Geoapify
 
-The Netlify Functions read `GEOAPIFY_API_KEY` on the server. Add the key in Netlify project environment variables and include both **Production** and **Deploy Previews** scopes. The key is not stored in this repository or exposed in browser JavaScript. The UI reports a configuration error until the key exists.
+The Netlify Functions read `GEOAPIFY_API_KEY` on the server. Add the key in Netlify environment variables for **Functions** scope and the Production and Deploy Previews contexts. The key is not stored in this repository or exposed in browser code. Without it the UI says the routing service is not configured.
 
-Geoapify requires an API key for place search, routing, and static maps. Requesting `route_details` and rendering a Static Maps image use additional API credits; review current usage and terms in the [Geoapify Routing API documentation](https://apidocs.geoapify.com/docs/routing/) and [Static Maps documentation](https://apidocs.geoapify.com/docs/maps/static/).
-
-## Real city catalog
-
-The random city pool is sourced from the official GeoNames `cities15000` dump and filtered to the 40 most-populated available cities per country in the contiguous United States for ATS plus selected European countries for ETS2. Each city retains its GeoNames ID, coordinates, population rank, time zone, and source link. The city catalog is licensed CC BY 4.0; see [data attribution and licenses](src/DATA-LICENSES.md). Its coordinates are city centroids, not verified freight terminals.
-
-## Deploy and develop
-
-Netlify publishes the repository root without a build command and deploys functions from `netlify/functions`. Deploy Previews are produced for pull requests once the repository is connected.
-
-To run locally with functions, use Netlify CLI (`netlify dev`) and set `GEOAPIFY_API_KEY` in a local environment file that is not committed. A plain static server can render the page, but it cannot execute the provider functions.
-
-## Checks
-
-Run the mission scenario consistency tests with:
-
-```sh
-node --test tests/mission-engine.test.mjs
-```
-
-## Provenance and licensing
-
-The live place and route results carry the Geoapify provider name, retrieval timestamp, and source link where available. The freight category and equipment match are generated planning suggestions. They have no claim to represent a source-verified shipment.
-
-The previous Truck Simulator Wiki reference catalog remains separate in `src/data/game-reference-catalog.mjs` under its documented CC BY-SA 4.0 attribution. It is no longer used by the generator. FOS is unofficial and is not affiliated with SCS Software or Truck Simulator Wiki.
+Geoapify is temporary: routing moves to an own OpenStreetMap graph in phase 5. The Static Maps API is no longer used.
 
 ## Project layout
 
-- `index.html` — page structure and form controls.
-- `src/styles.css` — responsive dashboard styling.
-- `src/main.js` — place search, route request, scenario display, history, and print rendering.
-- `src/mission-engine.mjs` — ATS/ETS2 scenario composition and generic freight/equipment taxonomy.
-- `src/data/cargo-catalog.mjs` — curated commodity examples, planning notes, compatibility suggestions, and source references.
-- `src/data/freight-network.mjs` — illustrative region-to-region freight corridors, company search suggestions, and public background sources.
-- `src/data/geonames-cities.json` — sourced random city pools for ATS and ETS2.
-- `scripts/import-geonames-cities.ps1` — GeoNames dump filter/import utility.
-- `netlify/functions/search-places.mjs` — server-side Geoapify place search.
-- `netlify/functions/truck-route.mjs` — server-side Geoapify truck route request.
-- `netlify.toml` — Netlify publish, function, and API path configuration.
-- `src/data/game-reference-catalog.mjs` — separate, unused game reference archive.
-- `src/DATA-LICENSES.md` — archive attribution and reuse details.
-- `tests/mission-engine.test.mjs` — scenario consistency checks.
-- `CHANGELOG.md` — release notes.
+- `index.html` — page shell (text comes from `data-i18n` keys).
+- `fonts/` — Inter and JetBrains Mono (SIL OFL 1.1, licences included).
+- `src/styles.css` — design tokens and components (Airport Live system, provenance colours, print styles).
+- `src/main.js` — orchestration: state, history (`localStorage`, guarded), generation, events.
+- `src/i18n/` — `ro.json` and `i18n.mjs` (lookup and formatting).
+- `src/view-model/` — `provenance.mjs` and `load-sheet.mjs`: **the only code that reads a mission**. The UI only reads the result of `buildLoadSheet(mission)`.
+- `src/ui/` — `hero`, `panels` (cargo, KPIs, load sheet, detail), `generator`, `palette`, `about`, `print`, `layers` (drawers and focus handling), `dom`.
+- `src/map/route-map.mjs` — MapLibre map and print snapshot.
+- `src/data/` — cargo and corridor catalogs (unchanged), `scope.mjs` (RO/HU/BG filter, city codes and names), `selection.mjs` (cargo/trailer rules), `nst-estimates.mjs`.
+- `src/mission-engine.mjs` — scenario engine (unchanged in this phase).
+- `netlify/functions/` — `truck-route.mjs` (route), `search-places.mjs` (unused until phase 2).
+- `scripts/` — GeoNames importer and the local dev server.
+- `tests/` — `node --test` suites.
+- `docs/` — phase plans and the design mockup.
+
+## Data and licences
+
+See [src/DATA-LICENSES.md](src/DATA-LICENSES.md). FOS is unofficial and not affiliated with SCS Software or Truck Simulator Wiki.
+
+## Limits
+
+The route is a heavy-truck estimate (modelled 40 t, 4.1 m). It is not confirmed for a specific vehicle, trailer, cargo, road restriction, permit, facility or driver-hours rule. Cargo and trailer suggestions are planning heuristics, not verified compatibility. Hazardous-goods status is never inferred.

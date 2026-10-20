@@ -1,5 +1,20 @@
 # Data attribution and licenses
 
+## Map and fonts (phase 1A)
+
+- **OpenFreeMap** vector tiles (`tiles.openfreemap.org`, no key): map data © OpenStreetMap contributors (ODbL), tile schema © OpenMapTiles. Attribution is shown on the map and in print.
+- **MapLibre GL JS** 4.7.1: BSD 3-Clause. Loaded from jsDelivr with a Subresource Integrity hash.
+- **Inter** (© The Inter Project Authors) and **JetBrains Mono** (© The JetBrains Mono Project Authors): SIL Open Font License 1.1, served from `fonts/` with their licence files.
+- **Geoapify Routing API** (temporary): route distance, duration, countries, main roads and geometry; route data © OpenStreetMap contributors. The Static Maps API is no longer used.
+
+## NST 2007 chapter estimates
+
+`src/data/nst-estimates.mjs` maps each FOS cargo family to the NST 2007 chapters (divisions) it may fall under. It is an **estimate by FOS**, not a classification of any cargo, and is shown as "Estimat". The list of 20 chapters follows Commission Regulation (EC) No 1304/2007 (as reproduced at https://www.cbs.nl/en-gb/our-services/methods/definitions/commodity-nomenclature-nst-2007). Phase 3 replaces it with the Eurostat CN→NST correspondence.
+
+## City catalog scope
+
+The UI uses only Romania, Hungary and Bulgaria records from the GeoNames catalog below, excluding city districts (Bucharest sectors, Budapest districts, Asparuhovo), which the catalog lists as separate places. Phase 1B regenerates the catalog.
+
 ## GeoNames city catalog
 
 `data/geonames-cities.json` is a filtered export of the official GeoNames `cities15000.zip` gazetteer. It contains the 40 highest-population available city records in the contiguous United States (ATS pool) and selected ETS2 European countries. Countries with fewer than 40 eligible records contribute all eligible records. The catalog currently contains 1,150 records. Coordinates, population, country rank, and time-zone fields retain GeoNames identifiers so each selected city links back to its source record.
