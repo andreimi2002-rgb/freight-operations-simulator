@@ -4,7 +4,7 @@ FOS is becoming a **real-world road freight load generator**: one generated truc
 
 ## Current version: 0.13.0 (phase 1D: city photos and weather)
 
-- **City cards** for origin and destination with a Wikimedia Commons photo (credited; styled fallback when there is none) and **live weather** from MET Norway: now, the next three days and the forecast at the loading and unloading windows.
+- **City cards** for origin and destination with a Wikimedia Commons photo (credited; every one of the 254 cities has one, a styled panel appears only if a photo fails to load) and **live weather** from MET Norway: now, the next three days and the forecast at the loading and unloading windows.
 - `node scripts/build-city-photos.mjs` prepares the photos (free licences only, checked links); `/api/weather/:id` serves the weather (cached, rate limited).
 
 ### Phase 1C
@@ -33,7 +33,8 @@ node --test                      # automated tests
 node scripts/dev-server.mjs      # http://localhost:8080 with a FIXTURE route (local testing only)
 netlify dev                      # real routes: needs GEOAPIFY_API_KEY in a local .env (not committed)
 node scripts/import-geonames.mjs # rebuild the city files of the active countries (or: ... AT GR); refuses to write a broken result
-node scripts/build-city-photos.mjs # prepare city photos from Wikidata/Wikimedia Commons (or: ... AT GR)
+node scripts/build-city-photos.mjs # prepare city photos from Wikidata/Wikipedia/Wikimedia Commons + curated.json (or: ... AT GR)
+node scripts/prune-cities-without-photo.mjs # leave out cities without a usable photo (recorded in exclusions.json)
 node scripts/build-places-lookup.mjs # rebuild the city index used by /api/weather (no download)
 ```
 

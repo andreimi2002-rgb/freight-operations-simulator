@@ -1,14 +1,27 @@
 {
  "metadata": {
-  "provider": "Wikimedia Commons via Wikidata",
+  "provider": "Wikimedia Commons via Wikidata and Wikipedia",
   "countryCode": "BG",
-  "builtAt": "2026-10-20T15:25:13.409Z",
-  "rule": "GeoNames ID (P1566) -> one Wikidata item (several: only one with >= 3x the sitelinks of the next) -> P18 (preferred first) or P948 banner; free licences only (PD, CC0, CC BY, CC BY-SA, Attribution, FAL); >= 640 px; maps, flags, coats of arms, logos and collages excluded by file name; thumbnail link checked.",
-  "cities": 55,
-  "withPhoto": 52,
-  "skipped": 3
+  "builtAt": "2026-10-20T19:28:54.769Z",
+  "rule": "hand-picked file (curated.json) or GeoNames ID (P1566) -> one Wikidata item (several: only one with >= 3x the sitelinks of the next) -> P18 (preferred first), P948 banner, or the Wikipedia lead image; free licences only (PD, CC0, CC BY, CC BY-SA, Attribution, FAL); >= 500 px; maps, flags, coats of arms, logos and collages excluded by file name; thumbnail link checked.",
+  "cities": 54,
+  "withPhoto": 54,
+  "skipped": 0
  },
  "photos": {
+  "725578": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/7/73/Yambolskyline.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Yambolskyline.jpg",
+   "file": "Yambolskyline.jpg",
+   "author": "see above. Compilation: Bezmera",
+   "licence": "CC BY-SA 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "from": "P18",
+   "width": 1280,
+   "height": 1280,
+   "verified": "2026-10-20",
+   "wikidata": "Q186569"
+  },
   "725712": {
    "src": "https://upload.wikimedia.org/wikipedia/commons/6/60/Vratsa022.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Vratsa022.jpg",
@@ -294,6 +307,19 @@
    "height": 1927,
    "verified": "2026-10-20",
    "wikidata": "Q189650"
+  },
+  "727791": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Rakovski%2C_Military_Monument.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Rakovski,_Military_Monument.jpg",
+   "file": "Rakovski, Military Monument.jpg",
+   "author": "Isip2 westboro , Atanas Moskov - sculptor",
+   "licence": "Public domain",
+   "licenceUrl": null,
+   "from": "P18",
+   "width": 1280,
+   "height": 1920,
+   "verified": "2026-10-20",
+   "wikidata": "Q167953"
   },
   "728075": {
    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Popovo_2012.jpg",
@@ -686,9 +712,5 @@
    "wikidata": "Q191871"
   }
  },
- "skipped": {
-  "725578": "Yambolskyline.jpg: too small",
-  "727791": "Rakovski, Military Monument.jpg: too small",
-  "727886": "no Wikidata item"
- }
+ "skipped": {}
 }

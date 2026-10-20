@@ -21,7 +21,7 @@ export function groupByGeonames(rows) {
     if (!geo || !id) continue;
     if (!byGeo.has(geo)) byGeo.set(geo, new Map());
     const items = byGeo.get(geo);
-    if (!items.has(id)) items.set(id, { qid: id, images: new Map(), banner: null, links: 0 });
+    if (!items.has(id)) items.set(id, { qid: id, images: new Map(), banner: null, links: 0, articles: new Map() });
     const item = items.get(id);
     const file = fileNameFromFilePath(row.img);
     if (file) {
@@ -29,6 +29,7 @@ export function groupByGeonames(rows) {
       if (!item.images.has(file) || r < item.images.get(file)) item.images.set(file, r);
     }
     item.banner ??= fileNameFromFilePath(row.banner);
+    if (row.wpLang && row.wpTitle) item.articles.set(`${row.wpLang}|${row.wpTitle}`, { lang: row.wpLang, title: row.wpTitle });
     const links = Number(row.links);
     if (Number.isFinite(links) && links > item.links) item.links = links;
   }
@@ -52,7 +53,7 @@ export function matchCity(geonamesId, byGeo) {
   const item = items[0];
   const photos = [...item.images].sort((a, b) => a[1] - b[1] || a[0].localeCompare(b[0])).map(([file]) => ({ file, from: "P18" }));
   if (item.banner && !photos.some(p => p.file === item.banner)) photos.push({ file: item.banner, from: "P948" });
-  return { qid: item.qid, candidates: photos };
+  return { qid: item.qid, candidates: photos, articles: [...item.articles.values()] };
 }
 
 // File names that are maps, coats of arms, flags, logos or collages, not photos of the place.
@@ -84,7 +85,8 @@ export function cleanAuthor(html) {
 }
 
 const IMAGE_TYPES = new Set(["image/jpeg", "image/png", "image/webp"]);
-export const MIN_WIDTH = 640;
+// 500 px: the card shows the photo at about 600 px under a dark shade; smaller files look blurry.
+export const MIN_WIDTH = 500;
 
 // Commons imageinfo (with extmetadata) -> photo record, or the reason it cannot be used.
 export function toPhoto(info, { file, from, verified }) {

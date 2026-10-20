@@ -1,12 +1,12 @@
 {
  "metadata": {
-  "provider": "Wikimedia Commons via Wikidata",
+  "provider": "Wikimedia Commons via Wikidata and Wikipedia",
   "countryCode": "HU",
-  "builtAt": "2026-10-20T15:24:59.183Z",
-  "rule": "GeoNames ID (P1566) -> one Wikidata item (several: only one with >= 3x the sitelinks of the next) -> P18 (preferred first) or P948 banner; free licences only (PD, CC0, CC BY, CC BY-SA, Attribution, FAL); >= 640 px; maps, flags, coats of arms, logos and collages excluded by file name; thumbnail link checked.",
-  "cities": 89,
-  "withPhoto": 76,
-  "skipped": 13
+  "builtAt": "2026-10-20T19:28:33.148Z",
+  "rule": "hand-picked file (curated.json) or GeoNames ID (P1566) -> one Wikidata item (several: only one with >= 3x the sitelinks of the next) -> P18 (preferred first), P948 banner, or the Wikipedia lead image; free licences only (PD, CC0, CC BY, CC BY-SA, Attribution, FAL); >= 500 px; maps, flags, coats of arms, logos and collages excluded by file name; thumbnail link checked.",
+  "cities": 88,
+  "withPhoto": 88,
+  "skipped": 0
  },
  "photos": {
   "714581": {
@@ -21,6 +21,19 @@
    "height": 1920,
    "verified": "2026-10-20",
    "wikidata": "Q840986"
+  },
+  "714697": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Tisza_II_h%C5%91er%C5%91m%C5%B1_4.jpg/1280px-Tisza_II_h%C5%91er%C5%91m%C5%B1_4.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Tisza_II_h%C5%91er%C5%91m%C5%B1_4.jpg",
+   "file": "Tisza II hőerőmű 4.jpg",
+   "author": "Biró Patrik Ferenc",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "from": "wikipedia",
+   "width": 1280,
+   "height": 960,
+   "verified": "2026-10-20",
+   "wikidata": "Q375097"
   },
   "715126": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Szolnoki_24_emeletes_toronyh%C3%A1z.jpg/1280px-Szolnoki_24_emeletes_toronyh%C3%A1z.jpg",
@@ -86,6 +99,19 @@
    "height": 914,
    "verified": "2026-10-20",
    "wikidata": "Q116417"
+  },
+  "716301": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/b/ba/P%C3%BCsp%C3%B6klad%C3%A1ny_l%C3%A9gi_fot%C3%B3.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:P%C3%BCsp%C3%B6klad%C3%A1ny_l%C3%A9gi_fot%C3%B3.jpg",
+   "file": "Püspökladány légi fotó.jpg",
+   "author": "CivertanS at Hungarian Wikipedia",
+   "licence": "CC BY-SA 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "from": "P18",
+   "width": 1280,
+   "height": 841,
+   "verified": "2026-10-20",
+   "wikidata": "Q842934"
   },
   "716671": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/H%C5%B1t%C5%91torony_-_panoramio_%28cropped%29.jpg/1280px-H%C5%B1t%C5%91torony_-_panoramio_%28cropped%29.jpg",
@@ -216,6 +242,19 @@
    "height": 183,
    "verified": "2026-10-20",
    "wikidata": "Q756273"
+  },
+  "719965": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/H%C3%B3dmez%C5%91v%C3%A1s%C3%A1rhely%2C_Bankpalota_SF.jpg/1280px-H%C3%B3dmez%C5%91v%C3%A1s%C3%A1rhely%2C_Bankpalota_SF.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:H%C3%B3dmez%C5%91v%C3%A1s%C3%A1rhely,_Bankpalota_SF.jpg",
+   "file": "Hódmezővásárhely, Bankpalota SF.jpg",
+   "author": "Somorjai Ferenc",
+   "licence": "CC BY-SA 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "from": "curated",
+   "width": 1280,
+   "height": 960,
+   "verified": "2026-10-20",
+   "wikidata": "Q124375"
   },
   "720276": {
    "src": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Reformed_church%2C_Hajd%C3%BAszoboszl%C3%B3_02.JPG",
@@ -399,6 +438,19 @@
    "verified": "2026-10-20",
    "wikidata": "Q146317"
   },
+  "3042968": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/VeresegyhazaSzentlelekFotoTalerTamas1.jpg/1280px-VeresegyhazaSzentlelekFotoTalerTamas1.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:VeresegyhazaSzentlelekFotoTalerTamas1.jpg",
+   "file": "VeresegyhazaSzentlelekFotoTalerTamas1.jpg",
+   "author": "Thaler Tamas",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "from": "wikipedia",
+   "width": 1280,
+   "height": 1225,
+   "verified": "2026-10-20",
+   "wikidata": "Q843039"
+  },
   "3043019": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Vecs%C3%A9s%2C_Sacred_Heart_church.jpg/1280px-Vecs%C3%A9s%2C_Sacred_Heart_church.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Vecs%C3%A9s,_Sacred_Heart_church.jpg",
@@ -411,6 +463,19 @@
    "height": 960,
    "verified": "2026-10-20",
    "wikidata": "Q36063"
+  },
+  "3043095": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/e/eb/A_Thury-v%C3%A1r_mad%C3%A1rt%C3%A1vlatb%C3%B3l.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:A_Thury-v%C3%A1r_mad%C3%A1rt%C3%A1vlatb%C3%B3l.jpg",
+   "file": "A Thury-vár madártávlatból.jpg",
+   "author": "Civertan",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "from": "wikipedia",
+   "width": 1280,
+   "height": 924,
+   "verified": "2026-10-20",
+   "wikidata": "Q755681"
   },
   "3043293": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Central_hungary_banner.jpg/1280px-Central_hungary_banner.jpg",
@@ -476,6 +541,19 @@
    "height": 750,
    "verified": "2026-10-20",
    "wikidata": "Q42007"
+  },
+  "3044475": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/4/42/Lakihegyi_adotorony_1.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Lakihegyi_adotorony_1.jpg",
+   "file": "Lakihegyi adotorony 1.jpg",
+   "author": "Moja at Hungarian Wikipedia",
+   "licence": "CC BY-SA 3.0",
+   "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "from": "P18",
+   "width": 1280,
+   "height": 1708,
+   "verified": "2026-10-20",
+   "wikidata": "Q740853"
   },
   "3044681": {
    "src": "https://upload.wikimedia.org/wikipedia/commons/8/88/Szentendre2FotoThalerTamas.JPG",
@@ -595,17 +673,30 @@
    "wikidata": "Q45779"
   },
   "3046686": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/P%C3%A1pa_Wikivoyage_Banner.jpg/1280px-P%C3%A1pa_Wikivoyage_Banner.jpg",
-   "page": "https://commons.wikimedia.org/wiki/File:P%C3%A1pa_Wikivoyage_Banner.jpg",
-   "file": "Pápa Wikivoyage Banner.jpg",
-   "author": "Bander81",
-   "licence": "CC BY 3.0",
-   "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
-   "from": "P948",
+   "src": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Civertanlegip%C3%A1pa5.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Civertanlegip%C3%A1pa5.jpg",
+   "file": "Civertanlegipápa5.jpg",
+   "author": "Civertan",
+   "licence": "CC BY-SA 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "from": "P18",
    "width": 1280,
-   "height": 183,
+   "height": 853,
    "verified": "2026-10-20",
    "wikidata": "Q214945"
+  },
+  "3046768": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Szentl%C3%A9lek_templom%2C_Makoveczpaks.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Szentl%C3%A9lek_templom,_Makoveczpaks.jpg",
+   "file": "Szentlélek templom, Makoveczpaks.jpg",
+   "author": "Osbi",
+   "licence": "Public domain",
+   "licenceUrl": null,
+   "from": "P18",
+   "width": 1280,
+   "height": 1707,
+   "verified": "2026-10-20",
+   "wikidata": "Q740800"
   },
   "3046888": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Hungary_Komaron-Esztergom_district_Oroszlany_IMG_7981_from_north.JPG/1280px-Hungary_Komaron-Esztergom_district_Oroszlany_IMG_7981_from_north.JPG",
@@ -645,6 +736,32 @@
    "height": 182,
    "verified": "2026-10-20",
    "wikidata": "Q14424"
+  },
+  "3047896": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Mosonmagyar%C3%B3v%C3%A1r%2C_magyar%C3%B3v%C3%A1ri_v%C3%A1r_2021_05.jpg/1280px-Mosonmagyar%C3%B3v%C3%A1r%2C_magyar%C3%B3v%C3%A1ri_v%C3%A1r_2021_05.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Mosonmagyar%C3%B3v%C3%A1r,_magyar%C3%B3v%C3%A1ri_v%C3%A1r_2021_05.jpg",
+   "file": "Mosonmagyaróvár, magyaróvári vár 2021 05.jpg",
+   "author": "Pasztilla aka Attila Terbócs",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "from": "wikipedia",
+   "width": 1280,
+   "height": 853,
+   "verified": "2026-10-20",
+   "wikidata": "Q207406"
+  },
+  "3047942": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Monor_banner.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Monor_banner.jpg",
+   "file": "Monor banner.jpg",
+   "author": "Petranyigergo88",
+   "licence": "CC BY-SA 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "from": "P948",
+   "width": 1280,
+   "height": 183,
+   "verified": "2026-10-20",
+   "wikidata": "Q749320"
   },
   "3047967": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Moh%C3%A1csi_Fogadalmi_templom_%28by_Pudelek%29.JPG/1280px-Moh%C3%A1csi_Fogadalmi_templom_%28by_Pudelek%29.JPG",
@@ -789,6 +906,19 @@
    "verified": "2026-10-20",
    "wikidata": "Q281371"
   },
+  "3051621": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Hatvan%2C_Grassalkovich-kast%C3%A9ly_2022_01.jpg/1280px-Hatvan%2C_Grassalkovich-kast%C3%A9ly_2022_01.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Hatvan,_Grassalkovich-kast%C3%A9ly_2022_01.jpg",
+   "file": "Hatvan, Grassalkovich-kastély 2022 01.jpg",
+   "author": "Pasztilla aka Attila Terbócs",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "from": "wikipedia",
+   "width": 1280,
+   "height": 853,
+   "verified": "2026-10-20",
+   "wikidata": "Q629849"
+  },
   "3052009": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Gyor_town_hall.jpg/1280px-Gyor_town_hall.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Gyor_town_hall.jpg",
@@ -840,6 +970,19 @@
    "height": 854,
    "verified": "2026-10-20",
    "wikidata": "Q209988"
+  },
+  "3052241": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Fels%C5%91g%C3%B6d_reform%C3%A1tus.jpg/1280px-Fels%C5%91g%C3%B6d_reform%C3%A1tus.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Fels%C5%91g%C3%B6d_reform%C3%A1tus.jpg",
+   "file": "Felsőgöd református.jpg",
+   "author": "Zello",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "from": "wikipedia",
+   "width": 1280,
+   "height": 1845,
+   "verified": "2026-10-20",
+   "wikidata": "Q604258"
   },
   "3052542": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/R%C3%B3mai_katolikus_templom_%287024._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k%29_2.jpg/1280px-R%C3%B3mai_katolikus_templom_%287024._sz%C3%A1m%C3%BA_m%C5%B1eml%C3%A9k%29_2.jpg",
@@ -918,6 +1061,19 @@
    "height": 1920,
    "verified": "2026-10-20",
    "wikidata": "Q854933"
+  },
+  "3053590": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Domb%C3%B3v%C3%A1r%2C_%C3%BAjdomb%C3%B3v%C3%A1ri_r%C3%B3mai_katolikus_templom_2022_01.jpg/1280px-Domb%C3%B3v%C3%A1r%2C_%C3%BAjdomb%C3%B3v%C3%A1ri_r%C3%B3mai_katolikus_templom_2022_01.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Domb%C3%B3v%C3%A1r,_%C3%BAjdomb%C3%B3v%C3%A1ri_r%C3%B3mai_katolikus_templom_2022_01.jpg",
+   "file": "Dombóvár, újdombóvári római katolikus templom 2022 01.jpg",
+   "author": "Pasztilla aka Attila Terbócs",
+   "licence": "CC0",
+   "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "from": "wikipedia",
+   "width": 1280,
+   "height": 853,
+   "verified": "2026-10-20",
+   "wikidata": "Q633789"
   },
   "3053836": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Dabas%2C_s%C3%A1ri_r%C3%B3mai_katolikus_templom_2025_02.jpg/1280px-Dabas%2C_s%C3%A1ri_r%C3%B3mai_katolikus_templom_2025_02.jpg",
@@ -998,19 +1154,5 @@
    "wikidata": "Q206872"
   }
  },
- "skipped": {
-  "714697": "Tiszaújváros légifotó1.jpg: too small",
-  "716301": "Püspökladány légi fotó.jpg: too small",
-  "717902": "Makó légifotó1.jpg: too small",
-  "719965": "Városháza, Hódmezővásárhely, Kossuth Lajos tér 1 - Hodmezocivertanlegi3.jpg: too small",
-  "3042968": "Veresegyház légifotó4.jpg: too small",
-  "3043095": "Várpalota1.jpg: too small",
-  "3044475": "Lakihegyi adotorony 1.jpg: too small",
-  "3046768": "Szentlélek templom, Makoveczpaks.jpg: too small",
-  "3047896": "Mosonmagyaróvár - Castle.jpg: too small",
-  "3047942": "Monor légifotó.jpg: too small; Monor banner.jpg: too small",
-  "3051621": "Hatvan - Palace.jpg: too small",
-  "3052241": "Göd2.jpg: too small",
-  "3053590": "Dombóvár légifotó.jpg: too small"
- }
+ "skipped": {}
 }

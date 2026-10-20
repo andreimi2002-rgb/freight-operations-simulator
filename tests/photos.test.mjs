@@ -20,18 +20,32 @@ test("every active country has a photo file whose photos follow the rules", () =
       assert.ok(photo.author || isPublicDomain(photo.licence), `${id}: no author`);
       assert.match(photo.src, /^https:\/\/(upload|thumb)\.wikimedia\.org\//, id);
       assert.match(photo.page, /^https:\/\/commons\.wikimedia\.org\//, id);
-      assert.ok(["P18", "P948"].includes(photo.from), id);
+      assert.ok(["P18", "P948", "wikipedia", "curated"].includes(photo.from), id);
       assert.ok(looksLikeAPhoto(photo.file), `${id}: ${photo.file}`);
       assert.match(photo.verified, /^\d{4}-\d{2}-\d{2}$/);
-      assert.match(photo.wikidata, /^Q\d+$/);
+      // wikidata is null only for a hand-picked photo of a city whose Wikidata item is ambiguous
+      if (photo.wikidata === null) assert.equal(photo.from, "curated", id);
+      else assert.match(photo.wikidata, /^Q\d+$/);
       assert.ok(!(id in file.skipped), `${id} is both used and skipped`);
     }
     for (const id of Object.keys(file.skipped)) assert.ok(ids.has(id), `${country.code}: skipped unknown city ${id}`);
     assert.equal(Object.keys(file.photos).length + Object.keys(file.skipped).length, ids.size, `${country.code}: every city is either used or skipped`);
+    assert.equal(Object.keys(file.photos).length, ids.size, `${country.code}: every city in the catalog has a photo (the others are in exclusions.json)`);
     withPhoto += Object.keys(file.photos).length;
     cities += ids.size;
   }
-  assert.ok(withPhoto / cities > 0.6, `coverage ${withPhoto}/${cities}`);
+  assert.equal(withPhoto, cities);
+});
+
+test("excluded cities stay out of the catalog and say why", () => {
+  const exclusions = JSON.parse(readFileSync(new URL("../src/data/places/exclusions.json", import.meta.url), "utf8")).cities;
+  const inCatalog = new Set(activeCountries().flatMap(country => loadCityFile(country).cities.map(city => String(city.id))));
+  assert.ok(Object.keys(exclusions).length > 0);
+  for (const [id, entry] of Object.entries(exclusions)) {
+    assert.ok(!inCatalog.has(id), `${entry.name} is excluded but still in the catalog`);
+    assert.ok(entry.name && entry.countryCode && entry.reason.startsWith("no usable free photo"), id);
+  }
+  for (const country of activeCountries()) assert.ok(inCatalog.has(String(country.capitalGeonamesId)), `${country.code} capital kept`);
 });
 
 test("licences: free with credit only", () => {
@@ -74,7 +88,8 @@ test("a Commons file becomes a photo only when every rule passes", () => {
   const ok = toPhoto(info, { file: "A.jpg", from: "P18", verified: "2026-10-20" });
   assert.equal(ok.photo.src, "https://thumb.wikimedia.org/x/1280px-A.jpg", "tracking parameters dropped");
   assert.equal(ok.photo.author, "Ana");
-  assert.match(toPhoto({ ...info, width: 500 }, { file: "A.jpg" }).reject, /small/);
+  assert.match(toPhoto({ ...info, width: 499 }, { file: "A.jpg" }).reject, /small/);
+  assert.ok(toPhoto({ ...info, width: 500 }, { file: "A.jpg", from: "P18", verified: "x" }).photo, "500 px is enough");
   assert.match(toPhoto({ ...info, mime: "image/svg+xml" }, { file: "A.svg" }).reject, /type/);
   assert.match(toPhoto({ ...info, extmetadata: { ...info.extmetadata, LicenseShortName: { value: "CC BY-NC 2.0" } } }, { file: "A.jpg" }).reject, /licence/);
   assert.match(toPhoto({ ...info, extmetadata: { ...info.extmetadata, Artist: { value: "" } } }, { file: "A.jpg" }).reject, /author/);

@@ -44,6 +44,7 @@ Un singur PR, cu două părți independente: **fotografiile** (date pregătite o
 - Script **generic pe coduri de țară** (aceeași logică pentru orice pachet de țară), rulat întâi pe catalogul regenerat RO/HU/BG. Fotografiile se pregătesc dinainte (fișier de date), nu se caută live.
 - Pe fiecare fotografie: autor, licență și link la pagina originală. Doar licențe libere (domeniu public, CC0, CC BY, CC BY-SA), linkuri verificate de script, potriviri ambigue sărite, nu ghicite.
 - Fallback stilizat (panou cu gradient și codul orașului) când nu există o fotografie liberă sau imaginea nu se încarcă, ca în Airport Live.
+- Fiecare oraș din catalog are fotografie: imaginea principală din Wikipedia ca rezervă, poze alese manual pentru orașele mari rămase (`src/data/photos/curated.json`, aceleași verificări), iar orașele mici fără poză liberă sunt scoase din catalog (`src/data/places/exclusions.json`). Pentru pachetele de țară se aplică aceeași regulă.
 - Licențe acceptate ca în Airport Live: domeniu public, CC0, CC BY, CC BY-SA, {{Attribution}} și Free Art License. Pozele se încarcă direct de pe serverele Wikimedia (fără referrer).
 
 ### Vreme (adăugată de proprietar la 20 octombrie 2026)

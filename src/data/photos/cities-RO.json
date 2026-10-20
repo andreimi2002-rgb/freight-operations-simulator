@@ -1,12 +1,12 @@
 {
  "metadata": {
-  "provider": "Wikimedia Commons via Wikidata",
+  "provider": "Wikimedia Commons via Wikidata and Wikipedia",
   "countryCode": "RO",
-  "builtAt": "2026-10-20T15:24:36.657Z",
-  "rule": "GeoNames ID (P1566) -> one Wikidata item (several: only one with >= 3x the sitelinks of the next) -> P18 (preferred first) or P948 banner; free licences only (PD, CC0, CC BY, CC BY-SA, Attribution, FAL); >= 640 px; maps, flags, coats of arms, logos and collages excluded by file name; thumbnail link checked.",
-  "cities": 126,
-  "withPhoto": 97,
-  "skipped": 29
+  "builtAt": "2026-10-20T19:27:50.945Z",
+  "rule": "hand-picked file (curated.json) or GeoNames ID (P1566) -> one Wikidata item (several: only one with >= 3x the sitelinks of the next) -> P18 (preferred first), P948 banner, or the Wikipedia lead image; free licences only (PD, CC0, CC BY, CC BY-SA, Attribution, FAL); >= 500 px; maps, flags, coats of arms, logos and collages excluded by file name; thumbnail link checked.",
+  "cities": 112,
+  "withPhoto": 112,
+  "skipped": 0
  },
  "photos": {
   "662284": {
@@ -230,6 +230,19 @@
    "verified": "2026-10-20",
    "wikidata": "Q16898264"
   },
+  "665850": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/View_on_Suceava_%28Romania%29_from_Fortess.jpg/1280px-View_on_Suceava_%28Romania%29_from_Fortess.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:View_on_Suceava_(Romania)_from_Fortess.jpg",
+   "file": "View on Suceava (Romania) from Fortess.jpg",
+   "author": "John",
+   "licence": "CC BY 2.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+   "from": "curated",
+   "width": 1280,
+   "height": 960,
+   "verified": "2026-10-20",
+   "wikidata": "Q16898541"
+  },
   "666767": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/RO_OT_Slatina_center_from_Gradiste_hill_1.jpg/1280px-RO_OT_Slatina_center_from_Gradiste_hill_1.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:RO_OT_Slatina_center_from_Gradiste_hill_1.jpg",
@@ -412,6 +425,19 @@
    "verified": "2026-10-20",
    "wikidata": "Q16898160"
   },
+  "668954": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Re%C5%9Dico%2C_panoramo%2C_2.jpeg/1280px-Re%C5%9Dico%2C_panoramo%2C_2.jpeg",
+   "page": "https://commons.wikimedia.org/wiki/File:Re%C5%9Dico,_panoramo,_2.jpeg",
+   "file": "Reŝico, panoramo, 2.jpeg",
+   "author": "Aisano",
+   "licence": "CC BY-SA 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "from": "curated",
+   "width": 1280,
+   "height": 907,
+   "verified": "2026-10-20",
+   "wikidata": "Q49280746"
+  },
   "669289": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Centrul_ora%C5%9Fului_R%C4%83d%C4%83u%C5%A3i1.jpg/1280px-Centrul_ora%C5%9Fului_R%C4%83d%C4%83u%C5%A3i1.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Centrul_ora%C5%9Fului_R%C4%83d%C4%83u%C5%A3i1.jpg",
@@ -490,6 +516,19 @@
    "verified": "2026-10-20",
    "wikidata": "Q16898319"
   },
+  "670969": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Petrila_view.jpg/1280px-Petrila_view.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Petrila_view.jpg",
+   "file": "Petrila view.jpg",
+   "author": "Loraine",
+   "licence": "CC BY 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+   "from": "curated",
+   "width": 1280,
+   "height": 960,
+   "verified": "2026-10-20",
+   "wikidata": "Q16898330"
+  },
   "671382": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/RO_IF_Pantelimon_Lebada_restaurant.jpg/1280px-RO_IF_Pantelimon_Lebada_restaurant.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:RO_IF_Pantelimon_Lebada_restaurant.jpg",
@@ -516,6 +555,19 @@
    "verified": "2026-10-20",
    "wikidata": "Q16898317"
   },
+  "671768": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/OradeaCrisulRepedeRemake.jpg/1280px-OradeaCrisulRepedeRemake.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:OradeaCrisulRepedeRemake.jpg",
+   "file": "OradeaCrisulRepedeRemake.jpg",
+   "author": "Bursov",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "from": "curated",
+   "width": 1280,
+   "height": 722,
+   "verified": "2026-10-20",
+   "wikidata": "Q49280707"
+  },
   "671832": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Oltenita_centru.JPG/1280px-Oltenita_centru.JPG",
    "page": "https://commons.wikimedia.org/wiki/File:Oltenita_centru.JPG",
@@ -528,6 +580,19 @@
    "height": 960,
    "verified": "2026-10-20",
    "wikidata": "Q16898183"
+  },
+  "671964": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Ansamblul_urban_%22Pia%C5%A3a%22%2C_Odorheiu_Secuiesc.JPG/1280px-Ansamblul_urban_%22Pia%C5%A3a%22%2C_Odorheiu_Secuiesc.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Ansamblul_urban_%22Pia%C5%A3a%22,_Odorheiu_Secuiesc.JPG",
+   "file": "Ansamblul urban \"Piaţa\", Odorheiu Secuiesc.JPG",
+   "author": "Pavel Sinka",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "from": "curated",
+   "width": 1280,
+   "height": 755,
+   "verified": "2026-10-20",
+   "wikidata": null
   },
   "672024": {
    "src": "https://upload.wikimedia.org/wikipedia/commons/2/24/Roman_Catholic_church_in_Maros%C3%BAjv%C3%A1r.jpg",
@@ -620,6 +685,19 @@
    "verified": "2026-10-20",
    "wikidata": "Q16898206"
   },
+  "673921": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Mangalia_2016_%281%29.jpg/1280px-Mangalia_2016_%281%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Mangalia_2016_(1).jpg",
+   "file": "Mangalia 2016 (1).jpg",
+   "author": "Leontin l",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "from": "curated",
+   "width": 1280,
+   "height": 720,
+   "verified": "2026-10-20",
+   "wikidata": null
+  },
   "674295": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Biserica_Ortodox%C4%83_Lupeni.jpg/1280px-Biserica_Ortodox%C4%83_Lupeni.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Biserica_Ortodox%C4%83_Lupeni.jpg",
@@ -672,6 +750,32 @@
    "verified": "2026-10-20",
    "wikidata": "Q46852"
   },
+  "675892": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Hu%C8%99i%2C_from_Dobrina_hill_%282%29_%28cropped%29.JPG/1280px-Hu%C8%99i%2C_from_Dobrina_hill_%282%29_%28cropped%29.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Hu%C8%99i,_from_Dobrina_hill_(2)_(cropped).JPG",
+   "file": "Huși, from Dobrina hill (2) (cropped).JPG",
+   "author": "Nixalsverdrus",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "from": "curated",
+   "width": 1280,
+   "height": 719,
+   "verified": "2026-10-20",
+   "wikidata": "Q16898619"
+  },
+  "675918": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/View_of_Hunedoara_from_Corvin_Castle%2C_2017.jpg/1280px-View_of_Hunedoara_from_Corvin_Castle%2C_2017.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:View_of_Hunedoara_from_Corvin_Castle,_2017.jpg",
+   "file": "View of Hunedoara from Corvin Castle, 2017.jpg",
+   "author": "DimiTalen",
+   "licence": "CC0",
+   "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "from": "curated",
+   "width": 1280,
+   "height": 611,
+   "verified": "2026-10-20",
+   "wikidata": "Q16898315"
+  },
   "676527": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Primaria_din_Gura_Humorului3.jpg/1280px-Primaria_din_Gura_Humorului3.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Primaria_din_Gura_Humorului3.jpg",
@@ -684,6 +788,19 @@
    "height": 960,
    "verified": "2026-10-20",
    "wikidata": "Q16898560"
+  },
+  "677106": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Giurgiu2016.jpg/1280px-Giurgiu2016.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Giurgiu2016.jpg",
+   "file": "Giurgiu2016.jpg",
+   "author": "Sorin lucian 1986",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "from": "curated",
+   "width": 1280,
+   "height": 857,
+   "verified": "2026-10-20",
+   "wikidata": "Q49280574"
   },
   "677429": {
    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Gherla_Strada_Principala.jpg",
@@ -867,6 +984,19 @@
    "verified": "2026-10-20",
    "wikidata": "Q16898077"
   },
+  "680332": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Craiova_-_Old_Town_%2828782890085%29.jpg/1280px-Craiova_-_Old_Town_%2828782890085%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Craiova_-_Old_Town_(28782890085).jpg",
+   "file": "Craiova - Old Town (28782890085).jpg",
+   "author": "Ștefan Jurcă from Munich, Germany",
+   "licence": "CC BY 2.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+   "from": "curated",
+   "width": 1280,
+   "height": 864,
+   "verified": "2026-10-20",
+   "wikidata": "Q16898248"
+  },
   "680897": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/RO_OT_Corabia_1877_war_monument.jpg/1280px-RO_OT_Corabia_1877_war_monument.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:RO_OT_Corabia_1877_war_monument.jpg",
@@ -918,6 +1048,19 @@
    "height": 960,
    "verified": "2026-10-20",
    "wikidata": "Q16898526"
+  },
+  "681862": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Iulia_Hasdeu_Castle.jpg/1280px-Iulia_Hasdeu_Castle.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Iulia_Hasdeu_Castle.jpg",
+   "file": "Iulia Hasdeu Castle.jpg",
+   "author": "Constantin Barbu",
+   "licence": "CC BY 2.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+   "from": "curated",
+   "width": 1280,
+   "height": 853,
+   "verified": "2026-10-20",
+   "wikidata": "Q16898471"
   },
   "681865": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/C%C3%A2mpia_Turzii-Parcul_Central-IMG_6685.jpg/1280px-C%C3%A2mpia_Turzii-Parcul_Central-IMG_6685.jpg",
@@ -1062,6 +1205,19 @@
    "verified": "2026-10-20",
    "wikidata": "Q16898312"
   },
+  "684039": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Botosani-old-center.jpg/1280px-Botosani-old-center.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Botosani-old-center.jpg",
+   "file": "Botosani-old-center.jpg",
+   "author": "en:User:Valicatargiu",
+   "licence": "CC BY-SA 3.0",
+   "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "from": "curated",
+   "width": 1280,
+   "height": 960,
+   "verified": "2026-10-20",
+   "wikidata": "Q16898131"
+  },
   "684156": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Borsa1.jpg/1280px-Borsa1.jpg",
    "page": "https://commons.wikimedia.org/wiki/File:Borsa1.jpg",
@@ -1087,6 +1243,19 @@
    "height": 878,
    "verified": "2026-10-20",
    "wikidata": "Q16898174"
+  },
+  "684657": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Bistrita_%288315678580%29.jpg/1280px-Bistrita_%288315678580%29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Bistrita_(8315678580).jpg",
+   "file": "Bistrita (8315678580).jpg",
+   "author": "Cristian Bortes www.eyeem.com/bortescristian from Cluj-Napoca, Romania",
+   "licence": "CC BY 2.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+   "from": "curated",
+   "width": 1280,
+   "height": 853,
+   "verified": "2026-10-20",
+   "wikidata": "Q20846894"
   },
   "684802": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Estatua_de_Cuza_Vod%C4%83.jpg/1280px-Estatua_de_Cuza_Vod%C4%83.jpg",
@@ -1269,37 +1438,33 @@
    "height": 914,
    "verified": "2026-10-20",
    "wikidata": "Q16898101"
+  },
+  "8436351": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Sighisoara_-_Cetatea_Vedere_Generala.jpg/1280px-Sighisoara_-_Cetatea_Vedere_Generala.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Sighisoara_-_Cetatea_Vedere_Generala.jpg",
+   "file": "Sighisoara - Cetatea Vedere Generala.jpg",
+   "author": "MarculescuEugenIancuD60Alaska from Anchorage, Alaska, USA",
+   "licence": "CC BY-SA 2.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "from": "curated",
+   "width": 1280,
+   "height": 667,
+   "verified": "2026-10-20",
+   "wikidata": "Q49290177"
+  },
+  "8581467": {
+   "src": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Bd_matei_basarab_slobozia1.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Bd_matei_basarab_slobozia1.jpg",
+   "file": "Bd matei basarab slobozia1.jpg",
+   "author": "D39 at Romanian Wikipedia",
+   "licence": "Public domain",
+   "licenceUrl": null,
+   "from": "P18",
+   "width": 1280,
+   "height": 966,
+   "verified": "2026-10-20",
+   "wikidata": "Q16898336"
   }
  },
- "skipped": {
-  "662187": "no image on Wikidata",
-  "664074": "Urziceni BO.jpg: too small",
-  "665000": "Kezdi centre3.JPG: no author",
-  "665850": "Suceava Colaj.jpg: not a photo (name)",
-  "668954": "no image on Wikidata",
-  "670969": "Lonyaytelep02.jpg: too small",
-  "671768": "no image on Wikidata",
-  "671964": "ambiguous (Q49287632:1, Q16898296:1)",
-  "672926": "ambiguous (Q49286884:1, Q16898106:1)",
-  "673033": "ambiguous (Q49286850:1, Q16898484:1)",
-  "673921": "ambiguous (Q49286467:1, Q16898204:1)",
-  "675892": "Banca- Husi.jpg: no author",
-  "675918": "Hunedoara iarna. Fotografie realizata de catre Marian Lucian.jpg: no author",
-  "677106": "no image on Wikidata",
-  "677458": "ambiguous (Q49283345:1, Q16898294:1)",
-  "678978": "Centru dragasani.JPG: too small",
-  "680332": "Craiova colaj.jpg: not a photo (name)",
-  "681017": "ambiguous (Q49282119:1, Q16898109:1)",
-  "681179": "ambiguous (Q49347917:1, Q16898140:1)",
-  "681845": "ambiguous (Q49282215:1, Q16898543:1)",
-  "681862": "Romania Campina city hall.jpg: no author",
-  "682321": "Cernavodă-center.jpg: licence GPL",
-  "683394": "no image on Wikidata",
-  "683760": "ambiguous (Q20835949:1, Q31925890:1)",
-  "684039": "Colaj Botoşani.jpg: not a photo (name)",
-  "684612": "ambiguous (Q31916951:1, Q16897960:1)",
-  "684657": "no image on Wikidata",
-  "8436351": "no image on Wikidata",
-  "8581467": "Bd matei basarab slobozia1.jpg: too small"
- }
+ "skipped": {}
 }
