@@ -6,7 +6,7 @@ export const SCHEMA_VERSION = 3;
 
 // Paths that every load must have (each is a fact, possibly "unavailable").
 const REQUIRED = [
-  "origin", "destination", "route.summary", "route.borderCrossings",
+  "origin", "destination", "route.summary", "route.borderCrossings", "route.countryDistances",
   "cargo.selection", "cargo.nstChapters", "cargo.cnCode", "cargo.adr", "cargo.temperature",
   "packaging.unitType", "packaging.unitCount", "packaging.unitMassKg", "packaging.totalMassKg", "packaging.loadingMetres",
   "equipment.selection", "equipment.floor",

@@ -245,7 +245,7 @@ test("the schedule row and timeline come from the engine", async () => {
 
 test("Prezentare data and the trailers listed for the cargo", async () => {
   const sheet = buildLoadSheet(await make());
-  assert.equal(sheet.overview.route.length, 6);
+  assert.equal(sheet.overview.route.length, 7);
   assert.equal(sheet.overview.roles.length, 2);
   assert.equal(sheet.overview.schedule.length, 4);
   assert.equal(sheet.overview.trailer.name, "Semiremorcă frigorifică");

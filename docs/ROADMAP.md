@@ -97,7 +97,7 @@ Motorul de calcul (paleți, tranzit, ferestre, roluri, proveniență) nu depinde
 | `scripts/import-geonames.mjs` | țările și fusurile orare fixe; orașe obligatorii fixe; un singur fișier `cities-ro-hu-bg.json` | țările ca argument / din fișierul de țări; un fișier pe țară (`places/cities-<CC>.json`); fusul orar verificat din datele țării |
 | `src/main.js`, `scripts/dev-server.mjs` | calea fixă `cities-ro-hu-bg.json` | încarcă fișierele țărilor active |
 | `src/i18n/ro.json` (4 texte) | „România, Ungaria și Bulgaria” scris în text | text cu parametru `{countries}`, construit din lista țărilor (`Intl.DisplayNames`) |
-| `src/data/scope.mjs` | coduri de 3 litere doar pentru câteva orașe RO/HU/BG | rămâne temporar; înlocuit de UN/LOCODE în Etapa 2 |
+| `src/data/scope.mjs` | coduri de 3 litere doar pentru câteva orașe RO/HU/BG | **făcut în 2A:** UN/LOCODE (241/254 orașe); codul provizoriu rămâne doar pentru orașele fără LOCODE |
 | `src/engine/time-windows.mjs` | zile lucrătoare = luni–vineri; fără sărbători legale | sărbătorile și restricțiile de weekend devin date de țară (Etapa 6 / pachete) |
 | `netlify/functions/truck-route.mjs` | `lang=ro` la Geoapify | limba din setarea interfeței (temporar; Geoapify iese în Etapa 5) |
 | `tests/` | verifică explicit RO/HU/BG | testele citesc lista țărilor din date |

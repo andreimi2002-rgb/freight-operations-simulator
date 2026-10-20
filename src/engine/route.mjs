@@ -26,6 +26,8 @@ export async function routeFacts(router, origin, destination, vehicle = "heavyTr
       hasTolls: answer.hasTolls === true,
       provider: answer.provider,
     }, { name: answer.provider, url: answer.sourceUrl, retrievedAt: answer.retrievedAt }),
-    borderCrossings: unavailable("2", "borderCrossings"),
+    // Filled by routeGeoFacts() (src/engine/geo-facts.mjs) when border data is available.
+    borderCrossings: unavailable("2", "borderDataMissing"),
+    countryDistances: unavailable("2", "borderDataMissing"),
   };
 }

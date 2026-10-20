@@ -18,6 +18,12 @@ Ids (formula, basis, note, reason, source note) are language-neutral; the UI tra
 
 `validateFact()` rejects: a sourced fact without name, http(s) URL or retrieval date; a computed fact without formula or inputs; an estimated fact without basis; a simulated fact without note; an unavailable fact with a value or an unknown phase; any other fact without a value.
 
+## Phase 2A facts
+- `route.countryDistances` (computed): `{ countries: [{ code, share, km }] }` in order of travel; formula `countryDistances`, inputs routeKm, geometryKm, countries; data set Natural Earth.
+- `route.borderCrossings` (computed): `{ crossings: [{ from, to, lat, lon, name|null, osm[], distanceM|null, regime: "internal"|"external" }] }`, or `noBorderCrossed` with an empty list; data sets Natural Earth, OpenStreetMap, Schengen. Unavailable with reason `borderDataMissing` / `noGeometry`.
+- `origin`/`destination` `locode` is filled from `src/data/places/locodes.json` when the city has one (data set UN/LOCODE).
+- Facts may carry `datasets: [ids]` (see `src/engine/datasets.mjs`); the detail drawer lists them with licence and link.
+
 ## Shape
 
 ```

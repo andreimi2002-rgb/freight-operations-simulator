@@ -42,6 +42,6 @@ export function toPlace(city, importedAt) {
     timeZone: city.timeZone,
     population: city.population,
     placeType: "city",
-    locode: null, // TODO(phase 2): UN/LOCODE
-  }, { name: "GeoNames", url: `https://www.geonames.org/${city.id}/`, retrievedAt: city.importedAt || importedAt, license: "CC BY 4.0" });
+    locode: city.locode ?? null, // UN/LOCODE from src/data/places/locodes.json when the city has one
+  }, { name: "GeoNames", url: `https://www.geonames.org/${city.id}/`, retrievedAt: city.importedAt || importedAt, license: "CC BY 4.0" }, city.locode ? { datasets: ["unlocode"] } : {});
 }

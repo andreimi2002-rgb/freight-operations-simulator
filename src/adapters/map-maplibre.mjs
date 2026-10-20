@@ -68,6 +68,10 @@ export function createRouteMap({ container, statusElement }) {
         map.addSource("route", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
         map.addLayer({ id: "route-glow", type: "line", source: "route", layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": "#8ce0bd", "line-width": 12, "line-opacity": 0.22, "line-blur": 6 } });
         map.addLayer({ id: "route-line", type: "line", source: "route", layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": "#8ce0bd", "line-width": 4 } });
+        // Border crossings are circles on the canvas (not HTML), so they also appear in the print snapshot.
+        map.addSource("crossings", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+        map.addLayer({ id: "crossings-ring", type: "circle", source: "crossings", paint: { "circle-radius": 8, "circle-color": "#0e161f", "circle-stroke-color": "#ffd479", "circle-stroke-width": 2.5 } });
+        map.addLayer({ id: "crossings-dot", type: "circle", source: "crossings", paint: { "circle-radius": 3, "circle-color": "#ffd479" } });
         resolve();
       });
     });
@@ -81,6 +85,7 @@ export function createRouteMap({ container, statusElement }) {
       map.resize();
       const lines = (data.geometry || []).filter(line => Array.isArray(line) && line.length > 1);
       map.getSource("route").setData({ type: "Feature", properties: {}, geometry: { type: "MultiLineString", coordinates: lines } });
+      map.getSource("crossings").setData({ type: "FeatureCollection", features: (data.crossings || []).map(c => ({ type: "Feature", properties: { label: c.label }, geometry: { type: "Point", coordinates: [c.lon, c.lat] } })) });
       endpoints = data;
       markers.forEach(marker => marker.remove());
       markers = [
