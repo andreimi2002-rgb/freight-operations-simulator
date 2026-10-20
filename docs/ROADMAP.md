@@ -10,8 +10,8 @@ Notă: punctele marcate **[propunere acceptată]** au fost propuse de asistent �
 |---|---|---|
 | **1A** | Redesign în stilul Airport Live, hartă MapLibre + OpenFreeMap, fișa cursei cu proveniență, i18n (română) | făcută (PR #5) |
 | **1B** | Fundație: modelul `Load`, paleți / masă / metri de încărcare, timp minim de tranzit (Reg. 561/2006, simplificat), ferestre orare, roluri, catalog RO/HU/BG regenerat, scoaterea ATS/ETS2 | făcută (PR #6) |
-| **1C** | Navigare pe tab-uri (schelet) + țările devin date, vezi §2 | în revizie |
-| **1D** | Fotografii pentru orașe din Wikimedia Commons, vezi §3 | |
+| **1C** | Navigare pe tab-uri (schelet) + țările devin date, vezi §2 | făcută (PR #7) |
+| **1D** | Fotografii și vreme pentru orașe (un singur PR, două părți independente), vezi §3 | în lucru |
 | **2** | Locații reale din OpenStreetMap (depozite, zone industriale, porturi, terminale, puncte de frontieră, parcări TIR), coduri UN/LOCODE, **distanța pe țări** din poligoane Natural Earth [propunere acceptată] | |
 | **3** | Mărfuri v2: coduri CN/HS, ADR (număr ONU, clasă, grupă, cod de tunel), ambalare și mase cu sursă, **volum în m³ din înălțimea stivei estimată pe marfă**, **orientarea paleților aleasă de motor (varianta mai bună, ambele în drawer)** [propuneri acceptate], ponderare după fluxuri Eurostat, corespondența CN→NST | |
 | **4** | Camioane și trailere reale cu specificații și sursă (putere, cuplu, consum ca estimat), configurații, verificarea masei (Directiva 96/53/CE) | |
@@ -34,12 +34,24 @@ Tab-uri, în ordine: **Prezentare**, **Hartă și rută**, **Marfă**, **Camion 
 - Vizibil în imagini, dar condiționat de reguli: fotografii (Etapa 1D și ulterior), stratul Satelit (interzis până la verificarea licenței), profil de altitudine (Etapa 5).
 - **[propunere acceptată]** Tot în 1C, țările devin **date** (lista țărilor active, un fișier de orașe pe țară, texte cu parametru), ca extinderea pe țări noi să nu ceară cod nou. Detalii în §6.
 
-## 3. Etapa 1D — fotografii pentru orașe
+## 3. Etapa 1D — fotografii și vreme pentru orașe
+
+Un singur PR, cu două părți independente: **fotografiile** (date pregătite offline) și **vremea** (funcție live). Ambele apar pe cardurile orașelor de origine și destinație din „Prezentare” și „Hartă și rută”.
+
+### Fotografii
 
 - Fotografii din **Wikimedia Commons**, găsite prin **Wikidata** pornind de la ID-ul GeoNames al orașului (proprietatea P1566 → imaginea P18 sau bannerul Wikivoyage P948).
 - Script **generic pe coduri de țară** (aceeași logică pentru orice pachet de țară), rulat întâi pe catalogul regenerat RO/HU/BG. Fotografiile se pregătesc dinainte (fișier de date), nu se caută live.
 - Pe fiecare fotografie: autor, licență și link la pagina originală. Doar licențe libere (domeniu public, CC0, CC BY, CC BY-SA), linkuri verificate de script, potriviri ambigue sărite, nu ghicite.
 - Fallback stilizat (panou cu gradient și codul orașului) când nu există o fotografie liberă sau imaginea nu se încarcă, ca în Airport Live.
+- Licențe acceptate ca în Airport Live: domeniu public, CC0, CC BY, CC BY-SA, {{Attribution}} și Free Art License. Pozele se încarcă direct de pe serverele Wikimedia (fără referrer).
+
+### Vreme (adăugată de proprietar la 20 octombrie 2026)
+- Doar vremea orașelor de **origine și destinație**, cu puține detalii (nu ca în aviație): **acum** (temperatură, starea cerului, vânt, precipitații), **următoarele 3 zile** (minimă, maximă, starea cerului) și **vremea estimată la fereastra de încărcare și la cea de descărcare**.
+- Sursa: **MET Norway Locationforecast** (fără cheie, CC BY 4.0, credit în aplicație). Funcție Netlify `/api/weather/<ID GeoNames>`: orașul se caută pe server în datele noastre (browserul nu trimite coordonate), cache 15–30 min, limită de cereri, identificare prin User-Agent conform termenilor MET Norway.
+- Unități: °C, km/h, mm. Pictograme proprii (8 stări), nu emoji.
+- Proveniență „din sursă”, cu ora preluării. Vremea **nu se salvează** în cursă (se schimbă): se cere la fiecare deschidere; stări clare de încărcare, eroare și date vechi.
+- Nu intră acum: alerte meteo oficiale și vremea pe traseu (Etapa 5–6).
 
 ## 4. Pachete de țară (după Etapa 6)
 
