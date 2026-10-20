@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.10.0 — 2026-10-20 (phase 1A: redesign)
+
+- Rebuilt the interface in the Airport Live visual system (self-hosted Inter and JetBrains Mono): top bar with recent loads and city palette (Ctrl/⌘+K, `/`), hero with route code, map and cargo cards, KPI cards, and a load sheet with a provenance stripe and badge on every row.
+- Added provenance levels (sourced, computed, estimated, simulated) with validation, and a single mission-to-UI conversion, `buildLoadSheet(mission)`. Rows without a value say "Indisponibil încă — Etapa N".
+- Added right-side drawers (row details, new load, about the data) with focus handling, Escape and backdrop close.
+- Replaced the Geoapify static map with MapLibre GL JS 4.7.1 (pinned, with integrity hash) and OpenFreeMap tiles; removed the Static Maps call from `truck-route`.
+- Romanian interface from `src/i18n/ro.json` with `ro-RO` number and date formatting; cargo, trailer and family names translated.
+- Search scope narrowed in the UI to Romania, Hungary and Bulgaria (city districts excluded); ATS/ETS2 modes, curated corridors and the company directory are hidden (the engine is unchanged until phase 1B).
+- One-page print (`window.print()`, light theme, map snapshot with A/B pins) replaces the pop-up report.
+- Added estimated NST 2007 chapters per cargo family, clearly marked as an estimate until phase 3.
+- Added AGENTS.md / CLAUDE.md, a local fixture dev server, and tests (translation keys, provenance, formats, scope, selection).
+
 ## 0.9.0 — 2026-10-19
 
 - Expanded produce and food cargo profiles with named fruit, vegetable, meat, and seafood examples plus variety examples, load forms, and product-specific handling caveats.
