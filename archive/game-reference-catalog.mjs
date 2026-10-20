@@ -1,6 +1,6 @@
 /*
  * Selected reference data derived from Truck Simulator Wiki pages.
- * This file is maintained separately under CC BY-SA 4.0; see ../DATA-LICENSES.md.
+ * This file is maintained separately under CC BY-SA 4.0; see ../src/DATA-LICENSES.md.
  * Game names remain subject to their owners' rights. FOS is unofficial.
  */
 export const GAME_REFERENCE_CATALOG = {

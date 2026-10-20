@@ -1,24 +1,9 @@
-// Phase 1A scope: Romania, Hungary, Bulgaria. The GeoNames catalog still contains
-// the old ATS/ETS2 pools; this module filters it in the UI (phase 1B regenerates it).
+// Display helpers for cities: three-letter codes and Romanian names.
+// The catalog (src/data/places/cities-ro-hu-bg.json) already contains only RO/HU/BG places without
+// city sections; works with a catalog city ({ id }) or a Load place ({ geonamesId }).
 import { has, t } from "../i18n/i18n.mjs";
 
-export const SCOPE_COUNTRIES = ["RO", "HU", "BG"];
-
-// The catalog lists city districts as separate "cities" (Bucharest sectors, Budapest
-// districts). A load from "Sector 3" to "Budapest XIII. kerület" would be nonsense, so they are excluded.
-const DISTRICT_IDS = new Set([
-  3046446, 3054667, 3042430, 3043470, 3049646, 11054704, 3055970, 3053176, 3049795, 3052655, // Pest, Buda, Zugló, Újpest, Kőbánya, Józsefváros, Angyalföld, Erzsébetváros, Kispest, Ferencváros
-  733606, // Asparuhovo (district of Varna)
-]);
-const isDistrict = city => DISTRICT_IDS.has(Number(city.id)) || /^Sector \d/.test(city.name) || /kerület$/.test(city.name);
-
-export function scopeCities(catalog) {
-  const cities = (catalog?.cities || []).filter(city =>
-    SCOPE_COUNTRIES.includes(city.countryCode) && city.worlds?.includes("ETS2") && !isDistrict(city));
-  return { metadata: catalog?.metadata, cities };
-}
-
-export const inScope = place => SCOPE_COUNTRIES.includes(place?.countryCode) && !isDistrict(place);
+const idOf = place => Number(place.geonamesId ?? place.id);
 
 // Three-letter codes for the biggest cities; the rest use their first three letters.
 // Temporary until UN/LOCODE arrives in phase 2.
@@ -29,13 +14,12 @@ const CODES = {
 };
 const stripAccents = text => text.normalize("NFD").replace(/[̀-ͯ]/g, "");
 export function cityCode(place) {
-  if (CODES[Number(place.id)]) return CODES[Number(place.id)];
-  return stripAccents(String(place.name || "")).replace(/[^A-Za-z]/g, "").slice(0, 3).toUpperCase() || "???";
+  return CODES[idOf(place)] || stripAccents(String(place.name || "")).replace(/[^A-Za-z]/g, "").slice(0, 3).toUpperCase() || "???";
 }
 
 // GeoNames uses cedilla forms (ş, ţ); modern Romanian uses comma-below (ș, ț).
 const commaBelow = text => text.replace(/ş/g, "ș").replace(/ţ/g, "ț").replace(/Ş/g, "Ș").replace(/Ţ/g, "Ț");
 export function cityName(place) {
-  const key = `place.${place.id}`;
+  const key = `place.${idOf(place)}`;
   return has(key) ? t(key) : commaBelow(String(place.name || ""));
 }
