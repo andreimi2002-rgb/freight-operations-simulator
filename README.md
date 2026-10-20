@@ -2,10 +2,16 @@
 
 FOS is becoming a **real-world road freight load generator**: one generated truck load, as close to reality as possible and very detailed. First scope: Romania, Hungary, Bulgaria. The world is real; the load is simulated. Rules for contributors and tools are in [AGENTS.md](AGENTS.md); plans and the Load model are in [docs/](docs/).
 
-## Current version: 0.11.0 (phase 1B: foundation)
+## Current version: 0.12.0 (phase 1C: tabs and countries as data)
+
+- **Eight tabs** under the route header: Prezentare, Hartă și rută, Marfă, Camion și trailer, Program și pauze, Costuri, Documente, Surse și calcule. The active tab is in the address (`#cargo`). Things the finished product will show but FOS cannot compute yet appear as "Indisponibil încă — Etapa N".
+- **Schedule:** a day-by-day timeline (loading, departure, drives, breaks, daily rest, arrival, wait, unloading) computed from the loading window and the minimum-transit segments.
+- **Countries are data** (`src/data/countries.mjs`, one city file per country): adding a country needs data, not code.
+
+### Phase 1B (kept below)
 
 - **Load sheet with provenance on every row.** Each fact is *sourced* (public dataset, regulation or service), *computed* (derived by a rule, with formula and inputs), *estimated* (reasoned approximation, with its basis) or *simulated* (the generated shipment itself). A row without a value says "Indisponibil încă — Etapa N" and why. Click any row for the details.
-- **Cities:** 270 places with at least 15,000 inhabitants in Romania, Hungary and Bulgaria (GeoNames), random or picked with the city search (Ctrl/⌘+K or `/`).
+- **Cities:** 270 places with at least 15,000 inhabitants in the active countries, today Romania, Hungary and Bulgaria (GeoNames), random or picked with the city search (Ctrl/⌘+K or `/`).
 - **Route:** heavy-truck route from Geoapify (temporary, behind an adapter), drawn with MapLibre on OpenFreeMap tiles.
 - **Packaging and mass:** EUR pallets (EPAL) on the trailer floor (typical DSV floors for curtainsider, reefer and box), limited by payload; estimated mass per pallet; total mass; loading metres.
 - **Minimum transit time** under Reg. (EC) 561/2006, simplified (45 min break after 4 h 30 min, 11 h rest after 9 h of driving).
@@ -21,7 +27,7 @@ Border crossing point (phase 2), CN code, temperature ranges and ADR data (phase
 node --test                      # automated tests
 node scripts/dev-server.mjs      # http://localhost:8080 with a FIXTURE route (local testing only)
 netlify dev                      # real routes: needs GEOAPIFY_API_KEY in a local .env (not committed)
-node scripts/import-geonames.mjs # rebuild the city catalog from GeoNames (refuses to write a broken result)
+node scripts/import-geonames.mjs # rebuild the city files of the active countries (or: ... AT GR); refuses to write a broken result
 ```
 
 The dev server returns a synthetic route labelled "FIXTURE" and the page shows a "local test data" notice; it is never used in production.
@@ -33,11 +39,11 @@ The Netlify Functions read `GEOAPIFY_API_KEY` on the server. Add the key in Netl
 ## Project layout
 
 - `index.html` — page shell (text comes from `data-i18n` keys); `fonts/` — Inter and JetBrains Mono (SIL OFL 1.1).
-- `src/engine/` — pure, tested modules: `provenance`, `load-model`, `places`, `cargo`, `equipment`, `load-planning`, `transit-time`, `time-windows`, `parties`, `route`, `generator`; stubs `trucks`, `driver-hours`, `costs`, `documents`.
+- `src/engine/` — pure, tested modules: `provenance`, `load-model`, `places`, `cargo`, `equipment`, `load-planning`, `transit-time`, `time-windows`, `schedule`, `parties`, `route`, `generator`; stubs `trucks`, `driver-hours`, `costs`, `documents`.
 - `src/adapters/` — `routing-geoapify.mjs` (route contract, temporary provider) and `map-maplibre.mjs` (map and print snapshot).
-- `src/data/` — `places/` (city catalog), `cargo/` (catalog, pallet profiles, NST estimates, roles), `equipment/` (catalog, sourced floors), `regulations/` (EUR pallet, Reg. 561/2006), `scope.mjs` (city codes and names).
+- `src/data/` — `countries.mjs` (active countries), `places/` (one city file per country), `cargo/` (catalog, pallet profiles, NST estimates, roles), `equipment/` (catalog, sourced floors), `regulations/` (EUR pallet, Reg. 561/2006), `scope.mjs` (city codes and names).
 - `src/view-model/` — `load-sheet.mjs`: **the only code that reads a Load for the UI**; `provenance.mjs` labels.
-- `src/ui/` — `hero`, `panels`, `generator`, `palette`, `about`, `print`, `layers`, `dom`; `src/main.js` — state, history, events.
+- `src/ui/` — `hero`, `panels` (rows, cards), `tab-panels` and `tabs` (tab bar and the eight panels), `generator`, `palette`, `about`, `print`, `layers`, `dom`; `src/main.js` — state, history, events.
 - `src/i18n/` — `ro.json` and `i18n.mjs`.
 - `netlify/functions/` — `truck-route.mjs`; `search-places.mjs` (unused until phase 2).
 - `scripts/` — GeoNames importer and the local dev server. `archive/` — game reference catalog (phase 8).

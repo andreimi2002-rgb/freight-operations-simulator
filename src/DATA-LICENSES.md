@@ -4,7 +4,7 @@ Every value FOS displays carries its provenance (sourced, computed, estimated, s
 
 ## GeoNames city catalog
 
-`src/data/places/cities-ro-hu-bg.json` is built by `scripts/import-geonames.mjs` from the official GeoNames `cities15000.zip` dump. It keeps every populated place in Romania, Hungary and Bulgaria with at least 15,000 inhabitants (270 places: RO 126, HU 89, BG 55), excluding feature code `PPLX` (sections of populated places, e.g. Bucharest sectors and Budapest districts) and historical, abandoned or destroyed places. Each record keeps its GeoNames ID, coordinates, population, time zone and feature code.
+`src/data/places/cities-<CC>.json` (one file per country listed in `src/data/countries.mjs`: today RO 126, HU 89, BG 55 places) is built by `scripts/import-geonames.mjs` from the official GeoNames `cities15000.zip` dump. It keeps every populated place of the country with at least 15,000 inhabitants, excluding feature code `PPLX` (sections of populated places, e.g. Bucharest sectors and Budapest districts) and historical, abandoned or destroyed places. Each record keeps its GeoNames ID, coordinates, population, time zone and feature code.
 
 - Attribution: GeoNames geographical database
 - License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)

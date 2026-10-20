@@ -1,6 +1,6 @@
 # V1 · Etapa 1C — Tab-uri + țările ca date (un singur PR)
 
-Stare: în lucru (proprietarul a cerut A și B în același PR). Branch: `feature/v1-phase1c` (din `docs/roadmap`).
+Stare: implementat, în revizie (proprietarul a cerut A și B în același PR). Branch: `feature/v1-phase1c` (din `docs/roadmap`).
 Decizii luate (recomandările asistentului, acceptate implicit): antetul cursei rămâne pe toate tab-urile; tab-ul activ în adresă (`#cargo`, prin `replaceState`); orele de pe parcurs în ora locală a plecării (cu UTC), sosirea în ora destinației; fișiere de orașe separate pe țară.
 
 ## B. Țările devin date

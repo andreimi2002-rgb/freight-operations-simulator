@@ -4,12 +4,14 @@ import { validateLoad } from "./engine/load-model.mjs";
 import { RouteAnswerError } from "./engine/route.mjs";
 import { RouteServiceError, createGeoapifyRouter } from "./adapters/routing-geoapify.mjs";
 import { createRouteMap } from "./adapters/map-maplibre.mjs";
-import { buildLoadSheet, buildRecentEntry } from "./view-model/load-sheet.mjs";
+import { TABS, buildLoadSheet, buildRecentEntry } from "./view-model/load-sheet.mjs";
 import { levelLabel } from "./view-model/provenance.mjs";
 import { $, applyStaticTranslations, showToast } from "./ui/dom.mjs";
 import { closeLayer, openLayer, wireLayer } from "./ui/layers.mjs";
 import { emptyHeroHtml, heroHtml } from "./ui/hero.mjs";
-import { cargoCardHtml, detailHtml, kpisHtml, legendHtml, recentHtml, sheetHtml, warningsHtml } from "./ui/panels.mjs";
+import { detailHtml, recentHtml } from "./ui/panels.mjs";
+import { panelsHtml, tabBarHtml } from "./ui/tab-panels.mjs";
+import { wireTabs } from "./ui/tabs.mjs";
 import { createGenerator } from "./ui/generator.mjs";
 import { createPalette } from "./ui/palette.mjs";
 import { aboutHtml } from "./ui/about.mjs";
@@ -25,6 +27,7 @@ const router = createGeoapifyRouter();
 let history = [];
 let current = null;
 let sheet = null;
+let activeTab = "overview";
 let catalog = null; // { metadata, cities }
 let busy = false;
 let pickSlot = null; // which generator field the palette is filling (null: from the top bar)
@@ -60,16 +63,52 @@ function renderAll() {
   }
   sheet = buildLoadSheet(current);
   $("#hero").innerHTML = heroHtml(sheet);
-  $("#cargoCard").innerHTML = cargoCardHtml(sheet);
-  $("#kpis").innerHTML = kpisHtml(sheet);
-  $("#legend").innerHTML = legendHtml(sheet);
-  $("#sheet").innerHTML = sheetHtml(sheet);
-  $("#warnings").innerHTML = warningsHtml(sheet);
+  stashMap(); // the map card lives inside a panel that is about to be replaced
+  $("#tabbar").innerHTML = tabBarHtml(sheet, activeTab);
+  $("#panels").innerHTML = panelsHtml(sheet, activeTab);
   results.hidden = false;
+  placeMap();
   showFixtureBanner(sheet.fixture);
   const shown = sheet;
   lastSnapshot = null;
-  routeMap.show(sheet.map).then(() => routeMap.snapshot()).then(image => { if (sheet === shown) lastSnapshot = image; });
+  routeMap.show(sheet.map).then(() => takeSnapshot(shown));
+}
+
+// ---------- tabs ----------
+// One map for the whole load: it moves into the map slot of the active tab (Prezentare or Hartă și rută).
+function stashMap() { $("#mapStash").append($("#mapCard")); }
+function placeMap() {
+  const slot = $(`#panel-${activeTab} [data-map-slot]`);
+  if (!slot) return;
+  slot.append($("#mapCard"));
+  routeMap.refit();
+  setTimeout(() => takeSnapshot(sheet), 600); // after the new size has rendered
+}
+function takeSnapshot(forSheet) {
+  routeMap.snapshot().then(image => { if (image && sheet === forSheet) lastSnapshot = image; });
+}
+
+function tabFromHash() {
+  const id = location.hash.slice(1);
+  return TABS.includes(id) ? id : "overview";
+}
+
+function setTab(id, { updateAddress = true } = {}) {
+  if (!TABS.includes(id) || !sheet) return;
+  activeTab = id;
+  for (const tab of $("#tabbar").querySelectorAll('[role="tab"]')) {
+    const on = tab.dataset.tab === id;
+    tab.classList.toggle("active", on);
+    tab.setAttribute("aria-selected", String(on));
+    tab.tabIndex = on ? 0 : -1;
+    if (on) tab.scrollIntoView({ inline: "nearest", block: "nearest" });
+  }
+  for (const panel of $("#panels").querySelectorAll('[role="tabpanel"]')) panel.hidden = panel.id !== `panel-${id}`;
+  placeMap();
+  if (updateAddress) {
+    // replaceState: switching tabs must not fill the Back button with steps
+    try { window.history.replaceState(null, "", id === "overview" ? location.pathname + location.search : `#${id}`); } catch { /* the address bar is optional */ }
+  }
 }
 
 function showFixtureBanner(on) {
@@ -92,8 +131,8 @@ function openDetail(rowId, opener) {
   const badge = $("#detailBadge");
   badge.className = `badge lv-${row.level}`;
   badge.textContent = levelLabel(row.level);
-  $("#sheet").querySelectorAll(".frow").forEach(el => el.classList.toggle("sel", el.dataset.row === rowId));
-  openLayer($("#detailLayer"), { opener, onClose: () => $("#sheet").querySelectorAll(".frow.sel").forEach(el => el.classList.remove("sel")) });
+  $("#panels").querySelectorAll(".frow").forEach(el => el.classList.toggle("sel", el.dataset.row === rowId));
+  openLayer($("#detailLayer"), { opener, onClose: () => $("#panels").querySelectorAll(".frow.sel").forEach(el => el.classList.remove("sel")) });
 }
 
 // ---------- generation ----------
@@ -201,10 +240,14 @@ function wireEvents() {
   $("#aboutBtn").addEventListener("click", event => openLayer($("#aboutLayer"), { opener: event.currentTarget }));
   $("#searchBtn").addEventListener("click", event => openPalette({ opener: event.currentTarget }));
   $("#printBtn").addEventListener("click", printReport);
-  $("#sheet").addEventListener("click", event => {
+  $("#panels").addEventListener("click", event => {
     const row = event.target.closest("[data-row]");
-    if (row) openDetail(row.dataset.row, row);
+    if (row) { openDetail(row.dataset.row, row); return; }
+    const link = event.target.closest("[data-tab]"); // "Vezi detalii" links inside the cards
+    if (link) { setTab(link.dataset.tab); $("#tabbar").querySelector(".tab.active")?.focus({ preventScroll: true }); window.scrollTo({ top: $("#results").offsetTop - 70, behavior: "smooth" }); }
   });
+  wireTabs($("#tabbar"), id => setTab(id));
+  window.addEventListener("hashchange", () => setTab(tabFromHash(), { updateAddress: false }));
   $("#recent").addEventListener("click", event => {
     const chip = event.target.closest("[data-recent]");
     if (!chip) return;
@@ -254,6 +297,7 @@ async function start() {
   generator.setStatus(t("gen.catalogLoading"));
   history = loadHistory();
   current = history[0] || null;
+  activeTab = tabFromHash();
   renderAll();
   loadCatalog();
 }

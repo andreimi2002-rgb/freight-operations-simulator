@@ -3,7 +3,9 @@ import assert from "node:assert/strict";
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { setDictionary, t, has, formatKm, formatDuration, formatNumber, formatDate, formatTime } from "../src/i18n/i18n.mjs";
-import { buildLoadSheet, buildRecentEntry, ROW_IDS, zoneLabel } from "../src/view-model/load-sheet.mjs";
+import { buildLoadSheet, buildRecentEntry, PLACEHOLDER_IDS, PLACEHOLDERS_BY_TAB, REAL_ROWS_BY_TAB, ROW_IDS, TABS, zoneLabel } from "../src/view-model/load-sheet.mjs";
+import { PHASES } from "../src/engine/provenance.mjs";
+import { panelsHtml, tabBarHtml } from "../src/ui/tab-panels.mjs";
 import { generateLoad } from "../src/engine/generator.mjs";
 import { CARGO } from "../src/engine/cargo.mjs";
 import { EQUIPMENT } from "../src/engine/equipment.mjs";
@@ -34,7 +36,8 @@ test("every cargo on every listed trailer gives a complete, fully translated she
   for (const cargo of Object.values(CARGO)) {
     for (const equipmentId of cargo.equipmentIds) {
       const sheet = buildLoadSheet(await make({ cargoId: cargo.id, equipmentId }));
-      assert.deepEqual(sheet.rows.map(r => r.id), ROW_IDS);
+      assert.deepEqual(sheet.rows.filter(r => !r.placeholder).map(r => r.id).sort(), [...ROW_IDS].sort());
+      assert.deepEqual(sheet.rows.filter(r => r.placeholder).map(r => r.id).sort(), [...PLACEHOLDER_IDS].sort());
       for (const r of sheet.rows) assert.ok(r.valueText, `${cargo.id}/${equipmentId}/${r.id} has text`);
       const json = JSON.stringify(sheet);
       assert.ok(!json.includes("⟦"), `${cargo.id}/${equipmentId}: missing translation ${json.match(/⟦[^⟧]*⟧/)?.[0]}`);
@@ -145,7 +148,10 @@ test("the dictionary covers every cargo, trailer, family, category, role, basis 
   for (const profile of Object.values(PACKAGING_PROFILES)) {
     assert.ok(profile.unitType ? has(`basis.unitMass.${profile.basis}`) : has(`reason.${profile.reason}`), JSON.stringify(profile));
   }
-  for (const id of ROW_IDS) assert.ok(has(`row.${id}.label`), `row.${id}.label`);
+  for (const id of [...ROW_IDS, ...PLACEHOLDER_IDS]) assert.ok(has(`row.${id}.label`), `row.${id}.label`);
+  for (const id of PLACEHOLDER_IDS) assert.ok(has(`reason.${id}`), `reason.${id}`);
+  for (const id of TABS) assert.ok(has(`tab.${id}`), `tab.${id}`);
+  for (const id of TABS.filter(tab => tab !== "overview")) assert.ok(has(`panel.${id}.title`) && has(`panel.${id}.note`), `panel.${id}`);
 });
 
 function sourceFiles(dir) {
@@ -175,4 +181,112 @@ test("ro.json declares its locale, has no empty strings and no duplicate keys", 
   const seen = new Set();
   for (const m of raw.matchAll(/^\s*"([^"]+)"\s*:/gm)) { assert.ok(!seen.has(m[1]), `duplicate key: ${m[1]}`); seen.add(m[1]); }
   assert.equal(t("unavailable.phase", { phase: "1B" }), "Indisponibil încă — Etapa 1B");
+});
+
+// ---------- tabs (phase 1C) ----------
+test("the eight tabs, in order, with language-neutral ids", async () => {
+  const sheet = buildLoadSheet(await make());
+  assert.deepEqual(TABS, ["overview", "map", "cargo", "equipment", "schedule", "costs", "documents", "sources"]);
+  assert.deepEqual(sheet.tabs.map(tab => tab.id), TABS);
+  assert.deepEqual(sheet.tabs.map(tab => tab.label), ["Prezentare", "Hartă și rută", "Marfă", "Camion și trailer", "Program și pauze", "Costuri", "Documente", "Surse și calcule"]);
+  for (const forbidden of ["Flotă", "Companii", "Statistici", "Evenimente"]) assert.ok(!sheet.tabs.some(tab => tab.label === forbidden), forbidden);
+});
+
+test("every fact of the Load belongs to exactly one tab; nothing is lost", async () => {
+  const placed = Object.values(REAL_ROWS_BY_TAB).flat();
+  assert.equal(new Set(placed).size, placed.length, "a row is listed in two tabs");
+  const sheet = buildLoadSheet(await make());
+  for (const [tab, ids] of Object.entries(REAL_ROWS_BY_TAB)) {
+    assert.deepEqual(sheet.rowsByTab[tab].filter(r => !r.placeholder).map(r => r.id), ids, tab);
+    for (const r of sheet.rowsByTab[tab]) assert.equal(r.tab, tab);
+  }
+  assert.equal(sheet.rows.length, ROW_IDS.length + PLACEHOLDER_IDS.length);
+  assert.equal(new Set(sheet.rows.map(r => r.id)).size, sheet.rows.length, "row ids are unique");
+});
+
+test("rows for later stages are unavailable, name their stage and reason, and carry no value", async () => {
+  const sheet = buildLoadSheet(await make());
+  for (const [tab, entries] of Object.entries(PLACEHOLDERS_BY_TAB)) {
+    for (const [id, phase] of entries) {
+      const r = sheet.rowsByTab[tab].find(x => x.id === id);
+      assert.ok(r && r.placeholder, id);
+      assert.equal(r.level, "unavailable");
+      assert.ok(PHASES.includes(phase) && phase !== "1B", id);
+      assert.equal(r.valueText, "Indisponibil încă — Etapa " + phase);
+      assert.ok(r.detail.explanation.length > 20, id);
+      assert.equal(r.fact.phase, phase);
+    }
+  }
+  const phases = id => sheet.rows.find(r => r.id === id).fact.phase;
+  assert.equal(phases("borderDistance"), "2");
+  assert.equal(phases("elevation"), "5");
+  assert.equal(phases("tolls"), "5");
+  assert.equal(phases("fuel"), "6");
+  assert.equal(phases("cmr"), "7");
+  assert.equal(phases("truck"), "4");
+  assert.equal(phases("volume"), "3");
+  assert.deepEqual(sheet.rowsByTab.costs.map(r => r.id), ["fuel", "tolls", "totalCost", "currency"]);
+});
+
+test("the schedule row and timeline come from the engine", async () => {
+  const load = await make();
+  const sheet = buildLoadSheet(load);
+  const row = sheet.rows.find(r => r.id === "schedule");
+  assert.equal(row.level, "computed");
+  assert.match(row.valueText, /^Plecare .* → sosire /);
+  assert.equal(sheet.timeline[0].type, "loading");
+  assert.equal(sheet.timeline[1].type, "depart");
+  assert.equal(sheet.timeline.at(-1).type, "unloading");
+  assert.ok(sheet.timeline.every(e => e.label && e.when && e.zone.startsWith("UTC")));
+  assert.equal(sheet.timeline.filter(e => e.type === "break").length, load.transit.value.breaks);
+  assert.ok(row.detail.meta.length >= sheet.timeline.length);
+  assert.match(row.fact.formula, /Plecare = sfârșitul ferestrei/);
+});
+
+test("Prezentare data and the trailers listed for the cargo", async () => {
+  const sheet = buildLoadSheet(await make());
+  assert.equal(sheet.overview.route.length, 6);
+  assert.equal(sheet.overview.roles.length, 2);
+  assert.equal(sheet.overview.schedule.length, 4);
+  assert.equal(sheet.overview.trailer.name, "Semiremorcă frigorifică");
+  assert.equal(sheet.overview.trailer.floorPending, null);
+  assert.deepEqual(sheet.trailers.map(x => x.id).sort(), [...CARGO.apples.equipmentIds].sort());
+  assert.equal(sheet.trailers.filter(x => x.chosen).length, 1);
+  assert.equal(sheet.trailers.find(x => x.chosen).id, "reefer");
+  const noFloor = buildLoadSheet(await make({ cargoId: "fuel", equipmentId: "fuelTanker" }));
+  assert.equal(noFloor.overview.trailer.floor, null);
+  assert.match(noFloor.overview.trailer.floorPending, /Etapa 4/);
+});
+
+test("the tab bar and the eight panels render consistently", async () => {
+  const sheet = buildLoadSheet(await make());
+  for (const active of ["overview", "cargo", "sources"]) {
+    const bar = tabBarHtml(sheet, active);
+    const panels = panelsHtml(sheet, active);
+    assert.equal((bar.match(/role="tab"/g) || []).length, 8);
+    assert.equal((bar.match(/aria-selected="true"/g) || []).length, 1);
+    assert.match(bar, new RegExp(`id="tab-${active}"[^>]*aria-selected="true"`));
+    assert.equal((panels.match(/role="tabpanel"/g) || []).length, 8);
+    assert.equal((panels.match(/ hidden>/g) || []).length, 7, "one visible panel");
+    for (const id of TABS) {
+      assert.match(panels, new RegExp(`id="panel-${id}"[^>]*aria-labelledby="tab-${id}"`));
+      assert.match(bar, new RegExp(`aria-controls="panel-${id}"`));
+    }
+    assert.ok(!panels.includes("⟦") && !bar.includes("⟦"));
+  }
+  const panels = panelsHtml(sheet, "overview");
+  const shown = new Set([...panels.matchAll(/data-row="([^"]+)"/g)].map(m => m[1]));
+  for (const r of sheet.rows) assert.ok(shown.has(r.id), `row ${r.id} is reachable from a panel`);
+  assert.equal((panels.match(/data-map-slot="/g) || []).length, 2, "map slots in Prezentare and Hartă și rută");
+  for (const link of ["map", "cargo", "equipment", "schedule"]) assert.match(panels, new RegExp(`class="linkbtn" data-tab="${link}"`));
+});
+
+test("Surse și calcule lists every real row once under its tab, and the missing items", async () => {
+  const sheet = buildLoadSheet(await make());
+  const html = panelsHtml(sheet, "sources");
+  const section = html.slice(html.indexOf('id="panel-sources"'));
+  for (const id of ROW_IDS) assert.equal((section.match(new RegExp(`data-row="${id}"`, "g")) || []).length, 1, id);
+  for (const id of PLACEHOLDER_IDS) assert.equal((section.match(new RegExp(`data-row="${id}"`, "g")) || []).length, 1, id);
+  assert.match(section, /Încă lipsă \(etapele următoare\)/);
+  assert.match(section, /De verificat/);
 });

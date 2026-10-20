@@ -6,6 +6,7 @@ const VERSION = "4.7.1";
 const SCRIPT = { url: `https://cdn.jsdelivr.net/npm/maplibre-gl@${VERSION}/dist/maplibre-gl.js`, integrity: "sha384-SYKAG6cglRMN0RVvhNeBY0r3FYKNOJtznwA0v7B5Vp9tr31xAHsZC0DqkQ/pZDmj" };
 const STYLE_URL = "https://tiles.openfreemap.org/styles/dark";
 const LOAD_TIMEOUT_MS = 15000;
+const FIT = { padding: { top: 56, bottom: 46, left: 36, right: 36 }, duration: 0, maxZoom: 11 };
 
 let libraryPromise = null;
 function loadLibrary() {
@@ -35,6 +36,7 @@ export function createRouteMap({ container, statusElement }) {
   let markers = [];
   let ready = null;
   let endpoints = null;
+  let lastBounds = null;
   const setStatus = text => { statusElement.textContent = text || ""; };
 
   async function ensureMap() {
@@ -89,12 +91,20 @@ export function createRouteMap({ container, statusElement }) {
       bounds.extend([data.origin.lon, data.origin.lat]);
       bounds.extend([data.destination.lon, data.destination.lat]);
       for (const line of lines) for (const point of line) bounds.extend(point);
-      map.fitBounds(bounds, { padding: { top: 56, bottom: 46, left: 36, right: 36 }, duration: 0, maxZoom: 11 });
+      lastBounds = bounds;
+      map.fitBounds(bounds, FIT);
       setStatus(lines.length ? "" : t("map.noGeometry"));
       container.setAttribute("aria-label", t("map.aria", { origin: data.originName, destination: data.destinationName }));
     } catch {
       setStatus(t("map.error"));
     }
+  }
+
+  // The map card was moved to another tab (different size): resize and fit the route again.
+  function refit() {
+    if (!map || !lastBounds) return;
+    map.resize();
+    map.fitBounds(lastBounds, FIT);
   }
 
   // PNG/JPEG of the current map for the print view; null when the map is unavailable.
@@ -108,6 +118,7 @@ export function createRouteMap({ container, statusElement }) {
       map.triggerRepaint();
       await new Promise(resolve => requestAnimationFrame(resolve));
       const canvas = map.getCanvas();
+      if (!canvas.clientWidth || !canvas.clientHeight) return null; // map not visible (another tab): the caller uses its last snapshot
       // The A/B pins are HTML elements, not part of the WebGL canvas: draw them onto a copy.
       const copy = document.createElement("canvas");
       copy.width = canvas.width;
@@ -134,5 +145,5 @@ export function createRouteMap({ container, statusElement }) {
     } catch { return null; }
   }
 
-  return { show, snapshot };
+  return { show, snapshot, refit };
 }

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.12.0 — 2026-10-20 (phase 1C: tabs + countries as data)
+
+- **Tabs:** the load page has eight tabs under the route header — Prezentare, Hartă și rută, Marfă, Camion și trailer, Program și pauze, Costuri, Documente, Surse și calcule (tablist keyboard support, active tab in the address as `#cargo`, scrollable on phones). Every fact of the Load sits in exactly one tab; "Surse și calcule" lists them all with the legend and "De verificat". Prezentare shows cards that link to the other tabs.
+- **Rows for later stages** (cod CN, distanță pe țări, relief, volum, camion, taxe, motorină, cost total, CMR, document ADR…) appear as "Indisponibil încă — Etapa N" with their reason; they are listed separately from the Load's facts and are not printed.
+- **Schedule:** new engine module `src/engine/schedule.mjs` builds the day-by-day timeline (loading, departure at the end of loading, drives, breaks, daily rest, arrival, wait, unloading) from the existing loading window and transit segments; shown in "Program și pauze" and as a computed row with its formula. Intermediate times are in the origin's local time, arrival and unloading in the destination's.
+- One MapLibre map moves between Prezentare and Hartă și rută (resize and refit); the print snapshot stays valid from any tab. Print lists only real facts and stays on one page.
+- **Countries as data:** `src/data/countries.mjs` lists the active countries; one city file per country (`cities-RO/HU/BG.json`, same 270 places); the importer takes country codes and validates per country; engine, UI, dev server and tests read the list from data; country phrases come from `{countries}`; the route language follows the interface. A test shows a new country works with data only.
+- Load schema unchanged (version 3): saved loads stay valid.
+
 ## 0.11.0 — 2026-10-20 (phase 1B: foundation)
 
 - New Load model (schema 3) where every value is a fact with provenance; `validateLoad()` rejects incomplete facts, out-of-scope places and impossible windows. Documented in `docs/LOAD-MODEL.md`.
