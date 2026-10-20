@@ -57,6 +57,8 @@ warnings[]               [{ id }]  routeDurationNotTachograph, massDependsOnEsti
 - **Schedule** (`src/engine/schedule.mjs`, `scheduleFact(load)`): a computed fact built from `timeWindows.loading` and `transit.segments`: loading, departure at the end of the loading window, each drive/break/daily-rest segment back to back, arrival, an optional wait until the unloading window, unloading. Formula id `schedule`; inputs: driving, transit, breaks, daily rests. Times of the segments carry the origin's time zone; arrival, wait and unloading the destination's.
 - **Tabs:** `buildLoadSheet` groups the Load's facts into eight tabs (each fact in exactly one). Rows for later stages (placeholders) are defined in the view model with their phase and reason; they are not facts of the Load.
 
+- **Weather** (phase 1D) is not part of the Load: it is live data (MET Norway), fetched for the origin and destination each time a load is shown, with its source and time. The forecast "at the window" is read from the loading window (origin) and the unloading window (destination).
+
 ## Rules
 
 - **Packaging:** EUR pallets lie lengthwise; count = min(⌊L/1200⌋ × ⌊W/800⌋, ⌊payload / mass per pallet⌋). Only cargo with a pallet profile on a trailer with a sourced floor (curtainsider, reefer, box). Otherwise all packaging facts are unavailable with the reason (`bulk`, `specialUnit`, `dangerousGoods`, `container`, `trailerNotPalletized`).

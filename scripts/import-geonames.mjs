@@ -8,6 +8,7 @@
 import { writeFile } from "node:fs/promises";
 import { inflateRawSync } from "node:zlib";
 import { ACTIVE_COUNTRIES, COUNTRIES } from "../src/data/countries.mjs";
+import { buildPlacesLookup } from "./lib/places-lookup.mjs";
 
 const SOURCE = "https://download.geonames.org/export/dump/cities15000.zip";
 const EXCLUDED_CODES = new Set(["PPLX", "PPLH", "PPLQ", "PPLW", "PPLCH"]);
@@ -92,3 +93,5 @@ for (const code of codes) {
   console.log(`${code}: wrote ${cities.length} cities (${excluded.length} excluded)`);
 }
 if (failed) process.exit(1);
+const lookup = await buildPlacesLookup();
+console.log(`lookup.json: ${lookup.count} places from ${lookup.countries.join(", ")}`);

@@ -2,7 +2,12 @@
 
 FOS is becoming a **real-world road freight load generator**: one generated truck load, as close to reality as possible and very detailed. First scope: Romania, Hungary, Bulgaria. The world is real; the load is simulated. Rules for contributors and tools are in [AGENTS.md](AGENTS.md); plans and the Load model are in [docs/](docs/).
 
-## Current version: 0.12.0 (phase 1C: tabs and countries as data)
+## Current version: 0.13.0 (phase 1D: city photos and weather)
+
+- **City cards** for origin and destination with a Wikimedia Commons photo (credited; styled fallback when there is none) and **live weather** from MET Norway: now, the next three days and the forecast at the loading and unloading windows.
+- `node scripts/build-city-photos.mjs` prepares the photos (free licences only, checked links); `/api/weather/:id` serves the weather (cached, rate limited).
+
+### Phase 1C
 
 - **Eight tabs** under the route header: Prezentare, Hartă și rută, Marfă, Camion și trailer, Program și pauze, Costuri, Documente, Surse și calcule. The active tab is in the address (`#cargo`). Things the finished product will show but FOS cannot compute yet appear as "Indisponibil încă — Etapa N".
 - **Schedule:** a day-by-day timeline (loading, departure, drives, breaks, daily rest, arrival, wait, unloading) computed from the loading window and the minimum-transit segments.
@@ -28,9 +33,11 @@ node --test                      # automated tests
 node scripts/dev-server.mjs      # http://localhost:8080 with a FIXTURE route (local testing only)
 netlify dev                      # real routes: needs GEOAPIFY_API_KEY in a local .env (not committed)
 node scripts/import-geonames.mjs # rebuild the city files of the active countries (or: ... AT GR); refuses to write a broken result
+node scripts/build-city-photos.mjs # prepare city photos from Wikidata/Wikimedia Commons (or: ... AT GR)
+node scripts/build-places-lookup.mjs # rebuild the city index used by /api/weather (no download)
 ```
 
-The dev server returns a synthetic route labelled "FIXTURE" and the page shows a "local test data" notice; it is never used in production.
+The dev server answers `/api/weather/:id` with real MET Norway data and returns a synthetic route labelled "FIXTURE" and the page shows a "local test data" notice; it is never used in production.
 
 ## Configure Geoapify
 

@@ -17,6 +17,9 @@ import { createPalette } from "./ui/palette.mjs";
 import { aboutHtml } from "./ui/about.mjs";
 import { printHtml } from "./ui/print.mjs";
 import { VERSION } from "./version.mjs";
+import { fetchCityWeather, forgetWeather } from "./adapters/weather-client.mjs";
+import { weatherView } from "./view-model/weather.mjs";
+import { weatherHtml } from "./ui/city-cards.mjs";
 import { activeCountries } from "./data/countries.mjs";
 
 // New key for the phase 1B Load model; the phase 1A history (fos-mission-history-v3) is left untouched.
@@ -35,6 +38,9 @@ let lastSnapshot = null;
 let generator = null;
 let palette = null;
 let routeMap = null;
+let photos = new Map(); // GeoNames ID -> prepared city photo (src/data/photos/*.json)
+const weatherViews = {}; // "origin" | "destination" -> view shown on the card (for the drawer)
+const WEATHER_REFRESH_MS = 20 * 60000;
 
 // ---------- history (localStorage; every access guarded) ----------
 function loadHistory() {
@@ -61,7 +67,7 @@ function renderAll() {
     results.hidden = true;
     return;
   }
-  sheet = buildLoadSheet(current);
+  sheet = buildLoadSheet(current, { photos });
   $("#hero").innerHTML = heroHtml(sheet);
   stashMap(); // the map card lives inside a panel that is about to be replaced
   $("#tabbar").innerHTML = tabBarHtml(sheet, activeTab);
@@ -72,6 +78,26 @@ function renderAll() {
   const shown = sheet;
   lastSnapshot = null;
   routeMap.show(sheet.map).then(() => takeSnapshot(shown));
+  refreshWeather(shown);
+}
+
+// ---------- weather (live, MET Norway; never stored in the load) ----------
+function refreshWeather(forSheet) {
+  for (const city of forSheet.cities) {
+    fetchCityWeather(city.geonamesId).then(answer => {
+      if (sheet !== forSheet) return; // another load is on screen by now
+      const view = weatherView(answer, city);
+      weatherViews[city.role] = view;
+      document.querySelectorAll(`[data-weather="${city.role}"]`).forEach(el => { el.innerHTML = weatherHtml(view, city.role); });
+    });
+  }
+}
+
+// ---------- city photos (prepared offline; a missing file only means no photos) ----------
+async function loadPhotos() {
+  const files = await Promise.all(activeCountries().map(country => fetch(`/src/data/${country.photoFile}`, { cache: "force-cache" })
+    .then(response => (response.ok ? response.json() : null)).catch(() => null)));
+  return new Map(files.filter(Boolean).flatMap(file => Object.entries(file.photos)));
 }
 
 // ---------- tabs ----------
@@ -126,7 +152,10 @@ function showFixtureBanner(on) {
 // ---------- detail drawer ----------
 function openDetail(rowId, opener) {
   const row = sheet?.rows.find(item => item.id === rowId);
-  if (!row) return;
+  if (row) showDetail(row, opener);
+}
+function showDetail(row, opener) {
+  const rowId = row.id;
   $("#detailBody").innerHTML = detailHtml(row);
   const badge = $("#detailBadge");
   badge.className = `badge lv-${row.level}`;
@@ -243,6 +272,9 @@ function wireEvents() {
   $("#panels").addEventListener("click", event => {
     const row = event.target.closest("[data-row]");
     if (row) { openDetail(row.dataset.row, row); return; }
+    const weatherDetail = event.target.closest("[data-weather-detail]");
+    if (weatherDetail) { const view = weatherViews[weatherDetail.dataset.weatherDetail]; if (view?.row) showDetail(view.row, weatherDetail); return; }
+    if (event.target.closest("[data-weather-retry]")) { forgetWeather(); refreshWeather(sheet); return; }
     const link = event.target.closest("[data-tab]"); // "Vezi detalii" links inside the cards
     if (link) { setTab(link.dataset.tab); $("#tabbar").querySelector(".tab.active")?.focus({ preventScroll: true }); window.scrollTo({ top: $("#results").offsetTop - 70, behavior: "smooth" }); }
   });
@@ -298,6 +330,13 @@ async function start() {
   history = loadHistory();
   current = history[0] || null;
   activeTab = tabFromHash();
+  photos = await loadPhotos();
+  // A photo that fails to load falls back to the styled panel (error events do not bubble: capture).
+  $("#panels").addEventListener("error", event => {
+    if (event.target.tagName === "IMG") event.target.closest(".city2-photo")?.classList.add("no-photo");
+  }, true);
+  // Live weather: refresh every 20 minutes while the page is visible.
+  setInterval(() => { if (sheet && document.visibilityState === "visible") { forgetWeather(); refreshWeather(sheet); } }, WEATHER_REFRESH_MS);
   renderAll();
   loadCatalog();
 }

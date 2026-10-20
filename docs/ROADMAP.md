@@ -11,7 +11,7 @@ Notă: punctele marcate **[propunere acceptată]** au fost propuse de asistent �
 | **1A** | Redesign în stilul Airport Live, hartă MapLibre + OpenFreeMap, fișa cursei cu proveniență, i18n (română) | făcută (PR #5) |
 | **1B** | Fundație: modelul `Load`, paleți / masă / metri de încărcare, timp minim de tranzit (Reg. 561/2006, simplificat), ferestre orare, roluri, catalog RO/HU/BG regenerat, scoaterea ATS/ETS2 | făcută (PR #6) |
 | **1C** | Navigare pe tab-uri (schelet) + țările devin date, vezi §2 | făcută (PR #7) |
-| **1D** | Fotografii și vreme pentru orașe (un singur PR, două părți independente), vezi §3 | în lucru |
+| **1D** | Fotografii și vreme pentru orașe (un singur PR, două părți independente), vezi §3 | în revizie |
 | **2** | Locații reale din OpenStreetMap (depozite, zone industriale, porturi, terminale, puncte de frontieră, parcări TIR), coduri UN/LOCODE, **distanța pe țări** din poligoane Natural Earth [propunere acceptată] | |
 | **3** | Mărfuri v2: coduri CN/HS, ADR (număr ONU, clasă, grupă, cod de tunel), ambalare și mase cu sursă, **volum în m³ din înălțimea stivei estimată pe marfă**, **orientarea paleților aleasă de motor (varianta mai bună, ambele în drawer)** [propuneri acceptate], ponderare după fluxuri Eurostat, corespondența CN→NST | |
 | **4** | Camioane și trailere reale cu specificații și sursă (putere, cuplu, consum ca estimat), configurații, verificarea masei (Directiva 96/53/CE) | |

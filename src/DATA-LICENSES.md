@@ -13,6 +13,14 @@ Every value FOS displays carries its provenance (sourced, computed, estimated, s
 
 GeoNames provides the data as-is without warranty. Coordinates are city centroids, not loading points (real loading points come in phase 2).
 
+## City photos (phase 1D)
+
+`src/data/photos/cities-<CC>.json` is built by `scripts/build-city-photos.mjs` from **Wikidata** (CC0: GeoNames ID P1566 → image P18 / Wikivoyage banner P948) and **Wikimedia Commons** (author, licence, size, page of each file). Only free licences that allow display with credit are used: public domain, CC0, CC BY, CC BY-SA, Commons {{Attribution}}, Free Art License. Every photo is shown with its author, licence and a link to its Commons page; the images are loaded from Wikimedia's servers (no referrer). Cities without a usable photo show a styled panel.
+
+## Weather (phase 1D)
+
+City weather comes live from **MET Norway — Locationforecast 2.0** (https://api.met.no/), licensed **CC BY 4.0** (credited on each card and in the weather drawer), through the Netlify function `/api/weather/:id`, which identifies itself with a User-Agent and caches answers as MET Norway's terms ask. The weather is not stored in saved loads. `tests/fixtures/met-locationforecast-bucharest.json` is a trimmed recorded MET answer used only by the tests.
+
 ## Load planning sources (phase 1B)
 
 - **EUR pallet:** 1200 × 800 × 144 mm, safe working load 1,500 kg — [EPAL, EPAL Euro pallet (EPAL 1)](https://www.epal-pallets.org/eu-en/load-carriers/epal-euro-pallet), retrieved 2026-10-20. Stored in `src/data/regulations/packaging.mjs`.

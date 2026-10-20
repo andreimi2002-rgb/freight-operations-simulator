@@ -2,6 +2,7 @@
 import { t } from "../i18n/i18n.mjs";
 import { esc } from "./dom.mjs";
 import { cargoCardHtml, kpisHtml, legendHtml, rowListHtml, warningsHtml } from "./panels.mjs";
+import { cityCardsHtml } from "./city-cards.mjs";
 
 const svg = body => `<svg class="tab-ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`;
 const ICONS = {
@@ -47,6 +48,7 @@ function overviewHtml(sheet) {
       ${card(t("card.route"), kv(o.route), { tab: "map", label: "card.seeMap" })}
       ${card(t("card.roles"), kv(o.roles) + `<p class="hint">${esc(t("card.rolesNote"))}</p>`)}
     </div></div>
+    ${cityCardsHtml(sheet)}
     <div class="ov-mid">
       <section class="card cargo-card">${cargoCardHtml(sheet)}<button type="button" class="linkbtn" data-tab="cargo">${esc(t("card.seeCargo"))} <span aria-hidden="true">→</span></button></section>
       ${card(t("card.trailer"), trailer, { tab: "equipment", label: "card.seeEquipment" })}
@@ -70,7 +72,7 @@ function sourcesHtml(sheet) {
 const rows = (sheet, id) => rowListHtml(sheet.rowsByTab[id]);
 const BODIES = {
   overview: overviewHtml,
-  map: sheet => `${mapSlot("map", true)}${rows(sheet, "map")}`,
+  map: sheet => `${mapSlot("map", true)}${cityCardsHtml(sheet)}<div style="height:16px"></div>${rows(sheet, "map")}`,
   cargo: sheet => `<section class="card cargo-card">${cargoCardHtml(sheet)}</section><div style="height:16px"></div>${rows(sheet, "cargo")}`,
   equipment: sheet => `${rows(sheet, "equipment")}<div style="height:16px"></div>${card(t("equipment.listedTitle"), trailersHtml(sheet))}`,
   schedule: sheet => `${card(t("schedule.timelineTitle"), timelineHtml(sheet))}<div style="height:16px"></div>${rows(sheet, "schedule")}`,

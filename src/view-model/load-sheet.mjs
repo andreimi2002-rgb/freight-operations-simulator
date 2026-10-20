@@ -125,7 +125,8 @@ function timelineOf(events) {
   });
 }
 
-export function buildLoadSheet(load) {
+// photos: Map(GeoNames ID -> prepared Wikimedia Commons photo), optional.
+export function buildLoadSheet(load, { photos = new Map() } = {}) {
   const origin = load.origin.value;
   const destination = load.destination.value;
   const summaryFact = load.route.summary;
@@ -276,6 +277,20 @@ export function buildLoadSheet(load) {
       destinationName: cityName(destination),
       provider: route.provider,
     },
+    cities: [
+      { role: "origin", label: t("city.origin"), place: origin, weatherAt: { iso: loading.from, label: t("weather.atLoading") } },
+      { role: "destination", label: t("city.destination"), place: destination, weatherAt: { iso: unloading.from, label: t("weather.atUnloading") } },
+    ].map(({ role, label, place, weatherAt }) => ({
+      role,
+      label,
+      geonamesId: place.geonamesId,
+      timeZone: place.timeZone,
+      code: cityCode(place),
+      name: cityName(place),
+      sub: `${countryName(place.countryCode)} · ${t("city.population", { value: formatNumber(place.population, { maximumFractionDigits: 0 }) })}`,
+      photo: photos.get(String(place.geonamesId)) || null,
+      weatherAt,
+    })),
     tabs: TABS.map(id => ({ id, label: t(`tab.${id}`) })),
     rows: allRows,
     rowsByTab,

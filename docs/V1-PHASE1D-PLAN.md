@@ -1,6 +1,6 @@
 # V1 · Etapa 1D — Fotografii și vreme pentru orașe (un singur PR)
 
-Stare: în lucru. Branch: `feature/v1-phase1d` (din `main`, după PR #7).
+Stare: implementat, în revizie. Acoperire foto: 225 din 270 de orașe (RO 97/126, HU 76/89, BG 52/55). Branch: `feature/v1-phase1d` (din `main`, după PR #7).
 Decizii (recomandările asistentului, acceptate de proprietar): cardurile orașelor în „Prezentare” și „Hartă și rută”, hero-ul rămâne fără fotografie; aceleași licențe ca în Airport Live (inclusiv Free Art License); pozele se încarcă de pe Wikimedia; vreme doar pentru origine și destinație; acum + 3 zile + la ferestre; °C, km/h, mm; MET Norway.
 
 ## A. Fotografii (date pregătite offline)
