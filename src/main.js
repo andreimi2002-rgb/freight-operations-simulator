@@ -198,7 +198,7 @@ async function generate({ originCity = null, destinationCity = null, family = "a
   try {
     const load = await generateLoad({
       cities: catalog.cities, importedAt: catalog.metadata.importedAt, router,
-      originCity, destinationCity, family, cargoId, equipmentId, now: new Date(), geo: catalog.geo,
+      originCity, destinationCity, family, cargoId, equipmentId, now: new Date(), geo: catalog.geo, sites: catalog.sites,
     });
     history.unshift(load);
     history = history.slice(0, MAX_HISTORY);
@@ -256,7 +256,7 @@ async function loadCatalog() {
     }));
     // each city keeps the import date of its own country file (shown as the retrieval date of the source)
     const cities = files.flatMap(file => file.cities.map(city => ({ ...city, importedAt: file.metadata.importedAt, locode: geoData.locodes[city.id] ?? null })));
-    catalog = { metadata: files[0].metadata, cities, geo: geoData.geo };
+    catalog = { metadata: files[0].metadata, cities, geo: geoData.geo, sites: geoData.sites };
     generator.setStatus(t("gen.catalogReady", { count: cities.length }));
   } catch {
     generator.setStatus(t("gen.catalogError"));

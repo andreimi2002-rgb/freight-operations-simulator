@@ -13,13 +13,13 @@ const REQUIRED = [
   "transit", "timeWindows.loading", "timeWindows.unloading", "parties.shipperRole", "parties.consigneeRole",
 ];
 
-export function createLoad({ id, createdAt, origin, destination, route, cargo, packaging, equipment, transit, timeWindows, parties, warnings = [], countries = ACTIVE_COUNTRIES }) {
+export function createLoad({ id, createdAt, origin, destination, originSite = null, destinationSite = null, route, cargo, packaging, equipment, transit, timeWindows, parties, warnings = [], countries = ACTIVE_COUNTRIES }) {
   return {
     id,
     createdAt,
     schemaVersion: SCHEMA_VERSION,
     scope: { countries: [...countries] },
-    origin, destination, route, cargo, packaging, equipment, transit, timeWindows, parties,
+    origin, destination, originSite, destinationSite, route, cargo, packaging, equipment, transit, timeWindows, parties,
     truck: null,      // TODO(phase 4): real truck model with sourced specifications
     driver: null,     // TODO(phase 6): full driver-hours plan (Reg. 561/2006, weekend bans)
     costs: null,      // TODO(phase 6): diesel (EU Weekly Oil Bulletin) and tolls (official tariffs)

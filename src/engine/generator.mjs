@@ -8,6 +8,7 @@ import { transitFact } from "./transit-time.mjs";
 import { generateWindows, windowFacts } from "./time-windows.mjs";
 import { partyFacts } from "./parties.mjs";
 import { routeGeoFacts } from "./geo-facts.mjs";
+import { pickSite, siteFact } from "./sites.mjs";
 import { createLoad, validateLoad } from "./load-model.mjs";
 
 export class GenerationError extends Error {
@@ -23,7 +24,7 @@ export async function generateLoad({
   cities, importedAt, router,
   originCity = null, destinationCity = null,
   family = "all", cargoId = "random", equipmentId = "random",
-  now = new Date(), random = Math.random, countries, geo = null,
+  now = new Date(), random = Math.random, countries, geo = null, sites = null,
 }) {
   let a = originCity;
   let b = destinationCity;
@@ -39,7 +40,10 @@ export async function generateLoad({
 
   const origin = toPlace(a, importedAt);
   const destination = toPlace(b, importedAt);
-  const route = await routeFacts(router, origin.value, destination.value);
+  // A real loading place in the city (OpenStreetMap), when the catalog has one; the route then runs between the places.
+  const originSite = siteFact(pickSite(a.id, cargo, sites, random), importedAt);
+  const destinationSite = siteFact(pickSite(b.id, cargo, sites, random), importedAt);
+  const route = await routeFacts(router, originSite.value ?? origin.value, destinationSite.value ?? destination.value);
   Object.assign(route, routeGeoFacts(route.summary.value, geo)); // distance by country and border crossings
   const transit = transitFact(route.summary.value.durationS);
   const windows = generateWindows({
@@ -56,7 +60,7 @@ export async function generateLoad({
   const load = createLoad({
     id: loadId(now, random),
     createdAt: now.toISOString(),
-    origin, destination, route,
+    origin, destination, originSite, destinationSite, route,
     cargo: cargoFacts(cargo),
     packaging,
     equipment: { selection: equipmentSelectionFact(cargo, equipment, equipmentId), floor: floorFact(equipment.id) },

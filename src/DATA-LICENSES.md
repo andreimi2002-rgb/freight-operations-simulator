@@ -19,6 +19,9 @@ GeoNames provides the data as-is without warranty. Coordinates are city centroid
 - **Schengen area** member list (29 states): official information of the European Commission (`src/data/geo/schengen.json`, with check date).
 - **UN/LOCODE** (UNECE): the reuse terms are **not clearly stated**; UNECE blocks automated downloads and the `datasets/un-locode` mirror declares no clear licence. Only the identifier codes of our own cities are stored (`src/data/places/locodes.json`). To be confirmed with UNECE before any broader use.
 
+## Loading places (phase 2B)
+- **OpenStreetMap** industrial zones, ports, rail terminals, logistics parks and silos via the Overpass API: © OpenStreetMap contributors, ODbL 1.0 (`src/data/places/locations-<CC>.json`). Kept: kind, position, OSM id, the nearest catalog city and, only when it is a public place name, the name. Company names, operators and brands are not stored (see `scripts/lib/site-names.mjs`). The ODbL attribution and share-alike terms apply to this derived database; each place links its OSM object.
+
 ## City photos (phase 1D)
 
 `src/data/photos/cities-<CC>.json` is built by `scripts/build-city-photos.mjs` from **Wikidata** (CC0: GeoNames ID P1566 → image P18 / Wikivoyage banner P948), the lead image of the city's **Wikipedia** article when Wikidata has none, a short hand-picked list (`src/data/photos/curated.json`, 15 large cities), and **Wikimedia Commons** (author, licence, size, page of each file). Only free licences that allow display with credit are used: public domain, CC0, CC BY, CC BY-SA, Commons {{Attribution}}, Free Art License. Every photo is shown with its author, licence and a link to its Commons page; the images are loaded from Wikimedia's servers (no referrer). Every city in the catalog has a photo; towns without a usable free photo are left out of the catalog (`src/data/places/exclusions.json`). A styled panel still appears if a photo fails to load.

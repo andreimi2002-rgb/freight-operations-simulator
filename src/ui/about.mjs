@@ -12,6 +12,7 @@ const SOURCES = [
   { id: "met", url: "https://api.met.no/" },
   { id: "naturalEarth", url: "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/" },
   { id: "osmBorders", url: "https://www.openstreetmap.org/copyright" },
+  { id: "osmSites", url: "https://www.openstreetmap.org/copyright" },
   { id: "schengen", url: "https://home-affairs.ec.europa.eu/policies/schengen/schengen-area_en" },
   { id: "locode", url: "https://unece.org/trade/cefact/unlocode-code-list-country-and-territory" },
   { id: "epal", url: "https://www.epal-pallets.org/eu-en/load-carriers/epal-euro-pallet" },

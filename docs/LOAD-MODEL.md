@@ -24,6 +24,9 @@ Ids (formula, basis, note, reason, source note) are language-neutral; the UI tra
 - `origin`/`destination` `locode` is filled from `src/data/places/locodes.json` when the city has one (data set UN/LOCODE).
 - Facts may carry `datasets: [ids]` (see `src/engine/datasets.mjs`); the detail drawer lists them with licence and link.
 
+## Phase 2B facts
+- `originSite` / `destinationSite` (sourced, optional): `{ osmId, kind, name|null, lat, lon, cityGeonamesId }`, `kind` one of industrialZone, port, railTerminal, logisticsPark, silo; `name` only when it is a public place name. When the city has no suitable place: unavailable, reason `noSite`. `origin`/`destination` stay the cities; when a site exists the route is requested between the sites. Loads without these fields are valid.
+
 ## Shape
 
 ```

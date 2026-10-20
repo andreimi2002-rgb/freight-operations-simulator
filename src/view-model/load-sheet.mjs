@@ -3,6 +3,7 @@
 import { countryName, formatDate, formatDuration, formatKm, formatNumber, formatTime, formatTonnes, t, tOr } from "../i18n/i18n.mjs";
 import { cityCode, cityName } from "../data/scope.mjs";
 import { DATASETS } from "../engine/datasets.mjs";
+import { unavailable } from "../engine/provenance.mjs";
 import { offsetMin } from "../engine/time-windows.mjs";
 import { scheduleFact } from "../engine/schedule.mjs";
 import { LEVELS, UNAVAILABLE, levelHelp, levelLabel, phaseText } from "./provenance.mjs";
@@ -13,7 +14,7 @@ export const TABS = ["overview", "map", "cargo", "equipment", "schedule", "costs
 // Every fact of the Load belongs to exactly one tab ("Surse și calcule" lists them all).
 export const REAL_ROWS_BY_TAB = {
   overview: ["shipper", "consignee"],
-  map: ["origin", "destination", "route", "countries", "borderDistance", "border"],
+  map: ["origin", "destination", "originSite", "destinationSite", "route", "countries", "borderDistance", "border"],
   cargo: ["cargo", "family", "cnCode", "temperature", "adr", "packaging", "unitMass", "mass", "loadingMetres"],
   equipment: ["trailer", "floor"],
   schedule: ["transit", "schedule", "loadingWindow", "unloadingWindow"],
@@ -160,9 +161,22 @@ function borderRowParts(fact) {
 
 const distancesText = fact => (fact.level === UNAVAILABLE ? "" : fact.value.countries.map(c => `${countryName(c.code)} ${formatKm(c.km)}`).join(" · "));
 
+// A loading place from OpenStreetMap: its public name, or the generic kind ("Zonă industrială") when the name is not public.
+const siteName = site => site.name || t(`site.${site.kind}`);
+const siteText = (site, city) => `${siteName(site)}, ${cityName(city)}`;
+const siteMeta = site => [
+  { label: t("meta.siteKind"), value: t(`site.${site.kind}`) },
+  { label: t("meta.siteName"), value: site.name ? t("site.namePublic") : t("site.nameGeneric") },
+  { label: t("meta.position"), value: `${formatNumber(site.lat, { maximumFractionDigits: 5 })}, ${formatNumber(site.lon, { maximumFractionDigits: 5 })}` },
+];
+
 export function buildLoadSheet(load, { photos = new Map() } = {}) {
   const origin = load.origin.value;
   const destination = load.destination.value;
+  const originSiteFact = load.originSite ?? unavailable("2", "noSite");
+  const destinationSiteFact = load.destinationSite ?? unavailable("2", "noSite");
+  const originSite = originSiteFact.value;
+  const destinationSite = destinationSiteFact.value;
   const summaryFact = load.route.summary;
   const route = summaryFact.value;
   const cargo = load.cargo.selection.value;
@@ -189,6 +203,8 @@ export function buildLoadSheet(load, { photos = new Map() } = {}) {
   const rows = [
     row("origin", load.origin, originLine, { meta: placeMeta(origin) }),
     row("destination", load.destination, destinationLine, { meta: placeMeta(destination) }),
+    row("originSite", originSiteFact, originSite ? siteText(originSite, origin) : "", { meta: originSite ? siteMeta(originSite) : [], links: originSite ? [{ label: `OpenStreetMap ${originSite.osmId}`, url: `https://www.openstreetmap.org/${originSite.osmId}` }] : [] }),
+    row("destinationSite", destinationSiteFact, destinationSite ? siteText(destinationSite, destination) : "", { meta: destinationSite ? siteMeta(destinationSite) : [], links: destinationSite ? [{ label: `OpenStreetMap ${destinationSite.osmId}`, url: `https://www.openstreetmap.org/${destinationSite.osmId}` }] : [] }),
     row("route", summaryFact, `${formatKm(route.distanceKm)} · ${duration}`, {
       meta: [
         { label: t("meta.provider"), value: route.provider },
@@ -308,10 +324,10 @@ export function buildLoadSheet(load, { photos = new Map() } = {}) {
     },
     map: {
       geometry: route.geometry,
-      origin: { lat: origin.lat, lon: origin.lon },
-      destination: { lat: destination.lat, lon: destination.lon },
-      originName: cityName(origin),
-      destinationName: cityName(destination),
+      origin: { lat: (originSite || origin).lat, lon: (originSite || origin).lon },
+      destination: { lat: (destinationSite || destination).lat, lon: (destinationSite || destination).lon },
+      originName: originSite ? siteText(originSite, origin) : cityName(origin),
+      destinationName: destinationSite ? siteText(destinationSite, destination) : cityName(destination),
       provider: route.provider,
       crossings: load.route.borderCrossings.level === UNAVAILABLE ? [] : load.route.borderCrossings.value.crossings.map(c => ({ lat: c.lat, lon: c.lon, label: crossingText(c) })),
     },

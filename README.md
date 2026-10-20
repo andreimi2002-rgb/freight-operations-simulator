@@ -2,7 +2,11 @@
 
 FOS is becoming a **real-world road freight load generator**: one generated truck load, as close to reality as possible and very detailed. First scope: Romania, Hungary, Bulgaria. The world is real; the load is simulated. Rules for contributors and tools are in [AGENTS.md](AGENTS.md); plans and the Load model are in [docs/](docs/).
 
-## Current version: 0.14.0 (phase 2A: distance by country, border crossings, UN/LOCODE)
+## Current version: 0.15.0 (phase 2B: real loading places from OpenStreetMap)
+
+- Real **loading and unloading places** (industrial zones, ports, silos…) from OpenStreetMap, chosen by cargo; the route runs between them. Only public place names are shown, never company names. Data prepared offline: `node scripts/build-locations.mjs RO HU BG`.
+
+### Phase 2A
 
 - **Distance by country** and **border crossings** (internal/external Schengen, OpenStreetMap names) computed from the route geometry and Natural Earth borders; crossings on the map. Header codes from **UN/LOCODE**. Data prepared offline: `node scripts/build-borders.mjs`, `build-border-crossings.mjs`, `build-locodes.mjs`.
 
