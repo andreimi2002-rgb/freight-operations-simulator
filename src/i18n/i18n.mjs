@@ -36,19 +36,24 @@ export function formatDuration(seconds) {
   const totalMinutes = Math.round(seconds / 60);
   const h = Math.floor(totalMinutes / 60);
   const m = totalMinutes % 60;
-  return h > 0 ? t("fmt.hm", { h, m }) : t("fmt.min", { m });
+  if (h === 0) return t("fmt.min", { m });
+  return m === 0 ? t("fmt.h", { h }) : t("fmt.hm", { h, m });
 }
-export function formatDate(value, { time = false, weekday = true } = {}) {
+// timeZone: an IANA zone (e.g. "Europe/Bucharest"); without it the viewer's own zone is used.
+export function formatDate(value, { time = false, weekday = true, short = false, timeZone } = {}) {
   const date = value instanceof Date ? value : new Date(value);
   if (Number.isNaN(date.getTime())) return t("ui.noValue");
-  const options = { day: "numeric", month: "long", year: "numeric", ...(weekday ? { weekday: "long" } : {}) };
+  const options = short
+    ? { day: "numeric", month: "short", ...(weekday ? { weekday: "short" } : {}) }
+    : { day: "numeric", month: "long", year: "numeric", ...(weekday ? { weekday: "long" } : {}) };
   if (time) Object.assign(options, { hour: "2-digit", minute: "2-digit" });
+  if (timeZone) options.timeZone = timeZone;
   return new Intl.DateTimeFormat(localeTag, options).format(date);
 }
-export function formatTime(value) {
+export function formatTime(value, timeZone) {
   const date = value instanceof Date ? value : new Date(value);
   if (Number.isNaN(date.getTime())) return t("ui.noValue");
-  return new Intl.DateTimeFormat(localeTag, { hour: "2-digit", minute: "2-digit" }).format(date);
+  return new Intl.DateTimeFormat(localeTag, { hour: "2-digit", minute: "2-digit", ...(timeZone ? { timeZone } : {}) }).format(date);
 }
 export function countryName(code) {
   try { return new Intl.DisplayNames([localeTag], { type: "region" }).of(String(code).toUpperCase()) || code; } catch { return String(code); }

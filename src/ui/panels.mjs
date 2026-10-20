@@ -16,8 +16,13 @@ export function cargoCardHtml(sheet) {
 
 export function kpisHtml(sheet) {
   return sheet.kpis.map(kpi => kpi.valueText
-    ? `<div class="kpi"><div class="kpi-label">${esc(kpi.label)}</div><div class="kpi-number">${esc(kpi.valueText)}</div><div class="kpi-bar"></div></div>`
+    ? `<div class="kpi"><div class="kpi-label">${esc(kpi.label)}</div><div class="kpi-number">${esc(kpi.valueText)}</div><div class="kpi-bar"></div>${kpi.foot ? `<div class="kpi-phase">${esc(kpi.foot)}</div>` : ""}</div>`
     : `<div class="kpi pending"><div class="kpi-label">${esc(kpi.label)}</div><div class="kpi-number">—</div><div class="kpi-phase">${esc(kpi.pendingText)}</div></div>`).join("");
+}
+
+export function warningsHtml(sheet) {
+  if (!sheet.warnings.length) return "";
+  return `<div class="eyebrow">${esc(t("sheet.warningsTitle"))}</div><ul>${sheet.warnings.map(text => `<li>${esc(text)}</li>`).join("")}</ul>`;
 }
 
 export function legendHtml(sheet) {

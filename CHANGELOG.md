@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.11.0 — 2026-10-20 (phase 1B: foundation)
+
+- New Load model (schema 3) where every value is a fact with provenance; `validateLoad()` rejects incomplete facts, out-of-scope places and impossible windows. Documented in `docs/LOAD-MODEL.md`.
+- Engine restructured into pure, tested modules in `src/engine/` (places, cargo, equipment, load planning, transit time, time windows, parties, route, generator) with stubs for phases 4, 6 and 7. Geoapify sits behind a routing adapter (`src/adapters/routing-geoapify.mjs`); the map moved to `src/adapters/map-maplibre.mjs`.
+- First load calculations: EUR pallets on the trailer floor (EPAL dimensions; typical DSV floors for curtainsider, reefer and box), limited by payload; estimated mass per pallet with its basis; total mass; loading metres. Cargo that is not palletised, or trailers without a sourced floor, show "Indisponibil încă" with the reason.
+- Minimum transit time under Reg. (EC) 561/2006, simplified (45 min break after 4 h 30 min, 11 h rest after 9 h of driving), with the day-by-day sequence in the drawer.
+- Simulated loading and unloading windows placed after the minimum transit time, on working days, in each city's local time (UTC offset shown); simulated shipper and consignee roles.
+- City catalog rebuilt with a Node importer: 270 places of at least 15,000 inhabitants in RO/HU/BG, city sections (PPLX) excluded by feature code.
+- Removed the ATS/ETS2 modes and `mission-engine.mjs`, the corridor and company data, the PowerShell importer; the game reference catalog moved to `archive/`.
+- UI: 20-row load sheet, loading window in the hero, transit and stop KPIs, "De verificat" warnings (also in print), new sources in "Despre date". History uses a new key; phase 1A loads are not shown.
+
 ## 0.10.0 — 2026-10-20 (phase 1A: redesign)
 
 - Rebuilt the interface in the Airport Live visual system (self-hosted Inter and JetBrains Mono): top bar with recent loads and city palette (Ctrl/⌘+K, `/`), hero with route code, map and cargo cards, KPI cards, and a load sheet with a provenance stripe and badge on every row.

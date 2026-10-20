@@ -18,6 +18,7 @@ export function printHtml(sheet, mapImage) {
     </div>
     ${map}
     <table class="pr-table"><tbody>${rows}</tbody></table>
+    ${sheet.warnings.length ? `<div class="pr-warnings"><b>${esc(t("sheet.warningsTitle"))}:</b> ${sheet.warnings.map(esc).join(" · ")}</div>` : ""}
     <div class="pr-notice">${esc(t("print.notice"))}</div>
     <div class="pr-foot">${esc(t("footer.sources"))} · ${esc(t("footer.version", { version: VERSION }))}</div>`;
 }

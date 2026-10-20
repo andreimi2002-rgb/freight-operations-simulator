@@ -1,58 +1,56 @@
 # Data attribution and licenses
 
-## Map and fonts (phase 1A)
-
-- **OpenFreeMap** vector tiles (`tiles.openfreemap.org`, no key): map data © OpenStreetMap contributors (ODbL), tile schema © OpenMapTiles. Attribution is shown on the map and in print.
-- **MapLibre GL JS** 4.7.1: BSD 3-Clause. Loaded from jsDelivr with a Subresource Integrity hash.
-- **Inter** (© The Inter Project Authors) and **JetBrains Mono** (© The JetBrains Mono Project Authors): SIL Open Font License 1.1, served from `fonts/` with their licence files.
-- **Geoapify Routing API** (temporary): route distance, duration, countries, main roads and geometry; route data © OpenStreetMap contributors. The Static Maps API is no longer used.
-
-## NST 2007 chapter estimates
-
-`src/data/nst-estimates.mjs` maps each FOS cargo family to the NST 2007 chapters (divisions) it may fall under. It is an **estimate by FOS**, not a classification of any cargo, and is shown as "Estimat". The list of 20 chapters follows Commission Regulation (EC) No 1304/2007 (as reproduced at https://www.cbs.nl/en-gb/our-services/methods/definitions/commodity-nomenclature-nst-2007). Phase 3 replaces it with the Eurostat CN→NST correspondence.
-
-## City catalog scope
-
-The UI uses only Romania, Hungary and Bulgaria records from the GeoNames catalog below, excluding city districts (Bucharest sectors, Budapest districts, Asparuhovo), which the catalog lists as separate places. Phase 1B regenerates the catalog.
+Every value FOS displays carries its provenance (sourced, computed, estimated, simulated). This file lists the sources behind the sourced values and the FOS-made estimates, with their licences.
 
 ## GeoNames city catalog
 
-`data/geonames-cities.json` is a filtered export of the official GeoNames `cities15000.zip` gazetteer. It contains the 40 highest-population available city records in the contiguous United States (ATS pool) and selected ETS2 European countries. Countries with fewer than 40 eligible records contribute all eligible records. The catalog currently contains 1,150 records. Coordinates, population, country rank, and time-zone fields retain GeoNames identifiers so each selected city links back to its source record.
+`src/data/places/cities-ro-hu-bg.json` is built by `scripts/import-geonames.mjs` from the official GeoNames `cities15000.zip` dump. It keeps every populated place in Romania, Hungary and Bulgaria with at least 15,000 inhabitants (270 places: RO 126, HU 89, BG 55), excluding feature code `PPLX` (sections of populated places, e.g. Bucharest sectors and Budapest districts) and historical, abandoned or destroyed places. Each record keeps its GeoNames ID, coordinates, population, time zone and feature code.
 
 - Attribution: GeoNames geographical database
 - License: [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
 - Source dump: [GeoNames cities15000.zip](https://download.geonames.org/export/dump/cities15000.zip)
-- Format and selection: [GeoNames dump readme](https://download.geonames.org/export/dump/readme.txt)
-- Import utility: `scripts/import-geonames-cities.ps1`
+- Format: [GeoNames dump readme](https://download.geonames.org/export/dump/readme.txt)
 
-The source describes the data as provided as-is and makes no warranty of accuracy, timeliness, or completeness. Coordinates are city centroids, not freight terminals. Random scenarios therefore route between real city records, while the exact shipment, cargo assignment, and equipment suggestion remain generated.
+GeoNames provides the data as-is without warranty. Coordinates are city centroids, not loading points (real loading points come in phase 2).
 
-## Curated cargo catalog
+## Load planning sources (phase 1B)
 
-`data/cargo-catalog.mjs` is an original FOS curation of real-world commodity examples. The broad transport-goods classification reference is [UNECE NST 2007](https://unece.org/transport/statistics-transport/classification-nst-2007); the catalog does not claim that each example has an assigned NST code. Perishable-food context links to the [UNECE ATP Handbook](https://unece.org/atp-handbook), dangerous-goods cautions link to [UNECE ADR](https://unece.org/transport/dangerous-goods), and live-animal carriage links to [EU Regulation EC 1/2005](https://eur-lex.europa.eu/eli/reg/2005/1/oj/eng) as one jurisdiction-specific example.
+- **EUR pallet:** 1200 × 800 × 144 mm, safe working load 1,500 kg — [EPAL, EPAL Euro pallet (EPAL 1)](https://www.epal-pallets.org/eu-en/load-carriers/epal-euro-pallet), retrieved 2026-10-20. Stored in `src/data/regulations/packaging.mjs`.
+- **Trailer floors** (`src/data/equipment/floors.mjs`), typical internal dimensions and payload from the operator DSV's public equipment pages, retrieved 2026-10-20. DSV states that dimensions vary by manufacturer and production year; FOS shows them as typical values:
+  - curtainsider 13.62 × 2.48 × 2.70 m, payload 32,800 kg — [DSV curtain trailer](https://www.dsv.com/en/our-solutions/modes-of-transport/road-transport/trailer-sizes/curtain-trailer) (same floor and "33 Euro pallets" also stated by [DP World Euroliners](https://www.dpworld.com/en/supply-chain-solutions/freight-forwarding/multimodal-solutions/europe/equipment/euroliners));
+  - reefer 13.31 × 2.48 × 2.60 m, payload 31,000 kg — [DSV reefer trailer](https://www.dsv.com/en/our-solutions/modes-of-transport/road-transport/trailer-sizes/reefer-trailer);
+  - box 13.62 × 2.46 × 2.70 m, payload 31,400 kg — [DSV box trailer](https://www.dsv.com/en/our-solutions/modes-of-transport/road-transport/trailer-sizes/box-trailer).
+  
+  Directive 96/53/EC sets external limits only (16.50 m articulated length, 2.55/2.60 m width, 4.00 m height, 40 t); it does not define a "13.6 m loading length". The legal limits are not used yet (phase 4).
+- **Driving time:** Regulation (EC) No 561/2006, Art. 4(g), 6, 7 and 8 — [EUR-Lex](https://eur-lex.europa.eu/eli/reg/2006/561/oj). EUR-Lex could not be fetched automatically on 2026-10-20; the values (9 h daily driving, 45 min break after 4 h 30 min, 11 h regular daily rest, 56 h weekly, 90 h fortnightly) were checked against the copy at [legislation.gov.uk](https://www.legislation.gov.uk/eur/2006/561/data.htm). Used in a simplified, conservative form (no 10 h extension, no reduced rest, no split break).
 
-Cargo-to-trailer pairings and handling prompts are planning heuristics written for scenario generation. They are not verified compatibility determinations, product safety instructions, or dispatch advice. Exact cargo properties, packaging, temperature setpoints, mass, dimensions, dangerous-goods status, and legal carriage conditions must come from the specific product and applicable rules. No such numeric cargo facts are fabricated by this catalog.
+## FOS estimates (shown as "Estimat")
 
-- Catalog content: FOS-curated examples; no external dataset copied into the file.
-- Reference frameworks: UNECE NST 2007, ATP, and ADR as linked per record where relevant.
-- Maintenance: keep product-specific requirements marked unknown until linked to an authoritative source and jurisdiction.
+- **Mass per pallet** (`src/data/cargo/packaging-profiles.mjs`): a range per cargo group, reasoned from typical carton or sack weights and stack heights. The engine uses the midpoint. Not shipment data; replaced by sourced packaging in phase 3.
+- **NST 2007 chapters per cargo family** (`src/data/cargo/nst-estimates.mjs`): a FOS-proposed correspondence, not a classification. The 20 chapters follow Commission Regulation (EC) No 1304/2007 (as reproduced by [CBS](https://www.cbs.nl/en-gb/our-services/methods/definitions/commodity-nomenclature-nst-2007)). Replaced in phase 3 by the Eurostat CN→NST correspondence.
 
-## Freight corridor context and company search suggestions
+## Simulated parts of a load
 
-`data/freight-network.mjs` contains original, illustrative corridor descriptions and a directory of company names, official website links, and generic Geoapify search terms. It is not a business-location dataset: the app does not copy a company's facility list, and provider search results must be checked by the user. A company suggestion or a corridor must never be interpreted as a verified supplier relationship, facility, shipment, or contract.
+The cargo choice, the trailer choice, the time windows and the shipper/consignee roles (`src/data/cargo/roles.mjs`) are generated for the scenario. No real company, contract, booking or shipment is represented.
 
-Some corridor background is linked to public references, including [USDA NASS charts and maps](https://www.nass.usda.gov/Charts_and_Maps/), the [USDA Census of Agriculture](https://www.nass.usda.gov/AgCensus/), [Port of Rotterdam maps](https://www.portofrotterdam.com/en/doing-business/port-maps), and [Duisport transport connections](https://www.duisport.de/en/location-and-transport/transport-connections/). These contextual sources do not substantiate a particular generated truck trip or company trade lane. Company names and links direct users to the respective official websites; they are not endorsements.
+## Curated cargo and trailer catalogs
 
-## Truck Simulator Wiki reference catalog
+`src/data/cargo/catalog.mjs` and `src/data/equipment/catalog.mjs` are original FOS curations of real-world commodity examples and trailer types. The broad classification reference is [UNECE NST 2007](https://unece.org/transport/statistics-transport/classification-nst-2007); perishable food links to the [UNECE ATP Handbook](https://unece.org/atp-handbook), dangerous goods to [UNECE ADR](https://unece.org/transport/dangerous-goods), live animals to [EU Regulation (EC) 1/2005](https://eur-lex.europa.eu/eli/reg/2005/1/oj/eng). Cargo-to-trailer pairings and handling prompts are planning heuristics, not verified compatibility, safety instructions or dispatch advice. Hazardous-goods status is never inferred.
 
-`data/game-reference-catalog.mjs` is a small, separately maintained selection of cargo names, trailer associations, company names, and industry labels derived from the Truck Simulator Wiki pages listed in that file.
+## Routing and map
+
+- **Geoapify Routing API** (temporary, behind `src/adapters/routing-geoapify.mjs`): route distance, duration, countries, main roads and geometry; route data © OpenStreetMap contributors. Replaced by an own OSM router in phase 5.
+- **OpenFreeMap** vector tiles (no key): map data © OpenStreetMap contributors (ODbL), tile schema © OpenMapTiles. Attribution is shown on the map and in print.
+- **MapLibre GL JS** 4.7.1: BSD 3-Clause, loaded from jsDelivr with a Subresource Integrity hash.
+
+## Fonts
+
+**Inter** (© The Inter Project Authors) and **JetBrains Mono** (© The JetBrains Mono Project Authors): SIL Open Font License 1.1, served from `fonts/` with their licence files.
+
+## Truck Simulator Wiki reference catalog (archived)
+
+`archive/game-reference-catalog.mjs` is a small selection of cargo names, trailer associations, company names and industry labels derived from Truck Simulator Wiki pages. It is not used by the app; it is kept for the planned ETS2/ATS adapter (phase 8).
 
 - Attribution: Truck Simulator Wiki contributors
-- License for licensable wiki text/content: [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
-- Wiki copyright and exceptions: [Truck Simulator Wiki:Copyrights](https://trucksimulator.wiki.gg/wiki/Truck_Simulator_Wiki:Copyrights)
-- Cargo references: [ATS cargo](https://trucksimulator.wiki.gg/wiki/Cargo_types/American_Truck_Simulator), [ETS2 cargo](https://trucksimulator.wiki.gg/wiki/Cargo_types/Euro_Truck_Simulator_2)
-- Company references: [ATS companies](https://trucksimulator.wiki.gg/wiki/Companies/American_Truck_Simulator), [ETS2 companies](https://trucksimulator.wiki.gg/wiki/Companies/Euro_Truck_Simulator_2)
-
-This data file is licensed under CC BY-SA 4.0. Adaptations to this file must retain attribution and use the same license. Images and logos are not included. Game titles, company names, brands, and other game material may have separate rights held by their respective owners. FOS is an unofficial fan project and is not affiliated with SCS Software or the wiki.
-
-FOS-generated weights, distances, fuel, timings, and deadlines are separate illustrative estimates, not sourced game or real-world operating facts.
+- License: [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/); see [Truck Simulator Wiki:Copyrights](https://trucksimulator.wiki.gg/wiki/Truck_Simulator_Wiki:Copyrights)
+- Adaptations must keep attribution and the same licence. Game titles, company names and brands may have separate rights. FOS is unofficial and not affiliated with SCS Software or the wiki.

@@ -1,8 +1,8 @@
 // "New load" drawer: origin/destination (random or picked), cargo family, cargo, trailer.
-import { CARGO } from "../mission-engine.mjs";
+import { CARGO, eligibleCargo, families } from "../engine/cargo.mjs";
+import { eligibleEquipment } from "../engine/equipment.mjs";
 import { t, tOr } from "../i18n/i18n.mjs";
 import { cityCode, cityName } from "../data/scope.mjs";
-import { eligibleCargo, eligibleEquipment, families, resolveCargoId } from "../data/selection.mjs";
 import { esc } from "./dom.mjs";
 
 const SLOTS = ["origin", "destination"];
@@ -81,9 +81,7 @@ export function createGenerator({ body, onSubmit, onPick }) {
   });
   $("#genForm").addEventListener("submit", event => {
     event.preventDefault();
-    const equipmentId = trailerSelect.value;
-    const cargoId = resolveCargoId({ family: familySelect.value, cargoId: cargoSelect.value, equipmentId });
-    onSubmit({ originCity: cities.origin, destinationCity: cities.destination, cargoId, equipmentId });
+    onSubmit({ originCity: cities.origin, destinationCity: cities.destination, family: familySelect.value, cargoId: cargoSelect.value, equipmentId: trailerSelect.value });
   });
 
   return {

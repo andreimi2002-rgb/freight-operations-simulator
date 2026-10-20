@@ -1,28 +1,31 @@
-import { chooseRandomCityPair, generateMission as buildMission, toSourcedPlace, validateMission } from "./mission-engine.mjs";
 import { loadLanguage, t } from "./i18n/i18n.mjs";
-import { inScope, scopeCities } from "./data/scope.mjs";
-import { drawCounterpart } from "./data/selection.mjs";
+import { GenerationError, generateLoad } from "./engine/generator.mjs";
+import { validateLoad } from "./engine/load-model.mjs";
+import { RouteAnswerError } from "./engine/route.mjs";
+import { RouteServiceError, createGeoapifyRouter } from "./adapters/routing-geoapify.mjs";
+import { createRouteMap } from "./adapters/map-maplibre.mjs";
 import { buildLoadSheet, buildRecentEntry } from "./view-model/load-sheet.mjs";
 import { levelLabel } from "./view-model/provenance.mjs";
-import { createRouteMap } from "./map/route-map.mjs";
 import { $, applyStaticTranslations, showToast } from "./ui/dom.mjs";
 import { closeLayer, openLayer, wireLayer } from "./ui/layers.mjs";
 import { emptyHeroHtml, heroHtml } from "./ui/hero.mjs";
-import { cargoCardHtml, detailHtml, kpisHtml, legendHtml, recentHtml, sheetHtml } from "./ui/panels.mjs";
+import { cargoCardHtml, detailHtml, kpisHtml, legendHtml, recentHtml, sheetHtml, warningsHtml } from "./ui/panels.mjs";
 import { createGenerator } from "./ui/generator.mjs";
 import { createPalette } from "./ui/palette.mjs";
 import { aboutHtml } from "./ui/about.mjs";
 import { printHtml } from "./ui/print.mjs";
 import { VERSION } from "./version.mjs";
 
-const HISTORY_KEY = "fos-mission-history-v3";
+// New key for the phase 1B Load model; the phase 1A history (fos-mission-history-v3) is left untouched.
+const HISTORY_KEY = "fos-load-history-v1";
 const MAX_HISTORY = 30;
-const WORLD = "ETS2"; // internal engine setting until phase 1B removes the world modes
+const CATALOG_URL = "/src/data/places/cities-ro-hu-bg.json";
 
+const router = createGeoapifyRouter();
 let history = [];
 let current = null;
 let sheet = null;
-let pool = null; // RO/HU/BG cities
+let catalog = null; // { metadata, cities }
 let busy = false;
 let pickSlot = null; // which generator field the palette is filling (null: from the top bar)
 let lastSnapshot = null;
@@ -34,11 +37,7 @@ let routeMap = null;
 function loadHistory() {
   try {
     const saved = JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
-    if (!Array.isArray(saved)) return [];
-    return saved
-      .filter(item => validateMission(item).length === 0 && inScope(item.origin) && inScope(item.destination))
-      .map(item => (item.route?.routeDetails?.mapImageDataUrl ? { ...item, route: { ...item.route, routeDetails: { ...item.route.routeDetails, mapImageDataUrl: null } } } : item))
-      .slice(0, MAX_HISTORY);
+    return Array.isArray(saved) ? saved.filter(item => validateLoad(item).length === 0).slice(0, MAX_HISTORY) : [];
   } catch { return []; }
 }
 function saveHistory() {
@@ -65,6 +64,7 @@ function renderAll() {
   $("#kpis").innerHTML = kpisHtml(sheet);
   $("#legend").innerHTML = legendHtml(sheet);
   $("#sheet").innerHTML = sheetHtml(sheet);
+  $("#warnings").innerHTML = warningsHtml(sheet);
   results.hidden = false;
   showFixtureBanner(sheet.fixture);
   const shown = sheet;
@@ -97,22 +97,21 @@ function openDetail(rowId, opener) {
 }
 
 // ---------- generation ----------
-class RouteError extends Error { constructor(message, status) { super(message); this.status = status; } }
-async function fetchRoute(origin, destination) {
-  let response;
-  try {
-    response = await fetch("/api/truck-route", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ origin: { lat: origin.lat, lon: origin.lon }, destination: { lat: destination.lat, lon: destination.lon } }),
-    });
-  } catch { throw new RouteError(t("toast.routeFailed"), 0); }
-  const payload = await response.json().catch(() => ({}));
-  if (!response.ok) {
-    const message = response.status === 503 ? t("toast.routeNotConfigured") : response.status === 429 ? t("toast.routeRateLimited") : t("toast.routeFailed");
-    throw new RouteError(message, response.status);
+function errorMessage(error) {
+  if (error instanceof RouteServiceError) {
+    if (error.status === 503) return t("toast.routeNotConfigured");
+    if (error.status === 429) return t("toast.routeRateLimited");
+    return t("toast.routeFailed");
   }
-  return payload;
+  if (error instanceof RouteAnswerError) return t("toast.routeFailed");
+  if (error instanceof GenerationError) {
+    if (error.code === "noCargo") return t("toast.noCargo");
+    if (error.code === "noPair") return t("toast.noPair");
+    console.error(error.message); // invalidLoad: details for developers
+    return t("toast.invalidLoad");
+  }
+  console.error(error);
+  return t("toast.routeFailed");
 }
 
 function setBusy(on) {
@@ -123,40 +122,24 @@ function setBusy(on) {
   if (on) button.setAttribute("aria-busy", "true"); else button.removeAttribute("aria-busy");
 }
 
-async function generate({ originCity = null, destinationCity = null, cargoId = "random", equipmentId = "random" } = {}) {
+async function generate({ originCity = null, destinationCity = null, family = "all", cargoId = "random", equipmentId = "random" } = {}) {
   if (busy) return;
-  if (!pool) { showToast(t("toast.noCatalog"), { error: true }); return; }
-  if (cargoId === null) { showToast(t("toast.noCargo"), { error: true }); return; }
+  if (!catalog) { showToast(t("toast.noCatalog"), { error: true }); return; }
   setBusy(true);
   try {
-    let originPick = originCity;
-    let destinationPick = destinationCity;
-    if (originPick && !destinationPick) destinationPick = drawCounterpart(pool.cities, originPick);
-    else if (destinationPick && !originPick) originPick = drawCounterpart(pool.cities, destinationPick);
-    const importedAt = pool.metadata?.importedAt;
-    let origin; let destination;
-    if (originPick && destinationPick) {
-      origin = toSourcedPlace(originPick, importedAt);
-      destination = toSourcedPlace(destinationPick, importedAt);
-    } else if (originCity || destinationCity) {
-      throw new Error(t("toast.noPair"));
-    } else {
-      ({ origin, destination } = chooseRandomCityPair({ world: WORLD, cityCatalog: pool }));
-    }
-    const route = await fetchRoute(origin, destination);
-    const mission = buildMission({ world: WORLD, origin, destination, route, cargoId, equipmentId, now: new Date() });
-    mission.locationSelection = originCity || destinationCity ? "picked-geonames" : "random-geonames";
-    const errors = validateMission(mission);
-    if (errors.length) throw new Error(t("toast.dataError", { message: errors.join(" ") }));
-    history.unshift(mission);
+    const load = await generateLoad({
+      cities: catalog.cities, importedAt: catalog.metadata.importedAt, router,
+      originCity, destinationCity, family, cargoId, equipmentId, now: new Date(),
+    });
+    history.unshift(load);
     history = history.slice(0, MAX_HISTORY);
     const saved = saveHistory();
-    current = mission;
+    current = load;
     closeLayer($("#generatorLayer"));
     renderAll();
     showToast(saved ? t("toast.generated") : t("toast.storageUnavailable"));
   } catch (error) {
-    showToast(error instanceof RouteError ? error.message : (error.message || t("toast.routeFailed")), { error: true });
+    showToast(errorMessage(error), { error: true });
   } finally {
     setBusy(false);
   }
@@ -180,7 +163,7 @@ async function printReport() {
 function openGenerator(opener) { openLayer($("#generatorLayer"), { opener }); }
 
 function openPalette({ slot = null, opener = document.activeElement } = {}) {
-  if (!pool) { showToast(t("toast.noCatalog"), { error: true }); return; }
+  if (!catalog) { showToast(t("toast.noCatalog"), { error: true }); return; }
   pickSlot = slot;
   const cities = generator.cities();
   const other = slot ? cities[slot === "origin" ? "destination" : "origin"] : null;
@@ -194,12 +177,12 @@ function onCityPicked(city) {
   if (!pickSlot) openGenerator($("#searchBtn"));
 }
 
-async function loadCityPool() {
+async function loadCatalog() {
   try {
-    const response = await fetch("/src/data/geonames-cities.json", { cache: "force-cache" });
+    const response = await fetch(CATALOG_URL, { cache: "force-cache" });
     if (!response.ok) throw new Error("catalog");
-    pool = scopeCities(await response.json());
-    generator.setStatus(t("gen.catalogReady", { count: pool.cities.length }));
+    catalog = await response.json();
+    generator.setStatus(t("gen.catalogReady", { count: catalog.cities.length }));
   } catch {
     generator.setStatus(t("gen.catalogError"));
     showToast(t("gen.catalogError"), { error: true });
@@ -220,8 +203,8 @@ function wireEvents() {
   $("#recent").addEventListener("click", event => {
     const chip = event.target.closest("[data-recent]");
     if (!chip) return;
-    const mission = history.find(item => item.id === chip.dataset.recent);
-    if (mission) { current = mission; renderAll(); }
+    const load = history.find(item => item.id === chip.dataset.recent);
+    if (load) { current = load; renderAll(); }
   });
   $("#hero").addEventListener("click", event => {
     const action = event.target.closest("[data-action]")?.dataset.action;
@@ -259,7 +242,7 @@ async function start() {
     input: $("#paletteInput"),
     list: $("#paletteList"),
     modeElement: $("#paletteMode"),
-    getCities: () => pool?.cities || [],
+    getCities: () => catalog?.cities || [],
     onPick: onCityPicked,
   });
   wireEvents();
@@ -267,7 +250,7 @@ async function start() {
   history = loadHistory();
   current = history[0] || null;
   renderAll();
-  loadCityPool();
+  loadCatalog();
 }
 
 start();
