@@ -21,6 +21,15 @@ Never present a simulated or estimated value as sourced. Never invent regulation
 - All UI text lives in `src/i18n/ro.json` (Romanian by default); components contain no literal text. Numbers and dates use `Intl` with `ro-RO`. Adding a language means adding a JSON file, not editing components.
 - Keep the Airport Live visual system (tokens in `src/styles.css`). Must work on desktop and phone: no horizontal scroll at phone width, keyboard and touch input, contrast at least 4.5:1 for body text.
 
+## Roadmap and product rules
+The stage order, country packages and the permanent rules for the vision mockups are in `docs/ROADMAP.md` (Romanian). The mockups in `docs/vision/` are AI-generated inspiration for layout, not a specification. Key rules:
+- No AI-generated images. Photos only from Wikimedia Commons (free licences) with author, licence and link; otherwise a styled panel or a generic photo labelled "ilustrativ".
+- No invented company names. Shipper and consignee stay simulated roles.
+- Real brands (e.g. Borsec) only as sourced examples; figures come from the producer's sheet or Open Food Facts (ODbL, attribution, no bulk import) or are marked "estimat". The catalog stays on generic categories.
+- Every number shown is computed by the engine, never copied from a mockup. Loading metres come from the pallets actually loaded.
+- No satellite layer until the imagery licence is verified.
+- Countries are data, not code: no hard-coded country lists in the engine, scripts or UI.
+
 ## Working mode
 - Engine code has `node --test` tests. Update `CHANGELOG.md` and the version with every change.
 - One branch and one PR per logical task; never work on `main`. Small commits with clear messages.
