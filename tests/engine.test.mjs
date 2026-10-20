@@ -1,6 +1,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync } from "node:fs";
+import { ACTIVE_COUNTRIES } from "../src/data/countries.mjs";
+import { loadCities } from "./helpers/cities.mjs";
 import { computed, estimated, simulated, sourced, unavailable, validateFact, collectFacts } from "../src/engine/provenance.mjs";
 import { validateLoad } from "../src/engine/load-model.mjs";
 import { CARGO, resolveCargoId } from "../src/engine/cargo.mjs";
@@ -14,7 +16,7 @@ import { TRAILER_FLOORS } from "../src/data/equipment/floors.mjs";
 import { PACKAGING_PROFILES } from "../src/data/cargo/packaging-profiles.mjs";
 import { EUR_PALLET } from "../src/data/regulations/packaging.mjs";
 
-const catalog = JSON.parse(readFileSync(new URL("../src/data/places/cities-ro-hu-bg.json", import.meta.url), "utf8"));
+const catalog = loadCities();
 const cities = catalog.cities;
 const city = name => cities.find(c => c.name === name);
 const seq = values => { let i = 0; return () => values[i++ % values.length]; };
@@ -174,7 +176,7 @@ test("generated loads are valid for many draws across RO/HU/BG", async () => {
     countries.add(load.origin.value.countryCode);
     countries.add(load.destination.value.countryCode);
   }
-  assert.deepEqual([...countries].sort(), ["BG", "HU", "RO"]);
+  assert.deepEqual([...countries].sort(), [...ACTIVE_COUNTRIES].sort());
   assert.equal(router.calls, 60);
 });
 
@@ -215,9 +217,9 @@ test("no ATS/ETS2 references in the engine or the UI", () => {
   }
 });
 
-test("the city catalog is RO/HU/BG only, without city sections", () => {
+test("the city catalog has only active countries, without city sections", () => {
   assert.ok(cities.length >= 200);
-  assert.ok(cities.every(c => ["RO", "HU", "BG"].includes(c.countryCode) && c.population >= 15000 && c.featureCode !== "PPLX" && c.timeZone));
+  assert.ok(cities.every(c => ACTIVE_COUNTRIES.includes(c.countryCode) && c.population >= 15000 && c.featureCode !== "PPLX" && c.timeZone));
   assert.ok(!cities.some(c => /^Sector \d|kerület$/.test(c.name)));
   assert.equal(catalog.metadata.license, "CC BY 4.0");
 });

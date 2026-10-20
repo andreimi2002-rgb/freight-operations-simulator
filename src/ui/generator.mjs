@@ -3,7 +3,7 @@ import { CARGO, eligibleCargo, families } from "../engine/cargo.mjs";
 import { eligibleEquipment } from "../engine/equipment.mjs";
 import { t, tOr } from "../i18n/i18n.mjs";
 import { cityCode, cityName } from "../data/scope.mjs";
-import { esc } from "./dom.mjs";
+import { activeCountriesText, esc } from "./dom.mjs";
 
 const SLOTS = ["origin", "destination"];
 const familyName = family => tOr(`family.${family}`, family);
@@ -21,7 +21,7 @@ export function createGenerator({ body, onSubmit, onPick }) {
     <div class="field"><label for="genTrailer">${esc(t("gen.trailer"))}</label><select id="genTrailer"></select></div>
     <p class="catalog-status" id="genStatus" aria-live="polite"></p>
     <button type="submit" class="primary wide" id="genSubmit">${esc(t("gen.submit"))}</button>
-    <p class="hint">${esc(t("gen.hint"))}</p>
+    <p class="hint">${esc(t("gen.hint", { countries: activeCountriesText() }))}</p>
   </form>`;
   const $ = selector => body.querySelector(selector);
   const familySelect = $("#genFamily"), cargoSelect = $("#genCargo"), trailerSelect = $("#genTrailer");

@@ -1,7 +1,7 @@
 // "About the data": provenance legend, sources and licences, limits.
 import { t } from "../i18n/i18n.mjs";
 import { LEVELS, UNAVAILABLE, levelHelp, levelLabel } from "../view-model/provenance.mjs";
-import { esc, safeUrl } from "./dom.mjs";
+import { activeCountriesText, esc, safeUrl } from "./dom.mjs";
 
 const SOURCES = [
   { id: "geonames", url: "https://www.geonames.org/" },
@@ -21,7 +21,7 @@ export function aboutHtml() {
   const sources = SOURCES.map(source => {
     const name = esc(t(`about.src.${source.id}.name`));
     return `<div class="src"><b>${source.url ? `<a href="${esc(safeUrl(source.url))}" target="_blank" rel="noopener">${name} ↗</a>` : name}</b>
-      <span>${esc(t(`about.src.${source.id}.usage`))}</span><span>${esc(t(`about.src.${source.id}.license`))}</span></div>`;
+      <span>${esc(t(`about.src.${source.id}.usage`, { countries: activeCountriesText() }))}</span><span>${esc(t(`about.src.${source.id}.license`))}</span></div>`;
   }).join("");
   return `<p class="dr-text" style="margin-top:0">${esc(t("about.intro"))}</p>
     <div class="dr-sec"><h4>${esc(t("about.legendTitle"))}</h4><div class="about-legend">${legend}</div></div>

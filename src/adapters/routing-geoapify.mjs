@@ -1,3 +1,5 @@
+import { languageTag } from "../i18n/i18n.mjs";
+
 // Routing adapter, TEMPORARY: Geoapify heavy-truck routing through the Netlify function
 // /api/truck-route (the API key stays on the server). Phase 5 replaces it with an own
 // OpenStreetMap router that implements the same route() contract (see src/engine/route.mjs).
@@ -5,6 +7,7 @@
 export class RouteServiceError extends Error {
   constructor(status) { super(`route service error ${status}`); this.status = status; }
 }
+
 
 export function createGeoapifyRouter({ endpoint = "/api/truck-route", fetchImpl = (...args) => fetch(...args) } = {}) {
   return {
@@ -14,7 +17,7 @@ export function createGeoapifyRouter({ endpoint = "/api/truck-route", fetchImpl 
         response = await fetchImpl(endpoint, {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ origin, destination }),
+          body: JSON.stringify({ origin, destination, lang: languageTag() }),
         });
       } catch { throw new RouteServiceError(0); }
       const payload = await response.json().catch(() => null);

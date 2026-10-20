@@ -11,10 +11,11 @@ import { ALL_ROLES } from "../src/data/cargo/roles.mjs";
 import { PACKAGING_PROFILES } from "../src/data/cargo/packaging-profiles.mjs";
 import { NST_ESTIMATES } from "../src/data/cargo/nst-estimates.mjs";
 import { cityCode, cityName } from "../src/data/scope.mjs";
+import { loadCities } from "./helpers/cities.mjs";
 
 const root = new URL("..", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1");
 const dictionary = JSON.parse(readFileSync(new URL("../src/i18n/ro.json", import.meta.url), "utf8"));
-const catalog = JSON.parse(readFileSync(new URL("../src/data/places/cities-ro-hu-bg.json", import.meta.url), "utf8"));
+const catalog = loadCities();
 setDictionary(dictionary);
 
 const city = name => catalog.cities.find(c => c.name === name);

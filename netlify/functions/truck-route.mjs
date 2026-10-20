@@ -20,7 +20,7 @@ export default async function truckRoute(request) {
   url.searchParams.set("mode", "heavy_truck");
   url.searchParams.set("traffic", "approximated");
   url.searchParams.set("details", "route_details,instruction_details");
-  url.searchParams.set("lang", "ro");
+  url.searchParams.set("lang", /^[a-z]{2}$/.test(body.lang || "") ? body.lang : "en"); // road names in the interface language
   url.searchParams.set("format", "geojson");
   url.searchParams.set("apiKey", apiKey);
 

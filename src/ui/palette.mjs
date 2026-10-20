@@ -1,8 +1,8 @@
-// City search palette (Ctrl/Cmd+K or "/"). Searches the RO/HU/BG city pool on the device.
+// City search palette (Ctrl/Cmd+K or "/"). Searches the active countries' city pool on the device.
 import { countryName, formatNumber, t } from "../i18n/i18n.mjs";
 import { cityCode, cityName } from "../data/scope.mjs";
 import { closeLayer, openLayer, wireLayer } from "./layers.mjs";
-import { esc } from "./dom.mjs";
+import { activeCountriesText, esc } from "./dom.mjs";
 
 const fold = text => String(text || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 const PIN = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>`;
@@ -56,6 +56,7 @@ export function createPalette({ layer, input, list, modeElement, getCities, onPi
     onPick(city);
   }
 
+  input.placeholder = t("palette.placeholder", { countries: activeCountriesText() });
   wireLayer(layer);
   input.addEventListener("input", render);
   input.addEventListener("keydown", event => {

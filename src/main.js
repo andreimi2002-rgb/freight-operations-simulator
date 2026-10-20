@@ -15,11 +15,11 @@ import { createPalette } from "./ui/palette.mjs";
 import { aboutHtml } from "./ui/about.mjs";
 import { printHtml } from "./ui/print.mjs";
 import { VERSION } from "./version.mjs";
+import { activeCountries } from "./data/countries.mjs";
 
 // New key for the phase 1B Load model; the phase 1A history (fos-mission-history-v3) is left untouched.
 const HISTORY_KEY = "fos-load-history-v1";
 const MAX_HISTORY = 30;
-const CATALOG_URL = "/src/data/places/cities-ro-hu-bg.json";
 
 const router = createGeoapifyRouter();
 let history = [];
@@ -179,10 +179,15 @@ function onCityPicked(city) {
 
 async function loadCatalog() {
   try {
-    const response = await fetch(CATALOG_URL, { cache: "force-cache" });
-    if (!response.ok) throw new Error("catalog");
-    catalog = await response.json();
-    generator.setStatus(t("gen.catalogReady", { count: catalog.cities.length }));
+    const files = await Promise.all(activeCountries().map(async country => {
+      const response = await fetch(`/src/data/${country.cityFile}`, { cache: "force-cache" });
+      if (!response.ok) throw new Error(country.code);
+      return response.json();
+    }));
+    // each city keeps the import date of its own country file (shown as the retrieval date of the source)
+    const cities = files.flatMap(file => file.cities.map(city => ({ ...city, importedAt: file.metadata.importedAt })));
+    catalog = { metadata: files[0].metadata, cities };
+    generator.setStatus(t("gen.catalogReady", { count: cities.length }));
   } catch {
     generator.setStatus(t("gen.catalogError"));
     showToast(t("gen.catalogError"), { error: true });
