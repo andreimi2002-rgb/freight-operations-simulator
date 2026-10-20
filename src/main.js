@@ -21,6 +21,7 @@ import { fetchCityWeather, forgetWeather } from "./adapters/weather-client.mjs";
 import { weatherView } from "./view-model/weather.mjs";
 import { weatherHtml } from "./ui/city-cards.mjs";
 import { activeCountries } from "./data/countries.mjs";
+import { loadGeoData } from "./adapters/geo-data.mjs";
 
 // New key for the phase 1B Load model; the phase 1A history (fos-mission-history-v3) is left untouched.
 const HISTORY_KEY = "fos-load-history-v1";
@@ -197,7 +198,7 @@ async function generate({ originCity = null, destinationCity = null, family = "a
   try {
     const load = await generateLoad({
       cities: catalog.cities, importedAt: catalog.metadata.importedAt, router,
-      originCity, destinationCity, family, cargoId, equipmentId, now: new Date(),
+      originCity, destinationCity, family, cargoId, equipmentId, now: new Date(), geo: catalog.geo,
     });
     history.unshift(load);
     history = history.slice(0, MAX_HISTORY);
@@ -247,14 +248,15 @@ function onCityPicked(city) {
 
 async function loadCatalog() {
   try {
+    const geoData = await loadGeoData();
     const files = await Promise.all(activeCountries().map(async country => {
       const response = await fetch(`/src/data/${country.cityFile}`, { cache: "force-cache" });
       if (!response.ok) throw new Error(country.code);
       return response.json();
     }));
     // each city keeps the import date of its own country file (shown as the retrieval date of the source)
-    const cities = files.flatMap(file => file.cities.map(city => ({ ...city, importedAt: file.metadata.importedAt })));
-    catalog = { metadata: files[0].metadata, cities };
+    const cities = files.flatMap(file => file.cities.map(city => ({ ...city, importedAt: file.metadata.importedAt, locode: geoData.locodes[city.id] ?? null })));
+    catalog = { metadata: files[0].metadata, cities, geo: geoData.geo };
     generator.setStatus(t("gen.catalogReady", { count: cities.length }));
   } catch {
     generator.setStatus(t("gen.catalogError"));

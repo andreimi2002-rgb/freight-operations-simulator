@@ -2,6 +2,7 @@
 // buildLoadSheet(load): translated, formatted text plus the provenance of each row.
 import { countryName, formatDate, formatDuration, formatKm, formatNumber, formatTime, formatTonnes, t, tOr } from "../i18n/i18n.mjs";
 import { cityCode, cityName } from "../data/scope.mjs";
+import { DATASETS } from "../engine/datasets.mjs";
 import { offsetMin } from "../engine/time-windows.mjs";
 import { scheduleFact } from "../engine/schedule.mjs";
 import { LEVELS, UNAVAILABLE, levelHelp, levelLabel, phaseText } from "./provenance.mjs";
@@ -12,7 +13,7 @@ export const TABS = ["overview", "map", "cargo", "equipment", "schedule", "costs
 // Every fact of the Load belongs to exactly one tab ("Surse și calcule" lists them all).
 export const REAL_ROWS_BY_TAB = {
   overview: ["shipper", "consignee"],
-  map: ["origin", "destination", "route", "countries", "border"],
+  map: ["origin", "destination", "route", "countries", "borderDistance", "border"],
   cargo: ["cargo", "family", "cnCode", "temperature", "adr", "packaging", "unitMass", "mass", "loadingMetres"],
   equipment: ["trailer", "floor"],
   schedule: ["transit", "schedule", "loadingWindow", "unloadingWindow"],
@@ -22,7 +23,7 @@ export const REAL_ROWS_BY_TAB = {
 };
 // Things the finished product will show, with the stage that adds them. Not facts of the Load yet.
 export const PLACEHOLDERS_BY_TAB = {
-  map: [["borderDistance", "2"], ["elevation", "5"]],
+  map: [["elevation", "5"]],
   cargo: [["volume", "3"]],
   equipment: [["truck", "4"], ["truckSpecs", "4"]],
   schedule: [["weekendBans", "6"], ["driverPlan", "6"]],
@@ -56,6 +57,7 @@ function inputValue(key, value) {
   if (/Mm$/.test(key)) return mm(value);
   if (/Kg$/.test(key)) return kg(value);
   if (/Min$/.test(key)) return formatDuration(value * 60);
+  if (/Km$/.test(key)) return formatKm(value);
   return typeof value === "number" ? formatNumber(value) : String(value);
 }
 
@@ -68,6 +70,7 @@ function displayFact(fact) {
   if (fact.basis) shown.basis = t(`basis.${fact.basis}`) + (fact.range ? ` ${t("basis.range", { min: kg(fact.range.min), max: kg(fact.range.max) })}` : "");
   if (fact.note) shown.note = t(`note.${fact.note}`);
   if (fact.dependsOnEstimate) shown.note = [shown.note, t("note.dependsOnEstimate")].filter(Boolean).join(" ");
+  if (fact.datasets) shown.datasets = fact.datasets.map(id => DATASETS[id]).filter(Boolean);
   if (fact.level === UNAVAILABLE) { shown.phase = fact.phase; shown.reason = t(`reason.${fact.reason}`); }
   return shown;
 }
@@ -81,6 +84,9 @@ function sourceMeta(fact) {
   return meta;
 }
 const sourceLinks = fact => (fact?.source?.url ? [{ label: t("drawer.openSource"), url: fact.source.url }] : []);
+// Data sets a fact was derived from (Natural Earth, OpenStreetMap, UN/LOCODE…): one line and one link each.
+const datasetMeta = fact => (fact?.datasets || []).map(id => DATASETS[id]).filter(Boolean).map(d => ({ label: t("meta.datasets"), value: `${d.name} · ${d.license}` }));
+const datasetLinks = fact => (fact?.datasets || []).map(id => DATASETS[id]).filter(Boolean).map(d => ({ label: d.name, url: d.url }));
 
 function row(id, fact, valueText, { explanation, meta = [], links = [] } = {}) {
   const available = fact.level !== UNAVAILABLE;
@@ -95,8 +101,8 @@ function row(id, fact, valueText, { explanation, meta = [], links = [] } = {}) {
     fact: shown,
     detail: {
       explanation: available ? (explanation ?? tOr(`row.${id}.detail`, "")) : shown.reason,
-      meta: [...meta, ...sourceMeta(fact)],
-      links: [...links, ...sourceLinks(fact)],
+      meta: [...meta, ...sourceMeta(fact), ...datasetMeta(fact)],
+      links: [...links, ...sourceLinks(fact), ...datasetLinks(fact)],
     },
   };
 }
@@ -125,7 +131,35 @@ function timelineOf(events) {
   });
 }
 
+// Short UN/LOCODE parts (BUH → BUD); when both would be the same, the full codes are shown.
+function heroCodes(origin, destination) {
+  const a = cityCode(origin), b = cityCode(destination);
+  const same = a === b;
+  return { originCode: cityCode(origin, { full: same }), destinationCode: cityCode(destination, { full: same }) };
+}
+
 // photos: Map(GeoNames ID -> prepared Wikimedia Commons photo), optional.
+const crossingText = c => `${c.name || t("border.generic")} (${countryName(c.from)} → ${countryName(c.to)})`;
+const regimeText = c => t(`border.${c.regime}`);
+const osmUrl = id => `https://www.openstreetmap.org/${id}`;
+
+function borderRowParts(fact) {
+  if (fact.level === UNAVAILABLE) return { text: "", meta: [], links: [] };
+  const list = fact.value.crossings;
+  if (!list.length) return { text: t("border.none"), meta: [], links: [], explanation: t("row.border.detailNone") };
+  return {
+    text: list.map(crossingText).join("; "),
+    meta: list.flatMap(c => [
+      { label: crossingText(c), value: regimeText(c) },
+      { label: t("border.position"), value: `${formatNumber(c.lat, { maximumFractionDigits: 4 })}, ${formatNumber(c.lon, { maximumFractionDigits: 4 })}` },
+      ...(c.osm.length ? [{ label: t("border.found"), value: t("border.foundValue", { meters: formatNumber(c.distanceM, { maximumFractionDigits: 0 }) }) }] : [{ label: t("border.found"), value: t("border.notFound") }]),
+    ]),
+    links: list.flatMap(c => c.osm.slice(0, 3).map(id => ({ label: `OpenStreetMap ${id}`, url: osmUrl(id) }))),
+  };
+}
+
+const distancesText = fact => (fact.level === UNAVAILABLE ? "" : fact.value.countries.map(c => `${countryName(c.code)} ${formatKm(c.km)}`).join(" · "));
+
 export function buildLoadSheet(load, { photos = new Map() } = {}) {
   const origin = load.origin.value;
   const destination = load.destination.value;
@@ -147,6 +181,7 @@ export function buildLoadSheet(load, { photos = new Map() } = {}) {
   const originLine = `${cityName(origin)}, ${countryName(origin.countryCode)}`;
   const destinationLine = `${cityName(destination)}, ${countryName(destination.countryCode)}`;
   const placeMeta = place => [
+    ...(place.locode ? [{ label: t("meta.locode"), value: place.locode }] : []),
     { label: t("meta.population"), value: formatNumber(place.population, { maximumFractionDigits: 0 }) },
     { label: t("meta.timeZone"), value: place.timeZone },
   ];
@@ -166,7 +201,10 @@ export function buildLoadSheet(load, { photos = new Map() } = {}) {
     countries.length
       ? row("countries", summaryFact, countries.join(" → "))
       : row("countries", { value: null, level: UNAVAILABLE, phase: "5", reason: "countriesMissing" }, ""),
-    row("border", load.route.borderCrossings, ""),
+    row("borderDistance", load.route.countryDistances, distancesText(load.route.countryDistances), {
+      meta: load.route.countryDistances.level === UNAVAILABLE ? [] : load.route.countryDistances.value.countries.map(c => ({ label: countryName(c.code), value: `${formatKm(c.km)} · ${formatNumber(c.share * 100, { maximumFractionDigits: 0 })}%` })),
+    }),
+    (() => { const parts = borderRowParts(load.route.borderCrossings); return row("border", load.route.borderCrossings, parts.text, { meta: parts.meta, links: parts.links, ...(parts.explanation ? { explanation: parts.explanation } : {}) }); })(),
     row("cargo", load.cargo.selection, names.cargo, { meta: [{ label: t("meta.cargoCatalog"), value: cargo.id }] }),
     row("family", load.cargo.nstChapters, load.cargo.nstChapters.value ? `${names.family} · NST ${load.cargo.nstChapters.value.join(", ")}` : ""),
     row("temperature", load.cargo.temperature, ""),
@@ -223,8 +261,7 @@ export function buildLoadSheet(load, { photos = new Map() } = {}) {
     displayId: load.id,
     fixture: isFixtureRoute(route),
     hero: {
-      originCode: cityCode(origin),
-      destinationCode: cityCode(destination),
+      ...heroCodes(origin, destination),
       originName: cityName(origin),
       destinationName: cityName(destination),
       originLine,
@@ -276,6 +313,7 @@ export function buildLoadSheet(load, { photos = new Map() } = {}) {
       originName: cityName(origin),
       destinationName: cityName(destination),
       provider: route.provider,
+      crossings: load.route.borderCrossings.level === UNAVAILABLE ? [] : load.route.borderCrossings.value.crossings.map(c => ({ lat: c.lat, lon: c.lon, label: crossingText(c) })),
     },
     cities: [
       { role: "origin", label: t("city.origin"), place: origin, weatherAt: { iso: loading.from, label: t("weather.atLoading") } },
@@ -301,7 +339,8 @@ export function buildLoadSheet(load, { photos = new Map() } = {}) {
         { label: t("chip.distance"), value: formatKm(route.distanceKm) },
         { label: t("chip.duration"), value: duration },
         { label: t("chip.transit"), value: transitText },
-        { label: t("row.countries.label"), value: countries.length ? countries.join(" → ") : phaseText("5") },
+        { label: t("row.countries.label"), value: load.route.countryDistances.level !== UNAVAILABLE ? distancesText(load.route.countryDistances) : (countries.length ? countries.join(" → ") : phaseText("5")) },
+        { label: t("row.border.label"), value: load.route.borderCrossings.level !== UNAVAILABLE ? borderRowParts(load.route.borderCrossings).text : phaseText(load.route.borderCrossings.phase) },
         { label: t("hero.via"), value: route.viaNames.length ? route.viaNames.join(" · ") : t("ui.noValue") },
         { label: t("meta.tolls"), value: route.hasTolls ? t("meta.tollsYes") : t("meta.tollsNo") },
       ],
