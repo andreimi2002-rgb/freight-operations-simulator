@@ -1,7 +1,8 @@
 // Provenance for every fact in a Load (see AGENTS.md). Language-neutral: formulas, bases,
 // notes and reasons are ids that the view model translates; sources carry name/url/date.
-//   sourced   { value, source: { name, url, retrievedAt, license?, note? } }
-//   computed  { value, formula, inputs: { key: number|string|object }, dependsOnEstimate? }
+//   sourced   { value, source: { name, url, retrievedAt, license?, note? }, datasets? }
+//   computed  { value, formula, inputs: { key: number|string|object }, dependsOnEstimate?, datasets? }
+//   (datasets: ids from src/engine/datasets.mjs of the data sets a fact was derived from)
 //   estimated { value, basis, range? }
 //   simulated { value, note }
 //   unavailable { value: null, phase, reason }   (not a provenance level: no value yet)
@@ -10,7 +11,7 @@ export const LEVELS = ["sourced", "computed", "estimated", "simulated"];
 export const UNAVAILABLE = "unavailable";
 export const PHASES = ["1B", "2", "3", "4", "5", "6", "7"];
 
-export const sourced = (value, source) => ({ value, level: "sourced", source });
+export const sourced = (value, source, extra = {}) => ({ value, level: "sourced", source, ...extra });
 export const computed = (value, formula, inputs, extra = {}) => ({ value, level: "computed", formula, inputs, ...extra });
 export const estimated = (value, basis, extra = {}) => ({ value, level: "estimated", basis, ...extra });
 export const simulated = (value, note) => ({ value, level: "simulated", note });

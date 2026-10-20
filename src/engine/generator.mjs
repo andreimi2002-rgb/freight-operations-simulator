@@ -7,6 +7,7 @@ import { routeFacts } from "./route.mjs";
 import { transitFact } from "./transit-time.mjs";
 import { generateWindows, windowFacts } from "./time-windows.mjs";
 import { partyFacts } from "./parties.mjs";
+import { routeGeoFacts } from "./geo-facts.mjs";
 import { createLoad, validateLoad } from "./load-model.mjs";
 
 export class GenerationError extends Error {
@@ -22,7 +23,7 @@ export async function generateLoad({
   cities, importedAt, router,
   originCity = null, destinationCity = null,
   family = "all", cargoId = "random", equipmentId = "random",
-  now = new Date(), random = Math.random, countries,
+  now = new Date(), random = Math.random, countries, geo = null,
 }) {
   let a = originCity;
   let b = destinationCity;
@@ -39,6 +40,7 @@ export async function generateLoad({
   const origin = toPlace(a, importedAt);
   const destination = toPlace(b, importedAt);
   const route = await routeFacts(router, origin.value, destination.value);
+  Object.assign(route, routeGeoFacts(route.summary.value, geo)); // distance by country and border crossings
   const transit = transitFact(route.summary.value.durationS);
   const windows = generateWindows({
     now, originTimeZone: a.timeZone, destinationTimeZone: b.timeZone, transitMin: transit.value.totalMin, random,
