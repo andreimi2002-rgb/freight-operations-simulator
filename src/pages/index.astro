@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DeparturesBoard from '../components/DeparturesBoard.astro';
+import JobGenerator from '../components/JobGenerator.astro';
+import { getI18n } from '../i18n/index.mjs';
+
+const { t } = getI18n();
+const pillars = [
+  { id: 'city', stage: 2, href: '/ats' },
+  { id: 'board', stage: 3, href: '/ats/planner' },
+  { id: 'job', stage: 4 },
+];
+---
+<BaseLayout>
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">{t('home.eyebrow')}</p>
+      <h1 class="hero-title">{t('home.title')}</h1>
+      <p class="hero-lead">{t('home.lead')}</p>
+      <p class="hero-status"><span class="badge badge-amber">{t('stage.current')}</span> <span>{t('home.status')}</span></p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="/ats">{t('home.citiesCta')}</a>
+        <a class="button button-ghost" href="/about">{t('home.aboutCta')}</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container stack">
+    <JobGenerator />
+    <DeparturesBoard featured />
+
+    <section aria-labelledby="pillars-title">
+      <h2 id="pillars-title" class="section-title">{t('home.pillarsTitle')}</h2>
+      <ul class="pillars">
+        {pillars.map((p) => (
+          <li class="card pillar">
+            <span class="badge">{t('stage.label', { n: p.stage })}</span>
+            <h3>{t(`home.pillars.${p.id}.title`)}</h3>
+            <p class="soft">{t(`home.pillars.${p.id}.text`)}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .hero {
+    background: var(--hero);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-inner {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-8);
+  }
+  .hero-title {
+    margin-top: var(--space-3);
+    font-size: var(--title-city);
+    letter-spacing: -0.02em;
+  }
+  .hero-lead {
+    margin-top: var(--space-4);
+    max-width: 62ch;
+    font-size: 18px;
+    color: var(--text-soft);
+  }
+  .hero-status {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2) var(--space-3);
+    margin-top: var(--space-5);
+    color: var(--text-soft);
+    font-size: 15px;
+  }
+  .hero-actions { margin-top: var(--space-5); display: flex; flex-wrap: wrap; gap: var(--space-3); }
+
+  .stack {
+    display: grid;
+    gap: var(--space-7);
+    margin-top: var(--space-7);
+  }
+  .stack > * { min-width: 0; }
+  .section-title { margin-bottom: var(--space-4); }
+  .pillars {
+    display: grid;
+    gap: var(--space-4);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  @media (min-width: 720px) {
+    .pillars { grid-template-columns: repeat(3, 1fr); }
+  }
+  .pillar { display: grid; gap: var(--space-3); align-content: start; justify-items: start; }
+
+  @media (max-width: 719px) {
+    .hero-inner { padding-top: var(--space-7); padding-bottom: var(--space-7); }
+    .hero-title { font-size: var(--title-city-phone); }
+    .hero-lead { font-size: 16px; }
+  }
+</style>

@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getI18n } from '../../i18n/index.mjs';
+import { scope, cities, photos } from '../../lib/data.mjs';
+import { statesWithCities, cityPath } from '../../lib/ats.mjs';
+
+const { t } = getI18n();
+const states = statesWithCities(scope, cities);
+---
+<BaseLayout title={t('atsIndex.title')} description={t('atsIndex.metaDescription')}>
+  <div class="container page">
+    <header class="head">
+      <p class="eyebrow">{t('atsIndex.eyebrow')}</p>
+      <h1>{t('atsIndex.title')}</h1>
+      <p class="soft lead">{t('atsIndex.lead')}</p>
+    </header>
+
+    {states.map((s) => (
+      <section class="state" aria-labelledby={`state-${s.code}`}>
+        <header class="state-head">
+          <h2 id={`state-${s.code}`}>{s.name}</h2>
+          <span class="badge">{t('atsIndex.cities', { n: s.cities.length })}</span>
+        </header>
+        <ul class="grid">
+          {s.cities.map((c) => {
+            const photo = photos[c.id]?.photo;
+            return (
+              <li>
+                <a class="city" href={cityPath(c)}>
+                  <span class="thumb">
+                    {photo
+                      ? <img src={photo.src960} alt="" loading="lazy" decoding="async" width="480" height="270" />
+                      : <span class="ph mono" aria-hidden="true">{c.state}</span>}
+                  </span>
+                  <span class="info">
+                    <span class="name">{c.name}</span>
+                    <span class="meta mono">{t('atsIndex.depots', { n: c.depots.length })}</span>
+                  </span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .page { display: grid; gap: var(--space-7); padding-top: var(--space-7); }
+  .page > * { min-width: 0; }
+  .head { display: grid; gap: var(--space-3); }
+  .head h1 { font-size: clamp(30px, 5vw, 44px); text-wrap: balance; }
+  .lead { max-width: 64ch; font-size: 17px; }
+  .state-head { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--space-4);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .city {
+    display: grid;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    color: var(--text);
+    text-decoration: none;
+    height: 100%;
+  }
+  .city:hover { border-color: var(--border-input); }
+  .city:hover .name { color: var(--amber); }
+  .thumb { display: block; aspect-ratio: 16 / 9; max-width: 100%; background: var(--hero); }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ph { display: grid; place-items: center; height: 100%; color: var(--text-muted); font-size: 22px; letter-spacing: 0.1em; }
+  .info { display: grid; gap: 2px; padding: var(--space-3) var(--space-4) var(--space-4); }
+  .name { font-weight: 600; font-size: 17px; }
+  .meta { font-size: 12px; color: var(--text-muted); }
+</style>

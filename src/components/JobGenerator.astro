@@ -1,0 +1,100 @@
+---
+// "Generate a job": one random real job with its details. The browser script
+// (src/scripts/generate.mjs) picks it; the code in the address (?job=…) reproduces it.
+import { getI18n } from '../i18n/index.mjs';
+import { scope, cities } from '../lib/data.mjs';
+import { statesWithCities } from '../lib/ats.mjs';
+
+interface Props { city?: { id: string; name: string } }
+const { city } = Astro.props;
+const { t, meta } = getI18n();
+const states = statesWithCities(scope, cities);
+---
+<section class="gen card" aria-labelledby="gen-title" data-gen data-gen-city={city?.id} data-locale={meta.intlLocale} data-state="idle">
+  <div class="gen-head">
+    <h2 id="gen-title">{t('generator.title')}</h2>
+    <p class="soft">{city ? t('generator.leadCity', { city: city.name }) : t('generator.lead')}</p>
+  </div>
+
+  <form class="gen-form" data-gen-form>
+    {!city && (
+      <div class="field">
+        <label for="gen-from">{t('generator.from')}</label>
+        <select id="gen-from" name="from">
+          <option value="">{t('generator.anyCity')}</option>
+          {states.map((s) => (
+            <optgroup label={s.name}>
+              {s.cities.map((c) => <option value={c.id}>{c.name}</option>)}
+            </optgroup>
+          ))}
+        </select>
+      </div>
+    )}
+    <label class="check" for={`gen-base${city ? '-city' : ''}`}>
+      <input type="checkbox" id={`gen-base${city ? '-city' : ''}`} name="base" />
+      <span>{t('generator.baseOnly')}</span>
+    </label>
+    <button type="submit" class="button button-primary gen-go" data-gen-go>{t('generator.button')}</button>
+  </form>
+
+  <p class="gen-msg soft" data-gen-msg hidden></p>
+
+  <article class="job" data-gen-result hidden aria-live="polite">
+    <header class="job-head">
+      <p class="eyebrow mono" data-g="code"></p>
+      <h3 class="job-route"><a data-g="fromLink"></a> <span aria-hidden="true">→</span> <a data-g="toLink"></a></h3>
+      <p class="job-cargo"><span data-g="cargo"></span></p>
+      <div data-g="badges"></div>
+    </header>
+    <dl class="job-facts">
+      <div><dt>{t('generator.pickup')}</dt><dd data-g="pickup"></dd></div>
+      <div><dt>{t('generator.deliver')}</dt><dd data-g="deliver"></dd></div>
+      <div><dt>{t('generator.trailer')}</dt><dd data-g="trailer"></dd></div>
+      <div><dt>{t('generator.weight')}</dt><dd class="mono" data-g="weight"></dd></div>
+      <div><dt>{t('generator.distance')}</dt><dd class="mono" data-g="distance"></dd></div>
+      <div><dt>{t('generator.drive')}</dt><dd class="mono" data-g="drive"></dd></div>
+      <div class="wide"><dt>{t('generator.needs')}</dt><dd data-g="needs"></dd></div>
+    </dl>
+    <div class="job-actions">
+      <button type="button" class="button button-primary" data-gen-again>{t('generator.again')}</button>
+      <a class="button button-ghost" data-g="planner">{t('generator.openPlanner')}</a>
+      <button type="button" class="button button-ghost" data-gen-share>{t('generator.share')}</button>
+      <span class="muted small" data-gen-copied role="status"></span>
+    </div>
+    <p class="muted small note">{t('generator.estimateNote')}</p>
+  </article>
+</section>
+
+<script>
+  import '../scripts/generate.mjs';
+</script>
+
+<style>
+  .gen { display: grid; gap: var(--space-4); }
+  .gen-head { display: grid; gap: var(--space-2); }
+  .gen-head h2 { font-size: 22px; }
+  .gen-form { display: flex; flex-wrap: wrap; align-items: end; gap: var(--space-3) var(--space-5); }
+  .field { display: grid; gap: var(--space-2); min-width: 220px; flex: 1 1 220px; max-width: 360px; }
+  label { font-size: 13px; font-weight: 600; color: var(--text-soft); }
+  select { min-height: var(--target); width: 100%; padding: 0 var(--space-3); background: var(--panel-deep); color: var(--text); border: 1px solid var(--border-input); border-radius: var(--radius-sm); font: inherit; }
+  .check { display: flex; align-items: center; gap: var(--space-3); min-height: var(--target); font-size: 15px; font-weight: 500; color: var(--text); cursor: pointer; }
+  .check input { width: 20px; height: 20px; accent-color: var(--amber); }
+  .gen-go { font-size: 16px; padding: 0 var(--space-6); }
+  .job { display: grid; gap: var(--space-4); padding: var(--space-5); background: var(--bg-header); border: 1px solid var(--border); border-radius: var(--radius-md); }
+  .job-head { display: grid; gap: var(--space-2); }
+  .job-route { font-size: clamp(24px, 4vw, 32px); line-height: 1.15; text-wrap: balance; }
+  .job-route a { color: var(--text); text-decoration-color: var(--border-input); }
+  .job-route a:hover { color: var(--amber); }
+  .job-route span { color: var(--amber); }
+  .job-cargo { font-size: 18px; font-weight: 600; color: var(--text-soft); }
+  .job-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-3); margin: 0; }
+  .job-facts > div { display: grid; gap: 2px; padding: var(--space-3); background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-sm); min-width: 0; }
+  .job-facts .wide { grid-column: 1 / -1; }
+  dt { font: 500 11px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+  dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+  dd.mono { font-variant-numeric: tabular-nums; }
+  .job-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+  .small { font-size: 13px; }
+  .gen :global(.job-badges) { display: flex; flex-wrap: wrap; gap: 4px; }
+  .gen :global(.job-badges .badge) { font-size: 12px; }
+</style>

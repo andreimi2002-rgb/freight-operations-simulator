@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getI18n } from '../i18n/index.mjs';
+import data from '../data/sources.json';
+
+const { t } = getI18n();
+const rules = ['real', 'unknown', 'ids', 'images'];
+const attribution = ['footer.gameData', 'footer.weatherPhotos', 'footer.notAffiliated'];
+// A source without its own name (computed in the browser) takes its name from i18n.
+const nameOf = (s) => s.name ?? t(`sources.${s.id}.name`);
+---
+<BaseLayout title={t('about.title')} description={t('about.metaDescription')}>
+  <div class="container about">
+    <header class="about-head">
+      <p class="eyebrow">{t('stage.current')}</p>
+      <h1>{t('about.title')}</h1>
+      <p class="lead soft">{t('about.lead')}</p>
+    </header>
+
+    <section class="card" aria-labelledby="rules-title">
+      <h2 id="rules-title">{t('about.rulesTitle')}</h2>
+      <ul class="rules">
+        {rules.map((r) => <li>{t(`about.rules.${r}`)}</li>)}
+      </ul>
+    </section>
+
+    <section aria-labelledby="sources-title">
+      <h2 id="sources-title">{t('about.sourcesTitle')}</h2>
+      <p class="soft intro">{t('about.sourcesIntro')}</p>
+      <div class="table-wrap table-scroll">
+        <table>
+          <caption class="visually-hidden">{t('about.sourcesCaption')}</caption>
+          <thead>
+            <tr>
+              <th scope="col">{t('about.cols.source')}</th>
+              <th scope="col">{t('about.cols.use')}</th>
+              <th scope="col">{t('about.cols.licence')}</th>
+              <th scope="col">{t('about.cols.stage')}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.sources.map((s) => (
+              <tr>
+                <th scope="row">
+                  {s.url ? <a href={s.url} rel="noopener">{nameOf(s)}</a> : nameOf(s)}
+                </th>
+                <td>{t(`sources.${s.id}.use`)}</td>
+                <td>
+                  {s.licenceUrl
+                    ? <a href={s.licenceUrl} rel="noopener">{t(`sources.${s.id}.licence`)}</a>
+                    : t(`sources.${s.id}.licence`)}
+                </td>
+                <td class="mono nowrap">{t('stage.from', { n: s.stage })}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="attribution-title">
+      <h2 id="attribution-title">{t('about.attributionTitle')}</h2>
+      <p class="soft intro">{t('about.attributionIntro')}</p>
+      <blockquote class="card-deep attribution">
+        {attribution.map((key) => <p>{t(key)}</p>)}
+      </blockquote>
+      <h3 class="sub">{t('about.datasetTitle')}</h3>
+      <p class="soft">{t('about.datasetText')}</p>
+    </section>
+
+    <section aria-labelledby="software-title">
+      <h2 id="software-title">{t('about.softwareTitle')}</h2>
+      <ul class="software">
+        {data.software.map((s) => (
+          <li class="card-deep">
+            <a href={s.url} rel="noopener">{s.name}</a>
+            <span class="soft">{t(`sources.${s.id}.use`)}</span>
+            <a class="mono small" href={s.licenceUrl}>{t(`sources.${s.id}.licence`)}</a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="games-title">
+      <h2 id="games-title">{t('about.gamesTitle')}</h2>
+      <p class="soft">{t('about.gamesText')}</p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    display: grid;
+    gap: var(--space-6);
+    padding-top: var(--space-7);
+  }
+  /* Grid items may shrink below their content, so wide tables scroll inside their wrapper. */
+  .about > * { min-width: 0; }
+  .about-head { display: grid; gap: var(--space-3); }
+  .about-head h1 { font-size: 40px; }
+  .lead { max-width: 68ch; font-size: 17px; }
+  h2 { margin-bottom: var(--space-3); }
+  .intro { margin-bottom: var(--space-4); }
+  .rules { margin: 0; padding-left: 1.2em; display: grid; gap: var(--space-2); color: var(--text-soft); }
+
+  .table-wrap {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+  }
+  table { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 15px; }
+  thead th {
+    padding: var(--space-3) var(--space-4);
+    text-align: left;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+  }
+  tbody th, tbody td {
+    padding: var(--space-4);
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--row-line);
+  }
+  tbody th { font-weight: 600; white-space: nowrap; }
+  tbody th, tbody td { padding-top: var(--space-2); padding-bottom: var(--space-2); }
+  tbody a, .software a { display: inline-flex; align-items: center; min-height: var(--target); }
+  tbody td:not(:has(a)) { padding-top: var(--space-3); }
+  tbody td { color: var(--text-soft); }
+  tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
+  .nowrap { white-space: nowrap; font-size: 13px; }
+
+  .attribution { margin: 0 0 var(--space-5); display: grid; gap: var(--space-1); }
+  .sub { margin-bottom: var(--space-2); }
+
+  .software {
+    display: grid;
+    gap: var(--space-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  @media (min-width: 720px) {
+    .software { grid-template-columns: repeat(3, 1fr); }
+  }
+  .software li { display: grid; gap: var(--space-2); align-content: start; }
+  .software li > a:first-child { font-weight: 600; }
+  .small { font-size: 12px; }
+
+  @media (max-width: 719px) {
+    .about { padding-top: var(--space-6); }
+    .about-head h1 { font-size: 32px; }
+  }
+</style>

@@ -1,0 +1,50 @@
+---
+import '../styles/global.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { getI18n } from '../i18n/index.mjs';
+import en from '../i18n/en.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { t, meta } = getI18n();
+// Text the browser script needs (weather labels, units), passed as data.
+const liveText = JSON.stringify({ weather: en.weather, city: en.city, units: en.units, board: en.board, planner: en.planner, dlcNames: en.dlcNames, generator: en.generator });
+const siteName = t('site.name');
+const { title, description = t('site.description') } = Astro.props;
+const fullTitle = title ? `${title} · ${siteName}` : siteName;
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : undefined;
+---
+<!doctype html>
+<html lang={meta.lang} dir={meta.dir}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0E131A" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{t('a11y.skip')}</a>
+    <SiteHeader />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <SiteFooter />
+    <script type="application/json" id="fw-live-text" set:html={liveText}></script>
+    <script>
+      import '../scripts/live.mjs';
+    </script>
+  </body>
+</html>

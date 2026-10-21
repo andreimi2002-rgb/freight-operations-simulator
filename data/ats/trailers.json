@@ -1,0 +1,1321 @@
+{
+  "meta": {
+    "source": "Truck Simulator Wiki",
+    "sourceUrl": "https://trucksimulator.wiki.gg",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Game data from Truck Simulator Wiki contributors (trucksimulator.wiki.gg), CC BY-SA 4.0.",
+    "retrieved": "2026-10-21",
+    "generator": "scripts/ats/collect.mjs",
+    "userAgent": "FreightWorldDataBot/0.1 (https://github.com/andreimi2002-rgb/freight-operations-simulator; fan project data collection)",
+    "game": "ats",
+    "states": [
+      "CA",
+      "NV"
+    ],
+    "description": "Trailer types named on the cargo list, each with the dealer trailer models (wiki trailer pages) that belong to it. priceUsd is the base dealer price shown on the wiki.",
+    "count": 32
+  },
+  "trailers": [
+    {
+      "id": "blade-trailer",
+      "name": "Blade Trailer",
+      "cargo": [
+        "wind-turbine-blade"
+      ],
+      "models": []
+    },
+    {
+      "id": "bulk-feed",
+      "name": "Bulk Feed",
+      "cargo": [
+        "barley",
+        "corn",
+        "cotton-seed",
+        "grain",
+        "pelleted-animal-food",
+        "rye",
+        "soybean",
+        "wheat"
+      ],
+      "models": [
+        {
+          "id": "bulk-feed",
+          "name": "Bulk Feed",
+          "priceUsd": 57700,
+          "pricesUsd": [
+            57700
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "Bulk feed material",
+          "match": {
+            "by": "name"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Bulk_Feed_Trailer",
+            "revid": 289216
+          }
+        }
+      ]
+    },
+    {
+      "id": "car-transporter",
+      "name": "Car Transporter",
+      "cargo": [
+        "cars",
+        "cars-mixed",
+        "cars-small",
+        "utility-terrain-vehicles"
+      ],
+      "models": [
+        {
+          "id": "car-transporter",
+          "name": "Car Transporter",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": false,
+          "cargoTypesNote": "Vehicles",
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Car_Transporter_Trailer/American_Truck_Simulator",
+            "revid": 289324
+          }
+        }
+      ]
+    },
+    {
+      "id": "chemical-tank",
+      "name": "Chemical Tank",
+      "cargo": [
+        "ethanol",
+        "hydrochloric-acid",
+        "lye",
+        "mercuric-chloride",
+        "pesticides",
+        "sulphuric-acid"
+      ],
+      "models": [
+        {
+          "id": "d-shaped-tank",
+          "name": "D-shaped Tank",
+          "priceUsd": 54940,
+          "pricesUsd": [
+            54940
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "Corrosive, toxic, or otherwise dangerous liquids",
+          "match": {
+            "by": "cargo overlap",
+            "jaccard": 0.83
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/D-shaped_Tank_Trailer",
+            "revid": 289218
+          }
+        }
+      ]
+    },
+    {
+      "id": "chip-van",
+      "name": "Chip Van",
+      "cargo": [
+        "cotton-seed",
+        "hay",
+        "scrap-metals",
+        "used-packaging",
+        "waste-paper",
+        "wood-shavings"
+      ],
+      "models": [
+        {
+          "id": "chip-van",
+          "name": "Chip Van",
+          "priceUsd": 68740,
+          "pricesUsd": [
+            68740
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "Light bulk material",
+          "match": {
+            "by": "name"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Chip_Van_Trailer",
+            "revid": 289217
+          }
+        }
+      ]
+    },
+    {
+      "id": "container-carrier",
+      "name": "Container Carrier",
+      "cargo": [
+        "batteries",
+        "beverages",
+        "borates",
+        "boric-acid",
+        "bromine",
+        "car-parts",
+        "chemical-granules",
+        "clothes",
+        "construction-houses",
+        "dry-fruits",
+        "dry-milk",
+        "electronic-components",
+        "flour",
+        "lemonade",
+        "machine-parts",
+        "nitrocellulose",
+        "packaged-food",
+        "paper",
+        "potassium",
+        "potatoes",
+        "power-generator",
+        "salt",
+        "silane",
+        "soda-ash",
+        "sugar",
+        "sulphur",
+        "tvs"
+      ],
+      "models": [
+        {
+          "id": "container-carrier",
+          "name": "Container Carrier",
+          "priceUsd": 27900,
+          "pricesUsd": [
+            27900
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "Containers and container tanks",
+          "match": {
+            "by": "name"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Container_Carrier_Trailer/American_Truck_Simulator",
+            "revid": 289196
+          }
+        }
+      ]
+    },
+    {
+      "id": "drop-deck",
+      "name": "Drop Deck",
+      "cargo": [
+        "agricultural-telehandler-bobcat-tl3070",
+        "air-conditioning-units",
+        "aircraft-engine",
+        "almond-boxes",
+        "aluminum-ingots",
+        "aluminum-profiles",
+        "autonomous-tractor",
+        "backhoe-loader",
+        "backhoe-loader-jcb-4cx",
+        "big-tires",
+        "boom-lift-articulated",
+        "boom-lift-telescopic",
+        "bus-hood",
+        "cables",
+        "cattle-equipment",
+        "circuit-breakers",
+        "clamshell-bucket",
+        "compact-generators-jcb-g100rs",
+        "compact-tractor",
+        "compressor-bobcat-pa127v",
+        "concrete-tubes-large",
+        "concrete-tubes-small",
+        "corn-head",
+        "disc-harrows",
+        "dumpster",
+        "electric-dumpster-jcb-htd-5e",
+        "electric-mini-excavator-jcb-19c-e",
+        "empty-pallets",
+        "excavator-bobcat-e60",
+        "fertilizer",
+        "fertilizer-tank",
+        "forklift-bobcat-d30",
+        "forklifts",
+        "geo-membranes-rolls",
+        "glass",
+        "glass-racks",
+        "hay",
+        "heat-exchanger",
+        "insulation-panels",
+        "jet-engine-inlet-cowl",
+        "krone-big-pack-1290-xc-hdp",
+        "krone-easycut-b-880-cv",
+        "krone-varipack-v-190-xc",
+        "lumber-boards",
+        "medium-truck-chassis",
+        "metal-coil",
+        "mini-excavator-bobcat-e10e",
+        "mix-tank",
+        "mobile-air-compressor",
+        "mooring-buoy",
+        "motor-grader",
+        "moving-containers",
+        "municipal-truck",
+        "packed-lumber",
+        "pickups-crane",
+        "planter",
+        "powerpack-jcb-125qe",
+        "pressure-tank",
+        "rails",
+        "recreational-vehicle-motorhomes",
+        "reservoir-tank",
+        "roadroller",
+        "rough-terrain-forklift",
+        "scaffolding",
+        "school-bus",
+        "scissor-lift",
+        "seed-containers",
+        "service-truck",
+        "skid-steer-loader-bobcat-s86",
+        "square-baler",
+        "square-tubing",
+        "telescopic-handler",
+        "telescopic-handler-jcb-540-180",
+        "tractor",
+        "tractor-jcb-fastrac-4220",
+        "trailers",
+        "transformer",
+        "trees",
+        "truss",
+        "ventilation-shaft",
+        "waste-paper",
+        "wheel-loader-bobcat-l95",
+        "windrower",
+        "wire-rod-coil",
+        "wood-chipper",
+        "work-truck-chassis",
+        "yard-truck"
+      ],
+      "models": [
+        {
+          "id": "drop-deck",
+          "name": "Drop Deck",
+          "priceUsd": 33240,
+          "pricesUsd": [
+            33240
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "Construction equipment, machinery, materials and high cargo",
+          "match": {
+            "by": "name"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Drop_Deck_Trailer",
+            "revid": 289219
+          }
+        }
+      ]
+    },
+    {
+      "id": "dry-bulk",
+      "name": "Dry Bulk",
+      "cargo": [
+        "barley",
+        "borates",
+        "cement",
+        "corn",
+        "cotton-seed",
+        "grain",
+        "pelleted-animal-food",
+        "rye",
+        "sand",
+        "soybean",
+        "wheat"
+      ],
+      "models": [
+        {
+          "id": "dry-bulk",
+          "name": "Dry Bulk",
+          "priceUsd": 60120,
+          "pricesUsd": [
+            60120
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "Bulk cargo, materials and food",
+          "match": {
+            "by": "name"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Dry_Bulk_Trailer",
+            "revid": 289220
+          }
+        }
+      ]
+    },
+    {
+      "id": "dry-van",
+      "name": "Dry Van",
+      "cargo": [
+        "almond-boxes",
+        "batteries",
+        "beverages",
+        "borates",
+        "boric-acid",
+        "cans",
+        "chemical-granules",
+        "clothes",
+        "computers",
+        "curtains",
+        "dry-fruits",
+        "dry-milk",
+        "dry-van",
+        "dynamite",
+        "empty-bottles",
+        "empty-pallets",
+        "fertilizer",
+        "fireworks",
+        "flour",
+        "furniture",
+        "grain",
+        "guard-rails",
+        "home-accessories",
+        "household-appliances",
+        "ibc-containers",
+        "lemonade",
+        "nitrocellulose",
+        "nuts",
+        "office-supplies",
+        "packaged-food",
+        "paper",
+        "pelleted-animal-food",
+        "potassium",
+        "potatoes",
+        "rice",
+        "salt",
+        "soda-ash",
+        "sugar",
+        "sulphur",
+        "tableware",
+        "talc-powder",
+        "tires",
+        "toys",
+        "tvs",
+        "used-packaging",
+        "waste-paper"
+      ],
+      "models": [
+        {
+          "id": "dry-van",
+          "name": "Dry Van",
+          "priceUsd": 41380,
+          "pricesUsd": [
+            41380
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "General, dry goods",
+          "match": {
+            "by": "name"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Dry_Van_Trailer",
+            "revid": 289221
+          }
+        }
+      ]
+    },
+    {
+      "id": "dumper",
+      "name": "Dumper",
+      "cargo": [
+        "excavated-soil",
+        "gravel",
+        "limestone",
+        "sand",
+        "scrap-metals",
+        "stones",
+        "wood-shavings"
+      ],
+      "models": [
+        {
+          "id": "end-dumper",
+          "name": "End Dumper",
+          "priceUsd": 46900,
+          "pricesUsd": [
+            46900
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "Bulk cargo and materials",
+          "match": {
+            "by": "cargo overlap",
+            "jaccard": 1
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/End_Dumper_Trailer",
+            "revid": 289222
+          }
+        },
+        {
+          "id": "horizontal-bottom-dumper",
+          "name": "Horizontal Bottom Dumper",
+          "priceUsd": null,
+          "pricesUsd": [
+            37740,
+            62940
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "Bulk cargo and Materials",
+          "match": {
+            "by": "cargo overlap",
+            "jaccard": 1
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Horizontal_Bottom_Dumper_Trailer",
+            "revid": 289211
+          }
+        }
+      ]
+    },
+    {
+      "id": "flatbed",
+      "name": "Flatbed",
+      "cargo": [
+        "air-conditioning-units",
+        "aircraft-engine",
+        "almond-boxes",
+        "aluminum-ingots",
+        "aluminum-profiles",
+        "cables",
+        "cattle-equipment",
+        "clamshell-bucket",
+        "compact-generators-jcb-g100rs",
+        "compressor-bobcat-pa127v",
+        "concrete-barrier",
+        "concrete-tubes-large",
+        "concrete-tubes-small",
+        "cotton-lint",
+        "disc-harrows",
+        "drywall",
+        "dumpster",
+        "electric-dumpster-jcb-htd-5e",
+        "electric-mini-excavator-jcb-19c-e",
+        "empty-pallets",
+        "fertilizer",
+        "generator-set",
+        "geo-membranes-rolls",
+        "hay",
+        "heat-exchanger",
+        "house-prefabs",
+        "huge-tires",
+        "industrial-pallets",
+        "insulation-panels",
+        "iron-pipes",
+        "jet-engine-inlet-cowl",
+        "large-tubes",
+        "lumber-beams",
+        "lumber-boards",
+        "metal-coil",
+        "mini-excavator-bobcat-e10e",
+        "mobile-air-compressor",
+        "mooring-buoy",
+        "moving-containers",
+        "oil-pipes",
+        "packed-lumber",
+        "plows",
+        "powerpack-jcb-125qe",
+        "pressure-tank",
+        "pumpjack",
+        "rails",
+        "reservoir-tank",
+        "roof-shingles",
+        "rough-terrain-forklift",
+        "scaffolding",
+        "scissor-lift",
+        "scrapped-cars",
+        "seed-containers",
+        "square-tubing",
+        "train-axles",
+        "transformer",
+        "trees",
+        "truss",
+        "ventilation-shaft",
+        "waste-paper",
+        "wheels-with-volvo-rims",
+        "wire-rod-coil"
+      ],
+      "models": [
+        {
+          "id": "flatbed",
+          "name": "Flatbed",
+          "priceUsd": null,
+          "pricesUsd": [
+            30700,
+            61360
+          ],
+          "ownable": true,
+          "articulated": null,
+          "cargoTypesNote": "Construction equipment and materials",
+          "match": {
+            "by": "name"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Flatbed_Trailer",
+            "revid": 289223
+          }
+        }
+      ]
+    },
+    {
+      "id": "food-tank",
+      "name": "Food Tank",
+      "cargo": [
+        "fruit-juice",
+        "milk",
+        "raw-milk"
+      ],
+      "models": [
+        {
+          "id": "food-tank",
+          "name": "Food Tank",
+          "priceUsd": 55100,
+          "pricesUsd": [
+            55100
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "Liquid food goods",
+          "match": {
+            "by": "name"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Food_Tank_Trailer/American_Truck_Simulator",
+            "revid": 289195
+          }
+        }
+      ]
+    },
+    {
+      "id": "frac-tank",
+      "name": "Frac Tank",
+      "cargo": [
+        "frac-tank"
+      ],
+      "models": [
+        {
+          "id": "frac-tank",
+          "name": "Frac Tank",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": false,
+          "cargoTypesNote": "Frac tanks",
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Frac_Tank_Trailer",
+            "revid": 289328
+          }
+        }
+      ]
+    },
+    {
+      "id": "fuel-tank",
+      "name": "Fuel Tank",
+      "cargo": [
+        "aromatics",
+        "crude-oil",
+        "diesel",
+        "fuel-tank",
+        "gasoline",
+        "solvents"
+      ],
+      "models": [
+        {
+          "id": "fuel-tank",
+          "name": "Fuel Tank",
+          "priceUsd": 54950,
+          "pricesUsd": [
+            54950
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "Flammable liquids",
+          "match": {
+            "by": "name"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Fuel_Tank_Trailer/American_Truck_Simulator",
+            "revid": 289203
+          }
+        }
+      ]
+    },
+    {
+      "id": "gas-tank",
+      "name": "Gas Tank",
+      "cargo": [
+        "chlorine",
+        "ethane",
+        "propane"
+      ],
+      "models": [
+        {
+          "id": "gas-tank",
+          "name": "Gas Tank",
+          "priceUsd": 57620,
+          "pricesUsd": [
+            57620
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "Flammable gas, transported in liquid state",
+          "match": {
+            "by": "name"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Gas_Tank_Trailer/American_Truck_Simulator",
+            "revid": 289200
+          }
+        }
+      ]
+    },
+    {
+      "id": "hopper",
+      "name": "Hopper",
+      "cargo": [
+        "barley",
+        "corn",
+        "cotton-seed",
+        "grain",
+        "pelleted-animal-food",
+        "potatoes",
+        "rye",
+        "soybean",
+        "sugar-beet",
+        "wheat"
+      ],
+      "models": [
+        {
+          "id": "grain-hopper",
+          "name": "Grain Hopper",
+          "priceUsd": 58700,
+          "pricesUsd": [
+            58700
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "Grain and bulk material",
+          "match": {
+            "by": "cargo overlap",
+            "jaccard": 0.7
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Grain_Hopper_Trailer",
+            "revid": 297204
+          }
+        }
+      ]
+    },
+    {
+      "id": "house-transporter",
+      "name": "House Transporter",
+      "cargo": [
+        "turnkey-house-construction"
+      ],
+      "models": [
+        {
+          "id": "house-transporter",
+          "name": "House Transporter",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": false,
+          "cargoTypesNote": null,
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/House_Transporter_Trailer",
+            "revid": 289315
+          }
+        }
+      ]
+    },
+    {
+      "id": "insulated",
+      "name": "Insulated",
+      "cargo": [
+        "almond-boxes",
+        "batteries",
+        "beverages",
+        "borates",
+        "boric-acid",
+        "cans",
+        "chemical-granules",
+        "clothes",
+        "computers",
+        "curtains",
+        "dry-fruits",
+        "dry-milk",
+        "dynamite",
+        "empty-bottles",
+        "empty-pallets",
+        "fertilizer",
+        "fireworks",
+        "flour",
+        "fruits",
+        "furniture",
+        "grain",
+        "home-accessories",
+        "household-appliances",
+        "lemonade",
+        "nitrocellulose",
+        "nuts",
+        "office-supplies",
+        "packaged-food",
+        "paper",
+        "pelleted-animal-food",
+        "potassium",
+        "potatoes",
+        "rice",
+        "salt",
+        "soda-ash",
+        "sugar",
+        "sulphur",
+        "tableware",
+        "talc-powder",
+        "tires",
+        "toys",
+        "tvs",
+        "used-packaging",
+        "vegetables",
+        "waste-paper"
+      ],
+      "models": [
+        {
+          "id": "insulated",
+          "name": "Insulated",
+          "priceUsd": null,
+          "pricesUsd": [
+            102020,
+            171340
+          ],
+          "ownable": true,
+          "articulated": null,
+          "cargoTypesNote": "Chilled goods",
+          "match": {
+            "by": "name"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Insulated_Trailer/American_Truck_Simulator",
+            "revid": 289207
+          }
+        }
+      ]
+    },
+    {
+      "id": "knuckleboom-loader",
+      "name": "Knuckleboom Loader",
+      "cargo": [
+        "knuckleboom-loader"
+      ],
+      "models": [
+        {
+          "id": "knuckleboom-loader",
+          "name": "Knuckleboom Loader",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": false,
+          "cargoTypesNote": null,
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Knuckleboom_Loader_Trailer",
+            "revid": 289316
+          }
+        }
+      ]
+    },
+    {
+      "id": "livestock",
+      "name": "Livestock",
+      "cargo": [
+        "live-cattle",
+        "live-pigs",
+        "live-sheep"
+      ],
+      "models": [
+        {
+          "id": "livestock",
+          "name": "Livestock",
+          "priceUsd": 68040,
+          "pricesUsd": [
+            68040
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "Living animals",
+          "match": {
+            "by": "name"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Livestock_Trailer/American_Truck_Simulator",
+            "revid": 289194
+          }
+        }
+      ]
+    },
+    {
+      "id": "log",
+      "name": "Log",
+      "cargo": [
+        "large-tubes",
+        "logs",
+        "lumber-beams",
+        "utility-poles"
+      ],
+      "models": [
+        {
+          "id": "4-bolster-logger",
+          "name": "4 Bolster Logger",
+          "priceUsd": 42700,
+          "pricesUsd": [
+            42700
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "Logs, beams or tubes",
+          "match": {
+            "by": "cargo overlap",
+            "jaccard": 0.75
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/4_Bolster_Logger_Trailer",
+            "revid": 289215
+          }
+        }
+      ]
+    },
+    {
+      "id": "lowboy",
+      "name": "Lowboy",
+      "cargo": [
+        "agricultural-telehandler-bobcat-tl3070",
+        "aircraft-wing",
+        "auger-wagon",
+        "backhoe-loader",
+        "backhoe-loader-jcb-4cx",
+        "boom-lift-articulated",
+        "bulldozer",
+        "cables",
+        "compact-tractor",
+        "compactor-volvo-sd160b",
+        "cooling-tower",
+        "crawler-carrier",
+        "crawler-tractor-farm-machinery",
+        "dump-truck",
+        "excavator",
+        "excavator-bobcat-e60",
+        "excavator-volvo-ec220e",
+        "fertilizer-spreader",
+        "forage-harvester",
+        "forklifts",
+        "forwarder",
+        "garbage-truck",
+        "harvester",
+        "krone-big-m-45",
+        "krone-big-pack-1290-xc-hdp",
+        "krone-big-x-1180",
+        "krone-gx-440",
+        "krone-swadro-tc-1370",
+        "krone-varipack-v-190-xc",
+        "log-harvester",
+        "material-handler",
+        "medium-truck-chassis",
+        "mix-tank",
+        "mobile-stacker",
+        "mulcher",
+        "municipal-truck",
+        "pickups-crane",
+        "railcar-mover",
+        "recreational-vehicle-motorhomes",
+        "roadroller",
+        "rock-bucket-volvo-spn-p-t-seg",
+        "rough-terrain-forklift",
+        "service-truck",
+        "site-dumper-jcb-6t-2",
+        "skidder",
+        "space-container",
+        "speed-motor-boat",
+        "sprayer",
+        "stumper",
+        "telescopic-handler",
+        "telescopic-handler-jcb-540-180",
+        "tractor",
+        "tractor-jcb-fastrac-4220",
+        "trailers",
+        "wheel-loader",
+        "wheel-loader-bobcat-l95",
+        "wheel-loader-jcb-457",
+        "wind-turbine-nacelle",
+        "wind-turbine-tower",
+        "work-truck-chassis"
+      ],
+      "models": []
+    },
+    {
+      "id": "lowboy-55l",
+      "name": "Lowboy 55L",
+      "cargo": [
+        "air-conditioner",
+        "all-terrain-crane",
+        "cable-reel",
+        "cotton-harvester",
+        "crawler-tractor-heavy-cargo-pack",
+        "giant-silo",
+        "haul-truck-chassis",
+        "haul-truck-hull",
+        "heavy-bulldozer",
+        "huge-construction",
+        "large-reservoir-tank",
+        "lift-truck",
+        "lift-truck-chassis",
+        "massive-tech-part",
+        "metro-railcar",
+        "milling-machine",
+        "mobile-crusher",
+        "mobile-screener",
+        "mobile-stacker",
+        "railcar",
+        "scraper",
+        "service-boat",
+        "transformer-heavy-cargo-pack",
+        "transport-helicopter",
+        "underground-loader"
+      ],
+      "models": [
+        {
+          "id": "lowboy-55l",
+          "name": "Lowboy 55L",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": true,
+          "cargoTypesNote": null,
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Lowboy_55L_Trailer",
+            "revid": 289317
+          }
+        }
+      ]
+    },
+    {
+      "id": "lowboy-boat",
+      "name": "Lowboy Boat",
+      "cargo": [
+        "boat"
+      ],
+      "models": [
+        {
+          "id": "lowboy-boat",
+          "name": "Lowboy Boat",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": false,
+          "cargoTypesNote": null,
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Lowboy_Boat_Trailer",
+            "revid": 289327
+          }
+        }
+      ]
+    },
+    {
+      "id": "lowboy-double",
+      "name": "Lowboy Double",
+      "cargo": [
+        "all-terrain-crane",
+        "articulated-hauler",
+        "articulated-hauler-volvo-a25g",
+        "beet-harvester",
+        "cable-reel",
+        "cotton-harvester",
+        "crawler-tractor-heavy-cargo-pack",
+        "excavator-jcb-245xr",
+        "excavator-volvo-ew240e-mh",
+        "tamping-machine",
+        "wheel-loader-volvo-l250h"
+      ],
+      "models": []
+    },
+    {
+      "id": "lowboy-triple",
+      "name": "Lowboy Triple",
+      "cargo": [
+        "all-terrain-crane",
+        "articulated-hauler",
+        "articulated-hauler-volvo-a25g",
+        "beet-harvester",
+        "cable-reel",
+        "cotton-harvester",
+        "crawler-tractor-heavy-cargo-pack",
+        "excavator-jcb-245xr",
+        "excavator-volvo-ew240e-mh",
+        "heavy-bulldozer",
+        "lift-truck",
+        "lift-truck-chassis",
+        "log-loader",
+        "log-stacker",
+        "milling-machine",
+        "mobile-crusher",
+        "mobile-screener",
+        "scraper",
+        "tamping-machine",
+        "transformer-heavy-cargo-pack",
+        "wheel-loader-volvo-l250h"
+      ],
+      "models": []
+    },
+    {
+      "id": "mobile-barrier",
+      "name": "Mobile Barrier",
+      "cargo": [
+        "mobile-barrier"
+      ],
+      "models": [
+        {
+          "id": "mobile-barrier",
+          "name": "Mobile Barrier",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": false,
+          "cargoTypesNote": null,
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Mobile_Barrier_Trailer",
+            "revid": 289326
+          }
+        }
+      ]
+    },
+    {
+      "id": "refrigerated",
+      "name": "Refrigerated",
+      "cargo": [
+        "almond-boxes",
+        "beverages",
+        "butter",
+        "buttermilk",
+        "cans",
+        "cheese",
+        "clothes",
+        "computers",
+        "curtains",
+        "dry-fruits",
+        "dry-milk",
+        "dynamite",
+        "empty-bottles",
+        "empty-pallets",
+        "fertilizer",
+        "fireworks",
+        "flour",
+        "frozen-food",
+        "frozen-fruits",
+        "frozen-vegetables",
+        "fruits",
+        "furniture",
+        "grain",
+        "home-accessories",
+        "household-appliances",
+        "ice-cream",
+        "lemonade",
+        "meat",
+        "milk",
+        "nitrocellulose",
+        "nuts",
+        "office-supplies",
+        "packaged-food",
+        "paper",
+        "pelleted-animal-food",
+        "potassium",
+        "potatoes",
+        "refrigerated-trailer",
+        "rice",
+        "salt",
+        "soda-ash",
+        "sugar",
+        "tableware",
+        "talc-powder",
+        "tires",
+        "toys",
+        "tvs",
+        "used-packaging",
+        "vegetables",
+        "waste-paper",
+        "yogurt"
+      ],
+      "models": [
+        {
+          "id": "reefer",
+          "name": "Reefer",
+          "priceUsd": 139180,
+          "pricesUsd": [
+            139180
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "Frozen, chilled goods",
+          "match": {
+            "by": "cargo overlap",
+            "jaccard": 0.98
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Reefer_Trailer",
+            "revid": 289212
+          }
+        }
+      ]
+    },
+    {
+      "id": "sliding-tarp",
+      "name": "Sliding Tarp",
+      "cargo": [
+        "almond-boxes",
+        "batteries",
+        "chemical-granules",
+        "clothes",
+        "curtains",
+        "dry-fruits",
+        "dry-milk",
+        "empty-pallets",
+        "fertilizer",
+        "flour",
+        "furniture",
+        "grain",
+        "guard-rails",
+        "gypsum",
+        "home-accessories",
+        "ibc-containers",
+        "mortar",
+        "nuts",
+        "office-supplies",
+        "packaged-food",
+        "paint",
+        "paper",
+        "rice",
+        "salt",
+        "sawdust-panels",
+        "silica",
+        "soda-ash",
+        "sugar",
+        "sulphur",
+        "talc-powder",
+        "tires",
+        "toys",
+        "used-packaging",
+        "waste-paper"
+      ],
+      "models": [
+        {
+          "id": "sliding-tarp",
+          "name": "Sliding Tarp",
+          "priceUsd": null,
+          "pricesUsd": [
+            45700,
+            78340
+          ],
+          "ownable": true,
+          "articulated": false,
+          "cargoTypesNote": "General, dry goods",
+          "match": {
+            "by": "name"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Sliding_Tarp_Trailer",
+            "revid": 289213
+          }
+        }
+      ]
+    },
+    {
+      "id": "truck-transporter",
+      "name": "Truck Transporter",
+      "cargo": [
+        "kenworth-trucks",
+        "peterbilt-trucks",
+        "western-star-trucks"
+      ],
+      "models": [
+        {
+          "id": "truck-transporter",
+          "name": "Truck Transporter",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": true,
+          "cargoTypesNote": null,
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Truck_Transporter_Trailer/American_Truck_Simulator",
+            "revid": 289340
+          }
+        }
+      ]
+    },
+    {
+      "id": "tub-grinder",
+      "name": "Tub Grinder",
+      "cargo": [
+        "tub-grinder"
+      ],
+      "models": [
+        {
+          "id": "tub-grinder",
+          "name": "Tub Grinder",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": false,
+          "cargoTypesNote": null,
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Tub_Grinder_Trailer",
+            "revid": 289321
+          }
+        }
+      ]
+    },
+    {
+      "id": "van-transporter",
+      "name": "Van Transporter",
+      "cargo": [
+        "cars-suvs",
+        "pickups-passenger",
+        "recreational-vehicle-campers"
+      ],
+      "models": []
+    }
+  ]
+}

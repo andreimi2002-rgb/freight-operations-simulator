@@ -1,5 +1,65 @@
 # Changelog
 
+## 2.0.0-alpha.6 — 2026-10-22 (Generate a job)
+
+- **Generate a job** button on the home page (from any city or a chosen one) and on every city page (from that city): one real job picked at random, with route, cargo and badges, pick-up and delivery depots, trailer, weight, distance, estimated drive time and the DLCs it needs. Option "Career start: base game only". Each job has a code in the address (`?job=…`), so the same job opens for anyone; "Copy link" copies it, "All jobs on this route" opens the planner.
+- `randomJob` in the generator, reproducible from its seed; 2 new tests (74 in all).
+
+## 2.0.0-alpha.5 — 2026-10-22 (Freight World, stage 3: departures and route planner)
+
+- **Job generator** (`src/engine/`), pure and deterministic, reusable by the companion app: the same city, local date and local hour give the same jobs to everyone. Every job is possible in the game by construction: the source depot offers the cargo, a depot in another city accepts it, the trailer is one the cargo list allows, the weight is inside the cargo's range, and the DLCs needed (cargo pack or a "With … DLC" listing) are named. No pay is shown (the game's pay inputs are not public).
+- **Departures boards**, airport style: on every city page (12 jobs leaving in the next six hours, new jobs every hour) and on the home page (a different city every hour, the same for everyone). Columns: time, cargo with badges (DLC, hazmat class, heavy, fragile, high value), from, destination with depot, distance and drive time, trailer, weight. Cargo without a known weight stays out of the boards.
+- **Route planner** at `/ats/planner`: from a city (or one depot), optionally to a city, with filters (career start: base game only; hazmat; trailer). Without a destination it lists every reachable city with distance and number of jobs; with one it lists every job between them. The choice is kept in the address, so a plan can be bookmarked. Each city page links to it.
+- **Distances:** `scripts/ats/distances.mjs` (`npm run distances:ats`) asks the public OSRM server once for all 1,122 city pairs (OpenStreetMap roads, ODbL); `data/ats/distances.json` marks them as estimates. Drive time is distance at 55 mph (the California truck speed limit). Calibration against in-game distances is pending.
+- **Job data for the browser:** `/data/ats-jobs.json`, built at build time, packed to 88 KB (18 KB compressed).
+- Header link "Planner"; the board and planner react to the US / Metric switch.
+- 9 new tests (72 in all): determinism, hourly change, validity of every board job in every city and of planner results, filters, packing, distances, formatting.
+
+## 2.0.0-alpha.4 — 2026-10-22 (weather from MET Norway, monetisation model)
+
+- **Weather** now comes from MET Norway Locationforecast (CC BY 4.0, commercial use allowed) instead of Open-Meteo (free for non-commercial use only), through a Netlify Function `/api/weather/<city>` ported from FOS: the city is looked up on the server, coordinates rounded to 4 decimals, User-Agent with contact, cached until MET's `Expires` and 20 minutes on the CDN, rate limited. The page shows now, wind, precipitation and today plus the next two days; "feels like" is gone (MET does not provide it). New sleet icon. Footer attribution and `/about` updated.
+- **DEVELOPMENT_PLAN.md:** the hybrid monetisation model (free data and maps, paid service), its architecture consequences and the conditions before any income; Freight World replaces FOS in production at the end of stage 3.
+- **FOS code removed** from this branch (`legacy/fos/`); it stays in git history.
+- 5 new tests for the weather function (63 in all), with a recorded MET Norway answer.
+
+## 2.0.0-alpha.3 — 2026-10-21 (Freight World, stage 2: city pages)
+
+- **City pages** for all 34 cities, one static page each at `/ats/<state>/<city>` (e.g. `/ats/ca/sacramento`), built from `data/ats/`: hero with the real city photo, **live local time** (from the city's time zone) and **real weather** (Open-Meteo, requested by the browser, cached 15 minutes, refreshed while the page is open; now, feels-like, wind, precipitation and the next three days, with own weather icons); summary cards (state, map, depots, cargo offered and accepted, truck dealer); facilities and roads; neighbouring cities as links; every company and depot with what it offers and accepts (DLC cargo grouped by DLC, generic wiki names marked); landmarks; link to the wiki page.
+- **City list** at `/ats/`, grouped by state, with photos and depot counts. Header link "Cities"; the ATS switch and the home page lead there.
+- **Units:** US units by default (°F, mph, inches), with a US / Metric switch in the header, remembered in the browser.
+- **Photos:** `scripts/photos/candidates.mjs` (`npm run photos:candidates`) finds 1–4 free photos per city on Wikimedia Commons (Wikivoyage banner, Wikidata image, Wikipedia lead image, Commons category; free licence with author, at least 1200 px, no maps or flags). Claude chose one per city by looking at each (the owner delegated the choice), with the reason in `data/photos.json`; 33 of 34 have a photo, Santa Maria keeps a placeholder (only a very thin banner exists). Author, licence and Commons link are shown under each photo.
+- The number of depots shown is the one from the company pages, not the wiki infobox (decision from stage 1).
+- 11 new tests (58 in all): page paths, city companies, units, weather codes, the Open-Meteo request, facility labels, photo entries, Commons rules and thumbnail links. All 34 pages were checked in Chrome at phone width (status, clock, weather, no horizontal scroll).
+
+## 2.0.0-alpha.2 — 2026-10-21 (Freight World, stage 1: ATS data for California and Nevada)
+
+- **Collector** `scripts/ats/collect.mjs` (`npm run collect:ats`): reads Truck Simulator Wiki through the MediaWiki API — at most one request per second per host, clear User-Agent, `maxlag`, retries with backoff, local cache in `.cache/wiki/` (not in git), `--refresh` / `--offline`. A full run needs about 30 requests. States, wiki categories and time zones are data in `data/ats/scope.json`.
+- **Data** in `data/ats/` (CC BY-SA 4.0, attribution in every file's `meta`): 34 current cities (CA 24, NV 10; 4 removed and 1 future city left out), 59 companies with 244 depots, the complete cargo catalog (295 rows), 32 trailer types (27 with trailer data), and `issues.json` with 112 entries.
+- **Cities:** infobox data, depots (from the company pages, with internal game IDs and, for gas stations, where the station is), facilities, roads, neighbouring cities, landmarks, game time zone → IANA, and real-world coordinates from **Wikidata** (CC0; matched through the Wikipedia article "City, State" and checked to lie in the state). All 34 cities have coordinates.
+- **Companies:** one entry per depot type with its internal game ID (`gameId`), cities in scope, accepted and provided cargo, and cargo added by DLCs.
+- **Cargo:** weight (lb), value per km, second values for tank/bulk trailers and value ranges as given, UN number (in-game and the one the wiki says is correct), hazmat class from the icon caption, skills, dynamic loading, trailer types, DLC (all 8 cargo DLCs, KRONE included). Cargo with the same name in two DLCs gets two ids.
+- **Not guessed:** no internal IDs for cities and cargo on the wiki (`null`); unknown weights (`???`), contradictions between city and company pages, typos on the wiki, and the wiki summary counts that differ from its own table are all in `issues.json`.
+- **Approved corrections** in `data/ats/aliases.json`: 8 cargo names written differently on the wiki (typos such as "Heat Exchangre", "Used Packages") and 5 generic names (Pickups, Boom Lift, Concrete Tubes, Lumber, Recreational Vehicle) mapped to every variant and marked on the depot type (`genericNames`). No cargo name is left unmatched.
+- **Trailers:** types without a dealer page get the wiki page "<Type> Trailer" when it exists (Car Transporter, Lowboy 55L, Lowboy Boat, Frac Tank…; mostly not buyable). Pages with two prices keep both in `pricesUsd`.
+- **Wikidata** added to the sources on `/about`.
+- 39 new tests (48 in all): wikitext helpers, page parsers on wiki fragments, dataset assembly, and checks of the real files (licence metadata, unique ids, references between files, time zones, coordinates, values or recorded issues).
+
+## 2.0.0-alpha.1 — 2026-10-21 (Freight World, stage 0: foundation)
+
+First version of Freight World on the `v2-freight-world` branch. The FOS site on `main` is unchanged.
+
+- **Astro 7.3.8** static site (owner's choice over plain HTML): one HTML file per URL, so every page works as a direct link. Netlify builds with `npm run build` and publishes `dist/` (Node 24, Astro telemetry off).
+- **Design tokens** from DEVELOPMENT_PLAN.md section 4 in `src/styles/tokens.css`; a test checks the values and that every text colour reaches 4.5:1 on every surface.
+- **Fonts:** Inter and JetBrains Mono, self-hosted (moved to `public/fonts/` with their SIL OFL 1.1 licences).
+- **Header** with logo, navigation and the ATS / ETS2 switch (ETS2 marked "soon"); **footer** with the attribution required by the plan (checked by a test against DEVELOPMENT_PLAN.md), project links and version.
+- **Pages:** home (hero, empty departures board, the three things Freight World will show, with their stages), `/about` (data rules, sources and licences table from `src/data/sources.json`, attribution, dataset licence, fonts and software, the games), 404.
+- **English UI** with i18n: all text in `src/i18n/en.json`; a missing key fails the build.
+- Phone and desktop: no horizontal page scroll at 320, 390 and 1366 px; wide tables scroll inside their frame; all links and buttons at least 44 px; skip link; visible focus.
+- FOS code moved unchanged to `legacy/fos/` (reference only, not built). New `AGENTS.md`, `README.md`, `CLAUDE.md` for Freight World; the plan is now `DEVELOPMENT_PLAN.md`.
+- 9 tests (`npm test`): tokens and contrast, i18n keys, attribution text, sources list.
+
+# FOS changelog (main)
+
 ## 0.15.0 — 2026-10-21 (phase 2B: real loading places from OpenStreetMap)
 
 - **Loading and unloading places** ("Loc de încărcare", "Loc de descărcare", Hartă și rută): a real place in the city from OpenStreetMap — industrial zone, port, rail terminal, logistics park or silo — chosen by the cargo (`src/data/places/site-kinds.mjs`; grain prefers a silo or port, fuel a port or industrial zone, machinery an industrial zone…). The route runs between the places and the A/B pins sit on them. Without a suitable place the route runs between the cities as before (row shows "Indisponibil" with the reason).

@@ -1,0 +1,6750 @@
+{
+  "meta": {
+    "description": "Estimated road distances between cities (real-world roads). Estimate, not game data.",
+    "provenance": "estimated",
+    "basis": "Shortest car route between the real-world city coordinates on OpenStreetMap roads (OSRM). ATS uses a 1:20 map scale with game time about 20x faster (SCS blog, The Rescale, 2016), so in-game distances should be close to real road distances; to be checked against in-game job distances.",
+    "calibrationFactor": 1,
+    "calibrated": false,
+    "source": "OSRM demo server (router.project-osrm.org), OpenStreetMap data",
+    "licence": "ODbL 1.0",
+    "licenceUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "attribution": "© OpenStreetMap contributors",
+    "retrieved": "2026-10-21",
+    "generator": "scripts/ats/distances.mjs",
+    "count": 1122
+  },
+  "pairs": [
+    {
+      "from": "bakersfield",
+      "to": "barstow",
+      "km": 209.9,
+      "carMinutes": 151
+    },
+    {
+      "from": "bakersfield",
+      "to": "blythe",
+      "km": 535.6,
+      "carMinutes": 373
+    },
+    {
+      "from": "bakersfield",
+      "to": "carson-city",
+      "km": 561.2,
+      "carMinutes": 454
+    },
+    {
+      "from": "bakersfield",
+      "to": "el-centro",
+      "km": 518.5,
+      "carMinutes": 372
+    },
+    {
+      "from": "bakersfield",
+      "to": "elko",
+      "km": 985.5,
+      "carMinutes": 697
+    },
+    {
+      "from": "bakersfield",
+      "to": "ely",
+      "km": 822.8,
+      "carMinutes": 587
+    },
+    {
+      "from": "bakersfield",
+      "to": "eureka",
+      "km": 877.2,
+      "carMinutes": 637
+    },
+    {
+      "from": "bakersfield",
+      "to": "fresno",
+      "km": 180.8,
+      "carMinutes": 125
+    },
+    {
+      "from": "bakersfield",
+      "to": "hilt",
+      "km": 893.6,
+      "carMinutes": 623
+    },
+    {
+      "from": "bakersfield",
+      "to": "huron",
+      "km": 150.7,
+      "carMinutes": 112
+    },
+    {
+      "from": "bakersfield",
+      "to": "indio",
+      "km": 380.8,
+      "carMinutes": 270
+    },
+    {
+      "from": "bakersfield",
+      "to": "jackpot",
+      "km": 1174,
+      "carMinutes": 817
+    },
+    {
+      "from": "bakersfield",
+      "to": "las-vegas",
+      "km": 458.4,
+      "carMinutes": 319
+    },
+    {
+      "from": "bakersfield",
+      "to": "los-angeles",
+      "km": 179.6,
+      "carMinutes": 131
+    },
+    {
+      "from": "bakersfield",
+      "to": "modesto",
+      "km": 329,
+      "carMinutes": 233
+    },
+    {
+      "from": "bakersfield",
+      "to": "mojave",
+      "km": 109.5,
+      "carMinutes": 90
+    },
+    {
+      "from": "bakersfield",
+      "to": "oakland",
+      "km": 436.5,
+      "carMinutes": 303
+    },
+    {
+      "from": "bakersfield",
+      "to": "oxnard",
+      "km": 192.6,
+      "carMinutes": 149
+    },
+    {
+      "from": "bakersfield",
+      "to": "pioche",
+      "km": 739.8,
+      "carMinutes": 533
+    },
+    {
+      "from": "bakersfield",
+      "to": "primm",
+      "km": 390.5,
+      "carMinutes": 272
+    },
+    {
+      "from": "bakersfield",
+      "to": "redding",
+      "km": 705.5,
+      "carMinutes": 489
+    },
+    {
+      "from": "bakersfield",
+      "to": "reno",
+      "km": 653,
+      "carMinutes": 464
+    },
+    {
+      "from": "bakersfield",
+      "to": "sacramento",
+      "km": 444.6,
+      "carMinutes": 314
+    },
+    {
+      "from": "bakersfield",
+      "to": "san-diego",
+      "km": 373.2,
+      "carMinutes": 271
+    },
+    {
+      "from": "bakersfield",
+      "to": "san-francisco",
+      "km": 456.2,
+      "carMinutes": 320
+    },
+    {
+      "from": "bakersfield",
+      "to": "san-jose",
+      "km": 384.9,
+      "carMinutes": 276
+    },
+    {
+      "from": "bakersfield",
+      "to": "santa-cruz",
+      "km": 393.9,
+      "carMinutes": 286
+    },
+    {
+      "from": "bakersfield",
+      "to": "santa-maria",
+      "km": 206.4,
+      "carMinutes": 157
+    },
+    {
+      "from": "bakersfield",
+      "to": "stockton",
+      "km": 375.2,
+      "carMinutes": 263
+    },
+    {
+      "from": "bakersfield",
+      "to": "tonopah",
+      "km": 550.1,
+      "carMinutes": 401
+    },
+    {
+      "from": "bakersfield",
+      "to": "truckee",
+      "km": 602.5,
+      "carMinutes": 429
+    },
+    {
+      "from": "bakersfield",
+      "to": "ukiah",
+      "km": 625.9,
+      "carMinutes": 443
+    },
+    {
+      "from": "bakersfield",
+      "to": "winnemucca",
+      "km": 876.6,
+      "carMinutes": 626
+    },
+    {
+      "from": "barstow",
+      "to": "bakersfield",
+      "km": 209.4,
+      "carMinutes": 152
+    },
+    {
+      "from": "barstow",
+      "to": "blythe",
+      "km": 385.9,
+      "carMinutes": 262
+    },
+    {
+      "from": "barstow",
+      "to": "carson-city",
+      "km": 617.3,
+      "carMinutes": 477
+    },
+    {
+      "from": "barstow",
+      "to": "el-centro",
+      "km": 368.8,
+      "carMinutes": 261
+    },
+    {
+      "from": "barstow",
+      "to": "elko",
+      "km": 941,
+      "carMinutes": 663
+    },
+    {
+      "from": "barstow",
+      "to": "ely",
+      "km": 639.9,
+      "carMinutes": 455
+    },
+    {
+      "from": "barstow",
+      "to": "eureka",
+      "km": 1084.6,
+      "carMinutes": 783
+    },
+    {
+      "from": "barstow",
+      "to": "fresno",
+      "km": 389.9,
+      "carMinutes": 273
+    },
+    {
+      "from": "barstow",
+      "to": "hilt",
+      "km": 1113,
+      "carMinutes": 770
+    },
+    {
+      "from": "barstow",
+      "to": "huron",
+      "km": 358.1,
+      "carMinutes": 258
+    },
+    {
+      "from": "barstow",
+      "to": "indio",
+      "km": 231.2,
+      "carMinutes": 159
+    },
+    {
+      "from": "barstow",
+      "to": "jackpot",
+      "km": 968.6,
+      "carMinutes": 688
+    },
+    {
+      "from": "barstow",
+      "to": "las-vegas",
+      "km": 249.8,
+      "carMinutes": 171
+    },
+    {
+      "from": "barstow",
+      "to": "los-angeles",
+      "km": 184.8,
+      "carMinutes": 129
+    },
+    {
+      "from": "barstow",
+      "to": "modesto",
+      "km": 538,
+      "carMinutes": 381
+    },
+    {
+      "from": "barstow",
+      "to": "mojave",
+      "km": 124.6,
+      "carMinutes": 98
+    },
+    {
+      "from": "barstow",
+      "to": "oakland",
+      "km": 643.9,
+      "carMinutes": 449
+    },
+    {
+      "from": "barstow",
+      "to": "oxnard",
+      "km": 275.6,
+      "carMinutes": 197
+    },
+    {
+      "from": "barstow",
+      "to": "pioche",
+      "km": 531.1,
+      "carMinutes": 385
+    },
+    {
+      "from": "barstow",
+      "to": "primm",
+      "km": 181.9,
+      "carMinutes": 123
+    },
+    {
+      "from": "barstow",
+      "to": "redding",
+      "km": 925,
+      "carMinutes": 636
+    },
+    {
+      "from": "barstow",
+      "to": "reno",
+      "km": 668.9,
+      "carMinutes": 514
+    },
+    {
+      "from": "barstow",
+      "to": "sacramento",
+      "km": 653.6,
+      "carMinutes": 462
+    },
+    {
+      "from": "barstow",
+      "to": "san-diego",
+      "km": 283.4,
+      "carMinutes": 198
+    },
+    {
+      "from": "barstow",
+      "to": "san-francisco",
+      "km": 663.5,
+      "carMinutes": 466
+    },
+    {
+      "from": "barstow",
+      "to": "san-jose",
+      "km": 592.3,
+      "carMinutes": 422
+    },
+    {
+      "from": "barstow",
+      "to": "santa-cruz",
+      "km": 601.3,
+      "carMinutes": 432
+    },
+    {
+      "from": "barstow",
+      "to": "santa-maria",
+      "km": 390.5,
+      "carMinutes": 295
+    },
+    {
+      "from": "barstow",
+      "to": "stockton",
+      "km": 584.2,
+      "carMinutes": 411
+    },
+    {
+      "from": "barstow",
+      "to": "tonopah",
+      "km": 476.5,
+      "carMinutes": 379
+    },
+    {
+      "from": "barstow",
+      "to": "truckee",
+      "km": 682.2,
+      "carMinutes": 545
+    },
+    {
+      "from": "barstow",
+      "to": "ukiah",
+      "km": 833.3,
+      "carMinutes": 589
+    },
+    {
+      "from": "barstow",
+      "to": "winnemucca",
+      "km": 852.8,
+      "carMinutes": 610
+    },
+    {
+      "from": "blythe",
+      "to": "bakersfield",
+      "km": 536.5,
+      "carMinutes": 374
+    },
+    {
+      "from": "blythe",
+      "to": "barstow",
+      "km": 384.7,
+      "carMinutes": 262
+    },
+    {
+      "from": "blythe",
+      "to": "carson-city",
+      "km": 947.3,
+      "carMinutes": 705
+    },
+    {
+      "from": "blythe",
+      "to": "el-centro",
+      "km": 165.5,
+      "carMinutes": 123
+    },
+    {
+      "from": "blythe",
+      "to": "elko",
+      "km": 1018.9,
+      "carMinutes": 732
+    },
+    {
+      "from": "blythe",
+      "to": "ely",
+      "km": 717.9,
+      "carMinutes": 524
+    },
+    {
+      "from": "blythe",
+      "to": "eureka",
+      "km": 1392.4,
+      "carMinutes": 986
+    },
+    {
+      "from": "blythe",
+      "to": "fresno",
+      "km": 713.5,
+      "carMinutes": 492
+    },
+    {
+      "from": "blythe",
+      "to": "hilt",
+      "km": 1420.9,
+      "carMinutes": 973
+    },
+    {
+      "from": "blythe",
+      "to": "huron",
+      "km": 666,
+      "carMinutes": 461
+    },
+    {
+      "from": "blythe",
+      "to": "indio",
+      "km": 158.1,
+      "carMinutes": 110
+    },
+    {
+      "from": "blythe",
+      "to": "jackpot",
+      "km": 1046.6,
+      "carMinutes": 757
+    },
+    {
+      "from": "blythe",
+      "to": "las-vegas",
+      "km": 334.7,
+      "carMinutes": 241
+    },
+    {
+      "from": "blythe",
+      "to": "los-angeles",
+      "km": 359.5,
+      "carMinutes": 247
+    },
+    {
+      "from": "blythe",
+      "to": "modesto",
+      "km": 861.6,
+      "carMinutes": 600
+    },
+    {
+      "from": "blythe",
+      "to": "mojave",
+      "km": 430.8,
+      "carMinutes": 316
+    },
+    {
+      "from": "blythe",
+      "to": "oakland",
+      "km": 951.8,
+      "carMinutes": 652
+    },
+    {
+      "from": "blythe",
+      "to": "oxnard",
+      "km": 461.5,
+      "carMinutes": 323
+    },
+    {
+      "from": "blythe",
+      "to": "pioche",
+      "km": 609.1,
+      "carMinutes": 453
+    },
+    {
+      "from": "blythe",
+      "to": "primm",
+      "km": 307.3,
+      "carMinutes": 232
+    },
+    {
+      "from": "blythe",
+      "to": "redding",
+      "km": 1232.9,
+      "carMinutes": 839
+    },
+    {
+      "from": "blythe",
+      "to": "reno",
+      "km": 998.9,
+      "carMinutes": 742
+    },
+    {
+      "from": "blythe",
+      "to": "sacramento",
+      "km": 975,
+      "carMinutes": 667
+    },
+    {
+      "from": "blythe",
+      "to": "san-diego",
+      "km": 348.8,
+      "carMinutes": 247
+    },
+    {
+      "from": "blythe",
+      "to": "san-francisco",
+      "km": 971.4,
+      "carMinutes": 669
+    },
+    {
+      "from": "blythe",
+      "to": "san-jose",
+      "km": 900.2,
+      "carMinutes": 625
+    },
+    {
+      "from": "blythe",
+      "to": "santa-cruz",
+      "km": 909.2,
+      "carMinutes": 635
+    },
+    {
+      "from": "blythe",
+      "to": "santa-maria",
+      "km": 614.8,
+      "carMinutes": 441
+    },
+    {
+      "from": "blythe",
+      "to": "stockton",
+      "km": 899.5,
+      "carMinutes": 615
+    },
+    {
+      "from": "blythe",
+      "to": "tonopah",
+      "km": 671.9,
+      "carMinutes": 475
+    },
+    {
+      "from": "blythe",
+      "to": "truckee",
+      "km": 1012.2,
+      "carMinutes": 773
+    },
+    {
+      "from": "blythe",
+      "to": "ukiah",
+      "km": 1141.2,
+      "carMinutes": 793
+    },
+    {
+      "from": "blythe",
+      "to": "winnemucca",
+      "km": 1088.1,
+      "carMinutes": 762
+    },
+    {
+      "from": "carson-city",
+      "to": "bakersfield",
+      "km": 561.7,
+      "carMinutes": 452
+    },
+    {
+      "from": "carson-city",
+      "to": "barstow",
+      "km": 620,
+      "carMinutes": 478
+    },
+    {
+      "from": "carson-city",
+      "to": "blythe",
+      "km": 950.1,
+      "carMinutes": 705
+    },
+    {
+      "from": "carson-city",
+      "to": "el-centro",
+      "km": 933,
+      "carMinutes": 704
+    },
+    {
+      "from": "carson-city",
+      "to": "elko",
+      "km": 489.9,
+      "carMinutes": 319
+    },
+    {
+      "from": "carson-city",
+      "to": "ely",
+      "km": 513.8,
+      "carMinutes": 380
+    },
+    {
+      "from": "carson-city",
+      "to": "eureka",
+      "km": 603.2,
+      "carMinutes": 454
+    },
+    {
+      "from": "carson-city",
+      "to": "fresno",
+      "km": 387.1,
+      "carMinutes": 338
+    },
+    {
+      "from": "carson-city",
+      "to": "hilt",
+      "km": 492.5,
+      "carMinutes": 363
+    },
+    {
+      "from": "carson-city",
+      "to": "huron",
+      "km": 482.5,
+      "carMinutes": 381
+    },
+    {
+      "from": "carson-city",
+      "to": "indio",
+      "km": 795.3,
+      "carMinutes": 602
+    },
+    {
+      "from": "carson-city",
+      "to": "jackpot",
+      "km": 678.3,
+      "carMinutes": 439
+    },
+    {
+      "from": "carson-city",
+      "to": "las-vegas",
+      "km": 681.9,
+      "carMinutes": 503
+    },
+    {
+      "from": "carson-city",
+      "to": "los-angeles",
+      "km": 706.7,
+      "carMinutes": 538
+    },
+    {
+      "from": "carson-city",
+      "to": "modesto",
+      "km": 271,
+      "carMinutes": 244
+    },
+    {
+      "from": "carson-city",
+      "to": "mojave",
+      "km": 566.8,
+      "carMinutes": 445
+    },
+    {
+      "from": "carson-city",
+      "to": "oakland",
+      "km": 343.2,
+      "carMinutes": 277
+    },
+    {
+      "from": "carson-city",
+      "to": "oxnard",
+      "km": 742.9,
+      "carMinutes": 572
+    },
+    {
+      "from": "carson-city",
+      "to": "pioche",
+      "km": 686.7,
+      "carMinutes": 503
+    },
+    {
+      "from": "carson-city",
+      "to": "primm",
+      "km": 747.2,
+      "carMinutes": 548
+    },
+    {
+      "from": "carson-city",
+      "to": "redding",
+      "km": 367.3,
+      "carMinutes": 278
+    },
+    {
+      "from": "carson-city",
+      "to": "reno",
+      "km": 52,
+      "carMinutes": 41
+    },
+    {
+      "from": "carson-city",
+      "to": "sacramento",
+      "km": 211.3,
+      "carMinutes": 182
+    },
+    {
+      "from": "carson-city",
+      "to": "san-diego",
+      "km": 847.6,
+      "carMinutes": 641
+    },
+    {
+      "from": "carson-city",
+      "to": "san-francisco",
+      "km": 350.2,
+      "carMinutes": 285
+    },
+    {
+      "from": "carson-city",
+      "to": "san-jose",
+      "km": 363.6,
+      "carMinutes": 309
+    },
+    {
+      "from": "carson-city",
+      "to": "santa-cruz",
+      "km": 404.8,
+      "carMinutes": 342
+    },
+    {
+      "from": "carson-city",
+      "to": "santa-maria",
+      "km": 683.2,
+      "carMinutes": 532
+    },
+    {
+      "from": "carson-city",
+      "to": "stockton",
+      "km": 239.3,
+      "carMinutes": 215
+    },
+    {
+      "from": "carson-city",
+      "to": "tonopah",
+      "km": 358.6,
+      "carMinutes": 269
+    },
+    {
+      "from": "carson-city",
+      "to": "truckee",
+      "km": 77.7,
+      "carMinutes": 82
+    },
+    {
+      "from": "carson-city",
+      "to": "ukiah",
+      "km": 447.3,
+      "carMinutes": 355
+    },
+    {
+      "from": "carson-city",
+      "to": "winnemucca",
+      "km": 291.2,
+      "carMinutes": 198
+    },
+    {
+      "from": "el-centro",
+      "to": "bakersfield",
+      "km": 519.4,
+      "carMinutes": 373
+    },
+    {
+      "from": "el-centro",
+      "to": "barstow",
+      "km": 367.6,
+      "carMinutes": 261
+    },
+    {
+      "from": "el-centro",
+      "to": "blythe",
+      "km": 165.2,
+      "carMinutes": 123
+    },
+    {
+      "from": "el-centro",
+      "to": "carson-city",
+      "km": 930.1,
+      "carMinutes": 704
+    },
+    {
+      "from": "el-centro",
+      "to": "elko",
+      "km": 1184.2,
+      "carMinutes": 851
+    },
+    {
+      "from": "el-centro",
+      "to": "ely",
+      "km": 883.1,
+      "carMinutes": 643
+    },
+    {
+      "from": "el-centro",
+      "to": "eureka",
+      "km": 1375.3,
+      "carMinutes": 985
+    },
+    {
+      "from": "el-centro",
+      "to": "fresno",
+      "km": 696.4,
+      "carMinutes": 491
+    },
+    {
+      "from": "el-centro",
+      "to": "hilt",
+      "km": 1403.7,
+      "carMinutes": 972
+    },
+    {
+      "from": "el-centro",
+      "to": "huron",
+      "km": 648.9,
+      "carMinutes": 460
+    },
+    {
+      "from": "el-centro",
+      "to": "indio",
+      "km": 140.9,
+      "carMinutes": 109
+    },
+    {
+      "from": "el-centro",
+      "to": "jackpot",
+      "km": 1211.8,
+      "carMinutes": 876
+    },
+    {
+      "from": "el-centro",
+      "to": "las-vegas",
+      "km": 499.9,
+      "carMinutes": 360
+    },
+    {
+      "from": "el-centro",
+      "to": "los-angeles",
+      "km": 342.3,
+      "carMinutes": 246
+    },
+    {
+      "from": "el-centro",
+      "to": "modesto",
+      "km": 844.5,
+      "carMinutes": 599
+    },
+    {
+      "from": "el-centro",
+      "to": "mojave",
+      "km": 413.7,
+      "carMinutes": 315
+    },
+    {
+      "from": "el-centro",
+      "to": "oakland",
+      "km": 934.6,
+      "carMinutes": 651
+    },
+    {
+      "from": "el-centro",
+      "to": "oxnard",
+      "km": 444.4,
+      "carMinutes": 322
+    },
+    {
+      "from": "el-centro",
+      "to": "pioche",
+      "km": 774.3,
+      "carMinutes": 572
+    },
+    {
+      "from": "el-centro",
+      "to": "primm",
+      "km": 472.6,
+      "carMinutes": 351
+    },
+    {
+      "from": "el-centro",
+      "to": "redding",
+      "km": 1215.7,
+      "carMinutes": 838
+    },
+    {
+      "from": "el-centro",
+      "to": "reno",
+      "km": 981.7,
+      "carMinutes": 741
+    },
+    {
+      "from": "el-centro",
+      "to": "sacramento",
+      "km": 957.9,
+      "carMinutes": 666
+    },
+    {
+      "from": "el-centro",
+      "to": "san-diego",
+      "km": 182.9,
+      "carMinutes": 128
+    },
+    {
+      "from": "el-centro",
+      "to": "san-francisco",
+      "km": 954.3,
+      "carMinutes": 668
+    },
+    {
+      "from": "el-centro",
+      "to": "san-jose",
+      "km": 883.1,
+      "carMinutes": 624
+    },
+    {
+      "from": "el-centro",
+      "to": "santa-cruz",
+      "km": 892,
+      "carMinutes": 634
+    },
+    {
+      "from": "el-centro",
+      "to": "santa-maria",
+      "km": 597.7,
+      "carMinutes": 440
+    },
+    {
+      "from": "el-centro",
+      "to": "stockton",
+      "km": 882.4,
+      "carMinutes": 614
+    },
+    {
+      "from": "el-centro",
+      "to": "tonopah",
+      "km": 837.2,
+      "carMinutes": 594
+    },
+    {
+      "from": "el-centro",
+      "to": "truckee",
+      "km": 995,
+      "carMinutes": 772
+    },
+    {
+      "from": "el-centro",
+      "to": "ukiah",
+      "km": 1124.1,
+      "carMinutes": 792
+    },
+    {
+      "from": "el-centro",
+      "to": "winnemucca",
+      "km": 1165.6,
+      "carMinutes": 837
+    },
+    {
+      "from": "elko",
+      "to": "bakersfield",
+      "km": 985.8,
+      "carMinutes": 698
+    },
+    {
+      "from": "elko",
+      "to": "barstow",
+      "km": 940.2,
+      "carMinutes": 663
+    },
+    {
+      "from": "elko",
+      "to": "blythe",
+      "km": 1019,
+      "carMinutes": 731
+    },
+    {
+      "from": "elko",
+      "to": "carson-city",
+      "km": 490.2,
+      "carMinutes": 319
+    },
+    {
+      "from": "elko",
+      "to": "el-centro",
+      "km": 1183.6,
+      "carMinutes": 850
+    },
+    {
+      "from": "elko",
+      "to": "ely",
+      "km": 301.3,
+      "carMinutes": 208
+    },
+    {
+      "from": "elko",
+      "to": "eureka",
+      "km": 1014.5,
+      "carMinutes": 704
+    },
+    {
+      "from": "elko",
+      "to": "fresno",
+      "km": 942.4,
+      "carMinutes": 633
+    },
+    {
+      "from": "elko",
+      "to": "hilt",
+      "km": 903.8,
+      "carMinutes": 613
+    },
+    {
+      "from": "elko",
+      "to": "huron",
+      "km": 994.7,
+      "carMinutes": 660
+    },
+    {
+      "from": "elko",
+      "to": "indio",
+      "km": 1087,
+      "carMinutes": 798
+    },
+    {
+      "from": "elko",
+      "to": "jackpot",
+      "km": 188.8,
+      "carMinutes": 126
+    },
+    {
+      "from": "elko",
+      "to": "las-vegas",
+      "km": 692.2,
+      "carMinutes": 497
+    },
+    {
+      "from": "elko",
+      "to": "los-angeles",
+      "km": 1049.9,
+      "carMinutes": 742
+    },
+    {
+      "from": "elko",
+      "to": "modesto",
+      "km": 791.9,
+      "carMinutes": 526
+    },
+    {
+      "from": "elko",
+      "to": "mojave",
+      "km": 910,
+      "carMinutes": 650
+    },
+    {
+      "from": "elko",
+      "to": "oakland",
+      "km": 809,
+      "carMinutes": 537
+    },
+    {
+      "from": "elko",
+      "to": "oxnard",
+      "km": 1086.1,
+      "carMinutes": 777
+    },
+    {
+      "from": "elko",
+      "to": "pioche",
+      "km": 473.7,
+      "carMinutes": 330
+    },
+    {
+      "from": "elko",
+      "to": "primm",
+      "km": 759,
+      "carMinutes": 541
+    },
+    {
+      "from": "elko",
+      "to": "redding",
+      "km": 778.6,
+      "carMinutes": 528
+    },
+    {
+      "from": "elko",
+      "to": "reno",
+      "km": 465.7,
+      "carMinutes": 292
+    },
+    {
+      "from": "elko",
+      "to": "sacramento",
+      "km": 676.6,
+      "carMinutes": 442
+    },
+    {
+      "from": "elko",
+      "to": "san-diego",
+      "km": 1139.2,
+      "carMinutes": 837
+    },
+    {
+      "from": "elko",
+      "to": "san-francisco",
+      "km": 815.9,
+      "carMinutes": 545
+    },
+    {
+      "from": "elko",
+      "to": "san-jose",
+      "km": 869.6,
+      "carMinutes": 584
+    },
+    {
+      "from": "elko",
+      "to": "santa-cruz",
+      "km": 910.8,
+      "carMinutes": 616
+    },
+    {
+      "from": "elko",
+      "to": "santa-maria",
+      "km": 1195.3,
+      "carMinutes": 810
+    },
+    {
+      "from": "elko",
+      "to": "stockton",
+      "km": 752.7,
+      "carMinutes": 496
+    },
+    {
+      "from": "elko",
+      "to": "tonopah",
+      "km": 435.5,
+      "carMinutes": 297
+    },
+    {
+      "from": "elko",
+      "to": "truckee",
+      "km": 521.5,
+      "carMinutes": 333
+    },
+    {
+      "from": "elko",
+      "to": "ukiah",
+      "km": 850.8,
+      "carMinutes": 612
+    },
+    {
+      "from": "elko",
+      "to": "winnemucca",
+      "km": 200.8,
+      "carMinutes": 130
+    },
+    {
+      "from": "ely",
+      "to": "bakersfield",
+      "km": 823,
+      "carMinutes": 587
+    },
+    {
+      "from": "ely",
+      "to": "barstow",
+      "km": 639.4,
+      "carMinutes": 455
+    },
+    {
+      "from": "ely",
+      "to": "blythe",
+      "km": 718.2,
+      "carMinutes": 524
+    },
+    {
+      "from": "ely",
+      "to": "carson-city",
+      "km": 513.9,
+      "carMinutes": 381
+    },
+    {
+      "from": "ely",
+      "to": "el-centro",
+      "km": 882.8,
+      "carMinutes": 643
+    },
+    {
+      "from": "ely",
+      "to": "elko",
+      "km": 301.6,
+      "carMinutes": 208
+    },
+    {
+      "from": "ely",
+      "to": "eureka",
+      "km": 1064.9,
+      "carMinutes": 790
+    },
+    {
+      "from": "ely",
+      "to": "fresno",
+      "km": 732.5,
+      "carMinutes": 618
+    },
+    {
+      "from": "ely",
+      "to": "hilt",
+      "km": 954.3,
+      "carMinutes": 700
+    },
+    {
+      "from": "ely",
+      "to": "huron",
+      "km": 820.9,
+      "carMinutes": 686
+    },
+    {
+      "from": "ely",
+      "to": "indio",
+      "km": 831.3,
+      "carMinutes": 600
+    },
+    {
+      "from": "ely",
+      "to": "jackpot",
+      "km": 329.2,
+      "carMinutes": 233
+    },
+    {
+      "from": "ely",
+      "to": "las-vegas",
+      "km": 391.4,
+      "carMinutes": 290
+    },
+    {
+      "from": "ely",
+      "to": "los-angeles",
+      "km": 823.6,
+      "carMinutes": 582
+    },
+    {
+      "from": "ely",
+      "to": "modesto",
+      "km": 719.9,
+      "carMinutes": 598
+    },
+    {
+      "from": "ely",
+      "to": "mojave",
+      "km": 747.1,
+      "carMinutes": 539
+    },
+    {
+      "from": "ely",
+      "to": "oakland",
+      "km": 859.5,
+      "carMinutes": 623
+    },
+    {
+      "from": "ely",
+      "to": "oxnard",
+      "km": 914.4,
+      "carMinutes": 650
+    },
+    {
+      "from": "ely",
+      "to": "pioche",
+      "km": 172.9,
+      "carMinutes": 123
+    },
+    {
+      "from": "ely",
+      "to": "primm",
+      "km": 458.2,
+      "carMinutes": 334
+    },
+    {
+      "from": "ely",
+      "to": "redding",
+      "km": 829.1,
+      "carMinutes": 614
+    },
+    {
+      "from": "ely",
+      "to": "reno",
+      "km": 516.1,
+      "carMinutes": 378
+    },
+    {
+      "from": "ely",
+      "to": "sacramento",
+      "km": 727,
+      "carMinutes": 529
+    },
+    {
+      "from": "ely",
+      "to": "san-diego",
+      "km": 922.2,
+      "carMinutes": 651
+    },
+    {
+      "from": "ely",
+      "to": "san-francisco",
+      "km": 866.4,
+      "carMinutes": 632
+    },
+    {
+      "from": "ely",
+      "to": "san-jose",
+      "km": 920,
+      "carMinutes": 670
+    },
+    {
+      "from": "ely",
+      "to": "santa-cruz",
+      "km": 961.3,
+      "carMinutes": 703
+    },
+    {
+      "from": "ely",
+      "to": "santa-maria",
+      "km": 1004.1,
+      "carMinutes": 730
+    },
+    {
+      "from": "ely",
+      "to": "stockton",
+      "km": 803.1,
+      "carMinutes": 583
+    },
+    {
+      "from": "ely",
+      "to": "tonopah",
+      "km": 272.7,
+      "carMinutes": 186
+    },
+    {
+      "from": "ely",
+      "to": "truckee",
+      "km": 571.9,
+      "carMinutes": 419
+    },
+    {
+      "from": "ely",
+      "to": "ukiah",
+      "km": 901.2,
+      "carMinutes": 699
+    },
+    {
+      "from": "ely",
+      "to": "winnemucca",
+      "km": 435.4,
+      "carMinutes": 297
+    },
+    {
+      "from": "eureka",
+      "to": "bakersfield",
+      "km": 878.5,
+      "carMinutes": 637
+    },
+    {
+      "from": "eureka",
+      "to": "barstow",
+      "km": 1086.5,
+      "carMinutes": 783
+    },
+    {
+      "from": "eureka",
+      "to": "blythe",
+      "km": 1392.1,
+      "carMinutes": 987
+    },
+    {
+      "from": "eureka",
+      "to": "carson-city",
+      "km": 603,
+      "carMinutes": 453
+    },
+    {
+      "from": "eureka",
+      "to": "el-centro",
+      "km": 1375,
+      "carMinutes": 986
+    },
+    {
+      "from": "eureka",
+      "to": "elko",
+      "km": 1014.8,
+      "carMinutes": 705
+    },
+    {
+      "from": "eureka",
+      "to": "ely",
+      "km": 1065.3,
+      "carMinutes": 791
+    },
+    {
+      "from": "eureka",
+      "to": "fresno",
+      "km": 720.2,
+      "carMinutes": 538
+    },
+    {
+      "from": "eureka",
+      "to": "hilt",
+      "km": 329.9,
+      "carMinutes": 290
+    },
+    {
+      "from": "eureka",
+      "to": "huron",
+      "km": 736.5,
+      "carMinutes": 541
+    },
+    {
+      "from": "eureka",
+      "to": "indio",
+      "km": 1237.4,
+      "carMinutes": 884
+    },
+    {
+      "from": "eureka",
+      "to": "jackpot",
+      "km": 1203.3,
+      "carMinutes": 825
+    },
+    {
+      "from": "eureka",
+      "to": "las-vegas",
+      "km": 1244.5,
+      "carMinutes": 928
+    },
+    {
+      "from": "eureka",
+      "to": "los-angeles",
+      "km": 1036.2,
+      "carMinutes": 745
+    },
+    {
+      "from": "eureka",
+      "to": "modesto",
+      "km": 569.6,
+      "carMinutes": 431
+    },
+    {
+      "from": "eureka",
+      "to": "mojave",
+      "km": 986.1,
+      "carMinutes": 721
+    },
+    {
+      "from": "eureka",
+      "to": "oakland",
+      "km": 445,
+      "carMinutes": 340
+    },
+    {
+      "from": "eureka",
+      "to": "oxnard",
+      "km": 1015.1,
+      "carMinutes": 760
+    },
+    {
+      "from": "eureka",
+      "to": "pioche",
+      "km": 1238.2,
+      "carMinutes": 914
+    },
+    {
+      "from": "eureka",
+      "to": "primm",
+      "km": 1267.1,
+      "carMinutes": 903
+    },
+    {
+      "from": "eureka",
+      "to": "redding",
+      "km": 236.1,
+      "carMinutes": 177
+    },
+    {
+      "from": "eureka",
+      "to": "reno",
+      "km": 555.2,
+      "carMinutes": 421
+    },
+    {
+      "from": "eureka",
+      "to": "sacramento",
+      "km": 496.7,
+      "carMinutes": 355
+    },
+    {
+      "from": "eureka",
+      "to": "san-diego",
+      "km": 1229.8,
+      "carMinutes": 885
+    },
+    {
+      "from": "eureka",
+      "to": "san-francisco",
+      "km": 436.2,
+      "carMinutes": 340
+    },
+    {
+      "from": "eureka",
+      "to": "san-jose",
+      "km": 514.7,
+      "carMinutes": 394
+    },
+    {
+      "from": "eureka",
+      "to": "santa-cruz",
+      "km": 555.7,
+      "carMinutes": 425
+    },
+    {
+      "from": "eureka",
+      "to": "santa-maria",
+      "km": 854.3,
+      "carMinutes": 635
+    },
+    {
+      "from": "eureka",
+      "to": "stockton",
+      "km": 507.3,
+      "carMinutes": 395
+    },
+    {
+      "from": "eureka",
+      "to": "tonopah",
+      "km": 921.3,
+      "carMinutes": 694
+    },
+    {
+      "from": "eureka",
+      "to": "truckee",
+      "km": 559.9,
+      "carMinutes": 432
+    },
+    {
+      "from": "eureka",
+      "to": "ukiah",
+      "km": 252,
+      "carMinutes": 196
+    },
+    {
+      "from": "eureka",
+      "to": "winnemucca",
+      "km": 816.2,
+      "carMinutes": 584
+    },
+    {
+      "from": "fresno",
+      "to": "bakersfield",
+      "km": 180.3,
+      "carMinutes": 124
+    },
+    {
+      "from": "fresno",
+      "to": "barstow",
+      "km": 390.7,
+      "carMinutes": 273
+    },
+    {
+      "from": "fresno",
+      "to": "blythe",
+      "km": 712.2,
+      "carMinutes": 492
+    },
+    {
+      "from": "fresno",
+      "to": "carson-city",
+      "km": 386,
+      "carMinutes": 338
+    },
+    {
+      "from": "fresno",
+      "to": "el-centro",
+      "km": 695.1,
+      "carMinutes": 492
+    },
+    {
+      "from": "fresno",
+      "to": "elko",
+      "km": 941.9,
+      "carMinutes": 634
+    },
+    {
+      "from": "fresno",
+      "to": "ely",
+      "km": 737.8,
+      "carMinutes": 625
+    },
+    {
+      "from": "fresno",
+      "to": "eureka",
+      "km": 719.2,
+      "carMinutes": 538
+    },
+    {
+      "from": "fresno",
+      "to": "hilt",
+      "km": 718.3,
+      "carMinutes": 507
+    },
+    {
+      "from": "fresno",
+      "to": "huron",
+      "km": 90.1,
+      "carMinutes": 72
+    },
+    {
+      "from": "fresno",
+      "to": "indio",
+      "km": 557.5,
+      "carMinutes": 390
+    },
+    {
+      "from": "fresno",
+      "to": "jackpot",
+      "km": 1130.4,
+      "carMinutes": 754
+    },
+    {
+      "from": "fresno",
+      "to": "las-vegas",
+      "km": 639.3,
+      "carMinutes": 441
+    },
+    {
+      "from": "fresno",
+      "to": "los-angeles",
+      "km": 356.3,
+      "carMinutes": 250
+    },
+    {
+      "from": "fresno",
+      "to": "modesto",
+      "km": 153.7,
+      "carMinutes": 117
+    },
+    {
+      "from": "fresno",
+      "to": "mojave",
+      "km": 290.4,
+      "carMinutes": 211
+    },
+    {
+      "from": "fresno",
+      "to": "oakland",
+      "km": 278.5,
+      "carMinutes": 205
+    },
+    {
+      "from": "fresno",
+      "to": "oxnard",
+      "km": 369.3,
+      "carMinutes": 268
+    },
+    {
+      "from": "fresno",
+      "to": "pioche",
+      "km": 920.6,
+      "carMinutes": 655
+    },
+    {
+      "from": "fresno",
+      "to": "primm",
+      "km": 571.4,
+      "carMinutes": 393
+    },
+    {
+      "from": "fresno",
+      "to": "redding",
+      "km": 530.3,
+      "carMinutes": 373
+    },
+    {
+      "from": "fresno",
+      "to": "reno",
+      "km": 477.8,
+      "carMinutes": 348
+    },
+    {
+      "from": "fresno",
+      "to": "sacramento",
+      "km": 269.3,
+      "carMinutes": 198
+    },
+    {
+      "from": "fresno",
+      "to": "san-diego",
+      "km": 549.8,
+      "carMinutes": 390
+    },
+    {
+      "from": "fresno",
+      "to": "san-francisco",
+      "km": 298.2,
+      "carMinutes": 221
+    },
+    {
+      "from": "fresno",
+      "to": "san-jose",
+      "km": 235.5,
+      "carMinutes": 181
+    },
+    {
+      "from": "fresno",
+      "to": "santa-cruz",
+      "km": 244.4,
+      "carMinutes": 191
+    },
+    {
+      "from": "fresno",
+      "to": "santa-maria",
+      "km": 278.9,
+      "carMinutes": 216
+    },
+    {
+      "from": "fresno",
+      "to": "stockton",
+      "km": 199.9,
+      "carMinutes": 147
+    },
+    {
+      "from": "fresno",
+      "to": "tonopah",
+      "km": 465,
+      "carMinutes": 439
+    },
+    {
+      "from": "fresno",
+      "to": "truckee",
+      "km": 427.2,
+      "carMinutes": 313
+    },
+    {
+      "from": "fresno",
+      "to": "ukiah",
+      "km": 468,
+      "carMinutes": 345
+    },
+    {
+      "from": "fresno",
+      "to": "winnemucca",
+      "km": 743.2,
+      "carMinutes": 513
+    },
+    {
+      "from": "hilt",
+      "to": "bakersfield",
+      "km": 892.7,
+      "carMinutes": 621
+    },
+    {
+      "from": "hilt",
+      "to": "barstow",
+      "km": 1113.4,
+      "carMinutes": 769
+    },
+    {
+      "from": "hilt",
+      "to": "blythe",
+      "km": 1419.1,
+      "carMinutes": 973
+    },
+    {
+      "from": "hilt",
+      "to": "carson-city",
+      "km": 492.4,
+      "carMinutes": 363
+    },
+    {
+      "from": "hilt",
+      "to": "el-centro",
+      "km": 1402,
+      "carMinutes": 972
+    },
+    {
+      "from": "hilt",
+      "to": "elko",
+      "km": 904.3,
+      "carMinutes": 615
+    },
+    {
+      "from": "hilt",
+      "to": "ely",
+      "km": 954.8,
+      "carMinutes": 701
+    },
+    {
+      "from": "hilt",
+      "to": "eureka",
+      "km": 329.8,
+      "carMinutes": 290
+    },
+    {
+      "from": "hilt",
+      "to": "fresno",
+      "km": 718.1,
+      "carMinutes": 506
+    },
+    {
+      "from": "hilt",
+      "to": "huron",
+      "km": 763.5,
+      "carMinutes": 526
+    },
+    {
+      "from": "hilt",
+      "to": "indio",
+      "km": 1264.4,
+      "carMinutes": 870
+    },
+    {
+      "from": "hilt",
+      "to": "jackpot",
+      "km": 1092.8,
+      "carMinutes": 735
+    },
+    {
+      "from": "hilt",
+      "to": "las-vegas",
+      "km": 1134,
+      "carMinutes": 838
+    },
+    {
+      "from": "hilt",
+      "to": "los-angeles",
+      "km": 1063.2,
+      "carMinutes": 731
+    },
+    {
+      "from": "hilt",
+      "to": "modesto",
+      "km": 567.5,
+      "carMinutes": 399
+    },
+    {
+      "from": "hilt",
+      "to": "mojave",
+      "km": 1013.1,
+      "carMinutes": 707
+    },
+    {
+      "from": "hilt",
+      "to": "oakland",
+      "km": 529.7,
+      "carMinutes": 369
+    },
+    {
+      "from": "hilt",
+      "to": "oxnard",
+      "km": 1076.2,
+      "carMinutes": 748
+    },
+    {
+      "from": "hilt",
+      "to": "pioche",
+      "km": 1127.7,
+      "carMinutes": 824
+    },
+    {
+      "from": "hilt",
+      "to": "primm",
+      "km": 1199.3,
+      "carMinutes": 883
+    },
+    {
+      "from": "hilt",
+      "to": "redding",
+      "km": 193,
+      "carMinutes": 139
+    },
+    {
+      "from": "hilt",
+      "to": "reno",
+      "km": 444.7,
+      "carMinutes": 331
+    },
+    {
+      "from": "hilt",
+      "to": "sacramento",
+      "km": 449,
+      "carMinutes": 312
+    },
+    {
+      "from": "hilt",
+      "to": "san-diego",
+      "km": 1256.7,
+      "carMinutes": 871
+    },
+    {
+      "from": "hilt",
+      "to": "san-francisco",
+      "km": 536.6,
+      "carMinutes": 378
+    },
+    {
+      "from": "hilt",
+      "to": "san-jose",
+      "km": 590.3,
+      "carMinutes": 416
+    },
+    {
+      "from": "hilt",
+      "to": "santa-cruz",
+      "km": 631.5,
+      "carMinutes": 449
+    },
+    {
+      "from": "hilt",
+      "to": "santa-maria",
+      "km": 928.7,
+      "carMinutes": 657
+    },
+    {
+      "from": "hilt",
+      "to": "stockton",
+      "km": 523.4,
+      "carMinutes": 364
+    },
+    {
+      "from": "hilt",
+      "to": "tonopah",
+      "km": 810.7,
+      "carMinutes": 604
+    },
+    {
+      "from": "hilt",
+      "to": "truckee",
+      "km": 500.5,
+      "carMinutes": 372
+    },
+    {
+      "from": "hilt",
+      "to": "ukiah",
+      "km": 490.1,
+      "carMinutes": 368
+    },
+    {
+      "from": "hilt",
+      "to": "winnemucca",
+      "km": 705.6,
+      "carMinutes": 493
+    },
+    {
+      "from": "huron",
+      "to": "bakersfield",
+      "km": 151.1,
+      "carMinutes": 111
+    },
+    {
+      "from": "huron",
+      "to": "barstow",
+      "km": 359.1,
+      "carMinutes": 257
+    },
+    {
+      "from": "huron",
+      "to": "blythe",
+      "km": 664.7,
+      "carMinutes": 461
+    },
+    {
+      "from": "huron",
+      "to": "carson-city",
+      "km": 480.4,
+      "carMinutes": 381
+    },
+    {
+      "from": "huron",
+      "to": "el-centro",
+      "km": 647.6,
+      "carMinutes": 461
+    },
+    {
+      "from": "huron",
+      "to": "elko",
+      "km": 994.2,
+      "carMinutes": 659
+    },
+    {
+      "from": "huron",
+      "to": "ely",
+      "km": 972.1,
+      "carMinutes": 693
+    },
+    {
+      "from": "huron",
+      "to": "eureka",
+      "km": 735.3,
+      "carMinutes": 540
+    },
+    {
+      "from": "huron",
+      "to": "fresno",
+      "km": 90.6,
+      "carMinutes": 72
+    },
+    {
+      "from": "huron",
+      "to": "hilt",
+      "km": 763.7,
+      "carMinutes": 526
+    },
+    {
+      "from": "huron",
+      "to": "indio",
+      "km": 510,
+      "carMinutes": 359
+    },
+    {
+      "from": "huron",
+      "to": "jackpot",
+      "km": 1182.6,
+      "carMinutes": 779
+    },
+    {
+      "from": "huron",
+      "to": "las-vegas",
+      "km": 607.6,
+      "carMinutes": 425
+    },
+    {
+      "from": "huron",
+      "to": "los-angeles",
+      "km": 308.8,
+      "carMinutes": 219
+    },
+    {
+      "from": "huron",
+      "to": "modesto",
+      "km": 208.1,
+      "carMinutes": 157
+    },
+    {
+      "from": "huron",
+      "to": "mojave",
+      "km": 258.7,
+      "carMinutes": 196
+    },
+    {
+      "from": "huron",
+      "to": "oakland",
+      "km": 294.6,
+      "carMinutes": 206
+    },
+    {
+      "from": "huron",
+      "to": "oxnard",
+      "km": 321.8,
+      "carMinutes": 237
+    },
+    {
+      "from": "huron",
+      "to": "pioche",
+      "km": 889,
+      "carMinutes": 639
+    },
+    {
+      "from": "huron",
+      "to": "primm",
+      "km": 539.7,
+      "carMinutes": 377
+    },
+    {
+      "from": "huron",
+      "to": "redding",
+      "km": 575.7,
+      "carMinutes": 393
+    },
+    {
+      "from": "huron",
+      "to": "reno",
+      "km": 530,
+      "carMinutes": 373
+    },
+    {
+      "from": "huron",
+      "to": "sacramento",
+      "km": 317.9,
+      "carMinutes": 221
+    },
+    {
+      "from": "huron",
+      "to": "san-diego",
+      "km": 502.4,
+      "carMinutes": 359
+    },
+    {
+      "from": "huron",
+      "to": "san-francisco",
+      "km": 314.3,
+      "carMinutes": 222
+    },
+    {
+      "from": "huron",
+      "to": "san-jose",
+      "km": 243.1,
+      "carMinutes": 178
+    },
+    {
+      "from": "huron",
+      "to": "santa-cruz",
+      "km": 252,
+      "carMinutes": 189
+    },
+    {
+      "from": "huron",
+      "to": "santa-maria",
+      "km": 209.8,
+      "carMinutes": 165
+    },
+    {
+      "from": "huron",
+      "to": "stockton",
+      "km": 242.3,
+      "carMinutes": 168
+    },
+    {
+      "from": "huron",
+      "to": "tonopah",
+      "km": 699.3,
+      "carMinutes": 507
+    },
+    {
+      "from": "huron",
+      "to": "truckee",
+      "km": 479.5,
+      "carMinutes": 338
+    },
+    {
+      "from": "huron",
+      "to": "ukiah",
+      "km": 484,
+      "carMinutes": 346
+    },
+    {
+      "from": "huron",
+      "to": "winnemucca",
+      "km": 795.5,
+      "carMinutes": 538
+    },
+    {
+      "from": "indio",
+      "to": "bakersfield",
+      "km": 382,
+      "carMinutes": 271
+    },
+    {
+      "from": "indio",
+      "to": "barstow",
+      "km": 230.2,
+      "carMinutes": 159
+    },
+    {
+      "from": "indio",
+      "to": "blythe",
+      "km": 159,
+      "carMinutes": 109
+    },
+    {
+      "from": "indio",
+      "to": "carson-city",
+      "km": 792.7,
+      "carMinutes": 602
+    },
+    {
+      "from": "indio",
+      "to": "el-centro",
+      "km": 142,
+      "carMinutes": 109
+    },
+    {
+      "from": "indio",
+      "to": "elko",
+      "km": 1085.7,
+      "carMinutes": 797
+    },
+    {
+      "from": "indio",
+      "to": "ely",
+      "km": 832.8,
+      "carMinutes": 601
+    },
+    {
+      "from": "indio",
+      "to": "eureka",
+      "km": 1237.9,
+      "carMinutes": 883
+    },
+    {
+      "from": "indio",
+      "to": "fresno",
+      "km": 559,
+      "carMinutes": 389
+    },
+    {
+      "from": "indio",
+      "to": "hilt",
+      "km": 1266.3,
+      "carMinutes": 870
+    },
+    {
+      "from": "indio",
+      "to": "huron",
+      "km": 511.5,
+      "carMinutes": 358
+    },
+    {
+      "from": "indio",
+      "to": "jackpot",
+      "km": 1161.5,
+      "carMinutes": 833
+    },
+    {
+      "from": "indio",
+      "to": "las-vegas",
+      "km": 449.6,
+      "carMinutes": 317
+    },
+    {
+      "from": "indio",
+      "to": "los-angeles",
+      "km": 204.9,
+      "carMinutes": 144
+    },
+    {
+      "from": "indio",
+      "to": "modesto",
+      "km": 707.1,
+      "carMinutes": 497
+    },
+    {
+      "from": "indio",
+      "to": "mojave",
+      "km": 276.3,
+      "carMinutes": 213
+    },
+    {
+      "from": "indio",
+      "to": "oakland",
+      "km": 797.2,
+      "carMinutes": 550
+    },
+    {
+      "from": "indio",
+      "to": "oxnard",
+      "km": 307,
+      "carMinutes": 220
+    },
+    {
+      "from": "indio",
+      "to": "pioche",
+      "km": 724,
+      "carMinutes": 530
+    },
+    {
+      "from": "indio",
+      "to": "primm",
+      "km": 410.9,
+      "carMinutes": 279
+    },
+    {
+      "from": "indio",
+      "to": "redding",
+      "km": 1078.3,
+      "carMinutes": 736
+    },
+    {
+      "from": "indio",
+      "to": "reno",
+      "km": 844.3,
+      "carMinutes": 639
+    },
+    {
+      "from": "indio",
+      "to": "sacramento",
+      "km": 820.5,
+      "carMinutes": 565
+    },
+    {
+      "from": "indio",
+      "to": "san-diego",
+      "km": 230.6,
+      "carMinutes": 171
+    },
+    {
+      "from": "indio",
+      "to": "san-francisco",
+      "km": 816.9,
+      "carMinutes": 566
+    },
+    {
+      "from": "indio",
+      "to": "san-jose",
+      "km": 745.7,
+      "carMinutes": 522
+    },
+    {
+      "from": "indio",
+      "to": "santa-cruz",
+      "km": 754.6,
+      "carMinutes": 532
+    },
+    {
+      "from": "indio",
+      "to": "santa-maria",
+      "km": 460.3,
+      "carMinutes": 338
+    },
+    {
+      "from": "indio",
+      "to": "stockton",
+      "km": 745,
+      "carMinutes": 512
+    },
+    {
+      "from": "indio",
+      "to": "tonopah",
+      "km": 651.9,
+      "carMinutes": 504
+    },
+    {
+      "from": "indio",
+      "to": "truckee",
+      "km": 857.6,
+      "carMinutes": 670
+    },
+    {
+      "from": "indio",
+      "to": "ukiah",
+      "km": 986.7,
+      "carMinutes": 690
+    },
+    {
+      "from": "indio",
+      "to": "winnemucca",
+      "km": 1028.2,
+      "carMinutes": 735
+    },
+    {
+      "from": "jackpot",
+      "to": "bakersfield",
+      "km": 1174.1,
+      "carMinutes": 818
+    },
+    {
+      "from": "jackpot",
+      "to": "barstow",
+      "km": 968.1,
+      "carMinutes": 688
+    },
+    {
+      "from": "jackpot",
+      "to": "blythe",
+      "km": 1046.9,
+      "carMinutes": 756
+    },
+    {
+      "from": "jackpot",
+      "to": "carson-city",
+      "km": 678.5,
+      "carMinutes": 439
+    },
+    {
+      "from": "jackpot",
+      "to": "el-centro",
+      "km": 1211.5,
+      "carMinutes": 876
+    },
+    {
+      "from": "jackpot",
+      "to": "elko",
+      "km": 188.8,
+      "carMinutes": 126
+    },
+    {
+      "from": "jackpot",
+      "to": "ely",
+      "km": 329.2,
+      "carMinutes": 233
+    },
+    {
+      "from": "jackpot",
+      "to": "eureka",
+      "km": 1202.8,
+      "carMinutes": 823
+    },
+    {
+      "from": "jackpot",
+      "to": "fresno",
+      "km": 1130.7,
+      "carMinutes": 753
+    },
+    {
+      "from": "jackpot",
+      "to": "hilt",
+      "km": 1092.1,
+      "carMinutes": 733
+    },
+    {
+      "from": "jackpot",
+      "to": "huron",
+      "km": 1183,
+      "carMinutes": 780
+    },
+    {
+      "from": "jackpot",
+      "to": "indio",
+      "km": 1160,
+      "carMinutes": 833
+    },
+    {
+      "from": "jackpot",
+      "to": "las-vegas",
+      "km": 720.1,
+      "carMinutes": 522
+    },
+    {
+      "from": "jackpot",
+      "to": "los-angeles",
+      "km": 1152.3,
+      "carMinutes": 814
+    },
+    {
+      "from": "jackpot",
+      "to": "modesto",
+      "km": 980.2,
+      "carMinutes": 646
+    },
+    {
+      "from": "jackpot",
+      "to": "mojave",
+      "km": 1098.3,
+      "carMinutes": 769
+    },
+    {
+      "from": "jackpot",
+      "to": "oakland",
+      "km": 997.3,
+      "carMinutes": 657
+    },
+    {
+      "from": "jackpot",
+      "to": "oxnard",
+      "km": 1243.2,
+      "carMinutes": 883
+    },
+    {
+      "from": "jackpot",
+      "to": "pioche",
+      "km": 501.6,
+      "carMinutes": 355
+    },
+    {
+      "from": "jackpot",
+      "to": "primm",
+      "km": 787,
+      "carMinutes": 566
+    },
+    {
+      "from": "jackpot",
+      "to": "redding",
+      "km": 966.9,
+      "carMinutes": 647
+    },
+    {
+      "from": "jackpot",
+      "to": "reno",
+      "km": 654,
+      "carMinutes": 411
+    },
+    {
+      "from": "jackpot",
+      "to": "sacramento",
+      "km": 864.9,
+      "carMinutes": 562
+    },
+    {
+      "from": "jackpot",
+      "to": "san-diego",
+      "km": 1250.9,
+      "carMinutes": 884
+    },
+    {
+      "from": "jackpot",
+      "to": "san-francisco",
+      "km": 1004.2,
+      "carMinutes": 665
+    },
+    {
+      "from": "jackpot",
+      "to": "san-jose",
+      "km": 1057.9,
+      "carMinutes": 703
+    },
+    {
+      "from": "jackpot",
+      "to": "santa-cruz",
+      "km": 1099.1,
+      "carMinutes": 736
+    },
+    {
+      "from": "jackpot",
+      "to": "santa-maria",
+      "km": 1383.6,
+      "carMinutes": 930
+    },
+    {
+      "from": "jackpot",
+      "to": "stockton",
+      "km": 941,
+      "carMinutes": 616
+    },
+    {
+      "from": "jackpot",
+      "to": "tonopah",
+      "km": 623.8,
+      "carMinutes": 416
+    },
+    {
+      "from": "jackpot",
+      "to": "truckee",
+      "km": 709.8,
+      "carMinutes": 453
+    },
+    {
+      "from": "jackpot",
+      "to": "ukiah",
+      "km": 1039.1,
+      "carMinutes": 732
+    },
+    {
+      "from": "jackpot",
+      "to": "winnemucca",
+      "km": 389.1,
+      "carMinutes": 250
+    },
+    {
+      "from": "las-vegas",
+      "to": "bakersfield",
+      "km": 458.6,
+      "carMinutes": 321
+    },
+    {
+      "from": "las-vegas",
+      "to": "barstow",
+      "km": 249.7,
+      "carMinutes": 172
+    },
+    {
+      "from": "las-vegas",
+      "to": "blythe",
+      "km": 334.4,
+      "carMinutes": 240
+    },
+    {
+      "from": "las-vegas",
+      "to": "carson-city",
+      "km": 681.5,
+      "carMinutes": 502
+    },
+    {
+      "from": "las-vegas",
+      "to": "el-centro",
+      "km": 499,
+      "carMinutes": 359
+    },
+    {
+      "from": "las-vegas",
+      "to": "elko",
+      "km": 691.8,
+      "carMinutes": 497
+    },
+    {
+      "from": "las-vegas",
+      "to": "ely",
+      "km": 390.8,
+      "carMinutes": 290
+    },
+    {
+      "from": "las-vegas",
+      "to": "eureka",
+      "km": 1243.7,
+      "carMinutes": 926
+    },
+    {
+      "from": "las-vegas",
+      "to": "fresno",
+      "km": 639,
+      "carMinutes": 443
+    },
+    {
+      "from": "las-vegas",
+      "to": "hilt",
+      "km": 1133.1,
+      "carMinutes": 835
+    },
+    {
+      "from": "las-vegas",
+      "to": "huron",
+      "km": 607.3,
+      "carMinutes": 427
+    },
+    {
+      "from": "las-vegas",
+      "to": "indio",
+      "km": 447.5,
+      "carMinutes": 316
+    },
+    {
+      "from": "las-vegas",
+      "to": "jackpot",
+      "km": 719.5,
+      "carMinutes": 522
+    },
+    {
+      "from": "las-vegas",
+      "to": "los-angeles",
+      "km": 434,
+      "carMinutes": 298
+    },
+    {
+      "from": "las-vegas",
+      "to": "modesto",
+      "km": 787.2,
+      "carMinutes": 550
+    },
+    {
+      "from": "las-vegas",
+      "to": "mojave",
+      "km": 373.8,
+      "carMinutes": 267
+    },
+    {
+      "from": "las-vegas",
+      "to": "oakland",
+      "km": 893,
+      "carMinutes": 619
+    },
+    {
+      "from": "las-vegas",
+      "to": "oxnard",
+      "km": 524.8,
+      "carMinutes": 366
+    },
+    {
+      "from": "las-vegas",
+      "to": "pioche",
+      "km": 282,
+      "carMinutes": 219
+    },
+    {
+      "from": "las-vegas",
+      "to": "primm",
+      "km": 68.6,
+      "carMinutes": 50
+    },
+    {
+      "from": "las-vegas",
+      "to": "redding",
+      "km": 1007.9,
+      "carMinutes": 750
+    },
+    {
+      "from": "las-vegas",
+      "to": "reno",
+      "km": 694.9,
+      "carMinutes": 514
+    },
+    {
+      "from": "las-vegas",
+      "to": "sacramento",
+      "km": 902.8,
+      "carMinutes": 632
+    },
+    {
+      "from": "las-vegas",
+      "to": "san-diego",
+      "km": 532.5,
+      "carMinutes": 367
+    },
+    {
+      "from": "las-vegas",
+      "to": "san-francisco",
+      "km": 912.7,
+      "carMinutes": 635
+    },
+    {
+      "from": "las-vegas",
+      "to": "san-jose",
+      "km": 841.5,
+      "carMinutes": 591
+    },
+    {
+      "from": "las-vegas",
+      "to": "santa-cruz",
+      "km": 850.4,
+      "carMinutes": 601
+    },
+    {
+      "from": "las-vegas",
+      "to": "santa-maria",
+      "km": 639.7,
+      "carMinutes": 464
+    },
+    {
+      "from": "las-vegas",
+      "to": "stockton",
+      "km": 833.4,
+      "carMinutes": 581
+    },
+    {
+      "from": "las-vegas",
+      "to": "tonopah",
+      "km": 340.2,
+      "carMinutes": 240
+    },
+    {
+      "from": "las-vegas",
+      "to": "truckee",
+      "km": 750.7,
+      "carMinutes": 555
+    },
+    {
+      "from": "las-vegas",
+      "to": "ukiah",
+      "km": 1082.5,
+      "carMinutes": 759
+    },
+    {
+      "from": "las-vegas",
+      "to": "winnemucca",
+      "km": 756.5,
+      "carMinutes": 527
+    },
+    {
+      "from": "los-angeles",
+      "to": "bakersfield",
+      "km": 179.7,
+      "carMinutes": 132
+    },
+    {
+      "from": "los-angeles",
+      "to": "barstow",
+      "km": 184.1,
+      "carMinutes": 129
+    },
+    {
+      "from": "los-angeles",
+      "to": "blythe",
+      "km": 358.9,
+      "carMinutes": 246
+    },
+    {
+      "from": "los-angeles",
+      "to": "carson-city",
+      "km": 705.4,
+      "carMinutes": 540
+    },
+    {
+      "from": "los-angeles",
+      "to": "el-centro",
+      "km": 341.8,
+      "carMinutes": 246
+    },
+    {
+      "from": "los-angeles",
+      "to": "elko",
+      "km": 1049.7,
+      "carMinutes": 744
+    },
+    {
+      "from": "los-angeles",
+      "to": "ely",
+      "km": 822.8,
+      "carMinutes": 582
+    },
+    {
+      "from": "los-angeles",
+      "to": "eureka",
+      "km": 1035.6,
+      "carMinutes": 745
+    },
+    {
+      "from": "los-angeles",
+      "to": "fresno",
+      "km": 356.7,
+      "carMinutes": 251
+    },
+    {
+      "from": "los-angeles",
+      "to": "hilt",
+      "km": 1064.1,
+      "carMinutes": 732
+    },
+    {
+      "from": "los-angeles",
+      "to": "huron",
+      "km": 309.2,
+      "carMinutes": 220
+    },
+    {
+      "from": "los-angeles",
+      "to": "indio",
+      "km": 204.2,
+      "carMinutes": 144
+    },
+    {
+      "from": "los-angeles",
+      "to": "jackpot",
+      "km": 1151.4,
+      "carMinutes": 814
+    },
+    {
+      "from": "los-angeles",
+      "to": "las-vegas",
+      "km": 432.6,
+      "carMinutes": 297
+    },
+    {
+      "from": "los-angeles",
+      "to": "modesto",
+      "km": 504.8,
+      "carMinutes": 358
+    },
+    {
+      "from": "los-angeles",
+      "to": "mojave",
+      "km": 151.6,
+      "carMinutes": 118
+    },
+    {
+      "from": "los-angeles",
+      "to": "oakland",
+      "km": 595,
+      "carMinutes": 411
+    },
+    {
+      "from": "los-angeles",
+      "to": "oxnard",
+      "km": 101.7,
+      "carMinutes": 79
+    },
+    {
+      "from": "los-angeles",
+      "to": "pioche",
+      "km": 714,
+      "carMinutes": 511
+    },
+    {
+      "from": "los-angeles",
+      "to": "primm",
+      "km": 364.7,
+      "carMinutes": 249
+    },
+    {
+      "from": "los-angeles",
+      "to": "redding",
+      "km": 876,
+      "carMinutes": 598
+    },
+    {
+      "from": "los-angeles",
+      "to": "reno",
+      "km": 757,
+      "carMinutes": 577
+    },
+    {
+      "from": "los-angeles",
+      "to": "sacramento",
+      "km": 618.2,
+      "carMinutes": 426
+    },
+    {
+      "from": "los-angeles",
+      "to": "san-diego",
+      "km": 193.8,
+      "carMinutes": 143
+    },
+    {
+      "from": "los-angeles",
+      "to": "san-francisco",
+      "km": 614.6,
+      "carMinutes": 428
+    },
+    {
+      "from": "los-angeles",
+      "to": "san-jose",
+      "km": 543.4,
+      "carMinutes": 383
+    },
+    {
+      "from": "los-angeles",
+      "to": "santa-cruz",
+      "km": 552.4,
+      "carMinutes": 394
+    },
+    {
+      "from": "los-angeles",
+      "to": "santa-maria",
+      "km": 255,
+      "carMinutes": 197
+    },
+    {
+      "from": "los-angeles",
+      "to": "stockton",
+      "km": 542.7,
+      "carMinutes": 373
+    },
+    {
+      "from": "los-angeles",
+      "to": "tonopah",
+      "km": 614.3,
+      "carMinutes": 448
+    },
+    {
+      "from": "los-angeles",
+      "to": "truckee",
+      "km": 779.8,
+      "carMinutes": 544
+    },
+    {
+      "from": "los-angeles",
+      "to": "ukiah",
+      "km": 784.4,
+      "carMinutes": 551
+    },
+    {
+      "from": "los-angeles",
+      "to": "winnemucca",
+      "km": 940.8,
+      "carMinutes": 673
+    },
+    {
+      "from": "modesto",
+      "to": "bakersfield",
+      "km": 328.8,
+      "carMinutes": 231
+    },
+    {
+      "from": "modesto",
+      "to": "barstow",
+      "km": 539.2,
+      "carMinutes": 380
+    },
+    {
+      "from": "modesto",
+      "to": "blythe",
+      "km": 860.7,
+      "carMinutes": 599
+    },
+    {
+      "from": "modesto",
+      "to": "carson-city",
+      "km": 269.6,
+      "carMinutes": 245
+    },
+    {
+      "from": "modesto",
+      "to": "el-centro",
+      "km": 843.6,
+      "carMinutes": 599
+    },
+    {
+      "from": "modesto",
+      "to": "elko",
+      "km": 791.2,
+      "carMinutes": 526
+    },
+    {
+      "from": "modesto",
+      "to": "ely",
+      "km": 719.9,
+      "carMinutes": 599
+    },
+    {
+      "from": "modesto",
+      "to": "eureka",
+      "km": 568.6,
+      "carMinutes": 431
+    },
+    {
+      "from": "modesto",
+      "to": "fresno",
+      "km": 154.2,
+      "carMinutes": 116
+    },
+    {
+      "from": "modesto",
+      "to": "hilt",
+      "km": 567.7,
+      "carMinutes": 400
+    },
+    {
+      "from": "modesto",
+      "to": "huron",
+      "km": 208,
+      "carMinutes": 158
+    },
+    {
+      "from": "modesto",
+      "to": "indio",
+      "km": 706,
+      "carMinutes": 497
+    },
+    {
+      "from": "modesto",
+      "to": "jackpot",
+      "km": 979.7,
+      "carMinutes": 646
+    },
+    {
+      "from": "modesto",
+      "to": "las-vegas",
+      "km": 787.8,
+      "carMinutes": 548
+    },
+    {
+      "from": "modesto",
+      "to": "los-angeles",
+      "km": 504.8,
+      "carMinutes": 357
+    },
+    {
+      "from": "modesto",
+      "to": "mojave",
+      "km": 438.9,
+      "carMinutes": 319
+    },
+    {
+      "from": "modesto",
+      "to": "oakland",
+      "km": 127.9,
+      "carMinutes": 97
+    },
+    {
+      "from": "modesto",
+      "to": "oxnard",
+      "km": 517.8,
+      "carMinutes": 375
+    },
+    {
+      "from": "modesto",
+      "to": "pioche",
+      "km": 796.1,
+      "carMinutes": 671
+    },
+    {
+      "from": "modesto",
+      "to": "primm",
+      "km": 719.9,
+      "carMinutes": 500
+    },
+    {
+      "from": "modesto",
+      "to": "redding",
+      "km": 379.7,
+      "carMinutes": 266
+    },
+    {
+      "from": "modesto",
+      "to": "reno",
+      "km": 327.1,
+      "carMinutes": 240
+    },
+    {
+      "from": "modesto",
+      "to": "sacramento",
+      "km": 118.7,
+      "carMinutes": 90
+    },
+    {
+      "from": "modesto",
+      "to": "san-diego",
+      "km": 698.4,
+      "carMinutes": 497
+    },
+    {
+      "from": "modesto",
+      "to": "san-francisco",
+      "km": 147.6,
+      "carMinutes": 113
+    },
+    {
+      "from": "modesto",
+      "to": "san-jose",
+      "km": 137.2,
+      "carMinutes": 109
+    },
+    {
+      "from": "modesto",
+      "to": "santa-cruz",
+      "km": 178.5,
+      "carMinutes": 142
+    },
+    {
+      "from": "modesto",
+      "to": "santa-maria",
+      "km": 408.7,
+      "carMinutes": 308
+    },
+    {
+      "from": "modesto",
+      "to": "stockton",
+      "km": 49.3,
+      "carMinutes": 39
+    },
+    {
+      "from": "modesto",
+      "to": "tonopah",
+      "km": 447.1,
+      "carMinutes": 413
+    },
+    {
+      "from": "modesto",
+      "to": "truckee",
+      "km": 276.6,
+      "carMinutes": 205
+    },
+    {
+      "from": "modesto",
+      "to": "ukiah",
+      "km": 317.3,
+      "carMinutes": 237
+    },
+    {
+      "from": "modesto",
+      "to": "winnemucca",
+      "km": 592.6,
+      "carMinutes": 405
+    },
+    {
+      "from": "mojave",
+      "to": "bakersfield",
+      "km": 110.7,
+      "carMinutes": 91
+    },
+    {
+      "from": "mojave",
+      "to": "barstow",
+      "km": 125.5,
+      "carMinutes": 99
+    },
+    {
+      "from": "mojave",
+      "to": "blythe",
+      "km": 431.2,
+      "carMinutes": 316
+    },
+    {
+      "from": "mojave",
+      "to": "carson-city",
+      "km": 565.6,
+      "carMinutes": 446
+    },
+    {
+      "from": "mojave",
+      "to": "el-centro",
+      "km": 414.2,
+      "carMinutes": 316
+    },
+    {
+      "from": "mojave",
+      "to": "elko",
+      "km": 910,
+      "carMinutes": 650
+    },
+    {
+      "from": "mojave",
+      "to": "ely",
+      "km": 747.3,
+      "carMinutes": 539
+    },
+    {
+      "from": "mojave",
+      "to": "eureka",
+      "km": 985.9,
+      "carMinutes": 723
+    },
+    {
+      "from": "mojave",
+      "to": "fresno",
+      "km": 291.2,
+      "carMinutes": 213
+    },
+    {
+      "from": "mojave",
+      "to": "hilt",
+      "km": 1014.3,
+      "carMinutes": 709
+    },
+    {
+      "from": "mojave",
+      "to": "huron",
+      "km": 259.4,
+      "carMinutes": 197
+    },
+    {
+      "from": "mojave",
+      "to": "indio",
+      "km": 276.5,
+      "carMinutes": 213
+    },
+    {
+      "from": "mojave",
+      "to": "jackpot",
+      "km": 1098.5,
+      "carMinutes": 770
+    },
+    {
+      "from": "mojave",
+      "to": "las-vegas",
+      "km": 374.1,
+      "carMinutes": 266
+    },
+    {
+      "from": "mojave",
+      "to": "los-angeles",
+      "km": 151.1,
+      "carMinutes": 116
+    },
+    {
+      "from": "mojave",
+      "to": "modesto",
+      "km": 439.3,
+      "carMinutes": 321
+    },
+    {
+      "from": "mojave",
+      "to": "oakland",
+      "km": 545.2,
+      "carMinutes": 389
+    },
+    {
+      "from": "mojave",
+      "to": "oxnard",
+      "km": 187.3,
+      "carMinutes": 150
+    },
+    {
+      "from": "mojave",
+      "to": "pioche",
+      "km": 655.4,
+      "carMinutes": 480
+    },
+    {
+      "from": "mojave",
+      "to": "primm",
+      "km": 306.2,
+      "carMinutes": 219
+    },
+    {
+      "from": "mojave",
+      "to": "redding",
+      "km": 826.3,
+      "carMinutes": 576
+    },
+    {
+      "from": "mojave",
+      "to": "reno",
+      "km": 617.2,
+      "carMinutes": 483
+    },
+    {
+      "from": "mojave",
+      "to": "sacramento",
+      "km": 554.9,
+      "carMinutes": 402
+    },
+    {
+      "from": "mojave",
+      "to": "san-diego",
+      "km": 328.7,
+      "carMinutes": 252
+    },
+    {
+      "from": "mojave",
+      "to": "san-francisco",
+      "km": 564.8,
+      "carMinutes": 405
+    },
+    {
+      "from": "mojave",
+      "to": "san-jose",
+      "km": 493.6,
+      "carMinutes": 361
+    },
+    {
+      "from": "mojave",
+      "to": "santa-cruz",
+      "km": 502.6,
+      "carMinutes": 372
+    },
+    {
+      "from": "mojave",
+      "to": "santa-maria",
+      "km": 280.3,
+      "carMinutes": 230
+    },
+    {
+      "from": "mojave",
+      "to": "stockton",
+      "km": 485.5,
+      "carMinutes": 351
+    },
+    {
+      "from": "mojave",
+      "to": "tonopah",
+      "km": 474.6,
+      "carMinutes": 353
+    },
+    {
+      "from": "mojave",
+      "to": "truckee",
+      "km": 630.5,
+      "carMinutes": 514
+    },
+    {
+      "from": "mojave",
+      "to": "ukiah",
+      "km": 734.6,
+      "carMinutes": 529
+    },
+    {
+      "from": "mojave",
+      "to": "winnemucca",
+      "km": 801.1,
+      "carMinutes": 578
+    },
+    {
+      "from": "oakland",
+      "to": "bakersfield",
+      "km": 436.6,
+      "carMinutes": 302
+    },
+    {
+      "from": "oakland",
+      "to": "barstow",
+      "km": 644.5,
+      "carMinutes": 449
+    },
+    {
+      "from": "oakland",
+      "to": "blythe",
+      "km": 950.2,
+      "carMinutes": 653
+    },
+    {
+      "from": "oakland",
+      "to": "carson-city",
+      "km": 341.9,
+      "carMinutes": 278
+    },
+    {
+      "from": "oakland",
+      "to": "el-centro",
+      "km": 933.1,
+      "carMinutes": 652
+    },
+    {
+      "from": "oakland",
+      "to": "elko",
+      "km": 808.9,
+      "carMinutes": 538
+    },
+    {
+      "from": "oakland",
+      "to": "ely",
+      "km": 859.3,
+      "carMinutes": 624
+    },
+    {
+      "from": "oakland",
+      "to": "eureka",
+      "km": 445.1,
+      "carMinutes": 341
+    },
+    {
+      "from": "oakland",
+      "to": "fresno",
+      "km": 278.2,
+      "carMinutes": 203
+    },
+    {
+      "from": "oakland",
+      "to": "hilt",
+      "km": 530.5,
+      "carMinutes": 371
+    },
+    {
+      "from": "oakland",
+      "to": "huron",
+      "km": 294.6,
+      "carMinutes": 206
+    },
+    {
+      "from": "oakland",
+      "to": "indio",
+      "km": 795.4,
+      "carMinutes": 550
+    },
+    {
+      "from": "oakland",
+      "to": "jackpot",
+      "km": 997.3,
+      "carMinutes": 658
+    },
+    {
+      "from": "oakland",
+      "to": "las-vegas",
+      "km": 893.1,
+      "carMinutes": 616
+    },
+    {
+      "from": "oakland",
+      "to": "los-angeles",
+      "km": 594.2,
+      "carMinutes": 410
+    },
+    {
+      "from": "oakland",
+      "to": "modesto",
+      "km": 127.7,
+      "carMinutes": 96
+    },
+    {
+      "from": "oakland",
+      "to": "mojave",
+      "km": 544.2,
+      "carMinutes": 387
+    },
+    {
+      "from": "oakland",
+      "to": "oxnard",
+      "km": 571.4,
+      "carMinutes": 424
+    },
+    {
+      "from": "oakland",
+      "to": "pioche",
+      "km": 1032.3,
+      "carMinutes": 747
+    },
+    {
+      "from": "oakland",
+      "to": "primm",
+      "km": 825.2,
+      "carMinutes": 569
+    },
+    {
+      "from": "oakland",
+      "to": "redding",
+      "km": 342.5,
+      "carMinutes": 237
+    },
+    {
+      "from": "oakland",
+      "to": "reno",
+      "km": 344.7,
+      "carMinutes": 252
+    },
+    {
+      "from": "oakland",
+      "to": "sacramento",
+      "km": 134.8,
+      "carMinutes": 101
+    },
+    {
+      "from": "oakland",
+      "to": "san-diego",
+      "km": 787.8,
+      "carMinutes": 550
+    },
+    {
+      "from": "oakland",
+      "to": "san-francisco",
+      "km": 22.9,
+      "carMinutes": 22
+    },
+    {
+      "from": "oakland",
+      "to": "san-jose",
+      "km": 71.1,
+      "carMinutes": 58
+    },
+    {
+      "from": "oakland",
+      "to": "santa-cruz",
+      "km": 112.1,
+      "carMinutes": 89
+    },
+    {
+      "from": "oakland",
+      "to": "santa-maria",
+      "km": 410.7,
+      "carMinutes": 299
+    },
+    {
+      "from": "oakland",
+      "to": "stockton",
+      "km": 114.4,
+      "carMinutes": 84
+    },
+    {
+      "from": "oakland",
+      "to": "tonopah",
+      "km": 563.3,
+      "carMinutes": 498
+    },
+    {
+      "from": "oakland",
+      "to": "truckee",
+      "km": 294.2,
+      "carMinutes": 217
+    },
+    {
+      "from": "oakland",
+      "to": "ukiah",
+      "km": 193.9,
+      "carMinutes": 147
+    },
+    {
+      "from": "oakland",
+      "to": "winnemucca",
+      "km": 610.2,
+      "carMinutes": 416
+    },
+    {
+      "from": "oxnard",
+      "to": "bakersfield",
+      "km": 192.4,
+      "carMinutes": 149
+    },
+    {
+      "from": "oxnard",
+      "to": "barstow",
+      "km": 274.4,
+      "carMinutes": 197
+    },
+    {
+      "from": "oxnard",
+      "to": "blythe",
+      "km": 458.2,
+      "carMinutes": 323
+    },
+    {
+      "from": "oxnard",
+      "to": "carson-city",
+      "km": 741.5,
+      "carMinutes": 575
+    },
+    {
+      "from": "oxnard",
+      "to": "el-centro",
+      "km": 441.1,
+      "carMinutes": 322
+    },
+    {
+      "from": "oxnard",
+      "to": "elko",
+      "km": 1085.9,
+      "carMinutes": 778
+    },
+    {
+      "from": "oxnard",
+      "to": "ely",
+      "km": 913.1,
+      "carMinutes": 649
+    },
+    {
+      "from": "oxnard",
+      "to": "eureka",
+      "km": 1014.4,
+      "carMinutes": 760
+    },
+    {
+      "from": "oxnard",
+      "to": "fresno",
+      "km": 369.3,
+      "carMinutes": 268
+    },
+    {
+      "from": "oxnard",
+      "to": "hilt",
+      "km": 1076.7,
+      "carMinutes": 749
+    },
+    {
+      "from": "oxnard",
+      "to": "huron",
+      "km": 321.8,
+      "carMinutes": 237
+    },
+    {
+      "from": "oxnard",
+      "to": "indio",
+      "km": 303.4,
+      "carMinutes": 220
+    },
+    {
+      "from": "oxnard",
+      "to": "jackpot",
+      "km": 1241.7,
+      "carMinutes": 882
+    },
+    {
+      "from": "oxnard",
+      "to": "las-vegas",
+      "km": 522.9,
+      "carMinutes": 365
+    },
+    {
+      "from": "oxnard",
+      "to": "los-angeles",
+      "km": 100.1,
+      "carMinutes": 78
+    },
+    {
+      "from": "oxnard",
+      "to": "modesto",
+      "km": 517.5,
+      "carMinutes": 376
+    },
+    {
+      "from": "oxnard",
+      "to": "mojave",
+      "km": 187.8,
+      "carMinutes": 153
+    },
+    {
+      "from": "oxnard",
+      "to": "oakland",
+      "km": 570.5,
+      "carMinutes": 423
+    },
+    {
+      "from": "oxnard",
+      "to": "pioche",
+      "km": 804.3,
+      "carMinutes": 578
+    },
+    {
+      "from": "oxnard",
+      "to": "primm",
+      "km": 455,
+      "carMinutes": 317
+    },
+    {
+      "from": "oxnard",
+      "to": "redding",
+      "km": 888.7,
+      "carMinutes": 615
+    },
+    {
+      "from": "oxnard",
+      "to": "reno",
+      "km": 843,
+      "carMinutes": 596
+    },
+    {
+      "from": "oxnard",
+      "to": "sacramento",
+      "km": 630.9,
+      "carMinutes": 443
+    },
+    {
+      "from": "oxnard",
+      "to": "san-diego",
+      "km": 293,
+      "carMinutes": 219
+    },
+    {
+      "from": "oxnard",
+      "to": "san-francisco",
+      "km": 585,
+      "carMinutes": 434
+    },
+    {
+      "from": "oxnard",
+      "to": "san-jose",
+      "km": 506.1,
+      "carMinutes": 377
+    },
+    {
+      "from": "oxnard",
+      "to": "santa-cruz",
+      "km": 473.1,
+      "carMinutes": 358
+    },
+    {
+      "from": "oxnard",
+      "to": "santa-maria",
+      "km": 163.8,
+      "carMinutes": 131
+    },
+    {
+      "from": "oxnard",
+      "to": "stockton",
+      "km": 555.3,
+      "carMinutes": 391
+    },
+    {
+      "from": "oxnard",
+      "to": "tonopah",
+      "km": 650.5,
+      "carMinutes": 482
+    },
+    {
+      "from": "oxnard",
+      "to": "truckee",
+      "km": 792.5,
+      "carMinutes": 561
+    },
+    {
+      "from": "oxnard",
+      "to": "ukiah",
+      "km": 763.2,
+      "carMinutes": 567
+    },
+    {
+      "from": "oxnard",
+      "to": "winnemucca",
+      "km": 977,
+      "carMinutes": 707
+    },
+    {
+      "from": "pioche",
+      "to": "bakersfield",
+      "km": 739.4,
+      "carMinutes": 534
+    },
+    {
+      "from": "pioche",
+      "to": "barstow",
+      "km": 530.6,
+      "carMinutes": 385
+    },
+    {
+      "from": "pioche",
+      "to": "blythe",
+      "km": 609.4,
+      "carMinutes": 453
+    },
+    {
+      "from": "pioche",
+      "to": "carson-city",
+      "km": 686.8,
+      "carMinutes": 504
+    },
+    {
+      "from": "pioche",
+      "to": "el-centro",
+      "km": 774,
+      "carMinutes": 572
+    },
+    {
+      "from": "pioche",
+      "to": "elko",
+      "km": 474,
+      "carMinutes": 330
+    },
+    {
+      "from": "pioche",
+      "to": "ely",
+      "km": 172.9,
+      "carMinutes": 123
+    },
+    {
+      "from": "pioche",
+      "to": "eureka",
+      "km": 1237.8,
+      "carMinutes": 913
+    },
+    {
+      "from": "pioche",
+      "to": "fresno",
+      "km": 919.9,
+      "carMinutes": 655
+    },
+    {
+      "from": "pioche",
+      "to": "hilt",
+      "km": 1127.2,
+      "carMinutes": 822
+    },
+    {
+      "from": "pioche",
+      "to": "huron",
+      "km": 888.1,
+      "carMinutes": 640
+    },
+    {
+      "from": "pioche",
+      "to": "indio",
+      "km": 722.5,
+      "carMinutes": 530
+    },
+    {
+      "from": "pioche",
+      "to": "jackpot",
+      "km": 501.6,
+      "carMinutes": 355
+    },
+    {
+      "from": "pioche",
+      "to": "las-vegas",
+      "km": 282.6,
+      "carMinutes": 219
+    },
+    {
+      "from": "pioche",
+      "to": "los-angeles",
+      "km": 714.8,
+      "carMinutes": 511
+    },
+    {
+      "from": "pioche",
+      "to": "modesto",
+      "km": 796.2,
+      "carMinutes": 670
+    },
+    {
+      "from": "pioche",
+      "to": "mojave",
+      "km": 654.6,
+      "carMinutes": 480
+    },
+    {
+      "from": "pioche",
+      "to": "oakland",
+      "km": 1032.4,
+      "carMinutes": 746
+    },
+    {
+      "from": "pioche",
+      "to": "oxnard",
+      "km": 805.7,
+      "carMinutes": 579
+    },
+    {
+      "from": "pioche",
+      "to": "primm",
+      "km": 349.5,
+      "carMinutes": 263
+    },
+    {
+      "from": "pioche",
+      "to": "redding",
+      "km": 1002,
+      "carMinutes": 737
+    },
+    {
+      "from": "pioche",
+      "to": "reno",
+      "km": 689,
+      "carMinutes": 501
+    },
+    {
+      "from": "pioche",
+      "to": "sacramento",
+      "km": 900,
+      "carMinutes": 651
+    },
+    {
+      "from": "pioche",
+      "to": "san-diego",
+      "km": 813.4,
+      "carMinutes": 580
+    },
+    {
+      "from": "pioche",
+      "to": "san-francisco",
+      "km": 1039.3,
+      "carMinutes": 754
+    },
+    {
+      "from": "pioche",
+      "to": "san-jose",
+      "km": 920.7,
+      "carMinutes": 767
+    },
+    {
+      "from": "pioche",
+      "to": "santa-cruz",
+      "km": 962,
+      "carMinutes": 800
+    },
+    {
+      "from": "pioche",
+      "to": "santa-maria",
+      "km": 920.5,
+      "carMinutes": 677
+    },
+    {
+      "from": "pioche",
+      "to": "stockton",
+      "km": 818.1,
+      "carMinutes": 686
+    },
+    {
+      "from": "pioche",
+      "to": "tonopah",
+      "km": 349,
+      "carMinutes": 258
+    },
+    {
+      "from": "pioche",
+      "to": "truckee",
+      "km": 744.8,
+      "carMinutes": 542
+    },
+    {
+      "from": "pioche",
+      "to": "ukiah",
+      "km": 1074.2,
+      "carMinutes": 822
+    },
+    {
+      "from": "pioche",
+      "to": "winnemucca",
+      "km": 608.3,
+      "carMinutes": 420
+    },
+    {
+      "from": "primm",
+      "to": "bakersfield",
+      "km": 390.1,
+      "carMinutes": 272
+    },
+    {
+      "from": "primm",
+      "to": "barstow",
+      "km": 181.3,
+      "carMinutes": 123
+    },
+    {
+      "from": "primm",
+      "to": "blythe",
+      "km": 308,
+      "carMinutes": 232
+    },
+    {
+      "from": "primm",
+      "to": "carson-city",
+      "km": 747.4,
+      "carMinutes": 547
+    },
+    {
+      "from": "primm",
+      "to": "el-centro",
+      "km": 472.6,
+      "carMinutes": 351
+    },
+    {
+      "from": "primm",
+      "to": "elko",
+      "km": 759.6,
+      "carMinutes": 542
+    },
+    {
+      "from": "primm",
+      "to": "ely",
+      "km": 458.6,
+      "carMinutes": 335
+    },
+    {
+      "from": "primm",
+      "to": "eureka",
+      "km": 1265.2,
+      "carMinutes": 904
+    },
+    {
+      "from": "primm",
+      "to": "fresno",
+      "km": 570.6,
+      "carMinutes": 394
+    },
+    {
+      "from": "primm",
+      "to": "hilt",
+      "km": 1198.9,
+      "carMinutes": 880
+    },
+    {
+      "from": "primm",
+      "to": "huron",
+      "km": 538.8,
+      "carMinutes": 378
+    },
+    {
+      "from": "primm",
+      "to": "indio",
+      "km": 411.9,
+      "carMinutes": 280
+    },
+    {
+      "from": "primm",
+      "to": "jackpot",
+      "km": 787.3,
+      "carMinutes": 567
+    },
+    {
+      "from": "primm",
+      "to": "las-vegas",
+      "km": 68.4,
+      "carMinutes": 50
+    },
+    {
+      "from": "primm",
+      "to": "los-angeles",
+      "km": 365.5,
+      "carMinutes": 249
+    },
+    {
+      "from": "primm",
+      "to": "modesto",
+      "km": 718.7,
+      "carMinutes": 501
+    },
+    {
+      "from": "primm",
+      "to": "mojave",
+      "km": 305.3,
+      "carMinutes": 219
+    },
+    {
+      "from": "primm",
+      "to": "oakland",
+      "km": 824.6,
+      "carMinutes": 570
+    },
+    {
+      "from": "primm",
+      "to": "oxnard",
+      "km": 456.3,
+      "carMinutes": 318
+    },
+    {
+      "from": "primm",
+      "to": "pioche",
+      "km": 349.8,
+      "carMinutes": 264
+    },
+    {
+      "from": "primm",
+      "to": "redding",
+      "km": 1105.6,
+      "carMinutes": 756
+    },
+    {
+      "from": "primm",
+      "to": "reno",
+      "km": 760.8,
+      "carMinutes": 558
+    },
+    {
+      "from": "primm",
+      "to": "sacramento",
+      "km": 834.3,
+      "carMinutes": 583
+    },
+    {
+      "from": "primm",
+      "to": "san-diego",
+      "km": 464.1,
+      "carMinutes": 319
+    },
+    {
+      "from": "primm",
+      "to": "san-francisco",
+      "km": 844.2,
+      "carMinutes": 586
+    },
+    {
+      "from": "primm",
+      "to": "san-jose",
+      "km": 773,
+      "carMinutes": 542
+    },
+    {
+      "from": "primm",
+      "to": "santa-cruz",
+      "km": 782,
+      "carMinutes": 553
+    },
+    {
+      "from": "primm",
+      "to": "santa-maria",
+      "km": 571.2,
+      "carMinutes": 416
+    },
+    {
+      "from": "primm",
+      "to": "stockton",
+      "km": 764.9,
+      "carMinutes": 532
+    },
+    {
+      "from": "primm",
+      "to": "tonopah",
+      "km": 406.1,
+      "carMinutes": 285
+    },
+    {
+      "from": "primm",
+      "to": "truckee",
+      "km": 816.6,
+      "carMinutes": 600
+    },
+    {
+      "from": "primm",
+      "to": "ukiah",
+      "km": 1014,
+      "carMinutes": 710
+    },
+    {
+      "from": "primm",
+      "to": "winnemucca",
+      "km": 822.3,
+      "carMinutes": 571
+    },
+    {
+      "from": "redding",
+      "to": "bakersfield",
+      "km": 704.7,
+      "carMinutes": 487
+    },
+    {
+      "from": "redding",
+      "to": "barstow",
+      "km": 925.5,
+      "carMinutes": 635
+    },
+    {
+      "from": "redding",
+      "to": "blythe",
+      "km": 1231.1,
+      "carMinutes": 839
+    },
+    {
+      "from": "redding",
+      "to": "carson-city",
+      "km": 367.3,
+      "carMinutes": 278
+    },
+    {
+      "from": "redding",
+      "to": "el-centro",
+      "km": 1214,
+      "carMinutes": 838
+    },
+    {
+      "from": "redding",
+      "to": "elko",
+      "km": 779.2,
+      "carMinutes": 529
+    },
+    {
+      "from": "redding",
+      "to": "ely",
+      "km": 829.6,
+      "carMinutes": 615
+    },
+    {
+      "from": "redding",
+      "to": "eureka",
+      "km": 235.9,
+      "carMinutes": 176
+    },
+    {
+      "from": "redding",
+      "to": "fresno",
+      "km": 530.1,
+      "carMinutes": 372
+    },
+    {
+      "from": "redding",
+      "to": "hilt",
+      "km": 191.7,
+      "carMinutes": 140
+    },
+    {
+      "from": "redding",
+      "to": "huron",
+      "km": 575.5,
+      "carMinutes": 393
+    },
+    {
+      "from": "redding",
+      "to": "indio",
+      "km": 1076.4,
+      "carMinutes": 736
+    },
+    {
+      "from": "redding",
+      "to": "jackpot",
+      "km": 967.6,
+      "carMinutes": 649
+    },
+    {
+      "from": "redding",
+      "to": "las-vegas",
+      "km": 1008.8,
+      "carMinutes": 752
+    },
+    {
+      "from": "redding",
+      "to": "los-angeles",
+      "km": 875.2,
+      "carMinutes": 597
+    },
+    {
+      "from": "redding",
+      "to": "modesto",
+      "km": 379.5,
+      "carMinutes": 265
+    },
+    {
+      "from": "redding",
+      "to": "mojave",
+      "km": 825.1,
+      "carMinutes": 573
+    },
+    {
+      "from": "redding",
+      "to": "oakland",
+      "km": 341.7,
+      "carMinutes": 236
+    },
+    {
+      "from": "redding",
+      "to": "oxnard",
+      "km": 888.2,
+      "carMinutes": 615
+    },
+    {
+      "from": "redding",
+      "to": "pioche",
+      "km": 1002.6,
+      "carMinutes": 738
+    },
+    {
+      "from": "redding",
+      "to": "primm",
+      "km": 1106.1,
+      "carMinutes": 755
+    },
+    {
+      "from": "redding",
+      "to": "reno",
+      "km": 319.6,
+      "carMinutes": 245
+    },
+    {
+      "from": "redding",
+      "to": "sacramento",
+      "km": 261,
+      "carMinutes": 179
+    },
+    {
+      "from": "redding",
+      "to": "san-diego",
+      "km": 1068.8,
+      "carMinutes": 737
+    },
+    {
+      "from": "redding",
+      "to": "san-francisco",
+      "km": 348.6,
+      "carMinutes": 244
+    },
+    {
+      "from": "redding",
+      "to": "san-jose",
+      "km": 402.3,
+      "carMinutes": 282
+    },
+    {
+      "from": "redding",
+      "to": "santa-cruz",
+      "km": 443.5,
+      "carMinutes": 315
+    },
+    {
+      "from": "redding",
+      "to": "santa-maria",
+      "km": 740.8,
+      "carMinutes": 523
+    },
+    {
+      "from": "redding",
+      "to": "stockton",
+      "km": 335.4,
+      "carMinutes": 231
+    },
+    {
+      "from": "redding",
+      "to": "tonopah",
+      "km": 685.6,
+      "carMinutes": 518
+    },
+    {
+      "from": "redding",
+      "to": "truckee",
+      "km": 324.2,
+      "carMinutes": 256
+    },
+    {
+      "from": "redding",
+      "to": "ukiah",
+      "km": 302.1,
+      "carMinutes": 234
+    },
+    {
+      "from": "redding",
+      "to": "winnemucca",
+      "km": 580.5,
+      "carMinutes": 408
+    },
+    {
+      "from": "reno",
+      "to": "bakersfield",
+      "km": 653.4,
+      "carMinutes": 462
+    },
+    {
+      "from": "reno",
+      "to": "barstow",
+      "km": 670.5,
+      "carMinutes": 513
+    },
+    {
+      "from": "reno",
+      "to": "blythe",
+      "km": 1000.6,
+      "carMinutes": 741
+    },
+    {
+      "from": "reno",
+      "to": "carson-city",
+      "km": 52.2,
+      "carMinutes": 40
+    },
+    {
+      "from": "reno",
+      "to": "el-centro",
+      "km": 983.6,
+      "carMinutes": 740
+    },
+    {
+      "from": "reno",
+      "to": "elko",
+      "km": 465.5,
+      "carMinutes": 291
+    },
+    {
+      "from": "reno",
+      "to": "ely",
+      "km": 516,
+      "carMinutes": 377
+    },
+    {
+      "from": "reno",
+      "to": "eureka",
+      "km": 555.8,
+      "carMinutes": 422
+    },
+    {
+      "from": "reno",
+      "to": "fresno",
+      "km": 478.8,
+      "carMinutes": 347
+    },
+    {
+      "from": "reno",
+      "to": "hilt",
+      "km": 445.2,
+      "carMinutes": 331
+    },
+    {
+      "from": "reno",
+      "to": "huron",
+      "km": 531.1,
+      "carMinutes": 374
+    },
+    {
+      "from": "reno",
+      "to": "indio",
+      "km": 845.9,
+      "carMinutes": 638
+    },
+    {
+      "from": "reno",
+      "to": "jackpot",
+      "km": 654,
+      "carMinutes": 411
+    },
+    {
+      "from": "reno",
+      "to": "las-vegas",
+      "km": 695.2,
+      "carMinutes": 514
+    },
+    {
+      "from": "reno",
+      "to": "los-angeles",
+      "km": 757.2,
+      "carMinutes": 573
+    },
+    {
+      "from": "reno",
+      "to": "modesto",
+      "km": 328.2,
+      "carMinutes": 240
+    },
+    {
+      "from": "reno",
+      "to": "mojave",
+      "km": 617.3,
+      "carMinutes": 481
+    },
+    {
+      "from": "reno",
+      "to": "oakland",
+      "km": 345.4,
+      "carMinutes": 251
+    },
+    {
+      "from": "reno",
+      "to": "oxnard",
+      "km": 843.7,
+      "carMinutes": 596
+    },
+    {
+      "from": "reno",
+      "to": "pioche",
+      "km": 688.9,
+      "carMinutes": 500
+    },
+    {
+      "from": "reno",
+      "to": "primm",
+      "km": 760.6,
+      "carMinutes": 559
+    },
+    {
+      "from": "reno",
+      "to": "redding",
+      "km": 319.9,
+      "carMinutes": 246
+    },
+    {
+      "from": "reno",
+      "to": "sacramento",
+      "km": 213,
+      "carMinutes": 156
+    },
+    {
+      "from": "reno",
+      "to": "san-diego",
+      "km": 898.1,
+      "carMinutes": 677
+    },
+    {
+      "from": "reno",
+      "to": "san-francisco",
+      "km": 352.3,
+      "carMinutes": 259
+    },
+    {
+      "from": "reno",
+      "to": "san-jose",
+      "km": 406,
+      "carMinutes": 297
+    },
+    {
+      "from": "reno",
+      "to": "santa-cruz",
+      "km": 447.2,
+      "carMinutes": 330
+    },
+    {
+      "from": "reno",
+      "to": "santa-maria",
+      "km": 731.7,
+      "carMinutes": 524
+    },
+    {
+      "from": "reno",
+      "to": "stockton",
+      "km": 289.1,
+      "carMinutes": 210
+    },
+    {
+      "from": "reno",
+      "to": "tonopah",
+      "km": 372,
+      "carMinutes": 280
+    },
+    {
+      "from": "reno",
+      "to": "truckee",
+      "km": 57.8,
+      "carMinutes": 47
+    },
+    {
+      "from": "reno",
+      "to": "ukiah",
+      "km": 387.2,
+      "carMinutes": 326
+    },
+    {
+      "from": "reno",
+      "to": "winnemucca",
+      "km": 266.9,
+      "carMinutes": 170
+    },
+    {
+      "from": "sacramento",
+      "to": "bakersfield",
+      "km": 444.1,
+      "carMinutes": 312
+    },
+    {
+      "from": "sacramento",
+      "to": "barstow",
+      "km": 654.5,
+      "carMinutes": 462
+    },
+    {
+      "from": "sacramento",
+      "to": "blythe",
+      "km": 974.1,
+      "carMinutes": 667
+    },
+    {
+      "from": "sacramento",
+      "to": "carson-city",
+      "km": 210.4,
+      "carMinutes": 184
+    },
+    {
+      "from": "sacramento",
+      "to": "el-centro",
+      "km": 957,
+      "carMinutes": 667
+    },
+    {
+      "from": "sacramento",
+      "to": "elko",
+      "km": 675.8,
+      "carMinutes": 442
+    },
+    {
+      "from": "sacramento",
+      "to": "ely",
+      "km": 726.3,
+      "carMinutes": 529
+    },
+    {
+      "from": "sacramento",
+      "to": "eureka",
+      "km": 497,
+      "carMinutes": 354
+    },
+    {
+      "from": "sacramento",
+      "to": "fresno",
+      "km": 269.5,
+      "carMinutes": 198
+    },
+    {
+      "from": "sacramento",
+      "to": "hilt",
+      "km": 449.1,
+      "carMinutes": 312
+    },
+    {
+      "from": "sacramento",
+      "to": "huron",
+      "km": 318.5,
+      "carMinutes": 221
+    },
+    {
+      "from": "sacramento",
+      "to": "indio",
+      "km": 819.4,
+      "carMinutes": 565
+    },
+    {
+      "from": "sacramento",
+      "to": "jackpot",
+      "km": 864.3,
+      "carMinutes": 562
+    },
+    {
+      "from": "sacramento",
+      "to": "las-vegas",
+      "km": 903.1,
+      "carMinutes": 630
+    },
+    {
+      "from": "sacramento",
+      "to": "los-angeles",
+      "km": 618.2,
+      "carMinutes": 425
+    },
+    {
+      "from": "sacramento",
+      "to": "modesto",
+      "km": 119,
+      "carMinutes": 91
+    },
+    {
+      "from": "sacramento",
+      "to": "mojave",
+      "km": 554.2,
+      "carMinutes": 400
+    },
+    {
+      "from": "sacramento",
+      "to": "oakland",
+      "km": 134.7,
+      "carMinutes": 101
+    },
+    {
+      "from": "sacramento",
+      "to": "oxnard",
+      "km": 631.2,
+      "carMinutes": 443
+    },
+    {
+      "from": "sacramento",
+      "to": "pioche",
+      "km": 899.2,
+      "carMinutes": 651
+    },
+    {
+      "from": "sacramento",
+      "to": "primm",
+      "km": 835.2,
+      "carMinutes": 582
+    },
+    {
+      "from": "sacramento",
+      "to": "redding",
+      "km": 261.1,
+      "carMinutes": 178
+    },
+    {
+      "from": "sacramento",
+      "to": "reno",
+      "km": 211.7,
+      "carMinutes": 156
+    },
+    {
+      "from": "sacramento",
+      "to": "san-diego",
+      "km": 811.8,
+      "carMinutes": 565
+    },
+    {
+      "from": "sacramento",
+      "to": "san-francisco",
+      "km": 141.7,
+      "carMinutes": 109
+    },
+    {
+      "from": "sacramento",
+      "to": "san-jose",
+      "km": 195.3,
+      "carMinutes": 147
+    },
+    {
+      "from": "sacramento",
+      "to": "santa-cruz",
+      "km": 236.5,
+      "carMinutes": 180
+    },
+    {
+      "from": "sacramento",
+      "to": "santa-maria",
+      "km": 519.2,
+      "carMinutes": 371
+    },
+    {
+      "from": "sacramento",
+      "to": "stockton",
+      "km": 78.4,
+      "carMinutes": 59
+    },
+    {
+      "from": "sacramento",
+      "to": "tonopah",
+      "km": 545.6,
+      "carMinutes": 428
+    },
+    {
+      "from": "sacramento",
+      "to": "truckee",
+      "km": 161.1,
+      "carMinutes": 121
+    },
+    {
+      "from": "sacramento",
+      "to": "ukiah",
+      "km": 238.8,
+      "carMinutes": 178
+    },
+    {
+      "from": "sacramento",
+      "to": "winnemucca",
+      "km": 477.1,
+      "carMinutes": 321
+    },
+    {
+      "from": "san-diego",
+      "to": "bakersfield",
+      "km": 372.7,
+      "carMinutes": 270
+    },
+    {
+      "from": "san-diego",
+      "to": "barstow",
+      "km": 283,
+      "carMinutes": 198
+    },
+    {
+      "from": "san-diego",
+      "to": "blythe",
+      "km": 348.5,
+      "carMinutes": 247
+    },
+    {
+      "from": "san-diego",
+      "to": "carson-city",
+      "km": 845.6,
+      "carMinutes": 642
+    },
+    {
+      "from": "san-diego",
+      "to": "el-centro",
+      "km": 182.5,
+      "carMinutes": 129
+    },
+    {
+      "from": "san-diego",
+      "to": "elko",
+      "km": 1138.6,
+      "carMinutes": 837
+    },
+    {
+      "from": "san-diego",
+      "to": "ely",
+      "km": 921.7,
+      "carMinutes": 651
+    },
+    {
+      "from": "san-diego",
+      "to": "eureka",
+      "km": 1228.6,
+      "carMinutes": 883
+    },
+    {
+      "from": "san-diego",
+      "to": "fresno",
+      "km": 549.7,
+      "carMinutes": 388
+    },
+    {
+      "from": "san-diego",
+      "to": "hilt",
+      "km": 1257,
+      "carMinutes": 869
+    },
+    {
+      "from": "san-diego",
+      "to": "huron",
+      "km": 502.2,
+      "carMinutes": 357
+    },
+    {
+      "from": "san-diego",
+      "to": "indio",
+      "km": 230,
+      "carMinutes": 171
+    },
+    {
+      "from": "san-diego",
+      "to": "jackpot",
+      "km": 1250.4,
+      "carMinutes": 883
+    },
+    {
+      "from": "san-diego",
+      "to": "las-vegas",
+      "km": 531.6,
+      "carMinutes": 366
+    },
+    {
+      "from": "san-diego",
+      "to": "los-angeles",
+      "km": 194.2,
+      "carMinutes": 143
+    },
+    {
+      "from": "san-diego",
+      "to": "modesto",
+      "km": 697.8,
+      "carMinutes": 496
+    },
+    {
+      "from": "san-diego",
+      "to": "mojave",
+      "km": 329.1,
+      "carMinutes": 253
+    },
+    {
+      "from": "san-diego",
+      "to": "oakland",
+      "km": 787.9,
+      "carMinutes": 549
+    },
+    {
+      "from": "san-diego",
+      "to": "oxnard",
+      "km": 297.7,
+      "carMinutes": 219
+    },
+    {
+      "from": "san-diego",
+      "to": "pioche",
+      "km": 812.9,
+      "carMinutes": 580
+    },
+    {
+      "from": "san-diego",
+      "to": "primm",
+      "km": 463.7,
+      "carMinutes": 318
+    },
+    {
+      "from": "san-diego",
+      "to": "redding",
+      "km": 1069,
+      "carMinutes": 735
+    },
+    {
+      "from": "san-diego",
+      "to": "reno",
+      "km": 897.2,
+      "carMinutes": 679
+    },
+    {
+      "from": "san-diego",
+      "to": "sacramento",
+      "km": 811.2,
+      "carMinutes": 564
+    },
+    {
+      "from": "san-diego",
+      "to": "san-francisco",
+      "km": 807.6,
+      "carMinutes": 565
+    },
+    {
+      "from": "san-diego",
+      "to": "san-jose",
+      "km": 736.4,
+      "carMinutes": 521
+    },
+    {
+      "from": "san-diego",
+      "to": "santa-cruz",
+      "km": 745.3,
+      "carMinutes": 532
+    },
+    {
+      "from": "san-diego",
+      "to": "santa-maria",
+      "km": 451,
+      "carMinutes": 337
+    },
+    {
+      "from": "san-diego",
+      "to": "stockton",
+      "km": 735.7,
+      "carMinutes": 511
+    },
+    {
+      "from": "san-diego",
+      "to": "tonopah",
+      "km": 704.7,
+      "carMinutes": 543
+    },
+    {
+      "from": "san-diego",
+      "to": "truckee",
+      "km": 972.8,
+      "carMinutes": 681
+    },
+    {
+      "from": "san-diego",
+      "to": "ukiah",
+      "km": 977.4,
+      "carMinutes": 689
+    },
+    {
+      "from": "san-diego",
+      "to": "winnemucca",
+      "km": 1081,
+      "carMinutes": 774
+    },
+    {
+      "from": "san-francisco",
+      "to": "bakersfield",
+      "km": 455.2,
+      "carMinutes": 318
+    },
+    {
+      "from": "san-francisco",
+      "to": "barstow",
+      "km": 663.2,
+      "carMinutes": 465
+    },
+    {
+      "from": "san-francisco",
+      "to": "blythe",
+      "km": 968.8,
+      "carMinutes": 669
+    },
+    {
+      "from": "san-francisco",
+      "to": "carson-city",
+      "km": 347.8,
+      "carMinutes": 285
+    },
+    {
+      "from": "san-francisco",
+      "to": "el-centro",
+      "km": 951.8,
+      "carMinutes": 668
+    },
+    {
+      "from": "san-francisco",
+      "to": "elko",
+      "km": 814.8,
+      "carMinutes": 545
+    },
+    {
+      "from": "san-francisco",
+      "to": "ely",
+      "km": 865.3,
+      "carMinutes": 631
+    },
+    {
+      "from": "san-francisco",
+      "to": "eureka",
+      "km": 436.7,
+      "carMinutes": 340
+    },
+    {
+      "from": "san-francisco",
+      "to": "fresno",
+      "km": 296.9,
+      "carMinutes": 219
+    },
+    {
+      "from": "san-francisco",
+      "to": "hilt",
+      "km": 536.5,
+      "carMinutes": 378
+    },
+    {
+      "from": "san-francisco",
+      "to": "huron",
+      "km": 313.3,
+      "carMinutes": 222
+    },
+    {
+      "from": "san-francisco",
+      "to": "indio",
+      "km": 814.1,
+      "carMinutes": 566
+    },
+    {
+      "from": "san-francisco",
+      "to": "jackpot",
+      "km": 1003.3,
+      "carMinutes": 665
+    },
+    {
+      "from": "san-francisco",
+      "to": "las-vegas",
+      "km": 911.7,
+      "carMinutes": 632
+    },
+    {
+      "from": "san-francisco",
+      "to": "los-angeles",
+      "km": 612.9,
+      "carMinutes": 426
+    },
+    {
+      "from": "san-francisco",
+      "to": "modesto",
+      "km": 146.4,
+      "carMinutes": 112
+    },
+    {
+      "from": "san-francisco",
+      "to": "mojave",
+      "km": 562.9,
+      "carMinutes": 403
+    },
+    {
+      "from": "san-francisco",
+      "to": "oakland",
+      "km": 21.8,
+      "carMinutes": 21
+    },
+    {
+      "from": "san-francisco",
+      "to": "oxnard",
+      "km": 584.6,
+      "carMinutes": 433
+    },
+    {
+      "from": "san-francisco",
+      "to": "pioche",
+      "km": 1038.2,
+      "carMinutes": 754
+    },
+    {
+      "from": "san-francisco",
+      "to": "primm",
+      "km": 843.9,
+      "carMinutes": 585
+    },
+    {
+      "from": "san-francisco",
+      "to": "redding",
+      "km": 348.4,
+      "carMinutes": 244
+    },
+    {
+      "from": "san-francisco",
+      "to": "reno",
+      "km": 350.7,
+      "carMinutes": 259
+    },
+    {
+      "from": "san-francisco",
+      "to": "sacramento",
+      "km": 140.8,
+      "carMinutes": 108
+    },
+    {
+      "from": "san-francisco",
+      "to": "san-diego",
+      "km": 806.5,
+      "carMinutes": 566
+    },
+    {
+      "from": "san-francisco",
+      "to": "san-jose",
+      "km": 83.1,
+      "carMinutes": 65
+    },
+    {
+      "from": "san-francisco",
+      "to": "santa-cruz",
+      "km": 117.2,
+      "carMinutes": 93
+    },
+    {
+      "from": "san-francisco",
+      "to": "santa-maria",
+      "km": 423.9,
+      "carMinutes": 308
+    },
+    {
+      "from": "san-francisco",
+      "to": "stockton",
+      "km": 133.1,
+      "carMinutes": 100
+    },
+    {
+      "from": "san-francisco",
+      "to": "tonopah",
+      "km": 582,
+      "carMinutes": 514
+    },
+    {
+      "from": "san-francisco",
+      "to": "truckee",
+      "km": 300.2,
+      "carMinutes": 224
+    },
+    {
+      "from": "san-francisco",
+      "to": "ukiah",
+      "km": 185.5,
+      "carMinutes": 147
+    },
+    {
+      "from": "san-francisco",
+      "to": "winnemucca",
+      "km": 616.1,
+      "carMinutes": 424
+    },
+    {
+      "from": "san-jose",
+      "to": "bakersfield",
+      "km": 385.7,
+      "carMinutes": 276
+    },
+    {
+      "from": "san-jose",
+      "to": "barstow",
+      "km": 593.7,
+      "carMinutes": 422
+    },
+    {
+      "from": "san-jose",
+      "to": "blythe",
+      "km": 899.3,
+      "carMinutes": 626
+    },
+    {
+      "from": "san-jose",
+      "to": "carson-city",
+      "km": 361.2,
+      "carMinutes": 310
+    },
+    {
+      "from": "san-jose",
+      "to": "el-centro",
+      "km": 882.2,
+      "carMinutes": 626
+    },
+    {
+      "from": "san-jose",
+      "to": "elko",
+      "km": 868.8,
+      "carMinutes": 583
+    },
+    {
+      "from": "san-jose",
+      "to": "ely",
+      "km": 919.2,
+      "carMinutes": 669
+    },
+    {
+      "from": "san-jose",
+      "to": "eureka",
+      "km": 514.2,
+      "carMinutes": 393
+    },
+    {
+      "from": "san-jose",
+      "to": "fresno",
+      "km": 236.4,
+      "carMinutes": 182
+    },
+    {
+      "from": "san-jose",
+      "to": "hilt",
+      "km": 590.4,
+      "carMinutes": 416
+    },
+    {
+      "from": "san-jose",
+      "to": "huron",
+      "km": 243.7,
+      "carMinutes": 180
+    },
+    {
+      "from": "san-jose",
+      "to": "indio",
+      "km": 744.6,
+      "carMinutes": 524
+    },
+    {
+      "from": "san-jose",
+      "to": "jackpot",
+      "km": 1057.2,
+      "carMinutes": 703
+    },
+    {
+      "from": "san-jose",
+      "to": "las-vegas",
+      "km": 842.2,
+      "carMinutes": 590
+    },
+    {
+      "from": "san-jose",
+      "to": "los-angeles",
+      "km": 543.4,
+      "carMinutes": 384
+    },
+    {
+      "from": "san-jose",
+      "to": "modesto",
+      "km": 136.4,
+      "carMinutes": 109
+    },
+    {
+      "from": "san-jose",
+      "to": "mojave",
+      "km": 493.3,
+      "carMinutes": 361
+    },
+    {
+      "from": "san-jose",
+      "to": "oakland",
+      "km": 70.3,
+      "carMinutes": 56
+    },
+    {
+      "from": "san-jose",
+      "to": "oxnard",
+      "km": 506.8,
+      "carMinutes": 377
+    },
+    {
+      "from": "san-jose",
+      "to": "pioche",
+      "km": 921.1,
+      "carMinutes": 769
+    },
+    {
+      "from": "san-jose",
+      "to": "primm",
+      "km": 774.3,
+      "carMinutes": 542
+    },
+    {
+      "from": "san-jose",
+      "to": "redding",
+      "km": 402.4,
+      "carMinutes": 282
+    },
+    {
+      "from": "san-jose",
+      "to": "reno",
+      "km": 404.7,
+      "carMinutes": 297
+    },
+    {
+      "from": "san-jose",
+      "to": "sacramento",
+      "km": 194.7,
+      "carMinutes": 146
+    },
+    {
+      "from": "san-jose",
+      "to": "san-diego",
+      "km": 736.9,
+      "carMinutes": 524
+    },
+    {
+      "from": "san-jose",
+      "to": "san-francisco",
+      "km": 83.4,
+      "carMinutes": 65
+    },
+    {
+      "from": "san-jose",
+      "to": "santa-cruz",
+      "km": 49.4,
+      "carMinutes": 48
+    },
+    {
+      "from": "san-jose",
+      "to": "santa-maria",
+      "km": 346,
+      "carMinutes": 252
+    },
+    {
+      "from": "san-jose",
+      "to": "stockton",
+      "km": 123.2,
+      "carMinutes": 97
+    },
+    {
+      "from": "san-jose",
+      "to": "tonopah",
+      "km": 572,
+      "carMinutes": 510
+    },
+    {
+      "from": "san-jose",
+      "to": "truckee",
+      "km": 354.1,
+      "carMinutes": 262
+    },
+    {
+      "from": "san-jose",
+      "to": "ukiah",
+      "km": 263,
+      "carMinutes": 200
+    },
+    {
+      "from": "san-jose",
+      "to": "winnemucca",
+      "km": 670.1,
+      "carMinutes": 462
+    },
+    {
+      "from": "santa-cruz",
+      "to": "bakersfield",
+      "km": 394.5,
+      "carMinutes": 287
+    },
+    {
+      "from": "santa-cruz",
+      "to": "barstow",
+      "km": 602.5,
+      "carMinutes": 433
+    },
+    {
+      "from": "santa-cruz",
+      "to": "blythe",
+      "km": 908.2,
+      "carMinutes": 637
+    },
+    {
+      "from": "santa-cruz",
+      "to": "carson-city",
+      "km": 402.9,
+      "carMinutes": 342
+    },
+    {
+      "from": "santa-cruz",
+      "to": "el-centro",
+      "km": 891.1,
+      "carMinutes": 636
+    },
+    {
+      "from": "santa-cruz",
+      "to": "elko",
+      "km": 910.5,
+      "carMinutes": 616
+    },
+    {
+      "from": "santa-cruz",
+      "to": "ely",
+      "km": 960.9,
+      "carMinutes": 702
+    },
+    {
+      "from": "santa-cruz",
+      "to": "eureka",
+      "km": 555.5,
+      "carMinutes": 425
+    },
+    {
+      "from": "santa-cruz",
+      "to": "fresno",
+      "km": 245.3,
+      "carMinutes": 192
+    },
+    {
+      "from": "santa-cruz",
+      "to": "hilt",
+      "km": 632.1,
+      "carMinutes": 449
+    },
+    {
+      "from": "santa-cruz",
+      "to": "huron",
+      "km": 252.6,
+      "carMinutes": 190
+    },
+    {
+      "from": "santa-cruz",
+      "to": "indio",
+      "km": 753.4,
+      "carMinutes": 534
+    },
+    {
+      "from": "santa-cruz",
+      "to": "jackpot",
+      "km": 1098.9,
+      "carMinutes": 736
+    },
+    {
+      "from": "santa-cruz",
+      "to": "las-vegas",
+      "km": 851.1,
+      "carMinutes": 600
+    },
+    {
+      "from": "santa-cruz",
+      "to": "los-angeles",
+      "km": 552.2,
+      "carMinutes": 394
+    },
+    {
+      "from": "santa-cruz",
+      "to": "modesto",
+      "km": 178.1,
+      "carMinutes": 142
+    },
+    {
+      "from": "santa-cruz",
+      "to": "mojave",
+      "km": 502.2,
+      "carMinutes": 371
+    },
+    {
+      "from": "santa-cruz",
+      "to": "oakland",
+      "km": 111.7,
+      "carMinutes": 88
+    },
+    {
+      "from": "santa-cruz",
+      "to": "oxnard",
+      "km": 472.8,
+      "carMinutes": 357
+    },
+    {
+      "from": "santa-cruz",
+      "to": "pioche",
+      "km": 962.7,
+      "carMinutes": 802
+    },
+    {
+      "from": "santa-cruz",
+      "to": "primm",
+      "km": 783.2,
+      "carMinutes": 553
+    },
+    {
+      "from": "santa-cruz",
+      "to": "redding",
+      "km": 444.1,
+      "carMinutes": 315
+    },
+    {
+      "from": "santa-cruz",
+      "to": "reno",
+      "km": 446.3,
+      "carMinutes": 330
+    },
+    {
+      "from": "santa-cruz",
+      "to": "sacramento",
+      "km": 236.4,
+      "carMinutes": 179
+    },
+    {
+      "from": "santa-cruz",
+      "to": "san-diego",
+      "km": 745.8,
+      "carMinutes": 534
+    },
+    {
+      "from": "santa-cruz",
+      "to": "san-francisco",
+      "km": 118.2,
+      "carMinutes": 95
+    },
+    {
+      "from": "santa-cruz",
+      "to": "san-jose",
+      "km": 52.6,
+      "carMinutes": 46
+    },
+    {
+      "from": "santa-cruz",
+      "to": "santa-maria",
+      "km": 312.1,
+      "carMinutes": 231
+    },
+    {
+      "from": "santa-cruz",
+      "to": "stockton",
+      "km": 164.8,
+      "carMinutes": 129
+    },
+    {
+      "from": "santa-cruz",
+      "to": "tonopah",
+      "km": 613.7,
+      "carMinutes": 543
+    },
+    {
+      "from": "santa-cruz",
+      "to": "truckee",
+      "km": 395.8,
+      "carMinutes": 295
+    },
+    {
+      "from": "santa-cruz",
+      "to": "ukiah",
+      "km": 304.3,
+      "carMinutes": 231
+    },
+    {
+      "from": "santa-cruz",
+      "to": "winnemucca",
+      "km": 711.8,
+      "carMinutes": 494
+    },
+    {
+      "from": "santa-maria",
+      "to": "bakersfield",
+      "km": 197.8,
+      "carMinutes": 157
+    },
+    {
+      "from": "santa-maria",
+      "to": "barstow",
+      "km": 392.3,
+      "carMinutes": 296
+    },
+    {
+      "from": "santa-maria",
+      "to": "blythe",
+      "km": 612.6,
+      "carMinutes": 440
+    },
+    {
+      "from": "santa-maria",
+      "to": "carson-city",
+      "km": 681.6,
+      "carMinutes": 532
+    },
+    {
+      "from": "santa-maria",
+      "to": "el-centro",
+      "km": 595.5,
+      "carMinutes": 440
+    },
+    {
+      "from": "santa-maria",
+      "to": "elko",
+      "km": 1195.4,
+      "carMinutes": 810
+    },
+    {
+      "from": "santa-maria",
+      "to": "ely",
+      "km": 1005.3,
+      "carMinutes": 731
+    },
+    {
+      "from": "santa-maria",
+      "to": "eureka",
+      "km": 854,
+      "carMinutes": 635
+    },
+    {
+      "from": "santa-maria",
+      "to": "fresno",
+      "km": 279.3,
+      "carMinutes": 217
+    },
+    {
+      "from": "santa-maria",
+      "to": "hilt",
+      "km": 929.1,
+      "carMinutes": 657
+    },
+    {
+      "from": "santa-maria",
+      "to": "huron",
+      "km": 210,
+      "carMinutes": 165
+    },
+    {
+      "from": "santa-maria",
+      "to": "indio",
+      "km": 457.9,
+      "carMinutes": 338
+    },
+    {
+      "from": "santa-maria",
+      "to": "jackpot",
+      "km": 1383.8,
+      "carMinutes": 930
+    },
+    {
+      "from": "santa-maria",
+      "to": "las-vegas",
+      "km": 640.9,
+      "carMinutes": 464
+    },
+    {
+      "from": "santa-maria",
+      "to": "los-angeles",
+      "km": 254.6,
+      "carMinutes": 196
+    },
+    {
+      "from": "santa-maria",
+      "to": "modesto",
+      "km": 409.3,
+      "carMinutes": 308
+    },
+    {
+      "from": "santa-maria",
+      "to": "mojave",
+      "km": 281,
+      "carMinutes": 229
+    },
+    {
+      "from": "santa-maria",
+      "to": "oakland",
+      "km": 410.1,
+      "carMinutes": 298
+    },
+    {
+      "from": "santa-maria",
+      "to": "oxnard",
+      "km": 163.9,
+      "carMinutes": 130
+    },
+    {
+      "from": "santa-maria",
+      "to": "pioche",
+      "km": 922.2,
+      "carMinutes": 677
+    },
+    {
+      "from": "santa-maria",
+      "to": "primm",
+      "km": 573,
+      "carMinutes": 416
+    },
+    {
+      "from": "santa-maria",
+      "to": "redding",
+      "km": 741.1,
+      "carMinutes": 523
+    },
+    {
+      "from": "santa-maria",
+      "to": "reno",
+      "km": 731.3,
+      "carMinutes": 524
+    },
+    {
+      "from": "santa-maria",
+      "to": "sacramento",
+      "km": 519.1,
+      "carMinutes": 372
+    },
+    {
+      "from": "santa-maria",
+      "to": "san-diego",
+      "km": 447.5,
+      "carMinutes": 337
+    },
+    {
+      "from": "santa-maria",
+      "to": "san-francisco",
+      "km": 424.6,
+      "carMinutes": 309
+    },
+    {
+      "from": "santa-maria",
+      "to": "san-jose",
+      "km": 345.7,
+      "carMinutes": 251
+    },
+    {
+      "from": "santa-maria",
+      "to": "santa-cruz",
+      "km": 312.7,
+      "carMinutes": 232
+    },
+    {
+      "from": "santa-maria",
+      "to": "stockton",
+      "km": 443.6,
+      "carMinutes": 319
+    },
+    {
+      "from": "santa-maria",
+      "to": "tonopah",
+      "km": 732.5,
+      "carMinutes": 545
+    },
+    {
+      "from": "santa-maria",
+      "to": "truckee",
+      "km": 680.7,
+      "carMinutes": 489
+    },
+    {
+      "from": "santa-maria",
+      "to": "ukiah",
+      "km": 602.8,
+      "carMinutes": 441
+    },
+    {
+      "from": "santa-maria",
+      "to": "winnemucca",
+      "km": 996.7,
+      "carMinutes": 689
+    },
+    {
+      "from": "stockton",
+      "to": "bakersfield",
+      "km": 374.7,
+      "carMinutes": 262
+    },
+    {
+      "from": "stockton",
+      "to": "barstow",
+      "km": 592.4,
+      "carMinutes": 411
+    },
+    {
+      "from": "stockton",
+      "to": "blythe",
+      "km": 898.1,
+      "carMinutes": 615
+    },
+    {
+      "from": "stockton",
+      "to": "carson-city",
+      "km": 237.9,
+      "carMinutes": 216
+    },
+    {
+      "from": "stockton",
+      "to": "el-centro",
+      "km": 881,
+      "carMinutes": 614
+    },
+    {
+      "from": "stockton",
+      "to": "elko",
+      "km": 752.7,
+      "carMinutes": 497
+    },
+    {
+      "from": "stockton",
+      "to": "ely",
+      "km": 803.1,
+      "carMinutes": 583
+    },
+    {
+      "from": "stockton",
+      "to": "eureka",
+      "km": 507.4,
+      "carMinutes": 395
+    },
+    {
+      "from": "stockton",
+      "to": "fresno",
+      "km": 200.1,
+      "carMinutes": 147
+    },
+    {
+      "from": "stockton",
+      "to": "hilt",
+      "km": 523.9,
+      "carMinutes": 364
+    },
+    {
+      "from": "stockton",
+      "to": "huron",
+      "km": 242.5,
+      "carMinutes": 168
+    },
+    {
+      "from": "stockton",
+      "to": "indio",
+      "km": 743.3,
+      "carMinutes": 512
+    },
+    {
+      "from": "stockton",
+      "to": "jackpot",
+      "km": 941.1,
+      "carMinutes": 617
+    },
+    {
+      "from": "stockton",
+      "to": "las-vegas",
+      "km": 841,
+      "carMinutes": 578
+    },
+    {
+      "from": "stockton",
+      "to": "los-angeles",
+      "km": 542.1,
+      "carMinutes": 373
+    },
+    {
+      "from": "stockton",
+      "to": "modesto",
+      "km": 49.5,
+      "carMinutes": 40
+    },
+    {
+      "from": "stockton",
+      "to": "mojave",
+      "km": 492.1,
+      "carMinutes": 349
+    },
+    {
+      "from": "stockton",
+      "to": "oakland",
+      "km": 114.2,
+      "carMinutes": 84
+    },
+    {
+      "from": "stockton",
+      "to": "oxnard",
+      "km": 555.1,
+      "carMinutes": 390
+    },
+    {
+      "from": "stockton",
+      "to": "pioche",
+      "km": 818.2,
+      "carMinutes": 688
+    },
+    {
+      "from": "stockton",
+      "to": "primm",
+      "km": 773.1,
+      "carMinutes": 531
+    },
+    {
+      "from": "stockton",
+      "to": "redding",
+      "km": 335.9,
+      "carMinutes": 230
+    },
+    {
+      "from": "stockton",
+      "to": "reno",
+      "km": 288.5,
+      "carMinutes": 211
+    },
+    {
+      "from": "stockton",
+      "to": "sacramento",
+      "km": 78.1,
+      "carMinutes": 58
+    },
+    {
+      "from": "stockton",
+      "to": "san-diego",
+      "km": 735.7,
+      "carMinutes": 512
+    },
+    {
+      "from": "stockton",
+      "to": "san-francisco",
+      "km": 133.8,
+      "carMinutes": 101
+    },
+    {
+      "from": "stockton",
+      "to": "san-jose",
+      "km": 123.5,
+      "carMinutes": 96
+    },
+    {
+      "from": "stockton",
+      "to": "santa-cruz",
+      "km": 164.8,
+      "carMinutes": 129
+    },
+    {
+      "from": "stockton",
+      "to": "santa-maria",
+      "km": 443.1,
+      "carMinutes": 318
+    },
+    {
+      "from": "stockton",
+      "to": "tonopah",
+      "km": 469.1,
+      "carMinutes": 430
+    },
+    {
+      "from": "stockton",
+      "to": "truckee",
+      "km": 238,
+      "carMinutes": 176
+    },
+    {
+      "from": "stockton",
+      "to": "ukiah",
+      "km": 256.2,
+      "carMinutes": 201
+    },
+    {
+      "from": "stockton",
+      "to": "winnemucca",
+      "km": 554,
+      "carMinutes": 375
+    },
+    {
+      "from": "tonopah",
+      "to": "bakersfield",
+      "km": 550.3,
+      "carMinutes": 402
+    },
+    {
+      "from": "tonopah",
+      "to": "barstow",
+      "km": 477.5,
+      "carMinutes": 379
+    },
+    {
+      "from": "tonopah",
+      "to": "blythe",
+      "km": 672.1,
+      "carMinutes": 475
+    },
+    {
+      "from": "tonopah",
+      "to": "carson-city",
+      "km": 358.5,
+      "carMinutes": 269
+    },
+    {
+      "from": "tonopah",
+      "to": "el-centro",
+      "km": 836.7,
+      "carMinutes": 594
+    },
+    {
+      "from": "tonopah",
+      "to": "elko",
+      "km": 435.4,
+      "carMinutes": 296
+    },
+    {
+      "from": "tonopah",
+      "to": "ely",
+      "km": 272.8,
+      "carMinutes": 186
+    },
+    {
+      "from": "tonopah",
+      "to": "eureka",
+      "km": 920.7,
+      "carMinutes": 692
+    },
+    {
+      "from": "tonopah",
+      "to": "fresno",
+      "km": 459.8,
+      "carMinutes": 433
+    },
+    {
+      "from": "tonopah",
+      "to": "hilt",
+      "km": 810.1,
+      "carMinutes": 602
+    },
+    {
+      "from": "tonopah",
+      "to": "huron",
+      "km": 548.2,
+      "carMinutes": 501
+    },
+    {
+      "from": "tonopah",
+      "to": "indio",
+      "km": 652.9,
+      "carMinutes": 504
+    },
+    {
+      "from": "tonopah",
+      "to": "jackpot",
+      "km": 623.9,
+      "carMinutes": 416
+    },
+    {
+      "from": "tonopah",
+      "to": "las-vegas",
+      "km": 340.5,
+      "carMinutes": 240
+    },
+    {
+      "from": "tonopah",
+      "to": "los-angeles",
+      "km": 614.3,
+      "carMinutes": 446
+    },
+    {
+      "from": "tonopah",
+      "to": "modesto",
+      "km": 447.2,
+      "carMinutes": 412
+    },
+    {
+      "from": "tonopah",
+      "to": "mojave",
+      "km": 474.4,
+      "carMinutes": 353
+    },
+    {
+      "from": "tonopah",
+      "to": "oakland",
+      "km": 562.4,
+      "carMinutes": 497
+    },
+    {
+      "from": "tonopah",
+      "to": "oxnard",
+      "km": 650.6,
+      "carMinutes": 480
+    },
+    {
+      "from": "tonopah",
+      "to": "pioche",
+      "km": 349,
+      "carMinutes": 259
+    },
+    {
+      "from": "tonopah",
+      "to": "primm",
+      "km": 405.8,
+      "carMinutes": 286
+    },
+    {
+      "from": "tonopah",
+      "to": "redding",
+      "km": 684.8,
+      "carMinutes": 516
+    },
+    {
+      "from": "tonopah",
+      "to": "reno",
+      "km": 371.9,
+      "carMinutes": 280
+    },
+    {
+      "from": "tonopah",
+      "to": "sacramento",
+      "km": 545.1,
+      "carMinutes": 427
+    },
+    {
+      "from": "tonopah",
+      "to": "san-diego",
+      "km": 705.1,
+      "carMinutes": 543
+    },
+    {
+      "from": "tonopah",
+      "to": "san-francisco",
+      "km": 582.1,
+      "carMinutes": 513
+    },
+    {
+      "from": "tonopah",
+      "to": "san-jose",
+      "km": 571.8,
+      "carMinutes": 509
+    },
+    {
+      "from": "tonopah",
+      "to": "santa-cruz",
+      "km": 613,
+      "carMinutes": 542
+    },
+    {
+      "from": "tonopah",
+      "to": "santa-maria",
+      "km": 731.3,
+      "carMinutes": 545
+    },
+    {
+      "from": "tonopah",
+      "to": "stockton",
+      "km": 469.1,
+      "carMinutes": 428
+    },
+    {
+      "from": "tonopah",
+      "to": "truckee",
+      "km": 427.7,
+      "carMinutes": 321
+    },
+    {
+      "from": "tonopah",
+      "to": "ukiah",
+      "km": 781,
+      "carMinutes": 600
+    },
+    {
+      "from": "tonopah",
+      "to": "winnemucca",
+      "km": 417.8,
+      "carMinutes": 289
+    },
+    {
+      "from": "truckee",
+      "to": "bakersfield",
+      "km": 602,
+      "carMinutes": 427
+    },
+    {
+      "from": "truckee",
+      "to": "barstow",
+      "km": 684.7,
+      "carMinutes": 545
+    },
+    {
+      "from": "truckee",
+      "to": "blythe",
+      "km": 1014.8,
+      "carMinutes": 773
+    },
+    {
+      "from": "truckee",
+      "to": "carson-city",
+      "km": 77.7,
+      "carMinutes": 82
+    },
+    {
+      "from": "truckee",
+      "to": "el-centro",
+      "km": 997.7,
+      "carMinutes": 772
+    },
+    {
+      "from": "truckee",
+      "to": "elko",
+      "km": 522.6,
+      "carMinutes": 334
+    },
+    {
+      "from": "truckee",
+      "to": "ely",
+      "km": 573.1,
+      "carMinutes": 420
+    },
+    {
+      "from": "truckee",
+      "to": "eureka",
+      "km": 557.8,
+      "carMinutes": 431
+    },
+    {
+      "from": "truckee",
+      "to": "fresno",
+      "km": 427.4,
+      "carMinutes": 312
+    },
+    {
+      "from": "truckee",
+      "to": "hilt",
+      "km": 502.2,
+      "carMinutes": 374
+    },
+    {
+      "from": "truckee",
+      "to": "huron",
+      "km": 479.7,
+      "carMinutes": 339
+    },
+    {
+      "from": "truckee",
+      "to": "indio",
+      "km": 860,
+      "carMinutes": 670
+    },
+    {
+      "from": "truckee",
+      "to": "jackpot",
+      "km": 711.1,
+      "carMinutes": 454
+    },
+    {
+      "from": "truckee",
+      "to": "las-vegas",
+      "km": 752.3,
+      "carMinutes": 557
+    },
+    {
+      "from": "truckee",
+      "to": "los-angeles",
+      "km": 779.3,
+      "carMinutes": 543
+    },
+    {
+      "from": "truckee",
+      "to": "modesto",
+      "km": 276.9,
+      "carMinutes": 205
+    },
+    {
+      "from": "truckee",
+      "to": "mojave",
+      "km": 631.5,
+      "carMinutes": 513
+    },
+    {
+      "from": "truckee",
+      "to": "oakland",
+      "km": 294,
+      "carMinutes": 216
+    },
+    {
+      "from": "truckee",
+      "to": "oxnard",
+      "km": 792.3,
+      "carMinutes": 561
+    },
+    {
+      "from": "truckee",
+      "to": "pioche",
+      "km": 746,
+      "carMinutes": 543
+    },
+    {
+      "from": "truckee",
+      "to": "primm",
+      "km": 817.6,
+      "carMinutes": 602
+    },
+    {
+      "from": "truckee",
+      "to": "redding",
+      "km": 322,
+      "carMinutes": 255
+    },
+    {
+      "from": "truckee",
+      "to": "reno",
+      "km": 58.5,
+      "carMinutes": 48
+    },
+    {
+      "from": "truckee",
+      "to": "sacramento",
+      "km": 161.6,
+      "carMinutes": 121
+    },
+    {
+      "from": "truckee",
+      "to": "san-diego",
+      "km": 972.9,
+      "carMinutes": 683
+    },
+    {
+      "from": "truckee",
+      "to": "san-francisco",
+      "km": 300.9,
+      "carMinutes": 224
+    },
+    {
+      "from": "truckee",
+      "to": "san-jose",
+      "km": 354.6,
+      "carMinutes": 262
+    },
+    {
+      "from": "truckee",
+      "to": "santa-cruz",
+      "km": 395.8,
+      "carMinutes": 295
+    },
+    {
+      "from": "truckee",
+      "to": "santa-maria",
+      "km": 680.3,
+      "carMinutes": 489
+    },
+    {
+      "from": "truckee",
+      "to": "stockton",
+      "km": 237.7,
+      "carMinutes": 175
+    },
+    {
+      "from": "truckee",
+      "to": "tonopah",
+      "km": 429,
+      "carMinutes": 323
+    },
+    {
+      "from": "truckee",
+      "to": "ukiah",
+      "km": 335.8,
+      "carMinutes": 291
+    },
+    {
+      "from": "truckee",
+      "to": "winnemucca",
+      "km": 323.9,
+      "carMinutes": 213
+    },
+    {
+      "from": "ukiah",
+      "to": "bakersfield",
+      "km": 627.3,
+      "carMinutes": 443
+    },
+    {
+      "from": "ukiah",
+      "to": "barstow",
+      "km": 835.3,
+      "carMinutes": 589
+    },
+    {
+      "from": "ukiah",
+      "to": "blythe",
+      "km": 1140.9,
+      "carMinutes": 793
+    },
+    {
+      "from": "ukiah",
+      "to": "carson-city",
+      "km": 446.1,
+      "carMinutes": 355
+    },
+    {
+      "from": "ukiah",
+      "to": "el-centro",
+      "km": 1123.9,
+      "carMinutes": 793
+    },
+    {
+      "from": "ukiah",
+      "to": "elko",
+      "km": 851.8,
+      "carMinutes": 613
+    },
+    {
+      "from": "ukiah",
+      "to": "ely",
+      "km": 902.3,
+      "carMinutes": 699
+    },
+    {
+      "from": "ukiah",
+      "to": "eureka",
+      "km": 253.6,
+      "carMinutes": 197
+    },
+    {
+      "from": "ukiah",
+      "to": "fresno",
+      "km": 469,
+      "carMinutes": 344
+    },
+    {
+      "from": "ukiah",
+      "to": "hilt",
+      "km": 492.4,
+      "carMinutes": 369
+    },
+    {
+      "from": "ukiah",
+      "to": "huron",
+      "km": 485.4,
+      "carMinutes": 347
+    },
+    {
+      "from": "ukiah",
+      "to": "indio",
+      "km": 986.2,
+      "carMinutes": 691
+    },
+    {
+      "from": "ukiah",
+      "to": "jackpot",
+      "km": 1040.3,
+      "carMinutes": 733
+    },
+    {
+      "from": "ukiah",
+      "to": "las-vegas",
+      "km": 1083.9,
+      "carMinutes": 757
+    },
+    {
+      "from": "ukiah",
+      "to": "los-angeles",
+      "km": 785,
+      "carMinutes": 551
+    },
+    {
+      "from": "ukiah",
+      "to": "modesto",
+      "km": 318.5,
+      "carMinutes": 237
+    },
+    {
+      "from": "ukiah",
+      "to": "mojave",
+      "km": 735,
+      "carMinutes": 528
+    },
+    {
+      "from": "ukiah",
+      "to": "oakland",
+      "km": 193.9,
+      "carMinutes": 146
+    },
+    {
+      "from": "ukiah",
+      "to": "oxnard",
+      "km": 763.9,
+      "carMinutes": 566
+    },
+    {
+      "from": "ukiah",
+      "to": "pioche",
+      "km": 1075.2,
+      "carMinutes": 822
+    },
+    {
+      "from": "ukiah",
+      "to": "primm",
+      "km": 1016,
+      "carMinutes": 709
+    },
+    {
+      "from": "ukiah",
+      "to": "redding",
+      "km": 304.4,
+      "carMinutes": 235
+    },
+    {
+      "from": "ukiah",
+      "to": "reno",
+      "km": 387.7,
+      "carMinutes": 327
+    },
+    {
+      "from": "ukiah",
+      "to": "sacramento",
+      "km": 239,
+      "carMinutes": 178
+    },
+    {
+      "from": "ukiah",
+      "to": "san-diego",
+      "km": 978.6,
+      "carMinutes": 691
+    },
+    {
+      "from": "ukiah",
+      "to": "san-francisco",
+      "km": 185,
+      "carMinutes": 146
+    },
+    {
+      "from": "ukiah",
+      "to": "san-jose",
+      "km": 263.6,
+      "carMinutes": 201
+    },
+    {
+      "from": "ukiah",
+      "to": "santa-cruz",
+      "km": 304.5,
+      "carMinutes": 232
+    },
+    {
+      "from": "ukiah",
+      "to": "santa-maria",
+      "km": 603.1,
+      "carMinutes": 441
+    },
+    {
+      "from": "ukiah",
+      "to": "stockton",
+      "km": 256.1,
+      "carMinutes": 201
+    },
+    {
+      "from": "ukiah",
+      "to": "tonopah",
+      "km": 781.3,
+      "carMinutes": 599
+    },
+    {
+      "from": "ukiah",
+      "to": "truckee",
+      "km": 337.2,
+      "carMinutes": 292
+    },
+    {
+      "from": "ukiah",
+      "to": "winnemucca",
+      "km": 653.2,
+      "carMinutes": 492
+    },
+    {
+      "from": "winnemucca",
+      "to": "bakersfield",
+      "km": 918.1,
+      "carMinutes": 627
+    },
+    {
+      "from": "winnemucca",
+      "to": "barstow",
+      "km": 854.4,
+      "carMinutes": 612
+    },
+    {
+      "from": "winnemucca",
+      "to": "blythe",
+      "km": 1087.7,
+      "carMinutes": 760
+    },
+    {
+      "from": "winnemucca",
+      "to": "carson-city",
+      "km": 291.2,
+      "carMinutes": 198
+    },
+    {
+      "from": "winnemucca",
+      "to": "el-centro",
+      "km": 1167.4,
+      "carMinutes": 839
+    },
+    {
+      "from": "winnemucca",
+      "to": "elko",
+      "km": 200.4,
+      "carMinutes": 129
+    },
+    {
+      "from": "winnemucca",
+      "to": "ely",
+      "km": 435,
+      "carMinutes": 296
+    },
+    {
+      "from": "winnemucca",
+      "to": "eureka",
+      "km": 815.5,
+      "carMinutes": 583
+    },
+    {
+      "from": "winnemucca",
+      "to": "fresno",
+      "km": 743.5,
+      "carMinutes": 512
+    },
+    {
+      "from": "winnemucca",
+      "to": "hilt",
+      "km": 704.9,
+      "carMinutes": 492
+    },
+    {
+      "from": "winnemucca",
+      "to": "huron",
+      "km": 795.7,
+      "carMinutes": 539
+    },
+    {
+      "from": "winnemucca",
+      "to": "indio",
+      "km": 1029.7,
+      "carMinutes": 737
+    },
+    {
+      "from": "winnemucca",
+      "to": "jackpot",
+      "km": 388.9,
+      "carMinutes": 250
+    },
+    {
+      "from": "winnemucca",
+      "to": "las-vegas",
+      "km": 756,
+      "carMinutes": 525
+    },
+    {
+      "from": "winnemucca",
+      "to": "los-angeles",
+      "km": 941.1,
+      "carMinutes": 672
+    },
+    {
+      "from": "winnemucca",
+      "to": "modesto",
+      "km": 592.9,
+      "carMinutes": 405
+    },
+    {
+      "from": "winnemucca",
+      "to": "mojave",
+      "km": 801.1,
+      "carMinutes": 579
+    },
+    {
+      "from": "winnemucca",
+      "to": "oakland",
+      "km": 610.1,
+      "carMinutes": 416
+    },
+    {
+      "from": "winnemucca",
+      "to": "oxnard",
+      "km": 977.3,
+      "carMinutes": 706
+    },
+    {
+      "from": "winnemucca",
+      "to": "pioche",
+      "km": 607.9,
+      "carMinutes": 419
+    },
+    {
+      "from": "winnemucca",
+      "to": "primm",
+      "km": 821.3,
+      "carMinutes": 571
+    },
+    {
+      "from": "winnemucca",
+      "to": "redding",
+      "km": 579.7,
+      "carMinutes": 407
+    },
+    {
+      "from": "winnemucca",
+      "to": "reno",
+      "km": 266.7,
+      "carMinutes": 171
+    },
+    {
+      "from": "winnemucca",
+      "to": "sacramento",
+      "km": 477.6,
+      "carMinutes": 321
+    },
+    {
+      "from": "winnemucca",
+      "to": "san-diego",
+      "km": 1081.9,
+      "carMinutes": 775
+    },
+    {
+      "from": "winnemucca",
+      "to": "san-francisco",
+      "km": 617,
+      "carMinutes": 424
+    },
+    {
+      "from": "winnemucca",
+      "to": "san-jose",
+      "km": 670.6,
+      "carMinutes": 462
+    },
+    {
+      "from": "winnemucca",
+      "to": "santa-cruz",
+      "km": 711.9,
+      "carMinutes": 495
+    },
+    {
+      "from": "winnemucca",
+      "to": "santa-maria",
+      "km": 996.4,
+      "carMinutes": 689
+    },
+    {
+      "from": "winnemucca",
+      "to": "stockton",
+      "km": 553.7,
+      "carMinutes": 375
+    },
+    {
+      "from": "winnemucca",
+      "to": "tonopah",
+      "km": 417,
+      "carMinutes": 287
+    },
+    {
+      "from": "winnemucca",
+      "to": "truckee",
+      "km": 322.5,
+      "carMinutes": 212
+    },
+    {
+      "from": "winnemucca",
+      "to": "ukiah",
+      "km": 651.8,
+      "carMinutes": 491
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+---
+import { getI18n } from '../i18n/index.mjs';
+import { REPO_URL as repoUrl } from '../config.mjs';
+import pkg from '../../package.json';
+
+const { t } = getI18n();
+---
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <section class="footer-attribution" aria-labelledby="footer-attribution-title">
+      <h2 id="footer-attribution-title" class="eyebrow">{t('footer.attributionTitle')}</h2>
+      <p>{t('footer.gameData')}</p>
+      <p>{t('footer.weatherPhotos')}</p>
+      <p>{t('footer.notAffiliated')}</p>
+    </section>
+    <section class="footer-links" aria-labelledby="footer-links-title">
+      <h2 id="footer-links-title" class="eyebrow">{t('footer.linksTitle')}</h2>
+      <ul>
+        <li><a href="/about">{t('footer.about')}</a></li>
+        <li><a href={repoUrl} rel="noopener">{t('footer.sourceCode')}</a></li>
+      </ul>
+      <p class="footer-version mono">{t('footer.version', { version: pkg.version })} · {t('stage.current')}</p>
+    </section>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: var(--space-8);
+    background: var(--bg-header);
+    border-top: 1px solid var(--border);
+    color: var(--text-soft);
+    font-size: 14px;
+  }
+  .footer-inner {
+    display: grid;
+    gap: var(--space-5);
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-6);
+  }
+  @media (min-width: 720px) {
+    .footer-inner { grid-template-columns: 2fr 1fr; }
+  }
+  .footer-attribution p + p { margin-top: var(--space-1); }
+  .site-footer h2 { margin-bottom: var(--space-3); }
+  ul { margin: 0; padding: 0; list-style: none; }
+  li a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target);
+  }
+  .footer-version {
+    margin-top: var(--space-2);
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+</style>

@@ -1,2 +1,10 @@
 # Local Netlify folder
 .netlify
+
+# Astro
+node_modules/
+dist/
+.astro/
+
+# Local caches (wiki data collection)
+.cache/
