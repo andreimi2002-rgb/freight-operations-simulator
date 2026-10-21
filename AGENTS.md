@@ -18,7 +18,7 @@ The previous product (FOS, real-world RO/HU/BG loads) lives on `main` and is pub
 - Keep internal game IDs (company files such as `oak_port`, internal cargo and city names) wherever the wiki gives them; they link pages to live telemetry later.
 - Every data file has a `meta` field: source, licence, retrieval date, attribution.
 - Every source and licence is listed in `src/data/sources.json` and shown on `/about`. The attribution from `DEVELOPMENT_PLAN.md` section 2 appears in the footer of every page (checked by a test).
-- No logos, screenshots or other images from the games (they belong to SCS Software). No AI-generated images. City photos only from Wikimedia Commons, chosen by hand, with author, licence and link; otherwise an elegant placeholder, never a wrong photo.
+- No logos, screenshots or other images from the games (they belong to SCS Software). No AI-generated images. City photos only from Wikimedia Commons, chosen by hand (`data/photos.json`, with the reason), with author, licence and link shown; otherwise an elegant placeholder, never a wrong photo.
 - Weather from Open-Meteo, requested from the browser with a short cache. Its free tier is non-commercial: check the terms before any monetisation.
 - Countries, states and games are data, not code: no hard-coded lists in components or scripts.
 
