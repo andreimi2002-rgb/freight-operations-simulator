@@ -30,7 +30,7 @@ function initUnits(onChange) {
   const buttons = [...document.querySelectorAll('[data-units]')];
   const apply = (sys) => {
     buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.units === sys)));
-    document.documentElement.dataset.units = sys;
+    document.documentElement.dataset.unitSystem = sys;
   };
   apply(currentUnits());
   buttons.forEach((b) => b.addEventListener('click', () => {
