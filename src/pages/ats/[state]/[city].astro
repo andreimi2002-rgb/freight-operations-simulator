@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import CityHero from '../../../components/CityHero.astro';
 import WeatherIcons from '../../../components/WeatherIcons.astro';
+import DeparturesBoard from '../../../components/DeparturesBoard.astro';
 import { getI18n } from '../../../i18n/index.mjs';
 import { cities, companies, cargo, photos, cityById, stateByCode } from '../../../lib/data.mjs';
 import { cityParams, cityPath, cityCompanies, cityCargoCounts } from '../../../lib/ats.mjs';
@@ -50,6 +51,11 @@ const cards = [
   </nav>
 
   <CityHero city={city} stateName={state.name} photo={photo} />
+
+  <div class="container board-wrap">
+    <DeparturesBoard city={city.id} />
+    <a class="button button-ghost plan" href={`/ats/planner?from=${city.id}`}>{t('city.planButton', { city: city.name })}</a>
+  </div>
 
   <div class="container body">
     <ul class="facts">
@@ -148,6 +154,8 @@ const cards = [
 </BaseLayout>
 
 <style>
+  .board-wrap { display: grid; gap: var(--space-4); justify-items: start; margin-top: var(--space-7); }
+  .board-wrap > :global(.board) { width: 100%; min-width: 0; }
   .crumbs { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; font-size: 14px; color: var(--text-muted); }
   .crumbs a { display: inline-flex; align-items: center; min-height: var(--target); color: var(--text-soft); }
   .body { display: grid; gap: var(--space-7); margin-top: var(--space-7); }

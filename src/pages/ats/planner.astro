@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getI18n } from '../../i18n/index.mjs';
+import { scope, cities, trailers } from '../../lib/data.mjs';
+import { statesWithCities } from '../../lib/ats.mjs';
+
+const { t } = getI18n();
+const states = statesWithCities(scope, cities);
+const trailerOptions = [...trailers].sort((a, b) => a.name.localeCompare(b.name));
+---
+<BaseLayout title={t('planner.title')} description={t('planner.metaDescription')}>
+  <div class="container page">
+    <header class="head">
+      <p class="eyebrow">{t('planner.eyebrow')}</p>
+      <h1>{t('planner.title')}</h1>
+      <p class="soft lead">{t('planner.lead')}</p>
+    </header>
+
+    <form class="card form" id="planner-form">
+      <div class="field">
+        <label for="pl-from">{t('planner.from')}</label>
+        <select id="pl-from" name="from">
+          <option value="">—</option>
+          {states.map((s) => (
+            <optgroup label={s.name}>
+              {s.cities.map((c) => <option value={c.id}>{c.name}</option>)}
+            </optgroup>
+          ))}
+        </select>
+      </div>
+      <div class="field">
+        <label for="pl-depot">{t('planner.depot')}</label>
+        <select id="pl-depot" name="depot" disabled>
+          <option value="">{t('planner.anyDepot')}</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="pl-to">{t('planner.to')}</label>
+        <select id="pl-to" name="to">
+          <option value="">{t('planner.anyDestination')}</option>
+          {states.map((s) => (
+            <optgroup label={s.name}>
+              {s.cities.map((c) => <option value={c.id}>{c.name}</option>)}
+            </optgroup>
+          ))}
+        </select>
+      </div>
+      <div class="field">
+        <label for="pl-trailer">{t('planner.trailer')}</label>
+        <select id="pl-trailer" name="trailer">
+          <option value="">{t('planner.anyTrailer')}</option>
+          {trailerOptions.map((tr) => <option value={tr.id}>{tr.name}</option>)}
+        </select>
+      </div>
+      <div class="checks">
+        <label class="check" for="pl-base">
+          <input type="checkbox" id="pl-base" name="base" />
+          <span>{t('planner.baseOnly')}<small class="muted">{t('planner.baseOnlyHint')}</small></span>
+        </label>
+        <label class="check" for="pl-hazmat">
+          <input type="checkbox" id="pl-hazmat" name="hazmat" checked />
+          <span>{t('planner.hazmat')}</span>
+        </label>
+      </div>
+    </form>
+
+    <section class="results" id="planner-results" aria-live="polite" data-state="idle">
+      <p class="soft msg" data-msg>{t('planner.pickFrom')}</p>
+      <div data-out></div>
+    </section>
+
+    <p class="muted note">{t('planner.estimateNote')}</p>
+  </div>
+</BaseLayout>
+
+<script>
+  import '../../scripts/planner.mjs';
+</script>
+
+<style>
+  .page { display: grid; gap: var(--space-6); padding-top: var(--space-7); }
+  .page > * { min-width: 0; }
+  .head { display: grid; gap: var(--space-3); }
+  .head h1 { font-size: clamp(30px, 5vw, 44px); }
+  .lead { max-width: 66ch; font-size: 17px; }
+  .form { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); align-items: end; }
+  .field { display: grid; gap: var(--space-2); min-width: 0; }
+  label { font-size: 13px; font-weight: 600; color: var(--text-soft); }
+  select {
+    min-height: var(--target);
+    width: 100%;
+    padding: 0 var(--space-3);
+    background: var(--panel-deep);
+    color: var(--text);
+    border: 1px solid var(--border-input);
+    border-radius: var(--radius-sm);
+    font: inherit;
+  }
+  select:disabled { color: var(--text-muted); }
+  .checks { display: grid; gap: var(--space-2); grid-column: 1 / -1; }
+  @media (min-width: 720px) { .checks { grid-template-columns: auto auto; justify-content: start; gap: var(--space-6); } }
+  .check { display: flex; align-items: center; gap: var(--space-3); min-height: var(--target); font-weight: 500; color: var(--text); cursor: pointer; }
+  .check input { width: 20px; height: 20px; accent-color: var(--amber); flex: none; }
+  .check small { display: block; font-weight: 400; font-size: 12px; }
+  .results { display: grid; gap: var(--space-4); }
+  .results > *, .results :global([data-out] > *) { min-width: 0; }
+  .results :global([data-out]) { display: grid; gap: var(--space-4); }
+  .note { font-size: 13px; }
+  .results :global(h2) { font-size: 20px; }
+  .results :global(.table-scroll) { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+  .results :global(table) { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .results :global(table.dest) { min-width: 560px; }
+  .results :global(table.jobs) { min-width: 920px; }
+  .results :global(th) { padding: var(--space-3) var(--space-4); text-align: left; font: 500 12px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); border-bottom: 1px solid var(--border); white-space: nowrap; }
+  .results :global(td) { padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--row-line); vertical-align: top; }
+  .results :global(tr:last-child td) { border-bottom: 0; }
+  .results :global(.num) { font-family: var(--font-mono); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .results :global(td small) { display: block; color: var(--text-muted); font-size: 12px; margin-top: 2px; }
+  .results :global(.linkish) { background: none; border: 0; padding: 0; min-height: var(--target); color: var(--amber); font: inherit; font-weight: 600; cursor: pointer; text-align: left; text-decoration: underline; text-underline-offset: 3px; }
+  .results :global(.job-badges) { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+  .results :global(.job-badges .badge) { font-size: 11px; padding: 1px 6px; }
+  .results :global(.more) { justify-self: start; }
+  .results :global(.bar) { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3); }
+</style>

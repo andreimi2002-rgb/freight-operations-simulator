@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.0.0-alpha.5 — 2026-10-22 (Freight World, stage 3: departures and route planner)
+
+- **Job generator** (`src/engine/`), pure and deterministic, reusable by the companion app: the same city, local date and local hour give the same jobs to everyone. Every job is possible in the game by construction: the source depot offers the cargo, a depot in another city accepts it, the trailer is one the cargo list allows, the weight is inside the cargo's range, and the DLCs needed (cargo pack or a "With … DLC" listing) are named. No pay is shown (the game's pay inputs are not public).
+- **Departures boards**, airport style: on every city page (12 jobs leaving in the next six hours, new jobs every hour) and on the home page (a different city every hour, the same for everyone). Columns: time, cargo with badges (DLC, hazmat class, heavy, fragile, high value), from, destination with depot, distance and drive time, trailer, weight. Cargo without a known weight stays out of the boards.
+- **Route planner** at `/ats/planner`: from a city (or one depot), optionally to a city, with filters (career start: base game only; hazmat; trailer). Without a destination it lists every reachable city with distance and number of jobs; with one it lists every job between them. The choice is kept in the address, so a plan can be bookmarked. Each city page links to it.
+- **Distances:** `scripts/ats/distances.mjs` (`npm run distances:ats`) asks the public OSRM server once for all 1,122 city pairs (OpenStreetMap roads, ODbL); `data/ats/distances.json` marks them as estimates. Drive time is distance at 55 mph (the California truck speed limit). Calibration against in-game distances is pending.
+- **Job data for the browser:** `/data/ats-jobs.json`, built at build time, packed to 88 KB (18 KB compressed).
+- Header link "Planner"; the board and planner react to the US / Metric switch.
+- 9 new tests (72 in all): determinism, hourly change, validity of every board job in every city and of planner results, filters, packing, distances, formatting.
+
 ## 2.0.0-alpha.4 — 2026-10-22 (weather from MET Norway, monetisation model)
 
 - **Weather** now comes from MET Norway Locationforecast (CC BY 4.0, commercial use allowed) instead of Open-Meteo (free for non-commercial use only), through a Netlify Function `/api/weather/<city>` ported from FOS: the city is looked up on the server, coordinates rounded to 4 decimals, User-Agent with contact, cached until MET's `Expires` and 20 minutes on the CDN, rate limited. The page shows now, wind, precipitation and today plus the next two days; "feels like" is gone (MET does not provide it). New sleet icon. Footer attribution and `/about` updated.

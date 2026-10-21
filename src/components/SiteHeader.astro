@@ -9,6 +9,7 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const links = [
   { href: '/', label: t('nav.home') },
   { href: '/ats', label: t('nav.cities') },
+  { href: '/ats/planner', label: t('nav.planner') },
   { href: '/about', label: t('nav.about') },
 ];
 ---
@@ -26,7 +27,7 @@ const links = [
               <a
                 class="nav-link"
                 href={link.href}
-                aria-current={path === link.href ? 'page' : (link.href !== '/' && path.startsWith(`${link.href}/`) ? 'true' : undefined)}
+                aria-current={path === link.href ? 'page' : (link.href === '/ats' && path.startsWith('/ats/') && !path.startsWith('/ats/planner') ? 'true' : undefined)}
               >{link.label}</a>
             </li>
           ))}

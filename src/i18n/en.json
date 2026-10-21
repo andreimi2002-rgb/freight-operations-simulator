@@ -18,7 +18,8 @@
     "label": "Main",
     "home": "Home",
     "about": "About & sources",
-    "cities": "Cities"
+    "cities": "Cities",
+    "planner": "Planner"
   },
   "game": {
     "label": "Game",
@@ -31,7 +32,7 @@
   },
   "stage": {
     "label": "Stage {n}",
-    "current": "Stage 2 — City pages",
+    "current": "Stage 3 — Departures and route planner",
     "from": "From stage {n}"
   },
   "footer": {
@@ -48,7 +49,7 @@
     "title": "Freight World",
     "eyebrow": "American Truck Simulator · California and Nevada first",
     "lead": "A job generator in the style of ATS and ETS2, built on the real game map: cities, companies, depots, cargo and trailers that exist in the game, with live city pages.",
-    "status": "City pages are live for California and Nevada. The departures board and job sheets arrive in the next stages.",
+    "status": "City pages, live departures boards and the route planner are ready for California and Nevada. Job sheets arrive in the next stage.",
     "aboutCta": "Sources and licences",
     "pillarsTitle": "What Freight World will show",
     "pillars": {
@@ -125,7 +126,7 @@
       "licence": "Free licences per file (CC BY, CC BY-SA, public domain); author and licence shown on each photo"
     },
     "osm": {
-      "use": "Estimated distances between cities from real roads, converted to game scale",
+      "use": "Estimated road distances between cities (OSRM routing on OpenStreetMap roads)",
       "licence": "ODbL 1.0: © OpenStreetMap contributors"
     },
     "inter": {
@@ -218,7 +219,8 @@
     "landmarksTitle": "Landmarks",
     "wikiLink": "{name} on Truck Simulator Wiki",
     "cargoCount": "{n} cargo",
-    "openDetails": "Show cargo"
+    "openDetails": "Show cargo",
+    "planButton": "Plan routes from {city}"
   },
   "facilities": {
     "dealer": "Truck dealer",
@@ -246,5 +248,83 @@
     "unknown": "Weather unknown",
     "night": "night",
     "sleet": "Sleet"
+  },
+  "board": {
+    "title": "Departures",
+    "subtitle": "Next 6 hours from {city} · new jobs every hour",
+    "subtitleHome": "Next 6 hours from {city} · a different city every hour",
+    "caption": "Departures from {city}: jobs leaving in the next six hours.",
+    "loading": "Loading the departures…",
+    "error": "The departures could not be loaded.",
+    "empty": "No jobs leave from here right now.",
+    "cols": {
+      "time": "Time",
+      "cargo": "Cargo",
+      "from": "From",
+      "to": "Destination",
+      "distance": "Distance",
+      "trailer": "Trailer",
+      "weight": "Weight",
+      "notes": "Needs"
+    },
+    "nextDay": "+1 day",
+    "estimateNote": "Distances and drive times are estimates from real roads (© OpenStreetMap contributors, ODbL) at 55 mph. No pay is shown yet: the game’s pay inputs are not public.",
+    "openCity": "Open {city}",
+    "planFrom": "Plan routes from {city}",
+    "hazmat": "Hazmat class {c}",
+    "heavy": "Heavy",
+    "fragile": "Fragile",
+    "highValue": "High value",
+    "hours": "{h} h"
+  },
+  "dlcNames": {
+    "heavy-cargo-pack": "Heavy Cargo Pack",
+    "special-transport": "Special Transport",
+    "forest-machinery": "Forest Machinery",
+    "volvo-construction-equipment": "Volvo Construction Equipment",
+    "farm-machinery": "Farm Machinery",
+    "jcb-equipment-pack": "JCB Equipment Pack",
+    "krone-agriculture-equipment": "KRONE Agriculture Equipment",
+    "bobcat-cargo-pack": "Bobcat Cargo Pack"
+  },
+  "planner": {
+    "title": "Route planner",
+    "metaDescription": "Every real American Truck Simulator job between two cities: cargo, depots, trailer, weight, distance and required DLCs.",
+    "eyebrow": "American Truck Simulator",
+    "lead": "Pick where you are and, if you like, where you want to go. You get every job that is possible in the game between them: who offers the cargo, who accepts it, on which trailer.",
+    "from": "From",
+    "depot": "Depot",
+    "anyDepot": "Any depot",
+    "to": "To",
+    "anyDestination": "Anywhere",
+    "baseOnly": "Career start: base game only",
+    "baseOnlyHint": "Hides jobs that need a cargo DLC.",
+    "hazmat": "Include hazmat",
+    "trailer": "Trailer",
+    "anyTrailer": "Any trailer",
+    "loading": "Loading the job data…",
+    "error": "The job data could not be loaded.",
+    "pickFrom": "Choose a city to start from.",
+    "none": "No job matches these choices.",
+    "destinations": "{n} destinations from {city}",
+    "jobsBetween": "{n} jobs from {from} to {to}",
+    "jobsTo": "{n} jobs",
+    "showJobs": "Show jobs to {city}",
+    "showMore": "Show {n} more",
+    "weightUnknown": "Weight unknown",
+    "trailers": "Trailers",
+    "cols": {
+      "destination": "Destination",
+      "distance": "Distance",
+      "time": "Drive",
+      "jobs": "Jobs",
+      "cargo": "Cargo",
+      "offeredBy": "Offered by",
+      "acceptedBy": "Accepted by (in {city})",
+      "weight": "Weight",
+      "needs": "Needs"
+    },
+    "backToAll": "All destinations",
+    "estimateNote": "Distances and drive times are estimates from real roads (© OpenStreetMap contributors, ODbL) at 55 mph. Jobs come from the depot lists on Truck Simulator Wiki."
   }
 }

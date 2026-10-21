@@ -1,9 +1,9 @@
 // Live parts of the pages, run in the browser: local clock, real weather
 // (MET Norway through /api/weather/<city>, cached 15 minutes) and the US / metric unit switch.
 // Text comes from the page (data attributes and a JSON block), never from here.
-import { temperature, windSpeed, precipitation, weatherKind, weatherPath, UNIT_SYSTEMS } from '../lib/ats.mjs';
+import { temperature, windSpeed, precipitation, weatherKind, weatherPath } from '../lib/ats.mjs';
+import { currentUnits, saveUnits, pageText as texts, fill } from './units.mjs';
 
-const UNITS_KEY = 'fw-units';
 const CACHE_MS = 15 * 60 * 1000;
 
 function store(key, value) {
@@ -14,18 +14,7 @@ function store(key, value) {
   return null;
 }
 
-function texts() {
-  const el = document.getElementById('fw-live-text');
-  try { return el ? JSON.parse(el.textContent) : {}; } catch { return {}; }
-}
-const fill = (s, params) => String(s ?? '').replace(/\{(\w+)\}/g, (m, k) => (k in params ? params[k] : m));
-
 // ---- Units -----------------------------------------------------------------
-export function currentUnits() {
-  const saved = store(UNITS_KEY);
-  return UNIT_SYSTEMS.includes(saved) ? saved : 'us';
-}
-
 function initUnits(onChange) {
   const buttons = [...document.querySelectorAll('[data-units]')];
   const apply = (sys) => {
@@ -34,8 +23,8 @@ function initUnits(onChange) {
   };
   apply(currentUnits());
   buttons.forEach((b) => b.addEventListener('click', () => {
-    store(UNITS_KEY, b.dataset.units);
     apply(b.dataset.units);
+    saveUnits(b.dataset.units);
     onChange(b.dataset.units);
   }));
 }
