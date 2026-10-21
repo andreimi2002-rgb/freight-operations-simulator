@@ -1,0 +1,1114 @@
+{
+  "meta": {
+    "source": "Truck Simulator Wiki",
+    "sourceUrl": "https://trucksimulator.wiki.gg",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Game data from Truck Simulator Wiki contributors (trucksimulator.wiki.gg), CC BY-SA 4.0.",
+    "retrieved": "2026-10-21",
+    "generator": "scripts/ats/collect.mjs",
+    "userAgent": "FreightWorldDataBot/0.1 (https://github.com/andreimi2002-rgb/freight-operations-simulator; fan project data collection)",
+    "game": "ats",
+    "states": [
+      "CA",
+      "NV"
+    ],
+    "description": "Problems found while collecting: missing values, contradictions between pages, names that do not match. For manual checking.",
+    "count": 108
+  },
+  "issues": [
+    {
+      "kind": "unknownValue",
+      "entity": "agricultural-telehandler-bobcat-tl3070",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "barley",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "valueRange",
+      "entity": "cars-suvs",
+      "detail": "value on the cargo list is a range (0.18–0.225); valuePerKm is empty, valuePerKmRange holds it",
+      "field": "valuePerKm"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "chemical-granules",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "compressor-bobcat-pa127v",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "crawler-carrier",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "sameName",
+      "entity": "crawler-tractor-heavy-cargo-pack",
+      "detail": "\"Crawler Tractor\" names more than one cargo on the cargo list; this one is the Heavy Cargo Pack version"
+    },
+    {
+      "kind": "sameName",
+      "entity": "crawler-tractor-farm-machinery",
+      "detail": "\"Crawler Tractor\" names more than one cargo on the cargo list; this one is the Farm Machinery version"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "dry-van",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "drywall",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "dump-truck",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "dynamite",
+      "detail": "UN cell on the cargo list is \"1\", not a four-digit UN number; un left empty",
+      "field": "un"
+    },
+    {
+      "kind": "flaggedOnWiki",
+      "entity": "ethane",
+      "detail": "UN number 2059 (as shown in game) is marked on the wiki as not matching the cargo or its ADR skill; the wiki gives 1035"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "ethanol",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "excavator-bobcat-e60",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "fireworks",
+      "detail": "UN cell on the cargo list is \"1\", not a four-digit UN number; un left empty",
+      "field": "un"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "forklift-bobcat-d30",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "fuel-tank",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "geo-membranes-rolls",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "heat-exchanger",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "industrial-pallets",
+      "detail": "DLC/Patch cell is empty",
+      "field": "introducedWith"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "insulation-panels",
+      "detail": "DLC/Patch cell is empty",
+      "field": "introducedWith"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "material-handler",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "medium-truck-chassis",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "mini-excavator-bobcat-e10e",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "motor-grader",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "flaggedOnWiki",
+      "entity": "nitrocellulose",
+      "detail": "UN number 2059 (as shown in game) is marked on the wiki as not matching the cargo or its ADR skill; the wiki gives 2557"
+    },
+    {
+      "kind": "valueRange",
+      "entity": "pickups-passenger",
+      "detail": "value on the cargo list is a range (0.219–0.231); valuePerKm is empty, valuePerKmRange holds it",
+      "field": "valuePerKm"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "refrigerated-trailer",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "roof-shingles",
+      "detail": "DLC/Patch cell is empty",
+      "field": "introducedWith"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "rye",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "scissor-lift",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "seed-containers",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "service-truck",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "skid-steer-loader-bobcat-s86",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "flaggedOnWiki",
+      "entity": "solvents",
+      "detail": "UN number 3374 (as shown in game) is marked on the wiki as not matching the cargo or its ADR skill; the wiki gives 1266"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "speed-motor-boat",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "trailers",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "sameName",
+      "entity": "transformer-heavy-cargo-pack",
+      "detail": "\"Transformer\" names more than one cargo on the cargo list; this one is the Heavy Cargo Pack version"
+    },
+    {
+      "kind": "sameName",
+      "entity": "transformer",
+      "detail": "\"Transformer\" names more than one cargo on the cargo list; this one is the base game version"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "transformer",
+      "detail": "DLC/Patch cell is empty",
+      "field": "introducedWith"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "truss",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "wheat",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "unknownValue",
+      "entity": "wheel-loader-bobcat-l95",
+      "detail": "weight on the cargo list is \"???\"",
+      "field": "weightLb"
+    },
+    {
+      "kind": "linkResolvedByName",
+      "entity": "bitumen",
+      "detail": "\"Huron\" (California) links to a page that is not the city page; matched to huron by name and state"
+    },
+    {
+      "kind": "linkResolvedByName",
+      "entity": "bushnell-farms",
+      "detail": "\"Huron\" (California) links to a page that is not the city page; matched to huron by name and state"
+    },
+    {
+      "kind": "linkResolvedByName",
+      "entity": "farmers-barn",
+      "detail": "\"Huron\" (California) links to a page that is not the city page; matched to huron by name and state"
+    },
+    {
+      "kind": "skippedPage",
+      "entity": "Ford",
+      "detail": "in the company category but no Infobox Company (not a company with depots)"
+    },
+    {
+      "kind": "skippedPage",
+      "entity": "Freightliner Trucks/American Truck Simulator",
+      "detail": "in the company category but no Infobox Company (not a company with depots)"
+    },
+    {
+      "kind": "missingGameId",
+      "entity": "gallon-oil",
+      "detail": "depot type \"Gas station\" has no internal game ID on the wiki",
+      "entityType": "depotType"
+    },
+    {
+      "kind": "linkResolvedByName",
+      "entity": "global-mills",
+      "detail": "\"Huron\" (California) links to a page that is not the city page; matched to huron by name and state"
+    },
+    {
+      "kind": "skippedPage",
+      "entity": "International Trucks/American Truck Simulator",
+      "detail": "in the company category but no Infobox Company (not a company with depots)"
+    },
+    {
+      "kind": "skippedPage",
+      "entity": "Mack Trucks/American Truck Simulator",
+      "detail": "in the company category but no Infobox Company (not a company with depots)"
+    },
+    {
+      "kind": "linkResolvedByName",
+      "entity": "plaster-and-sons",
+      "detail": "\"Huron\" (California) links to a page that is not the city page; matched to huron by name and state"
+    },
+    {
+      "kind": "linkResolvedByName",
+      "entity": "sunshine-crops",
+      "detail": "\"Huron\" (California) links to a page that is not the city page; matched to huron by name and state"
+    },
+    {
+      "kind": "linkResolvedByName",
+      "entity": "sunshine-crops",
+      "detail": "\"Huron\" (California) links to a page that is not the city page; matched to huron by name and state"
+    },
+    {
+      "kind": "skippedPage",
+      "entity": "Volvo Trucks/American Truck Simulator",
+      "detail": "in the company category but no Infobox Company (not a company with depots)"
+    },
+    {
+      "kind": "missingGameId",
+      "entity": "vortex",
+      "detail": "depot type \"Gas station\" has no internal game ID on the wiki",
+      "entityType": "depotType"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "eureka",
+      "detail": "city infobox says 5 companies; company pages give 6 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "fresno",
+      "detail": "city infobox says 12 companies; company pages give 13 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "huron",
+      "detail": "city infobox says 6 companies; company pages give 7 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "los-angeles",
+      "detail": "city infobox says 17 companies; company pages give 18 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "oxnard",
+      "detail": "city page's Depots section mentions \"starbridge\"; that company page does not list Oxnard"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "oxnard",
+      "detail": "city infobox says 8 companies; company pages give 9 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "redding",
+      "detail": "city infobox says 11 companies; company pages give 13 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "san-diego",
+      "detail": "city infobox says 12 companies; company pages give 11 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "san-francisco",
+      "detail": "city infobox says 6 companies; company pages give 8 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "san-jose",
+      "detail": "city infobox says 9 companies; company pages give 10 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "santa-maria",
+      "detail": "city infobox says 7 companies; company pages give 8 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "truckee",
+      "detail": "city infobox says 5 companies; company pages give 7 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "elko",
+      "detail": "city infobox says 8 companies; company pages give 7 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "reno",
+      "detail": "city infobox says 6 companies; company pages give 5 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "nameVariant",
+      "entity": "drop-deck",
+      "detail": "cargo list writes trailer type \"Dropdeck\" for 1 cargo; treated as \"Drop Deck\""
+    },
+    {
+      "kind": "trailerModelMatch",
+      "entity": "4-bolster-logger",
+      "detail": "dealer trailer \"4 Bolster Logger\" joined to cargo-list type \"Log\" by shared cargo (Jaccard 0.75)"
+    },
+    {
+      "kind": "trailerModelMatch",
+      "entity": "d-shaped-tank",
+      "detail": "dealer trailer \"D-shaped Tank\" joined to cargo-list type \"Chemical Tank\" by shared cargo (Jaccard 0.83)"
+    },
+    {
+      "kind": "trailerModelMatch",
+      "entity": "end-dumper",
+      "detail": "dealer trailer \"End Dumper\" joined to cargo-list type \"Dumper\" by shared cargo (Jaccard 1)"
+    },
+    {
+      "kind": "trailerModelMatch",
+      "entity": "grain-hopper",
+      "detail": "dealer trailer \"Grain Hopper\" joined to cargo-list type \"Hopper\" by shared cargo (Jaccard 0.7)"
+    },
+    {
+      "kind": "trailerModelMatch",
+      "entity": "horizontal-bottom-dumper",
+      "detail": "dealer trailer \"Horizontal Bottom Dumper\" joined to cargo-list type \"Dumper\" by shared cargo (Jaccard 1)"
+    },
+    {
+      "kind": "trailerModelMatch",
+      "entity": "reefer",
+      "detail": "dealer trailer \"Reefer\" joined to cargo-list type \"Refrigerated\" by shared cargo (Jaccard 0.98)"
+    },
+    {
+      "kind": "unmatchedTrailer",
+      "entity": "wooden-lowboy",
+      "detail": "dealer trailer \"Wooden Lowboy\" matches no trailer type on the cargo list; left out"
+    },
+    {
+      "kind": "noTrailerPage",
+      "entity": "trailers",
+      "detail": "Trailer types on the cargo list without a dealer trailer page; price, ownable and articulated are unknown.",
+      "ids": [
+        "blade-trailer",
+        "car-transporter",
+        "frac-tank",
+        "house-transporter",
+        "knuckleboom-loader",
+        "lowboy",
+        "lowboy-55l",
+        "lowboy-boat",
+        "lowboy-double",
+        "lowboy-triple",
+        "mobile-barrier",
+        "truck-transporter",
+        "tub-grinder",
+        "van-transporter"
+      ]
+    },
+    {
+      "kind": "countMismatch",
+      "entity": "cargo",
+      "detail": "cargo list summary (as of 1.61) says 217 base cargoes; the table has 220"
+    },
+    {
+      "kind": "countMismatch",
+      "entity": "cargo",
+      "detail": "cargo list summary (as of 1.61) says 16 cargoes in Special Transport; the table has 14"
+    },
+    {
+      "kind": "countMismatch",
+      "entity": "cargo",
+      "detail": "cargo list summary (as of 1.61) says 7 cargoes in Forest Machinery; the table has 8"
+    },
+    {
+      "kind": "countMismatch",
+      "entity": "cargo",
+      "detail": "cargo list summary (as of 1.61) says 10 cargoes in Farm Machinery; the table has 9"
+    },
+    {
+      "kind": "countMismatch",
+      "entity": "cargo",
+      "detail": "cargo list summary (as of 1.61) says 294 cargoes in total; the table has 295"
+    },
+    {
+      "kind": "unknownCargo",
+      "entity": "pickups",
+      "detail": "\"Pickups\" is not on the cargo list (left out)",
+      "seenIn": [
+        "18 Wheels Garage / Truck trailer service",
+        "American Lines / Storage",
+        "Angel City Airport / (unnamed)",
+        "Bitumen / Service shop",
+        "Bushnell Farms / Livestock auction",
+        "Coastline Mining / Quarry",
+        "Coastline Mining / Borax plant",
+        "Darwing / Aircraft plant",
+        "Drake Car Dealer / Dealership",
+        "Elegrid / Power network service",
+        "Gallon Oil / Service shop",
+        "HMS Machinery / Service shop",
+        "LA Seaport / (unnamed)",
+        "Lone Star Forwarding / Depot",
+        "Lumenauto / Dealership",
+        "Oakland Shippers / (unnamed)",
+        "Port of San Francisco / (unnamed)",
+        "Rail Export / Depot",
+        "Steeler / Workshop",
+        "Sunshine Crops / Garage",
+        "Voltison Motors / Export terminal"
+      ]
+    },
+    {
+      "kind": "unknownCargo",
+      "entity": "boom-lift",
+      "detail": "\"Boom Lift\" is not on the cargo list (left out)",
+      "seenIn": [
+        "American Lines / Storage",
+        "Angel City Airport / (unnamed)",
+        "Coastline Mining / Borax plant",
+        "Darwing / Aircraft plant",
+        "Elegrid / Electric substation",
+        "Enterpriser / Warehouse",
+        "Gallon Oil / Oil well",
+        "Gallon Oil / Service shop",
+        "HMS Machinery / Service shop",
+        "LA Seaport / (unnamed)",
+        "Lone Star Forwarding / Depot",
+        "MWM / Waste transfer station",
+        "Oakland Shippers / (unnamed)",
+        "Plaster & Sons / Building foundation",
+        "Plaster & Sons / Garage",
+        "Rail Export / Depot",
+        "Sell Goods / Warehouse",
+        "Starbridge / Warehouse",
+        "Venture / Warehouse",
+        "WDS / Waste transfer station"
+      ]
+    },
+    {
+      "kind": "unknownCargo",
+      "entity": "dyrwall",
+      "detail": "\"Dyrwall\" is not on the cargo list (left out)",
+      "seenIn": [
+        "American Lines / Storage"
+      ]
+    },
+    {
+      "kind": "unknownCargo",
+      "entity": "concrete-tubes",
+      "detail": "\"Concrete Tubes\" is not on the cargo list (left out)",
+      "seenIn": [
+        "American Lines / Work site",
+        "Angel City Airport / (unnamed)",
+        "Bitumen / Roadworks",
+        "LA Seaport / (unnamed)",
+        "Lone Star Forwarding / Depot",
+        "Oakland Shippers / (unnamed)",
+        "Plaster & Sons / Building construction site",
+        "Plaster & Sons / Building foundation",
+        "Plaster & Sons / Warehouse",
+        "Port of San Francisco / (unnamed)",
+        "Rail Export / Depot"
+      ]
+    },
+    {
+      "kind": "unknownCargo",
+      "entity": "lumber",
+      "detail": "\"Lumber\" is not on the cargo list (left out)",
+      "seenIn": [
+        "Angel City Airport / (unnamed)",
+        "Bloomscape / Storage",
+        "Bushnell Farms / Livestock auction",
+        "Deepgrove / Large sawmill",
+        "Deepgrove / Small sawmill",
+        "Farmer's Barn / Market",
+        "Heartwood Furniture / Factory",
+        "Home Store / Market",
+        "LA Seaport / (unnamed)",
+        "Lone Star Forwarding / Depot",
+        "Oakland Shippers / (unnamed)",
+        "Plaster & Sons / Building construction site",
+        "Plaster & Sons / Building foundation",
+        "Plaster & Sons / House construction site",
+        "Plaster & Sons / Warehouse",
+        "Port of San Francisco / (unnamed)",
+        "Rail Export / Depot",
+        "Sunshine Crops / Farm",
+        "Walden's / Storage"
+      ]
+    },
+    {
+      "kind": "unknownCargo",
+      "entity": "recreational-vehicle",
+      "detail": "\"Recreational Vehicle\" is not on the cargo list (left out)",
+      "seenIn": [
+        "Angel City Airport / (unnamed)",
+        "LA Seaport / (unnamed)",
+        "Lone Star Forwarding / Depot",
+        "Lumenauto / Dealership",
+        "Oakland Shippers / (unnamed)",
+        "Port of San Francisco / (unnamed)",
+        "Rail Export / Depot",
+        "Voltison Motors / Export terminal",
+        "Voltison Motors / Plant"
+      ]
+    },
+    {
+      "kind": "unknownCargo",
+      "entity": "reserovoir-tank",
+      "detail": "\"Reserovoir Tank\" is not on the cargo list (left out)",
+      "seenIn": [
+        "Angel City Airport / (unnamed)"
+      ]
+    },
+    {
+      "kind": "unknownCargo",
+      "entity": "krone-big-m-450",
+      "detail": "\"Krone BiG M 450\" is not on the cargo list (left out)",
+      "seenIn": [
+        "Angel City Airport / (unnamed)",
+        "Bushnell Farms / Farm",
+        "Bushnell Farms / Livestock auction",
+        "Calimondo / Almond farm",
+        "HMS Machinery / Service shop",
+        "LA Seaport / (unnamed)",
+        "Lone Star Forwarding / Depot",
+        "Mon Coeur / Vineyard",
+        "Oakland Shippers / (unnamed)",
+        "Rail Export / Depot",
+        "Sunshine Crops / Farm",
+        "Sunshine Crops / Garage"
+      ]
+    },
+    {
+      "kind": "unknownCargo",
+      "entity": "used-packages",
+      "detail": "\"Used Packages\" is not on the cargo list (left out)",
+      "seenIn": [
+        "Eddy's / Market",
+        "Shop Town / Market",
+        "Wallbert / Market"
+      ]
+    },
+    {
+      "kind": "unknownCargo",
+      "entity": "backhoe",
+      "detail": "\"Backhoe\" is not on the cargo list (left out)",
+      "seenIn": [
+        "GPW / Garage"
+      ]
+    },
+    {
+      "kind": "unknownCargo",
+      "entity": "work-trukc-chassis",
+      "detail": "\"Work Trukc Chassis\" is not on the cargo list (left out)",
+      "seenIn": [
+        "Port of San Francisco / (unnamed)"
+      ]
+    },
+    {
+      "kind": "unknownCargo",
+      "entity": "wire-road-coil",
+      "detail": "\"Wire Road Coil\" is not on the cargo list (left out)",
+      "seenIn": [
+        "Rail Export / Depot"
+      ]
+    },
+    {
+      "kind": "unknownCargo",
+      "entity": "heat-exchangre",
+      "detail": "\"Heat Exchangre\" is not on the cargo list (left out)",
+      "seenIn": [
+        "Venture / Warehouse"
+      ]
+    },
+    {
+      "kind": "nameVariant",
+      "entity": "frozen-foods",
+      "detail": "\"Frozen Foods\" is not on the cargo list; matched to \"Frozen Food\" (singular/plural)",
+      "seenIn": [
+        "Angel City Airport / (unnamed)"
+      ]
+    },
+    {
+      "kind": "nameVariant",
+      "entity": "transformers",
+      "detail": "\"Transformers\" is not on the cargo list; matched to \"Transformer\" (singular/plural)",
+      "seenIn": [
+        "Angel City Airport / (unnamed)"
+      ]
+    },
+    {
+      "kind": "nameVariant",
+      "entity": "dumpsters",
+      "detail": "\"Dumpsters\" is not on the cargo list; matched to \"Dumpster\" (singular/plural)",
+      "seenIn": [
+        "Farmer's Barn / Market",
+        "Home Store / Market"
+      ]
+    },
+    {
+      "kind": "nameVariant",
+      "entity": "concrete-barriers",
+      "detail": "\"Concrete Barriers\" is not on the cargo list; matched to \"Concrete Barrier\" (singular/plural)",
+      "seenIn": [
+        "Oakland Shippers / (unnamed)",
+        "Rail Export / Depot"
+      ]
+    },
+    {
+      "kind": "nameVariant",
+      "entity": "mobile-air-compressors",
+      "detail": "\"Mobile Air Compressors\" is not on the cargo list; matched to \"Mobile Air Compressor\" (singular/plural)",
+      "seenIn": [
+        "Plaster & Sons / Garage"
+      ]
+    },
+    {
+      "kind": "nameVariant",
+      "entity": "yard-trucks",
+      "detail": "\"Yard Trucks\" is not on the cargo list; matched to \"Yard Truck\" (singular/plural)",
+      "seenIn": [
+        "Port of San Francisco / (unnamed)"
+      ]
+    },
+    {
+      "kind": "nameVariant",
+      "entity": "cable",
+      "detail": "\"Cable\" is not on the cargo list; matched to \"Cables\" (singular/plural)",
+      "seenIn": [
+        "Rail Export / Depot"
+      ]
+    },
+    {
+      "kind": "missingGameId",
+      "entity": "cities",
+      "detail": "The wiki gives no internal game IDs for cities.",
+      "entityType": "city",
+      "ids": [
+        "bakersfield",
+        "barstow",
+        "blythe",
+        "el-centro",
+        "eureka",
+        "fresno",
+        "hilt",
+        "huron",
+        "indio",
+        "los-angeles",
+        "modesto",
+        "mojave",
+        "oakland",
+        "oxnard",
+        "redding",
+        "sacramento",
+        "san-diego",
+        "san-francisco",
+        "san-jose",
+        "santa-cruz",
+        "santa-maria",
+        "stockton",
+        "truckee",
+        "ukiah",
+        "carson-city",
+        "elko",
+        "ely",
+        "jackpot",
+        "las-vegas",
+        "pioche",
+        "primm",
+        "reno",
+        "tonopah",
+        "winnemucca"
+      ]
+    },
+    {
+      "kind": "missingGameId",
+      "entity": "cargo",
+      "detail": "The wiki gives no internal game IDs for cargo.",
+      "entityType": "cargo",
+      "ids": [
+        "agricultural-telehandler-bobcat-tl3070",
+        "air-conditioner",
+        "air-conditioning-units",
+        "aircraft-engine",
+        "aircraft-wing",
+        "all-terrain-crane",
+        "almond-boxes",
+        "aluminum-ingots",
+        "aluminum-profiles",
+        "anhydrous-ammonia",
+        "aromatics",
+        "articulated-hauler",
+        "articulated-hauler-volvo-a25g",
+        "auger-wagon",
+        "autonomous-tractor",
+        "backhoe-loader",
+        "backhoe-loader-jcb-4cx",
+        "barley",
+        "batteries",
+        "beet-harvester",
+        "beverages",
+        "big-tires",
+        "boat",
+        "boom-lift-articulated",
+        "boom-lift-telescopic",
+        "borates",
+        "boric-acid",
+        "bromine",
+        "bulldozer",
+        "bus-hood",
+        "butter",
+        "buttermilk",
+        "cable-reel",
+        "cables",
+        "cans",
+        "car-parts",
+        "cars",
+        "cars-small",
+        "cars-mixed",
+        "cars-suvs",
+        "cattle-equipment",
+        "cement",
+        "cheese",
+        "chemical-granules",
+        "chlorine",
+        "circuit-breakers",
+        "clamshell-bucket",
+        "clothes",
+        "compact-generators-jcb-g100rs",
+        "compact-tractor",
+        "compactor-volvo-sd160b",
+        "compressor-bobcat-pa127v",
+        "computers",
+        "concrete-barrier",
+        "concrete-tubes-small",
+        "concrete-tubes-large",
+        "construction-houses",
+        "cooling-tower",
+        "corn",
+        "corn-head",
+        "cotton-harvester",
+        "cotton-lint",
+        "cotton-seed",
+        "crawler-carrier",
+        "crawler-tractor-heavy-cargo-pack",
+        "crawler-tractor-farm-machinery",
+        "crude-oil",
+        "curtains",
+        "diesel",
+        "disc-harrows",
+        "dry-fruits",
+        "dry-milk",
+        "dry-van",
+        "drywall",
+        "dump-truck",
+        "dumpster",
+        "dynamite",
+        "electric-dumpster-jcb-htd-5e",
+        "electric-mini-excavator-jcb-19c-e",
+        "electronic-components",
+        "empty-bottles",
+        "empty-pallets",
+        "ethane",
+        "ethanol",
+        "excavated-soil",
+        "excavator",
+        "excavator-bobcat-e60",
+        "excavator-volvo-ec220e",
+        "excavator-volvo-ew240e-mh",
+        "excavator-jcb-245xr",
+        "fertilizer",
+        "fertilizer-tank",
+        "fertilizer-spreader",
+        "fireworks",
+        "flour",
+        "forage-harvester",
+        "forklift-bobcat-d30",
+        "forklifts",
+        "forwarder",
+        "frac-tank",
+        "frozen-food",
+        "frozen-fruits",
+        "frozen-vegetables",
+        "fruit-juice",
+        "fruits",
+        "fuel-tank",
+        "furniture",
+        "garbage-truck",
+        "gasoline",
+        "generator-set",
+        "geo-membranes-rolls",
+        "giant-silo",
+        "glass",
+        "glass-racks",
+        "grain",
+        "gravel",
+        "guard-rails",
+        "gypsum",
+        "harvester",
+        "haul-truck-chassis",
+        "haul-truck-hull",
+        "hay",
+        "heat-exchanger",
+        "heavy-bulldozer",
+        "home-accessories",
+        "house-prefabs",
+        "household-appliances",
+        "huge-construction",
+        "huge-tires",
+        "hydrochloric-acid",
+        "ibc-containers",
+        "ice-cream",
+        "industrial-pallets",
+        "insulation-panels",
+        "iron-pipes",
+        "jet-engine-inlet-cowl",
+        "kenworth-trucks",
+        "knuckleboom-loader",
+        "krone-big-m-45",
+        "krone-big-pack-1290-xc-hdp",
+        "krone-big-x-1180",
+        "krone-easycut-b-880-cv",
+        "krone-gx-440",
+        "krone-swadro-tc-1370",
+        "krone-varipack-v-190-xc",
+        "large-reservoir-tank",
+        "large-tubes",
+        "lemonade",
+        "lift-truck",
+        "lift-truck-chassis",
+        "limestone",
+        "live-cattle",
+        "live-pigs",
+        "live-sheep",
+        "log-harvester",
+        "log-loader",
+        "log-stacker",
+        "logs",
+        "lumber-beams",
+        "lumber-boards",
+        "lpg",
+        "lye",
+        "machine-parts",
+        "massive-tech-part",
+        "material-handler",
+        "meat",
+        "medium-truck-chassis",
+        "mercuric-chloride",
+        "metal-coil",
+        "metro-railcar",
+        "milk",
+        "milling-machine",
+        "mini-excavator-bobcat-e10e",
+        "mix-tank",
+        "mobile-air-compressor",
+        "mobile-barrier",
+        "mobile-crusher",
+        "mobile-screener",
+        "mobile-stacker",
+        "mooring-buoy",
+        "mortar",
+        "motor-grader",
+        "moving-containers",
+        "mulcher",
+        "municipal-truck",
+        "nitrocellulose",
+        "nuts",
+        "office-supplies",
+        "oil-pipes",
+        "packaged-food",
+        "packed-lumber",
+        "paint",
+        "paper",
+        "pelleted-animal-food",
+        "pesticides",
+        "peterbilt-trucks",
+        "pickups-crane",
+        "pickups-passenger",
+        "planter",
+        "plows",
+        "potassium",
+        "potatoes",
+        "power-generator",
+        "powerpack-jcb-125qe",
+        "pressure-tank",
+        "propane",
+        "pumpjack",
+        "railcar",
+        "railcar-mover",
+        "rails",
+        "raw-milk",
+        "recreational-vehicle-motorhomes",
+        "recreational-vehicle-campers",
+        "refrigerated-trailer",
+        "reservoir-tank",
+        "rice",
+        "roadroller",
+        "rock-bucket-volvo-spn-p-t-seg",
+        "roof-shingles",
+        "rough-terrain-forklift",
+        "rye",
+        "salt",
+        "sand",
+        "sawdust-panels",
+        "scaffolding",
+        "school-bus",
+        "scissor-lift",
+        "scrap-metals",
+        "scraper",
+        "scrapped-cars",
+        "seed-containers",
+        "service-boat",
+        "service-truck",
+        "silane",
+        "silica",
+        "site-dumper-jcb-6t-2",
+        "skid-steer-loader-bobcat-s86",
+        "skidder",
+        "soda-ash",
+        "solvents",
+        "soybean",
+        "space-container",
+        "speed-motor-boat",
+        "sprayer",
+        "square-baler",
+        "square-tubing",
+        "stones",
+        "stumper",
+        "sugar",
+        "sugar-beet",
+        "sulphur",
+        "sulphuric-acid",
+        "tableware",
+        "talc-powder",
+        "tamping-machine",
+        "telescopic-handler",
+        "telescopic-handler-jcb-540-180",
+        "tires",
+        "toys",
+        "tractor",
+        "tractor-jcb-fastrac-4220",
+        "trailers",
+        "train-axles",
+        "transformer-heavy-cargo-pack",
+        "transformer",
+        "transport-helicopter",
+        "trees",
+        "truss",
+        "tub-grinder",
+        "turnkey-house-construction",
+        "tvs",
+        "underground-loader",
+        "used-packaging",
+        "utility-poles",
+        "utility-terrain-vehicles",
+        "vegetables",
+        "ventilation-shaft",
+        "waste-paper",
+        "western-star-trucks",
+        "wheat",
+        "wheel-loader",
+        "wheel-loader-bobcat-l95",
+        "wheel-loader-volvo-l250h",
+        "wheel-loader-jcb-457",
+        "wheels-with-volvo-rims",
+        "wind-turbine-blade",
+        "wind-turbine-nacelle",
+        "wind-turbine-tower",
+        "windrower",
+        "wire-rod-coil",
+        "wood-chipper",
+        "wood-shavings",
+        "work-truck-chassis",
+        "yard-truck",
+        "yogurt"
+      ]
+    }
+  ]
+}
