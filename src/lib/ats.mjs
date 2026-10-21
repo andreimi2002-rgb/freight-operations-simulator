@@ -86,31 +86,24 @@ export function windSpeed(kmh, system) {
     : { value: Math.round(kmhToMph(kmh)), unit: 'mph' };
 }
 
-// ---- Weather codes (WMO, as used by Open-Meteo) -------------------------------
+// ---- Weather (MET Norway via /api/weather/<city>) ------------------------------
 
-/** WMO weather code → icon key and i18n label key. */
-export function weatherKind(code) {
-  const c = Number(code);
-  if (c === 0) return 'clear';
-  if (c === 1 || c === 2) return 'partly';
-  if (c === 3) return 'cloudy';
-  if (c === 45 || c === 48) return 'fog';
-  if ((c >= 51 && c <= 57)) return 'drizzle';
-  if ((c >= 61 && c <= 67) || (c >= 80 && c <= 82)) return 'rain';
-  if ((c >= 71 && c <= 77) || c === 85 || c === 86) return 'snow';
-  if (c >= 95 && c <= 99) return 'storm';
-  return 'unknown';
+/** Sky category from the weather function (MET symbol, simplified) → icon and label key. */
+export function weatherKind(sky, intensity = null) {
+  switch (sky) {
+    case "clear": return "clear";
+    case "partly": return "partly";
+    case "cloudy": return "cloudy";
+    case "fog": return "fog";
+    case "rain": return intensity === "light" ? "drizzle" : "rain";
+    case "sleet": return "sleet";
+    case "snow": return "snow";
+    case "thunder": return "storm";
+    default: return "unknown";
+  }
 }
 
-/** Open-Meteo forecast URL for a city (metric; the page converts). */
-export function openMeteoUrl({ lat, lon }) {
-  const p = new URLSearchParams({
-    latitude: String(lat),
-    longitude: String(lon),
-    current: 'temperature_2m,apparent_temperature,weather_code,wind_speed_10m,precipitation,is_day',
-    daily: 'weather_code,temperature_2m_max,temperature_2m_min',
-    timezone: 'auto',
-    forecast_days: '3',
-  });
-  return `https://api.open-meteo.com/v1/forecast?${p}`;
+/** Path of our weather function for a city. */
+export function weatherPath(cityId) {
+  return `/api/weather/${encodeURIComponent(cityId)}`;
 }

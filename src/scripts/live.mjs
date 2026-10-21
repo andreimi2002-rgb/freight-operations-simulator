@@ -1,7 +1,7 @@
 // Live parts of the pages, run in the browser: local clock, real weather
-// (Open-Meteo, cached 15 minutes) and the US / metric unit switch.
+// (MET Norway through /api/weather/<city>, cached 15 minutes) and the US / metric unit switch.
 // Text comes from the page (data attributes and a JSON block), never from here.
-import { temperature, windSpeed, precipitation, weatherKind, openMeteoUrl, UNIT_SYSTEMS } from '../lib/ats.mjs';
+import { temperature, windSpeed, precipitation, weatherKind, weatherPath, UNIT_SYSTEMS } from '../lib/ats.mjs';
 
 const UNITS_KEY = 'fw-units';
 const CACHE_MS = 15 * 60 * 1000;
@@ -62,15 +62,15 @@ function initClocks() {
 }
 
 // ---- Weather ---------------------------------------------------------------
-async function fetchWeather(lat, lon) {
-  const key = `fw-wx-${lat},${lon}`;
+async function fetchWeather(cityId) {
+  const key = `fw-wx2-${cityId}`;
   try {
-    const cached = JSON.parse(store(key) || 'null');
+    const cached = JSON.parse(store(key) || "null");
     if (cached && Date.now() - cached.at < CACHE_MS) return cached;
   } catch { /* ignore broken cache */ }
-  const res = await fetch(openMeteoUrl({ lat, lon }));
-  if (!res.ok) throw new Error(`Open-Meteo ${res.status}`);
-  const data = await res.json();
+  const res = await fetch(weatherPath(cityId));
+  const data = await res.json().catch(() => null);
+  if (!res.ok || !data?.ok) throw new Error(`weather ${res.status}`);
   const entry = { at: Date.now(), data };
   store(key, JSON.stringify(entry));
   return entry;
@@ -82,57 +82,55 @@ function icon(kind, night) {
 }
 
 function renderWeather(box, entry, units, t) {
-  const { current, daily, timezone } = entry.data;
-  const kind = weatherKind(current.weather_code);
-  const night = current.is_day === 0;
-  const temp = temperature(current.temperature_2m, units);
-  const feels = temperature(current.apparent_temperature, units);
-  const wind = windSpeed(current.wind_speed_10m, units);
-  const locale = box.dataset.locale || 'en-US';
+  const { now: cur, days, timeZone } = entry.data;
+  const kind = weatherKind(cur.sky, cur.intensity);
+  const night = Boolean(cur.night);
+  const locale = box.dataset.locale || "en-US";
   const q = (sel) => box.querySelector(sel);
-  q('[data-wx-icon]').replaceChildren(icon(kind, night));
-  q('[data-wx-temp]').textContent = `${temp.value}${temp.unit}`;
-  q('[data-wx-label]').textContent = (t.weather?.[kind] ?? kind) + (night && kind === 'clear' ? ` (${t.weather?.night ?? 'night'})` : '');
-  q('[data-wx-feels]').textContent = fill(t.city?.feelsLike, { t: `${feels.value}${feels.unit}` });
-  q('[data-wx-wind]').textContent = fill(t.city?.wind, { v: `${wind.value} ${wind.unit}` });
-  const pr = precipitation(current.precipitation, units);
-  q('[data-wx-precip]').textContent = fill(t.city?.precipitation, { v: `${pr.value} ${pr.unit}` });
-  const updated = new Intl.DateTimeFormat(locale, { timeZone: timezone, hour: 'numeric', minute: '2-digit' }).format(new Date(entry.at));
-  q('[data-wx-updated]').textContent = fill(t.city?.weatherUpdated, { time: updated });
-  const days = q('[data-wx-days]');
-  days.replaceChildren();
-  daily.time.forEach((day, i) => {
-    const li = document.createElement('li');
-    const name = i === 0 ? (t.city?.today ?? 'Today') : new Intl.DateTimeFormat(locale, { weekday: 'short', timeZone: 'UTC' }).format(new Date(`${day}T12:00:00Z`));
-    const hi = temperature(daily.temperature_2m_max[i], units);
-    const lo = temperature(daily.temperature_2m_min[i], units);
-    const k = weatherKind(daily.weather_code[i]);
-    const label = document.createElement('span');
-    label.className = 'wx-day-name';
+  const temp = cur.tempC == null ? null : temperature(cur.tempC, units);
+  q("[data-wx-icon]").replaceChildren(icon(kind, night));
+  q("[data-wx-temp]").textContent = temp ? `${temp.value}${temp.unit}` : "–";
+  q("[data-wx-label]").textContent = (t.weather?.[kind] ?? kind) + (night && kind === "clear" ? ` (${t.weather?.night ?? "night"})` : "");
+  const wind = cur.windKmh == null ? null : windSpeed(cur.windKmh, units);
+  q("[data-wx-wind]").textContent = wind ? fill(t.city?.wind, { v: `${wind.value} ${wind.unit}` }) : "";
+  const pr = precipitation(cur.precipMm ?? 0, units);
+  q("[data-wx-precip]").textContent = fill(t.city?.precipitation, { v: `${pr.value} ${pr.unit}` });
+  const updated = new Intl.DateTimeFormat(locale, { timeZone, hour: "numeric", minute: "2-digit" }).format(new Date(entry.data.fetchedAt || entry.at));
+  q("[data-wx-updated]").textContent = fill(t.city?.weatherUpdated, { time: updated });
+  const list = q("[data-wx-days]");
+  list.replaceChildren();
+  days.forEach((day, i) => {
+    const li = document.createElement("li");
+    const name = i === 0 ? (t.city?.today ?? "Today") : new Intl.DateTimeFormat(locale, { weekday: "short", timeZone: "UTC" }).format(new Date(`${day.date}T12:00:00Z`));
+    const k = weatherKind(day.sky, day.intensity);
+    const label = document.createElement("span");
+    label.className = "wx-day-name";
     label.textContent = name;
-    const ic = document.createElement('span');
-    ic.className = 'wx-day-icon';
-    ic.setAttribute('role', 'img');
-    ic.setAttribute('aria-label', t.weather?.[k] ?? k);
+    const ic = document.createElement("span");
+    ic.className = "wx-day-icon";
+    ic.setAttribute("role", "img");
+    ic.setAttribute("aria-label", t.weather?.[k] ?? k);
     ic.append(icon(k, false));
-    const range = document.createElement('span');
-    range.className = 'wx-day-range';
-    range.textContent = `${hi.value}° / ${lo.value}°`;
+    const range = document.createElement("span");
+    range.className = "wx-day-range";
+    const hi = day.maxC == null ? null : temperature(day.maxC, units);
+    const lo = day.minC == null ? null : temperature(day.minC, units);
+    range.textContent = hi && lo ? `${hi.value}° / ${lo.value}°` : "–";
     li.append(label, ic, range);
-    days.append(li);
+    list.append(li);
   });
-  box.dataset.state = 'ready';
+  box.dataset.state = "ready";
 }
 
 function initWeather() {
-  const boxes = [...document.querySelectorAll('[data-wx-lat]')];
+  const boxes = [...document.querySelectorAll('[data-wx-city]')];
   if (!boxes.length) return () => {};
   const t = texts();
   const cache = new Map();
   const load = async (box) => {
     box.dataset.state = 'loading';
     try {
-      const entry = await fetchWeather(box.dataset.wxLat, box.dataset.wxLon);
+      const entry = await fetchWeather(box.dataset.wxCity);
       cache.set(box, entry);
       renderWeather(box, entry, currentUnits(), t);
     } catch {

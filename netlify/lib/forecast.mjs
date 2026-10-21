@@ -1,10 +1,10 @@
 // City weather from MET Norway Locationforecast 2.0 (compact): no key, CC BY 4.0.
 // Terms: identify with a User-Agent that includes contact information, at most 4 decimals in
 // coordinates, respect caching (Expires). https://api.met.no/doc/TermsOfService
-// The answer is reduced to a few values: now, the next 3 local days and a compact series for
-// picking the weather at a given time (the load's loading and unloading windows).
+// The answer is reduced to what the city page shows: now and the next 3 local days (today first).
+// Ported from FOS (git tag fos-final, netlify/lib/weather/forecast.mjs).
 
-export const USER_AGENT = "FOS/0.13 (+https://github.com/andreimi2002-rgb/freight-operations-simulator)";
+export const USER_AGENT = "FreightWorld/2.0 (+https://github.com/andreimi2002-rgb/freight-operations-simulator)";
 export const MET_URL = "https://api.met.no/weatherapi/locationforecast/2.0/compact";
 export const SOURCE = {
   name: "MET Norway — Locationforecast 2.0",
@@ -63,12 +63,12 @@ export function normalizeForecast(json, { timeZone, now = Date.now(), days = 3 }
   if (!series.length) throw new Error("forecast has no future entries");
   const current = series.reduce((best, e) => (Math.abs(Date.parse(e.t) - now) < Math.abs(Date.parse(best.t) - now) ? e : best));
 
-  // Daily summaries for the next `days` local calendar days (starting tomorrow).
+  // Daily summaries for `days` local calendar days, starting today (today covers the hours left).
   const today = localParts(new Date(now).toISOString(), timeZone).date;
   const byDay = new Map();
   for (const e of series) {
     const { date, hour } = localParts(e.t, timeZone);
-    if (date <= today) continue;
+    if (date < today) continue;
     if (!byDay.has(date)) byDay.set(date, []);
     byDay.get(date).push({ ...e, hour });
   }
@@ -100,7 +100,6 @@ export function normalizeForecast(json, { timeZone, now = Date.now(), days = 3 }
     updatedAt: json.properties.meta?.updated_at || null,
     now: { t: current.t, tempC: current.tempC, windKmh: current.windKmh, windDeg: current.windDeg, precipMm: current.precipMm, stepH: current.stepH, sky: current.sky, intensity: current.intensity, night: current.night },
     days: daily,
-    series: series.map(({ t, stepH, tempC, windKmh, precipMm, sky, intensity, night }) => ({ t, stepH, tempC, windKmh, precipMm, sky, intensity, night })),
   };
 }
 

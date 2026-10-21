@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import {
   cityPath, cityParams, statesWithCities, cityCompanies, cityCargoCounts,
-  temperature, windSpeed, precipitation, weatherKind, openMeteoUrl,
+  temperature, windSpeed, precipitation, weatherKind, weatherPath,
 } from '../src/lib/ats.mjs';
 import { acceptLicence, looksLikeAPhoto, toPhoto } from '../scripts/photos/lib/commons.mjs';
 
@@ -57,22 +57,18 @@ test('units: US by default values, metric on request', () => {
   assert.deepEqual(precipitation(1.26, 'metric'), { value: 1.3, unit: 'mm' });
 });
 
-test('weather codes map to known kinds, each with a label', () => {
-  const cases = { 0: 'clear', 2: 'partly', 3: 'cloudy', 45: 'fog', 53: 'drizzle', 63: 'rain', 81: 'rain', 73: 'snow', 86: 'snow', 95: 'storm', 4: 'unknown' };
-  for (const [code, kind] of Object.entries(cases)) {
-    assert.equal(weatherKind(code), kind, `code ${code}`);
+test('sky categories from the weather function map to kinds, each with a label', () => {
+  const cases = [["clear", null, "clear"], ["partly", null, "partly"], ["cloudy", null, "cloudy"], ["fog", null, "fog"], ["rain", "light", "drizzle"], ["rain", "heavy", "rain"], ["sleet", null, "sleet"], ["snow", null, "snow"], ["thunder", null, "storm"], [null, null, "unknown"]];
+  for (const [sky, intensity, kind] of cases) {
+    assert.equal(weatherKind(sky, intensity), kind, String(sky));
     assert.ok(en.weather[kind], `no label for ${kind}`);
   }
 });
 
-test('the Open-Meteo request needs no key and asks for what the page shows', () => {
-  const url = new URL(openMeteoUrl({ lat: 38.5, lon: -121.5 }));
-  assert.equal(url.host, 'api.open-meteo.com');
-  assert.equal(url.searchParams.get('latitude'), '38.5');
-  assert.ok(!url.searchParams.has('apikey'));
-  for (const f of ['temperature_2m', 'weather_code', 'wind_speed_10m', 'precipitation', 'is_day']) {
-    assert.ok(url.searchParams.get('current').includes(f), f);
-  }
+test('the page asks our own weather function, never a third party directly', () => {
+  assert.equal(weatherPath("sacramento"), "/api/weather/sacramento");
+  const live = readFileSync(root + "src/scripts/live.mjs", "utf8");
+  assert.doesNotMatch(live, /open-meteo|api.met.no/i);
 });
 
 test('every facility in the data has a label', () => {
