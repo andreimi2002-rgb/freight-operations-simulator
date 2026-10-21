@@ -22,6 +22,7 @@ Not affiliated with SCS Software. No images from the games are stored.
 | `cargo.json` | The complete ATS cargo catalog from the wiki cargo list: weight (lb), value per km (`unit_reward_per_km`), UN number, hazmat class, skills, trailer types, DLC. |
 | `trailers.json` | Trailer types named on the cargo list, each with the cargo it carries and the dealer trailer models (wiki trailer pages) that belong to it. |
 | `aliases.json` | Owner-approved corrections for cargo names that do not match the cargo list (typos, a different wording, generic names mapped to every variant). Edited by hand. |
+| `distances.json` | Estimated road distances (km) between every ordered pair of cities, from OSRM on OpenStreetMap roads (ODbL, © OpenStreetMap contributors). Marked as estimates; `calibrationFactor` will hold a correction once checked against in-game distances. Written by `scripts/ats/distances.mjs`. |
 | `issues.json` | Everything to check by hand: empty values, contradictions between pages, names that do not match, counts that differ. |
 
 Every file has a `meta` block with the source, licence, retrieval date, attribution and generator.
