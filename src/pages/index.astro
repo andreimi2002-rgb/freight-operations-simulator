@@ -6,7 +6,7 @@ import { getI18n } from '../i18n/index.mjs';
 const { t } = getI18n();
 const pillars = [
   { id: 'city', stage: 2, href: '/ats' },
-  { id: 'board', stage: 3 },
+  { id: 'board', stage: 3, href: '/ats/planner' },
   { id: 'job', stage: 4 },
 ];
 ---
@@ -25,7 +25,7 @@ const pillars = [
   </section>
 
   <div class="container stack">
-    <DeparturesBoard />
+    <DeparturesBoard featured />
 
     <section aria-labelledby="pillars-title">
       <h2 id="pillars-title" class="section-title">{t('home.pillarsTitle')}</h2>

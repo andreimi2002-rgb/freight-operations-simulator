@@ -107,3 +107,35 @@ export function weatherKind(sky, intensity = null) {
 export function weatherPath(cityId) {
   return `/api/weather/${encodeURIComponent(cityId)}`;
 }
+
+// ---- Jobs: distance, weight and time formatting ------------------------------------
+
+export function kmToMi(km) { return km / 1.609344; }
+
+/** Distance from km in the chosen system, rounded to whole units. */
+export function distance(km, system) {
+  return system === 'metric'
+    ? { value: Math.round(km), unit: 'km' }
+    : { value: Math.round(kmToMi(km)), unit: 'mi' };
+}
+
+/** Weight from lb in the chosen system: lb as given, or kg rounded to 10. */
+export function weight(lb, system) {
+  return system === 'metric'
+    ? { value: Math.round(lbToKg(lb) / 10) * 10, unit: 'kg' }
+    : { value: lb, unit: 'lb' };
+}
+
+/** Local date (YYYY-MM-DD) and hour (0-23) now in a time zone. */
+export function localDateHour(timeZone, now = new Date()) {
+  const parts = new Intl.DateTimeFormat('en-CA', { timeZone, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', hourCycle: 'h23' }).formatToParts(now);
+  const get = (t) => parts.find((p) => p.type === t).value;
+  return { date: `${get('year')}-${get('month')}-${get('day')}`, hour: Number(get('hour')) % 24 };
+}
+
+/** "2:38 PM" for minutes after local midnight; nextDay true when it passes midnight. */
+export function clockTime(minutes, locale = 'en-US') {
+  const m = ((minutes % 1440) + 1440) % 1440;
+  const text = new Intl.DateTimeFormat(locale, { timeZone: 'UTC', hour: 'numeric', minute: '2-digit' }).format(new Date(Date.UTC(2000, 0, 1, 0, m)));
+  return { text, nextDay: minutes >= 1440 };
+}
