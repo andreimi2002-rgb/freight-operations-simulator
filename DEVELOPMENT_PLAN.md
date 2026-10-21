@@ -333,3 +333,7 @@ curse posibile în joc.
 | 2026-10-21 | Lucrul se face în repo-ul FOS existent, pe branch-ul `v2-freight-world`; site-ul actual rămâne neschimbat. |
 | 2026-10-21 | Obiectiv: produs monetizat (premium, abonament VTC, donații, eventual reclame), cu direcția principală o aplicație companion conectată live la ETS2/ATS prin SCS Telemetry SDK. |
 | 2026-10-21 | Datele păstrează ID-urile interne din joc, ca să poată fi legate de telemetria live. |
+| 2026-10-21 | Etapa 0: structura proiectului este **Astro** (site static, versiunea 7.3.8 fixată), nu HTML simplu: generează câte o pagină HTML pentru fiecare URL (`/ats/ca/sacramento`) din fișierele JSON, deci linkurile directe, titlurile și previzualizările merg; header/footer scrise o singură dată; generatorul rămâne modul JS separat, testat cu `node --test`. Netlify: `npm run build`, publică `dist/`, Node 24. |
+| 2026-10-21 | Interfața Freight World este în **engleză**, cu toate textele în `src/i18n/en.json` (româna se poate adăuga ca fișier separat). O cheie lipsă oprește build-ul. |
+| 2026-10-21 | Pe `v2-freight-world`, codul FOS a fost mutat neschimbat în `legacy/fos/` (doar referință, nu se publică); `main` și site-ul FOS rămân neschimbate. Fonturile au trecut în `public/fonts/`. |
+| 2026-10-21 | `AGENTS.md` rescris pentru Freight World (regulile valabile din FOS păstrate: date nesigure = `null`, licențe, fără API-uri plătite, accesibilitate); planul se numește acum `DEVELOPMENT_PLAN.md`. Versiunea Freight World pornește de la 2.0.0-alpha.1. |
