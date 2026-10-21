@@ -4,7 +4,12 @@ An ATS / ETS2 style job generator built on the real game map, with live city pag
 
 This is the `v2-freight-world` branch. The plan is in [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md) (Romanian) and the rules for contributors and tools in [AGENTS.md](AGENTS.md). The previous product, the Freight Operations Simulator (FOS), is still published from `main` until Freight World replaces it at the end of stage 3.
 
-## Current version: 2.0.0-alpha.3 (stage 2: city pages)
+## Current version: 2.0.0-alpha.5 (stage 3: departures and route planner)
+
+- Live departures boards on every city page and on the home page, from a deterministic job generator (`src/engine/`): only jobs possible in the game, new ones every hour. Route planner at `/ats/planner`.
+- Estimated road distances between all cities (`data/ats/distances.json`, OpenStreetMap via OSRM); `npm run distances:ats`.
+
+### Stage 2
 
 - A page for every city at `/ats/<state>/<city>` with the real photo, live local time, real weather (MET Norway), depots with what they offer and accept, facilities, roads, neighbouring cities and landmarks. City list at `/ats/`. US / metric units switch.
 - City photos from Wikimedia Commons, one per city (`data/photos.json`); candidates with `npm run photos:candidates`.
@@ -30,14 +35,16 @@ npm run build     # static site in dist/
 npm test          # node --test
 npm run collect:ats   # refresh data/ats/ from the wiki (cached)
 npm run photos:candidates   # photo candidates per city from Wikimedia Commons
+npm run distances:ats       # estimated road distances between cities (OSRM)
 ```
 
 ## Structure
 
 ```
 src/pages/         one file per URL (index, about, 404, ats/index, ats/[state]/[city])
-src/lib/           data access and pure helpers for the pages (units, weather codes)
-src/scripts/       browser code: clock, weather, units switch
+src/engine/        job generator and job dataset (pure, reusable)
+src/lib/           data access and pure helpers for the pages (units, weather, formatting)
+src/scripts/       browser code: clock, weather, units switch, departures boards, route planner
 src/layouts/       base page layout
 src/components/    header, footer, game switch, departures board
 src/styles/        tokens.css (design tokens), fonts.css, global.css
