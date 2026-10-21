@@ -1,0 +1,3329 @@
+{
+  "meta": {
+    "source": "Truck Simulator Wiki",
+    "sourceUrl": "https://trucksimulator.wiki.gg",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Game data from Truck Simulator Wiki contributors (trucksimulator.wiki.gg), CC BY-SA 4.0.",
+    "retrieved": "2026-10-21",
+    "generator": "scripts/ats/collect.mjs",
+    "userAgent": "FreightWorldDataBot/0.1 (https://github.com/andreimi2002-rgb/freight-operations-simulator; fan project data collection)",
+    "game": "ats",
+    "states": [
+      "CA",
+      "NV"
+    ],
+    "description": "Current cities of the game in the states in scope (removed and future cities excluded). Depots come from the company pages.",
+    "extraSources": [
+      {
+        "field": "coordinates",
+        "source": "Wikidata",
+        "sourceUrl": "https://www.wikidata.org",
+        "licence": "CC0 1.0",
+        "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "note": "Coordinates of the real-world city (P625), matched through the English Wikipedia article \"<City>, <State>\" and checked to lie in the state. They are real-world coordinates, not positions on the game map."
+      }
+    ],
+    "count": 34
+  },
+  "cities": [
+    {
+      "id": "bakersfield",
+      "gameId": null,
+      "name": "Bakersfield",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 35.37333,
+        "lon": -119.01889,
+        "wikidata": "Q49256"
+      },
+      "companyCount": 11,
+      "depots": [
+        {
+          "company": "ai-automotive",
+          "depotGameId": "ai_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "american-lines",
+          "depotGameId": "aml_rail_str",
+          "type": "Storage"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_wrk",
+          "type": "Roadworks"
+        },
+        {
+          "company": "calimondo",
+          "depotGameId": "cal_farm_alm",
+          "type": "Almond farm"
+        },
+        {
+          "company": "chemso",
+          "depotGameId": "chm_che_plnt",
+          "type": "Chemical plant"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": "gal_oil_well",
+          "type": "Oil well"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": "gal_oil_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "hms-machinery",
+          "depotGameId": "hms_con_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "rail-export",
+          "depotGameId": "re_train",
+          "type": "Depot"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "wp",
+          "depotGameId": "wp_oil_gst",
+          "type": null,
+          "location": "At the junction of I-5 and CA 58 west of the city"
+        }
+      ],
+      "truckDealers": [
+        "Peterbilt"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Peterbilt truck dealer"
+      ],
+      "roads": [
+        "CA 58",
+        "CA 99",
+        "CA 178"
+      ],
+      "neighbors": [
+        "barstow",
+        "fresno",
+        "los-angeles",
+        "modesto",
+        "mojave",
+        "sacramento",
+        "santa-maria",
+        "stockton"
+      ],
+      "landmarks": [
+        "1806 Chester Avenue",
+        "\"Bakersfield\" sign",
+        "Bakersfield Sign",
+        "Buck Owens Crystal Palace",
+        "Department of Development Services",
+        "Fox Theater",
+        "Meadows Field Airport",
+        "Sill Building",
+        "The 18hundred"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Bakersfield",
+        "revid": 285697
+      }
+    },
+    {
+      "id": "barstow",
+      "gameId": null,
+      "name": "Barstow",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 34.89333,
+        "lon": -117.01889,
+        "wikidata": "Q499174"
+      },
+      "companyCount": 8,
+      "depots": [
+        {
+          "company": "american-lines",
+          "depotGameId": "aml_rail_wrk",
+          "type": "Work site"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "chemso",
+          "depotGameId": "chm_che_str",
+          "type": "Chemical storage"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_brx_pln",
+          "type": "Borax plant"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "elegrid",
+          "depotGameId": "ele_epw_svc",
+          "type": "Power network service"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "wp",
+          "depotGameId": "wp_oil_gst",
+          "type": null,
+          "location": "West of I-15 exit 178 on the west side of the city"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [],
+      "facilityDetails": [],
+      "roads": [
+        "I-15",
+        "I-40",
+        "CA 58"
+      ],
+      "neighbors": [
+        "bakersfield",
+        "las-vegas",
+        "los-angeles",
+        "mojave",
+        "primm",
+        "san-diego"
+      ],
+      "landmarks": [
+        "Barstow Station",
+        "Mercado Mall",
+        "Route 66 signs"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Barstow",
+        "revid": 296950
+      }
+    },
+    {
+      "id": "blythe",
+      "gameId": null,
+      "name": "Blythe",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": "1.53",
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 33.61028,
+        "lon": -114.59639,
+        "wikidata": "Q886915"
+      },
+      "companyCount": 4,
+      "depots": [
+        {
+          "company": "gastream",
+          "depotGameId": "gas_che_str",
+          "type": "Chemical storage"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "agricheck"
+      ],
+      "facilityDetails": [
+        "California Border Protection Station"
+      ],
+      "roads": [
+        "I-10",
+        "US 95"
+      ],
+      "neighbors": [
+        "indio",
+        "los-angeles"
+      ],
+      "landmarks": [
+        "Blythe Agricultural Inspection Station"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Blythe",
+        "revid": 296951
+      }
+    },
+    {
+      "id": "carson-city",
+      "gameId": null,
+      "name": "Carson City",
+      "state": "NV",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 39.16083,
+        "lon": -119.75389,
+        "wikidata": "Q40881"
+      },
+      "companyCount": 4,
+      "depots": [
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_qry",
+          "type": "Quarry"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit1",
+          "type": "Building foundation"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm_grg",
+          "type": "Garage"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "garage",
+        "gas",
+        "hotel",
+        "recruitment",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Aron gas station (west)",
+        "Gallon Oil gas station (center)",
+        "Hotel",
+        "Recruitment agency",
+        "Rest stop",
+        "Service shop with a rest stop"
+      ],
+      "roads": [
+        "I-580",
+        "US 50",
+        "US 395",
+        "US 395 Bus."
+      ],
+      "neighbors": [
+        "ely",
+        "los-angeles",
+        "reno",
+        "sacramento"
+      ],
+      "landmarks": [
+        "Carson City Public Buildings",
+        "St. Charles Hotel / The Firkin & Fox Pub"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Carson_City",
+        "revid": 312581
+      }
+    },
+    {
+      "id": "el-centro",
+      "gameId": null,
+      "name": "El Centro",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 32.792,
+        "lon": -115.56305,
+        "wikidata": "Q495369"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_farm",
+          "type": "Farm"
+        },
+        {
+          "company": "farmers-barn",
+          "depotGameId": "fb_farm_pln",
+          "type": "Feed mill"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "South of I-8 exit 115 on the south side of the city"
+        },
+        {
+          "company": "gastream",
+          "depotGameId": "gas_che_str",
+          "type": "Chemical storage"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "steeler",
+          "depotGameId": "st_met_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Gallon Oil truck stop with a weigh station"
+      ],
+      "roads": [
+        "I-8",
+        "I-8 Bus.",
+        "CA 86",
+        "CR S80"
+      ],
+      "neighbors": [
+        "indio",
+        "san-diego"
+      ],
+      "landmarks": [
+        "Downtown Arch",
+        "El Centro Regional Medical Center",
+        "El Centro Water Tank",
+        "Imperial Avenue Overpass"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/El_Centro",
+        "revid": 297847
+      }
+    },
+    {
+      "id": "elko",
+      "gameId": null,
+      "name": "Elko",
+      "state": "NV",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 40.83247,
+        "lon": -115.76317,
+        "wikidata": "Q945084"
+      },
+      "companyCount": 8,
+      "depots": [
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_qry",
+          "type": "Quarry"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "At I-80 exit 301"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit",
+          "type": "Building construction site"
+        },
+        {
+          "company": "rail-export",
+          "depotGameId": "re_train",
+          "type": "Depot"
+        }
+      ],
+      "truckDealers": [
+        "Kenworth"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Gallon Oil gas station",
+        "Rest stop",
+        "Kenworth truck dealer"
+      ],
+      "roads": [
+        "I-80",
+        "NV 225"
+      ],
+      "neighbors": [
+        "reno",
+        "winnemucca"
+      ],
+      "landmarks": [
+        "Commercial Casino",
+        "Red Lion Hotel & Casino"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Elko",
+        "revid": 312582
+      }
+    },
+    {
+      "id": "ely",
+      "gameId": null,
+      "name": "Ely",
+      "state": "NV",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 39.25333,
+        "lon": -114.87722,
+        "wikidata": "Q844042"
+      },
+      "companyCount": 4,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_wrk",
+          "type": "Roadworks"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": "gal_oil_ref",
+          "type": "Refinery"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "hotel",
+        "rest"
+      ],
+      "facilityDetails": [
+        "NAF gas station",
+        "Hotel",
+        "Rest stop"
+      ],
+      "roads": [
+        "US 6",
+        "US 50",
+        "US 93"
+      ],
+      "neighbors": [
+        "carson-city",
+        "jackpot",
+        "las-vegas",
+        "pioche",
+        "tonopah"
+      ],
+      "landmarks": [
+        "Hotel Nevada & Gambling Hall",
+        "Jailhouse Motel & Casino"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Ely",
+        "revid": 312584
+      }
+    },
+    {
+      "id": "eureka",
+      "gameId": null,
+      "name": "Eureka",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 40.80194,
+        "lon": -124.16361,
+        "wikidata": "Q488702"
+      },
+      "companyCount": 5,
+      "depots": [
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_hrv",
+          "type": "Harvest site"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw1",
+          "type": "Small sawmill"
+        },
+        {
+          "company": "drake-car-dealer",
+          "depotGameId": "dc_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit2",
+          "type": "House construction site"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Aron gas station",
+        "Rest stop",
+        "Service shop"
+      ],
+      "roads": [
+        "US 101",
+        "CA 255",
+        "CA 299",
+        "Minor road"
+      ],
+      "neighbors": [
+        "redding",
+        "san-francisco",
+        "ukiah"
+      ],
+      "landmarks": [
+        "103-109 5th Street",
+        "350 E Street",
+        "Arkley Center for the Performing Arts",
+        "Eureka Central Residence",
+        "Redwood Capital Bank",
+        "St. Bernard Catholic Church",
+        "United States Post Office and Courthouse"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Eureka",
+        "revid": 297723
+      }
+    },
+    {
+      "id": "fresno",
+      "gameId": null,
+      "name": "Fresno",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 36.78167,
+        "lon": -119.79222,
+        "wikidata": "Q43301"
+      },
+      "companyCount": 12,
+      "depots": [
+        {
+          "company": "apade",
+          "depotGameId": "apa_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "aron",
+          "depotGameId": "aro_oil_gst",
+          "type": null,
+          "location": "West of CA 99 exit 129 on the south side of the city"
+        },
+        {
+          "company": "azure-glasswork",
+          "depotGameId": "az_gls_pln",
+          "type": "Plant"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_wrk",
+          "type": "Roadworks"
+        },
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_farm",
+          "type": "Farm"
+        },
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_live_auc",
+          "type": "Livestock auction"
+        },
+        {
+          "company": "calimondo",
+          "depotGameId": "cal_farm_alm",
+          "type": "Almond farm"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": "gal_oil_str",
+          "type": "Fuel storage"
+        },
+        {
+          "company": "mon-coeur",
+          "depotGameId": "mon_food_pln",
+          "type": "Bottling plant"
+        },
+        {
+          "company": "mon-coeur",
+          "depotGameId": "mon_farm",
+          "type": "Vineyard"
+        },
+        {
+          "company": "mwm",
+          "depotGameId": "mwm_wst_whs",
+          "type": "Waste transfer station"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [
+        "Mack"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "recruitment",
+        "rest",
+        "service",
+        "viewpoint",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Recruitment agency",
+        "Mack truck dealer",
+        "Aron truck stop with a weigh station"
+      ],
+      "roads": [
+        "CA 41",
+        "CA 99",
+        "CA 180"
+      ],
+      "neighbors": [
+        "bakersfield",
+        "los-angeles",
+        "modesto",
+        "sacramento",
+        "stockton"
+      ],
+      "landmarks": [
+        "AT&T Building",
+        "Bethel Lutheran Church",
+        "Blossom Trail",
+        "Downtown Fresno Arch",
+        "Fresno County Courthouse",
+        "Golden State County Plaza",
+        "IRS Compliance Building",
+        "Mattei Building",
+        "McCoy's Coffee Shop",
+        "Pacific Southwest Building",
+        "Robert E. Coyle U.S. Courthouse",
+        "San Joaquin Light & Power Corporation Building",
+        "San Joaquin River Viaduct",
+        "Welcome to Fresno County sign",
+        "Welcome to Fresno sign"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Fresno",
+        "revid": 297731
+      }
+    },
+    {
+      "id": "hilt",
+      "gameId": null,
+      "name": "Hilt",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": "1.41",
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 41.99472,
+        "lon": -122.62333,
+        "wikidata": "Q65043813"
+      },
+      "companyCount": 2,
+      "depots": [
+        {
+          "company": "ai-automotive",
+          "depotGameId": "ai_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_wrk",
+          "type": "Roadworks"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "rest"
+      ],
+      "facilityDetails": [
+        "Rest stop"
+      ],
+      "roads": [
+        "I-5"
+      ],
+      "neighbors": [
+        "redding"
+      ],
+      "landmarks": [],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Hilt",
+        "revid": 296954
+      }
+    },
+    {
+      "id": "huron",
+      "gameId": null,
+      "name": "Huron",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 36.20278,
+        "lon": -120.10306,
+        "wikidata": "Q2649652"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_wrk",
+          "type": "Roadworks"
+        },
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_farm",
+          "type": "Farm"
+        },
+        {
+          "company": "farmers-barn",
+          "depotGameId": "fb_farm_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "global-mills",
+          "depotGameId": "gm_food_plnt",
+          "type": "Food plant"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit",
+          "type": "Building construction site"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm_grg",
+          "type": "Garage"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Vortex truck stop with a weigh station in Avenal."
+      ],
+      "roads": [
+        "CA 269"
+      ],
+      "neighbors": [
+        "fresno",
+        "los-angeles"
+      ],
+      "landmarks": [
+        "Huron City Hall",
+        "St. Frances Cabrini Catholic Church"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Huron_(California)",
+        "revid": 312729
+      }
+    },
+    {
+      "id": "indio",
+      "gameId": null,
+      "name": "Indio",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": "1.53",
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 33.72,
+        "lon": -116.23194,
+        "wikidata": "Q838789"
+      },
+      "companyCount": 8,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_wrk",
+          "type": "Roadworks"
+        },
+        {
+          "company": "gastream",
+          "depotGameId": "gas_che_str",
+          "type": "Chemical storage"
+        },
+        {
+          "company": "global-mills",
+          "depotGameId": "gm_food_plnt",
+          "type": "Food plant"
+        },
+        {
+          "company": "gpw",
+          "depotGameId": "gpw_rd_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "mon-coeur",
+          "depotGameId": "mon_food_pln",
+          "type": "Bottling plant"
+        },
+        {
+          "company": "phoenix",
+          "depotGameId": "pho_oil_gst",
+          "type": null,
+          "location": "Along Dillon Rd north of I-10 exit 146 in Coachella"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Phoenix truck stop with a weigh station",
+        "WP truck stop with a service shop and weigh station"
+      ],
+      "roads": [
+        "I-10",
+        "CA 86",
+        "CA 111"
+      ],
+      "neighbors": [
+        "blythe",
+        "el-centro",
+        "los-angeles"
+      ],
+      "landmarks": [
+        "Fantasy Springs Resort Casino",
+        "Spotlight 29 Casino"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Indio",
+        "revid": 297884
+      }
+    },
+    {
+      "id": "jackpot",
+      "gameId": null,
+      "name": "Jackpot",
+      "state": "NV",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 41.98127,
+        "lon": -114.6651,
+        "wikidata": "Q2917481"
+      },
+      "companyCount": 2,
+      "depots": [
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "hotel",
+        "rest"
+      ],
+      "facilityDetails": [
+        "NAF gas station",
+        "Hotel",
+        "Rest stop"
+      ],
+      "roads": [
+        "US 93"
+      ],
+      "neighbors": [
+        "ely"
+      ],
+      "landmarks": [
+        "Barton's Club 93",
+        "Four Jacks Hotel & Casino",
+        "Jackpot Airport"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Jackpot",
+        "revid": 266752
+      }
+    },
+    {
+      "id": "las-vegas",
+      "gameId": null,
+      "name": "Las Vegas",
+      "state": "NV",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 36.16722,
+        "lon": -115.14861,
+        "wikidata": "Q23768"
+      },
+      "companyCount": 9,
+      "depots": [
+        {
+          "company": "42-print",
+          "depotGameId": "42p_print",
+          "type": "Printing plant"
+        },
+        {
+          "company": "apade",
+          "depotGameId": "apa_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "charged",
+          "depotGameId": "cha_el_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "phoenix",
+          "depotGameId": "pho_oil_gst",
+          "type": null,
+          "location": "At the intersection of I-15 US 93 north of the city"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [
+        "Volvo"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "recruitment",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Recruitment agency",
+        "Rest stop (2x)",
+        "Volvo truck dealer",
+        "Gallon Oil truck stop with a weigh station",
+        "Phoenix truck stop with a weigh station"
+      ],
+      "roads": [
+        "I-11",
+        "I-15",
+        "I-515",
+        "US 93",
+        "US 95"
+      ],
+      "neighbors": [
+        "ely",
+        "los-angeles",
+        "pioche",
+        "primm",
+        "reno",
+        "tonopah"
+      ],
+      "landmarks": [
+        "Allure Las Vegas",
+        "Aria Resort & Casino",
+        "Bally's Las Vegas",
+        "Bellagio",
+        "Caesars Palace",
+        "Excalibur Hotel & Casino",
+        "Flamingo Las Vegas",
+        "High Roller",
+        "Las Vegas Monorail",
+        "Las Vegas Village",
+        "Luxor Las Vegas",
+        "Mandalay Bay",
+        "Harry Reid International Airport (Formally: McCarran International Airport)",
+        "Monte Carlo Resort & Casino",
+        "Palms Casino Resort sign",
+        "Panorama Towers",
+        "Paris Las Vegas",
+        "Planet Hollywood Towers by Westgate",
+        "Russell Road Overpass",
+        "Rio sign",
+        "The Cosmopolitan of Las Vegas",
+        "The Cromwell Las Vegas",
+        "The Martin",
+        "The Mirage",
+        "The Palazzo",
+        "The Platinum",
+        "The \"Spaghetti Bowl\"",
+        "The Strat",
+        "The Venetian Las Vegas",
+        "Trump International Hotel Las Vegas",
+        "Vdara",
+        "Veer Towers",
+        "Waldorf Astoria Las Vegas",
+        "Welcome to Fabulous Las Vegas sign"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Las_Vegas",
+        "revid": 306698
+      }
+    },
+    {
+      "id": "los-angeles",
+      "gameId": null,
+      "name": "Los Angeles",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 34.05223,
+        "lon": -118.24368,
+        "wikidata": "Q65"
+      },
+      "companyCount": 17,
+      "depots": [
+        {
+          "company": "42-print",
+          "depotGameId": "42p_pck_pln",
+          "type": "Packaging plant"
+        },
+        {
+          "company": "angel-city-airport",
+          "depotGameId": "aport_lax",
+          "type": null
+        },
+        {
+          "company": "avalanche-steel",
+          "depotGameId": "avs_met_scr",
+          "type": "Scrapyard"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_wrk",
+          "type": "Roadworks"
+        },
+        {
+          "company": "darwing",
+          "depotGameId": "dw_air_pln",
+          "type": "Aircraft plant"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "fish-tail-foods",
+          "depotGameId": "ftf_food_pln",
+          "type": "Factory"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "On Alameda St south of I-10 exit 15"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": "gal_oil_ref",
+          "type": "Refinery"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "la-seaport",
+          "depotGameId": "port_la",
+          "type": null
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit1",
+          "type": "Building foundation"
+        },
+        {
+          "company": "rail-export",
+          "depotGameId": "re_train",
+          "type": "Depot"
+        },
+        {
+          "company": "ultimus",
+          "depotGameId": "aport_ult",
+          "type": "Airplane"
+        },
+        {
+          "company": "venture",
+          "depotGameId": "ven_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [
+        "Kenworth"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "port",
+        "recruitment",
+        "rest",
+        "service",
+        "viewpoint",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Gallon Oil gas station with a weigh station",
+        "Recruitment agency",
+        "Rest stop (2x)",
+        "Kenworth truck dealer",
+        "Fusion truck stop with a service shop and weigh station",
+        "WP truck stop with a weigh station"
+      ],
+      "roads": [
+        "I-5",
+        "I-10",
+        "I-15",
+        "I-110",
+        "I-405",
+        "I-710",
+        "US 101",
+        "CA 1",
+        "CA 14",
+        "CA 47"
+      ],
+      "neighbors": [
+        "barstow",
+        "blythe",
+        "carson-city",
+        "indio",
+        "las-vegas",
+        "mojave",
+        "oxnard",
+        "primm",
+        "reno",
+        "sacramento",
+        "san-diego",
+        "santa-maria",
+        "stockton"
+      ],
+      "landmarks": [
+        "4th Street Bridge",
+        "6th Street Viaduct",
+        "7th Street Bridge",
+        "611 Place",
+        "Aon Center",
+        "California Plaza",
+        "Cesar Chavez Avenue Bridge",
+        "City National Tower",
+        "Figueroa at Wilshire",
+        "Gas Company Tower",
+        "Hollywood Sign",
+        "Los Angeles City Hall",
+        "Los Angeles International Airport",
+        "Los Angeles River",
+        "Los Angeles Times Building",
+        "Metro Headquarters Building",
+        "Olympic Boulevard Bridge",
+        "Paul Hastings Tower",
+        "The Ritz Carlton Los Angeles",
+        "U.S. Bank Tower",
+        "Wilshire Grand Center",
+        "Henry Ford Bridge",
+        "Long Beach International Gateway",
+        "Long Beach sign",
+        "One World Trade Center",
+        "Rubber Duck",
+        "The Queen Mary",
+        "Union Bank Building",
+        "Vincent Thomas Bridge",
+        "Milliken Avenue Overpass",
+        "Ontario Water Tanks",
+        "100 Wilshire Boulevard",
+        "1221 Ocean Avenue",
+        "1299 Ocean Avenue",
+        "1647 Ocean Front Walk",
+        "1661 Appian Way",
+        "Georgian Hotel",
+        "Pacific Plaza",
+        "Paseo del Mar",
+        "Regent Santa Monica Beach",
+        "Santa Monica City Hall",
+        "Santa Monica Civic Center Parking Structure",
+        "Santa Monica Pier",
+        "Santa Monica Pier sign",
+        "Santa Monica Place",
+        "Sherbet Homes",
+        "The Pierside Hotel",
+        "Tongva Park"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Los_Angeles",
+        "revid": 311932
+      }
+    },
+    {
+      "id": "modesto",
+      "gameId": null,
+      "name": "Modesto",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": "1.50",
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 37.66139,
+        "lon": -120.99444,
+        "wikidata": "Q204561"
+      },
+      "companyCount": 12,
+      "depots": [
+        {
+          "company": "18-wheels-garage",
+          "depotGameId": "18w_trl_svc",
+          "type": "Truck trailer service"
+        },
+        {
+          "company": "avalanche-steel",
+          "depotGameId": "avs_met_scr",
+          "type": "Scrapyard"
+        },
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_farm",
+          "type": "Farm"
+        },
+        {
+          "company": "calimondo",
+          "depotGameId": "cal_farm_alm",
+          "type": "Almond farm"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "At the intersection of 7th St and Pecos Ave on the south side of the city near CA 99 exit 223"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "mon-coeur",
+          "depotGameId": "mon_food_pln",
+          "type": "Bottling plant"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        },
+        {
+          "company": "venture",
+          "depotGameId": "ven_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "waldens",
+          "depotGameId": "wld_frm_str",
+          "type": "Storage"
+        }
+      ],
+      "truckDealers": [
+        "International"
+      ],
+      "facilities": [
+        "dealer",
+        "gas",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Service shop with a rest stop",
+        "International truck dealer",
+        "Gallon Oil truck stop with a weigh station"
+      ],
+      "roads": [
+        "CA 99",
+        "CA 108",
+        "CA 132",
+        "Minor road"
+      ],
+      "neighbors": [
+        "fresno",
+        "los-angeles",
+        "sacramento",
+        "stockton"
+      ],
+      "landmarks": [
+        "821 L Street",
+        "1125 9th Street",
+        "BAC Community Bank",
+        "City Towers Courthouse",
+        "DoubleTree by Hilton Hotel Modesto",
+        "Flower Clock",
+        "Gallo Center for the Arts",
+        "Hillside of Poppies",
+        "Modesto Arch",
+        "Modesto Transportation Center",
+        "Modesto Water Tower"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Modesto",
+        "revid": 297663
+      }
+    },
+    {
+      "id": "mojave",
+      "gameId": null,
+      "name": "Mojave",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": "1.53",
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 35.01667,
+        "lon": -118.18889,
+        "wikidata": "Q1943133"
+      },
+      "companyCount": 4,
+      "depots": [
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_plnt",
+          "type": "Cement plant"
+        },
+        {
+          "company": "elegrid",
+          "depotGameId": "ele_epw_sit",
+          "type": "Electric substation"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "vitas-power",
+          "depotGameId": "vp_epw_sit",
+          "type": "Wind turbine construction site"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas"
+      ],
+      "facilityDetails": [
+        "NAF gas station"
+      ],
+      "roads": [
+        "US 395",
+        "CA 14",
+        "CA 58"
+      ],
+      "neighbors": [
+        "bakersfield",
+        "barstow",
+        "carson-city",
+        "los-angeles",
+        "reno",
+        "santa-maria"
+      ],
+      "landmarks": [
+        "Kwik Stop Market",
+        "Mojave Air & Space Port"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Mojave",
+        "revid": 296959
+      }
+    },
+    {
+      "id": "oakland",
+      "gameId": null,
+      "name": "Oakland",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 37.8,
+        "lon": -122.25,
+        "wikidata": "Q17042"
+      },
+      "companyCount": 8,
+      "depots": [
+        {
+          "company": "ai-automotive",
+          "depotGameId": "ai_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "avalanche-steel",
+          "depotGameId": "avs_met_scr",
+          "type": "Scrapyard"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": "gal_oil_ref",
+          "type": "Refinery"
+        },
+        {
+          "company": "heartwood-furniture",
+          "depotGameId": "hf_wd_pln",
+          "type": "Factory"
+        },
+        {
+          "company": "hms-machinery",
+          "depotGameId": "hms_con_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "oakland-shippers",
+          "depotGameId": "oak_port",
+          "type": null
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit",
+          "type": "Building construction site"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "port",
+        "recruitment",
+        "rest",
+        "service",
+        "toll",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Gas station",
+        "Recruitment agency",
+        "Rest stop",
+        "Service shop",
+        "Weigh station"
+      ],
+      "roads": [
+        "I-80",
+        "I-580",
+        "I-880"
+      ],
+      "neighbors": [
+        "eureka",
+        "fresno",
+        "los-angeles",
+        "sacramento",
+        "san-francisco",
+        "san-jose",
+        "santa-cruz",
+        "stockton",
+        "ukiah"
+      ],
+      "landmarks": [
+        "8 Orchids",
+        "16th Street Station",
+        "555 City Center",
+        "601 City Center",
+        "1111 Broadway",
+        "1699 West Grand Avenue",
+        "2100 Powell Street",
+        "Arcadia Hotel",
+        "BART train",
+        "Clorox Building",
+        "Elihu M. Harris State Office Building",
+        "Glenn E. Dyer Detention Facility",
+        "Oakland City Hall",
+        "Oakland Marriott City Center",
+        "Oakland USPS Processing & Distribution Center",
+        "Observation Pier",
+        "Pacific Park Plaza",
+        "Ronald V. Dellums Federal Building Complex",
+        "San Francisco–Oakland Bay Bridge",
+        "Wiley W. Manuel Courthouse"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Oakland",
+        "revid": 297722
+      }
+    },
+    {
+      "id": "oxnard",
+      "gameId": null,
+      "name": "Oxnard",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 34.19139,
+        "lon": -119.1825,
+        "wikidata": "Q209338"
+      },
+      "companyCount": 8,
+      "depots": [
+        {
+          "company": "ai-automotive",
+          "depotGameId": "ai_car_pln",
+          "type": "Plant"
+        },
+        {
+          "company": "bloomscape",
+          "depotGameId": "blo_frm_str",
+          "type": "Storage"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": "gal_oil_ref",
+          "type": "Refinery"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": "gal_oil_str1",
+          "type": "Storage"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "page-and-price-paper",
+          "depotGameId": "pnp_wd_pln",
+          "type": "Plant"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "wds",
+          "depotGameId": "wds_wst_whs",
+          "type": "Waste transfer station"
+        }
+      ],
+      "truckDealers": [
+        "Freightliner"
+      ],
+      "facilities": [
+        "dealer",
+        "gas",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Vortex gas station with a weigh station",
+        "Freightliner truck dealer"
+      ],
+      "roads": [
+        "US 101",
+        "CA 1",
+        "CA 126"
+      ],
+      "neighbors": [
+        "los-angeles",
+        "san-francisco",
+        "santa-maria"
+      ],
+      "landmarks": [
+        "City National Bank Building",
+        "Morgan Stanley Building"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Oxnard",
+        "revid": 296961
+      }
+    },
+    {
+      "id": "pioche",
+      "gameId": null,
+      "name": "Pioche",
+      "state": "NV",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 37.94139,
+        "lon": -114.44889,
+        "wikidata": "Q3245936"
+      },
+      "companyCount": 1,
+      "depots": [
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest"
+      ],
+      "facilityDetails": [
+        "Aron gas station",
+        "Rest stop"
+      ],
+      "roads": [
+        "US 93"
+      ],
+      "neighbors": [
+        "ely",
+        "las-vegas"
+      ],
+      "landmarks": [],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Pioche",
+        "revid": 275145
+      }
+    },
+    {
+      "id": "primm",
+      "gameId": null,
+      "name": "Primm",
+      "state": "NV",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 35.61278,
+        "lon": -115.39028,
+        "wikidata": "Q376041"
+      },
+      "companyCount": 3,
+      "depots": [
+        {
+          "company": "gastream",
+          "depotGameId": "gas_che_str",
+          "type": "Chemical storage"
+        },
+        {
+          "company": "haulett",
+          "depotGameId": "hau_oil_gst",
+          "type": null,
+          "location": "West of I-15 exit 1"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Rest stop",
+        "Haulett truck stop with a weigh station"
+      ],
+      "roads": [
+        "I-15"
+      ],
+      "neighbors": [
+        "barstow",
+        "las-vegas",
+        "los-angeles"
+      ],
+      "landmarks": [
+        "Buffalo Bill's Resort & Casino",
+        "Whiskey Pete's Hotel & Casino"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Primm",
+        "revid": 298317
+      }
+    },
+    {
+      "id": "redding",
+      "gameId": null,
+      "name": "Redding",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 40.58639,
+        "lon": -122.39167,
+        "wikidata": "Q495361"
+      },
+      "companyCount": 11,
+      "depots": [
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_farm",
+          "type": "Farm"
+        },
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_live_auc",
+          "type": "Livestock auction"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_hrv",
+          "type": "Harvest site"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw",
+          "type": "Large sawmill"
+        },
+        {
+          "company": "drake-car-dealer",
+          "depotGameId": "dc_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "hms-machinery",
+          "depotGameId": "hms_con_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "usbb",
+          "depotGameId": "usb_food_pln",
+          "type": "Food plant"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "wp",
+          "depotGameId": "wp_oil_gst",
+          "type": null,
+          "location": "At I-5 exit 673 on the south side of the city"
+        }
+      ],
+      "truckDealers": [
+        "Freightliner"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "recruitment",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Aron gas station",
+        "Recruitment agency",
+        "Freightliner truck dealer",
+        "WP truck stop with a service shop and weigh station"
+      ],
+      "roads": [
+        "I-5",
+        "CA 44",
+        "CA 273",
+        "CA 299",
+        "Minor road"
+      ],
+      "neighbors": [
+        "eureka",
+        "hilt",
+        "reno",
+        "sacramento"
+      ],
+      "landmarks": [
+        "Anderson-Cottonwood Diversion Dam",
+        "Caltrans District 2 Office",
+        "Cypress Avenue Bridge",
+        "Dancer",
+        "Old City Hall Arts Center",
+        "Redding Downtown sign",
+        "Redding Rancheria Tribal Health Center",
+        "Redding Regional Airport",
+        "Redding Trestle",
+        "Salmon",
+        "Shasta College Health Science University Center",
+        "Shasta Regional Medical Center",
+        "TA Travel Center",
+        "Welcome to Redding sign"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Redding",
+        "revid": 297724
+      }
+    },
+    {
+      "id": "reno",
+      "gameId": null,
+      "name": "Reno",
+      "state": "NV",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 39.52611,
+        "lon": -119.8125,
+        "wikidata": "Q49225"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "apade",
+          "depotGameId": "apa_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit",
+          "type": "Building construction site"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [
+        "Peterbilt"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "NAF gas station",
+        "Rest stop",
+        "Service shop",
+        "Peterbilt truck dealer"
+      ],
+      "roads": [
+        "I-80",
+        "I-580",
+        "US 395"
+      ],
+      "neighbors": [
+        "carson-city",
+        "elko",
+        "sacramento",
+        "truckee",
+        "winnemucca"
+      ],
+      "landmarks": [
+        "4th Street Station",
+        "Circus Circus Reno",
+        "Eldorado Resort Casino",
+        "Harrah's Reno",
+        "Lincoln Lounge",
+        "Louis' Basque Corner",
+        "National Bowling Stadium",
+        "Nugget Casino Resort",
+        "Park Center Tower",
+        "Reno Ballroom",
+        "Reno Events Center",
+        "Reno Station",
+        "Silver Legacy Resort & Casino",
+        "The Montage Reno",
+        "Walgreens (750 North Virginia Street)",
+        "Whitney Peak Hotel"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Reno",
+        "revid": 312580
+      }
+    },
+    {
+      "id": "sacramento",
+      "gameId": null,
+      "name": "Sacramento",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 38.57528,
+        "lon": -121.48611,
+        "wikidata": "Q18013"
+      },
+      "companyCount": 11,
+      "depots": [
+        {
+          "company": "apade",
+          "depotGameId": "apa_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_wrk",
+          "type": "Roadworks"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_plnt",
+          "type": "Cement plant"
+        },
+        {
+          "company": "driverse",
+          "depotGameId": "dri_oil_gst",
+          "type": null,
+          "location": "At I-80 exit 85 on the northwest side of the city"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "farmers-barn",
+          "depotGameId": "fb_farm_pln",
+          "type": "Feed mill"
+        },
+        {
+          "company": "mon-coeur",
+          "depotGameId": "mon_farm",
+          "type": "Vineyard"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        },
+        {
+          "company": "venture",
+          "depotGameId": "ven_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [
+        "Mack"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Mack truck dealer",
+        "Driverse truck stop with a service shop and weigh station"
+      ],
+      "roads": [
+        "I-5",
+        "I-80",
+        "US 50"
+      ],
+      "neighbors": [
+        "carson-city",
+        "los-angeles",
+        "oakland",
+        "redding",
+        "reno",
+        "san-francisco",
+        "stockton",
+        "truckee",
+        "ukiah"
+      ],
+      "landmarks": [
+        "300 Capitol Mall",
+        "BMO Tower",
+        "Cal/EPA Building",
+        "California Fruit Building",
+        "California State Office Buildings 8 and 9",
+        "CalSTRS Building",
+        "Crocker Art Museum",
+        "Depot Park",
+        "Embassy Suites by Hilton Sacramento Riverfront Promenade",
+        "Holiday Inn Sacramento Downtown-Arena",
+        "I Street Bridge",
+        "Imperial Tower",
+        "Kimpton Sawyer Hotel",
+        "Old Sacramento State Historic Park Entrance",
+        "Park Tower",
+        "Renaissance Tower",
+        "Riverview Plaza",
+        "Robert T. Matsui U.S. Courthouse",
+        "Sacramento 49er Travel Plaza",
+        "Sacramento Valley Station",
+        "Sacramento Water Tower",
+        "Southern Pacific Railway Workshops",
+        "The Ziggurat",
+        "Tower Bridge",
+        "University of San Francisco - Sacramento Campus",
+        "Vagabond Inn Excecutive Old Town",
+        "Wells Fargo Center"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Sacramento",
+        "revid": 298891
+      }
+    },
+    {
+      "id": "san-diego",
+      "gameId": null,
+      "name": "San Diego",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 32.715,
+        "lon": -117.1625,
+        "wikidata": "Q16552"
+      },
+      "companyCount": 12,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "driverse",
+          "depotGameId": "dri_oil_gst",
+          "type": null,
+          "location": "At the intersection of CA 15 and CA 905 on the south side of the city"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "elegrid",
+          "depotGameId": "ele_epw_sit",
+          "type": "Electric substation"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "gpw",
+          "depotGameId": "gpw_rd_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "hms-machinery",
+          "depotGameId": "hms_con_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "lone-star-forwarding",
+          "depotGameId": "lsf_crg_fwd",
+          "type": "Depot"
+        },
+        {
+          "company": "mon-coeur",
+          "depotGameId": "mon_farm",
+          "type": "Vineyard"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit",
+          "type": "Building construction site"
+        }
+      ],
+      "truckDealers": [
+        "Peterbilt",
+        "Peterbilt (large)"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "rest",
+        "service",
+        "viewpoint",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Peterbilt truck dealer",
+        "Driverse truck stop with a weigh station"
+      ],
+      "roads": [
+        "I-5",
+        "I-8",
+        "I-15",
+        "CA 11",
+        "CA 15",
+        "CA 75",
+        "CA 905"
+      ],
+      "neighbors": [
+        "barstow",
+        "el-centro",
+        "los-angeles"
+      ],
+      "landmarks": [
+        "450 B Street",
+        "530 B Street",
+        "Cabrillo Bridge",
+        "Calvary Baptist Church",
+        "Centerside",
+        "Coronado Bridge",
+        "Coronado Point Condos",
+        "Cortez Blu",
+        "El Cortez",
+        "Emerald Plaza",
+        "First Presbyterian Church",
+        "Four Points by Sheraton San Diego",
+        "Harbor Club Condominiums",
+        "Hilton San Diego Bayfront",
+        "Junipero Serra Museum",
+        "Manchester Grand Hyatt San Diego",
+        "One America Plaza",
+        "Pinnacle on the Park",
+        "Port of San Diego",
+        "San Diego Air & Space Museum",
+        "San Diego Central Courthouse",
+        "San Diego Central Library",
+        "San Diego Convention Center",
+        "San Diego Trolley",
+        "Snapdragon Stadium",
+        "Stadium Station",
+        "Symphony Towers",
+        "The San Diego Union-Tribune Building",
+        "The Village Mission Valley sign",
+        "USS Midway",
+        "Vantage Pointe Condominium"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/San_Diego",
+        "revid": 296964
+      }
+    },
+    {
+      "id": "san-francisco",
+      "gameId": null,
+      "name": "San Francisco",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 37.775,
+        "lon": -122.41944,
+        "wikidata": "Q62"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit1",
+          "type": "Building foundation"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit2",
+          "type": "House construction site"
+        },
+        {
+          "company": "port-of-san-francisco",
+          "depotGameId": "sf_port",
+          "type": null
+        },
+        {
+          "company": "venture",
+          "depotGameId": "ven_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [
+        "Volvo"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "port",
+        "recruitment",
+        "rest",
+        "service",
+        "toll",
+        "viewpoint"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Rest stop",
+        "Recruitment agency",
+        "Service shop",
+        "Volvo truck dealer"
+      ],
+      "roads": [
+        "I-80",
+        "US 101",
+        "CA 1"
+      ],
+      "neighbors": [
+        "eureka",
+        "los-angeles",
+        "oakland",
+        "sacramento",
+        "san-jose",
+        "santa-cruz",
+        "ukiah"
+      ],
+      "landmarks": [
+        "1 Hotel San Francisco",
+        "3rd Street Bridge",
+        "4th Street Bridge",
+        "33 Tehama",
+        "100 First Plaza",
+        "101 California Street",
+        "181 Fremont",
+        "303 2nd Street",
+        "345 California Center",
+        "399 Fremont Street",
+        "500 Folsom",
+        "535 Mission Street",
+        "555 Mission Street",
+        "555 California Street",
+        "Alcatraz Island",
+        "Audiffred Building",
+        "Cable car",
+        "Chase Bank",
+        "Clocktower Lofts",
+        "Coit Tower",
+        "Embarcadero Center",
+        "Fort Point National Historic Site",
+        "Gap Headquarters",
+        "Golden Gate Bridge",
+        "Hyatt Regency San Francisco",
+        "Lombard Street",
+        "Millunnium Tower",
+        "Muni Metro train",
+        "One Maritime Plaza",
+        "One Rincon Hill",
+        "Pacifica Beach Hotel",
+        "Palace of Fine Arts",
+        "Park Tower at Transbay",
+        "Pier 39",
+        "Pier 43 Ferry Arch",
+        "Salesforce Tower",
+        "San Francisco Ferry Building",
+        "San Francisco Marriott Marquis",
+        "San Francisco–Oakland Bay Bridge",
+        "St. Regis Museum Tower",
+        "The Infinity",
+        "Transamerica Pyramid"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/San_Francisco",
+        "revid": 297728
+      }
+    },
+    {
+      "id": "san-jose",
+      "gameId": null,
+      "name": "San Jose",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": "1.50",
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 37.30417,
+        "lon": -121.87278,
+        "wikidata": "Q16553"
+      },
+      "companyCount": 9,
+      "depots": [
+        {
+          "company": "aron",
+          "depotGameId": "aro_oil_gst",
+          "type": null,
+          "location": "North of the Old Bayshore Hwy at the intersection of I-880 and US 101"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "usbb",
+          "depotGameId": "usb_food_pln",
+          "type": "Food plant"
+        },
+        {
+          "company": "voltison-motors",
+          "depotGameId": "vm_car_exp",
+          "type": "Export terminal"
+        },
+        {
+          "company": "voltison-motors",
+          "depotGameId": "vm_car_pln",
+          "type": "Plant"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Aron gas stations (x2)",
+        "Service shop with a rest stop"
+      ],
+      "roads": [
+        "I-880",
+        "US 101",
+        "CA 17"
+      ],
+      "neighbors": [
+        "los-angeles",
+        "oakland",
+        "san-francisco",
+        "santa-cruz",
+        "santa-maria"
+      ],
+      "landmarks": [
+        "Casino M8trix",
+        "Fairways",
+        "Five Wounds Portuguese National Church",
+        "La Quinta Inn & Suites by Wyndham Fremont / Silicon Valley",
+        "Metro Plaza",
+        "Mission 101",
+        "Moffett Federal Airfield",
+        "Moffett Towers",
+        "Norman Y. Mineta San Jose International Airport",
+        "PayPal Park",
+        "Santa Clara Towers",
+        "Tesla Fremont Factory"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/San_Jose",
+        "revid": 297729
+      }
+    },
+    {
+      "id": "santa-cruz",
+      "gameId": null,
+      "name": "Santa Cruz",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 36.97205,
+        "lon": -122.02625,
+        "wikidata": "Q159232"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit",
+          "type": "Building construction site"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service",
+        "viewpoint"
+      ],
+      "facilityDetails": [
+        "NAF truck stop with a service shop"
+      ],
+      "roads": [
+        "CA 1",
+        "CA 9",
+        "CA 17"
+      ],
+      "neighbors": [
+        "los-angeles",
+        "oakland",
+        "san-francisco",
+        "san-jose",
+        "santa-maria"
+      ],
+      "landmarks": [
+        "1538 Pacific Avenue",
+        "Jump In!",
+        "Lighthouse Bank",
+        "Mark Abbott Memorial Lighthouse",
+        "River Street sign",
+        "Santa Cruz Beach Boardwalk",
+        "Santa Cruz Post Office",
+        "Santa Cruz Wharf",
+        "To Honor Surfing",
+        "Town Clock",
+        "Welcome to Santa Cruz sign"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Santa_Cruz",
+        "revid": 297692
+      }
+    },
+    {
+      "id": "santa-maria",
+      "gameId": null,
+      "name": "Santa Maria",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": "1.5",
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 34.95139,
+        "lon": -120.43333,
+        "wikidata": "Q643953"
+      },
+      "companyCount": 7,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_wrk",
+          "type": "Roadworks"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "gastream",
+          "depotGameId": "gas_che_str",
+          "type": "Chemical storage"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Aron truck stop",
+        "Recruitment agency"
+      ],
+      "roads": [
+        "US 101",
+        "CA 135"
+      ],
+      "neighbors": [
+        "los-angeles",
+        "oxnard",
+        "san-francisco",
+        "san-jose"
+      ],
+      "landmarks": [
+        "Regal Edwards Santa Maria & RPX",
+        "Santa Maria City Hall",
+        "Santa Maria Public Library",
+        "Santa Maria Town Center",
+        "Valley Pacific Travel Center"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Santa_Maria",
+        "revid": 297807
+      }
+    },
+    {
+      "id": "stockton",
+      "gameId": null,
+      "name": "Stockton",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 37.9575,
+        "lon": -121.2925,
+        "wikidata": "Q49240"
+      },
+      "companyCount": 10,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_wrk",
+          "type": "Roadworks"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "global-mills",
+          "depotGameId": "gm_food_plnt",
+          "type": "Food plant"
+        },
+        {
+          "company": "global-mills",
+          "depotGameId": "gm_food_str",
+          "type": "Grain elevator"
+        },
+        {
+          "company": "mon-coeur",
+          "depotGameId": "mon_food_pln",
+          "type": "Bottling plant"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "rail-export",
+          "depotGameId": "re_train",
+          "type": "Depot"
+        },
+        {
+          "company": "steeler",
+          "depotGameId": "st_met_wrk",
+          "type": "Workshop"
+        },
+        {
+          "company": "vortex",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "Along CA 4 west of I-5 exit 471 in the center of the city"
+        }
+      ],
+      "truckDealers": [
+        "Western Star"
+      ],
+      "facilities": [
+        "dealer",
+        "gas",
+        "recruitment",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Recruitment agency",
+        "Western Star truck dealer",
+        "Vortex truck stop with a weigh station"
+      ],
+      "roads": [
+        "I-5",
+        "CA 4",
+        "CA 99"
+      ],
+      "neighbors": [
+        "fresno",
+        "los-angeles",
+        "modesto",
+        "oakland",
+        "sacramento",
+        "san-francisco"
+      ],
+      "landmarks": [
+        "1550 West Fremont Street",
+        "Delicato Family Wines Tasting Room",
+        "Franco Center",
+        "Little 99 Go-Kart & Motorcycle Track",
+        "Medici Artist Lofts",
+        "Port of Stockton Water Tower",
+        "San Joaquin General Hospital",
+        "San Joaquin County Human Services Agency",
+        "St. Mary of the Assumption Catholic Church",
+        "St. Mary's Hall",
+        "Waterfront Towers"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Stockton",
+        "revid": 298893
+      }
+    },
+    {
+      "id": "tonopah",
+      "gameId": null,
+      "name": "Tonopah",
+      "state": "NV",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 38.06722,
+        "lon": -117.23,
+        "wikidata": "Q988827"
+      },
+      "companyCount": 2,
+      "depots": [
+        {
+          "company": "aron",
+          "depotGameId": "aro_oil_gst",
+          "type": null,
+          "location": "Along US 95 on the north side of the city"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm_grg",
+          "type": "Garage"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Aron gas station",
+        "Service shop",
+        "Aron truck stop with a weigh station"
+      ],
+      "roads": [
+        "US 6",
+        "US 95",
+        "NV 376"
+      ],
+      "neighbors": [
+        "carson-city",
+        "ely",
+        "las-vegas",
+        "pioche",
+        "reno",
+        "winnemucca"
+      ],
+      "landmarks": [],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Tonopah",
+        "revid": 272929
+      }
+    },
+    {
+      "id": "truckee",
+      "gameId": null,
+      "name": "Truckee",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 39.34222,
+        "lon": -120.20361,
+        "wikidata": "Q506402"
+      },
+      "companyCount": 5,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_wrk",
+          "type": "Roadworks"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw1",
+          "type": "Small sawmill"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit",
+          "type": "Building construction site"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "service"
+      ],
+      "facilityDetails": [
+        "Service shop"
+      ],
+      "roads": [
+        "I-80",
+        "CA 89",
+        "Minor road"
+      ],
+      "neighbors": [
+        "reno",
+        "sacramento"
+      ],
+      "landmarks": [
+        "10191 Donner Pass Road",
+        "Donner Lake",
+        "Donner Summit Bridge",
+        "Gene Upshaw Memorial Tahoe Forest Cancer Center (Tahoe Forest Hospital)",
+        "Kruger House",
+        "Rocking Stone Tower",
+        "Sierra Tavern Inn",
+        "Tahoe Forest Medical Offices (Tahoe Forest Hospital)",
+        "The Truckee Hotel",
+        "The Rusty Ramblers",
+        "Truckee Community Recreation Center",
+        "Truckee Fire Protection District Station 91",
+        "Truckee Railroad Museum",
+        "Truckee Station",
+        "Veterans Hall",
+        "Victory Highway Eagle Monument"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Truckee",
+        "revid": 297725
+      }
+    },
+    {
+      "id": "ukiah",
+      "gameId": null,
+      "name": "Ukiah",
+      "state": "CA",
+      "dlc": "base",
+      "addedInUpdate": "1.3",
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 39.15,
+        "lon": -123.2075,
+        "wikidata": "Q837105"
+      },
+      "companyCount": 3,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "mon-coeur",
+          "depotGameId": "mon_farm",
+          "type": "Vineyard"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas"
+      ],
+      "facilityDetails": [
+        "Aron gas station"
+      ],
+      "roads": [
+        "US 101"
+      ],
+      "neighbors": [
+        "eureka",
+        "oakland",
+        "sacramento",
+        "san-francisco"
+      ],
+      "landmarks": [],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Ukiah",
+        "revid": 308327
+      }
+    },
+    {
+      "id": "winnemucca",
+      "gameId": null,
+      "name": "Winnemucca",
+      "state": "NV",
+      "dlc": "base",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 40.96833,
+        "lon": -117.72667,
+        "wikidata": "Q983426"
+      },
+      "companyCount": 4,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": "gal_oil_str",
+          "type": "Fuel storage"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        },
+        {
+          "company": "venture",
+          "depotGameId": "ven_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "hotel"
+      ],
+      "facilityDetails": [
+        "Aron gas station",
+        "Hotel"
+      ],
+      "roads": [
+        "I-80",
+        "US 95"
+      ],
+      "neighbors": [
+        "elko",
+        "reno",
+        "tonopah"
+      ],
+      "landmarks": [
+        "Humboldt River",
+        "Winnemucca Convention Center"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Winnemucca",
+        "revid": 312583
+      }
+    }
+  ]
+}

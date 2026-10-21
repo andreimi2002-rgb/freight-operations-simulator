@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "description": "What the ATS collector (scripts/ats/collect.mjs) gathers. States are data: adding a state means adding an entry here and running the script again.",
+    "updated": "2026-10-21"
+  },
+  "game": "ats",
+  "wiki": {
+    "api": "https://trucksimulator.wiki.gg/api.php",
+    "pageBase": "https://trucksimulator.wiki.gg/wiki/",
+    "cityCategory": "American Truck Simulator cities",
+    "excludeCityCategories": [
+      "Removed cities in American Truck Simulator",
+      "Future Content for American Truck Simulator",
+      "Cities in Winterland"
+    ],
+    "companyCategory": "American Truck Simulator Companies",
+    "trailerCategory": "American Truck Simulator Trailers",
+    "cargoListPage": "Cargo types/American Truck Simulator"
+  },
+  "states": [
+    {
+      "code": "CA",
+      "name": "California",
+      "category": "Cities in California",
+      "wikidata": "Q99"
+    },
+    {
+      "code": "NV",
+      "name": "Nevada",
+      "category": "Cities in Nevada",
+      "wikidata": "Q1227"
+    }
+  ],
+  "timezones": {
+    "PDT": "America/Los_Angeles",
+    "PST": "America/Los_Angeles",
+    "MDT": "America/Denver",
+    "MST": "America/Denver",
+    "CDT": "America/Chicago",
+    "CST": "America/Chicago"
+  }
+}

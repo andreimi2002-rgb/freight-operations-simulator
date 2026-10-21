@@ -1,0 +1,7983 @@
+{
+  "meta": {
+    "source": "Truck Simulator Wiki",
+    "sourceUrl": "https://trucksimulator.wiki.gg",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Game data from Truck Simulator Wiki contributors (trucksimulator.wiki.gg), CC BY-SA 4.0.",
+    "retrieved": "2026-10-21",
+    "generator": "scripts/ats/collect.mjs",
+    "userAgent": "FreightWorldDataBot/0.1 (https://github.com/andreimi2002-rgb/freight-operations-simulator; fan project data collection)",
+    "game": "ats",
+    "states": [
+      "CA",
+      "NV"
+    ],
+    "description": "Complete ATS cargo catalog from the wiki cargo list. weightLb in pounds; valuePerKm is the game unit_reward_per_km as given on the wiki.",
+    "sourcePage": "https://trucksimulator.wiki.gg/wiki/Cargo_types/American_Truck_Simulator",
+    "sourceRevid": 312418,
+    "count": 295
+  },
+  "cargo": [
+    {
+      "id": "agricultural-telehandler-bobcat-tl3070",
+      "gameId": null,
+      "name": "Agricultural Telehandler Bobcat TL30.70",
+      "dlc": "bobcat-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Bobcat Cargo Pack"
+      },
+      "weightLb": null,
+      "valuePerKm": 7.58,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "air-conditioner",
+      "gameId": null,
+      "name": "Air Conditioner",
+      "dlc": "special-transport",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Special Transport"
+      },
+      "weightLb": {
+        "min": 66138,
+        "max": 66138
+      },
+      "valuePerKm": 36,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l"
+      ]
+    },
+    {
+      "id": "air-conditioning-units",
+      "gameId": null,
+      "name": "Air Conditioning Units",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oklahoma"
+      },
+      "weightLb": {
+        "min": 6600,
+        "max": 13200
+      },
+      "valuePerKm": 2.21,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "aircraft-engine",
+      "gameId": null,
+      "name": "Aircraft Engine",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Washington"
+      },
+      "weightLb": {
+        "min": 7599,
+        "max": 15199
+      },
+      "valuePerKm": 4.39,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "aircraft-wing",
+      "gameId": null,
+      "name": "Aircraft Wing",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Kansas"
+      },
+      "weightLb": {
+        "min": 5952,
+        "max": 5952
+      },
+      "valuePerKm": 8.556,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "all-terrain-crane",
+      "gameId": null,
+      "name": "All Terrain Crane",
+      "dlc": "heavy-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Heavy Cargo Pack"
+      },
+      "weightLb": {
+        "min": 77500,
+        "max": 77500
+      },
+      "valuePerKm": 29.25,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l",
+        "lowboy-double",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "almond-boxes",
+      "gameId": null,
+      "name": "Almond Boxes",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.50"
+      },
+      "weightLb": {
+        "min": 18250,
+        "max": 39309
+      },
+      "valuePerKm": 0.692,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "dry-van",
+        "flatbed",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "aluminum-ingots",
+      "gameId": null,
+      "name": "Aluminum Ingots",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.55"
+      },
+      "weightLb": {
+        "min": 24691,
+        "max": 45856
+      },
+      "valuePerKm": 0.97,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "aluminum-profiles",
+      "gameId": null,
+      "name": "Aluminum Profiles",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.53"
+      },
+      "weightLb": {
+        "min": 21000,
+        "max": 42000
+      },
+      "valuePerKm": 9.7,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "anhydrous-ammonia",
+      "gameId": null,
+      "name": "Anhydrous Ammonia",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.47"
+      },
+      "weightLb": {
+        "min": 43453,
+        "max": 51499
+      },
+      "valuePerKm": 1.785,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1005",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": []
+    },
+    {
+      "id": "aromatics",
+      "gameId": null,
+      "name": "Aromatics",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Utah"
+      },
+      "weightLb": {
+        "min": 29762,
+        "max": 61508
+      },
+      "valuePerKm": 1.2,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1169",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "3",
+      "trailerTypes": [
+        "fuel-tank"
+      ]
+    },
+    {
+      "id": "articulated-hauler",
+      "gameId": null,
+      "name": "Articulated Hauler",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.49"
+      },
+      "weightLb": {
+        "min": 97000,
+        "max": 97000
+      },
+      "valuePerKm": 40.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-double",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "articulated-hauler-volvo-a25g",
+      "gameId": null,
+      "name": "Articulated Hauler Volvo A25G",
+      "dlc": "volvo-construction-equipment",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Volvo Construction Equipment"
+      },
+      "weightLb": {
+        "min": 55115,
+        "max": 55115
+      },
+      "valuePerKm": 21.93,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-double",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "auger-wagon",
+      "gameId": null,
+      "name": "Auger Wagon",
+      "dlc": "farm-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Farm Machinery"
+      },
+      "weightLb": {
+        "min": 17500,
+        "max": 17500
+      },
+      "valuePerKm": 13.8,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "autonomous-tractor",
+      "gameId": null,
+      "name": "Autonomous Tractor",
+      "dlc": "farm-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Farm Machinery"
+      },
+      "weightLb": {
+        "min": 38000,
+        "max": 38000
+      },
+      "valuePerKm": 16.9,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "backhoe-loader",
+      "gameId": null,
+      "name": "Backhoe Loader",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 16499,
+        "max": 32999
+      },
+      "valuePerKm": 13.93,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "backhoe-loader-jcb-4cx",
+      "gameId": null,
+      "name": "Backhoe Loader JCB 4CX",
+      "dlc": "jcb-equipment-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "JCB Equipment Pack"
+      },
+      "weightLb": {
+        "min": 18500,
+        "max": 18500
+      },
+      "valuePerKm": 10.93,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "barley",
+      "gameId": null,
+      "name": "Barley",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Louisiana"
+      },
+      "weightLb": null,
+      "valuePerKm": 0.692,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": true,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "bulk-feed",
+        "dry-bulk",
+        "hopper"
+      ]
+    },
+    {
+      "id": "batteries",
+      "gameId": null,
+      "name": "Batteries",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Iowa"
+      },
+      "weightLb": {
+        "min": 17265,
+        "max": 46041
+      },
+      "valuePerKm": 0.547,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "beet-harvester",
+      "gameId": null,
+      "name": "Beet Harvester",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Montana"
+      },
+      "weightLb": {
+        "min": 65000,
+        "max": 65000
+      },
+      "valuePerKm": 28.32,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-double",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "beverages",
+      "gameId": null,
+      "name": "Beverages",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 17114,
+        "max": 46209
+      },
+      "valuePerKm": 0.767,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "big-tires",
+      "gameId": null,
+      "name": "Big Tires",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oklahoma"
+      },
+      "weightLb": {
+        "min": 31199,
+        "max": 31199
+      },
+      "valuePerKm": 0.265,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "boat",
+      "gameId": null,
+      "name": "Boat",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Washington"
+      },
+      "weightLb": {
+        "min": 17500,
+        "max": 17500
+      },
+      "valuePerKm": 0.21825,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-boat"
+      ]
+    },
+    {
+      "id": "boom-lift-articulated",
+      "gameId": null,
+      "name": "Boom Lift (articulated)",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oklahoma"
+      },
+      "weightLb": {
+        "min": 8500,
+        "max": 17000
+      },
+      "valuePerKm": 6.17,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "boom-lift-telescopic",
+      "gameId": null,
+      "name": "Boom Lift (telescopic)",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oklahoma"
+      },
+      "weightLb": {
+        "min": 26500,
+        "max": 26500
+      },
+      "valuePerKm": 18.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "borates",
+      "gameId": null,
+      "name": "Borates",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.53"
+      },
+      "weightLb": {
+        "min": 6850,
+        "max": 38364
+      },
+      "valuePerKm": 0.7,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-bulk",
+        "dry-van",
+        "insulated"
+      ]
+    },
+    {
+      "id": "boric-acid",
+      "gameId": null,
+      "name": "Boric Acid",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.53"
+      },
+      "weightLb": {
+        "min": 16914,
+        "max": 45670
+      },
+      "valuePerKm": 0.78,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated"
+      ]
+    },
+    {
+      "id": "bromine",
+      "gameId": null,
+      "name": "Bromine",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.51"
+      },
+      "weightLb": {
+        "min": 22000,
+        "max": 44000
+      },
+      "valuePerKm": 18.05,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1744",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr",
+        "high-value"
+      ],
+      "hazmatClass": "6.1",
+      "trailerTypes": [
+        "container-carrier"
+      ]
+    },
+    {
+      "id": "bulldozer",
+      "gameId": null,
+      "name": "Bulldozer",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.39"
+      },
+      "weightLb": {
+        "min": 40100,
+        "max": 40100
+      },
+      "valuePerKm": 22.125,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "bus-hood",
+      "gameId": null,
+      "name": "Bus Hood",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oklahoma"
+      },
+      "weightLb": {
+        "min": 1800,
+        "max": 2100
+      },
+      "valuePerKm": 0.7,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "butter",
+      "gameId": null,
+      "name": "Butter",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 20385,
+        "max": 39203
+      },
+      "valuePerKm": 0.773,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "buttermilk",
+      "gameId": null,
+      "name": "Buttermilk",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Montana"
+      },
+      "weightLb": {
+        "min": 22535,
+        "max": 41603
+      },
+      "valuePerKm": 0.77,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "cable-reel",
+      "gameId": null,
+      "name": "Cable Reel",
+      "dlc": "heavy-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Heavy Cargo Pack"
+      },
+      "weightLb": {
+        "min": 66000,
+        "max": 66000
+      },
+      "valuePerKm": 25.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l",
+        "lowboy-double",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "cables",
+      "gameId": null,
+      "name": "Cables",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.39"
+      },
+      "weightLb": {
+        "min": 18500,
+        "max": 37000
+      },
+      "valuePerKm": 9.57,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "cans",
+      "gameId": null,
+      "name": "Cans",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 20500,
+        "max": 44155
+      },
+      "valuePerKm": 0.635,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "car-parts",
+      "gameId": null,
+      "name": "Car Parts",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 8000,
+        "max": 16000
+      },
+      "valuePerKm": 8.58,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier"
+      ]
+    },
+    {
+      "id": "cars",
+      "gameId": null,
+      "name": "Cars",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 17500,
+        "max": 17500
+      },
+      "valuePerKm": 0.225,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "car-transporter"
+      ]
+    },
+    {
+      "id": "cars-mixed",
+      "gameId": null,
+      "name": "Cars (mixed)",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.48"
+      },
+      "weightLb": {
+        "min": 20500,
+        "max": 20500
+      },
+      "valuePerKm": 0.234,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "car-transporter"
+      ]
+    },
+    {
+      "id": "cars-small",
+      "gameId": null,
+      "name": "Cars (small)",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.48"
+      },
+      "weightLb": {
+        "min": 24000,
+        "max": 24000
+      },
+      "valuePerKm": 0.246,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "car-transporter"
+      ]
+    },
+    {
+      "id": "cars-suvs",
+      "gameId": null,
+      "name": "Cars (SUVs)",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.48"
+      },
+      "weightLb": {
+        "min": 12000,
+        "max": 16500
+      },
+      "valuePerKm": null,
+      "valuePerKmRange": {
+        "min": 0.18,
+        "max": 0.225
+      },
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "van-transporter"
+      ]
+    },
+    {
+      "id": "cattle-equipment",
+      "gameId": null,
+      "name": "Cattle Equipment",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Missouri"
+      },
+      "weightLb": {
+        "min": 3000,
+        "max": 6600
+      },
+      "valuePerKm": 0.25,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "cement",
+      "gameId": null,
+      "name": "Cement",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.45"
+      },
+      "weightLb": {
+        "min": 34969,
+        "max": 44506
+      },
+      "valuePerKm": 0.7,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-bulk"
+      ]
+    },
+    {
+      "id": "cheese",
+      "gameId": null,
+      "name": "Cheese",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 17431,
+        "max": 33521
+      },
+      "valuePerKm": 0.79,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "chemical-granules",
+      "gameId": null,
+      "name": "Chemical Granules",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.59"
+      },
+      "weightLb": null,
+      "valuePerKm": 0.796,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1325",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "4.1",
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "chlorine",
+      "gameId": null,
+      "name": "Chlorine",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.47"
+      },
+      "weightLb": {
+        "min": 41323,
+        "max": 51654
+      },
+      "valuePerKm": 3.59,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1017",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "2.3",
+      "trailerTypes": [
+        "gas-tank"
+      ]
+    },
+    {
+      "id": "circuit-breakers",
+      "gameId": null,
+      "name": "Circuit Breakers",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Montana"
+      },
+      "weightLb": {
+        "min": 14999,
+        "max": 22499
+      },
+      "valuePerKm": 8.8,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "clamshell-bucket",
+      "gameId": null,
+      "name": "Clamshell Bucket",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Arkansas"
+      },
+      "weightLb": {
+        "min": 14700,
+        "max": 34301
+      },
+      "valuePerKm": 4.05,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "clothes",
+      "gameId": null,
+      "name": "Clothes",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 11717,
+        "max": 32809
+      },
+      "valuePerKm": 0.744,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "compact-generators-jcb-g100rs",
+      "gameId": null,
+      "name": "Compact Generators JCB G100RS",
+      "dlc": "jcb-equipment-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "JCB Equipment Pack"
+      },
+      "weightLb": {
+        "min": 12300,
+        "max": 24600
+      },
+      "valuePerKm": 2.8,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "compact-tractor",
+      "gameId": null,
+      "name": "Compact Tractor",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Iowa"
+      },
+      "weightLb": {
+        "min": 14500,
+        "max": 29000
+      },
+      "valuePerKm": 10.915,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "compactor-volvo-sd160b",
+      "gameId": null,
+      "name": "Compactor Volvo SD160B",
+      "dlc": "volvo-construction-equipment",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Volvo Construction Equipment"
+      },
+      "weightLb": {
+        "min": 36797,
+        "max": 36797
+      },
+      "valuePerKm": 20.325,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "compressor-bobcat-pa127v",
+      "gameId": null,
+      "name": "Compressor Bobcat PA12.7v",
+      "dlc": "bobcat-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Bobcat Cargo Pack"
+      },
+      "weightLb": null,
+      "valuePerKm": 1.74,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "computers",
+      "gameId": null,
+      "name": "Computers",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 10340,
+        "max": 22271
+      },
+      "valuePerKm": 0.773,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "concrete-barrier",
+      "gameId": null,
+      "name": "Concrete Barrier",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Texas"
+      },
+      "weightLb": {
+        "min": 9900,
+        "max": 19800
+      },
+      "valuePerKm": 1.35,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed"
+      ]
+    },
+    {
+      "id": "concrete-tubes-large",
+      "gameId": null,
+      "name": "Concrete Tubes (large)",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 30499,
+        "max": 42699
+      },
+      "valuePerKm": 2.73,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "concrete-tubes-small",
+      "gameId": null,
+      "name": "Concrete Tubes (small)",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 18700,
+        "max": 37400
+      },
+      "valuePerKm": 5.97,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "construction-houses",
+      "gameId": null,
+      "name": "Construction Houses",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 15500,
+        "max": 31000
+      },
+      "valuePerKm": 7.62,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier"
+      ]
+    },
+    {
+      "id": "cooling-tower",
+      "gameId": null,
+      "name": "Cooling Tower",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Iowa"
+      },
+      "weightLb": {
+        "min": 31000,
+        "max": 31000
+      },
+      "valuePerKm": 8.9,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "corn",
+      "gameId": null,
+      "name": "Corn",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Nebraska"
+      },
+      "weightLb": {
+        "min": 30201,
+        "max": 50865
+      },
+      "valuePerKm": 0.682,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": true,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "bulk-feed",
+        "dry-bulk",
+        "hopper"
+      ]
+    },
+    {
+      "id": "corn-head",
+      "gameId": null,
+      "name": "Corn Head",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Iowa"
+      },
+      "weightLb": {
+        "min": 8000,
+        "max": 8000
+      },
+      "valuePerKm": 4.6,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": null,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "cotton-harvester",
+      "gameId": null,
+      "name": "Cotton Harvester",
+      "dlc": "heavy-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Heavy Cargo Pack"
+      },
+      "weightLb": {
+        "min": 70000,
+        "max": 70000
+      },
+      "valuePerKm": 28.32,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l",
+        "lowboy-double",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "cotton-lint",
+      "gameId": null,
+      "name": "Cotton Lint",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Texas"
+      },
+      "weightLb": {
+        "min": 26699,
+        "max": 44499
+      },
+      "valuePerKm": 3.3,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed"
+      ]
+    },
+    {
+      "id": "cotton-seed",
+      "gameId": null,
+      "name": "Cotton Seed",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Texas"
+      },
+      "weightLb": {
+        "min": 24087,
+        "max": 50710
+      },
+      "valuePerKm": 0.55,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": true,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "bulk-feed",
+        "chip-van",
+        "dry-bulk",
+        "hopper"
+      ]
+    },
+    {
+      "id": "crawler-carrier",
+      "gameId": null,
+      "name": "Crawler Carrier",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.57"
+      },
+      "weightLb": null,
+      "valuePerKm": 6.17,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "crawler-tractor-farm-machinery",
+      "gameId": null,
+      "name": "Crawler Tractor",
+      "dlc": "farm-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Farm Machinery"
+      },
+      "weightLb": {
+        "min": 35000,
+        "max": 35000
+      },
+      "valuePerKm": 28.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "crawler-tractor-heavy-cargo-pack",
+      "gameId": null,
+      "name": "Crawler Tractor",
+      "dlc": "heavy-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Heavy Cargo Pack"
+      },
+      "weightLb": {
+        "min": 55500,
+        "max": 55500
+      },
+      "valuePerKm": 28.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l",
+        "lowboy-double",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "crude-oil",
+      "gameId": null,
+      "name": "Crude Oil",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Utah"
+      },
+      "weightLb": {
+        "min": 29982,
+        "max": 61839
+      },
+      "valuePerKm": 1.05,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1267",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "3",
+      "trailerTypes": [
+        "fuel-tank"
+      ]
+    },
+    {
+      "id": "curtains",
+      "gameId": null,
+      "name": "Curtains",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 18001,
+        "max": 38772
+      },
+      "valuePerKm": 0.744,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "diesel",
+      "gameId": null,
+      "name": "Diesel",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 29982,
+        "max": 61839
+      },
+      "valuePerKm": 1.2,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1202",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "3",
+      "trailerTypes": [
+        "fuel-tank"
+      ]
+    },
+    {
+      "id": "disc-harrows",
+      "gameId": null,
+      "name": "Disc Harrows",
+      "dlc": "farm-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Farm Machinery"
+      },
+      "weightLb": {
+        "min": 26000,
+        "max": 26000
+      },
+      "valuePerKm": 9.6,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "dry-fruits",
+      "gameId": null,
+      "name": "Dry Fruits",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 13653,
+        "max": 38229
+      },
+      "valuePerKm": 0.756,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "dry-milk",
+      "gameId": null,
+      "name": "Dry Milk",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 17279,
+        "max": 46655
+      },
+      "valuePerKm": 0.75,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "dry-van",
+      "gameId": null,
+      "name": "Dry Van",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.61"
+      },
+      "weightLb": null,
+      "valuePerKm": 0.1423125,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van"
+      ]
+    },
+    {
+      "id": "drywall",
+      "gameId": null,
+      "name": "Drywall",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.59"
+      },
+      "weightLb": null,
+      "valuePerKm": 2.99,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed"
+      ]
+    },
+    {
+      "id": "dump-truck",
+      "gameId": null,
+      "name": "Dump Truck",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.57"
+      },
+      "weightLb": null,
+      "valuePerKm": 14.2,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "dumpster",
+      "gameId": null,
+      "name": "Dumpster",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Montana"
+      },
+      "weightLb": {
+        "min": 2399,
+        "max": 4799
+      },
+      "valuePerKm": 0.62,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "dynamite",
+      "gameId": null,
+      "name": "Dynamite",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 17634,
+        "max": 37982
+      },
+      "valuePerKm": 1.25,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "1.5D",
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "electric-dumpster-jcb-htd-5e",
+      "gameId": null,
+      "name": "Electric Dumpster JCB HTD-5E",
+      "dlc": "jcb-equipment-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "JCB Equipment Pack"
+      },
+      "weightLb": {
+        "min": 2200,
+        "max": 5500
+      },
+      "valuePerKm": 0.61,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "electric-mini-excavator-jcb-19c-e",
+      "gameId": null,
+      "name": "Electric Mini Excavator JCB 19C-E",
+      "dlc": "jcb-equipment-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "JCB Equipment Pack"
+      },
+      "weightLb": {
+        "min": 4200,
+        "max": 12600
+      },
+      "valuePerKm": 2.34,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "electronic-components",
+      "gameId": null,
+      "name": "Electronic Components",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 5599,
+        "max": 11199
+      },
+      "valuePerKm": 8.76,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier"
+      ]
+    },
+    {
+      "id": "empty-bottles",
+      "gameId": null,
+      "name": "Empty Bottles",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 20500,
+        "max": 44155
+      },
+      "valuePerKm": 0.635,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "empty-pallets",
+      "gameId": null,
+      "name": "Empty Pallets",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 10400,
+        "max": 22400
+      },
+      "valuePerKm": 0.3,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "dry-van",
+        "flatbed",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "ethane",
+      "gameId": null,
+      "name": "Ethane",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.47"
+      },
+      "weightLb": {
+        "min": 35979,
+        "max": 51570
+      },
+      "valuePerKm": 1.23,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "2059",
+      "unExpected": "1035",
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "2.1",
+      "trailerTypes": [
+        "gas-tank"
+      ]
+    },
+    {
+      "id": "ethanol",
+      "gameId": null,
+      "name": "Ethanol",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Louisiana"
+      },
+      "weightLb": null,
+      "valuePerKm": 1.15,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1170",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "3",
+      "trailerTypes": [
+        "chemical-tank"
+      ]
+    },
+    {
+      "id": "excavated-soil",
+      "gameId": null,
+      "name": "Excavated Soil",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 28660,
+        "max": 45856
+      },
+      "valuePerKm": 0.75,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dumper"
+      ]
+    },
+    {
+      "id": "excavator",
+      "gameId": null,
+      "name": "Excavator",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 38000,
+        "max": 38000
+      },
+      "valuePerKm": 22.08,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "excavator-bobcat-e60",
+      "gameId": null,
+      "name": "Excavator Bobcat E60",
+      "dlc": "bobcat-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Bobcat Cargo Pack"
+      },
+      "weightLb": null,
+      "valuePerKm": 9.08,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "excavator-jcb-245xr",
+      "gameId": null,
+      "name": "Excavator JCB 245XR",
+      "dlc": "jcb-equipment-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "JCB Equipment Pack"
+      },
+      "weightLb": {
+        "min": 61800,
+        "max": 61800
+      },
+      "valuePerKm": 30.08,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-double",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "excavator-volvo-ec220e",
+      "gameId": null,
+      "name": "Excavator Volvo EC220E",
+      "dlc": "volvo-construction-equipment",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Volvo Construction Equipment"
+      },
+      "weightLb": {
+        "min": 45128,
+        "max": 45128
+      },
+      "valuePerKm": 22.08,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "excavator-volvo-ew240e-mh",
+      "gameId": null,
+      "name": "Excavator Volvo EW240E MH",
+      "dlc": "volvo-construction-equipment",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Volvo Construction Equipment"
+      },
+      "weightLb": {
+        "min": 57320,
+        "max": 57320
+      },
+      "valuePerKm": 22.08,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-double",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "fertilizer",
+      "gameId": null,
+      "name": "Fertilizer",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 16899,
+        "max": 36399
+      },
+      "valuePerKm": 0.632,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "dry-van",
+        "flatbed",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "fertilizer-spreader",
+      "gameId": null,
+      "name": "Fertilizer Spreader",
+      "dlc": "farm-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Farm Machinery"
+      },
+      "weightLb": {
+        "min": 32000,
+        "max": 32000
+      },
+      "valuePerKm": 28.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "fertilizer-tank",
+      "gameId": null,
+      "name": "Fertilizer Tank",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.53"
+      },
+      "weightLb": {
+        "min": 19999,
+        "max": 24999
+      },
+      "valuePerKm": 2.73,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "fireworks",
+      "gameId": null,
+      "name": "Fireworks",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 12481,
+        "max": 26883
+      },
+      "valuePerKm": 1.053,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "1.4G",
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "flour",
+      "gameId": null,
+      "name": "Flour",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 19435,
+        "max": 48589
+      },
+      "valuePerKm": 0.766,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "forage-harvester",
+      "gameId": null,
+      "name": "Forage Harvester",
+      "dlc": "farm-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Farm Machinery"
+      },
+      "weightLb": {
+        "min": 30200,
+        "max": 30200
+      },
+      "valuePerKm": 27.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "forklift-bobcat-d30",
+      "gameId": null,
+      "name": "Forklift Bobcat D30",
+      "dlc": "bobcat-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Bobcat Cargo Pack"
+      },
+      "weightLb": null,
+      "valuePerKm": 5.925,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "forklifts",
+      "gameId": null,
+      "name": "Forklifts",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 17399,
+        "max": 34799
+      },
+      "valuePerKm": 6.825,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "forwarder",
+      "gameId": null,
+      "name": "Forwarder",
+      "dlc": "forest-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Forest Machinery"
+      },
+      "weightLb": {
+        "min": 44000,
+        "max": 44000
+      },
+      "valuePerKm": 30,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "frac-tank",
+      "gameId": null,
+      "name": "Frac Tank",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Utah"
+      },
+      "weightLb": {
+        "min": 8220,
+        "max": 8220
+      },
+      "valuePerKm": 0.285,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "frac-tank"
+      ]
+    },
+    {
+      "id": "frozen-food",
+      "gameId": null,
+      "name": "Frozen Food",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 20795,
+        "max": 39991
+      },
+      "valuePerKm": 0.756,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "frozen-fruits",
+      "gameId": null,
+      "name": "Frozen Fruits",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 17250,
+        "max": 33174
+      },
+      "valuePerKm": 0.759,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "frozen-vegetables",
+      "gameId": null,
+      "name": "Frozen Vegetables",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 17024,
+        "max": 32738
+      },
+      "valuePerKm": 0.76,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "fruit-juice",
+      "gameId": null,
+      "name": "Fruit Juice",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.37"
+      },
+      "weightLb": {
+        "min": 30864,
+        "max": 61729
+      },
+      "valuePerKm": 0.88,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "food-tank"
+      ]
+    },
+    {
+      "id": "fruits",
+      "gameId": null,
+      "name": "Fruits",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 17671,
+        "max": 33984
+      },
+      "valuePerKm": 0.764,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "fuel-tank",
+      "gameId": null,
+      "name": "Fuel Tank",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.61"
+      },
+      "weightLb": null,
+      "valuePerKm": 0.23205,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "fuel-tank"
+      ]
+    },
+    {
+      "id": "furniture",
+      "gameId": null,
+      "name": "Furniture",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 17428,
+        "max": 37537
+      },
+      "valuePerKm": 0.823,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "garbage-truck",
+      "gameId": null,
+      "name": "Garbage Truck",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Montana"
+      },
+      "weightLb": {
+        "min": 33000,
+        "max": 33000
+      },
+      "valuePerKm": 27.25,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "gasoline",
+      "gameId": null,
+      "name": "Gasoline",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 27171,
+        "max": 52745
+      },
+      "valuePerKm": 1.15,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1203",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "3",
+      "trailerTypes": [
+        "fuel-tank"
+      ]
+    },
+    {
+      "id": "generator-set",
+      "gameId": null,
+      "name": "Generator Set",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Texas"
+      },
+      "weightLb": {
+        "min": 21999,
+        "max": 43999
+      },
+      "valuePerKm": 9.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed"
+      ]
+    },
+    {
+      "id": "geo-membranes-rolls",
+      "gameId": null,
+      "name": "Geo Membranes Rolls",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.59"
+      },
+      "weightLb": null,
+      "valuePerKm": 4.6,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "giant-silo",
+      "gameId": null,
+      "name": "Giant Silo",
+      "dlc": "special-transport",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Special Transport"
+      },
+      "weightLb": {
+        "min": 77161,
+        "max": 77161
+      },
+      "valuePerKm": 34.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l"
+      ]
+    },
+    {
+      "id": "glass",
+      "gameId": null,
+      "name": "Glass",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Texas"
+      },
+      "weightLb": {
+        "min": 16200,
+        "max": 16200
+      },
+      "valuePerKm": 4.4,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "glass-racks",
+      "gameId": null,
+      "name": "Glass Racks",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Texas"
+      },
+      "weightLb": {
+        "min": 19199,
+        "max": 19199
+      },
+      "valuePerKm": 1.3,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "grain",
+      "gameId": null,
+      "name": "Grain",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 21500,
+        "max": 49617
+      },
+      "valuePerKm": 0.692,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": true,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "bulk-feed",
+        "dry-bulk",
+        "dry-van",
+        "hopper",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "gravel",
+      "gameId": null,
+      "name": "Gravel",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 29806,
+        "max": 48435
+      },
+      "valuePerKm": 0.75,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dumper"
+      ]
+    },
+    {
+      "id": "guard-rails",
+      "gameId": null,
+      "name": "Guard Rails",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Montana"
+      },
+      "weightLb": {
+        "min": 20975,
+        "max": 41951
+      },
+      "valuePerKm": 0.584,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "gypsum",
+      "gameId": null,
+      "name": "Gypsum",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 23691,
+        "max": 43998
+      },
+      "valuePerKm": 0.75,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "harvester",
+      "gameId": null,
+      "name": "Harvester",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.39"
+      },
+      "weightLb": {
+        "min": 44000,
+        "max": 44000
+      },
+      "valuePerKm": 30,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "haul-truck-chassis",
+      "gameId": null,
+      "name": "Haul Truck Chassis",
+      "dlc": "special-transport",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Special Transport"
+      },
+      "weightLb": {
+        "min": 187392,
+        "max": 187392
+      },
+      "valuePerKm": 40.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l"
+      ]
+    },
+    {
+      "id": "haul-truck-hull",
+      "gameId": null,
+      "name": "Haul Truck Hull",
+      "dlc": "special-transport",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Special Transport"
+      },
+      "weightLb": {
+        "min": 48501,
+        "max": 48501
+      },
+      "valuePerKm": 33,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l"
+      ]
+    },
+    {
+      "id": "hay",
+      "gameId": null,
+      "name": "Hay",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 12000,
+        "max": 24000
+      },
+      "valuePerKm": 2.1,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "chip-van",
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "heat-exchanger",
+      "gameId": null,
+      "name": "Heat Exchanger",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.57"
+      },
+      "weightLb": null,
+      "valuePerKm": 0.95,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "heavy-bulldozer",
+      "gameId": null,
+      "name": "Heavy Bulldozer",
+      "dlc": "heavy-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Heavy Cargo Pack"
+      },
+      "weightLb": {
+        "min": 89000,
+        "max": 89000
+      },
+      "valuePerKm": 30,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "home-accessories",
+      "gameId": null,
+      "name": "Home Accessories",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 22945,
+        "max": 44125
+      },
+      "valuePerKm": 0.823,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "house-prefabs",
+      "gameId": null,
+      "name": "House Prefabs",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oregon"
+      },
+      "weightLb": {
+        "min": 17999,
+        "max": 44999
+      },
+      "valuePerKm": 4.59,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed"
+      ]
+    },
+    {
+      "id": "household-appliances",
+      "gameId": null,
+      "name": "Household Appliances",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 13338,
+        "max": 28728
+      },
+      "valuePerKm": 0.923,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "huge-construction",
+      "gameId": null,
+      "name": "Huge Construction",
+      "dlc": "special-transport",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Special Transport"
+      },
+      "weightLb": {
+        "min": 121254,
+        "max": 121254
+      },
+      "valuePerKm": 33,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l"
+      ]
+    },
+    {
+      "id": "huge-tires",
+      "gameId": null,
+      "name": "Huge Tires",
+      "dlc": "special-transport",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Special Transport"
+      },
+      "weightLb": {
+        "min": 44092,
+        "max": 44092
+      },
+      "valuePerKm": 31.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed"
+      ]
+    },
+    {
+      "id": "hydrochloric-acid",
+      "gameId": null,
+      "name": "Hydrochloric Acid",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 22958,
+        "max": 34438
+      },
+      "valuePerKm": 0.283,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1789",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "8",
+      "trailerTypes": [
+        "chemical-tank"
+      ]
+    },
+    {
+      "id": "ibc-containers",
+      "gameId": null,
+      "name": "IBC Containers",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Montana"
+      },
+      "weightLb": {
+        "min": 10416,
+        "max": 20833
+      },
+      "valuePerKm": 0.575,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "ice-cream",
+      "gameId": null,
+      "name": "Ice Cream",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 31363,
+        "max": 41083
+      },
+      "valuePerKm": 0.773,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "industrial-pallets",
+      "gameId": null,
+      "name": "Industrial Pallets",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "unknown",
+        "name": null
+      },
+      "weightLb": {
+        "min": 10399,
+        "max": 20799
+      },
+      "valuePerKm": 2.31,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed"
+      ]
+    },
+    {
+      "id": "insulation-panels",
+      "gameId": null,
+      "name": "Insulation Panels",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "unknown",
+        "name": null
+      },
+      "weightLb": {
+        "min": 20100,
+        "max": 40200
+      },
+      "valuePerKm": 3.59,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "iron-pipes",
+      "gameId": null,
+      "name": "Iron Pipes",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 22500,
+        "max": 45000
+      },
+      "valuePerKm": 8.33,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed"
+      ]
+    },
+    {
+      "id": "jet-engine-inlet-cowl",
+      "gameId": null,
+      "name": "Jet Engine Inlet Cowl",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Kansas"
+      },
+      "weightLb": {
+        "min": 7599,
+        "max": 15199
+      },
+      "valuePerKm": 4.87,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "kenworth-trucks",
+      "gameId": null,
+      "name": "Kenworth Trucks",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Washington"
+      },
+      "weightLb": {
+        "min": 57510,
+        "max": 57510
+      },
+      "valuePerKm": 0.27825,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "truck-transporter"
+      ]
+    },
+    {
+      "id": "knuckleboom-loader",
+      "gameId": null,
+      "name": "Knuckleboom Loader",
+      "dlc": "forest-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Forest Machinery"
+      },
+      "weightLb": {
+        "min": 30600,
+        "max": 30600
+      },
+      "valuePerKm": 0.285,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "knuckleboom-loader"
+      ]
+    },
+    {
+      "id": "krone-big-m-45",
+      "gameId": null,
+      "name": "Krone BiG M 45",
+      "dlc": "krone-agriculture-equipment",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "KRONE Agriculture Equipment"
+      },
+      "weightLb": {
+        "min": 34200,
+        "max": 34200
+      },
+      "valuePerKm": 22.825,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "krone-big-pack-1290-xc-hdp",
+      "gameId": null,
+      "name": "Krone BiG Pack 1290 XC HDP",
+      "dlc": "krone-agriculture-equipment",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "KRONE Agriculture Equipment"
+      },
+      "weightLb": {
+        "min": 22500,
+        "max": 22500
+      },
+      "valuePerKm": 14.825,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "krone-big-x-1180",
+      "gameId": null,
+      "name": "Krone BiG X 1180",
+      "dlc": "krone-agriculture-equipment",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "KRONE Agriculture Equipment"
+      },
+      "weightLb": {
+        "min": 37700,
+        "max": 37700
+      },
+      "valuePerKm": 21.825,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "krone-easycut-b-880-cv",
+      "gameId": null,
+      "name": "Krone EasyCut B 880 CV",
+      "dlc": "krone-agriculture-equipment",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "KRONE Agriculture Equipment"
+      },
+      "weightLb": {
+        "min": 6500,
+        "max": 6500
+      },
+      "valuePerKm": 4.25,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "krone-gx-440",
+      "gameId": null,
+      "name": "Krone GX 440",
+      "dlc": "krone-agriculture-equipment",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "KRONE Agriculture Equipment"
+      },
+      "weightLb": {
+        "min": 20000,
+        "max": 20000
+      },
+      "valuePerKm": 14.9,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "krone-swadro-tc-1370",
+      "gameId": null,
+      "name": "Krone Swadro TC 1370",
+      "dlc": "krone-agriculture-equipment",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "KRONE Agriculture Equipment"
+      },
+      "weightLb": {
+        "min": 10700,
+        "max": 10700
+      },
+      "valuePerKm": 6.825,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "krone-varipack-v-190-xc",
+      "gameId": null,
+      "name": "Krone VariPack V 190 XC",
+      "dlc": "krone-agriculture-equipment",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "KRONE Agriculture Equipment"
+      },
+      "weightLb": {
+        "min": 7000,
+        "max": 7000
+      },
+      "valuePerKm": 6,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "large-reservoir-tank",
+      "gameId": null,
+      "name": "Large Reservoir Tank",
+      "dlc": "special-transport",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Special Transport"
+      },
+      "weightLb": {
+        "min": 77161,
+        "max": 77161
+      },
+      "valuePerKm": 31.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l"
+      ]
+    },
+    {
+      "id": "large-tubes",
+      "gameId": null,
+      "name": "Large Tubes",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 19000,
+        "max": 38000
+      },
+      "valuePerKm": 3.74,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": true,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed",
+        "log"
+      ]
+    },
+    {
+      "id": "lemonade",
+      "gameId": null,
+      "name": "Lemonade",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Montana"
+      },
+      "weightLb": {
+        "min": 17114,
+        "max": 46209
+      },
+      "valuePerKm": 0.767,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "lift-truck",
+      "gameId": null,
+      "name": "Lift Truck",
+      "dlc": "heavy-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Heavy Cargo Pack"
+      },
+      "weightLb": {
+        "min": 118500,
+        "max": 118500
+      },
+      "valuePerKm": 33.75,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "lift-truck-chassis",
+      "gameId": null,
+      "name": "Lift Truck Chassis",
+      "dlc": "heavy-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Heavy Cargo Pack"
+      },
+      "weightLb": {
+        "min": 94500,
+        "max": 94500
+      },
+      "valuePerKm": 30.75,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "limestone",
+      "gameId": null,
+      "name": "Limestone",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 27778,
+        "max": 50926
+      },
+      "valuePerKm": 0.75,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dumper"
+      ]
+    },
+    {
+      "id": "live-cattle",
+      "gameId": null,
+      "name": "Live Cattle",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Colorado"
+      },
+      "weightLb": {
+        "min": 30313,
+        "max": 33951
+      },
+      "valuePerKm": 0.9,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "livestock"
+      ]
+    },
+    {
+      "id": "live-pigs",
+      "gameId": null,
+      "name": "Live Pigs",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.55"
+      },
+      "weightLb": {
+        "min": 22046,
+        "max": 25132
+      },
+      "valuePerKm": 0.3,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "livestock"
+      ]
+    },
+    {
+      "id": "live-sheep",
+      "gameId": null,
+      "name": "Live Sheep",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Iowa"
+      },
+      "weightLb": {
+        "min": 22046,
+        "max": 25132
+      },
+      "valuePerKm": 0.3,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "livestock"
+      ]
+    },
+    {
+      "id": "log-harvester",
+      "gameId": null,
+      "name": "Log Harvester",
+      "dlc": "forest-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Forest Machinery"
+      },
+      "weightLb": {
+        "min": 48500,
+        "max": 48500
+      },
+      "valuePerKm": 30,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "log-loader",
+      "gameId": null,
+      "name": "Log Loader",
+      "dlc": "forest-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Forest Machinery"
+      },
+      "weightLb": {
+        "min": 106500,
+        "max": 106500
+      },
+      "valuePerKm": 33.75,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "log-stacker",
+      "gameId": null,
+      "name": "Log Stacker",
+      "dlc": "forest-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Forest Machinery"
+      },
+      "weightLb": {
+        "min": 119000,
+        "max": 119000
+      },
+      "valuePerKm": 33.75,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "logs",
+      "gameId": null,
+      "name": "Logs",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oregon"
+      },
+      "weightLb": {
+        "min": 42662,
+        "max": 44303
+      },
+      "valuePerKm": 0.668,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": true,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "log"
+      ]
+    },
+    {
+      "id": "lpg",
+      "gameId": null,
+      "name": "LPG",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.47"
+      },
+      "weightLb": {
+        "min": 36376,
+        "max": 52139
+      },
+      "valuePerKm": 1.2,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1075",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": []
+    },
+    {
+      "id": "lumber-beams",
+      "gameId": null,
+      "name": "Lumber (beams)",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oregon"
+      },
+      "weightLb": {
+        "min": 17000,
+        "max": 45999
+      },
+      "valuePerKm": 10.8,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed",
+        "log"
+      ]
+    },
+    {
+      "id": "lumber-boards",
+      "gameId": null,
+      "name": "Lumber (boards)",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oregon"
+      },
+      "weightLb": {
+        "min": 17000,
+        "max": 34000
+      },
+      "valuePerKm": 4.65,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "lye",
+      "gameId": null,
+      "name": "Lye",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 26664,
+        "max": 39997
+      },
+      "valuePerKm": 0.252,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1824",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "8",
+      "trailerTypes": [
+        "chemical-tank"
+      ]
+    },
+    {
+      "id": "machine-parts",
+      "gameId": null,
+      "name": "Machine Parts",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 7200,
+        "max": 14400
+      },
+      "valuePerKm": 5.3,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier"
+      ]
+    },
+    {
+      "id": "massive-tech-part",
+      "gameId": null,
+      "name": "Massive Tech Part",
+      "dlc": "special-transport",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Special Transport"
+      },
+      "weightLb": {
+        "min": 99208,
+        "max": 99208
+      },
+      "valuePerKm": 39,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l"
+      ]
+    },
+    {
+      "id": "material-handler",
+      "gameId": null,
+      "name": "Material Handler",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.59"
+      },
+      "weightLb": null,
+      "valuePerKm": 7.08,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "meat",
+      "gameId": null,
+      "name": "Meat",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 18783,
+        "max": 36122
+      },
+      "valuePerKm": 0.728,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "medium-truck-chassis",
+      "gameId": null,
+      "name": "Medium Truck Chassis",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.57"
+      },
+      "weightLb": null,
+      "valuePerKm": 5.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "mercuric-chloride",
+      "gameId": null,
+      "name": "Mercuric Chloride",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 27880,
+        "max": 41820
+      },
+      "valuePerKm": 0.239,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1624",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "6.1",
+      "trailerTypes": [
+        "chemical-tank"
+      ]
+    },
+    {
+      "id": "metal-coil",
+      "gameId": null,
+      "name": "Metal Coil",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oregon"
+      },
+      "weightLb": {
+        "min": 27000,
+        "max": 27000
+      },
+      "valuePerKm": 11,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "metro-railcar",
+      "gameId": null,
+      "name": "Metro Railcar",
+      "dlc": "special-transport",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Special Transport"
+      },
+      "weightLb": {
+        "min": 161000,
+        "max": 161000
+      },
+      "valuePerKm": 37,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l"
+      ]
+    },
+    {
+      "id": "milk",
+      "gameId": null,
+      "name": "Milk",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 22248,
+        "max": 61729
+      },
+      "valuePerKm": 0.77,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [
+        {
+          "value": 0.864,
+          "note": "unit_reward_per_km value for Tank Trailers"
+        }
+      ],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "food-tank",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "milling-machine",
+      "gameId": null,
+      "name": "Milling Machine",
+      "dlc": "heavy-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Heavy Cargo Pack"
+      },
+      "weightLb": {
+        "min": 97000,
+        "max": 97000
+      },
+      "valuePerKm": 31.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "mini-excavator-bobcat-e10e",
+      "gameId": null,
+      "name": "Mini Excavator Bobcat E10e",
+      "dlc": "bobcat-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Bobcat Cargo Pack"
+      },
+      "weightLb": null,
+      "valuePerKm": 1.72,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "mix-tank",
+      "gameId": null,
+      "name": "Mix Tank",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.40"
+      },
+      "weightLb": {
+        "min": 15399,
+        "max": 15399
+      },
+      "valuePerKm": 13.93,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "mobile-air-compressor",
+      "gameId": null,
+      "name": "Mobile Air Compressor",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Arkansas"
+      },
+      "weightLb": {
+        "min": 8000,
+        "max": 16000
+      },
+      "valuePerKm": 9.05,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "mobile-barrier",
+      "gameId": null,
+      "name": "Mobile Barrier",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 17900,
+        "max": 17900
+      },
+      "valuePerKm": 0.22125,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "mobile-barrier"
+      ]
+    },
+    {
+      "id": "mobile-crusher",
+      "gameId": null,
+      "name": "Mobile Crusher",
+      "dlc": "heavy-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Heavy Cargo Pack"
+      },
+      "weightLb": {
+        "min": 88600,
+        "max": 88600
+      },
+      "valuePerKm": 40.325,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "mobile-screener",
+      "gameId": null,
+      "name": "Mobile Screener",
+      "dlc": "heavy-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Heavy Cargo Pack"
+      },
+      "weightLb": {
+        "min": 86200,
+        "max": 86200
+      },
+      "valuePerKm": 38.325,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "mobile-stacker",
+      "gameId": null,
+      "name": "Mobile Stacker",
+      "dlc": "heavy-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Heavy Cargo Pack"
+      },
+      "weightLb": {
+        "min": 23800,
+        "max": 23800
+      },
+      "valuePerKm": 10.325,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy",
+        "lowboy-55l"
+      ]
+    },
+    {
+      "id": "mooring-buoy",
+      "gameId": null,
+      "name": "Mooring Buoy",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oregon"
+      },
+      "weightLb": {
+        "min": 1999,
+        "max": 3999
+      },
+      "valuePerKm": 1.67,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "mortar",
+      "gameId": null,
+      "name": "Mortar",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 23423,
+        "max": 43500
+      },
+      "valuePerKm": 0.692,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "motor-grader",
+      "gameId": null,
+      "name": "Motor Grader",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.59"
+      },
+      "weightLb": null,
+      "valuePerKm": 22.15,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "moving-containers",
+      "gameId": null,
+      "name": "Moving Containers",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Missouri"
+      },
+      "weightLb": {
+        "min": 2000,
+        "max": 4000
+      },
+      "valuePerKm": 0.775,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "mulcher",
+      "gameId": null,
+      "name": "Mulcher",
+      "dlc": "forest-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Forest Machinery"
+      },
+      "weightLb": {
+        "min": 33000,
+        "max": 33000
+      },
+      "valuePerKm": 28.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "municipal-truck",
+      "gameId": null,
+      "name": "Municipal Truck",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Iowa"
+      },
+      "weightLb": {
+        "min": 16799,
+        "max": 16799
+      },
+      "valuePerKm": 14.2,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "nitrocellulose",
+      "gameId": null,
+      "name": "Nitrocellulose",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.45"
+      },
+      "weightLb": {
+        "min": 17789,
+        "max": 48030
+      },
+      "valuePerKm": 1.07,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "2059",
+      "unExpected": "2557",
+      "dynamicLoading": false,
+      "flags": [
+        "adr",
+        "fragile"
+      ],
+      "hazmatClass": "4.1",
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "nuts",
+      "gameId": null,
+      "name": "Nuts",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 18250,
+        "max": 39309
+      },
+      "valuePerKm": 0.692,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "office-supplies",
+      "gameId": null,
+      "name": "Office Supplies",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 19230,
+        "max": 41420
+      },
+      "valuePerKm": 0.71,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "oil-pipes",
+      "gameId": null,
+      "name": "Oil Pipes",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Texas"
+      },
+      "weightLb": {
+        "min": 22000,
+        "max": 44000
+      },
+      "valuePerKm": 8.9,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed"
+      ]
+    },
+    {
+      "id": "packaged-food",
+      "gameId": null,
+      "name": "Packaged Food",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 16525,
+        "max": 44619
+      },
+      "valuePerKm": 0.767,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "packed-lumber",
+      "gameId": null,
+      "name": "Packed Lumber",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Arkansas"
+      },
+      "weightLb": {
+        "min": 18799,
+        "max": 32899
+      },
+      "valuePerKm": 2.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "paint",
+      "gameId": null,
+      "name": "Paint",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 23691,
+        "max": 43998
+      },
+      "valuePerKm": 0.635,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "paper",
+      "gameId": null,
+      "name": "Paper",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 11717,
+        "max": 32809
+      },
+      "valuePerKm": 0.774,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "pelleted-animal-food",
+      "gameId": null,
+      "name": "Pelleted Animal Food",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.36"
+      },
+      "weightLb": {
+        "min": 20943,
+        "max": 50706
+      },
+      "valuePerKm": 0.17,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": true,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "bulk-feed",
+        "dry-bulk",
+        "dry-van",
+        "hopper",
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "pesticides",
+      "gameId": null,
+      "name": "Pesticides",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.46"
+      },
+      "weightLb": {
+        "min": 25830,
+        "max": 38745
+      },
+      "valuePerKm": 0.282,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "2902",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "6.1",
+      "trailerTypes": [
+        "chemical-tank"
+      ]
+    },
+    {
+      "id": "peterbilt-trucks",
+      "gameId": null,
+      "name": "Peterbilt Trucks",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.46"
+      },
+      "weightLb": {
+        "min": 54800,
+        "max": 54800
+      },
+      "valuePerKm": 0.27825,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "truck-transporter"
+      ]
+    },
+    {
+      "id": "pickups-crane",
+      "gameId": null,
+      "name": "Pickups (crane)",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Missouri"
+      },
+      "weightLb": {
+        "min": 16799,
+        "max": 16799
+      },
+      "valuePerKm": 14.2,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "pickups-passenger",
+      "gameId": null,
+      "name": "Pickups (passenger)",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.48"
+      },
+      "weightLb": {
+        "min": 15900,
+        "max": 19500
+      },
+      "valuePerKm": null,
+      "valuePerKmRange": {
+        "min": 0.219,
+        "max": 0.231
+      },
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "van-transporter"
+      ]
+    },
+    {
+      "id": "planter",
+      "gameId": null,
+      "name": "Planter",
+      "dlc": "farm-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Farm Machinery"
+      },
+      "weightLb": {
+        "min": 19400,
+        "max": 19400
+      },
+      "valuePerKm": 15.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "plows",
+      "gameId": null,
+      "name": "Plows",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 3300,
+        "max": 6600
+      },
+      "valuePerKm": 3.165,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed"
+      ]
+    },
+    {
+      "id": "potassium",
+      "gameId": null,
+      "name": "Potassium",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.45"
+      },
+      "weightLb": {
+        "min": 16957,
+        "max": 45786
+      },
+      "valuePerKm": 1.08,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "2257",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr",
+        "fragile"
+      ],
+      "hazmatClass": "4.3",
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "potatoes",
+      "gameId": null,
+      "name": "Potatoes",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Idaho"
+      },
+      "weightLb": {
+        "min": 18318,
+        "max": 50814
+      },
+      "valuePerKm": 0.762,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [
+        {
+          "value": 0.195,
+          "note": "unit_reward_per_km value for Bulk Trailers"
+        }
+      ],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": true,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "hopper",
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "power-generator",
+      "gameId": null,
+      "name": "Power Generator",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 15500,
+        "max": 31000
+      },
+      "valuePerKm": 7.62,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier"
+      ]
+    },
+    {
+      "id": "powerpack-jcb-125qe",
+      "gameId": null,
+      "name": "Powerpack JCB 1.25QE",
+      "dlc": "jcb-equipment-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "JCB Equipment Pack"
+      },
+      "weightLb": {
+        "min": 16800,
+        "max": 33600
+      },
+      "valuePerKm": 0.593,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "pressure-tank",
+      "gameId": null,
+      "name": "Pressure Tank",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 9500,
+        "max": 20900
+      },
+      "valuePerKm": 0.95,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "propane",
+      "gameId": null,
+      "name": "Propane",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 32606,
+        "max": 51083
+      },
+      "valuePerKm": 1.13,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1978",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "2.1",
+      "trailerTypes": [
+        "gas-tank"
+      ]
+    },
+    {
+      "id": "pumpjack",
+      "gameId": null,
+      "name": "Pumpjack",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Texas"
+      },
+      "weightLb": {
+        "min": 6600,
+        "max": 13200
+      },
+      "valuePerKm": 4.165,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed"
+      ]
+    },
+    {
+      "id": "railcar",
+      "gameId": null,
+      "name": "Railcar",
+      "dlc": "special-transport",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Special Transport"
+      },
+      "weightLb": {
+        "min": 85980,
+        "max": 85980
+      },
+      "valuePerKm": 36,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l"
+      ]
+    },
+    {
+      "id": "railcar-mover",
+      "gameId": null,
+      "name": "Railcar Mover",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Nebraska"
+      },
+      "weightLb": {
+        "min": 49999,
+        "max": 49999
+      },
+      "valuePerKm": 21.08,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "rails",
+      "gameId": null,
+      "name": "Rails",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Wyoming"
+      },
+      "weightLb": {
+        "min": 17000,
+        "max": 34000
+      },
+      "valuePerKm": 6.15,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "raw-milk",
+      "gameId": null,
+      "name": "Raw Milk",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.37"
+      },
+      "weightLb": {
+        "min": 30864,
+        "max": 61729
+      },
+      "valuePerKm": 0.85,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "food-tank"
+      ]
+    },
+    {
+      "id": "recreational-vehicle-campers",
+      "gameId": null,
+      "name": "Recreational Vehicle (campers)",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Nebraska"
+      },
+      "weightLb": {
+        "min": 15432,
+        "max": 15432
+      },
+      "valuePerKm": 0.225,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "van-transporter"
+      ]
+    },
+    {
+      "id": "recreational-vehicle-motorhomes",
+      "gameId": null,
+      "name": "Recreational Vehicle (motorhomes)",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Nebraska"
+      },
+      "weightLb": {
+        "min": 6300,
+        "max": 6300
+      },
+      "valuePerKm": 7,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "refrigerated-trailer",
+      "gameId": null,
+      "name": "Refrigerated Trailer",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.61"
+      },
+      "weightLb": null,
+      "valuePerKm": 0.1755,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "reservoir-tank",
+      "gameId": null,
+      "name": "Reservoir Tank",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 20499,
+        "max": 40999
+      },
+      "valuePerKm": 9,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "rice",
+      "gameId": null,
+      "name": "Rice",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 24197,
+        "max": 44672
+      },
+      "valuePerKm": 0.761,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "roadroller",
+      "gameId": null,
+      "name": "Roadroller",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 21999,
+        "max": 21999
+      },
+      "valuePerKm": 20.325,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "rock-bucket-volvo-spn-p-t-seg",
+      "gameId": null,
+      "name": "Rock Bucket Volvo SPN P T SEG",
+      "dlc": "volvo-construction-equipment",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Volvo Construction Equipment"
+      },
+      "weightLb": {
+        "min": 7936,
+        "max": 7936
+      },
+      "valuePerKm": 18.05,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "roof-shingles",
+      "gameId": null,
+      "name": "Roof Shingles",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "unknown",
+        "name": null
+      },
+      "weightLb": {
+        "min": 21268,
+        "max": 42537
+      },
+      "valuePerKm": 0.815,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed"
+      ]
+    },
+    {
+      "id": "rough-terrain-forklift",
+      "gameId": null,
+      "name": "Rough Terrain Forklift",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Arkansas"
+      },
+      "weightLb": {
+        "min": 14500,
+        "max": 29000
+      },
+      "valuePerKm": 14.05,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "rye",
+      "gameId": null,
+      "name": "Rye",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Louisiana"
+      },
+      "weightLb": null,
+      "valuePerKm": 0.692,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": true,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "bulk-feed",
+        "dry-bulk",
+        "hopper"
+      ]
+    },
+    {
+      "id": "salt",
+      "gameId": null,
+      "name": "Salt",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.38"
+      },
+      "weightLb": {
+        "min": 17431,
+        "max": 47066
+      },
+      "valuePerKm": 0.77,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "sand",
+      "gameId": null,
+      "name": "Sand",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 28611,
+        "max": 50865
+      },
+      "valuePerKm": 0.75,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-bulk",
+        "dumper"
+      ]
+    },
+    {
+      "id": "sawdust-panels",
+      "gameId": null,
+      "name": "Sawdust Panels",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oregon"
+      },
+      "weightLb": {
+        "min": 21268,
+        "max": 42537
+      },
+      "valuePerKm": 0.815,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "scaffolding",
+      "gameId": null,
+      "name": "Scaffolding",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Missouri"
+      },
+      "weightLb": {
+        "min": 9500,
+        "max": 20900
+      },
+      "valuePerKm": 0.615,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "school-bus",
+      "gameId": null,
+      "name": "School Bus",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oklahoma"
+      },
+      "weightLb": {
+        "min": 24500,
+        "max": 24500
+      },
+      "valuePerKm": 27.25,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "scissor-lift",
+      "gameId": null,
+      "name": "Scissor Lift",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.57"
+      },
+      "weightLb": null,
+      "valuePerKm": 5.8,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "scrap-metals",
+      "gameId": null,
+      "name": "Scrap Metals",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 29211,
+        "max": 46737
+      },
+      "valuePerKm": 0.75,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": true,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "chip-van",
+        "dumper"
+      ]
+    },
+    {
+      "id": "scraper",
+      "gameId": null,
+      "name": "Scraper",
+      "dlc": "heavy-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Heavy Cargo Pack"
+      },
+      "weightLb": {
+        "min": 90000,
+        "max": 90000
+      },
+      "valuePerKm": 30,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "scrapped-cars",
+      "gameId": null,
+      "name": "Scrapped Cars",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 22799,
+        "max": 45599
+      },
+      "valuePerKm": 8.55,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed"
+      ]
+    },
+    {
+      "id": "seed-containers",
+      "gameId": null,
+      "name": "Seed Containers",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.61"
+      },
+      "weightLb": null,
+      "valuePerKm": 1.4,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "service-boat",
+      "gameId": null,
+      "name": "Service Boat",
+      "dlc": "special-transport",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Special Transport"
+      },
+      "weightLb": {
+        "min": 55115,
+        "max": 55115
+      },
+      "valuePerKm": 37.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l"
+      ]
+    },
+    {
+      "id": "service-truck",
+      "gameId": null,
+      "name": "Service Truck",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.57"
+      },
+      "weightLb": null,
+      "valuePerKm": 6.2,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "silane",
+      "gameId": null,
+      "name": "Silane",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Montana"
+      },
+      "weightLb": {
+        "min": 14000,
+        "max": 28000
+      },
+      "valuePerKm": 10,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "2203",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "2.1",
+      "trailerTypes": [
+        "container-carrier"
+      ]
+    },
+    {
+      "id": "silica",
+      "gameId": null,
+      "name": "Silica",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 20731,
+        "max": 41463
+      },
+      "valuePerKm": 0.799,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "site-dumper-jcb-6t-2",
+      "gameId": null,
+      "name": "Site Dumper JCB 6T-2",
+      "dlc": "jcb-equipment-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "JCB Equipment Pack"
+      },
+      "weightLb": {
+        "min": 11000,
+        "max": 11000
+      },
+      "valuePerKm": 4.99,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "skid-steer-loader-bobcat-s86",
+      "gameId": null,
+      "name": "Skid-Steer Loader Bobcat S86",
+      "dlc": "bobcat-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Bobcat Cargo Pack"
+      },
+      "weightLb": null,
+      "valuePerKm": 6.155,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "skidder",
+      "gameId": null,
+      "name": "Skidder",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.51"
+      },
+      "weightLb": {
+        "min": 44500,
+        "max": 44500
+      },
+      "valuePerKm": 30,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "soda-ash",
+      "gameId": null,
+      "name": "Soda Ash",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Wyoming"
+      },
+      "weightLb": {
+        "min": 19435,
+        "max": 48589
+      },
+      "valuePerKm": 0.766,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "solvents",
+      "gameId": null,
+      "name": "Solvents",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.45"
+      },
+      "weightLb": {
+        "min": 29321,
+        "max": 60737
+      },
+      "valuePerKm": 1.25,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "3374",
+      "unExpected": "1266",
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "3",
+      "trailerTypes": [
+        "fuel-tank"
+      ]
+    },
+    {
+      "id": "soybean",
+      "gameId": null,
+      "name": "Soybean",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Nebraska"
+      },
+      "weightLb": {
+        "min": 32337,
+        "max": 49357
+      },
+      "valuePerKm": 0.698,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": true,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "bulk-feed",
+        "dry-bulk",
+        "hopper"
+      ]
+    },
+    {
+      "id": "space-container",
+      "gameId": null,
+      "name": "Space Container",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Texas"
+      },
+      "weightLb": {
+        "min": 26500,
+        "max": 26500
+      },
+      "valuePerKm": 35,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "speed-motor-boat",
+      "gameId": null,
+      "name": "Speed Motor Boat",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.57"
+      },
+      "weightLb": null,
+      "valuePerKm": 16,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "sprayer",
+      "gameId": null,
+      "name": "Sprayer",
+      "dlc": "farm-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Farm Machinery"
+      },
+      "weightLb": {
+        "min": 33200,
+        "max": 33200
+      },
+      "valuePerKm": 28.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "square-baler",
+      "gameId": null,
+      "name": "Square Baler",
+      "dlc": "farm-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Farm Machinery"
+      },
+      "weightLb": {
+        "min": 34000,
+        "max": 34000
+      },
+      "valuePerKm": 12.25,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "square-tubing",
+      "gameId": null,
+      "name": "Square Tubing",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oregon"
+      },
+      "weightLb": {
+        "min": 21000,
+        "max": 42000
+      },
+      "valuePerKm": 8.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "stones",
+      "gameId": null,
+      "name": "Stones",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 25353,
+        "max": 50706
+      },
+      "valuePerKm": 0.75,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dumper"
+      ]
+    },
+    {
+      "id": "stumper",
+      "gameId": null,
+      "name": "Stumper",
+      "dlc": "forest-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Forest Machinery"
+      },
+      "weightLb": {
+        "min": 39500,
+        "max": 39500
+      },
+      "valuePerKm": 28.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "sugar",
+      "gameId": null,
+      "name": "Sugar",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 17431,
+        "max": 47066
+      },
+      "valuePerKm": 0.77,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "sugar-beet",
+      "gameId": null,
+      "name": "Sugar Beet",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Montana"
+      },
+      "weightLb": {
+        "min": 34057,
+        "max": 49538
+      },
+      "valuePerKm": 0.65,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": true,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "hopper"
+      ]
+    },
+    {
+      "id": "sulphur",
+      "gameId": null,
+      "name": "Sulphur",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.59"
+      },
+      "weightLb": {
+        "min": 25010,
+        "max": 37515
+      },
+      "valuePerKm": 0.869,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1350",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "4.1",
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "sulphuric-acid",
+      "gameId": null,
+      "name": "Sulphuric Acid",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 25010,
+        "max": 37515
+      },
+      "valuePerKm": 0.269,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": "1830",
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "adr"
+      ],
+      "hazmatClass": "8",
+      "trailerTypes": [
+        "chemical-tank"
+      ]
+    },
+    {
+      "id": "tableware",
+      "gameId": null,
+      "name": "Tableware",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 20053,
+        "max": 43192
+      },
+      "valuePerKm": 0.828,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "talc-powder",
+      "gameId": null,
+      "name": "Talc Powder",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Montana"
+      },
+      "weightLb": {
+        "min": 24504,
+        "max": 43353
+      },
+      "valuePerKm": 0.75,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "tamping-machine",
+      "gameId": null,
+      "name": "Tamping Machine",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Wyoming"
+      },
+      "weightLb": {
+        "min": 60000,
+        "max": 60000
+      },
+      "valuePerKm": 33.08,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-double",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "telescopic-handler",
+      "gameId": null,
+      "name": "Telescopic Handler",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Nebraska"
+      },
+      "weightLb": {
+        "min": 13500,
+        "max": 13500
+      },
+      "valuePerKm": 7.08,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "telescopic-handler-jcb-540-180",
+      "gameId": null,
+      "name": "Telescopic Handler JCB 540-180",
+      "dlc": "jcb-equipment-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "JCB Equipment Pack"
+      },
+      "weightLb": {
+        "min": 26000,
+        "max": 26000
+      },
+      "valuePerKm": 11.08,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "tires",
+      "gameId": null,
+      "name": "Tires",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 20999,
+        "max": 43613
+      },
+      "valuePerKm": 0.816,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "toys",
+      "gameId": null,
+      "name": "Toys",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 15840,
+        "max": 34117
+      },
+      "valuePerKm": 0.822,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "tractor",
+      "gameId": null,
+      "name": "Tractor",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 14500,
+        "max": 29000
+      },
+      "valuePerKm": 10.915,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "tractor-jcb-fastrac-4220",
+      "gameId": null,
+      "name": "Tractor JCB Fastrac 4220",
+      "dlc": "jcb-equipment-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "JCB Equipment Pack"
+      },
+      "weightLb": {
+        "min": 29500,
+        "max": 29500
+      },
+      "valuePerKm": 9.75,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "trailers",
+      "gameId": null,
+      "name": "Trailers",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.61"
+      },
+      "weightLb": null,
+      "valuePerKm": 4,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "train-axles",
+      "gameId": null,
+      "name": "Train Axles",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Wyoming"
+      },
+      "weightLb": {
+        "min": 34999,
+        "max": 34999
+      },
+      "valuePerKm": 11.325,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed"
+      ]
+    },
+    {
+      "id": "transformer",
+      "gameId": null,
+      "name": "Transformer",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "unknown",
+        "name": null
+      },
+      "weightLb": {
+        "min": 25500,
+        "max": 42500
+      },
+      "valuePerKm": 3.74,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "transformer-heavy-cargo-pack",
+      "gameId": null,
+      "name": "Transformer",
+      "dlc": "heavy-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Heavy Cargo Pack"
+      },
+      "weightLb": {
+        "min": 123500,
+        "max": 123500
+      },
+      "valuePerKm": 27,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "transport-helicopter",
+      "gameId": null,
+      "name": "Transport Helicopter",
+      "dlc": "special-transport",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Special Transport"
+      },
+      "weightLb": {
+        "min": 33069,
+        "max": 33069
+      },
+      "valuePerKm": 39,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l"
+      ]
+    },
+    {
+      "id": "trees",
+      "gameId": null,
+      "name": "Trees",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Montana"
+      },
+      "weightLb": {
+        "min": 4000,
+        "max": 8000
+      },
+      "valuePerKm": 5.4,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "truss",
+      "gameId": null,
+      "name": "Truss",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.61"
+      },
+      "weightLb": null,
+      "valuePerKm": 1.315,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "tub-grinder",
+      "gameId": null,
+      "name": "Tub Grinder",
+      "dlc": "forest-machinery",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Forest Machinery"
+      },
+      "weightLb": {
+        "min": 60000,
+        "max": 60000
+      },
+      "valuePerKm": 0.285,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "tub-grinder"
+      ]
+    },
+    {
+      "id": "turnkey-house-construction",
+      "gameId": null,
+      "name": "Turnkey House Construction",
+      "dlc": "special-transport",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Special Transport"
+      },
+      "weightLb": {
+        "min": 44092,
+        "max": 44092
+      },
+      "valuePerKm": 33.5,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "house-transporter"
+      ]
+    },
+    {
+      "id": "tvs",
+      "gameId": null,
+      "name": "TVs",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 12938,
+        "max": 36229
+      },
+      "valuePerKm": 0.923,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "container-carrier",
+        "dry-van",
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "underground-loader",
+      "gameId": null,
+      "name": "Underground Loader",
+      "dlc": "special-transport",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Special Transport"
+      },
+      "weightLb": {
+        "min": 120000,
+        "max": 120000
+      },
+      "valuePerKm": 38,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-55l"
+      ]
+    },
+    {
+      "id": "used-packaging",
+      "gameId": null,
+      "name": "Used Packaging",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 18001,
+        "max": 40156
+      },
+      "valuePerKm": 0.506,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "chip-van",
+        "dry-van",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "utility-poles",
+      "gameId": null,
+      "name": "Utility Poles",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Montana"
+      },
+      "weightLb": {
+        "min": 42662,
+        "max": 44303
+      },
+      "valuePerKm": 0.668,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": true,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "log"
+      ]
+    },
+    {
+      "id": "utility-terrain-vehicles",
+      "gameId": null,
+      "name": "Utility Terrain Vehicles",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Nebraska"
+      },
+      "weightLb": {
+        "min": 19500,
+        "max": 19500
+      },
+      "valuePerKm": 0.231,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "car-transporter"
+      ]
+    },
+    {
+      "id": "vegetables",
+      "gameId": null,
+      "name": "Vegetables",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 20947,
+        "max": 40283
+      },
+      "valuePerKm": 0.762,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "insulated",
+        "refrigerated"
+      ]
+    },
+    {
+      "id": "ventilation-shaft",
+      "gameId": null,
+      "name": "Ventilation Shaft",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 6499,
+        "max": 12999
+      },
+      "valuePerKm": 6.3,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "waste-paper",
+      "gameId": null,
+      "name": "Waste Paper",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Montana"
+      },
+      "weightLb": {
+        "min": 14699,
+        "max": 39199
+      },
+      "valuePerKm": 1.79,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "chip-van",
+        "drop-deck",
+        "dry-van",
+        "flatbed",
+        "insulated",
+        "refrigerated",
+        "sliding-tarp"
+      ]
+    },
+    {
+      "id": "western-star-trucks",
+      "gameId": null,
+      "name": "Western Star Trucks",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.38"
+      },
+      "weightLb": {
+        "min": 52280,
+        "max": 52280
+      },
+      "valuePerKm": 0.27825,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "truck-transporter"
+      ]
+    },
+    {
+      "id": "wheat",
+      "gameId": null,
+      "name": "Wheat",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Louisiana"
+      },
+      "weightLb": null,
+      "valuePerKm": 0.692,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": true,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "bulk-feed",
+        "dry-bulk",
+        "hopper"
+      ]
+    },
+    {
+      "id": "wheel-loader",
+      "gameId": null,
+      "name": "Wheel Loader",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 34000,
+        "max": 34000
+      },
+      "valuePerKm": 22.05,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "wheel-loader-bobcat-l95",
+      "gameId": null,
+      "name": "Wheel Loader Bobcat L95",
+      "dlc": "bobcat-cargo-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Bobcat Cargo Pack"
+      },
+      "weightLb": null,
+      "valuePerKm": 7.555,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "wheel-loader-jcb-457",
+      "gameId": null,
+      "name": "Wheel Loader JCB 457",
+      "dlc": "jcb-equipment-pack",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "JCB Equipment Pack"
+      },
+      "weightLb": {
+        "min": 26000,
+        "max": 26000
+      },
+      "valuePerKm": 21.05,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "wheel-loader-volvo-l250h",
+      "gameId": null,
+      "name": "Wheel Loader Volvo L250H",
+      "dlc": "volvo-construction-equipment",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Volvo Construction Equipment"
+      },
+      "weightLb": {
+        "min": 77823,
+        "max": 77823
+      },
+      "valuePerKm": 22.05,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy-double",
+        "lowboy-triple"
+      ]
+    },
+    {
+      "id": "wheels-with-volvo-rims",
+      "gameId": null,
+      "name": "Wheels with Volvo Rims",
+      "dlc": "volvo-construction-equipment",
+      "introducedWith": {
+        "kind": "dlc",
+        "name": "Volvo Construction Equipment"
+      },
+      "weightLb": {
+        "min": 27557,
+        "max": 27557
+      },
+      "valuePerKm": 3.77,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "flatbed"
+      ]
+    },
+    {
+      "id": "wind-turbine-blade",
+      "gameId": null,
+      "name": "Wind Turbine Blade",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.49"
+      },
+      "weightLb": {
+        "min": 33069,
+        "max": 33069
+      },
+      "valuePerKm": 36,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "heavy",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "blade-trailer"
+      ]
+    },
+    {
+      "id": "wind-turbine-nacelle",
+      "gameId": null,
+      "name": "Wind Turbine Nacelle",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Wyoming"
+      },
+      "weightLb": {
+        "min": 40800,
+        "max": 40800
+      },
+      "valuePerKm": 27.214,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "wind-turbine-tower",
+      "gameId": null,
+      "name": "Wind Turbine Tower",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Wyoming"
+      },
+      "weightLb": {
+        "min": 37000,
+        "max": 37000
+      },
+      "valuePerKm": 22.035,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "lowboy"
+      ]
+    },
+    {
+      "id": "windrower",
+      "gameId": null,
+      "name": "Windrower",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "update",
+        "name": "1.55"
+      },
+      "weightLb": {
+        "min": 13500,
+        "max": 13500
+      },
+      "valuePerKm": 10.9,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "wire-rod-coil",
+      "gameId": null,
+      "name": "Wire Rod Coil",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Iowa"
+      },
+      "weightLb": {
+        "min": 10400,
+        "max": 23400
+      },
+      "valuePerKm": 1.07,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "flatbed"
+      ]
+    },
+    {
+      "id": "wood-chipper",
+      "gameId": null,
+      "name": "Wood Chipper",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Arkansas"
+      },
+      "weightLb": {
+        "min": 10500,
+        "max": 10500
+      },
+      "valuePerKm": 6,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "wood-shavings",
+      "gameId": null,
+      "name": "Wood Shavings",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oregon"
+      },
+      "weightLb": {
+        "min": 5390,
+        "max": 40966
+      },
+      "valuePerKm": 0.19,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": true,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "chip-van",
+        "dumper"
+      ]
+    },
+    {
+      "id": "work-truck-chassis",
+      "gameId": null,
+      "name": "Work Truck Chassis",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Iowa"
+      },
+      "weightLb": {
+        "min": 16799,
+        "max": 16799
+      },
+      "valuePerKm": 14.2,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck",
+        "lowboy"
+      ]
+    },
+    {
+      "id": "yard-truck",
+      "gameId": null,
+      "name": "Yard Truck",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "map",
+        "name": "Oklahoma"
+      },
+      "weightLb": {
+        "min": 29000,
+        "max": 29000
+      },
+      "valuePerKm": 15,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [
+        "fragile",
+        "high-value"
+      ],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "drop-deck"
+      ]
+    },
+    {
+      "id": "yogurt",
+      "gameId": null,
+      "name": "Yogurt",
+      "dlc": "base",
+      "introducedWith": {
+        "kind": "launch",
+        "name": null
+      },
+      "weightLb": {
+        "min": 23045,
+        "max": 42545
+      },
+      "valuePerKm": 0.796,
+      "valuePerKmRange": null,
+      "valuePerKmAlt": [],
+      "un": null,
+      "unExpected": null,
+      "dynamicLoading": false,
+      "flags": [],
+      "hazmatClass": null,
+      "trailerTypes": [
+        "refrigerated"
+      ]
+    }
+  ]
+}

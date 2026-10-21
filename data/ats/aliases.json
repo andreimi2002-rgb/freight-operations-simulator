@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "description": "Hand-written, owner-approved corrections for cargo names on wiki company and trailer pages that do not match the cargo list. Each entry maps a name as written on those pages to one or more cargo ids in cargo.json. Applied by scripts/ats/collect.mjs and reported in issues.json (aliasApplied).",
+    "approvedBy": "project owner",
+    "approved": "2026-10-21"
+  },
+  "cargo": [
+    { "name": "Dyrwall", "cargo": ["drywall"], "reason": "typo on the wiki" },
+    { "name": "Reserovoir Tank", "cargo": ["reservoir-tank"], "reason": "typo on the wiki" },
+    { "name": "Work Trukc Chassis", "cargo": ["work-truck-chassis"], "reason": "typo on the wiki" },
+    { "name": "Wire Road Coil", "cargo": ["wire-rod-coil"], "reason": "typo on the wiki" },
+    { "name": "Heat Exchangre", "cargo": ["heat-exchanger"], "reason": "typo on the wiki" },
+    { "name": "Used Packages", "cargo": ["used-packaging"], "reason": "different wording; the cargo list says Used Packaging" },
+    { "name": "Krone BiG M 450", "cargo": ["krone-big-m-45"], "reason": "the product is the Krone BiG M 450; the cargo list writes BiG M 45" },
+    { "name": "Backhoe", "cargo": ["backhoe-loader"], "reason": "short name; the only base game variant (the JCB one is a DLC cargo)" },
+    { "name": "Pickups", "cargo": ["pickups-crane", "pickups-passenger"], "reason": "generic name on the wiki; mapped to every variant on the cargo list", "generic": true },
+    { "name": "Boom Lift", "cargo": ["boom-lift-articulated", "boom-lift-telescopic"], "reason": "generic name on the wiki; mapped to every variant on the cargo list", "generic": true },
+    { "name": "Concrete Tubes", "cargo": ["concrete-tubes-large", "concrete-tubes-small"], "reason": "generic name on the wiki; mapped to every variant on the cargo list", "generic": true },
+    { "name": "Lumber", "cargo": ["lumber-beams", "lumber-boards"], "reason": "generic name on the wiki; mapped to every variant on the cargo list", "generic": true },
+    { "name": "Recreational Vehicle", "cargo": ["recreational-vehicle-campers", "recreational-vehicle-motorhomes"], "reason": "generic name on the wiki; mapped to every variant on the cargo list", "generic": true }
+  ]
+}

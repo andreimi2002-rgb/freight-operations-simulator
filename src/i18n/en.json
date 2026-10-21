@@ -92,7 +92,7 @@
       "images": "No logos, screenshots or other images from the games. City photos come from Wikimedia Commons with author and licence."
     },
     "sourcesTitle": "Sources and licences",
-    "sourcesIntro": "The sources Freight World uses or will use. None of the game data is loaded yet: it arrives in stage 1.",
+    "sourcesIntro": "The sources Freight World uses or will use. Game data for California and Nevada is collected since stage 1; the pages that show it arrive in stage 2.",
     "sourcesCaption": "Data sources, their use and their licences.",
     "cols": {
       "source": "Source",
@@ -141,6 +141,10 @@
     "astro": {
       "use": "Builds the static pages",
       "licence": "MIT"
+    },
+    "wikidata": {
+      "use": "Real-world coordinates of each city, used for its weather",
+      "licence": "CC0 1.0: public domain"
     }
   },
   "notFound": {
