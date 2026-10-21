@@ -1,0 +1,83 @@
+---
+// Airport-style departures board. Stage 0 has no jobs, so it renders the
+// columns and an empty state; rows arrive with the generator in stage 3.
+import { getI18n } from '../i18n/index.mjs';
+
+const { t } = getI18n();
+const columns = ['time', 'cargo', 'from', 'to', 'distance', 'trailer', 'status'];
+---
+<section class="board" aria-labelledby="board-title">
+  <header class="board-head">
+    <h2 id="board-title" class="board-title">{t('home.board.title')}</h2>
+    <span class="badge">{t('home.board.subtitle')}</span>
+  </header>
+  <div class="table-scroll">
+    <table>
+      <caption class="visually-hidden">{t('home.board.caption')}</caption>
+      <thead>
+        <tr>
+          {columns.map((col) => <th scope="col">{t(`home.board.cols.${col}`)}</th>)}
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="empty" colspan={columns.length}><span class="empty-text">{t('home.board.empty')}</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<style>
+  .board {
+    background: var(--bg-header);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .board-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    padding: var(--space-4) var(--space-5);
+    border-bottom: 1px solid var(--border);
+  }
+  .board-title {
+    font-family: var(--font-mono);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
+  table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    font-family: var(--font-mono);
+    font-size: 14px;
+  }
+  th {
+    padding: var(--space-3) var(--space-5);
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--row-line);
+    white-space: nowrap;
+  }
+  td { padding: var(--space-4) var(--space-5); border-bottom: 1px solid var(--row-line); }
+  tr:last-child td { border-bottom: 0; }
+  .empty { color: var(--text-soft); padding: var(--space-7) var(--space-5); }
+  /* Stays in view while the wide table scrolls sideways on a phone. */
+  .empty-text {
+    position: sticky;
+    left: var(--space-5);
+    display: inline-block;
+    max-width: calc(100vw - 2 * var(--gutter) - 2 * var(--space-5));
+  }
+</style>

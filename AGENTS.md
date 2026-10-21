@@ -1,38 +1,37 @@
-# AGENTS.md — permanent project rules
+# AGENTS.md — permanent project rules (Freight World, branch v2-freight-world)
 
 ## Product
-Freight Operations Simulator (FOS) is a **real-world road freight load generator**, not a game: one generated truck load, as close to reality as possible and extremely detailed. First scope: Romania, Hungary, Bulgaria. Plain HTML/CSS/ES modules, no build step, Netlify publishes the repository root, tests run with `node --test`.
+Freight World is an **ATS / ETS2 style job generator** on the real game map (cities, companies, depots, cargo, trailers that exist in the game), plus **live city pages** (real local time, real weather, a real city photo). It is not a game and not a real freight exchange. The full plan, stages and decision log are in `DEVELOPMENT_PLAN.md` (Romanian); read it at the start of every stage.
 
-## Provenance (every displayed fact has exactly one level)
-- **sourced**: from a named public dataset or regulation (name, URL, retrieval date).
-- **computed**: derived by the engine from other values (formula and inputs viewable).
-- **estimated**: a reasoned approximation; it must state its basis.
-- **simulated**: the generated shipment itself (consignment, shipper role, time windows).
+First scope: American Truck Simulator, California and Nevada; full ATS cargo catalog. ETS2 comes later (shown as "soon").
 
-Never present a simulated or estimated value as sourced. Never invent regulation numbers, tariffs, specifications or codes: if a value has no source yet, store `null` and a TODO naming the needed source. A row without a value is shown as "Indisponibil încă — Etapa N" (not a provenance level).
+The previous product (FOS, real-world RO/HU/BG loads) lives on `main` and is published from there. On this branch its code is kept for reference only in `legacy/fos/` (not built, not published).
 
-## Data and services
-- No paid APIs in core features. Allowed: OpenStreetMap (ODbL), GeoNames (CC BY 4.0), Eurostat, UNECE (UN/LOCODE, ADR, NST, ATP), EU official texts, Wikidata (CC0), OpenFreeMap tiles.
-- Geoapify is temporary and must stay behind an adapter; it leaves in phase 5.
-- No API keys in client code or git (Netlify environment variables only).
-- Every dataset is documented in `src/DATA-LICENSES.md`. Fonts are self-hosted (licences in `fonts/`).
+## Stack
+- Astro (static output), Node 22.12+. `npm run build` writes `dist/`, which Netlify publishes. One HTML file per URL: every URL must work as a direct link.
+- Tests: `npm test` (`node --test`). Engine and data code are plain ES modules testable without Astro; the job generator stays a separate module, reusable later in the companion app.
+- No paid APIs, no paid services, no new dependency without the owner's approval. No API keys in client code or git.
+
+## Data rules
+- Game data only from Truck Simulator Wiki (CC BY-SA 4.0) via the MediaWiki API: at most 1 request per second, a clear User-Agent, local cache. Published game data files carry the same licence.
+- Nothing invented: no cities, companies, cargo or numbers that are not in the game. Unknown = `null`; contradictions go to `data/ats/issues.json`; approximations are labelled as estimates with their basis.
+- Keep internal game IDs (company files such as `oak_port`, internal cargo and city names) wherever the wiki gives them; they link pages to live telemetry later.
+- Every data file has a `meta` field: source, licence, retrieval date, attribution.
+- Every source and licence is listed in `src/data/sources.json` and shown on `/about`. The attribution from `DEVELOPMENT_PLAN.md` section 2 appears in the footer of every page (checked by a test).
+- No logos, screenshots or other images from the games (they belong to SCS Software). No AI-generated images. City photos only from Wikimedia Commons, chosen by hand, with author, licence and link; otherwise an elegant placeholder, never a wrong photo.
+- Weather from Open-Meteo, requested from the browser with a short cache. Its free tier is non-commercial: check the terms before any monetisation.
+- Countries, states and games are data, not code: no hard-coded lists in components or scripts.
 
 ## Interface
-- All UI text lives in `src/i18n/ro.json` (Romanian by default); components contain no literal text. Numbers and dates use `Intl` with `ro-RO`. Adding a language means adding a JSON file, not editing components.
-- Keep the Airport Live visual system (tokens in `src/styles.css`). Must work on desktop and phone: no horizontal scroll at phone width, keyboard and touch input, contrast at least 4.5:1 for body text.
-
-## Roadmap and product rules
-The stage order, country packages and the permanent rules for the vision mockups are in `docs/ROADMAP.md` (Romanian). The mockups in `docs/vision/` are AI-generated inspiration for layout, not a specification. Key rules:
-- No AI-generated images. Photos only from Wikimedia Commons (free licences) with author, licence and link; otherwise a styled panel or a generic photo labelled "ilustrativ".
-- No invented company names. Shipper and consignee stay simulated roles.
-- Real brands (e.g. Borsec) only as sourced examples; figures come from the producer's sheet or Open Food Facts (ODbL, attribution, no bulk import) or are marked "estimat". The catalog stays on generic categories.
-- Every number shown is computed by the engine, never copied from a mockup. Loading metres come from the pallets actually loaded.
-- No satellite layer until the imagery licence is verified.
-- Countries are data, not code: no hard-coded country lists in the engine, scripts or UI.
+- UI text lives in `src/i18n/<lang>.json` (English by default); components contain no literal text and a missing key fails the build. Numbers and dates use `Intl` with the locale from the dictionary. Adding a language means adding a JSON file.
+- Design tokens in `src/styles/tokens.css` are the ones in `DEVELOPMENT_PLAN.md` section 4 (checked by a test). Dark, fine borders, 10–16 px radii, amber accent, blue for cold/reefer, monospace board. No gradients, no emoji, no needless effects.
+- Fonts are self-hosted in `public/fonts/` with their licences (Inter, JetBrains Mono, SIL OFL 1.1).
+- Desktop and phone: no horizontal page scroll down to 320 px (wide tables scroll inside their wrapper), real `<a>`/`<button>`, targets at least 44 px, body text contrast at least 4.5:1, keyboard and touch.
 
 ## Working mode
-- Engine code has `node --test` tests. Update `CHANGELOG.md` and the version with every change.
-- One branch and one PR per logical task; never work on `main`. Small commits with clear messages.
-- Nothing is merged or reaches production without the owner's explicit approval and a reviewed Deploy Preview.
+- One branch per stage, PR into `v2-freight-world`, reviewed on a Netlify Deploy Preview. Never commit to `main` from this work; the FOS site there stays unchanged.
+- Nothing is merged without the owner's explicit approval.
+- Ask before important decisions (framework, data structure, deleting anything existing).
+- Update `CHANGELOG.md` and the version in `package.json` with every change; record plan-changing decisions in the decision log of `DEVELOPMENT_PLAN.md`.
 - Say what was tested and what could not be tested. Never claim something works without running it.
-- Plans and reports for the owner are written in Romanian; this file and code comments are in English.
+- Plans and reports for the owner are in Romanian; this file, code and comments are in English.

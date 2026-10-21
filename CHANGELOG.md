@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.0.0-alpha.1 — 2026-10-21 (Freight World, stage 0: foundation)
+
+First version of Freight World on the `v2-freight-world` branch. The FOS site on `main` is unchanged.
+
+- **Astro 7.3.8** static site (owner's choice over plain HTML): one HTML file per URL, so every page works as a direct link. Netlify builds with `npm run build` and publishes `dist/` (Node 24, Astro telemetry off).
+- **Design tokens** from DEVELOPMENT_PLAN.md section 4 in `src/styles/tokens.css`; a test checks the values and that every text colour reaches 4.5:1 on every surface.
+- **Fonts:** Inter and JetBrains Mono, self-hosted (moved to `public/fonts/` with their SIL OFL 1.1 licences).
+- **Header** with logo, navigation and the ATS / ETS2 switch (ETS2 marked "soon"); **footer** with the attribution required by the plan (checked by a test against DEVELOPMENT_PLAN.md), project links and version.
+- **Pages:** home (hero, empty departures board, the three things Freight World will show, with their stages), `/about` (data rules, sources and licences table from `src/data/sources.json`, attribution, dataset licence, fonts and software, the games), 404.
+- **English UI** with i18n: all text in `src/i18n/en.json`; a missing key fails the build.
+- Phone and desktop: no horizontal page scroll at 320, 390 and 1366 px; wide tables scroll inside their frame; all links and buttons at least 44 px; skip link; visible focus.
+- FOS code moved unchanged to `legacy/fos/` (reference only, not built). New `AGENTS.md`, `README.md`, `CLAUDE.md` for Freight World; the plan is now `DEVELOPMENT_PLAN.md`.
+- 9 tests (`npm test`): tokens and contrast, i18n keys, attribution text, sources list.
+
+# FOS changelog (main)
+
 ## 0.15.0 — 2026-10-21 (phase 2B: real loading places from OpenStreetMap)
 
 - **Loading and unloading places** ("Loc de încărcare", "Loc de descărcare", Hartă și rută): a real place in the city from OpenStreetMap — industrial zone, port, rail terminal, logistics park or silo — chosen by the cargo (`src/data/places/site-kinds.mjs`; grain prefers a silo or port, fuel a port or industrial zone, machinery an industrial zone…). The route runs between the places and the A/B pins sit on them. Without a suitable place the route runs between the cities as before (row shows "Indisponibil" with the reason).

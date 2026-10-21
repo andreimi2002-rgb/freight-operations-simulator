@@ -1,0 +1,50 @@
+---
+// ATS is the only game for now; ETS2 is shown as "soon" (DEVELOPMENT_PLAN.md, section 3).
+import { getI18n } from '../i18n/index.mjs';
+
+const { t } = getI18n();
+---
+<div class="game-switch" role="group" aria-label={t('game.label')}>
+  <a class="game-option is-active" href="/" aria-current="true" title={t('game.atsFull')}>
+    <span aria-hidden="true">{t('game.ats')}</span>
+    <span class="visually-hidden">{t('game.atsFull')}</span>
+  </a>
+  <span class="game-option is-soon" aria-disabled="true" title={t('game.soonLong')}>
+    <span aria-hidden="true">{t('game.ets2')}</span>
+    <span class="soon" aria-hidden="true">{t('game.soon')}</span>
+    <span class="visually-hidden">{t('game.soonLong')}</span>
+  </span>
+</div>
+
+<style>
+  .game-switch {
+    display: inline-flex;
+    padding: 3px;
+    gap: 3px;
+    background: var(--panel-deep);
+    border: 1px solid var(--border-input);
+    border-radius: var(--radius-md);
+  }
+  .game-option {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--target);
+    min-width: 44px;
+    padding: 0 var(--space-3);
+    border-radius: 9px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .is-active { background: var(--amber); color: var(--on-amber); }
+  .is-active:hover { color: var(--on-amber); }
+  .is-soon { color: var(--text-muted); cursor: default; }
+  .soon {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+</style>

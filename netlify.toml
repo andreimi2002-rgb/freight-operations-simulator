@@ -1,13 +1,13 @@
+# Freight World (branch v2-freight-world). The FOS site on main keeps its own netlify.toml.
 [build]
-  publish = "."
-  functions = "netlify/functions"
+  command = "npm run build"
+  publish = "dist"
 
-[[redirects]]
-  from = "/api/places"
-  to = "/.netlify/functions/search-places"
-  status = 200
+[build.environment]
+  NODE_VERSION = "24"
+  ASTRO_TELEMETRY_DISABLED = "1"
 
-[[redirects]]
-  from = "/api/truck-route"
-  to = "/.netlify/functions/truck-route"
-  status = 200
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
