@@ -1,0 +1,122 @@
+---
+// City hero: real photo (or a placeholder), name, live local time and real weather.
+import { getI18n } from '../i18n/index.mjs';
+
+interface Props { city: any; stateName: string; photo: any | null }
+const { city, stateName, photo } = Astro.props;
+const { t, meta } = getI18n();
+const coords = city.coordinates;
+---
+<section class="hero" aria-labelledby="city-title">
+  <div class:list={["media", { "no-photo": !photo }]}>
+    {photo
+      ? <img
+          src={photo.src}
+          srcset={`${photo.src960} 960w, ${photo.src} ${photo.width}w`}
+          sizes="100vw"
+          alt={t('city.realWorld', { name: city.name })}
+          width={photo.width}
+          height={photo.height}
+          fetchpriority="high"
+          decoding="async"
+        />
+      : <div class="placeholder" aria-hidden="true">
+          <span class="ph-code mono">{city.state}</span>
+          {coords && <span class="ph-coords mono">{coords.lat.toFixed(3)}° {coords.lon.toFixed(3)}°</span>}
+        </div>}
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="container title-wrap">
+      <p class="eyebrow on-photo">{stateName} · {city.dlc === 'base' ? t('city.dlcBase') : city.dlc}</p>
+      <h1 id="city-title">{city.name}</h1>
+    </div>
+  </div>
+  <div class="container credit-row">
+    {photo
+      ? <p class="credit">
+          {t('city.photoCredit', { author: photo.author ?? t('city.photoPublicDomain') })}
+          {' · '}
+          {photo.licenceUrl ? <a href={photo.licenceUrl} rel="noopener">{photo.licence}</a> : photo.licence}
+          {' · '}
+          <a href={photo.page} rel="noopener">{t('city.photoSource')}</a>
+        </p>
+      : <p class="credit">{t('city.photoPlaceholder')}</p>}
+  </div>
+
+  <div class="container live">
+    <div class="card clock" data-clock-tz={city.timezone.iana} data-locale={meta.intlLocale}>
+      <p class="eyebrow">{t('city.localTime')}</p>
+      <p class="clock-time mono" data-clock-time>--:--</p>
+      <p class="soft" data-clock-date></p>
+      <p class="muted small mono">{t('city.timeZone', { tz: city.timezone.iana })}</p>
+    </div>
+
+    {coords
+      ? <div class="card wx" data-wx-lat={coords.lat} data-wx-lon={coords.lon} data-locale={meta.intlLocale} data-state="loading" aria-live="polite">
+          <p class="eyebrow">{t('city.weatherNow')}</p>
+          <div class="wx-loading soft">{t('city.weatherLoading')}</div>
+          <div class="wx-error">
+            <p class="soft">{t('city.weatherError')}</p>
+            <button type="button" class="button button-ghost" data-wx-retry>{t('city.weatherRetry')}</button>
+          </div>
+          <div class="wx-ready">
+            <div class="wx-now">
+              <span class="wx-icon" data-wx-icon></span>
+              <span class="wx-temp mono" data-wx-temp></span>
+              <span class="wx-text">
+                <span class="wx-label" data-wx-label></span>
+                <span class="muted small" data-wx-feels></span>
+              </span>
+            </div>
+            <p class="wx-extra small soft"><span data-wx-wind></span> · <span data-wx-precip></span></p>
+            <ul class="wx-days" data-wx-days aria-label={t('city.forecast')}></ul>
+            <p class="muted small"><span data-wx-updated></span> · <a href="https://open-meteo.com" rel="noopener">{t('city.weatherSource')}</a></p>
+          </div>
+        </div>
+      : <div class="card wx"><p class="eyebrow">{t('city.weatherNow')}</p><p class="soft">{t('city.noCoordinates')}</p></div>}
+  </div>
+</section>
+
+<style>
+  .media { position: relative; min-height: 320px; display: grid; align-items: end; background: var(--hero); overflow: hidden; }
+  .media img, .placeholder { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .media img { object-fit: cover; }
+  .placeholder { display: grid; place-content: start end; gap: var(--space-2); justify-items: end; padding: var(--space-5) var(--gutter); border-bottom: 1px solid var(--border); }
+  .no-photo .scrim { display: none; }
+  .ph-code { font-size: 96px; font-weight: 600; line-height: 1; color: var(--border-input); }
+  .ph-coords { color: var(--text-muted); font-size: 13px; }
+  /* Solid scrim along the bottom so the title reads on any photo (no gradient, per the design rules). */
+  .scrim { position: absolute; left: 0; right: 0; bottom: 0; height: 132px; background: rgba(11, 15, 20, 0.72); }
+  .title-wrap { position: relative; padding-bottom: var(--space-5); padding-top: var(--space-8); display: grid; gap: var(--space-2); }
+  .on-photo { color: var(--text-soft); }
+  h1 { font-size: var(--title-city); letter-spacing: -0.02em; text-wrap: balance; }
+  .credit-row { padding-top: var(--space-2); }
+  .credit { font-size: 12px; color: var(--text-muted); }
+  .credit a { color: var(--text-soft); }
+  .live { display: grid; gap: var(--space-4); margin-top: var(--space-5); }
+  @media (min-width: 820px) { .live { grid-template-columns: 1fr 2fr; } }
+  .live > * { min-width: 0; }
+  .clock, .wx { display: grid; gap: var(--space-2); align-content: start; }
+  .clock-time { font-size: 44px; font-weight: 600; color: var(--amber); line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .small { font-size: 13px; }
+  .wx[data-state='loading'] .wx-error, .wx[data-state='loading'] .wx-ready,
+  .wx[data-state='error'] .wx-loading, .wx[data-state='error'] .wx-ready,
+  .wx[data-state='ready'] .wx-loading, .wx[data-state='ready'] .wx-error { display: none; }
+  .wx-error { display: grid; gap: var(--space-3); justify-items: start; }
+  .wx-ready { display: grid; gap: var(--space-3); }
+  .wx-now { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
+  .wx-icon :global(svg) { width: 52px; height: 52px; display: block; }
+  .wx-temp { font-size: 44px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
+  .wx-text { display: grid; }
+  .wx-label { font-weight: 600; }
+  .wx-days { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+  .wx-days :global(li) { display: grid; justify-items: center; gap: 2px; padding: var(--space-2); background: var(--panel-deep); border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 13px; }
+  .wx-days :global(.wx-day-name) { color: var(--text-soft); }
+  .wx-days :global(.wx-day-icon svg) { width: 30px; height: 30px; display: block; }
+  .wx-days :global(.wx-day-range) { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  @media (max-width: 719px) {
+    .media { min-height: 240px; }
+    h1 { font-size: var(--title-city-phone); }
+    .scrim { height: 108px; }
+    .clock-time, .wx-temp { font-size: 36px; }
+  }
+</style>

@@ -5,7 +5,7 @@ import { getI18n } from '../i18n/index.mjs';
 
 const { t } = getI18n();
 const pillars = [
-  { id: 'city', stage: 2 },
+  { id: 'city', stage: 2, href: '/ats' },
   { id: 'board', stage: 3 },
   { id: 'job', stage: 4 },
 ];
@@ -18,6 +18,7 @@ const pillars = [
       <p class="hero-lead">{t('home.lead')}</p>
       <p class="hero-status"><span class="badge badge-amber">{t('stage.current')}</span> <span>{t('home.status')}</span></p>
       <div class="hero-actions">
+        <a class="button button-primary" href="/ats">{t('home.citiesCta')}</a>
         <a class="button button-ghost" href="/about">{t('home.aboutCta')}</a>
       </div>
     </div>
@@ -70,7 +71,7 @@ const pillars = [
     color: var(--text-soft);
     font-size: 15px;
   }
-  .hero-actions { margin-top: var(--space-5); }
+  .hero-actions { margin-top: var(--space-5); display: flex; flex-wrap: wrap; gap: var(--space-3); }
 
   .stack {
     display: grid;

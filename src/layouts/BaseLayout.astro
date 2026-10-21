@@ -3,6 +3,7 @@ import '../styles/global.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { getI18n } from '../i18n/index.mjs';
+import en from '../i18n/en.json';
 
 interface Props {
   title?: string;
@@ -10,6 +11,8 @@ interface Props {
 }
 
 const { t, meta } = getI18n();
+// Text the browser script needs (weather labels, units), passed as data.
+const liveText = JSON.stringify({ weather: en.weather, city: en.city, units: en.units });
 const siteName = t('site.name');
 const { title, description = t('site.description') } = Astro.props;
 const fullTitle = title ? `${title} · ${siteName}` : siteName;
@@ -39,5 +42,9 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : un
       <slot />
     </main>
     <SiteFooter />
+    <script type="application/json" id="fw-live-text" set:html={liveText}></script>
+    <script>
+      import '../scripts/live.mjs';
+    </script>
   </body>
 </html>
