@@ -1,0 +1,543 @@
+{
+  "meta": {
+    "description": "One photo per city for the city pages, from Wikimedia Commons, chosen by hand from data/photo-candidates.json (owner delegated the choice to Claude on 2026-10-21). Each entry gives the reason. photo null = placeholder.",
+    "source": "Wikimedia Commons",
+    "licences": "free licences per file (author and licence on each entry)",
+    "chosen": "2026-10-21",
+    "chosenBy": "Claude (delegated by the project owner)"
+  },
+  "photos": {
+    "bakersfield": {
+      "photo": {
+        "file": "2009-0726-CA-Bakersfield-FoxTheater (cropped).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/2009-0726-CA-Bakersfield-FoxTheater_%28cropped%29.jpg/1920px-2009-0726-CA-Bakersfield-FoxTheater_%28cropped%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/2009-0726-CA-Bakersfield-FoxTheater_%28cropped%29.jpg/960px-2009-0726-CA-Bakersfield-FoxTheater_%28cropped%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2009-0726-CA-Bakersfield-FoxTheater_(cropped).jpg",
+        "author": "Bobak Ha'Eri",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+        "width": 1600,
+        "height": 1212,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-21"
+      },
+      "reason": "Fox Theater on Chester Avenue, a downtown landmark, in clear daylight"
+    },
+    "barstow": {
+      "photo": {
+        "file": "City View of Barstow, California from Barstow Road (2013-12-08).jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/f/f1/City_View_of_Barstow%2C_California_from_Barstow_Road_%282013-12-08%29.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/City_View_of_Barstow%2C_California_from_Barstow_Road_%282013-12-08%29.jpg/960px-City_View_of_Barstow%2C_California_from_Barstow_Road_%282013-12-08%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:City_View_of_Barstow,_California_from_Barstow_Road_(2013-12-08).jpg",
+        "author": "Amin Eshaiker",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1199,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "the town spread across the Mojave Desert with mountains behind"
+    },
+    "blythe": {
+      "photo": {
+        "file": "Arizona and California State Line, the Colorado River, 2012 - panoramio.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Arizona_and_California_State_Line%2C_the_Colorado_River%2C_2012_-_panoramio.jpg/1920px-Arizona_and_California_State_Line%2C_the_Colorado_River%2C_2012_-_panoramio.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Arizona_and_California_State_Line%2C_the_Colorado_River%2C_2012_-_panoramio.jpg/960px-Arizona_and_California_State_Line%2C_the_Colorado_River%2C_2012_-_panoramio.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Arizona_and_California_State_Line,_the_Colorado_River,_2012_-_panoramio.jpg",
+        "author": "Chris English",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1200,
+        "from": "Commons category \"Blythe, California\"",
+        "verified": "2026-10-21"
+      },
+      "reason": "the Colorado River at Blythe, the state line with Arizona"
+    },
+    "carson-city": {
+      "photo": {
+        "file": "Nevada State Museum.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Nevada_State_Museum.jpg/1920px-Nevada_State_Museum.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Nevada_State_Museum.jpg/960px-Nevada_State_Museum.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Nevada_State_Museum.jpg",
+        "author": "Scott Schrantz",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1067,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "the Nevada State Capitol in Carson City at night"
+    },
+    "el-centro": {
+      "photo": {
+        "file": "20220224075821 IMG 3800 Mount Signal.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/09/20220224075821_IMG_3800_Mount_Signal.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/20220224075821_IMG_3800_Mount_Signal.jpg/960px-20220224075821_IMG_3800_Mount_Signal.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:20220224075821_IMG_3800_Mount_Signal.jpg",
+        "author": "JacobSA2019",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1600,
+        "height": 1067,
+        "from": "Commons category \"El Centro, California\"",
+        "verified": "2026-10-21"
+      },
+      "reason": "Imperial Valley farmland with Mount Signal, the landscape around El Centro"
+    },
+    "elko": {
+      "photo": {
+        "file": "2012-09-30 14 28 33 View of downtown Elko in Nevada from a bluff to the south.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/2012-09-30_14_28_33_View_of_downtown_Elko_in_Nevada_from_a_bluff_to_the_south.jpg/1920px-2012-09-30_14_28_33_View_of_downtown_Elko_in_Nevada_from_a_bluff_to_the_south.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/2012-09-30_14_28_33_View_of_downtown_Elko_in_Nevada_from_a_bluff_to_the_south.jpg/960px-2012-09-30_14_28_33_View_of_downtown_Elko_in_Nevada_from_a_bluff_to_the_south.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2012-09-30_14_28_33_View_of_downtown_Elko_in_Nevada_from_a_bluff_to_the_south.jpg",
+        "author": "Famartin",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1179,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "Elko seen from the hills"
+    },
+    "ely": {
+      "photo": {
+        "file": "2012-10-08 View of downtown Ely in Nevada from the lower slopes of Ward Mountain.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/2012-10-08_View_of_downtown_Ely_in_Nevada_from_the_lower_slopes_of_Ward_Mountain.jpg/1920px-2012-10-08_View_of_downtown_Ely_in_Nevada_from_the_lower_slopes_of_Ward_Mountain.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/2012-10-08_View_of_downtown_Ely_in_Nevada_from_the_lower_slopes_of_Ward_Mountain.jpg/960px-2012-10-08_View_of_downtown_Ely_in_Nevada_from_the_lower_slopes_of_Ward_Mountain.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2012-10-08_View_of_downtown_Ely_in_Nevada_from_the_lower_slopes_of_Ward_Mountain.jpg",
+        "author": "Famartin",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1200,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "Ely seen from the hills"
+    },
+    "eureka": {
+      "photo": {
+        "file": "Humboldt Bay and Eureka aerial view.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Humboldt_Bay_and_Eureka_aerial_view.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Humboldt_Bay_and_Eureka_aerial_view.jpg/960px-Humboldt_Bay_and_Eureka_aerial_view.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Humboldt_Bay_and_Eureka_aerial_view.jpg",
+        "author": "Robert Campbell",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1068,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "aerial view of Humboldt Bay and Eureka"
+    },
+    "fresno": {
+      "photo": {
+        "file": "Fresno California.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Fresno_California.jpg/1920px-Fresno_California.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Fresno_California.jpg/960px-Fresno_California.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Fresno_California.jpg",
+        "author": "DoulosBen",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1600,
+        "height": 900,
+        "from": "Commons category \"Fresno, California\"",
+        "verified": "2026-10-21"
+      },
+      "reason": "downtown Fresno skyline"
+    },
+    "hilt": {
+      "photo": {
+        "file": "Roger Puta captured a runby at Hilt, CA in July 1982 at Semaphore 4020. Tunnel Motor SD45T-2 9184 led with more Tunnel Motors up front and mid-train -- 4 Photos (33081931672).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Roger_Puta_captured_a_runby_at_Hilt%2C_CA_in_July_1982_at_Semaphore_4020._Tunnel_Motor_SD45T-2_9184_led_with_more_Tunnel_Motors_up_front_and_mid-train_--_4_Photos_%2833081931672%29.jpg/1920px-thumbnail.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Roger_Puta_captured_a_runby_at_Hilt%2C_CA_in_July_1982_at_Semaphore_4020._Tunnel_Motor_SD45T-2_9184_led_with_more_Tunnel_Motors_up_front_and_mid-train_--_4_Photos_%2833081931672%29.jpg/960px-thumbnail.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Roger_Puta_captured_a_runby_at_Hilt,_CA_in_July_1982_at_Semaphore_4020._Tunnel_Motor_SD45T-2_9184_led_with_more_Tunnel_Motors_up_front_and_mid-train_--_4_Photos_(33081931672).jpg",
+        "author": "Marty Bernard from U.S.A.",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1600,
+        "height": 1122,
+        "from": "Commons category \"Hilt, California\"",
+        "verified": "2026-10-21"
+      },
+      "reason": "freight train on the Siskiyou line near Hilt, mountains behind; the only free photos of the place show the railway"
+    },
+    "huron": {
+      "photo": {
+        "file": "Huron Middle School CA.JPG",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Huron_Middle_School_CA.JPG/1920px-Huron_Middle_School_CA.JPG",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Huron_Middle_School_CA.JPG/960px-Huron_Middle_School_CA.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:Huron_Middle_School_CA.JPG",
+        "author": "David Jordan at English Wikipedia",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 845,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-21"
+      },
+      "reason": "the civic center of Huron; the only clear photo of the town itself"
+    },
+    "indio": {
+      "photo": {
+        "file": "College of the Desert.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/College_of_the_Desert.jpg/1920px-College_of_the_Desert.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/College_of_the_Desert.jpg/960px-College_of_the_Desert.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:College_of_the_Desert.jpg",
+        "author": "Visitor7",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1067,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "palms and a civic building in Indio"
+    },
+    "jackpot": {
+      "photo": {
+        "file": "2013-07-04 17 32 49 View of Jackpot in Nevada from a hill to the west.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/2013-07-04_17_32_49_View_of_Jackpot_in_Nevada_from_a_hill_to_the_west.jpg/1920px-2013-07-04_17_32_49_View_of_Jackpot_in_Nevada_from_a_hill_to_the_west.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/2013-07-04_17_32_49_View_of_Jackpot_in_Nevada_from_a_hill_to_the_west.jpg/960px-2013-07-04_17_32_49_View_of_Jackpot_in_Nevada_from_a_hill_to_the_west.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2013-07-04_17_32_49_View_of_Jackpot_in_Nevada_from_a_hill_to_the_west.jpg",
+        "author": "Famartin",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 806,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "panorama of Jackpot on the Idaho state line"
+    },
+    "las-vegas": {
+      "photo": {
+        "file": "Center Strip Before Sunrise.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Center_Strip_Before_Sunrise.jpg/1920px-Center_Strip_Before_Sunrise.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Center_Strip_Before_Sunrise.jpg/960px-Center_Strip_Before_Sunrise.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Center_Strip_Before_Sunrise.jpg",
+        "author": "Eric Kilby",
+        "licence": "CC BY-SA 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "width": 1600,
+        "height": 1067,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-21"
+      },
+      "reason": "the Las Vegas Strip at dusk"
+    },
+    "los-angeles": {
+      "photo": {
+        "file": "Los Angeles with Mount Baldy.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Los_Angeles_with_Mount_Baldy.jpg/1920px-Los_Angeles_with_Mount_Baldy.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Los_Angeles_with_Mount_Baldy.jpg/960px-Los_Angeles_with_Mount_Baldy.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Los_Angeles_with_Mount_Baldy.jpg",
+        "author": "Alek Leckszas",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1600,
+        "height": 750,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "downtown Los Angeles with snow on the San Gabriel Mountains"
+    },
+    "modesto": {
+      "photo": {
+        "file": "Modesto California photo Don Ramey Logan.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Modesto_California_photo_Don_Ramey_Logan.jpg/1920px-Modesto_California_photo_Don_Ramey_Logan.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Modesto_California_photo_Don_Ramey_Logan.jpg/960px-Modesto_California_photo_Don_Ramey_Logan.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Modesto_California_photo_Don_Ramey_Logan.jpg",
+        "author": "Don Ramey Logan",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1600,
+        "height": 895,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "aerial view of Modesto and the surrounding Central Valley"
+    },
+    "mojave": {
+      "photo": {
+        "file": "Arid Mojave - panoramio.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Arid_Mojave_-_panoramio.jpg/1920px-Arid_Mojave_-_panoramio.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Arid_Mojave_-_panoramio.jpg/960px-Arid_Mojave_-_panoramio.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Arid_Mojave_-_panoramio.jpg",
+        "author": "Annette Teng",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+        "width": 1600,
+        "height": 352,
+        "from": "Commons category \"Mojave, California\"",
+        "verified": "2026-10-21"
+      },
+      "reason": "desert highway near Mojave with Joshua trees"
+    },
+    "oakland": {
+      "photo": {
+        "file": "OAKLAND, CA, USA - Skyline and Bridge.JPG",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/OAKLAND%2C_CA%2C_USA_-_Skyline_and_Bridge.JPG/1920px-OAKLAND%2C_CA%2C_USA_-_Skyline_and_Bridge.JPG",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/OAKLAND%2C_CA%2C_USA_-_Skyline_and_Bridge.JPG/960px-OAKLAND%2C_CA%2C_USA_-_Skyline_and_Bridge.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:OAKLAND,_CA,_USA_-_Skyline_and_Bridge.JPG",
+        "author": "Basil D Soufi",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1067,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "downtown Oakland with the Bay Bridge behind"
+    },
+    "oxnard": {
+      "photo": {
+        "file": "Carneige Art Museum, Oxnard.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Carneige_Art_Museum%2C_Oxnard.jpg/1920px-Carneige_Art_Museum%2C_Oxnard.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Carneige_Art_Museum%2C_Oxnard.jpg/960px-Carneige_Art_Museum%2C_Oxnard.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Carneige_Art_Museum,_Oxnard.jpg",
+        "author": "Los Angeles",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1073,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "the Carnegie Art Museum in downtown Oxnard"
+    },
+    "pioche": {
+      "photo": {
+        "file": "2015-01-15 12 29 35 View northeast across Pioche, Nevada from Nevada State Route 321.JPG",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/2015-01-15_12_29_35_View_northeast_across_Pioche%2C_Nevada_from_Nevada_State_Route_321.JPG/1920px-2015-01-15_12_29_35_View_northeast_across_Pioche%2C_Nevada_from_Nevada_State_Route_321.JPG",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/2015-01-15_12_29_35_View_northeast_across_Pioche%2C_Nevada_from_Nevada_State_Route_321.JPG/960px-2015-01-15_12_29_35_View_northeast_across_Pioche%2C_Nevada_from_Nevada_State_Route_321.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:2015-01-15_12_29_35_View_northeast_across_Pioche,_Nevada_from_Nevada_State_Route_321.JPG",
+        "author": "Famartin",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1600,
+        "height": 1200,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "Pioche on its hillside with the valley behind"
+    },
+    "primm": {
+      "photo": {
+        "file": "Primmphoto.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Primmphoto.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Primmphoto.jpg/960px-Primmphoto.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Primmphoto.jpg",
+        "author": "Unidyne",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1600,
+        "height": 888,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "the casinos of Primm by Interstate 15"
+    },
+    "redding": {
+      "photo": {
+        "file": "Sundial Bridge at Turtle Bay (cropped).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Sundial_Bridge_at_Turtle_Bay_%28cropped%29.jpg/1920px-Sundial_Bridge_at_Turtle_Bay_%28cropped%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Sundial_Bridge_at_Turtle_Bay_%28cropped%29.jpg/960px-Sundial_Bridge_at_Turtle_Bay_%28cropped%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Sundial_Bridge_at_Turtle_Bay_(cropped).jpg",
+        "author": "Chad K",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1600,
+        "height": 844,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-21"
+      },
+      "reason": "the Sundial Bridge over the Sacramento River"
+    },
+    "reno": {
+      "photo": {
+        "file": "Reno, Nevada photo Don Ramey Logan.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Reno%2C_Nevada_photo_Don_Ramey_Logan.jpg/1920px-Reno%2C_Nevada_photo_Don_Ramey_Logan.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Reno%2C_Nevada_photo_Don_Ramey_Logan.jpg/960px-Reno%2C_Nevada_photo_Don_Ramey_Logan.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Reno,_Nevada_photo_Don_Ramey_Logan.jpg",
+        "author": "Don Ramey Logan",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1600,
+        "height": 1067,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "aerial view of downtown Reno"
+    },
+    "sacramento": {
+      "photo": {
+        "file": "Sacramento, California skyline in 2023.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Sacramento%2C_California_skyline_in_2023.jpg/1920px-Sacramento%2C_California_skyline_in_2023.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Sacramento%2C_California_skyline_in_2023.jpg/960px-Sacramento%2C_California_skyline_in_2023.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Sacramento,_California_skyline_in_2023.jpg",
+        "author": "Quintin Soloviev",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1600,
+        "height": 793,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "Sacramento skyline with the Tower Bridge"
+    },
+    "san-diego": {
+      "photo": {
+        "file": "San Diego skyline 18 (cropped).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/San_Diego_skyline_18_%28cropped%29.jpg/1920px-San_Diego_skyline_18_%28cropped%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/San_Diego_skyline_18_%28cropped%29.jpg/960px-San_Diego_skyline_18_%28cropped%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:San_Diego_skyline_18_(cropped).jpg",
+        "author": "Boatguy619",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1600,
+        "height": 594,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "San Diego skyline across the bay"
+    },
+    "san-francisco": {
+      "photo": {
+        "file": "San Francisco from the Marin Headlands in March 2019.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg/1920px-San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg/960px-San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg",
+        "author": "Lightandtruth",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1600,
+        "height": 938,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "San Francisco with the Golden Gate Bridge"
+    },
+    "san-jose": {
+      "photo": {
+        "file": "Valencia Hotel, Santana Row (cropped).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Valencia_Hotel%2C_Santana_Row_%28cropped%29.jpg/1920px-Valencia_Hotel%2C_Santana_Row_%28cropped%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Valencia_Hotel%2C_Santana_Row_%28cropped%29.jpg/960px-Valencia_Hotel%2C_Santana_Row_%28cropped%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Valencia_Hotel,_Santana_Row_(cropped).jpg",
+        "author": "Payton Chung",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1600,
+        "height": 1077,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-21"
+      },
+      "reason": "palm-lined street in San Jose in clear light"
+    },
+    "santa-cruz": {
+      "photo": {
+        "file": "Mission Santa Cruz (8321945663).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Mission_Santa_Cruz_%288321945663%29.jpg/1920px-Mission_Santa_Cruz_%288321945663%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Mission_Santa_Cruz_%288321945663%29.jpg/960px-Mission_Santa_Cruz_%288321945663%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Mission_Santa_Cruz_(8321945663).jpg",
+        "author": "Don DeBold from San Jose, CA, USA",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1600,
+        "height": 1063,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-21"
+      },
+      "reason": "Mission Plaza in Santa Cruz; clear author credit (the boardwalk photo has no reliable author on Commons)"
+    },
+    "santa-maria": {
+      "photo": null,
+      "reason": "only a very thin banner (1600×229) is available, which would look blurry in the hero"
+    },
+    "stockton": {
+      "photo": {
+        "file": "Aerial view of Stockton, California skyline.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Aerial_view_of_Stockton%2C_California_skyline.jpg/1920px-Aerial_view_of_Stockton%2C_California_skyline.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Aerial_view_of_Stockton%2C_California_skyline.jpg/960px-Aerial_view_of_Stockton%2C_California_skyline.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Stockton,_California_skyline.jpg",
+        "author": "Quintin Soloviev",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1600,
+        "height": 987,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "aerial view of downtown Stockton"
+    },
+    "tonopah": {
+      "photo": {
+        "file": "2013-09-19 12 59 58 View of downtown Tonopah, Nevada from the southwest.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg/1920px-2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg/960px-2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2013-09-19_12_59_58_View_of_downtown_Tonopah,_Nevada_from_the_southwest.jpg",
+        "author": "Famartin",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1200,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "Tonopah seen from the hills"
+    },
+    "truckee": {
+      "photo": {
+        "file": "Truckee.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Truckee.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Truckee.jpg/960px-Truckee.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Truckee.jpg",
+        "author": "Finetooth",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1018,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "downtown Truckee with the Sierra Nevada behind"
+    },
+    "ukiah": {
+      "photo": {
+        "file": "Ukiah Civic Center.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Ukiah_Civic_Center.jpg/1920px-Ukiah_Civic_Center.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Ukiah_Civic_Center.jpg/960px-Ukiah_Civic_Center.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Ukiah_Civic_Center.jpg",
+        "author": "City of Ukiah - Dept. of Recreation",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1600,
+        "height": 1200,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-21"
+      },
+      "reason": "Ukiah civic center"
+    },
+    "winnemucca": {
+      "photo": {
+        "file": "2008-07-12 Downtown Winnemucca.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/2008-07-12_Downtown_Winnemucca.jpg/1920px-2008-07-12_Downtown_Winnemucca.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/2008-07-12_Downtown_Winnemucca.jpg/960px-2008-07-12_Downtown_Winnemucca.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2008-07-12_Downtown_Winnemucca.jpg",
+        "author": "Famartin",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1200,
+        "from": "Commons category \"Winnemucca, Nevada\"",
+        "verified": "2026-10-21"
+      },
+      "reason": "main street of Winnemucca with the hills behind"
+    }
+  }
+}
