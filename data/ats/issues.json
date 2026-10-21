@@ -14,7 +14,7 @@
       "NV"
     ],
     "description": "Problems found while collecting: missing values, contradictions between pages, names that do not match. For manual checking.",
-    "count": 108
+    "count": 112
   },
   "issues": [
     {
@@ -450,6 +450,12 @@
       "detail": "dealer trailer \"End Dumper\" joined to cargo-list type \"Dumper\" by shared cargo (Jaccard 1)"
     },
     {
+      "kind": "multiplePrices",
+      "entity": "flatbed",
+      "detail": "trailer page gives several prices (30700 / 61360) without saying what each is; priceUsd is empty, pricesUsd holds them",
+      "field": "priceUsd"
+    },
+    {
       "kind": "trailerModelMatch",
       "entity": "grain-hopper",
       "detail": "dealer trailer \"Grain Hopper\" joined to cargo-list type \"Hopper\" by shared cargo (Jaccard 0.7)"
@@ -460,9 +466,27 @@
       "detail": "dealer trailer \"Horizontal Bottom Dumper\" joined to cargo-list type \"Dumper\" by shared cargo (Jaccard 1)"
     },
     {
+      "kind": "multiplePrices",
+      "entity": "horizontal-bottom-dumper",
+      "detail": "trailer page gives several prices (37740 / 62940) without saying what each is; priceUsd is empty, pricesUsd holds them",
+      "field": "priceUsd"
+    },
+    {
+      "kind": "multiplePrices",
+      "entity": "insulated",
+      "detail": "trailer page gives several prices (102020 / 171340) without saying what each is; priceUsd is empty, pricesUsd holds them",
+      "field": "priceUsd"
+    },
+    {
       "kind": "trailerModelMatch",
       "entity": "reefer",
       "detail": "dealer trailer \"Reefer\" joined to cargo-list type \"Refrigerated\" by shared cargo (Jaccard 0.98)"
+    },
+    {
+      "kind": "multiplePrices",
+      "entity": "sliding-tarp",
+      "detail": "trailer page gives several prices (45700 / 78340) without saying what each is; priceUsd is empty, pricesUsd holds them",
+      "field": "priceUsd"
     },
     {
       "kind": "unmatchedTrailer",
@@ -475,18 +499,9 @@
       "detail": "Trailer types on the cargo list without a dealer trailer page; price, ownable and articulated are unknown.",
       "ids": [
         "blade-trailer",
-        "car-transporter",
-        "frac-tank",
-        "house-transporter",
-        "knuckleboom-loader",
         "lowboy",
-        "lowboy-55l",
-        "lowboy-boat",
         "lowboy-double",
         "lowboy-triple",
-        "mobile-barrier",
-        "truck-transporter",
-        "tub-grinder",
         "van-transporter"
       ]
     },
@@ -514,198 +529,6 @@
       "kind": "countMismatch",
       "entity": "cargo",
       "detail": "cargo list summary (as of 1.61) says 294 cargoes in total; the table has 295"
-    },
-    {
-      "kind": "unknownCargo",
-      "entity": "pickups",
-      "detail": "\"Pickups\" is not on the cargo list (left out)",
-      "seenIn": [
-        "18 Wheels Garage / Truck trailer service",
-        "American Lines / Storage",
-        "Angel City Airport / (unnamed)",
-        "Bitumen / Service shop",
-        "Bushnell Farms / Livestock auction",
-        "Coastline Mining / Quarry",
-        "Coastline Mining / Borax plant",
-        "Darwing / Aircraft plant",
-        "Drake Car Dealer / Dealership",
-        "Elegrid / Power network service",
-        "Gallon Oil / Service shop",
-        "HMS Machinery / Service shop",
-        "LA Seaport / (unnamed)",
-        "Lone Star Forwarding / Depot",
-        "Lumenauto / Dealership",
-        "Oakland Shippers / (unnamed)",
-        "Port of San Francisco / (unnamed)",
-        "Rail Export / Depot",
-        "Steeler / Workshop",
-        "Sunshine Crops / Garage",
-        "Voltison Motors / Export terminal"
-      ]
-    },
-    {
-      "kind": "unknownCargo",
-      "entity": "boom-lift",
-      "detail": "\"Boom Lift\" is not on the cargo list (left out)",
-      "seenIn": [
-        "American Lines / Storage",
-        "Angel City Airport / (unnamed)",
-        "Coastline Mining / Borax plant",
-        "Darwing / Aircraft plant",
-        "Elegrid / Electric substation",
-        "Enterpriser / Warehouse",
-        "Gallon Oil / Oil well",
-        "Gallon Oil / Service shop",
-        "HMS Machinery / Service shop",
-        "LA Seaport / (unnamed)",
-        "Lone Star Forwarding / Depot",
-        "MWM / Waste transfer station",
-        "Oakland Shippers / (unnamed)",
-        "Plaster & Sons / Building foundation",
-        "Plaster & Sons / Garage",
-        "Rail Export / Depot",
-        "Sell Goods / Warehouse",
-        "Starbridge / Warehouse",
-        "Venture / Warehouse",
-        "WDS / Waste transfer station"
-      ]
-    },
-    {
-      "kind": "unknownCargo",
-      "entity": "dyrwall",
-      "detail": "\"Dyrwall\" is not on the cargo list (left out)",
-      "seenIn": [
-        "American Lines / Storage"
-      ]
-    },
-    {
-      "kind": "unknownCargo",
-      "entity": "concrete-tubes",
-      "detail": "\"Concrete Tubes\" is not on the cargo list (left out)",
-      "seenIn": [
-        "American Lines / Work site",
-        "Angel City Airport / (unnamed)",
-        "Bitumen / Roadworks",
-        "LA Seaport / (unnamed)",
-        "Lone Star Forwarding / Depot",
-        "Oakland Shippers / (unnamed)",
-        "Plaster & Sons / Building construction site",
-        "Plaster & Sons / Building foundation",
-        "Plaster & Sons / Warehouse",
-        "Port of San Francisco / (unnamed)",
-        "Rail Export / Depot"
-      ]
-    },
-    {
-      "kind": "unknownCargo",
-      "entity": "lumber",
-      "detail": "\"Lumber\" is not on the cargo list (left out)",
-      "seenIn": [
-        "Angel City Airport / (unnamed)",
-        "Bloomscape / Storage",
-        "Bushnell Farms / Livestock auction",
-        "Deepgrove / Large sawmill",
-        "Deepgrove / Small sawmill",
-        "Farmer's Barn / Market",
-        "Heartwood Furniture / Factory",
-        "Home Store / Market",
-        "LA Seaport / (unnamed)",
-        "Lone Star Forwarding / Depot",
-        "Oakland Shippers / (unnamed)",
-        "Plaster & Sons / Building construction site",
-        "Plaster & Sons / Building foundation",
-        "Plaster & Sons / House construction site",
-        "Plaster & Sons / Warehouse",
-        "Port of San Francisco / (unnamed)",
-        "Rail Export / Depot",
-        "Sunshine Crops / Farm",
-        "Walden's / Storage"
-      ]
-    },
-    {
-      "kind": "unknownCargo",
-      "entity": "recreational-vehicle",
-      "detail": "\"Recreational Vehicle\" is not on the cargo list (left out)",
-      "seenIn": [
-        "Angel City Airport / (unnamed)",
-        "LA Seaport / (unnamed)",
-        "Lone Star Forwarding / Depot",
-        "Lumenauto / Dealership",
-        "Oakland Shippers / (unnamed)",
-        "Port of San Francisco / (unnamed)",
-        "Rail Export / Depot",
-        "Voltison Motors / Export terminal",
-        "Voltison Motors / Plant"
-      ]
-    },
-    {
-      "kind": "unknownCargo",
-      "entity": "reserovoir-tank",
-      "detail": "\"Reserovoir Tank\" is not on the cargo list (left out)",
-      "seenIn": [
-        "Angel City Airport / (unnamed)"
-      ]
-    },
-    {
-      "kind": "unknownCargo",
-      "entity": "krone-big-m-450",
-      "detail": "\"Krone BiG M 450\" is not on the cargo list (left out)",
-      "seenIn": [
-        "Angel City Airport / (unnamed)",
-        "Bushnell Farms / Farm",
-        "Bushnell Farms / Livestock auction",
-        "Calimondo / Almond farm",
-        "HMS Machinery / Service shop",
-        "LA Seaport / (unnamed)",
-        "Lone Star Forwarding / Depot",
-        "Mon Coeur / Vineyard",
-        "Oakland Shippers / (unnamed)",
-        "Rail Export / Depot",
-        "Sunshine Crops / Farm",
-        "Sunshine Crops / Garage"
-      ]
-    },
-    {
-      "kind": "unknownCargo",
-      "entity": "used-packages",
-      "detail": "\"Used Packages\" is not on the cargo list (left out)",
-      "seenIn": [
-        "Eddy's / Market",
-        "Shop Town / Market",
-        "Wallbert / Market"
-      ]
-    },
-    {
-      "kind": "unknownCargo",
-      "entity": "backhoe",
-      "detail": "\"Backhoe\" is not on the cargo list (left out)",
-      "seenIn": [
-        "GPW / Garage"
-      ]
-    },
-    {
-      "kind": "unknownCargo",
-      "entity": "work-trukc-chassis",
-      "detail": "\"Work Trukc Chassis\" is not on the cargo list (left out)",
-      "seenIn": [
-        "Port of San Francisco / (unnamed)"
-      ]
-    },
-    {
-      "kind": "unknownCargo",
-      "entity": "wire-road-coil",
-      "detail": "\"Wire Road Coil\" is not on the cargo list (left out)",
-      "seenIn": [
-        "Rail Export / Depot"
-      ]
-    },
-    {
-      "kind": "unknownCargo",
-      "entity": "heat-exchangre",
-      "detail": "\"Heat Exchangre\" is not on the cargo list (left out)",
-      "seenIn": [
-        "Venture / Warehouse"
-      ]
     },
     {
       "kind": "nameVariant",
@@ -764,6 +587,211 @@
       "seenIn": [
         "Rail Export / Depot"
       ]
+    },
+    {
+      "kind": "aliasApplied",
+      "entity": "dyrwall",
+      "detail": "\"Dyrwall\" → drywall (typo on the wiki; data/ats/aliases.json)",
+      "seenIn": [
+        "American Lines / Storage"
+      ],
+      "generic": false
+    },
+    {
+      "kind": "aliasApplied",
+      "entity": "reserovoir-tank",
+      "detail": "\"Reserovoir Tank\" → reservoir-tank (typo on the wiki; data/ats/aliases.json)",
+      "seenIn": [
+        "Angel City Airport / (unnamed)"
+      ],
+      "generic": false
+    },
+    {
+      "kind": "aliasApplied",
+      "entity": "work-trukc-chassis",
+      "detail": "\"Work Trukc Chassis\" → work-truck-chassis (typo on the wiki; data/ats/aliases.json)",
+      "seenIn": [
+        "Port of San Francisco / (unnamed)"
+      ],
+      "generic": false
+    },
+    {
+      "kind": "aliasApplied",
+      "entity": "wire-road-coil",
+      "detail": "\"Wire Road Coil\" → wire-rod-coil (typo on the wiki; data/ats/aliases.json)",
+      "seenIn": [
+        "Rail Export / Depot"
+      ],
+      "generic": false
+    },
+    {
+      "kind": "aliasApplied",
+      "entity": "heat-exchangre",
+      "detail": "\"Heat Exchangre\" → heat-exchanger (typo on the wiki; data/ats/aliases.json)",
+      "seenIn": [
+        "Venture / Warehouse"
+      ],
+      "generic": false
+    },
+    {
+      "kind": "aliasApplied",
+      "entity": "used-packages",
+      "detail": "\"Used Packages\" → used-packaging (different wording; the cargo list says Used Packaging; data/ats/aliases.json)",
+      "seenIn": [
+        "Eddy's / Market",
+        "Shop Town / Market",
+        "Wallbert / Market"
+      ],
+      "generic": false
+    },
+    {
+      "kind": "aliasApplied",
+      "entity": "krone-big-m-450",
+      "detail": "\"Krone BiG M 450\" → krone-big-m-45 (the product is the Krone BiG M 450; the cargo list writes BiG M 45; data/ats/aliases.json)",
+      "seenIn": [
+        "Angel City Airport / (unnamed)",
+        "Bushnell Farms / Farm",
+        "Bushnell Farms / Livestock auction",
+        "Calimondo / Almond farm",
+        "HMS Machinery / Service shop",
+        "LA Seaport / (unnamed)",
+        "Lone Star Forwarding / Depot",
+        "Mon Coeur / Vineyard",
+        "Oakland Shippers / (unnamed)",
+        "Rail Export / Depot",
+        "Sunshine Crops / Farm",
+        "Sunshine Crops / Garage"
+      ],
+      "generic": false
+    },
+    {
+      "kind": "aliasApplied",
+      "entity": "backhoe",
+      "detail": "\"Backhoe\" → backhoe-loader (short name; the only base game variant (the JCB one is a DLC cargo); data/ats/aliases.json)",
+      "seenIn": [
+        "GPW / Garage"
+      ],
+      "generic": false
+    },
+    {
+      "kind": "aliasApplied",
+      "entity": "pickups",
+      "detail": "\"Pickups\" → pickups-crane, pickups-passenger (generic name on the wiki; mapped to every variant on the cargo list; data/ats/aliases.json)",
+      "seenIn": [
+        "18 Wheels Garage / Truck trailer service",
+        "American Lines / Storage",
+        "Angel City Airport / (unnamed)",
+        "Bitumen / Service shop",
+        "Bushnell Farms / Livestock auction",
+        "Coastline Mining / Quarry",
+        "Coastline Mining / Borax plant",
+        "Darwing / Aircraft plant",
+        "Drake Car Dealer / Dealership",
+        "Elegrid / Power network service",
+        "Gallon Oil / Service shop",
+        "HMS Machinery / Service shop",
+        "LA Seaport / (unnamed)",
+        "Lone Star Forwarding / Depot",
+        "Lumenauto / Dealership",
+        "Oakland Shippers / (unnamed)",
+        "Port of San Francisco / (unnamed)",
+        "Rail Export / Depot",
+        "Steeler / Workshop",
+        "Sunshine Crops / Garage",
+        "Voltison Motors / Export terminal"
+      ],
+      "generic": true
+    },
+    {
+      "kind": "aliasApplied",
+      "entity": "boom-lift",
+      "detail": "\"Boom Lift\" → boom-lift-articulated, boom-lift-telescopic (generic name on the wiki; mapped to every variant on the cargo list; data/ats/aliases.json)",
+      "seenIn": [
+        "American Lines / Storage",
+        "Angel City Airport / (unnamed)",
+        "Coastline Mining / Borax plant",
+        "Darwing / Aircraft plant",
+        "Elegrid / Electric substation",
+        "Enterpriser / Warehouse",
+        "Gallon Oil / Oil well",
+        "Gallon Oil / Service shop",
+        "HMS Machinery / Service shop",
+        "LA Seaport / (unnamed)",
+        "Lone Star Forwarding / Depot",
+        "MWM / Waste transfer station",
+        "Oakland Shippers / (unnamed)",
+        "Plaster & Sons / Building foundation",
+        "Plaster & Sons / Garage",
+        "Rail Export / Depot",
+        "Sell Goods / Warehouse",
+        "Starbridge / Warehouse",
+        "Venture / Warehouse",
+        "WDS / Waste transfer station"
+      ],
+      "generic": true
+    },
+    {
+      "kind": "aliasApplied",
+      "entity": "concrete-tubes",
+      "detail": "\"Concrete Tubes\" → concrete-tubes-large, concrete-tubes-small (generic name on the wiki; mapped to every variant on the cargo list; data/ats/aliases.json)",
+      "seenIn": [
+        "American Lines / Work site",
+        "Angel City Airport / (unnamed)",
+        "Bitumen / Roadworks",
+        "LA Seaport / (unnamed)",
+        "Lone Star Forwarding / Depot",
+        "Oakland Shippers / (unnamed)",
+        "Plaster & Sons / Building construction site",
+        "Plaster & Sons / Building foundation",
+        "Plaster & Sons / Warehouse",
+        "Port of San Francisco / (unnamed)",
+        "Rail Export / Depot"
+      ],
+      "generic": true
+    },
+    {
+      "kind": "aliasApplied",
+      "entity": "lumber",
+      "detail": "\"Lumber\" → lumber-beams, lumber-boards (generic name on the wiki; mapped to every variant on the cargo list; data/ats/aliases.json)",
+      "seenIn": [
+        "Angel City Airport / (unnamed)",
+        "Bloomscape / Storage",
+        "Bushnell Farms / Livestock auction",
+        "Deepgrove / Large sawmill",
+        "Deepgrove / Small sawmill",
+        "Farmer's Barn / Market",
+        "Heartwood Furniture / Factory",
+        "Home Store / Market",
+        "LA Seaport / (unnamed)",
+        "Lone Star Forwarding / Depot",
+        "Oakland Shippers / (unnamed)",
+        "Plaster & Sons / Building construction site",
+        "Plaster & Sons / Building foundation",
+        "Plaster & Sons / House construction site",
+        "Plaster & Sons / Warehouse",
+        "Port of San Francisco / (unnamed)",
+        "Rail Export / Depot",
+        "Sunshine Crops / Farm",
+        "Walden's / Storage"
+      ],
+      "generic": true
+    },
+    {
+      "kind": "aliasApplied",
+      "entity": "recreational-vehicle",
+      "detail": "\"Recreational Vehicle\" → recreational-vehicle-campers, recreational-vehicle-motorhomes (generic name on the wiki; mapped to every variant on the cargo list; data/ats/aliases.json)",
+      "seenIn": [
+        "Angel City Airport / (unnamed)",
+        "LA Seaport / (unnamed)",
+        "Lone Star Forwarding / Depot",
+        "Lumenauto / Dealership",
+        "Oakland Shippers / (unnamed)",
+        "Port of San Francisco / (unnamed)",
+        "Rail Export / Depot",
+        "Voltison Motors / Export terminal",
+        "Voltison Motors / Plant"
+      ],
+      "generic": true
     },
     {
       "kind": "missingGameId",

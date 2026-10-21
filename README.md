@@ -6,7 +6,7 @@ This is the `v2-freight-world` branch. The plan is in [DEVELOPMENT_PLAN.md](DEVE
 
 ## Current version: 2.0.0-alpha.2 (stage 1: ATS data for California and Nevada)
 
-- Game data collected from Truck Simulator Wiki (CC BY-SA 4.0) into [data/ats/](data/ats/): 34 cities, 59 companies, 244 depots, 295 cargo, 32 trailer types, plus `issues.json` for manual checking. City coordinates from Wikidata (CC0). See [data/ats/README.md](data/ats/README.md).
+- Game data collected from Truck Simulator Wiki (CC BY-SA 4.0) into [data/ats/](data/ats/): 34 cities, 59 companies, 244 depots, 295 cargo, 32 trailer types, owner-approved name corrections in `aliases.json`, plus `issues.json` for manual checking. City coordinates from Wikidata (CC0). See [data/ats/README.md](data/ats/README.md).
 - Collector: `npm run collect:ats` (cached, one request per second).
 
 ### Stage 0

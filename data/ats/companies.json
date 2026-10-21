@@ -49,6 +49,8 @@
             "mobile-barrier",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "scaffolding",
             "school-bus",
             "scissor-lift",
@@ -72,6 +74,8 @@
             "mobile-barrier",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "refrigerated-trailer",
             "scaffolding",
             "school-bus",
@@ -84,7 +88,13 @@
             "work-truck-chassis",
             "yard-truck"
           ],
-          "dlcCargo": {}
+          "dlcCargo": {},
+          "genericNames": {
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ]
+          }
         }
       ],
       "wiki": {
@@ -343,10 +353,13 @@
           "locations": {},
           "accepts": [
             "backhoe-loader",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "cables",
             "construction-houses",
             "crawler-carrier",
             "diesel",
+            "drywall",
             "dump-truck",
             "forklifts",
             "geo-membranes-rolls",
@@ -357,6 +370,8 @@
             "motor-grader",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "rails",
             "roadroller",
             "scaffolding",
@@ -371,6 +386,8 @@
           ],
           "provides": [
             "backhoe-loader",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "cables",
             "construction-houses",
             "crawler-carrier",
@@ -382,6 +399,8 @@
             "motor-grader",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "rails",
             "roadroller",
             "scaffolding",
@@ -448,6 +467,16 @@
                 "mini-excavator-bobcat-e10e"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ],
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ]
           }
         },
         {
@@ -461,6 +490,8 @@
             "backhoe-loader",
             "cables",
             "concrete-barrier",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "excavated-soil",
             "geo-membranes-rolls",
             "gravel",
@@ -553,6 +584,12 @@
                 "mini-excavator-bobcat-e10e"
               ]
             }
+          },
+          "genericNames": {
+            "Concrete Tubes": [
+              "concrete-tubes-large",
+              "concrete-tubes-small"
+            ]
           }
         }
       ],
@@ -586,6 +623,8 @@
             "aromatics",
             "batteries",
             "beverages",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "bromine",
             "cables",
             "cans",
@@ -624,6 +663,8 @@
             "jet-engine-inlet-cowl",
             "large-tubes",
             "lemonade",
+            "lumber-beams",
+            "lumber-boards",
             "machine-parts",
             "material-handler",
             "medium-truck-chassis",
@@ -636,8 +677,12 @@
             "packaged-food",
             "packed-lumber",
             "paper",
+            "pickups-crane",
+            "pickups-passenger",
             "power-generator",
             "pressure-tank",
+            "recreational-vehicle-campers",
+            "recreational-vehicle-motorhomes",
             "refrigerated-trailer",
             "reservoir-tank",
             "rice",
@@ -668,6 +713,8 @@
             "almond-boxes",
             "batteries",
             "beverages",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "bromine",
             "cables",
             "cans",
@@ -675,6 +722,8 @@
             "cars",
             "clothes",
             "computers",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "construction-houses",
             "cooling-tower",
             "corn-head",
@@ -714,8 +763,13 @@
             "packaged-food",
             "paint",
             "paper",
+            "pickups-crane",
+            "pickups-passenger",
             "power-generator",
             "pressure-tank",
+            "recreational-vehicle-campers",
+            "recreational-vehicle-motorhomes",
+            "reservoir-tank",
             "rice",
             "salt",
             "scaffolding",
@@ -814,6 +868,7 @@
             "krone-agriculture-equipment": {
               "name": "KRONE Agriculture Equipment",
               "accepts": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -822,6 +877,7 @@
                 "krone-varipack-v-190-xc"
               ],
               "provides": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -830,6 +886,28 @@
                 "krone-varipack-v-190-xc"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ],
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ],
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ],
+            "Recreational Vehicle": [
+              "recreational-vehicle-campers",
+              "recreational-vehicle-motorhomes"
+            ],
+            "Concrete Tubes": [
+              "concrete-tubes-large",
+              "concrete-tubes-small"
+            ]
           }
         }
       ],
@@ -1267,6 +1345,8 @@
             "motor-grader",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "roadroller",
             "salt",
             "sand",
@@ -1297,6 +1377,8 @@
             "motor-grader",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "roadroller",
             "sand",
             "scaffolding",
@@ -1363,6 +1445,12 @@
                 "mini-excavator-bobcat-e10e"
               ]
             }
+          },
+          "genericNames": {
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ]
           }
         },
         {
@@ -1387,6 +1475,8 @@
             "big-tires",
             "cables",
             "concrete-barrier",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "excavated-soil",
             "geo-membranes-rolls",
             "gravel",
@@ -1472,6 +1562,12 @@
                 "mini-excavator-bobcat-e10e"
               ]
             }
+          },
+          "genericNames": {
+            "Concrete Tubes": [
+              "concrete-tubes-large",
+              "concrete-tubes-small"
+            ]
           }
         }
       ],
@@ -1509,6 +1605,8 @@
             "gravel",
             "hay",
             "ibc-containers",
+            "lumber-beams",
+            "lumber-boards",
             "material-handler",
             "motor-grader",
             "moving-containers",
@@ -1586,6 +1684,12 @@
                 "wheel-loader-bobcat-l95"
               ]
             }
+          },
+          "genericNames": {
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
           }
         }
       ],
@@ -1716,6 +1820,7 @@
             "krone-agriculture-equipment": {
               "name": "KRONE Agriculture Equipment",
               "accepts": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -1724,6 +1829,7 @@
                 "krone-varipack-v-190-xc"
               ],
               "provides": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -1760,12 +1866,16 @@
             "live-cattle",
             "live-pigs",
             "live-sheep",
+            "lumber-beams",
+            "lumber-boards",
             "material-handler",
             "medium-truck-chassis",
             "moving-containers",
             "municipal-truck",
             "packed-lumber",
             "pelleted-animal-food",
+            "pickups-crane",
+            "pickups-passenger",
             "plows",
             "rice",
             "rye",
@@ -1799,6 +1909,8 @@
             "medium-truck-chassis",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "plows",
             "rice",
             "rye",
@@ -1858,6 +1970,7 @@
             "krone-agriculture-equipment": {
               "name": "KRONE Agriculture Equipment",
               "accepts": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -1866,6 +1979,7 @@
                 "krone-varipack-v-190-xc"
               ],
               "provides": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -1883,6 +1997,16 @@
                 "forklift-bobcat-d30"
               ]
             }
+          },
+          "genericNames": {
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ],
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ]
           }
         }
       ],
@@ -2000,6 +2124,7 @@
             "krone-agriculture-equipment": {
               "name": "KRONE Agriculture Equipment",
               "accepts": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -2008,6 +2133,7 @@
                 "krone-varipack-v-190-xc"
               ],
               "provides": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -2287,6 +2413,8 @@
             "motor-grader",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "power-generator",
             "railcar-mover",
             "reservoir-tank",
@@ -2320,6 +2448,8 @@
             "motor-grader",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "power-generator",
             "railcar-mover",
             "rough-terrain-forklift",
@@ -2413,6 +2543,12 @@
                 "wheel-loader-bobcat-l95"
               ]
             }
+          },
+          "genericNames": {
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ]
           }
         },
         {
@@ -2626,6 +2762,8 @@
           "accepts": [
             "backhoe-loader",
             "big-tires",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "bulldozer",
             "clamshell-bucket",
             "compact-tractor",
@@ -2649,6 +2787,8 @@
             "moving-containers",
             "municipal-truck",
             "oil-pipes",
+            "pickups-crane",
+            "pickups-passenger",
             "power-generator",
             "railcar-mover",
             "reservoir-tank",
@@ -2667,6 +2807,8 @@
           "provides": [
             "backhoe-loader",
             "big-tires",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "boric-acid",
             "bulldozer",
@@ -2686,6 +2828,8 @@
             "motor-grader",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "power-generator",
             "railcar-mover",
             "roadroller",
@@ -2784,6 +2928,16 @@
                 "wheel-loader-bobcat-l95"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ],
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ]
           }
         }
       ],
@@ -2814,6 +2968,8 @@
             "aircraft-engine",
             "aircraft-wing",
             "batteries",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "boric-acid",
             "cables",
@@ -2832,6 +2988,8 @@
             "metal-coil",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "scaffolding",
             "scissor-lift",
             "service-truck",
@@ -2852,6 +3010,8 @@
             "medium-truck-chassis",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "reservoir-tank",
             "scaffolding",
             "scissor-lift",
@@ -2877,6 +3037,16 @@
               ],
               "provides": []
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ],
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ]
           }
         }
       ],
@@ -2923,6 +3093,8 @@
           "provides": [
             "crawler-carrier",
             "insulation-panels",
+            "lumber-beams",
+            "lumber-boards",
             "material-handler",
             "moving-containers",
             "packed-lumber",
@@ -2949,6 +3121,12 @@
               ],
               "provides": []
             }
+          },
+          "genericNames": {
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
           }
         },
         {
@@ -2983,6 +3161,8 @@
             "empty-pallets",
             "industrial-pallets",
             "insulation-panels",
+            "lumber-beams",
+            "lumber-boards",
             "material-handler",
             "moving-containers",
             "packed-lumber",
@@ -3002,6 +3182,12 @@
               ],
               "provides": []
             }
+          },
+          "genericNames": {
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
           }
         },
         {
@@ -3114,6 +3300,8 @@
             "moving-containers",
             "municipal-truck",
             "office-supplies",
+            "pickups-crane",
+            "pickups-passenger",
             "service-truck",
             "tires",
             "utility-terrain-vehicles",
@@ -3125,11 +3313,19 @@
             "medium-truck-chassis",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "service-truck",
             "utility-terrain-vehicles",
             "work-truck-chassis"
           ],
-          "dlcCargo": {}
+          "dlcCargo": {},
+          "genericNames": {
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ]
+          }
         }
       ],
       "wiki": {
@@ -3234,6 +3430,7 @@
           "provides": [
             "empty-pallets",
             "moving-containers",
+            "used-packaging",
             "waste-paper"
           ],
           "dlcCargo": {}
@@ -3274,6 +3471,8 @@
             "motor-grader",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "power-generator",
             "scaffolding",
             "service-truck",
@@ -3294,6 +3493,8 @@
             "motor-grader",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "power-generator",
             "scaffolding",
             "scissor-lift",
@@ -3314,6 +3515,12 @@
                 "transformer-heavy-cargo-pack"
               ]
             }
+          },
+          "genericNames": {
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ]
           }
         },
         {
@@ -3325,6 +3532,8 @@
           ],
           "locations": {},
           "accepts": [
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "cables",
             "circuit-breakers",
             "construction-houses",
@@ -3341,6 +3550,8 @@
             "wire-rod-coil"
           ],
           "provides": [
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "construction-houses",
             "crawler-carrier",
             "ibc-containers",
@@ -3363,6 +3574,12 @@
                 "all-terrain-crane"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ]
           }
         }
       ],
@@ -3400,6 +3617,8 @@
             "almond-boxes",
             "batteries",
             "beverages",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "butter",
             "buttermilk",
@@ -3481,6 +3700,8 @@
             "almond-boxes",
             "batteries",
             "beverages",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "butter",
             "buttermilk",
@@ -3568,6 +3789,12 @@
                 "forklift-bobcat-d30"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ]
           }
         }
       ],
@@ -3603,6 +3830,8 @@
             "fertilizer",
             "geo-membranes-rolls",
             "insulation-panels",
+            "lumber-beams",
+            "lumber-boards",
             "moving-containers",
             "packed-lumber",
             "paint",
@@ -3624,7 +3853,13 @@
             "used-packaging",
             "waste-paper"
           ],
-          "dlcCargo": {}
+          "dlcCargo": {},
+          "genericNames": {
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
+          }
         },
         {
           "gameId": "fb_farm_pln",
@@ -3977,6 +4212,8 @@
           "accepts": [
             "backhoe-loader",
             "big-tires",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "bromine",
             "clamshell-bucket",
             "crawler-carrier",
@@ -3993,6 +4230,8 @@
             "wheel-loader"
           ],
           "provides": [
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "construction-houses",
             "crawler-carrier",
             "crude-oil",
@@ -4044,6 +4283,12 @@
               ],
               "provides": []
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ]
           }
         },
         {
@@ -4056,6 +4301,8 @@
           "accepts": [
             "backhoe-loader",
             "big-tires",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "boric-acid",
             "bromine",
@@ -4078,6 +4325,8 @@
             "mobile-air-compressor",
             "motor-grader",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "power-generator",
             "railcar-mover",
             "roadroller",
@@ -4094,6 +4343,8 @@
           "provides": [
             "backhoe-loader",
             "big-tires",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "bulldozer",
             "clamshell-bucket",
             "compact-tractor",
@@ -4107,6 +4358,8 @@
             "mobile-air-compressor",
             "motor-grader",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "power-generator",
             "railcar-mover",
             "roadroller",
@@ -4200,6 +4453,16 @@
                 "wheel-loader-bobcat-l95"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ],
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ]
           }
         },
         {
@@ -4462,6 +4725,7 @@
           ],
           "locations": {},
           "accepts": [
+            "backhoe-loader",
             "big-tires",
             "bus-hood",
             "concrete-barrier",
@@ -4492,6 +4756,7 @@
             "utility-poles"
           ],
           "provides": [
+            "backhoe-loader",
             "big-tires",
             "concrete-barrier",
             "crawler-carrier",
@@ -4640,6 +4905,8 @@
             "glass",
             "industrial-pallets",
             "insulation-panels",
+            "lumber-beams",
+            "lumber-boards",
             "moving-containers",
             "packed-lumber",
             "paint",
@@ -4663,7 +4930,13 @@
             "waste-paper",
             "wood-shavings"
           ],
-          "dlcCargo": {}
+          "dlcCargo": {},
+          "genericNames": {
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
+          }
         }
       ],
       "wiki": {
@@ -4697,6 +4970,8 @@
             "backhoe-loader",
             "beet-harvester",
             "big-tires",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "bulldozer",
             "clamshell-bucket",
             "compact-tractor",
@@ -4721,6 +4996,8 @@
             "motor-grader",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "plows",
             "power-generator",
             "pumpjack",
@@ -4744,6 +5021,8 @@
             "backhoe-loader",
             "beet-harvester",
             "big-tires",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "bulldozer",
             "clamshell-bucket",
             "compact-tractor",
@@ -4766,6 +5045,8 @@
             "motor-grader",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "plows",
             "power-generator",
             "pumpjack",
@@ -4916,6 +5197,7 @@
             "krone-agriculture-equipment": {
               "name": "KRONE Agriculture Equipment",
               "accepts": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -4924,6 +5206,7 @@
                 "krone-varipack-v-190-xc"
               ],
               "provides": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -4953,6 +5236,16 @@
                 "wheel-loader-bobcat-l95"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ],
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ]
           }
         }
       ],
@@ -4994,6 +5287,8 @@
             "gypsum",
             "home-accessories",
             "household-appliances",
+            "lumber-beams",
+            "lumber-boards",
             "mortar",
             "moving-containers",
             "packed-lumber",
@@ -5012,7 +5307,13 @@
             "used-packaging",
             "waste-paper"
           ],
-          "dlcCargo": {}
+          "dlcCargo": {},
+          "genericNames": {
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
+          }
         }
       ],
       "wiki": {
@@ -5044,6 +5345,8 @@
             "barley",
             "batteries",
             "beverages",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "boric-acid",
             "buttermilk",
@@ -5055,6 +5358,8 @@
             "chlorine",
             "clothes",
             "computers",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "corn",
             "corn-head",
             "cotton-lint",
@@ -5100,9 +5405,13 @@
             "office-supplies",
             "paper",
             "pelleted-animal-food",
+            "pickups-crane",
+            "pickups-passenger",
             "potatoes",
             "propane",
             "pumpjack",
+            "recreational-vehicle-campers",
+            "recreational-vehicle-motorhomes",
             "refrigerated-trailer",
             "rice",
             "rye",
@@ -5136,6 +5445,8 @@
             "barley",
             "batteries",
             "beverages",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "boric-acid",
             "butter",
@@ -5147,6 +5458,8 @@
             "chemical-granules",
             "chlorine",
             "clothes",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "corn",
             "corn-head",
             "crawler-carrier",
@@ -5181,6 +5494,8 @@
             "live-pigs",
             "live-sheep",
             "lpg",
+            "lumber-beams",
+            "lumber-boards",
             "machine-parts",
             "material-handler",
             "milk",
@@ -5322,6 +5637,7 @@
             "krone-agriculture-equipment": {
               "name": "KRONE Agriculture Equipment",
               "accepts": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -5330,6 +5646,7 @@
                 "krone-varipack-v-190-xc"
               ],
               "provides": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -5347,6 +5664,28 @@
                 "forklift-bobcat-d30"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ],
+            "Concrete Tubes": [
+              "concrete-tubes-large",
+              "concrete-tubes-small"
+            ],
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ],
+            "Recreational Vehicle": [
+              "recreational-vehicle-campers",
+              "recreational-vehicle-motorhomes"
+            ],
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
           }
         }
       ],
@@ -5382,6 +5721,8 @@
             "barley",
             "beverages",
             "boat",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "bulldozer",
             "buttermilk",
@@ -5391,6 +5732,8 @@
             "chemical-granules",
             "chlorine",
             "compact-tractor",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "construction-houses",
             "corn",
             "corn-head",
@@ -5426,6 +5769,8 @@
             "large-tubes",
             "lemonade",
             "lpg",
+            "lumber-beams",
+            "lumber-boards",
             "meat",
             "medium-truck-chassis",
             "milk",
@@ -5437,12 +5782,16 @@
             "packed-lumber",
             "pelleted-animal-food",
             "pesticides",
+            "pickups-crane",
+            "pickups-passenger",
             "plows",
             "potatoes",
             "power-generator",
             "propane",
             "pumpjack",
             "raw-milk",
+            "recreational-vehicle-campers",
+            "recreational-vehicle-motorhomes",
             "refrigerated-trailer",
             "rice",
             "roadroller",
@@ -5486,6 +5835,8 @@
             "barley",
             "beverages",
             "boat",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "bulldozer",
             "butter",
@@ -5500,6 +5851,8 @@
             "chlorine",
             "clothes",
             "compact-tractor",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "cooling-tower",
             "corn",
             "corn-head",
@@ -5536,6 +5889,8 @@
             "large-tubes",
             "lemonade",
             "lpg",
+            "lumber-beams",
+            "lumber-boards",
             "lye",
             "machine-parts",
             "medium-truck-chassis",
@@ -5551,6 +5906,8 @@
             "paper",
             "pelleted-animal-food",
             "pesticides",
+            "pickups-crane",
+            "pickups-passenger",
             "plows",
             "potassium",
             "power-generator",
@@ -5558,6 +5915,8 @@
             "propane",
             "pumpjack",
             "raw-milk",
+            "recreational-vehicle-campers",
+            "recreational-vehicle-motorhomes",
             "reservoir-tank",
             "rice",
             "roadroller",
@@ -5697,6 +6056,7 @@
             "krone-agriculture-equipment": {
               "name": "KRONE Agriculture Equipment",
               "accepts": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -5705,6 +6065,7 @@
                 "krone-varipack-v-190-xc"
               ],
               "provides": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -5730,6 +6091,28 @@
                 "wheel-loader-bobcat-l95"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ],
+            "Concrete Tubes": [
+              "concrete-tubes-large",
+              "concrete-tubes-small"
+            ],
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ],
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ],
+            "Recreational Vehicle": [
+              "recreational-vehicle-campers",
+              "recreational-vehicle-motorhomes"
+            ]
           }
         }
       ],
@@ -5773,6 +6156,10 @@
             "moving-containers",
             "municipal-truck",
             "office-supplies",
+            "pickups-crane",
+            "pickups-passenger",
+            "recreational-vehicle-campers",
+            "recreational-vehicle-motorhomes",
             "service-truck",
             "tires",
             "trailers",
@@ -5784,11 +6171,25 @@
             "medium-truck-chassis",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
+            "recreational-vehicle-campers",
+            "recreational-vehicle-motorhomes",
             "service-truck",
             "trailers",
             "work-truck-chassis"
           ],
-          "dlcCargo": {}
+          "dlcCargo": {},
+          "genericNames": {
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ],
+            "Recreational Vehicle": [
+              "recreational-vehicle-campers",
+              "recreational-vehicle-motorhomes"
+            ]
+          }
         }
       ],
       "wiki": {
@@ -5898,6 +6299,7 @@
             "krone-agriculture-equipment": {
               "name": "KRONE Agriculture Equipment",
               "accepts": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -5906,6 +6308,7 @@
                 "krone-varipack-v-190-xc"
               ],
               "provides": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -6005,6 +6408,8 @@
           ],
           "locations": {},
           "accepts": [
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "clothes",
             "concrete-barrier",
             "crawler-carrier",
@@ -6030,6 +6435,8 @@
             "wood-chipper"
           ],
           "provides": [
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "concrete-barrier",
             "crawler-carrier",
             "dumpster",
@@ -6097,6 +6504,12 @@
                 "wheel-loader-bobcat-l95"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ]
           }
         }
       ],
@@ -6129,6 +6542,8 @@
             "barley",
             "batteries",
             "beverages",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "buttermilk",
             "cans",
             "car-parts",
@@ -6138,6 +6553,8 @@
             "clothes",
             "computers",
             "concrete-barrier",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "corn",
             "corn-head",
             "cotton-lint",
@@ -6183,9 +6600,13 @@
             "paper",
             "pelleted-animal-food",
             "peterbilt-trucks",
+            "pickups-crane",
+            "pickups-passenger",
             "potatoes",
             "propane",
             "pumpjack",
+            "recreational-vehicle-campers",
+            "recreational-vehicle-motorhomes",
             "rice",
             "rye",
             "salt",
@@ -6219,6 +6640,8 @@
             "barley",
             "batteries",
             "beverages",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "butter",
             "buttermilk",
             "cans",
@@ -6228,6 +6651,8 @@
             "chlorine",
             "clothes",
             "concrete-barrier",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "corn",
             "corn-head",
             "crawler-carrier",
@@ -6263,6 +6688,8 @@
             "live-pigs",
             "live-sheep",
             "lpg",
+            "lumber-beams",
+            "lumber-boards",
             "machine-parts",
             "material-handler",
             "milk",
@@ -6387,6 +6814,7 @@
             "krone-agriculture-equipment": {
               "name": "KRONE Agriculture Equipment",
               "accepts": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -6395,6 +6823,7 @@
                 "krone-varipack-v-190-xc"
               ],
               "provides": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -6412,6 +6841,28 @@
                 "forklift-bobcat-d30"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ],
+            "Concrete Tubes": [
+              "concrete-tubes-large",
+              "concrete-tubes-small"
+            ],
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ],
+            "Recreational Vehicle": [
+              "recreational-vehicle-campers",
+              "recreational-vehicle-motorhomes"
+            ],
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
           }
         }
       ],
@@ -6551,6 +7002,8 @@
             "air-conditioning-units",
             "bulldozer",
             "clamshell-bucket",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "construction-houses",
             "cooling-tower",
             "crawler-carrier",
@@ -6563,6 +7016,8 @@
             "insulation-panels",
             "iron-pipes",
             "large-tubes",
+            "lumber-beams",
+            "lumber-boards",
             "material-handler",
             "mobile-air-compressor",
             "motor-grader",
@@ -6648,6 +7103,16 @@
                 "wheel-loader-bobcat-l95"
               ]
             }
+          },
+          "genericNames": {
+            "Concrete Tubes": [
+              "concrete-tubes-large",
+              "concrete-tubes-small"
+            ],
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
           }
         },
         {
@@ -6664,6 +7129,8 @@
             "bulldozer",
             "cement",
             "clamshell-bucket",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "construction-houses",
             "cooling-tower",
             "crawler-carrier",
@@ -6676,6 +7143,8 @@
             "insulation-panels",
             "iron-pipes",
             "large-tubes",
+            "lumber-beams",
+            "lumber-boards",
             "material-handler",
             "mobile-air-compressor",
             "motor-grader",
@@ -6698,6 +7167,8 @@
             "wheel-loader"
           ],
           "provides": [
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "bulldozer",
             "clamshell-bucket",
             "construction-houses",
@@ -6769,6 +7240,20 @@
                 "heavy-bulldozer"
               ]
             }
+          },
+          "genericNames": {
+            "Concrete Tubes": [
+              "concrete-tubes-large",
+              "concrete-tubes-small"
+            ],
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ],
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ]
           }
         },
         {
@@ -6794,6 +7279,8 @@
             "ibc-containers",
             "insulation-panels",
             "iron-pipes",
+            "lumber-beams",
+            "lumber-boards",
             "material-handler",
             "mobile-air-compressor",
             "motor-grader",
@@ -6864,6 +7351,12 @@
                 "wheel-loader-bobcat-l95"
               ]
             }
+          },
+          "genericNames": {
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
           }
         },
         {
@@ -6880,6 +7373,8 @@
             "bromine",
             "cattle-equipment",
             "cement",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "construction-houses",
             "crawler-carrier",
             "drywall",
@@ -6889,6 +7384,8 @@
             "gypsum",
             "insulation-panels",
             "large-tubes",
+            "lumber-beams",
+            "lumber-boards",
             "material-handler",
             "mortar",
             "motor-grader",
@@ -6908,6 +7405,8 @@
             "air-conditioning-units",
             "cattle-equipment",
             "cement",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "construction-houses",
             "cooling-tower",
             "crawler-carrier",
@@ -6920,6 +7419,8 @@
             "heat-exchanger",
             "insulation-panels",
             "large-tubes",
+            "lumber-beams",
+            "lumber-boards",
             "material-handler",
             "mortar",
             "motor-grader",
@@ -6936,7 +7437,17 @@
             "utility-poles",
             "ventilation-shaft"
           ],
-          "dlcCargo": {}
+          "dlcCargo": {},
+          "genericNames": {
+            "Concrete Tubes": [
+              "concrete-tubes-large",
+              "concrete-tubes-small"
+            ],
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
+          }
         },
         {
           "gameId": "pns_con_grg",
@@ -6946,6 +7457,8 @@
           ],
           "locations": {},
           "accepts": [
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "bulldozer",
             "clamshell-bucket",
             "crawler-carrier",
@@ -6969,6 +7482,8 @@
             "wheel-loader"
           ],
           "provides": [
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "bulldozer",
             "clamshell-bucket",
             "crawler-carrier",
@@ -7050,6 +7565,12 @@
                 "wheel-loader-bobcat-l95"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ]
           }
         }
       ],
@@ -7089,6 +7610,8 @@
             "chlorine",
             "clothes",
             "computers",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "construction-houses",
             "corn",
             "cotton-lint",
@@ -7130,9 +7653,13 @@
             "nuts",
             "office-supplies",
             "paper",
+            "pickups-crane",
+            "pickups-passenger",
             "potatoes",
             "power-generator",
             "propane",
+            "recreational-vehicle-campers",
+            "recreational-vehicle-motorhomes",
             "rice",
             "rye",
             "salt",
@@ -7156,6 +7683,7 @@
             "vegetables",
             "waste-paper",
             "wheat",
+            "work-truck-chassis",
             "yard-truck"
           ],
           "provides": [
@@ -7172,6 +7700,8 @@
             "chemical-granules",
             "chlorine",
             "clothes",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "dry-milk",
             "dry-van",
             "electronic-components",
@@ -7196,6 +7726,8 @@
             "live-pigs",
             "live-sheep",
             "lpg",
+            "lumber-beams",
+            "lumber-boards",
             "machine-parts",
             "material-handler",
             "milk",
@@ -7250,6 +7782,24 @@
                 "forklift-bobcat-d30"
               ]
             }
+          },
+          "genericNames": {
+            "Concrete Tubes": [
+              "concrete-tubes-large",
+              "concrete-tubes-small"
+            ],
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ],
+            "Recreational Vehicle": [
+              "recreational-vehicle-campers",
+              "recreational-vehicle-motorhomes"
+            ],
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
           }
         }
       ],
@@ -7291,6 +7841,8 @@
             "beet-harvester",
             "beverages",
             "boat",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "boric-acid",
             "bromine",
@@ -7305,6 +7857,8 @@
             "circuit-breakers",
             "clothes",
             "concrete-barrier",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "construction-houses",
             "corn",
             "corn-head",
@@ -7356,6 +7910,8 @@
             "live-pigs",
             "live-sheep",
             "lpg",
+            "lumber-beams",
+            "lumber-boards",
             "lye",
             "machine-parts",
             "material-handler",
@@ -7374,6 +7930,8 @@
             "paint",
             "pelleted-animal-food",
             "pesticides",
+            "pickups-crane",
+            "pickups-passenger",
             "potassium",
             "potatoes",
             "power-generator",
@@ -7381,6 +7939,8 @@
             "pumpjack",
             "rails",
             "raw-milk",
+            "recreational-vehicle-campers",
+            "recreational-vehicle-motorhomes",
             "refrigerated-trailer",
             "rice",
             "rye",
@@ -7435,6 +7995,8 @@
             "beet-harvester",
             "beverages",
             "boat",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "boric-acid",
             "bromine",
@@ -7452,6 +8014,8 @@
             "circuit-breakers",
             "clothes",
             "concrete-barrier",
+            "concrete-tubes-large",
+            "concrete-tubes-small",
             "cooling-tower",
             "corn",
             "corn-head",
@@ -7503,6 +8067,8 @@
             "live-pigs",
             "live-sheep",
             "lpg",
+            "lumber-beams",
+            "lumber-boards",
             "lye",
             "machine-parts",
             "material-handler",
@@ -7520,6 +8086,8 @@
             "paper",
             "pelleted-animal-food",
             "pesticides",
+            "pickups-crane",
+            "pickups-passenger",
             "potassium",
             "potatoes",
             "pressure-tank",
@@ -7527,6 +8095,8 @@
             "pumpjack",
             "rails",
             "raw-milk",
+            "recreational-vehicle-campers",
+            "recreational-vehicle-motorhomes",
             "refrigerated-trailer",
             "reservoir-tank",
             "rice",
@@ -7565,6 +8135,7 @@
             "wheat",
             "wind-turbine-nacelle",
             "wind-turbine-tower",
+            "wire-rod-coil",
             "wood-chipper",
             "wood-shavings",
             "work-truck-chassis",
@@ -7663,6 +8234,7 @@
             "krone-agriculture-equipment": {
               "name": "KRONE Agriculture Equipment",
               "accepts": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -7671,6 +8243,7 @@
                 "krone-varipack-v-190-xc"
               ],
               "provides": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -7688,6 +8261,28 @@
                 "forklift-bobcat-d30"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ],
+            "Concrete Tubes": [
+              "concrete-tubes-large",
+              "concrete-tubes-small"
+            ],
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ],
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ],
+            "Recreational Vehicle": [
+              "recreational-vehicle-campers",
+              "recreational-vehicle-motorhomes"
+            ]
           }
         }
       ],
@@ -7725,6 +8320,8 @@
             "almond-boxes",
             "batteries",
             "beverages",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "butter",
             "buttermilk",
@@ -7806,6 +8403,8 @@
             "almond-boxes",
             "batteries",
             "beverages",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "butter",
             "buttermilk",
@@ -7893,6 +8492,12 @@
                 "forklift-bobcat-d30"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ]
           }
         }
       ],
@@ -7970,6 +8575,7 @@
             "empty-pallets",
             "moving-containers",
             "scaffolding",
+            "used-packaging",
             "waste-paper"
           ],
           "dlcCargo": {}
@@ -8007,6 +8613,8 @@
             "almond-boxes",
             "batteries",
             "beverages",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "butter",
             "buttermilk",
@@ -8088,6 +8696,8 @@
             "almond-boxes",
             "batteries",
             "beverages",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "butter",
             "buttermilk",
@@ -8175,6 +8785,12 @@
                 "forklift-bobcat-d30"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ]
           }
         }
       ],
@@ -8294,6 +8910,8 @@
             "moving-containers",
             "municipal-truck",
             "paint",
+            "pickups-crane",
+            "pickups-passenger",
             "rails",
             "scaffolding",
             "scissor-lift",
@@ -8320,6 +8938,8 @@
             "moving-containers",
             "municipal-truck",
             "oil-pipes",
+            "pickups-crane",
+            "pickups-passenger",
             "pressure-tank",
             "rails",
             "reservoir-tank",
@@ -8340,6 +8960,12 @@
               ],
               "provides": []
             }
+          },
+          "genericNames": {
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ]
           }
         }
       ],
@@ -8388,6 +9014,8 @@
             "harvester",
             "hay",
             "iron-pipes",
+            "lumber-beams",
+            "lumber-boards",
             "motor-grader",
             "moving-containers",
             "packed-lumber",
@@ -8482,6 +9110,7 @@
             "krone-agriculture-equipment": {
               "name": "KRONE Agriculture Equipment",
               "accepts": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -8490,6 +9119,7 @@
                 "krone-varipack-v-190-xc"
               ],
               "provides": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -8498,6 +9128,12 @@
                 "krone-varipack-v-190-xc"
               ]
             }
+          },
+          "genericNames": {
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
           }
         },
         {
@@ -8532,6 +9168,8 @@
             "moving-containers",
             "municipal-truck",
             "office-supplies",
+            "pickups-crane",
+            "pickups-passenger",
             "plows",
             "scaffolding",
             "scissor-lift",
@@ -8557,6 +9195,8 @@
             "motor-grader",
             "moving-containers",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
             "plows",
             "scaffolding",
             "service-truck",
@@ -8615,6 +9255,7 @@
             "krone-agriculture-equipment": {
               "name": "KRONE Agriculture Equipment",
               "accepts": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -8623,6 +9264,7 @@
                 "krone-varipack-v-190-xc"
               ],
               "provides": [
+                "krone-big-m-45",
                 "krone-big-pack-1290-xc-hdp",
                 "krone-big-x-1180",
                 "krone-easycut-b-880-cv",
@@ -8631,6 +9273,12 @@
                 "krone-varipack-v-190-xc"
               ]
             }
+          },
+          "genericNames": {
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ]
           }
         }
       ],
@@ -8854,6 +9502,8 @@
             "almond-boxes",
             "batteries",
             "beverages",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "butter",
             "buttermilk",
@@ -8891,6 +9541,7 @@
             "grain",
             "guard-rails",
             "gypsum",
+            "heat-exchanger",
             "home-accessories",
             "household-appliances",
             "ibc-containers",
@@ -8934,6 +9585,8 @@
             "almond-boxes",
             "batteries",
             "beverages",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "borates",
             "butter",
             "buttermilk",
@@ -9021,6 +9674,12 @@
                 "forklift-bobcat-d30"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ]
           }
         }
       ],
@@ -9121,12 +9780,26 @@
             "dump-truck",
             "medium-truck-chassis",
             "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
+            "recreational-vehicle-campers",
+            "recreational-vehicle-motorhomes",
             "service-truck",
             "utility-terrain-vehicles",
             "work-truck-chassis",
             "yard-truck"
           ],
-          "dlcCargo": {}
+          "dlcCargo": {},
+          "genericNames": {
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ],
+            "Recreational Vehicle": [
+              "recreational-vehicle-campers",
+              "recreational-vehicle-motorhomes"
+            ]
+          }
         },
         {
           "gameId": "vm_car_pln",
@@ -9162,6 +9835,8 @@
             "glass-racks",
             "industrial-pallets",
             "moving-containers",
+            "recreational-vehicle-campers",
+            "recreational-vehicle-motorhomes",
             "scaffolding",
             "scissor-lift",
             "scrap-metals",
@@ -9188,6 +9863,12 @@
                 "forklift-bobcat-d30"
               ]
             }
+          },
+          "genericNames": {
+            "Recreational Vehicle": [
+              "recreational-vehicle-campers",
+              "recreational-vehicle-motorhomes"
+            ]
           }
         }
       ],
@@ -9262,6 +9943,8 @@
             "gravel",
             "hay",
             "ibc-containers",
+            "lumber-beams",
+            "lumber-boards",
             "material-handler",
             "motor-grader",
             "moving-containers",
@@ -9338,6 +10021,12 @@
                 "wheel-loader-bobcat-l95"
               ]
             }
+          },
+          "genericNames": {
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
           }
         }
       ],
@@ -9415,6 +10104,7 @@
             "empty-pallets",
             "moving-containers",
             "scaffolding",
+            "used-packaging",
             "waste-paper"
           ],
           "dlcCargo": {}
@@ -9443,6 +10133,8 @@
           ],
           "locations": {},
           "accepts": [
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "clothes",
             "concrete-barrier",
             "crawler-carrier",
@@ -9467,6 +10159,8 @@
             "wood-chipper"
           ],
           "provides": [
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
             "concrete-barrier",
             "crawler-carrier",
             "dumpster",
@@ -9534,6 +10228,12 @@
                 "wheel-loader-bobcat-l95"
               ]
             }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ]
           }
         }
       ],

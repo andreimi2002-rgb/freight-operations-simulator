@@ -21,6 +21,7 @@ Not affiliated with SCS Software. No images from the games are stored.
 | `companies.json` | Companies with at least one depot in scope. One entry per depot type, with its internal game ID (`gameId`), cities, accepted and provided cargo, and cargo added by DLCs. |
 | `cargo.json` | The complete ATS cargo catalog from the wiki cargo list: weight (lb), value per km (`unit_reward_per_km`), UN number, hazmat class, skills, trailer types, DLC. |
 | `trailers.json` | Trailer types named on the cargo list, each with the cargo it carries and the dealer trailer models (wiki trailer pages) that belong to it. |
+| `aliases.json` | Owner-approved corrections for cargo names that do not match the cargo list (typos, a different wording, generic names mapped to every variant). Edited by hand. |
 | `issues.json` | Everything to check by hand: empty values, contradictions between pages, names that do not match, counts that differ. |
 
 Every file has a `meta` block with the source, licence, retrieval date, attribution and generator.
@@ -31,8 +32,8 @@ Every file has a `meta` block with the source, licence, retrieval date, attribut
 - **Current version only.** On city pages, only the first tab of a tabbed section ("After 1.xx") is read; "Before 1.xx" tabs are ignored.
 - **Depots come from the company pages** (they carry the internal game IDs and the cargo per depot type). The city page is used to cross-check; every difference is an issue.
 - **Internal game IDs** are kept where the wiki gives them: company depot types (`gameId`, from the hidden comment in the Locations table or the infobox `def`). The wiki gives none for cities and cargo, so `gameId` is `null` there (listed in `issues.json`).
-- **Names are matched exactly**, ignoring case and spaces. Two narrow exceptions, each recorded in `issues.json`: singular/plural spellings (`nameVariant`) and a link to a disambiguation page inside a state row, matched by city name and state (`linkResolvedByName`).
-- **Dealer trailer models** are joined to a cargo-list trailer type by the same name, or by the cargo they carry (Jaccard overlap ≥ 0.5, best unique match), recorded as `trailerModelMatch`.
+- **Names are matched exactly**, ignoring case and spaces. Exceptions, each recorded in `issues.json`: singular/plural spellings (`nameVariant`); a link to a disambiguation page inside a state row, matched by city name and state (`linkResolvedByName`); and the owner-approved corrections in `aliases.json` (`aliasApplied`). A generic name (e.g. "Lumber") is mapped to every variant on the cargo list and marked on the depot type in `genericNames`.
+- **Trailer models** are joined to a cargo-list trailer type by the same name, or by the cargo they carry (Jaccard overlap ≥ 0.5, best unique match, recorded as `trailerModelMatch`). A type with no dealer page gets the wiki page "<Type> Trailer" when it exists (`match.by: "page title"`); these are mostly trailers the player cannot buy. When a page gives several prices, `priceUsd` is empty and `pricesUsd` lists them.
 - **Coordinates:** English Wikipedia article "City, State" → its Wikidata item → P625, accepted only if Wikidata places the item in that state.
 
 ## Running it
@@ -49,4 +50,4 @@ To add a state: add it to `scope.json` (`code`, `name`, wiki `category`, `wikida
 
 ## Last run (2026-10-21)
 
-34 cities (CA 24, NV 10), 59 companies, 244 depots, 295 cargo, 32 trailer types (18 with dealer models, 19 models in all), 108 issues.
+34 cities (CA 24, NV 10), 59 companies, 244 depots, 295 cargo, 32 trailer types (27 with trailer data), 112 entries in issues.json (13 of them are the approved corrections, listed for transparency).

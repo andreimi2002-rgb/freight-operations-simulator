@@ -484,7 +484,9 @@ export function parseCargoList(text) {
 export function parseTrailerPage(title, text) {
   const box = infobox(text, /^Infobox[ _]Trailer$/i);
   if (!box) return { title, notes: ['no Infobox Trailer'] };
-  const price = parseNumber(String(box.price ?? '').replace(/[$\s]/g, ''));
+  // "$41,380" → one price; "$30,700 / $61,360" → two prices without a stated meaning.
+  const prices = [...String(box.price ?? '').matchAll(/\$\s*([\d,]+)/g)].map((m) => Number(m[1].replace(/,/g, '')));
+  const price = prices.length === 1 ? prices[0] : null;
   const art = strip(box.articulated);
   const cargo = [];
   for (const m of String(box.cargo ?? '').matchAll(/\[\[(?:File|Image):[^\]]*?\|([^|\]]+)\]\]/gi)) {
@@ -495,6 +497,7 @@ export function parseTrailerPage(title, text) {
     title,
     name: strip(box.title) || normTitle(title.replace(/\/.*$/, '')),
     priceUsd: price,
+    pricesUsd: prices,
     ownable: /^y/i.test(strip(box.own)) ? true : /^n/i.test(strip(box.own)) ? false : null,
     articulated: /^yes/i.test(art) ? true : /^no/i.test(art) ? false : null,
     articulatedNote: art || null,

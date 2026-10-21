@@ -67,9 +67,24 @@ export function buildDataset(input) {
 
   const unknownCargo = [];
   const variants = new Map();
-  /** Cargo id for a name seen on another page; `dlcName` is the "With … DLC" section it was listed in. */
-  const cargoIdFor = (name, where, dlcName = null) => {
+  // Owner-approved corrections (data/ats/aliases.json): name → cargo ids.
+  const aliasByKey = new Map();
+  const cargoIds = new Set(cargo.map((c) => c.id));
+  for (const a of input.aliases?.cargo ?? []) {
+    const bad = a.cargo.filter((id) => !cargoIds.has(id));
+    if (bad.length) { issue('aliasError', slug(a.name), `alias "${a.name}" points to cargo not in the catalog: ${bad.join(', ')}; ignored`); continue; }
+    aliasByKey.set(nameKey(a.name), { ...a, where: new Set() });
+  }
+  /**
+   * Cargo ids for a name seen on another page; `dlcName` is the "With … DLC"
+   * section it was listed in. Usually one id; an approved generic alias gives several.
+   */
+  const cargoIdsFor = (name, where, dlcName = null) => {
     let list = cargoByKey.get(nameKey(name));
+    if (!list) {
+      const alias = aliasByKey.get(nameKey(name));
+      if (alias) { alias.where.add(where); return alias.cargo; }
+    }
     let variant = null;
     if (!list) {
       // Singular/plural spelling ("Frozen Foods" / "Frozen Food").
@@ -77,18 +92,22 @@ export function buildDataset(input) {
       list = cargoByKey.get(alt);
       if (list) variant = list[0].name;
     }
-    if (!list) { unknownCargo.push({ name, where }); return null; }
+    if (!list) { unknownCargo.push({ name, where }); return []; }
     if (variant) {
       const v = variants.get(name) ?? { matched: variant, where: new Set() };
       v.where.add(where);
       variants.set(name, v);
     }
-    if (list.length === 1) return list[0].id;
+    if (list.length === 1) return [list[0].id];
     const wanted = dlcName ? slug(dlcName) : 'base';
     const hit = list.find((c) => c.dlc === wanted);
-    if (hit) return hit.id;
+    if (hit) return [hit.id];
     issue('ambiguousCargo', slug(name), `"${name}" in ${where} could be ${list.map((c) => c.id).join(' or ')}`);
-    return null;
+    return [];
+  };
+  const genericAlias = (name) => {
+    const a = aliasByKey.get(nameKey(name));
+    return a?.generic && !cargoByKey.has(nameKey(name)) ? a : null;
   };
 
   // ---- Cities ------------------------------------------------------------
@@ -175,7 +194,11 @@ export function buildDataset(input) {
       if (!gameId) issue('missingGameId', id, `depot type "${d.type ?? '(unnamed)'}" has no internal game ID on the wiki`, { entityType: 'depotType' });
       if (d.gameIds.length > 1) issue('multipleGameIds', id, `depot type "${d.type}" lists several IDs: ${d.gameIds.join(', ')}; the first is used`);
       const where = `${p.name} / ${d.type ?? '(unnamed)'}`;
-      const mapList = (list, dlcName = null) => [...new Set(list.map((n) => cargoIdFor(n, where, dlcName)).filter(Boolean))].sort();
+      const genericNames = {};
+      const mapList = (list, dlcName = null) => {
+        for (const n of list) { const g = genericAlias(n); if (g) genericNames[n] = g.cargo; }
+        return [...new Set(list.flatMap((n) => cargoIdsFor(n, where, dlcName)))].sort();
+      };
       let accepts = [];
       let provides = [];
       const dlcCargo = {};
@@ -193,7 +216,10 @@ export function buildDataset(input) {
       } else {
         issue('unknownValue', id, `no cargo list found for depot type "${d.type ?? '(unnamed)'}"`, { field: 'accepts/provides' });
       }
-      return { gameId, type: d.type, cities: cityIds, locations, accepts, provides, dlcCargo };
+      const out = { gameId, type: d.type, cities: cityIds, locations, accepts, provides, dlcCargo };
+      // Marks cargo that came from a generic name on the wiki (approved alias to every variant).
+      if (Object.keys(genericNames).length) out.genericNames = genericNames;
+      return out;
     });
     const company = {
       id,
@@ -299,8 +325,11 @@ export function buildDataset(input) {
   for (const p of trailerPages) {
     if (!p.name) { issue('parseError', p.title, (p.notes ?? []).join('; ')); continue; }
     const pageCargo = quietCargoIds(p.cargo);
-    let type = types.find((t) => nameKey(t.name) === nameKey(p.name));
-    let match = { by: 'name' };
+    // Pages found as "<Type> Trailer" for a type with no dealer page carry forType.
+    let type = p.forType
+      ? types.find((t) => t.name === p.forType)
+      : types.find((t) => nameKey(t.name) === nameKey(p.name));
+    let match = { by: p.forType ? 'page title' : 'name' };
     if (!type) {
       const scored = types.map((t) => ({ t, score: jaccard(pageCargo, new Set(t.cargo)) })).sort((a, b) => b.score - a.score);
       const [best, second] = scored;
@@ -314,10 +343,12 @@ export function buildDataset(input) {
       issue('unmatchedTrailer', slug(p.name), `dealer trailer "${p.name}" matches no trailer type on the cargo list; left out`);
       continue;
     }
+    if ((p.pricesUsd ?? []).length > 1) issue('multiplePrices', slug(p.name), `trailer page gives several prices (${p.pricesUsd.join(' / ')}) without saying what each is; priceUsd is empty, pricesUsd holds them`, { field: 'priceUsd' });
     type.models.push({
       id: slug(p.name),
       name: p.name,
       priceUsd: p.priceUsd,
+      pricesUsd: p.pricesUsd ?? (p.priceUsd != null ? [p.priceUsd] : []),
       ownable: p.ownable,
       articulated: p.articulated,
       cargoTypesNote: p.cargoTypesNote,
@@ -352,6 +383,10 @@ export function buildDataset(input) {
   }
   for (const [name, where] of unknownByName) issue('unknownCargo', slug(name), `"${name}" is not on the cargo list (left out)`, { seenIn: [...where] });
   for (const [name, v] of variants) issue('nameVariant', slug(name), `"${name}" is not on the cargo list; matched to "${v.matched}" (singular/plural)`, { seenIn: [...v.where] });
+  for (const a of aliasByKey.values()) {
+    if (!a.where.size) continue;
+    issue('aliasApplied', slug(a.name), `"${a.name}" → ${a.cargo.join(', ')} (${a.reason}; data/ats/aliases.json)`, { seenIn: [...a.where], generic: Boolean(a.generic) });
+  }
 
   issue('missingGameId', 'cities', 'The wiki gives no internal game IDs for cities.', { entityType: 'city', ids: cities.map((x) => x.id) });
   issue('missingGameId', 'cargo', 'The wiki gives no internal game IDs for cargo.', { entityType: 'cargo', ids: cargo.map((x) => x.id) });

@@ -74,6 +74,33 @@ const trailerPages = trailerTitles.map((t) => {
   return p ? { ...parseTrailerPage(p.title, p.text), revid: p.revid } : { title: t, notes: ['page missing'] };
 });
 
+// 4b. Trailer types on the cargo list with no dealer page of the same name:
+// look for "<Type> Trailer/American Truck Simulator" or "<Type> Trailer".
+{
+  const { nameKey } = await import('./lib/wikitext.mjs');
+  const pageKeys = new Set(trailerPages.filter((p) => p.name).map((p) => nameKey(p.name)));
+  const missing = [...new Set(cargoList.rows.flatMap((r) => r.trailerTypes))].filter((t) => !pageKeys.has(nameKey(t)));
+  const candidates = missing.flatMap((t) => [`${t} Trailer/American Truck Simulator`, `${t} Trailer`]);
+  const resolved = await wiki.resolve(candidates);
+  const known = new Set(trailerTitles);
+  const pick = new Map();
+  for (const t of missing) {
+    for (const c of [`${t} Trailer/American Truck Simulator`, `${t} Trailer`]) {
+      const final = resolved.get(c);
+      if (final && !known.has(final) && !/disambiguation/i.test(final)) { pick.set(t, final); break; }
+    }
+  }
+  const extra = await wiki.pages([...new Set(pick.values())]);
+  for (const [t, title] of pick) {
+    const p = extra.get(title);
+    if (!p) continue;
+    const parsed = parseTrailerPage(p.title, p.text);
+    // Only American Truck Simulator trailer pages.
+    const isAts = /\/American Truck Simulator$/.test(p.title) || /\{\{\s*Atslink\s*\}\}/i.test(p.text);
+    if (parsed.name && isAts) trailerPages.push({ ...parsed, revid: p.revid, forType: t });
+  }
+}
+
 // 5. Resolve redirects for every linked title we need to match.
 log('redirects…');
 const stateNames = new Set(scope.states.map((s) => s.name));
@@ -103,7 +130,9 @@ for (const c of prelim) {
 const coordinates = await coordinatesFor(client, prelim.filter((c) => c.stateQid));
 
 // 7. Build and write.
+const aliases = JSON.parse(readFileSync(join(outDir, 'aliases.json'), 'utf8'));
 const data = buildDataset({
+  aliases,
   scope, cityPages, companyPages, cargoRows: cargoList.rows, cargoSummary: cargoList.summary, trailerPages, titleRedirects, coordinates, pageUrl,
 });
 for (const note of cargoList.notes) data.issues.push({ kind: 'parseError', entity: 'cargo list', detail: note });

@@ -374,6 +374,10 @@ test('parseTrailerPage reads price, ownership and cargo icons', () => {
 }}`);
   assert.equal(t.name, 'Dry Van');
   assert.equal(t.priceUsd, 41380);
+  assert.deepEqual(t.pricesUsd, [41380]);
+  const two = parseTrailerPage('Flatbed Trailer', '{{Infobox_Trailer\n|title=Flatbed\n|price=$30,700 / $61,360\n}}');
+  assert.equal(two.priceUsd, null);
+  assert.deepEqual(two.pricesUsd, [30700, 61360]);
   assert.equal(t.ownable, true);
   assert.equal(t.articulated, false);
   assert.equal(t.cargoTypesNote, 'General, dry goods');

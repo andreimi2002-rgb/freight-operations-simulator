@@ -43,6 +43,9 @@
           "id": "bulk-feed",
           "name": "Bulk Feed",
           "priceUsd": 57700,
+          "pricesUsd": [
+            57700
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "Bulk feed material",
@@ -65,7 +68,24 @@
         "cars-small",
         "utility-terrain-vehicles"
       ],
-      "models": []
+      "models": [
+        {
+          "id": "car-transporter",
+          "name": "Car Transporter",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": false,
+          "cargoTypesNote": "Vehicles",
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Car_Transporter_Trailer/American_Truck_Simulator",
+            "revid": 289324
+          }
+        }
+      ]
     },
     {
       "id": "chemical-tank",
@@ -83,6 +103,9 @@
           "id": "d-shaped-tank",
           "name": "D-shaped Tank",
           "priceUsd": 54940,
+          "pricesUsd": [
+            54940
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "Corrosive, toxic, or otherwise dangerous liquids",
@@ -113,6 +136,9 @@
           "id": "chip-van",
           "name": "Chip Van",
           "priceUsd": 68740,
+          "pricesUsd": [
+            68740
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "Light bulk material",
@@ -163,6 +189,9 @@
           "id": "container-carrier",
           "name": "Container Carrier",
           "priceUsd": 27900,
+          "pricesUsd": [
+            27900
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "Containers and container tanks",
@@ -273,6 +302,9 @@
           "id": "drop-deck",
           "name": "Drop Deck",
           "priceUsd": 33240,
+          "pricesUsd": [
+            33240
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "Construction equipment, machinery, materials and high cargo",
@@ -307,6 +339,9 @@
           "id": "dry-bulk",
           "name": "Dry Bulk",
           "priceUsd": 60120,
+          "pricesUsd": [
+            60120
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "Bulk cargo, materials and food",
@@ -376,6 +411,9 @@
           "id": "dry-van",
           "name": "Dry Van",
           "priceUsd": 41380,
+          "pricesUsd": [
+            41380
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "General, dry goods",
@@ -406,6 +444,9 @@
           "id": "end-dumper",
           "name": "End Dumper",
           "priceUsd": 46900,
+          "pricesUsd": [
+            46900
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "Bulk cargo and materials",
@@ -422,6 +463,10 @@
           "id": "horizontal-bottom-dumper",
           "name": "Horizontal Bottom Dumper",
           "priceUsd": null,
+          "pricesUsd": [
+            37740,
+            62940
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "Bulk cargo and Materials",
@@ -508,6 +553,10 @@
           "id": "flatbed",
           "name": "Flatbed",
           "priceUsd": null,
+          "pricesUsd": [
+            30700,
+            61360
+          ],
           "ownable": true,
           "articulated": null,
           "cargoTypesNote": "Construction equipment and materials",
@@ -534,6 +583,9 @@
           "id": "food-tank",
           "name": "Food Tank",
           "priceUsd": 55100,
+          "pricesUsd": [
+            55100
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "Liquid food goods",
@@ -553,7 +605,24 @@
       "cargo": [
         "frac-tank"
       ],
-      "models": []
+      "models": [
+        {
+          "id": "frac-tank",
+          "name": "Frac Tank",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": false,
+          "cargoTypesNote": "Frac tanks",
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Frac_Tank_Trailer",
+            "revid": 289328
+          }
+        }
+      ]
     },
     {
       "id": "fuel-tank",
@@ -571,6 +640,9 @@
           "id": "fuel-tank",
           "name": "Fuel Tank",
           "priceUsd": 54950,
+          "pricesUsd": [
+            54950
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "Flammable liquids",
@@ -597,6 +669,9 @@
           "id": "gas-tank",
           "name": "Gas Tank",
           "priceUsd": 57620,
+          "pricesUsd": [
+            57620
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "Flammable gas, transported in liquid state",
@@ -630,6 +705,9 @@
           "id": "grain-hopper",
           "name": "Grain Hopper",
           "priceUsd": 58700,
+          "pricesUsd": [
+            58700
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "Grain and bulk material",
@@ -650,7 +728,24 @@
       "cargo": [
         "turnkey-house-construction"
       ],
-      "models": []
+      "models": [
+        {
+          "id": "house-transporter",
+          "name": "House Transporter",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": false,
+          "cargoTypesNote": null,
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/House_Transporter_Trailer",
+            "revid": 289315
+          }
+        }
+      ]
     },
     {
       "id": "insulated",
@@ -707,6 +802,10 @@
           "id": "insulated",
           "name": "Insulated",
           "priceUsd": null,
+          "pricesUsd": [
+            102020,
+            171340
+          ],
           "ownable": true,
           "articulated": null,
           "cargoTypesNote": "Chilled goods",
@@ -726,7 +825,24 @@
       "cargo": [
         "knuckleboom-loader"
       ],
-      "models": []
+      "models": [
+        {
+          "id": "knuckleboom-loader",
+          "name": "Knuckleboom Loader",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": false,
+          "cargoTypesNote": null,
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Knuckleboom_Loader_Trailer",
+            "revid": 289316
+          }
+        }
+      ]
     },
     {
       "id": "livestock",
@@ -741,6 +857,9 @@
           "id": "livestock",
           "name": "Livestock",
           "priceUsd": 68040,
+          "pricesUsd": [
+            68040
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "Living animals",
@@ -768,6 +887,9 @@
           "id": "4-bolster-logger",
           "name": "4 Bolster Logger",
           "priceUsd": 42700,
+          "pricesUsd": [
+            42700
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "Logs, beams or tubes",
@@ -879,7 +1001,24 @@
         "transport-helicopter",
         "underground-loader"
       ],
-      "models": []
+      "models": [
+        {
+          "id": "lowboy-55l",
+          "name": "Lowboy 55L",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": true,
+          "cargoTypesNote": null,
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Lowboy_55L_Trailer",
+            "revid": 289317
+          }
+        }
+      ]
     },
     {
       "id": "lowboy-boat",
@@ -887,7 +1026,24 @@
       "cargo": [
         "boat"
       ],
-      "models": []
+      "models": [
+        {
+          "id": "lowboy-boat",
+          "name": "Lowboy Boat",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": false,
+          "cargoTypesNote": null,
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Lowboy_Boat_Trailer",
+            "revid": 289327
+          }
+        }
+      ]
     },
     {
       "id": "lowboy-double",
@@ -941,7 +1097,24 @@
       "cargo": [
         "mobile-barrier"
       ],
-      "models": []
+      "models": [
+        {
+          "id": "mobile-barrier",
+          "name": "Mobile Barrier",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": false,
+          "cargoTypesNote": null,
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Mobile_Barrier_Trailer",
+            "revid": 289326
+          }
+        }
+      ]
     },
     {
       "id": "refrigerated",
@@ -1004,6 +1177,9 @@
           "id": "reefer",
           "name": "Reefer",
           "priceUsd": 139180,
+          "pricesUsd": [
+            139180
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "Frozen, chilled goods",
@@ -1062,6 +1238,10 @@
           "id": "sliding-tarp",
           "name": "Sliding Tarp",
           "priceUsd": null,
+          "pricesUsd": [
+            45700,
+            78340
+          ],
           "ownable": true,
           "articulated": false,
           "cargoTypesNote": "General, dry goods",
@@ -1083,7 +1263,24 @@
         "peterbilt-trucks",
         "western-star-trucks"
       ],
-      "models": []
+      "models": [
+        {
+          "id": "truck-transporter",
+          "name": "Truck Transporter",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": true,
+          "cargoTypesNote": null,
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Truck_Transporter_Trailer/American_Truck_Simulator",
+            "revid": 289340
+          }
+        }
+      ]
     },
     {
       "id": "tub-grinder",
@@ -1091,7 +1288,24 @@
       "cargo": [
         "tub-grinder"
       ],
-      "models": []
+      "models": [
+        {
+          "id": "tub-grinder",
+          "name": "Tub Grinder",
+          "priceUsd": null,
+          "pricesUsd": [],
+          "ownable": false,
+          "articulated": false,
+          "cargoTypesNote": null,
+          "match": {
+            "by": "page title"
+          },
+          "wiki": {
+            "url": "https://trucksimulator.wiki.gg/wiki/Tub_Grinder_Trailer",
+            "revid": 289321
+          }
+        }
+      ]
     },
     {
       "id": "van-transporter",

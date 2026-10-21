@@ -101,3 +101,12 @@ test('the cargo catalog is complete: every DLC named in the wiki summary is pres
   }
   assert.ok(cargo.length >= 290, `only ${cargo.length} cargo`);
 });
+
+test('every approved alias points to cargo in the catalog', () => {
+  const { cargo: aliases } = load('aliases.json');
+  const cargoIds = ids(cargo);
+  for (const a of aliases) {
+    assert.ok(a.reason, `${a.name}: no reason`);
+    for (const id of a.cargo) assert.ok(cargoIds.has(id), `${a.name} → ${id}`);
+  }
+});

@@ -121,3 +121,31 @@ test('summary counts are compared with the table', () => {
   assert.equal(counts.length, 1);
   assert.match(counts[0], /says 4 base cargoes; the table has 5/);
 });
+
+test('approved aliases: a typo maps to one cargo, a generic name to every variant and is marked', () => {
+  const d = build({
+    aliases: { cargo: [
+      { name: 'Mystery', cargo: ['beverages'], reason: 'typo on the wiki' },
+      { name: 'Frozen Foods', cargo: ['frozen-food', 'beverages'], reason: 'generic', generic: true },
+      { name: 'Nothing', cargo: ['not-a-cargo'], reason: 'bad' },
+    ] },
+  });
+  const wh = d.companies[0].depotTypes[0];
+  assert.deepEqual(wh.accepts, ['beverages', 'frozen-food']);
+  assert.deepEqual(wh.genericNames, { 'Frozen Foods': ['frozen-food', 'beverages'] });
+  assert.ok(!d.issues.some((i) => i.kind === 'unknownCargo'));
+  assert.ok(d.issues.some((i) => i.kind === 'aliasApplied' && i.entity === 'mystery'));
+  assert.ok(d.issues.some((i) => i.kind === 'aliasError' && i.entity === 'nothing'));
+});
+
+test('a trailer page found by title is attached to its type', () => {
+  const base = build();
+  const d = build({
+    trailerPages: [
+      { title: 'Lowboy Trailer', name: 'Lowboy', priceUsd: null, pricesUsd: [], ownable: false, articulated: false, cargoTypesNote: null, cargo: [], revid: 9, forType: 'Lowboy' },
+    ],
+  });
+  assert.deepEqual(base.trailers.find((t) => t.id === 'lowboy').models, []);
+  const lowboy = d.trailers.find((t) => t.id === 'lowboy');
+  assert.deepEqual(lowboy.models.map((m) => [m.id, m.match.by, m.ownable]), [['lowboy', 'page title', false]]);
+});
