@@ -1,5 +1,5 @@
 // Pure helpers for the city photo scripts: whether a Wikimedia Commons file may be shown
-// (licence, author, type, size). Adapted from FOS (legacy/fos/scripts/lib/commons.mjs).
+// (licence, author, type, size). Adapted from FOS (scripts/lib/commons.mjs on main / tag fos-final).
 
 // "http://commons.wikimedia.org/wiki/Special:FilePath/Bucharest%20skyline.jpg" -> "Bucharest skyline.jpg"
 export function fileNameFromFilePath(url) {
