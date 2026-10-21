@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.0.0-alpha.2 — 2026-10-21 (Freight World, stage 1: ATS data for California and Nevada)
+
+- **Collector** `scripts/ats/collect.mjs` (`npm run collect:ats`): reads Truck Simulator Wiki through the MediaWiki API — at most one request per second per host, clear User-Agent, `maxlag`, retries with backoff, local cache in `.cache/wiki/` (not in git), `--refresh` / `--offline`. A full run needs about 30 requests. States, wiki categories and time zones are data in `data/ats/scope.json`.
+- **Data** in `data/ats/` (CC BY-SA 4.0, attribution in every file's `meta`): 34 current cities (CA 24, NV 10; 4 removed and 1 future city left out), 59 companies with 244 depots, the complete cargo catalog (295 rows), 32 trailer types with 19 dealer models, and `issues.json` with 108 entries to check by hand.
+- **Cities:** infobox data, depots (from the company pages, with internal game IDs and, for gas stations, where the station is), facilities, roads, neighbouring cities, landmarks, game time zone → IANA, and real-world coordinates from **Wikidata** (CC0; matched through the Wikipedia article "City, State" and checked to lie in the state). All 34 cities have coordinates.
+- **Companies:** one entry per depot type with its internal game ID (`gameId`), cities in scope, accepted and provided cargo, and cargo added by DLCs.
+- **Cargo:** weight (lb), value per km, second values for tank/bulk trailers and value ranges as given, UN number (in-game and the one the wiki says is correct), hazmat class from the icon caption, skills, dynamic loading, trailer types, DLC (all 8 cargo DLCs, KRONE included). Cargo with the same name in two DLCs gets two ids.
+- **Not guessed:** no internal IDs for cities and cargo on the wiki (`null`); unknown weights (`???`), contradictions between city and company pages, typos on the wiki, and the wiki summary counts that differ from its own table are all in `issues.json`.
+- **Wikidata** added to the sources on `/about`.
+- 36 new tests (45 in all): wikitext helpers, page parsers on wiki fragments, dataset assembly, and checks of the real files (licence metadata, unique ids, references between files, time zones, coordinates, values or recorded issues).
+
 ## 2.0.0-alpha.1 — 2026-10-21 (Freight World, stage 0: foundation)
 
 First version of Freight World on the `v2-freight-world` branch. The FOS site on `main` is unchanged.
