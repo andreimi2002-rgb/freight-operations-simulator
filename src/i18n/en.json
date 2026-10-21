@@ -37,7 +37,7 @@
   "footer": {
     "attributionTitle": "Attribution",
     "gameData": "Game data from Truck Simulator Wiki contributors (trucksimulator.wiki.gg), CC BY-SA 4.0.",
-    "weatherPhotos": "Weather by Open-Meteo. City photos from Wikimedia Commons (author and license on each photo).",
+    "weatherPhotos": "Weather data from MET Norway, CC BY 4.0. City photos from Wikimedia Commons (author and license on each photo).",
     "notAffiliated": "Not affiliated with SCS Software.",
     "linksTitle": "Project",
     "about": "About, sources and licences",
@@ -120,10 +120,6 @@
       "use": "Clock on each city page, computed in the browser from the city's time zone",
       "licence": "Computed, no external data"
     },
-    "openMeteo": {
-      "use": "Real weather at each city (no API key)",
-      "licence": "Free for non-commercial use; terms to be checked before any commercial use"
-    },
     "commons": {
       "use": "Real city photos, chosen by hand once per city",
       "licence": "Free licences per file (CC BY, CC BY-SA, public domain); author and licence shown on each photo"
@@ -147,6 +143,10 @@
     "wikidata": {
       "use": "Real-world coordinates of each city, used for its weather",
       "licence": "CC0 1.0: public domain"
+    },
+    "metNorway": {
+      "use": "Real weather at each city (Locationforecast, through our own cached function)",
+      "licence": "CC BY 4.0: attribution required; commercial use allowed"
     }
   },
   "notFound": {
@@ -176,7 +176,6 @@
     "localTime": "Local time",
     "timeZone": "Time zone {tz}",
     "weatherNow": "Weather now",
-    "feelsLike": "Feels like {t}",
     "wind": "Wind {v}",
     "precipitation": "Precipitation {v}",
     "forecast": "Next days",
@@ -185,7 +184,7 @@
     "weatherError": "The weather could not be loaded.",
     "weatherRetry": "Try again",
     "weatherUpdated": "Updated {time}",
-    "weatherSource": "Real weather at the real city, from Open-Meteo",
+    "weatherSource": "Real weather at the real city, from MET Norway (CC BY 4.0)",
     "noCoordinates": "No coordinates for this city yet, so no weather.",
     "photoCredit": "Photo: {author}",
     "photoLicence": "{licence}",
@@ -245,6 +244,7 @@
     "snow": "Snow",
     "storm": "Thunderstorm",
     "unknown": "Weather unknown",
-    "night": "night"
+    "night": "night",
+    "sleet": "Sleet"
   }
 }

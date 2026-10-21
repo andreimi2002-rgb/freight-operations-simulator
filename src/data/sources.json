@@ -19,10 +19,10 @@
       "stage": 2
     },
     {
-      "id": "openMeteo",
-      "name": "Open-Meteo",
-      "url": "https://open-meteo.com",
-      "licenceUrl": "https://open-meteo.com/en/terms",
+      "id": "metNorway",
+      "name": "MET Norway",
+      "url": "https://api.met.no",
+      "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
       "stage": 2
     },
     {

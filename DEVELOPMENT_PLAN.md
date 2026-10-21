@@ -44,23 +44,56 @@ căi. Toate deciziile tehnice de acum trebuie să lase deschise aceste căi.
   vremea reală la destinație, istoric de curse, statistici, eventual misiuni Freight World
   urmărite și verificate în joc.
 
-**Alte căi de monetizare (de prioritizat mai târziu):**
-- **Premium** pentru utilizatori individuali: cursa live, istoric, statistici, filtre avansate,
-  toate hărțile.
-- **Abonament pentru companii virtuale (VTC)** de pe TruckersMP: tabela companiei, dispecerat,
-  convoaie, clasamente, rapoarte.
-- **Donații / susținere** (Patreon, Ko-fi) în fazele timpurii.
-- **Reclame discrete** pe varianta gratuită, doar dacă nu strică designul.
+### Modelul de monetizare (decis 2026-10-21): hibrid
 
-**Ce înseamnă asta pentru arhitectură, încă de acum:**
+Principiu: **datele și hărțile sunt gratuite, serviciul este plătit.**
+Datele din joc vin din Truck Simulator Wiki (CC BY-SA 4.0) și nu pot fi ținute sub cheie,
+iar jucătorii au plătit deja hărțile la SCS. Se vinde ce nu se poate copia:
+funcțiile, conectarea live și uneltele.
+
+*Gratuit — pentru toată lumea*
+- Toate hărțile ATS și ETS2, inclusiv cele din DLC-uri.
+- Toate paginile de oraș: poză, ora locală, vremea reală, companii, servicii, drumuri.
+- Tabela de plecări de bază pentru fiecare oraș.
+- Fișa cursei de bază.
+- Planificatorul de rută de bază (de la A la B: ce marfă poți duce).
+- **Mod „început de carieră”:** cine are doar jocul de bază primește automat curse filtrate
+  pe harta de bază (ATS: California, Nevada și Arizona — Arizona e DLC gratuit; ETS2: harta de bază).
+  Este o funcție de filtrare, nu un zid de plată.
+
+*Premium — pentru jucători individuali*
+- Conectarea live la ETS2 / ATS (aplicația companion, etapa 7).
+- Istoric de curse, statistici, progres de carieră.
+- Generator avansat: filtre detaliate, curse personalizate, tabele mai lungi.
+- Notificări (ex. vreme rea la destinație, curse noi din orașul preferat).
+- Preț mic și simplu: un singur plan pentru tot, nu plăți separate pe hărți sau DLC-uri.
+
+*Abonament VTC — pentru companii virtuale (ex. TruckersMP)*
+- Tabela companiei, dispecerat, convoaie, clasamente, rapoarte.
+
+*Venituri secundare*
+- Donații / susținere (Patreon, Ko-fi), mai ales în fazele timpurii.
+- Reclame: deocamdată nu (strică designul și cer banner de cookie-uri, GDPR). La trafic mare,
+  cel mult un singur sponsor discret, fără urmărire.
+
+*Consecințe pentru arhitectură*
+- Paginile de oraș rămân publice și indexabile pe Google (sursa principală de public).
+- Fiecare depozit, marfă și oraș păstrează DLC-ul din care face parte,
+  ca filtrul „început de carieră” și filtrul de DLC-uri deținute să funcționeze.
+- Funcțiile premium se construiesc ca module separate, ca să poată fi activate
+  pe bază de cont în etapa 7.
 - Toate orașele, companiile, mărfurile și remorcile păstrează **ID-urile interne din joc**
-  (ex. fișierele companiilor, ca `oak_port`, numele interne ale mărfurilor și orașelor) acolo unde
-  wiki-ul le oferă. Telemetria din joc folosește aceste ID-uri, iar fără ele datele live
-  nu pot fi legate de paginile Freight World.
-- Generatorul și datele se scriu ca **modul separat**, refolosibil mai târziu în aplicația companion.
-- **Înainte de lansarea comercială se verifică:** condițiile comerciale Open-Meteo (uzul comercial
-  cere de regulă plan plătit sau alternativă), politica SCS Software privind proiectele de fani
-  monetizate, condițiile TruckersMP pentru integrări, iar atribuirea CC BY-SA rămâne obligatorie.
+  acolo unde wiki-ul le oferă (telemetria folosește aceste ID-uri).
+- Generatorul și datele se scriu ca **modul separat**, refolosibil în aplicația companion.
+- Toate serviciile externe trebuie să permită uz comercial (de aceea vremea vine de la MET Norway, CC BY 4.0).
+
+*Condiții înainte de primul venit*
+- Politica SCS Software pentru proiecte de fani monetizate, licența SCS Telemetry SDK și folosirea
+  numelor ATS / ETS2 în promovare — verificate înainte de etapa 7.
+- Condițiile TruckersMP pentru integrări (pentru abonamentul VTC).
+- Formă legală pentru încasări (PFA sau SRL), termeni de utilizare, politică de confidențialitate.
+- Plăți printr-un „merchant of record” (ex. Paddle, Lemon Squeezy), care se ocupă de TVA-ul UE.
+- Atribuirea CC BY-SA (date) și CC BY (vreme) rămâne obligatorie peste tot.
 
 ### Ce NU facem (deocamdată)
 - Nu facem un joc și nu simulăm condusul.
@@ -76,13 +109,13 @@ căi. Toate deciziile tehnice de acum trebuie să lase deschise aceste căi.
 |---|---|---|
 | Orașe, companii, depozite, mărfuri, remorci din joc | Truck Simulator Wiki — https://trucksimulator.wiki.gg (prin API-ul MediaWiki: `/api.php`) | **CC BY-SA 4.0** — atribuire obligatorie; setul de date publicat se distribuie sub aceeași licență |
 | Ora locală | calculată în browser din `timezone_iana` (ex. `America/Los_Angeles`) | — |
-| Vremea reală | Open-Meteo — https://open-meteo.com (fără cheie) | gratuit pentru uz necomercial; **de verificat condițiile înainte de monetizare** |
+| Vremea reală | MET Norway Locationforecast — https://api.met.no (fără cheie, prin funcția noastră `/api/weather/<oraș>`) | **CC BY 4.0** — atribuire obligatorie; uz comercial permis |
 | Poze reale de oraș | Wikimedia Commons | licențe libere (CC BY, CC BY-SA, domeniu public) — autor + licență afișate pe pagină |
 | Distanțe între orașe (estimare) | drumuri reale din OpenStreetMap, convertite la scara jocului | ODbL — atribuire „© OpenStreetMap contributors” |
 
 **Atribuirea** apare în subsolul fiecărei pagini și în pagina „Despre / Surse”:
 > Game data from Truck Simulator Wiki contributors (trucksimulator.wiki.gg), CC BY-SA 4.0.
-> Weather by Open-Meteo. City photos from Wikimedia Commons (author and license on each photo).
+> Weather data from MET Norway, CC BY 4.0. City photos from Wikimedia Commons (author and license on each photo).
 > Not affiliated with SCS Software.
 
 ---
@@ -159,11 +192,11 @@ Fiecare URL trebuie să funcționeze direct (bookmark, link trimis cuiva).
 
 ## 6. Arhitectură tehnică
 
-- **Site static pe Netlify.** Fără server propriu la început.
+- **Site static pe Netlify.** Fără server propriu la început; doar funcții Netlify mici acolo unde un serviciu extern o cere (vremea).
 - **Datele din joc** stau ca fișiere JSON în repo, în `data/ats/`.
 - **Scripturile** care colectează și curăță datele stau în `scripts/` și pot fi rulate din nou
   când apare un update de joc.
-- **Vremea** se cere direct din browser de la Open-Meteo, cu cache scurt (ex. 15 minute).
+- **Vremea** vine de la MET Norway printr-o funcție Netlify (`/api/weather/<oraș>`, cache 20 de minute pe CDN): MET cere un User-Agent propriu, pe care browserul nu îl poate trimite.
 - **Ora** se calculează în browser cu `Intl.DateTimeFormat` și `timezone_iana`.
 - **Generatorul de curse** rulează în browser, pe baza fișierelor JSON.
 - **Framework:** Claude Code propune varianta cea mai simplă care permite URL-uri curate
@@ -191,7 +224,7 @@ Fiecare fișier are un câmp `meta` cu sursa, licența, data colectării și atr
 - depozitele din alte orașe și ce **acceptă** fiecare;
 - catalogul de mărfuri (greutate, valoare, remorci, hazmat, DLC);
 - ora și ziua curentă în orașul respectiv;
-- vremea reală la plecare și la destinație (Open-Meteo).
+- vremea reală la plecare și la destinație (MET Norway).
 
 ### Pașii pentru o cursă
 1. Alege un depozit de plecare din oraș.
@@ -273,6 +306,10 @@ companii, mărfuri, remorci și probleme există.
 **Gata când:** fiecare oraș are o tabelă care se schimbă la fiecare oră și conține doar
 curse posibile în joc.
 
+**Lansare în producție la finalul etapei 3:** eticheta git `fos-final` pe ultima versiune FOS de pe `main`,
+apoi PR `v2-freight-world` → `main` cu deploy preview; după aprobarea proprietarului, Freight World
+înlocuiește FOS pe `freight-operations-simulator.netlify.app`. Etapele următoare merg cu PR direct spre `main`.
+
 ### Etapa 4 — Fișa cursei și regulile de context
 - Pagina `/ats/mission/<id>`: depozit de plecare, destinație, marfă, greutate, remorcă,
   camion recomandat, distanță, durată, plată estimată, DLC-uri, flag-uri.
@@ -315,7 +352,7 @@ curse posibile în joc.
   ștergerea a ceva existent).
 - **Povestește** pe scurt ce faci, pe parcurs.
 - Lucrează pe branch-uri separate, deschide PR-uri, folosește deploy preview-urile Netlify.
-- Nu modifica branch-ul principal al site-ului FOS actual.
+- Nu modifica branch-ul principal (`main`, site-ul FOS) până la lansarea de la finalul etapei 3.
 - Nu adăuga dependențe sau servicii plătite.
 - La final de etapă: rezumat clar (ce s-a făcut, ce lipsește, ce probleme au apărut)
   și actualizează Jurnalul de decizii de mai jos.
@@ -351,3 +388,6 @@ curse posibile în joc.
 | 2026-10-21 | Unități: implicit ca în joc pentru ATS (°F, mile, lb), cu comutator metric (°C, km, kg) salvat în browser. |
 | 2026-10-21 | Pozele orașelor: Claude propune 1–4 candidați pe oraș de pe Wikimedia Commons (licență liberă, autor, ≥ 1200 px; `data/photo-candidates.json`), proprietarul a decis ca Claude să aleagă cea mai bună poză pentru fiecare oraș (orizontală, arată orașul, clară), cu motivul notat; alegerea intră în `data/photos.json`. Fără poză potrivită rămâne placeholder. Proprietarul poate cere oricând altă poză. |
 | 2026-10-21 | Etapa 2: pozele au fost alese de Claude, uitându-se la fiecare candidată (33 din 34 de orașe; Santa Maria rămâne cu placeholder, are doar un banner foarte îngust). Numărul de depozite afișat vine din paginile companiilor. Pagina orașului nu folosește gradiente: titlul stă pe o bandă solidă semitransparentă peste poză. |
+| 2026-10-22 | **Modelul de monetizare: hibrid** — datele și hărțile gratuite, serviciul plătit (premium individual, abonament VTC, donații). Detalii și condiții în secțiunea 1. Reclamele se amână. Planificatorul de rută de bază rămâne gratuit. |
+| 2026-10-22 | Vremea trece de la Open-Meteo (gratuit doar necomercial) la **MET Norway** (CC BY 4.0, uz comercial permis), printr-o funcție Netlify cu cache, portată din FOS. Atribuirea din footer se schimbă în consecință. Temperatura resimțită dispare (MET nu o oferă). |
+| 2026-10-22 | Freight World înlocuiește FOS în producție **la finalul Etapei 3**, nu acum. Codul FOS se șterge din proiect (`legacy/fos/`); rămâne recuperabil din istoria git, iar la lansare se pune eticheta `fos-final` pe `main`. |

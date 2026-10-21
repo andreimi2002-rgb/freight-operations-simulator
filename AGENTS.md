@@ -5,10 +5,11 @@ Freight World is an **ATS / ETS2 style job generator** on the real game map (cit
 
 First scope: American Truck Simulator, California and Nevada; full ATS cargo catalog. ETS2 comes later (shown as "soon").
 
-The previous product (FOS, real-world RO/HU/BG loads) lives on `main` and is published from there. On this branch its code is kept for reference only in `legacy/fos/` (not built, not published).
+The previous product (FOS, real-world RO/HU/BG loads) is still published from `main` until the launch at the end of stage 3; its code is no longer in this branch (recover it from git history, tag `fos-final` at launch).
 
 ## Stack
 - Astro (static output), Node 22.12+. `npm run build` writes `dist/`, which Netlify publishes. One HTML file per URL: every URL must work as a direct link.
+- Small Netlify Functions only where an external service requires it (`netlify/functions/`, e.g. `/api/weather/<city>`), with CDN caching and a rate limit.
 - Tests: `npm test` (`node --test`). Engine and data code are plain ES modules testable without Astro; the job generator stays a separate module, reusable later in the companion app.
 - No paid APIs, no paid services, no new dependency without the owner's approval. No API keys in client code or git.
 
@@ -19,7 +20,7 @@ The previous product (FOS, real-world RO/HU/BG loads) lives on `main` and is pub
 - Every data file has a `meta` field: source, licence, retrieval date, attribution.
 - Every source and licence is listed in `src/data/sources.json` and shown on `/about`. The attribution from `DEVELOPMENT_PLAN.md` section 2 appears in the footer of every page (checked by a test).
 - No logos, screenshots or other images from the games (they belong to SCS Software). No AI-generated images. City photos only from Wikimedia Commons, chosen by hand (`data/photos.json`, with the reason), with author, licence and link shown; otherwise an elegant placeholder, never a wrong photo.
-- Weather from Open-Meteo, requested from the browser with a short cache. Its free tier is non-commercial: check the terms before any monetisation.
+- Weather from MET Norway Locationforecast (CC BY 4.0, commercial use allowed) through `/api/weather/<city>`: User-Agent with contact, coordinates rounded to 4 decimals, cache honouring `Expires`. Every external service must allow commercial use (monetisation model in `DEVELOPMENT_PLAN.md`, section 1).
 - Countries, states and games are data, not code: no hard-coded lists in components or scripts.
 
 ## Interface
@@ -29,7 +30,7 @@ The previous product (FOS, real-world RO/HU/BG loads) lives on `main` and is pub
 - Desktop and phone: no horizontal page scroll down to 320 px (wide tables scroll inside their wrapper), real `<a>`/`<button>`, targets at least 44 px, body text contrast at least 4.5:1, keyboard and touch.
 
 ## Working mode
-- One branch per stage, PR into `v2-freight-world`, reviewed on a Netlify Deploy Preview. Never commit to `main` from this work; the FOS site there stays unchanged.
+- One branch per stage, PR into `v2-freight-world`, reviewed on a Netlify Deploy Preview. `main` (the FOS site) stays unchanged until the launch at the end of stage 3; after that, PRs go to `main`.
 - Nothing is merged without the owner's explicit approval.
 - Ask before important decisions (framework, data structure, deleting anything existing).
 - Update `CHANGELOG.md` and the version in `package.json` with every change; record plan-changing decisions in the decision log of `DEVELOPMENT_PLAN.md`.

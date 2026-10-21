@@ -2,11 +2,11 @@
 
 An ATS / ETS2 style job generator built on the real game map, with live city pages: real local time, real weather and a real city photo. Not a game and not a real freight exchange. Not affiliated with SCS Software.
 
-This is the `v2-freight-world` branch. The plan is in [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md) (Romanian) and the rules for contributors and tools in [AGENTS.md](AGENTS.md). The previous product, the Freight Operations Simulator (FOS), stays on `main`; its code is kept here for reference in [legacy/fos/](legacy/fos/).
+This is the `v2-freight-world` branch. The plan is in [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md) (Romanian) and the rules for contributors and tools in [AGENTS.md](AGENTS.md). The previous product, the Freight Operations Simulator (FOS), is still published from `main` until Freight World replaces it at the end of stage 3.
 
 ## Current version: 2.0.0-alpha.3 (stage 2: city pages)
 
-- A page for every city at `/ats/<state>/<city>` with the real photo, live local time, real weather (Open-Meteo), depots with what they offer and accept, facilities, roads, neighbouring cities and landmarks. City list at `/ats/`. US / metric units switch.
+- A page for every city at `/ats/<state>/<city>` with the real photo, live local time, real weather (MET Norway), depots with what they offer and accept, facilities, roads, neighbouring cities and landmarks. City list at `/ats/`. US / metric units switch.
 - City photos from Wikimedia Commons, one per city (`data/photos.json`); candidates with `npm run photos:candidates`.
 
 ### Stage 1
@@ -25,7 +25,7 @@ Requires Node 22.12 or newer.
 
 ```sh
 npm install
-npm run dev       # local site at http://localhost:4321
+npm run dev       # local site at http://localhost:4321 (the weather needs `netlify dev`)
 npm run build     # static site in dist/
 npm test          # node --test
 npm run collect:ats   # refresh data/ats/ from the wiki (cached)
@@ -49,9 +49,9 @@ scripts/photos/    photo candidates from Wikimedia Commons
 scripts/ats/       collector for data/ats/ (MediaWiki API, Wikidata)
 public/            fonts with licences, favicon
 tests/             node --test
-legacy/fos/        previous product, reference only (not built)
+netlify/           weather function (/api/weather/<city>, MET Norway)
 ```
 
 ## Data and licences
 
-Game data comes from Truck Simulator Wiki contributors (trucksimulator.wiki.gg), CC BY-SA 4.0. Weather by Open-Meteo. City coordinates from Wikidata (CC0). City photos from Wikimedia Commons (author and licence on each photo). Distances estimated from OpenStreetMap (ODbL). The full list is on `/about` and in `src/data/sources.json`.
+Game data comes from Truck Simulator Wiki contributors (trucksimulator.wiki.gg), CC BY-SA 4.0. Weather data from MET Norway (CC BY 4.0). City coordinates from Wikidata (CC0). City photos from Wikimedia Commons (author and licence on each photo). Distances estimated from OpenStreetMap (ODbL). The full list is on `/about` and in `src/data/sources.json`.

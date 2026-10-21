@@ -51,7 +51,7 @@ const coords = city.coordinates;
     </div>
 
     {coords
-      ? <div class="card wx" data-wx-lat={coords.lat} data-wx-lon={coords.lon} data-locale={meta.intlLocale} data-state="loading" aria-live="polite">
+      ? <div class="card wx" data-wx-city={city.id} data-locale={meta.intlLocale} data-state="loading" aria-live="polite">
           <p class="eyebrow">{t('city.weatherNow')}</p>
           <div class="wx-loading soft">{t('city.weatherLoading')}</div>
           <div class="wx-error">
@@ -64,12 +64,11 @@ const coords = city.coordinates;
               <span class="wx-temp mono" data-wx-temp></span>
               <span class="wx-text">
                 <span class="wx-label" data-wx-label></span>
-                <span class="muted small" data-wx-feels></span>
               </span>
             </div>
             <p class="wx-extra small soft"><span data-wx-wind></span> · <span data-wx-precip></span></p>
             <ul class="wx-days" data-wx-days aria-label={t('city.forecast')}></ul>
-            <p class="muted small"><span data-wx-updated></span> · <a href="https://open-meteo.com" rel="noopener">{t('city.weatherSource')}</a></p>
+            <p class="muted small"><span data-wx-updated></span> · <a href="https://api.met.no" rel="noopener">{t('city.weatherSource')}</a></p>
           </div>
         </div>
       : <div class="card wx"><p class="eyebrow">{t('city.weatherNow')}</p><p class="soft">{t('city.noCoordinates')}</p></div>}

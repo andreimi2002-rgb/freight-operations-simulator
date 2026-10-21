@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.0-alpha.4 — 2026-10-22 (weather from MET Norway, monetisation model)
+
+- **Weather** now comes from MET Norway Locationforecast (CC BY 4.0, commercial use allowed) instead of Open-Meteo (free for non-commercial use only), through a Netlify Function `/api/weather/<city>` ported from FOS: the city is looked up on the server, coordinates rounded to 4 decimals, User-Agent with contact, cached until MET's `Expires` and 20 minutes on the CDN, rate limited. The page shows now, wind, precipitation and today plus the next two days; "feels like" is gone (MET does not provide it). New sleet icon. Footer attribution and `/about` updated.
+- **DEVELOPMENT_PLAN.md:** the hybrid monetisation model (free data and maps, paid service), its architecture consequences and the conditions before any income; Freight World replaces FOS in production at the end of stage 3.
+- **FOS code removed** from this branch (`legacy/fos/`); it stays in git history.
+- 5 new tests for the weather function (63 in all), with a recorded MET Norway answer.
+
 ## 2.0.0-alpha.3 — 2026-10-21 (Freight World, stage 2: city pages)
 
 - **City pages** for all 34 cities, one static page each at `/ats/<state>/<city>` (e.g. `/ats/ca/sacramento`), built from `data/ats/`: hero with the real city photo, **live local time** (from the city's time zone) and **real weather** (Open-Meteo, requested by the browser, cached 15 minutes, refreshed while the page is open; now, feels-like, wind, precipitation and the next three days, with own weather icons); summary cards (state, map, depots, cargo offered and accepted, truck dealer); facilities and roads; neighbouring cities as links; every company and depot with what it offers and accepts (DLC cargo grouped by DLC, generic wiki names marked); landmarks; link to the wiki page.
