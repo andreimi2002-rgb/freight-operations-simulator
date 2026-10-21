@@ -149,3 +149,34 @@ export function featuredCity(ds, { date, hour }) {
   const withDepots = ds.cities.filter((c) => (indexDataset(ds).depotsByCity.get(c.id) ?? []).length);
   return pick(rand, withDepots).id;
 }
+
+/**
+ * One random job, reproducible from its seed (a 32-bit number; shown and shared as hex).
+ * `from` limits the start city (null = any city with jobs). Cargo without a known weight
+ * is left out. Returns null when nothing matches.
+ */
+export function randomJob(ds, { seed, from = null, baseOnly = false } = {}) {
+  const ix = indexDataset(ds);
+  const rand = rng(seed >>> 0);
+  const starts = from ? [from] : ds.cities.map((c) => c.id).filter((id) => (ix.depotsByCity.get(id) ?? []).length);
+  // Try a few start cities in seed order until one has a matching job.
+  const order = [...starts];
+  for (let i = order.length - 1; i > 0; i--) {
+    const k = Math.floor(rand() * (i + 1));
+    [order[i], order[k]] = [order[k], order[i]];
+  }
+  for (const city of order.slice(0, 8)) {
+    const jobs = possibleJobs(ds, { from: city, baseOnly }).filter((j) => ix.cargo.get(j.cargo).w);
+    if (!jobs.length) continue;
+    const j = pick(rand, jobs);
+    const cargo = ix.cargo.get(j.cargo);
+    const [wMin, wMax] = cargo.w;
+    const weightLb = Math.min(wMax, Math.max(wMin, Math.round((wMin + rand() * (wMax - wMin)) / 10) * 10));
+    return { seed: seed >>> 0, from: city, ...j, trailer: pick(rand, cargo.trailers), weightLb };
+  }
+  return null;
+}
+
+/** Seed ⇄ short code for the address ("a1b2c3d4"). */
+export const seedToCode = (seed) => (seed >>> 0).toString(16).padStart(8, '0');
+export const codeToSeed = (code) => (/^[0-9a-f]{1,8}$/i.test(String(code ?? '')) ? parseInt(code, 16) >>> 0 : null);

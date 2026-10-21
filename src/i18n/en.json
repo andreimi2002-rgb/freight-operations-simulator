@@ -49,7 +49,7 @@
     "title": "Freight World",
     "eyebrow": "American Truck Simulator · California and Nevada first",
     "lead": "A job generator in the style of ATS and ETS2, built on the real game map: cities, companies, depots, cargo and trailers that exist in the game, with live city pages.",
-    "status": "City pages, live departures boards and the route planner are ready for California and Nevada. Job sheets arrive in the next stage.",
+    "status": "City pages, live departures boards, the job generator and the route planner are ready for California and Nevada. Full job sheets arrive in the next stage.",
     "aboutCta": "Sources and licences",
     "pillarsTitle": "What Freight World will show",
     "pillars": {
@@ -326,5 +326,32 @@
     },
     "backToAll": "All destinations",
     "estimateNote": "Distances and drive times are estimates from real roads (© OpenStreetMap contributors, ODbL) at 55 mph. Jobs come from the depot lists on Truck Simulator Wiki."
+  },
+  "generator": {
+    "title": "Generate a job",
+    "lead": "One real job, picked at random: cargo a depot actually offers, to a depot in another city that accepts it.",
+    "leadCity": "One real job from {city}, picked at random.",
+    "from": "Leave from",
+    "anyCity": "Any city",
+    "baseOnly": "Career start: base game only",
+    "button": "Generate a job",
+    "again": "Generate another",
+    "loading": "Loading the job data…",
+    "error": "The job data could not be loaded.",
+    "none": "No job matches these choices.",
+    "code": "Job {code}",
+    "share": "Copy link",
+    "copied": "Link copied",
+    "cargo": "Cargo",
+    "pickup": "Pick up at",
+    "deliver": "Deliver to",
+    "trailer": "Trailer",
+    "weight": "Weight",
+    "distance": "Distance",
+    "drive": "Drive time (estimate)",
+    "needs": "Needs",
+    "nothingNeeded": "Base game only",
+    "openPlanner": "All jobs on this route",
+    "estimateNote": "Distance and drive time are estimates from real roads (© OpenStreetMap contributors, ODbL) at 55 mph. Pay is not shown: the game’s pay inputs are not public."
   }
 }

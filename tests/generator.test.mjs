@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { buildJobDataset, packJobDataset, unpackJobDataset } from '../src/engine/dataset.mjs';
-import { departures, possibleJobs, featuredCity, hash, rng, driveHours, indexDataset } from '../src/engine/generator.mjs';
+import { departures, possibleJobs, featuredCity, hash, rng, driveHours, indexDataset, randomJob, seedToCode, codeToSeed } from '../src/engine/generator.mjs';
 import { distance, weight, localDateHour, clockTime, kmToMi } from '../src/lib/ats.mjs';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
@@ -117,4 +117,26 @@ test('drive time at 55 mph; distance, weight and clock formatting', () => {
   const { date, hour } = localDateHour('America/Los_Angeles', new Date('2026-10-22T21:30:00Z'));
   assert.equal(date, '2026-10-22');
   assert.equal(hour, 14);
+});
+
+test('a generated job is reproducible from its seed, valid, and honours the start city and career filter', () => {
+  for (const seed of [1, 42, 123456789, 0xffffffff]) {
+    const a = randomJob(ds, { seed });
+    assert.deepEqual(a, randomJob(ds, { seed }), "same seed, same job");
+    assertValid(a, a.from);
+    assert.ok(a.weightLb != null && a.trailer);
+  }
+  const sac = randomJob(ds, { seed: 7, from: "sacramento" });
+  assert.equal(sac.from, "sacramento");
+  for (let s = 1; s <= 40; s++) assert.deepEqual(randomJob(ds, { seed: s, baseOnly: true }).dlcs, []);
+  const seeds = new Set(Array.from({ length: 20 }, (_, i) => JSON.stringify(randomJob(ds, { seed: i + 1 }))));
+  assert.ok(seeds.size > 15, "different seeds give different jobs");
+});
+
+test('job codes in the address round-trip and reject junk', () => {
+  assert.equal(seedToCode(255), "000000ff");
+  assert.equal(codeToSeed("000000ff"), 255);
+  assert.equal(codeToSeed(seedToCode(0xdeadbeef)), 0xdeadbeef);
+  assert.equal(codeToSeed("xyz"), null);
+  assert.equal(codeToSeed(null), null);
 });

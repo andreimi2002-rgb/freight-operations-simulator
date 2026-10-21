@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.0-alpha.6 — 2026-10-22 (Generate a job)
+
+- **Generate a job** button on the home page (from any city or a chosen one) and on every city page (from that city): one real job picked at random, with route, cargo and badges, pick-up and delivery depots, trailer, weight, distance, estimated drive time and the DLCs it needs. Option "Career start: base game only". Each job has a code in the address (`?job=…`), so the same job opens for anyone; "Copy link" copies it, "All jobs on this route" opens the planner.
+- `randomJob` in the generator, reproducible from its seed; 2 new tests (74 in all).
+
 ## 2.0.0-alpha.5 — 2026-10-22 (Freight World, stage 3: departures and route planner)
 
 - **Job generator** (`src/engine/`), pure and deterministic, reusable by the companion app: the same city, local date and local hour give the same jobs to everyone. Every job is possible in the game by construction: the source depot offers the cargo, a depot in another city accepts it, the trailer is one the cargo list allows, the weight is inside the cargo's range, and the DLCs needed (cargo pack or a "With … DLC" listing) are named. No pay is shown (the game's pay inputs are not public).
