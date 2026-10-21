@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "description": "Data sources and software listed on the /about page. Names and URLs are data; descriptions live in src/i18n under sources.<id>.",
+    "updated": "2026-10-21"
+  },
+  "sources": [
+    {
+      "id": "wiki",
+      "name": "Truck Simulator Wiki",
+      "url": "https://trucksimulator.wiki.gg",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "stage": 1
+    },
+    {
+      "id": "time",
+      "name": null,
+      "url": null,
+      "licenceUrl": null,
+      "stage": 2
+    },
+    {
+      "id": "openMeteo",
+      "name": "Open-Meteo",
+      "url": "https://open-meteo.com",
+      "licenceUrl": "https://open-meteo.com/en/terms",
+      "stage": 2
+    },
+    {
+      "id": "commons",
+      "name": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org",
+      "licenceUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+      "stage": 2
+    },
+    {
+      "id": "osm",
+      "name": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org",
+      "licenceUrl": "https://www.openstreetmap.org/copyright",
+      "stage": 3
+    }
+  ],
+  "software": [
+    {
+      "id": "inter",
+      "name": "Inter",
+      "url": "https://rsms.me/inter/",
+      "licenceUrl": "/fonts/LICENSE-Inter.txt",
+      "stage": 0
+    },
+    {
+      "id": "jetbrainsMono",
+      "name": "JetBrains Mono",
+      "url": "https://www.jetbrains.com/lp/mono/",
+      "licenceUrl": "/fonts/LICENSE-JetBrainsMono.txt",
+      "stage": 0
+    },
+    {
+      "id": "astro",
+      "name": "Astro",
+      "url": "https://astro.build",
+      "licenceUrl": "https://github.com/withastro/astro/blob/main/LICENSE",
+      "stage": 0
+    }
+  ]
+}

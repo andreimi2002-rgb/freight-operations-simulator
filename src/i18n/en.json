@@ -1,0 +1,151 @@
+{
+  "_meta": {
+    "lang": "en",
+    "intlLocale": "en-US",
+    "dir": "ltr"
+  },
+  "site": {
+    "name": "Freight World",
+    "tagline": "Truck jobs that could leave today, from real game cities.",
+    "description": "Freight World generates ATS and ETS2 style truck jobs on the real game map, with live city pages: local time, real weather and a real city photo."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "home": "Freight World, home page",
+    "externalLink": "(opens the source site)"
+  },
+  "nav": {
+    "label": "Main",
+    "home": "Home",
+    "about": "About & sources"
+  },
+  "game": {
+    "label": "Game",
+    "ats": "ATS",
+    "atsFull": "American Truck Simulator",
+    "ets2": "ETS2",
+    "ets2Full": "Euro Truck Simulator 2",
+    "soon": "soon",
+    "soonLong": "Euro Truck Simulator 2: coming later"
+  },
+  "stage": {
+    "label": "Stage {n}",
+    "current": "Stage 0 — Foundation",
+    "from": "From stage {n}"
+  },
+  "footer": {
+    "attributionTitle": "Attribution",
+    "gameData": "Game data from Truck Simulator Wiki contributors (trucksimulator.wiki.gg), CC BY-SA 4.0.",
+    "weatherPhotos": "Weather by Open-Meteo. City photos from Wikimedia Commons (author and license on each photo).",
+    "notAffiliated": "Not affiliated with SCS Software.",
+    "linksTitle": "Project",
+    "about": "About, sources and licences",
+    "sourceCode": "Source code on GitHub",
+    "version": "Version {version}"
+  },
+  "home": {
+    "title": "Freight World",
+    "eyebrow": "American Truck Simulator · California and Nevada first",
+    "lead": "A job generator in the style of ATS and ETS2, built on the real game map: cities, companies, depots, cargo and trailers that exist in the game, with live city pages.",
+    "status": "This is the foundation. City pages, the departures board and job sheets arrive in the next stages.",
+    "aboutCta": "Sources and licences",
+    "pillarsTitle": "What Freight World will show",
+    "pillars": {
+      "city": {
+        "title": "City page",
+        "text": "A living city: real photo, local time, real weather, companies, services and roads."
+      },
+      "board": {
+        "title": "Departures board",
+        "text": "Like an airport board, but for truck jobs. It changes every hour."
+      },
+      "job": {
+        "title": "Job sheet",
+        "text": "Cargo, weight, trailer, truck, route, required DLCs and weather, in detail."
+      }
+    },
+    "board": {
+      "title": "Departures",
+      "subtitle": "Board preview: no data yet",
+      "caption": "Departures board. Empty until the job generator arrives in stage 3.",
+      "cols": {
+        "time": "Time",
+        "cargo": "Cargo",
+        "from": "From",
+        "to": "Destination",
+        "distance": "Distance",
+        "trailer": "Trailer",
+        "status": "Status"
+      },
+      "empty": "No departures yet. The job generator arrives in stage 3."
+    }
+  },
+  "about": {
+    "title": "About Freight World",
+    "metaDescription": "What Freight World is, where its data comes from and under which licences.",
+    "lead": "Freight World generates truck jobs that could leave today from cities that exist in American Truck Simulator, and later Euro Truck Simulator 2. It is not a game and not a real freight exchange: nobody drives anything here.",
+    "rulesTitle": "How the data is handled",
+    "rules": {
+      "real": "Cities, companies, depots, cargo and trailers come only from the game, as documented on Truck Simulator Wiki. Nothing is invented.",
+      "unknown": "What is not known for certain is stored as empty or marked as an estimate, never guessed.",
+      "ids": "Internal game IDs are kept where the wiki gives them, so live game data can be linked later.",
+      "images": "No logos, screenshots or other images from the games. City photos come from Wikimedia Commons with author and licence."
+    },
+    "sourcesTitle": "Sources and licences",
+    "sourcesIntro": "The sources Freight World uses or will use. None of the game data is loaded yet: it arrives in stage 1.",
+    "sourcesCaption": "Data sources, their use and their licences.",
+    "cols": {
+      "source": "Source",
+      "use": "Used for",
+      "licence": "Licence / terms",
+      "stage": "In use"
+    },
+    "attributionTitle": "Attribution",
+    "attributionIntro": "This text appears in the footer of every page:",
+    "datasetTitle": "Licence of the Freight World dataset",
+    "datasetText": "The game data files Freight World publishes are derived from Truck Simulator Wiki and are shared under the same licence, CC BY-SA 4.0.",
+    "softwareTitle": "Fonts and software",
+    "gamesTitle": "The games",
+    "gamesText": "American Truck Simulator and Euro Truck Simulator 2 are games by SCS Software. Freight World is an independent fan project and is not affiliated with SCS Software."
+  },
+  "sources": {
+    "wiki": {
+      "use": "Cities, companies, depots, cargo and trailers from the game (MediaWiki API)",
+      "licence": "CC BY-SA 4.0: attribution required, share alike"
+    },
+    "time": {
+      "name": "Local time",
+      "use": "Clock on each city page, computed in the browser from the city's time zone",
+      "licence": "Computed, no external data"
+    },
+    "openMeteo": {
+      "use": "Real weather at each city (no API key)",
+      "licence": "Free for non-commercial use; terms to be checked before any commercial use"
+    },
+    "commons": {
+      "use": "Real city photos, chosen by hand once per city",
+      "licence": "Free licences per file (CC BY, CC BY-SA, public domain); author and licence shown on each photo"
+    },
+    "osm": {
+      "use": "Estimated distances between cities from real roads, converted to game scale",
+      "licence": "ODbL 1.0: © OpenStreetMap contributors"
+    },
+    "inter": {
+      "use": "Interface font",
+      "licence": "SIL Open Font License 1.1"
+    },
+    "jetbrainsMono": {
+      "use": "Times, codes and the departures board",
+      "licence": "SIL Open Font License 1.1"
+    },
+    "astro": {
+      "use": "Builds the static pages",
+      "licence": "MIT"
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "This page does not exist, or not yet: city pages arrive in stage 2.",
+    "back": "Back to the home page"
+  }
+}

@@ -1,0 +1,13 @@
+# Freight World (branch v2-freight-world). The FOS site on main keeps its own netlify.toml.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+  ASTRO_TELEMETRY_DISABLED = "1"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

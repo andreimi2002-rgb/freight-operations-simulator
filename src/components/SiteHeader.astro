@@ -1,0 +1,96 @@
+---
+import Logo from './Logo.astro';
+import GameSwitch from './GameSwitch.astro';
+import { getI18n } from '../i18n/index.mjs';
+
+const { t } = getI18n();
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const links = [
+  { href: '/', label: t('nav.home') },
+  { href: '/about', label: t('nav.about') },
+];
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label={t('a11y.home')}>
+      <Logo />
+      <span class="brand-name">{t('site.name')}</span>
+    </a>
+    <div class="header-tools">
+      <nav aria-label={t('nav.label')}>
+        <ul class="nav-list">
+          {links.map((link) => (
+            <li>
+              <a
+                class="nav-link"
+                href={link.href}
+                aria-current={path === link.href ? 'page' : undefined}
+              >{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <GameSwitch />
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background: var(--bg-header);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-4);
+    padding-top: var(--space-2);
+    padding-bottom: var(--space-2);
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-height: var(--target);
+    color: var(--text);
+    text-decoration: none;
+  }
+  .brand-name {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .header-tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2) var(--space-4);
+  }
+  .nav-list {
+    display: flex;
+    gap: var(--space-1);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target);
+    padding: 0 var(--space-3);
+    border-radius: var(--radius-sm);
+    color: var(--text-soft);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .nav-link:hover { color: var(--text); background: var(--panel); }
+  .nav-link[aria-current='page'] { color: var(--text); box-shadow: inset 0 -2px 0 var(--amber); border-radius: 0; }
+
+  @media (max-width: 559px) {
+    .header-tools { width: 100%; justify-content: space-between; }
+    .nav-link { padding: 0 var(--space-2); }
+  }
+</style>
