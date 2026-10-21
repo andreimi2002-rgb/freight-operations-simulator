@@ -9,7 +9,10 @@ const { t } = getI18n();
     <p class="eyebrow mono">404</p>
     <h1>{t('notFound.title')}</h1>
     <p class="soft">{t('notFound.text')}</p>
-    <a class="button button-primary" href="/">{t('notFound.back')}</a>
+    <div class="actions">
+      <a class="button button-primary" href="/ats">{t('notFound.cities')}</a>
+      <a class="button button-ghost" href="/">{t('notFound.back')}</a>
+    </div>
   </div>
 </BaseLayout>
 
@@ -21,4 +24,5 @@ const { t } = getI18n();
     padding-top: var(--space-8);
   }
   h1 { font-size: 36px; }
+  .actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
 </style>

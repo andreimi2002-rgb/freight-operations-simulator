@@ -1,0 +1,2024 @@
+{
+  "meta": {
+    "description": "Photo candidates for the city pages, for the owner to choose from. Not shown on the site; the chosen photo goes to data/photos.json.",
+    "source": "Wikimedia Commons (files), Wikidata (P18, P948, P373), English Wikipedia (lead image)",
+    "rules": "free licence with author (or public domain), photo not map/flag/collage, at least 1200 px wide",
+    "retrieved": "2026-10-21",
+    "generator": "scripts/photos/candidates.mjs"
+  },
+  "cities": {
+    "bakersfield": {
+      "name": "Bakersfield",
+      "state": "CA",
+      "wikidata": "Q49256",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Bakersfield_banner.jpg/1920px-Bakersfield_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Bakersfield_banner.jpg",
+          "file": "Bakersfield banner.jpg",
+          "author": "Bobak Ha'Eri , cropped by Jjtkk",
+          "licence": "CC BY 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/BakersfieldSkyline.jpg/1920px-BakersfieldSkyline.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:BakersfieldSkyline.jpg",
+          "file": "BakersfieldSkyline.jpg",
+          "author": "Robert Hale",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1061,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/2009-0726-CA-Bakersfield-FoxTheater_%28cropped%29.jpg/1920px-2009-0726-CA-Bakersfield-FoxTheater_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2009-0726-CA-Bakersfield-FoxTheater_(cropped).jpg",
+          "file": "2009-0726-CA-Bakersfield-FoxTheater (cropped).jpg",
+          "author": "Bobak Ha'Eri",
+          "licence": "CC BY 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1212,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/1/10/DoloresHuertaReneeGoodProtestBakersfieldCalifornia.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:DoloresHuertaReneeGoodProtestBakersfieldCalifornia.jpg",
+          "file": "DoloresHuertaReneeGoodProtestBakersfieldCalifornia.jpg",
+          "author": "EazyDee107",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Commons category \"Bakersfield, California\"",
+          "width": 1600,
+          "height": 1198,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": []
+    },
+    "barstow": {
+      "name": "Barstow",
+      "state": "CA",
+      "wikidata": "Q499174",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Barstow_Banner.jpg/1920px-Barstow_Banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Barstow_Banner.jpg",
+          "file": "Barstow Banner.jpg",
+          "author": "jpmueller99 from Columbus, OH, USA",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/f/f1/City_View_of_Barstow%2C_California_from_Barstow_Road_%282013-12-08%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:City_View_of_Barstow,_California_from_Barstow_Road_(2013-12-08).jpg",
+          "file": "City View of Barstow, California from Barstow Road (2013-12-08).jpg",
+          "author": "Amin Eshaiker",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1199,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Desert_landscape_in_Barstow%2C_California%2C_2009.jpg/1920px-Desert_landscape_in_Barstow%2C_California%2C_2009.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Desert_landscape_in_Barstow,_California,_2009.jpg",
+          "file": "Desert landscape in Barstow, California, 2009.jpg",
+          "author": "Janusz Sobolewski from Mississauga, Ontario, Canada",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Commons category \"Barstow, California\"",
+          "width": 1600,
+          "height": 569,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Barstow1.jpg/1920px-Barstow1.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Barstow1.jpg",
+          "file": "Barstow1.jpg",
+          "author": "Fancy Fox Jr",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Commons category \"Barstow, California\"",
+          "width": 1600,
+          "height": 2125,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Barstow California 1947.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "blythe": {
+      "name": "Blythe",
+      "state": "CA",
+      "wikidata": "Q886915",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Blythe_Banner.jpg/1920px-Blythe_Banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Blythe_Banner.jpg",
+          "file": "Blythe Banner.jpg",
+          "author": "Incaxyts",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Aqueduct_and_Colorado_River_-_panoramio.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Aqueduct_and_Colorado_River_-_panoramio.jpg",
+          "file": "Aqueduct and Colorado River - panoramio.jpg",
+          "author": "Mountain Mike Johans…",
+          "licence": "CC BY 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+          "from": "Commons category \"Blythe, California\"",
+          "width": 1600,
+          "height": 1078,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Arizona_and_California_State_Line%2C_the_Colorado_River%2C_2012_-_panoramio.jpg/1920px-Arizona_and_California_State_Line%2C_the_Colorado_River%2C_2012_-_panoramio.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Arizona_and_California_State_Line,_the_Colorado_River,_2012_-_panoramio.jpg",
+          "file": "Arizona and California State Line, the Colorado River, 2012 - panoramio.jpg",
+          "author": "Chris English",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Blythe, California\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/a/a4/AT_%26_Sta_Fe_California_Southern_Railroad_-_Ripley_Branch.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:AT_%26_Sta_Fe_California_Southern_Railroad_-_Ripley_Branch.jpg",
+          "file": "AT & Sta Fe California Southern Railroad - Ripley Branch.jpg",
+          "author": "Missouri Pacific Lines",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Blythe, California\"",
+          "width": 1600,
+          "height": 1356,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "BlytheCA.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Aerial Blythe 0001.JPG",
+          "reason": "too small"
+        }
+      ]
+    },
+    "carson-city": {
+      "name": "Carson City",
+      "state": "NV",
+      "wikidata": "Q40881",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Banner_carson_city.jpeg/1920px-Banner_carson_city.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Banner_carson_city.jpeg",
+          "file": "Banner carson city.jpeg",
+          "author": "Bill Ward",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Nevada_State_Museum.jpg/1920px-Nevada_State_Museum.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Nevada_State_Museum.jpg",
+          "file": "Nevada State Museum.jpg",
+          "author": "Scott Schrantz",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Skyline_of_Carson_City%2C_NV.jpg/1920px-Skyline_of_Carson_City%2C_NV.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Skyline_of_Carson_City,_NV.jpg",
+          "file": "Skyline of Carson City, NV.jpg",
+          "author": "Quintin Soloviev",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1120,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Carson_City_BLM_Hosts_Outdoor_Education_Event_%2820060860414%29.jpg/1920px-Carson_City_BLM_Hosts_Outdoor_Education_Event_%2820060860414%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Carson_City_BLM_Hosts_Outdoor_Education_Event_(20060860414).jpg",
+          "file": "Carson City BLM Hosts Outdoor Education Event (20060860414).jpg",
+          "author": "mypubliclands",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Carson City, Nevada\"",
+          "width": 1600,
+          "height": 1150,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": []
+    },
+    "el-centro": {
+      "name": "El Centro",
+      "state": "CA",
+      "wikidata": "Q495369",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/El_Centro_banner.jpg/1920px-El_Centro_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:El_Centro_banner.jpg",
+          "file": "El Centro banner.jpg",
+          "author": "Mass Communication Specialist 2nd Class Lewis S. Hunsaker",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/130115-N-DI587-134_%2820325482708%29.jpg/1920px-130115-N-DI587-134_%2820325482708%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:130115-N-DI587-134_(20325482708).jpg",
+          "file": "130115-N-DI587-134 (20325482708).jpg",
+          "author": "National Museum of the U.S. Navy",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"El Centro, California\"",
+          "width": 1600,
+          "height": 1065,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/6/66/20210515180516_IMG_2448_Canal_Imperial_Valley.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:20210515180516_IMG_2448_Canal_Imperial_Valley.jpg",
+          "file": "20210515180516 IMG 2448 Canal Imperial Valley.jpg",
+          "author": "JacobSA2019",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"El Centro, California\"",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/0/09/20220224075821_IMG_3800_Mount_Signal.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:20220224075821_IMG_3800_Mount_Signal.jpg",
+          "file": "20220224075821 IMG 3800 Mount Signal.jpg",
+          "author": "JacobSA2019",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"El Centro, California\"",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Imperial County Superior Courthouse El Centro Night.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "5072c Curatorial Image.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Calexico&MexicaliFromTheISS.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "elko": {
+      "name": "Elko",
+      "state": "NV",
+      "wikidata": "Q945084",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Elko_banner.jpg/1920px-Elko_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Elko_banner.jpg",
+          "file": "Elko banner.jpg",
+          "author": "Yarkob (original); Thatotherperson (this version)",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/2012-09-30_14_28_33_View_of_downtown_Elko_in_Nevada_from_a_bluff_to_the_south.jpg/1920px-2012-09-30_14_28_33_View_of_downtown_Elko_in_Nevada_from_a_bluff_to_the_south.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2012-09-30_14_28_33_View_of_downtown_Elko_in_Nevada_from_a_bluff_to_the_south.jpg",
+          "file": "2012-09-30 14 28 33 View of downtown Elko in Nevada from a bluff to the south.jpg",
+          "author": "Famartin",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1179,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/f/fe/024_Nevada%2C_I80_Exit_298%2C_Elko_-_Centre_Motel_%284679253272%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:024_Nevada,_I80_Exit_298,_Elko_-_Centre_Motel_(4679253272).jpg",
+          "file": "024 Nevada, I80 Exit 298, Elko - Centre Motel (4679253272).jpg",
+          "author": "Colin Grayson from United Kingdom",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Commons category \"Elko, Nevada\"",
+          "width": 1600,
+          "height": 1280,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/04_15_09_138x_-_Flickr_-_drewj1946.jpg/1920px-04_15_09_138x_-_Flickr_-_drewj1946.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:04_15_09_138x_-_Flickr_-_drewj1946.jpg",
+          "file": "04 15 09 138x - Flickr - drewj1946.jpg",
+          "author": "Drew Jacksich from San Jose, CA, The Republic of California",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Commons category \"Elko, Nevada\"",
+          "width": 1600,
+          "height": 1071,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": []
+    },
+    "ely": {
+      "name": "Ely",
+      "state": "NV",
+      "wikidata": "Q844042",
+      "candidates": [
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Ely_Nevada_banner_Freight_and_Express.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Ely_Nevada_banner_Freight_and_Express.jpg",
+          "file": "Ely Nevada banner Freight and Express.jpg",
+          "author": "Hermann Luyken (original); Thatotherperson (this version)",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/2012-10-08_View_of_downtown_Ely_in_Nevada_from_the_lower_slopes_of_Ward_Mountain.jpg/1920px-2012-10-08_View_of_downtown_Ely_in_Nevada_from_the_lower_slopes_of_Ward_Mountain.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2012-10-08_View_of_downtown_Ely_in_Nevada_from_the_lower_slopes_of_Ward_Mountain.jpg",
+          "file": "2012-10-08 View of downtown Ely in Nevada from the lower slopes of Ward Mountain.jpg",
+          "author": "Famartin",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/1950_Census_Enumeration_District_Maps_-_Nevada_%28NV%29_-_White_Pine_County_-_White_Pine_County_-_ED_17-1_to_27_-_NARA_-_24066659_%28page_1%29.jpg/1920px-1950_Census_Enumeration_District_Maps_-_Nevada_%28NV%29_-_White_Pine_County_-_White_Pine_County_-_ED_17-1_to_27_-_NARA_-_24066659_%28page_1%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:1950_Census_Enumeration_District_Maps_-_Nevada_(NV)_-_White_Pine_County_-_White_Pine_County_-_ED_17-1_to_27_-_NARA_-_24066659_(page_1).jpg",
+          "file": "1950 Census Enumeration District Maps - Nevada (NV) - White Pine County - White Pine County - ED 17-1 to 27 - NARA - 24066659 (page 1).jpg",
+          "author": "Unknown author Unknown author or not provided",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Ely, Nevada\"",
+          "width": 1600,
+          "height": 1542,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/1950_Census_Enumeration_District_Maps_-_Nevada_%28NV%29_-_White_Pine_County_-_White_Pine_County_-_ED_17-1_to_27_-_NARA_-_24066659_%28page_4%29.jpg/1920px-1950_Census_Enumeration_District_Maps_-_Nevada_%28NV%29_-_White_Pine_County_-_White_Pine_County_-_ED_17-1_to_27_-_NARA_-_24066659_%28page_4%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:1950_Census_Enumeration_District_Maps_-_Nevada_(NV)_-_White_Pine_County_-_White_Pine_County_-_ED_17-1_to_27_-_NARA_-_24066659_(page_4).jpg",
+          "file": "1950 Census Enumeration District Maps - Nevada (NV) - White Pine County - White Pine County - ED 17-1 to 27 - NARA - 24066659 (page 4).jpg",
+          "author": "Unknown author Unknown author or not provided",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Ely, Nevada\"",
+          "width": 1600,
+          "height": 1557,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": []
+    },
+    "eureka": {
+      "name": "Eureka",
+      "state": "CA",
+      "wikidata": "Q488702",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Eureka_banner_Carter_House_Inn.jpg/1920px-Eureka_banner_Carter_House_Inn.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Eureka_banner_Carter_House_Inn.jpg",
+          "file": "Eureka banner Carter House Inn.jpg",
+          "author": "Joe Mabel",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Humboldt_Bay_and_Eureka_aerial_view.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Humboldt_Bay_and_Eureka_aerial_view.jpg",
+          "file": "Humboldt Bay and Eureka aerial view.jpg",
+          "author": "Robert Campbell",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1068,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Crab_Pots_Eureka_CA.jpg/1920px-Crab_Pots_Eureka_CA.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Crab_Pots_Eureka_CA.jpg",
+          "file": "Crab Pots Eureka CA.jpg",
+          "author": "Ellin Beltz",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Eureka, California\"",
+          "width": 1600,
+          "height": 1104,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Cut_-Over_Areas_%28Repeat_Series%29_-_California_-_DPLA_-_6acde2f5e9a4b7bc585b58df7291f784.jpg/1920px-Cut_-Over_Areas_%28Repeat_Series%29_-_California_-_DPLA_-_6acde2f5e9a4b7bc585b58df7291f784.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Cut_-Over_Areas_(Repeat_Series)_-_California_-_DPLA_-_6acde2f5e9a4b7bc585b58df7291f784.jpg",
+          "file": "Cut -Over Areas (Repeat Series) - California - DPLA - 6acde2f5e9a4b7bc585b58df7291f784.jpg",
+          "author": "Department of Agriculture. Forest Service. 7/1/1905",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Eureka, California\"",
+          "width": 1600,
+          "height": 1247,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "2005 Eureka Earthquake ShakeMap.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "fresno": {
+      "name": "Fresno",
+      "state": "CA",
+      "wikidata": "Q43301",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Fresno_banner.jpg/1920px-Fresno_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Fresno_banner.jpg",
+          "file": "Fresno banner.jpg",
+          "author": "David Jordan , cropped by Jjtkk",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/4/4a/20250825-USDA-NRCS-DD-1_%2854763229950%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:20250825-USDA-NRCS-DD-1_(54763229950).jpg",
+          "file": "20250825-USDA-NRCS-DD-1 (54763229950).jpg",
+          "author": "USDAgov",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Fresno, California\"",
+          "width": 1600,
+          "height": 1280,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Fresno_California.jpg/1920px-Fresno_California.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Fresno_California.jpg",
+          "file": "Fresno California.jpg",
+          "author": "DoulosBen",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Commons category \"Fresno, California\"",
+          "width": 1600,
+          "height": 900,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/20250825-USDA-NRCS-DD-2_%2854762887651%29.jpg/1920px-20250825-USDA-NRCS-DD-2_%2854762887651%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:20250825-USDA-NRCS-DD-2_(54762887651).jpg",
+          "file": "20250825-USDA-NRCS-DD-2 (54762887651).jpg",
+          "author": "USDAgov",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Fresno, California\"",
+          "width": 1600,
+          "height": 1655,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Downtown Fresno Night.png",
+          "reason": "too small"
+        },
+        {
+          "file": "Fresno Skyline (2).jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Fresno City Councilmember Nelson Esparza Portrait (cropped).jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "FresnoLandfillEPA.png",
+          "reason": "too small"
+        }
+      ]
+    },
+    "hilt": {
+      "name": "Hilt",
+      "state": "CA",
+      "wikidata": "Q65043813",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Roger_Puta_captured_a_runby_at_Hilt%2C_CA_in_July_1982_at_Semaphore_4020._Tunnel_Motor_SD45T-2_9184_led_with_more_Tunnel_Motors_up_front_and_mid-train_--_4_Photos_%2833081931472%29.jpg/1920px-thumbnail.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Roger_Puta_captured_a_runby_at_Hilt,_CA_in_July_1982_at_Semaphore_4020._Tunnel_Motor_SD45T-2_9184_led_with_more_Tunnel_Motors_up_front_and_mid-train_--_4_Photos_(33081931472).jpg",
+          "file": "Roger Puta captured a runby at Hilt, CA in July 1982 at Semaphore 4020. Tunnel Motor SD45T-2 9184 led with more Tunnel Motors up front and mid-train -- 4 Photos (33081931472).jpg",
+          "author": "Marty Bernard from U.S.A.",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Hilt, California\"",
+          "width": 1600,
+          "height": 1294,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Roger_Puta_captured_a_runby_at_Hilt%2C_CA_in_July_1982_at_Semaphore_4020._Tunnel_Motor_SD45T-2_9184_led_with_more_Tunnel_Motors_up_front_and_mid-train_--_4_Photos_%2833081931672%29.jpg/1920px-thumbnail.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Roger_Puta_captured_a_runby_at_Hilt,_CA_in_July_1982_at_Semaphore_4020._Tunnel_Motor_SD45T-2_9184_led_with_more_Tunnel_Motors_up_front_and_mid-train_--_4_Photos_(33081931672).jpg",
+          "file": "Roger Puta captured a runby at Hilt, CA in July 1982 at Semaphore 4020. Tunnel Motor SD45T-2 9184 led with more Tunnel Motors up front and mid-train -- 4 Photos (33081931672).jpg",
+          "author": "Marty Bernard from U.S.A.",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Hilt, California\"",
+          "width": 1600,
+          "height": 1122,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Roger_Puta_captured_a_runby_at_Hilt%2C_CA_in_July_1982_at_Semaphore_4020._Tunnel_Motor_SD45T-2_9184_led_with_more_Tunnel_Motors_up_front_and_mid-train_--_4_Photos_%2833196784596%29.jpg/1920px-thumbnail.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Roger_Puta_captured_a_runby_at_Hilt,_CA_in_July_1982_at_Semaphore_4020._Tunnel_Motor_SD45T-2_9184_led_with_more_Tunnel_Motors_up_front_and_mid-train_--_4_Photos_(33196784596).jpg",
+          "file": "Roger Puta captured a runby at Hilt, CA in July 1982 at Semaphore 4020. Tunnel Motor SD45T-2 9184 led with more Tunnel Motors up front and mid-train -- 4 Photos (33196784596).jpg",
+          "author": "Marty Bernard from U.S.A.",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Hilt, California\"",
+          "width": 1600,
+          "height": 1095,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Roger_Puta_captured_a_runby_at_Hilt%2C_CA_in_July_1982_at_Semaphore_4020._Tunnel_Motor_SD45T-2_9184_led_with_more_Tunnel_Motors_up_front_and_mid-train_--_4_Photos_%2833196785036%29.jpg/1920px-thumbnail.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Roger_Puta_captured_a_runby_at_Hilt,_CA_in_July_1982_at_Semaphore_4020._Tunnel_Motor_SD45T-2_9184_led_with_more_Tunnel_Motors_up_front_and_mid-train_--_4_Photos_(33196785036).jpg",
+          "file": "Roger Puta captured a runby at Hilt, CA in July 1982 at Semaphore 4020. Tunnel Motor SD45T-2 9184 led with more Tunnel Motors up front and mid-train -- 4 Photos (33196785036).jpg",
+          "author": "Marty Bernard from U.S.A.",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Hilt, California\"",
+          "width": 1600,
+          "height": 1294,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Juniperus occidentalis 8482.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "huron": {
+      "name": "Huron",
+      "state": "CA",
+      "wikidata": "Q2649652",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Huron_Middle_School_CA.JPG/1920px-Huron_Middle_School_CA.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:Huron_Middle_School_CA.JPG",
+          "file": "Huron Middle School CA.JPG",
+          "author": "David Jordan at English Wikipedia",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 845,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/2/22/Huron_Police_Department.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Huron_Police_Department.jpg",
+          "file": "Huron Police Department.jpg",
+          "author": "Huron Police Department",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Huron, California\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/6/67/CVPSouthernCanalsUSBR.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:CVPSouthernCanalsUSBR.jpg",
+          "file": "CVPSouthernCanalsUSBR.jpg",
+          "author": "U.S. Bureau of Reclamation",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Huron, California\"",
+          "width": 1600,
+          "height": 2071,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Olde Huron Hotel 2001.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Central Hotel Rear View.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Huron Central Hotel Circa 1898.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "indio": {
+      "name": "Indio",
+      "state": "CA",
+      "wikidata": "Q838789",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Indio_banner.jpg/1920px-Indio_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Indio_banner.jpg",
+          "file": "Indio banner.jpg",
+          "author": "Original: Harrison Stahl, cropped by phoebe",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/College_of_the_Desert.jpg/1920px-College_of_the_Desert.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:College_of_the_Desert.jpg",
+          "file": "College of the Desert.jpg",
+          "author": "Visitor7",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/California_National_Guard_%2849925602313%29.jpg/1920px-California_National_Guard_%2849925602313%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:California_National_Guard_(49925602313).jpg",
+          "file": "California National Guard (49925602313).jpg",
+          "author": "The National Guard Tech. Sgt. Julianne Showalter/California National Guard",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Indio, California\"",
+          "width": 1600,
+          "height": 1068,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Highway_395%2C_Indio%2C_United_States_%28Unsplash%29.jpg/1920px-Highway_395%2C_Indio%2C_United_States_%28Unsplash%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Highway_395,_Indio,_United_States_(Unsplash).jpg",
+          "file": "Highway 395, Indio, United States (Unsplash).jpg",
+          "author": "Robson Hatsukami Morgan robsonhmorgan",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Commons category \"Indio, California\"",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Coachella 2013 Do Lab and Helix Poeticus.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "jackpot": {
+      "name": "Jackpot",
+      "state": "NV",
+      "wikidata": "Q2917481",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Jackpot_banner.jpg/1920px-Jackpot_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Jackpot_banner.jpg",
+          "file": "Jackpot banner.jpg",
+          "author": "Famartin (original); Thatotherperson (this version)",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/2013-07-04_17_32_49_View_of_Jackpot_in_Nevada_from_a_hill_to_the_west.jpg/1920px-2013-07-04_17_32_49_View_of_Jackpot_in_Nevada_from_a_hill_to_the_west.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2013-07-04_17_32_49_View_of_Jackpot_in_Nevada_from_a_hill_to_the_west.jpg",
+          "file": "2013-07-04 17 32 49 View of Jackpot in Nevada from a hill to the west.jpg",
+          "author": "Famartin",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 806,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/2014-06-22_09_52_41_View_north_along_U.S._Route_93_entering_Jackpot%2C_Nevada.JPG/1920px-2014-06-22_09_52_41_View_north_along_U.S._Route_93_entering_Jackpot%2C_Nevada.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:2014-06-22_09_52_41_View_north_along_U.S._Route_93_entering_Jackpot,_Nevada.JPG",
+          "file": "2014-06-22 09 52 41 View north along U.S. Route 93 entering Jackpot, Nevada.JPG",
+          "author": "Famartin",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Jackpot, Nevada\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/2014-06-22_09_56_59_View_north_along_U.S._Route_93_entering_Idaho_from_Jackpot%2C_Nevada.JPG/1920px-2014-06-22_09_56_59_View_north_along_U.S._Route_93_entering_Idaho_from_Jackpot%2C_Nevada.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:2014-06-22_09_56_59_View_north_along_U.S._Route_93_entering_Idaho_from_Jackpot,_Nevada.JPG",
+          "file": "2014-06-22 09 56 59 View north along U.S. Route 93 entering Idaho from Jackpot, Nevada.JPG",
+          "author": "Famartin",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Jackpot, Nevada\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": []
+    },
+    "las-vegas": {
+      "name": "Las Vegas",
+      "state": "NV",
+      "wikidata": "Q23768",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Vegas_banner.jpg/1920px-Vegas_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Vegas_banner.jpg",
+          "file": "Vegas banner.jpg",
+          "author": "Vegas_slots.JPG : Pcb21 derivative work: Jjtkk",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Downtown_Las_Vegas_from_Stratosphere_3.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Downtown_Las_Vegas_from_Stratosphere_3.jpg",
+          "file": "Downtown Las Vegas from Stratosphere 3.jpg",
+          "author": "Ken Lund from Las Vegas, Nevada, USA",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Center_Strip_Before_Sunrise.jpg/1920px-Center_Strip_Before_Sunrise.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Center_Strip_Before_Sunrise.jpg",
+          "file": "Center Strip Before Sunrise.jpg",
+          "author": "Eric Kilby",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/2010-365-259_Toy_City_%284997823380%29.jpg/1920px-2010-365-259_Toy_City_%284997823380%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2010-365-259_Toy_City_(4997823380).jpg",
+          "file": "2010-365-259 Toy City (4997823380).jpg",
+          "author": "cogdogblog",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Commons category \"Las Vegas\"",
+          "width": 1600,
+          "height": 1198,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "2025 Las Vegas gym shooting.png",
+          "reason": "too small"
+        }
+      ]
+    },
+    "los-angeles": {
+      "name": "Los Angeles",
+      "state": "CA",
+      "wikidata": "Q65",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Losangeles_skyline_banner.jpg/1920px-Losangeles_skyline_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Losangeles_skyline_banner.jpg",
+          "file": "Losangeles skyline banner.jpg",
+          "author": "Matthew Field",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Los_Angeles_with_Mount_Baldy.jpg/1920px-Los_Angeles_with_Mount_Baldy.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Los_Angeles_with_Mount_Baldy.jpg",
+          "file": "Los Angeles with Mount Baldy.jpg",
+          "author": "Alek Leckszas",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 750,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Hollywood_sign_%288485145044%29.jpg/1920px-Hollywood_sign_%288485145044%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Hollywood_sign_(8485145044).jpg",
+          "file": "Hollywood sign (8485145044).jpg",
+          "author": "Gnaphron",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/19_01_11_LA_Coliseum_David_w_Yellow_Line_-2.jpg/1920px-19_01_11_LA_Coliseum_David_w_Yellow_Line_-2.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:19_01_11_LA_Coliseum_David_w_Yellow_Line_-2.jpg",
+          "file": "19 01 11 LA Coliseum David w Yellow Line -2.jpg",
+          "author": "Tracyjohnj",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Los Angeles\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "A Winter Day in Los Angeles In Explore 2-20-26 - Flickr - Joey Z1.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Ahab Hunting the White Whale in Downtown Los Angeles.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Andrew de Burgh at the 2017 Polish Film Festival Los Angeles.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Andy Capper 2021.png",
+          "reason": "too small"
+        }
+      ]
+    },
+    "modesto": {
+      "name": "Modesto",
+      "state": "CA",
+      "wikidata": "Q204561",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Modesto_Banner.JPG/1920px-Modesto_Banner.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:Modesto_Banner.JPG",
+          "file": "Modesto Banner.JPG",
+          "author": "Imokurnotok",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 228,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Modesto_California_photo_Don_Ramey_Logan.jpg/1920px-Modesto_California_photo_Don_Ramey_Logan.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Modesto_California_photo_Don_Ramey_Logan.jpg",
+          "file": "Modesto California photo Don Ramey Logan.jpg",
+          "author": "Don Ramey Logan",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 895,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Gallo_Center_for_the_Arts_Modesto_%28cropped%29.JPG/1920px-Gallo_Center_for_the_Arts_Modesto_%28cropped%29.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:Gallo_Center_for_the_Arts_Modesto_(cropped).JPG",
+          "file": "Gallo Center for the Arts Modesto (cropped).JPG",
+          "author": "OsotedeMonte",
+          "licence": "CC BY 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": []
+    },
+    "mojave": {
+      "name": "Mojave",
+      "state": "CA",
+      "wikidata": "Q1943133",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Mojave_Space_Ship_2.jpg/1920px-Mojave_Space_Ship_2.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Mojave_Space_Ship_2.jpg",
+          "file": "Mojave Space Ship 2.jpg",
+          "author": "Jeff Foust",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/LADWP_Mojave_District_Headquarters_2016-12-10.jpg/1920px-LADWP_Mojave_District_Headquarters_2016-12-10.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:LADWP_Mojave_District_Headquarters_2016-12-10.jpg",
+          "file": "LADWP Mojave District Headquarters 2016-12-10.jpg",
+          "author": "Junkyardsparkle",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1066,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Arid_Mojave_-_panoramio.jpg/1920px-Arid_Mojave_-_panoramio.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Arid_Mojave_-_panoramio.jpg",
+          "file": "Arid Mojave - panoramio.jpg",
+          "author": "Annette Teng",
+          "licence": "CC BY 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+          "from": "Commons category \"Mojave, California\"",
+          "width": 1600,
+          "height": 352,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/CalPortland_Mojave_Cement_Plant-2.jpg/1920px-CalPortland_Mojave_Cement_Plant-2.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:CalPortland_Mojave_Cement_Plant-2.jpg",
+          "file": "CalPortland Mojave Cement Plant-2.jpg",
+          "author": "Tedder",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Mojave, California\"",
+          "width": 1600,
+          "height": 1205,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "CAMap-doton-Mojave.PNG",
+          "reason": "too small"
+        }
+      ]
+    },
+    "oakland": {
+      "name": "Oakland",
+      "state": "CA",
+      "wikidata": "Q17042",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Oakland_Fox_Theatre_banner.jpg/1920px-Oakland_Fox_Theatre_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Oakland_Fox_Theatre_banner.jpg",
+          "file": "Oakland Fox Theatre banner.jpg",
+          "author": "Oakland_Fox_Theatre.jpg : Simon Carrasco derivative work: Eco84",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/OAKLAND%2C_CA%2C_USA_-_Skyline_and_Bridge.JPG/1920px-OAKLAND%2C_CA%2C_USA_-_Skyline_and_Bridge.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:OAKLAND,_CA,_USA_-_Skyline_and_Bridge.JPG",
+          "file": "OAKLAND, CA, USA - Skyline and Bridge.JPG",
+          "author": "Basil D Soufi",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Lake_Merritt_2022-06-16.png/1920px-Lake_Merritt_2022-06-16.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Lake_Merritt_2022-06-16.png",
+          "file": "Lake Merritt 2022-06-16.png",
+          "author": "Robert Hsiao",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1066,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/20140223-OC-LSC-0115_%2814822531181%29.jpg/1920px-20140223-OC-LSC-0115_%2814822531181%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:20140223-OC-LSC-0115_(14822531181).jpg",
+          "file": "20140223-OC-LSC-0115 (14822531181).jpg",
+          "author": "USDAgov",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Oakland, California\"",
+          "width": 1600,
+          "height": 1065,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": []
+    },
+    "oxnard": {
+      "name": "Oxnard",
+      "state": "CA",
+      "wikidata": "Q209338",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Oxnard_Banner.png/1920px-Oxnard_Banner.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Oxnard_Banner.png",
+          "file": "Oxnard Banner.png",
+          "author": "Rennett Stowe from USA",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Carneige_Art_Museum%2C_Oxnard.jpg/1920px-Carneige_Art_Museum%2C_Oxnard.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Carneige_Art_Museum,_Oxnard.jpg",
+          "file": "Carneige Art Museum, Oxnard.jpg",
+          "author": "Los Angeles",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1073,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Beet_sheds%2C_Oxnard%2C_%28California%29%2C_factory_LCCN2016852580.jpg/1920px-Beet_sheds%2C_Oxnard%2C_%28California%29%2C_factory_LCCN2016852580.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Beet_sheds,_Oxnard,_(California),_factory_LCCN2016852580.jpg",
+          "file": "Beet sheds, Oxnard, (California), factory LCCN2016852580.jpg",
+          "author": "National Photo Company Collection",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Oxnard, California\"",
+          "width": 1600,
+          "height": 1222,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Downtown_Oxnard_Fountain_-_panoramio.jpg/1920px-Downtown_Oxnard_Fountain_-_panoramio.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Downtown_Oxnard_Fountain_-_panoramio.jpg",
+          "file": "Downtown Oxnard Fountain - panoramio.jpg",
+          "author": "Clotee Pridgen Alloc…",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Oxnard, California\"",
+          "width": 1600,
+          "height": 1180,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Embassy Suites Lobby Front, Oxnard, CA,USA May 2009 - panoramio (cropped).jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "pioche": {
+      "name": "Pioche",
+      "state": "NV",
+      "wikidata": "Q3245936",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/2015-01-15_12_29_35_View_northeast_across_Pioche%2C_Nevada_from_Nevada_State_Route_321.JPG/1920px-2015-01-15_12_29_35_View_northeast_across_Pioche%2C_Nevada_from_Nevada_State_Route_321.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:2015-01-15_12_29_35_View_northeast_across_Pioche,_Nevada_from_Nevada_State_Route_321.JPG",
+          "file": "2015-01-15 12 29 35 View northeast across Pioche, Nevada from Nevada State Route 321.JPG",
+          "author": "Famartin",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/07-04-2023_Pioche%2C_NV-0009Town_sign.jpg/1920px-07-04-2023_Pioche%2C_NV-0009Town_sign.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:07-04-2023_Pioche,_NV-0009Town_sign.jpg",
+          "file": "07-04-2023 Pioche, NV-0009Town sign.jpg",
+          "author": "KennedyPhotography",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Pioche, Nevada\"",
+          "width": 1600,
+          "height": 1311,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/07-04-2023_Pioche%2C_NV-0013.jpg/1920px-07-04-2023_Pioche%2C_NV-0013.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:07-04-2023_Pioche,_NV-0013.jpg",
+          "file": "07-04-2023 Pioche, NV-0013.jpg",
+          "author": "KennedyPhotography",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Pioche, Nevada\"",
+          "width": 1600,
+          "height": 584,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/07-04-2023_Pioche%2C_NV-0015.jpg/1920px-07-04-2023_Pioche%2C_NV-0015.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:07-04-2023_Pioche,_NV-0015.jpg",
+          "file": "07-04-2023 Pioche, NV-0015.jpg",
+          "author": "KennedyPhotography",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Pioche, Nevada\"",
+          "width": 1600,
+          "height": 1218,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": []
+    },
+    "primm": {
+      "name": "Primm",
+      "state": "NV",
+      "wikidata": "Q376041",
+      "candidates": [
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Primmphoto.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Primmphoto.jpg",
+          "file": "Primmphoto.jpg",
+          "author": "Unidyne",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 888,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/2015-11-03_13_13_18_First_reassurance_sign_along_northbound_Interstate_15_after_entering_Clark_County%2C_Nevada_from_San_Bernardino_County%2C_California.jpg/1920px-2015-11-03_13_13_18_First_reassurance_sign_along_northbound_Interstate_15_after_entering_Clark_County%2C_Nevada_from_San_Bernardino_County%2C_California.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2015-11-03_13_13_18_First_reassurance_sign_along_northbound_Interstate_15_after_entering_Clark_County,_Nevada_from_San_Bernardino_County,_California.jpg",
+          "file": "2015-11-03 13 13 18 First reassurance sign along northbound Interstate 15 after entering Clark County, Nevada from San Bernardino County, California.jpg",
+          "author": "Famartin",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Primm, Nevada\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/2015-11-03_13_17_02_%22Welcome_to_Nevada%22_sign_along_northbound_Interstate_15_entering_Clark_County%2C_Nevada_from_San_Bernardino_County%2C_California.jpg/1920px-2015-11-03_13_17_02_%22Welcome_to_Nevada%22_sign_along_northbound_Interstate_15_entering_Clark_County%2C_Nevada_from_San_Bernardino_County%2C_California.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2015-11-03_13_17_02_%22Welcome_to_Nevada%22_sign_along_northbound_Interstate_15_entering_Clark_County,_Nevada_from_San_Bernardino_County,_California.jpg",
+          "file": "2015-11-03 13 17 02 \"Welcome to Nevada\" sign along northbound Interstate 15 entering Clark County, Nevada from San Bernardino County, California.jpg",
+          "author": "Famartin",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Primm, Nevada\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/2/27/Primm_from_United_793_%286306324594%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Primm_from_United_793_(6306324594).jpg",
+          "file": "Primm from United 793 (6306324594).jpg",
+          "author": "InSapphoWeTrust from Los Angeles, California, USA",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Commons category \"Primm, Nevada\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Primm Wikivoyage Cover.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Desertmirage.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Interstate15 Ivanpah Valley.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Primm (1).jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Primm (2).jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Primm Solar Farms.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "redding": {
+      "name": "Redding",
+      "state": "CA",
+      "wikidata": "Q495361",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Redding_CA_banner_Sundial_Bridge.jpg/1920px-Redding_CA_banner_Sundial_Bridge.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Redding_CA_banner_Sundial_Bridge.jpg",
+          "file": "Redding CA banner Sundial Bridge.jpg",
+          "author": "inderwadhwa",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Sundial_Bridge_at_Turtle_Bay_%28cropped%29.jpg/1920px-Sundial_Bridge_at_Turtle_Bay_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Sundial_Bridge_at_Turtle_Bay_(cropped).jpg",
+          "file": "Sundial Bridge at Turtle Bay (cropped).jpg",
+          "author": "Chad K",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 844,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Way_Down_Upon_The_Sacramento_River....._-_Flickr_-_A_Guy_Named_Nyal.jpg/1920px-Way_Down_Upon_The_Sacramento_River....._-_Flickr_-_A_Guy_Named_Nyal.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Way_Down_Upon_The_Sacramento_River....._-_Flickr_-_A_Guy_Named_Nyal.jpg",
+          "file": "Way Down Upon The Sacramento River..... - Flickr - A Guy Named Nyal.jpg",
+          "author": "A Guy Named Nyal",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Commons category \"Redding, California\"",
+          "width": 1600,
+          "height": 1066,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Sundialbridge2.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Sundialbridge2.jpg",
+          "file": "Sundialbridge2.jpg",
+          "author": "Razster at English Wikipedia",
+          "licence": "CC BY 2.5",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 2401,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": []
+    },
+    "reno": {
+      "name": "Reno",
+      "state": "NV",
+      "wikidata": "Q49225",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Reno_banner.JPG/1920px-Reno_banner.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:Reno_banner.JPG",
+          "file": "Reno banner.JPG",
+          "author": "original: Mswank; crop by phoebe",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Reno%2C_Nevada_photo_Don_Ramey_Logan.jpg/1920px-Reno%2C_Nevada_photo_Don_Ramey_Logan.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Reno,_Nevada_photo_Don_Ramey_Logan.jpg",
+          "file": "Reno, Nevada photo Don Ramey Logan.jpg",
+          "author": "Don Ramey Logan",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Amtrak_SF_-_Chicago%2C_Feb-2018_%2840367115932%29.jpg/1920px-Amtrak_SF_-_Chicago%2C_Feb-2018_%2840367115932%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Amtrak_SF_-_Chicago,_Feb-2018_(40367115932).jpg",
+          "file": "Amtrak SF - Chicago, Feb-2018 (40367115932).jpg",
+          "author": "Mitch Altman from San Francisco, USA",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Commons category \"Reno, Nevada\"",
+          "width": 1600,
+          "height": 1066,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Crescent_club%2C_1900.jpg/1920px-Crescent_club%2C_1900.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Crescent_club,_1900.jpg",
+          "file": "Crescent club, 1900.jpg",
+          "author": "Unknown author Unknown author",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Reno, Nevada\"",
+          "width": 1600,
+          "height": 1083,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Reno, Nevada (16931715632).jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "1965 Reno Nevadas NEW SKYLINE (8267234885).png",
+          "reason": "too small"
+        },
+        {
+          "file": "Alicia at Home, Christmas Eve, Reno, Nevada (372434029).jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Atlantis Casino Hotel Reno FastMix, Atlantis Casino Hotel, Reno, Nevada, USA (4033095261).jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "sacramento": {
+      "name": "Sacramento",
+      "state": "CA",
+      "wikidata": "Q18013",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Sacramento_banner_Tower_bridge_detail.jpg/1920px-Sacramento_banner_Tower_bridge_detail.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Sacramento_banner_Tower_bridge_detail.jpg",
+          "file": "Sacramento banner Tower bridge detail.jpg",
+          "author": "Michael Grindstaff",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Sacramento%2C_California_skyline_in_2023.jpg/1920px-Sacramento%2C_California_skyline_in_2023.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Sacramento,_California_skyline_in_2023.jpg",
+          "file": "Sacramento, California skyline in 2023.jpg",
+          "author": "Quintin Soloviev",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 793,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Sacramento%2C_CA_skyline_%28cropped%29.jpg/1920px-Sacramento%2C_CA_skyline_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Sacramento,_CA_skyline_(cropped).jpg",
+          "file": "Sacramento, CA skyline (cropped).jpg",
+          "author": "Quintin Soloviev",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 901,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Airfield_Park_Natomas%2C_Sacramento%2C_California.jpg/1920px-Airfield_Park_Natomas%2C_Sacramento%2C_California.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Airfield_Park_Natomas,_Sacramento,_California.jpg",
+          "file": "Airfield Park Natomas, Sacramento, California.jpg",
+          "author": "Dragonhawk12",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Sacramento, California\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Jason-Downtwon Sacramento-1October2022-IMG E1002.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Sacramento Skyline Sunset.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "san-diego": {
+      "name": "San Diego",
+      "state": "CA",
+      "wikidata": "Q16552",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Mission_San_Diego_de_Alcala_banner.jpg/1920px-Mission_San_Diego_de_Alcala_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Mission_San_Diego_de_Alcala_banner.jpg",
+          "file": "Mission San Diego de Alcala banner.jpg",
+          "author": "William Toti",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/San_Diego_skyline_18_%28cropped%29.jpg/1920px-San_Diego_skyline_18_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:San_Diego_skyline_18_(cropped).jpg",
+          "file": "San Diego skyline 18 (cropped).jpg",
+          "author": "Boatguy619",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 594,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/e/ea/La_Jolla_Shores_view_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:La_Jolla_Shores_view_(cropped).jpg",
+          "file": "La Jolla Shores view (cropped).jpg",
+          "author": "Dirk Hansen",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1031,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Bioclean_Modular_Wetland_Friars.jpg/1920px-Bioclean_Modular_Wetland_Friars.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Bioclean_Modular_Wetland_Friars.jpg",
+          "file": "Bioclean Modular Wetland Friars.jpg",
+          "author": "Mds08011",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Commons category \"San Diego, California\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Feeding Oranges to the Ostriches at the Ostrich Farm, San Diego, Cal.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Flying out of San Deigo (6027235596).jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "san-francisco": {
+      "name": "San Francisco",
+      "state": "CA",
+      "wikidata": "Q62",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Golden_Gate_Bridge_and_San_Francisco_banner.jpg/1920px-Golden_Gate_Bridge_and_San_Francisco_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_and_San_Francisco_banner.jpg",
+          "file": "Golden Gate Bridge and San Francisco banner.jpg",
+          "author": "Brocken Inaglory",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg/1920px-San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg",
+          "file": "San Francisco from the Marin Headlands in March 2019.jpg",
+          "author": "Lightandtruth",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 938,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Zeppelin-ride-020100925-195_%285029394846%29.jpg/1920px-Zeppelin-ride-020100925-195_%285029394846%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Zeppelin-ride-020100925-195_(5029394846).jpg",
+          "file": "Zeppelin-ride-020100925-195 (5029394846).jpg",
+          "author": "Craig Howell from San Carlos, CA, USA",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": []
+    },
+    "san-jose": {
+      "name": "San Jose",
+      "state": "CA",
+      "wikidata": "Q16553",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/San_Jose_%28California%29_banner_Center_for_the_Performing_Arts.jpg/1920px-San_Jose_%28California%29_banner_Center_for_the_Performing_Arts.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:San_Jose_(California)_banner_Center_for_the_Performing_Arts.jpg",
+          "file": "San Jose (California) banner Center for the Performing Arts.jpg",
+          "author": "Ed Schipul , cropped by Jjtkk",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Valencia_Hotel%2C_Santana_Row_%28cropped%29.jpg/1920px-Valencia_Hotel%2C_Santana_Row_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Valencia_Hotel,_Santana_Row_(cropped).jpg",
+          "file": "Valencia Hotel, Santana Row (cropped).jpg",
+          "author": "Payton Chung",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1077,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/2013_10_San_Jose_by_eschipul-7199_%2810506218626%29.jpg/1920px-2013_10_San_Jose_by_eschipul-7199_%2810506218626%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2013_10_San_Jose_by_eschipul-7199_(10506218626).jpg",
+          "file": "2013 10 San Jose by eschipul-7199 (10506218626).jpg",
+          "author": "Ed Schipul from Houston, TX, US",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Commons category \"San Jose, California\"",
+          "width": 1600,
+          "height": 900,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Arts_%285976862268%29.jpg/1920px-Arts_%285976862268%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Arts_(5976862268).jpg",
+          "file": "Arts (5976862268).jpg",
+          "author": "Ed Schipul from Houston, TX, US",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Commons category \"San Jose, California\"",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "SanJose Infobox Pic Montage.jpg",
+          "reason": "not a photo (name)"
+        }
+      ]
+    },
+    "santa-cruz": {
+      "name": "Santa Cruz",
+      "state": "CA",
+      "wikidata": "Q159232",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Santa_Cruz_CA_Lighthouse_Field_banner.jpg/1920px-Santa_Cruz_CA_Lighthouse_Field_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Santa_Cruz_CA_Lighthouse_Field_banner.jpg",
+          "file": "Santa Cruz CA Lighthouse Field banner.jpg",
+          "author": "Don DeBold , modified by Ian Poellet",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 231,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Santa_Cruz%2C_California_-_Boardwalk.jpg/1920px-Santa_Cruz%2C_California_-_Boardwalk.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Santa_Cruz,_California_-_Boardwalk.jpg",
+          "file": "Santa Cruz, California - Boardwalk.jpg",
+          "author": "No machine-readable author provided. Matt314 assumed (based on copyright claims).",
+          "licence": "CC BY 2.5",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 786,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Mission_Santa_Cruz_%288321945663%29.jpg/1920px-Mission_Santa_Cruz_%288321945663%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Mission_Santa_Cruz_(8321945663).jpg",
+          "file": "Mission Santa Cruz (8321945663).jpg",
+          "author": "Don DeBold from San Jose, CA, USA",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1063,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Derby_Park.jpg/1920px-Derby_Park.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Derby_Park.jpg",
+          "file": "Derby Park.jpg",
+          "author": "Mutante",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Santa Cruz, California\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": []
+    },
+    "santa-maria": {
+      "name": "Santa Maria",
+      "state": "CA",
+      "wikidata": "Q643953",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/San_Ramon_01_%28cropped%29.jpg/1920px-San_Ramon_01_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:San_Ramon_01_(cropped).jpg",
+          "file": "San Ramon 01 (cropped).jpg",
+          "author": "Rich Crooks",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "11 Ethel Pope Aud front.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "City Hall, angle 3, Broadway & Cook Street, Santa Maria, California LCCN2017703124 (cropped).tif",
+          "reason": "type image/tiff"
+        }
+      ]
+    },
+    "stockton": {
+      "name": "Stockton",
+      "state": "CA",
+      "wikidata": "Q49240",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Stockton_Banner.jpg/1920px-Stockton_Banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Stockton_Banner.jpg",
+          "file": "Stockton Banner.jpg",
+          "author": "LPS.1",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Aerial_view_of_Stockton%2C_California_skyline.jpg/1920px-Aerial_view_of_Stockton%2C_California_skyline.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Stockton,_California_skyline.jpg",
+          "file": "Aerial view of Stockton, California skyline.jpg",
+          "author": "Quintin Soloviev",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 987,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Autumn_Trees_Along_the_Banks_of_the_Calavaras_River%2C_Stockton%2C_California_%2830107173153%29.jpg/1920px-Autumn_Trees_Along_the_Banks_of_the_Calavaras_River%2C_Stockton%2C_California_%2830107173153%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Autumn_Trees_Along_the_Banks_of_the_Calavaras_River,_Stockton,_California_(30107173153).jpg",
+          "file": "Autumn Trees Along the Banks of the Calavaras River, Stockton, California (30107173153).jpg",
+          "author": "Eric Sonstroem from California, USA",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Commons category \"Stockton, California\"",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Deep_Water_Channel%2C_Stockton%2C_California._Sunset._%2831890729246%29.jpg/1920px-Deep_Water_Channel%2C_Stockton%2C_California._Sunset._%2831890729246%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Deep_Water_Channel,_Stockton,_California._Sunset._(31890729246).jpg",
+          "file": "Deep Water Channel, Stockton, California. Sunset. (31890729246).jpg",
+          "author": "Eric Sonstroem from California, USA",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Commons category \"Stockton, California\"",
+          "width": 1600,
+          "height": 1154,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Louisiana Purchase Exposition- St. Louis World's Fair Album 5 - DPLA - 5cb7ab37034853f0e11b78c4eaf2dcb8 (page 5).jpg",
+          "reason": "licence No restrictions"
+        }
+      ]
+    },
+    "tonopah": {
+      "name": "Tonopah",
+      "state": "NV",
+      "wikidata": "Q988827",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Tonopah_Nevada_banner.jpg/1920px-Tonopah_Nevada_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Tonopah_Nevada_banner.jpg",
+          "file": "Tonopah Nevada banner.jpg",
+          "author": "Will Keightley on Flickr",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg/1920px-2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2013-09-19_12_59_58_View_of_downtown_Tonopah,_Nevada_from_the_southwest.jpg",
+          "file": "2013-09-19 12 59 58 View of downtown Tonopah, Nevada from the southwest.jpg",
+          "author": "Famartin",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/2012%2C_Tonopah%2C_Nevada_-_panoramio_%281%29.jpg/1920px-2012%2C_Tonopah%2C_Nevada_-_panoramio_%281%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2012,_Tonopah,_Nevada_-_panoramio_(1).jpg",
+          "file": "2012, Tonopah, Nevada - panoramio (1).jpg",
+          "author": "Chris English",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Tonopah, Nevada\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/2012%2C_Tonopah%2C_NV%2C_Big_Bill_Murphy_Mural_Note_-_panoramio.jpg/1920px-2012%2C_Tonopah%2C_NV%2C_Big_Bill_Murphy_Mural_Note_-_panoramio.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2012,_Tonopah,_NV,_Big_Bill_Murphy_Mural_Note_-_panoramio.jpg",
+          "file": "2012, Tonopah, NV, Big Bill Murphy Mural Note - panoramio.jpg",
+          "author": "Chris English",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Tonopah, Nevada\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "003-10 0029667 SDASM Image - Flickr - San Diego Air ^ Space Museum Archives.jpg",
+          "reason": "licence No restrictions"
+        }
+      ]
+    },
+    "truckee": {
+      "name": "Truckee",
+      "state": "CA",
+      "wikidata": "Q506402",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Truckee_Banner.jpg/1920px-Truckee_Banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Truckee_Banner.jpg",
+          "file": "Truckee Banner.jpg",
+          "author": "Famartin",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 228,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Truckee.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Truckee.jpg",
+          "file": "Truckee.jpg",
+          "author": "Finetooth",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1018,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Trout_Creek_Beaver_Dam.jpg/1920px-Trout_Creek_Beaver_Dam.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Trout_Creek_Beaver_Dam.jpg",
+          "file": "Trout Creek Beaver Dam.jpg",
+          "author": "Ted Guzzi",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Truckee, California\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/%E3%83%88%E3%83%A9%E3%83%83%E3%82%AD%E3%83%BC%E9%A7%85%E3%83%9B%E3%83%BC%E3%83%A0.jpg/1920px-%E3%83%88%E3%83%A9%E3%83%83%E3%82%AD%E3%83%BC%E9%A7%85%E3%83%9B%E3%83%BC%E3%83%A0.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%E3%83%88%E3%83%A9%E3%83%83%E3%82%AD%E3%83%BC%E9%A7%85%E3%83%9B%E3%83%BC%E3%83%A0.jpg",
+          "file": "トラッキー駅ホーム.jpg",
+          "author": "やばいぱい",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Truckee, California\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": []
+    },
+    "ukiah": {
+      "name": "Ukiah",
+      "state": "CA",
+      "wikidata": "Q837105",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Post_Office_-_Ukiah_California.jpg/1920px-Post_Office_-_Ukiah_California.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Post_Office_-_Ukiah_California.jpg",
+          "file": "Post Office - Ukiah California.jpg",
+          "author": "Ian Poellet ( User:Werewombat )",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Ukiah_Civic_Center.jpg/1920px-Ukiah_Civic_Center.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Ukiah_Civic_Center.jpg",
+          "file": "Ukiah Civic Center.jpg",
+          "author": "City of Ukiah - Dept. of Recreation",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Palace_Hotel_in_Ukiah_%28Explored%29_-_Flickr_-_Bob_Dass.jpg/1920px-Palace_Hotel_in_Ukiah_%28Explored%29_-_Flickr_-_Bob_Dass.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Palace_Hotel_in_Ukiah_(Explored)_-_Flickr_-_Bob_Dass.jpg",
+          "file": "Palace Hotel in Ukiah (Explored) - Flickr - Bob Dass.jpg",
+          "author": "Bob Dass",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Commons category \"Ukiah, California\"",
+          "width": 1600,
+          "height": 800,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "AjahnPasanno19Sept2013.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "winnemucca": {
+      "name": "Winnemucca",
+      "state": "NV",
+      "wikidata": "Q983426",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Winnemucca_banner_view_from_Pioneer_Park.jpg/1920px-Winnemucca_banner_view_from_Pioneer_Park.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Winnemucca_banner_view_from_Pioneer_Park.jpg",
+          "file": "Winnemucca banner view from Pioneer Park.jpg",
+          "author": "Mx. Granger",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 228,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/2012-10-14_41_Downtown_Winnemucca_in_Nevada_viewed_from_Winnemucca_Mountain.jpg/1920px-2012-10-14_41_Downtown_Winnemucca_in_Nevada_viewed_from_Winnemucca_Mountain.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2012-10-14_41_Downtown_Winnemucca_in_Nevada_viewed_from_Winnemucca_Mountain.jpg",
+          "file": "2012-10-14 41 Downtown Winnemucca in Nevada viewed from Winnemucca Mountain.jpg",
+          "author": "Famartin",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/2008-07-12_Downtown_Winnemucca.jpg/1920px-2008-07-12_Downtown_Winnemucca.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2008-07-12_Downtown_Winnemucca.jpg",
+          "file": "2008-07-12 Downtown Winnemucca.jpg",
+          "author": "Famartin",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Winnemucca, Nevada\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-21"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/2012_Older_and_Recent_Transportation%2C_Winnemucca%2C_Nevada_-_panoramio.jpg/1920px-2012_Older_and_Recent_Transportation%2C_Winnemucca%2C_Nevada_-_panoramio.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2012_Older_and_Recent_Transportation,_Winnemucca,_Nevada_-_panoramio.jpg",
+          "file": "2012 Older and Recent Transportation, Winnemucca, Nevada - panoramio.jpg",
+          "author": "Chris English",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Winnemucca, Nevada\"",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-21"
+        }
+      ],
+      "rejected": []
+    }
+  }
+}

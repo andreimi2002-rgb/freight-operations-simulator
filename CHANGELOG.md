@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.0.0-alpha.3 — 2026-10-21 (Freight World, stage 2: city pages)
+
+- **City pages** for all 34 cities, one static page each at `/ats/<state>/<city>` (e.g. `/ats/ca/sacramento`), built from `data/ats/`: hero with the real city photo, **live local time** (from the city's time zone) and **real weather** (Open-Meteo, requested by the browser, cached 15 minutes, refreshed while the page is open; now, feels-like, wind, precipitation and the next three days, with own weather icons); summary cards (state, map, depots, cargo offered and accepted, truck dealer); facilities and roads; neighbouring cities as links; every company and depot with what it offers and accepts (DLC cargo grouped by DLC, generic wiki names marked); landmarks; link to the wiki page.
+- **City list** at `/ats/`, grouped by state, with photos and depot counts. Header link "Cities"; the ATS switch and the home page lead there.
+- **Units:** US units by default (°F, mph, inches), with a US / Metric switch in the header, remembered in the browser.
+- **Photos:** `scripts/photos/candidates.mjs` (`npm run photos:candidates`) finds 1–4 free photos per city on Wikimedia Commons (Wikivoyage banner, Wikidata image, Wikipedia lead image, Commons category; free licence with author, at least 1200 px, no maps or flags). Claude chose one per city by looking at each (the owner delegated the choice), with the reason in `data/photos.json`; 33 of 34 have a photo, Santa Maria keeps a placeholder (only a very thin banner exists). Author, licence and Commons link are shown under each photo.
+- The number of depots shown is the one from the company pages, not the wiki infobox (decision from stage 1).
+- 11 new tests (58 in all): page paths, city companies, units, weather codes, the Open-Meteo request, facility labels, photo entries, Commons rules and thumbnail links. All 34 pages were checked in Chrome at phone width (status, clock, weather, no horizontal scroll).
+
 ## 2.0.0-alpha.2 — 2026-10-21 (Freight World, stage 1: ATS data for California and Nevada)
 
 - **Collector** `scripts/ats/collect.mjs` (`npm run collect:ats`): reads Truck Simulator Wiki through the MediaWiki API — at most one request per second per host, clear User-Agent, `maxlag`, retries with backoff, local cache in `.cache/wiki/` (not in git), `--refresh` / `--offline`. A full run needs about 30 requests. States, wiki categories and time zones are data in `data/ats/scope.json`.

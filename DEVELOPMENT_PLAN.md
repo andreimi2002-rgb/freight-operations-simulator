@@ -268,6 +268,7 @@ companii, mărfuri, remorci și probleme există.
   și convertite la scara jocului; marcate clar ca estimare.
 - Generatorul de curse (secțiunea 7), fără reguli de vreme încă.
 - Tabela de plecări pe pagina orașului, în stil aeroport.
+- **Planificatorul de rută:** utilizatorul alege orașul (sau depozitul) de plecare și, opțional, destinația, și vede toate cursele reale posibile între ele (marfă, remorcă, greutate, DLC-uri, distanță, durată, plată), pe lângă tabela aleatoare.
 
 **Gata când:** fiecare oraș are o tabelă care se schimbă la fiecare oră și conține doar
 curse posibile în joc.
@@ -346,3 +347,7 @@ curse posibile în joc.
 | 2026-10-21 | Corecturi pentru numele de mărfuri care nu se potrivesc, scrise de mână și aprobate de proprietar, în `data/ats/aliases.json` (8 greșeli de tipar sau formulări diferite). Cele 5 nume generice (Pickups, Boom Lift, Concrete Tubes, Lumber, Recreational Vehicle) primesc toate variantele din catalog și sunt marcate (`genericNames`). |
 | 2026-10-21 | Remorcile fără pagină de dealer primesc pagina wiki „<Tip> Trailer” dacă există (majoritatea nu se pot cumpăra). Prețul nu e necesar pentru curse. |
 | 2026-10-21 | Decizii amânate: mărfurile fără greutate și numărul de companii din infobox se tratează prin reguli de afișare în Etapele 2–3 (marfa fără greutate nu intră în curse sau apare „necunoscută”; pe pagina orașului se arată numărul de depozite avute). ID-urile interne pentru orașe și mărfuri se leagă în Etapa 7, din telemetria jocului. |
+| 2026-10-21 | **Selecția rutei de către utilizator** (pe lângă tabela aleatoare) se adaugă în Etapa 3, ca planificator complet: plecare (oraș sau depozit), destinație opțională, toate cursele reale posibile între ele, cu distanță, durată și plată. |
+| 2026-10-21 | Unități: implicit ca în joc pentru ATS (°F, mile, lb), cu comutator metric (°C, km, kg) salvat în browser. |
+| 2026-10-21 | Pozele orașelor: Claude propune 1–4 candidați pe oraș de pe Wikimedia Commons (licență liberă, autor, ≥ 1200 px; `data/photo-candidates.json`), proprietarul a decis ca Claude să aleagă cea mai bună poză pentru fiecare oraș (orizontală, arată orașul, clară), cu motivul notat; alegerea intră în `data/photos.json`. Fără poză potrivită rămâne placeholder. Proprietarul poate cere oricând altă poză. |
+| 2026-10-21 | Etapa 2: pozele au fost alese de Claude, uitându-se la fiecare candidată (33 din 34 de orașe; Santa Maria rămâne cu placeholder, are doar un banner foarte îngust). Numărul de depozite afișat vine din paginile companiilor. Pagina orașului nu folosește gradiente: titlul stă pe o bandă solidă semitransparentă peste poză. |

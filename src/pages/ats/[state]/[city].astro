@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CityHero from '../../../components/CityHero.astro';
+import WeatherIcons from '../../../components/WeatherIcons.astro';
+import { getI18n } from '../../../i18n/index.mjs';
+import { cities, companies, cargo, photos, cityById, stateByCode } from '../../../lib/data.mjs';
+import { cityParams, cityPath, cityCompanies, cityCargoCounts } from '../../../lib/ats.mjs';
+
+export function getStaticPaths() {
+  return cityParams(cities);
+}
+
+const { t } = getI18n();
+const city = cityById.get(Astro.props.cityId);
+const state = stateByCode.get(city.state);
+const photo = photos[city.id]?.photo ?? null;
+const groups = cityCompanies(city, companies, cargo);
+const counts = cityCargoCounts(groups);
+const neighbors = city.neighbors.map((id) => cityById.get(id)).filter(Boolean);
+const facilityLabel = (f) => {
+  try { return t(`facilities.${f}`); } catch { return f; }
+};
+// Facility lines that only repeat a chip ("Garage", "Mack truck dealer") are left out.
+const chipWords = new Set(city.facilities.map((f) => facilityLabel(f).toLowerCase()));
+const facilityDetails = city.facilityDetails.filter((d) => {
+  const low = d.toLowerCase();
+  if (chipWords.has(low)) return false;
+  return !city.truckDealers.some((td) => low === `${td.toLowerCase()} truck dealer`);
+});
+const cards = [
+  { label: t('city.cards.state'), value: state.name },
+  { label: t('city.cards.dlc'), value: city.dlc === 'base' ? t('city.dlcBase') : city.dlc },
+  { label: t('city.cards.depots'), value: String(city.depots.length), mono: true },
+  { label: t('city.cards.provides'), value: t('city.cargoCount', { n: counts.provides }), mono: true },
+  { label: t('city.cards.accepts'), value: t('city.cargoCount', { n: counts.accepts }), mono: true },
+  { label: t('city.cards.dealers'), value: city.truckDealers.length ? city.truckDealers.join(', ') : t('city.cards.none') },
+];
+---
+<BaseLayout
+  title={`${city.name}, ${state.code}`}
+  description={t('city.metaDescription', { name: city.name, state: state.name, depots: city.depots.length })}
+>
+  <WeatherIcons />
+  <nav class="container crumbs" aria-label={t('city.breadcrumb')}>
+    <a href="/ats">{t('city.breadcrumb')}</a>
+    <span aria-hidden="true">/</span>
+    <a href={`/ats#state-${state.code}`}>{state.name}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{city.name}</span>
+  </nav>
+
+  <CityHero city={city} stateName={state.name} photo={photo} />
+
+  <div class="container body">
+    <ul class="facts">
+      {cards.map((c) => (
+        <li class="fact">
+          <span class="eyebrow">{c.label}</span>
+          <span class:list={['fact-value', { mono: c.mono }]}>{c.value}</span>
+        </li>
+      ))}
+    </ul>
+
+    <div class="two">
+      <section aria-labelledby="facilities-title">
+        <h2 id="facilities-title">{t('city.facilitiesTitle')}</h2>
+        <ul class="chips">
+          {city.facilities.map((f) => <li class="chip">{facilityLabel(f)}</li>)}
+        </ul>
+        {facilityDetails.length > 0 && (
+          <ul class="plain soft">
+            {facilityDetails.map((d) => <li>{d}</li>)}
+          </ul>
+        )}
+      </section>
+      <section aria-labelledby="roads-title">
+        <h2 id="roads-title">{t('city.roadsTitle')}</h2>
+        <ul class="chips">
+          {city.roads.map((r) => <li class="chip mono">{r}</li>)}
+        </ul>
+        {neighbors.length > 0 && (
+          <>
+            <h3 class="sub">{t('city.neighborsTitle')}</h3>
+            <ul class="chips">
+              {neighbors.map((n) => <li><a class="chip chip-link" href={cityPath(n)}>{n.name}</a></li>)}
+            </ul>
+          </>
+        )}
+      </section>
+    </div>
+
+    <section aria-labelledby="companies-title">
+      <h2 id="companies-title">{t('city.companiesTitle')}</h2>
+      <p class="soft intro">{t('city.companiesIntro', { name: city.name })}</p>
+      <ul class="companies">
+        {groups.map((g) => (
+          <li class="company">
+            <header class="co-head">
+              <h3>{g.company.fullName ?? g.company.name}</h3>
+              {g.company.industry && <span class="muted small">{g.company.industry}</span>}
+            </header>
+            {g.depots.map((d) => (
+              <div class="depot">
+                <div class="depot-head">
+                  <span class="depot-type">{d.type ?? t('city.unnamedDepot')}</span>
+                  <span class="badge">{d.gameId ? t('city.depotId', { id: d.gameId }) : t('city.noDepotId')}</span>
+                </div>
+                {d.location && <p class="small soft">{d.location}</p>}
+                <div class="cargo-cols">
+                  {[["provides", t("city.provides")], ["accepts", t("city.accepts")]].map(([side, label]) => {
+                    const dlc = d.dlcCargo.filter((x) => x[side].length);
+                    const total = d[side].length + dlc.reduce((n, x) => n + x[side].length, 0);
+                    return (
+                      <details>
+                        <summary>{label} <span class="count mono">{total}</span></summary>
+                        {d[side].length
+                          ? <ul class="chips small-chips">{d[side].map((c) => <li class="chip">{c.name}</li>)}</ul>
+                          : <p class="muted small">{t("city.nothing")}</p>}
+                        {dlc.map((x) => (
+                          <div class="dlc-group">
+                            <span class="badge badge-blue">{t("city.withDlc", { dlc: x.name })}</span>
+                            <ul class="chips small-chips">{x[side].map((c) => <li class="chip">{c.name}</li>)}</ul>
+                          </div>
+                        ))}
+                      </details>
+                    );
+                  })}
+                </div>
+                {d.generic.length > 0 && <p class="muted small">{t('city.genericNote', { names: d.generic.join(', ') })}</p>}
+              </div>
+            ))}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    {city.landmarks.length > 0 && (
+      <section aria-labelledby="landmarks-title">
+        <h2 id="landmarks-title">{t('city.landmarksTitle')}</h2>
+        <ul class="landmarks soft">
+          {city.landmarks.map((l) => <li>{l}</li>)}
+        </ul>
+      </section>
+    )}
+
+    <p class="wiki"><a href={city.wiki.url} rel="noopener">{t('city.wikiLink', { name: city.name })}</a></p>
+  </div>
+</BaseLayout>
+
+<style>
+  .crumbs { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; font-size: 14px; color: var(--text-muted); }
+  .crumbs a { display: inline-flex; align-items: center; min-height: var(--target); color: var(--text-soft); }
+  .body { display: grid; gap: var(--space-7); margin-top: var(--space-7); }
+  .body > * { min-width: 0; }
+  h2 { margin-bottom: var(--space-3); }
+  .sub { margin: var(--space-4) 0 var(--space-2); font-size: 15px; color: var(--text-soft); }
+  .small { font-size: 13px; }
+  .intro { margin-bottom: var(--space-4); max-width: 68ch; }
+
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-3); margin: 0; padding: 0; list-style: none; }
+  .fact { display: grid; gap: var(--space-1); padding: var(--space-4); background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-md); }
+  .fact-value { font-size: 18px; font-weight: 600; }
+  .fact-value.mono { font-variant-numeric: tabular-nums; }
+
+  .two { display: grid; gap: var(--space-6); }
+  @media (min-width: 820px) { .two { grid-template-columns: 1fr 1fr; } }
+  .two > * { min-width: 0; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+  .chip { display: inline-flex; align-items: center; min-height: 32px; padding: 0 var(--space-3); border: 1px solid var(--border-input); border-radius: 999px; background: var(--panel-deep); font-size: 14px; color: var(--text); }
+  .chip-link { min-height: var(--target); text-decoration: none; }
+  .chip-link:hover { border-color: var(--amber); color: var(--amber); }
+  .small-chips .chip { min-height: 28px; font-size: 13px; color: var(--text-soft); }
+  .plain { margin: var(--space-3) 0 0; padding-left: 1.1em; display: grid; gap: var(--space-1); font-size: 14px; }
+
+  .companies { display: grid; gap: var(--space-4); margin: 0; padding: 0; list-style: none; }
+  @media (min-width: 900px) { .companies { grid-template-columns: 1fr 1fr; } }
+  .company { display: grid; gap: var(--space-3); align-content: start; padding: var(--space-5); background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-lg); min-width: 0; }
+  .co-head { display: grid; gap: 2px; }
+  .co-head h3 { font-size: 18px; }
+  .depot { display: grid; gap: var(--space-2); padding-top: var(--space-3); border-top: 1px solid var(--row-line); }
+  .depot-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2); }
+  .depot-type { font-weight: 600; }
+  .cargo-cols { display: grid; gap: var(--space-2); }
+  details { border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--panel-deep); }
+  summary { display: flex; align-items: center; justify-content: space-between; min-height: var(--target); padding: 0 var(--space-3); cursor: pointer; font-weight: 500; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: '+'; font-family: var(--font-mono); color: var(--text-muted); margin-left: var(--space-2); }
+  details[open] summary::after { content: '−'; }
+  .count { margin-left: auto; color: var(--amber); font-variant-numeric: tabular-nums; }
+  details > :not(summary) { padding: 0 var(--space-3) var(--space-3); }
+  .dlc-group { display: grid; gap: var(--space-2); justify-items: start; margin-top: var(--space-3); }
+
+  .landmarks { columns: 2 240px; column-gap: var(--space-6); margin: 0; padding-left: 1.1em; font-size: 15px; }
+  .landmarks li { break-inside: avoid; margin-bottom: var(--space-1); }
+  .wiki { font-size: 15px; }
+</style>
