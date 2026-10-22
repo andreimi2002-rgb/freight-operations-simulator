@@ -1,0 +1,618 @@
+{
+  "meta": {
+    "source": "Truck Simulator Wiki",
+    "sourceUrl": "https://trucksimulator.wiki.gg",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Game data from Truck Simulator Wiki contributors (trucksimulator.wiki.gg), CC BY-SA 4.0.",
+    "retrieved": "2026-10-22",
+    "generator": "scripts/ats/collect.mjs",
+    "userAgent": "FreightWorldDataBot/0.1 (https://github.com/andreimi2002-rgb/freight-operations-simulator; fan project data collection)",
+    "game": "ats",
+    "states": [
+      "CA",
+      "NV"
+    ],
+    "description": "Trucks of the game (released models only; announced ones are left out and listed in issues.json). Engines with their horsepower range as given on the wiki.",
+    "count": 19
+  },
+  "trucks": [
+    {
+      "id": "freightliner-cascadia",
+      "gameId": null,
+      "name": "Freightliner Cascadia",
+      "manufacturer": "Freightliner",
+      "electric": false,
+      "engines": [
+        {
+          "name": null,
+          "hpMin": 370,
+          "hpMax": 605
+        }
+      ],
+      "maxHp": 605,
+      "bodyStyles": [
+        "Day Cab",
+        "48\" Sleeper",
+        "72\" Sleeper XT",
+        "72\" Sleeper RR"
+      ],
+      "transmissions": [
+        "Automated Detroit 12 Speed",
+        "Automated Eaton 10/12/13/18 Speed",
+        "Automatic Allison 6/7 Speed"
+      ],
+      "availability": "Truck Dealer",
+      "dateAdded": "December 2nd, 2020",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Freightliner_Cascadia_(2019)",
+        "revid": 306500
+      }
+    },
+    {
+      "id": "freightliner-cascadia-2024",
+      "gameId": null,
+      "name": "Freightliner Cascadia (2024)",
+      "manufacturer": "Freightliner",
+      "electric": false,
+      "engines": [
+        {
+          "name": null,
+          "hpMin": 370,
+          "hpMax": 525
+        }
+      ],
+      "maxHp": 525,
+      "bodyStyles": [
+        "Day Cab",
+        "48\" Sleeper",
+        "72\" Sleeper XT",
+        "72\" Sleeper RR"
+      ],
+      "transmissions": [
+        "Detroit DT12",
+        "Eaton UltraShift",
+        "Allison 4500"
+      ],
+      "availability": "Truck Dealer",
+      "dateAdded": "October 15, 2024",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Freightliner_Cascadia_(2024)",
+        "revid": 305938
+      }
+    },
+    {
+      "id": "international-9900i",
+      "gameId": null,
+      "name": "International 9900i",
+      "manufacturer": "International",
+      "electric": false,
+      "engines": [
+        {
+          "name": null,
+          "hpMin": 450,
+          "hpMax": 600
+        }
+      ],
+      "maxHp": 600,
+      "bodyStyles": [
+        "Day Cab",
+        "51\" Sleeper",
+        "72\" Sleeper"
+      ],
+      "transmissions": [],
+      "availability": "Used Truck Dealer",
+      "dateAdded": "March 22nd, 2022",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/International_9900i",
+        "revid": 306427
+      }
+    },
+    {
+      "id": "international-lonestar",
+      "gameId": null,
+      "name": "International LoneStar",
+      "manufacturer": "International",
+      "electric": false,
+      "engines": [
+        {
+          "name": "Cummins ISX15",
+          "hpMin": 450,
+          "hpMax": 600
+        },
+        {
+          "name": "Cummins X15",
+          "hpMin": 400,
+          "hpMax": 605
+        }
+      ],
+      "maxHp": 605,
+      "bodyStyles": [
+        "Day Cab",
+        "High Rise Sleeper",
+        "Sky Rise Sleeper"
+      ],
+      "transmissions": [
+        "Eaton UltraShift 10/13/18-speed automated",
+        "Eaton Endurant 12-speed automated",
+        "Allison 4500 6-speed automatic",
+        "Allison 4700 7-speed automatic",
+        "Allison TC10 10-speed automatic",
+        "Chatham, Ontario",
+        "Escobedo, Mexico",
+        "Springfield, Ohio"
+      ],
+      "availability": "Truck Dealer",
+      "dateAdded": "December 12th, 2019",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/International_LoneStar",
+        "revid": 311966
+      }
+    },
+    {
+      "id": "international-lt",
+      "gameId": null,
+      "name": "International LT",
+      "manufacturer": "International",
+      "electric": false,
+      "engines": [
+        {
+          "name": "Cummins X15",
+          "hpMin": 400,
+          "hpMax": 565
+        },
+        {
+          "name": "International A26",
+          "hpMin": 410,
+          "hpMax": 475
+        },
+        {
+          "name": "International S13",
+          "hpMin": 400,
+          "hpMax": 515
+        }
+      ],
+      "maxHp": 565,
+      "bodyStyles": [
+        "Day Cab",
+        "Hi-Rise Sleeper",
+        "Skyrise Sleeper"
+      ],
+      "transmissions": [
+        "Eaton Advantage 10-speed automated",
+        "Eaton UltraShift 13/18-speed automated",
+        "Eaton Endurant 11/12-speed automated",
+        "International T14 14-speed automated"
+      ],
+      "availability": "Truck Dealer",
+      "dateAdded": "September 1st, 2021",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/International_LT",
+        "revid": 311782
+      }
+    },
+    {
+      "id": "kenworth-t680-2014",
+      "gameId": null,
+      "name": "Kenworth T680 (2014)",
+      "manufacturer": "Kenworth",
+      "electric": false,
+      "engines": [
+        {
+          "name": null,
+          "hpMin": 370,
+          "hpMax": 600
+        }
+      ],
+      "maxHp": 600,
+      "bodyStyles": [
+        "Duty Day Cabin",
+        "Mid Roof Sleeper",
+        "Hi Rise Sleeper"
+      ],
+      "transmissions": [
+        "Automated Eaton UltraShift® PLUS 10/13/18 Speed",
+        "Automatic Allison 6/7/10 Speed"
+      ],
+      "availability": "Truck Dealer",
+      "dateAdded": "February 2nd, 2016",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Kenworth_T680_(2014)",
+        "revid": 306429
+      }
+    },
+    {
+      "id": "kenworth-t680-2022",
+      "gameId": null,
+      "name": "Kenworth T680 (2022)",
+      "manufacturer": "Kenworth",
+      "electric": false,
+      "engines": [
+        {
+          "name": "Cummins X12",
+          "hpMin": 350,
+          "hpMax": 455
+        },
+        {
+          "name": "Cummins X15",
+          "hpMin": 450,
+          "hpMax": 605
+        },
+        {
+          "name": "PACCAR MX-13",
+          "hpMin": 430,
+          "hpMax": 510
+        }
+      ],
+      "maxHp": 605,
+      "bodyStyles": [
+        "Day Cab",
+        "52\" Sleeper",
+        "76\" Sleeper"
+      ],
+      "transmissions": [
+        "PACCAR TX-12 12-speed automated",
+        "Eaton UltraShift 10/13/18-speed automated",
+        "Allison 4500 RDS 6-speed automatic"
+      ],
+      "availability": "Truck Dealer",
+      "dateAdded": "December 19th, 2023",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Kenworth_T680_(2022)",
+        "revid": 308081
+      }
+    },
+    {
+      "id": "kenworth-w900",
+      "gameId": null,
+      "name": "Kenworth W900",
+      "manufacturer": "Kenworth",
+      "electric": false,
+      "engines": [
+        {
+          "name": null,
+          "hpMin": 370,
+          "hpMax": 625
+        }
+      ],
+      "maxHp": 625,
+      "bodyStyles": [
+        "Day Cab",
+        "72\" Studio Sleeper",
+        "86\" Studio Sleeper"
+      ],
+      "transmissions": [
+        "Automated Eaton UltraShift® PLUS 10/13/18 Speed",
+        "Automatic Allison 6/7/10 Speed"
+      ],
+      "availability": "Truck Dealer",
+      "dateAdded": "February 15th, 2016",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Kenworth_W900",
+        "revid": 308080
+      }
+    },
+    {
+      "id": "mack-anthem",
+      "gameId": null,
+      "name": "Mack Anthem",
+      "manufacturer": "Mack",
+      "electric": false,
+      "engines": [
+        {
+          "name": "Mack MP7",
+          "hpMin": 345,
+          "hpMax": 395
+        },
+        {
+          "name": "Mack MP8",
+          "hpMin": 415,
+          "hpMax": 505
+        }
+      ],
+      "maxHp": 505,
+      "bodyStyles": [
+        "Day Cab",
+        "48\" Sleeper",
+        "70\" Sleeper"
+      ],
+      "transmissions": [
+        "Mack mDRIVE 12-speed automated",
+        "Eaton UltraShift 10/13/18-speed automated",
+        "Allison 6/7-speed automatic"
+      ],
+      "availability": "Truck Dealer",
+      "dateAdded": "April 28th, 2020",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Mack_Anthem",
+        "revid": 306231
+      }
+    },
+    {
+      "id": "mack-pinnacle",
+      "gameId": null,
+      "name": "Mack Pinnacle",
+      "manufacturer": "Mack",
+      "electric": false,
+      "engines": [
+        {
+          "name": "Mack MP8",
+          "hpMin": 415,
+          "hpMax": 505
+        }
+      ],
+      "maxHp": 505,
+      "bodyStyles": [
+        "Day Cab",
+        "48\" Sleeper",
+        "70\" Sleeper"
+      ],
+      "transmissions": [
+        "Mack mDRIVE 12-speed automated",
+        "Mack mDRIVE HD 14-speed automated",
+        "Allison 6/7-speed automatic",
+        "Eaton UltraShift 10/13/18-speed automated"
+      ],
+      "availability": "Truck Dealer",
+      "dateAdded": "September 13th, 2024",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Mack_Pinnacle",
+        "revid": 306432
+      }
+    },
+    {
+      "id": "peterbilt-389",
+      "gameId": null,
+      "name": "Peterbilt 389",
+      "manufacturer": "Peterbilt",
+      "electric": false,
+      "engines": [
+        {
+          "name": null,
+          "hpMin": 370,
+          "hpMax": 625
+        }
+      ],
+      "maxHp": 625,
+      "bodyStyles": [
+        "Day Cab",
+        "Low Roof Sleeper",
+        "Ultra Cab Sleeper"
+      ],
+      "transmissions": [
+        "Automated Eaton UltraShift® PLUS 10/13/18 Speed",
+        "Automatic Allison 6/7/10 Speed"
+      ],
+      "availability": "Truck Dealer",
+      "dateAdded": "November 3rd, 2016",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Peterbilt_389",
+        "revid": 306433
+      }
+    },
+    {
+      "id": "peterbilt-579",
+      "gameId": null,
+      "name": "Peterbilt 579",
+      "manufacturer": "Peterbilt",
+      "electric": false,
+      "engines": [
+        {
+          "name": null,
+          "hpMin": 370,
+          "hpMax": 600
+        }
+      ],
+      "maxHp": 600,
+      "bodyStyles": [
+        "Duty Cabin",
+        "Stand Up Sleeper",
+        "Hi Rise Sleeper"
+      ],
+      "transmissions": [
+        "Automated Eaton UltraShift® PLUS 10/13/18 Speed",
+        "Automatic Allison 6/7/10 Speed"
+      ],
+      "availability": "Truck Dealer",
+      "dateAdded": "February 2nd, 2016",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Peterbilt_579",
+        "revid": 306434
+      }
+    },
+    {
+      "id": "volvo-vnl-2014",
+      "gameId": null,
+      "name": "Volvo VNL (2014)",
+      "manufacturer": "Volvo",
+      "electric": false,
+      "engines": [
+        {
+          "name": null,
+          "hpMin": 355,
+          "hpMax": 600
+        }
+      ],
+      "maxHp": 600,
+      "bodyStyles": [
+        "300",
+        "730",
+        "780"
+      ],
+      "transmissions": [
+        "Automated Volvo I-Shift 12 Speed",
+        "Eaton UltraShift® PLUS 10/13/18 Speed",
+        "Automatic Allison 6 Speed"
+      ],
+      "availability": "Used Truck Dealer",
+      "dateAdded": "November 5th, 2018",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Volvo_VNL_(2014)",
+        "revid": 306437
+      }
+    },
+    {
+      "id": "volvo-vnl-2018",
+      "gameId": null,
+      "name": "Volvo VNL (2018)",
+      "manufacturer": "Volvo",
+      "electric": false,
+      "engines": [
+        {
+          "name": null,
+          "hpMin": 400,
+          "hpMax": 565
+        }
+      ],
+      "maxHp": 565,
+      "bodyStyles": [
+        "300",
+        "740",
+        "860"
+      ],
+      "transmissions": [
+        "Automated Volvo I-Shift 12 Speed",
+        "Eaton UltraShift® PLUS 10/13/18 Speed",
+        "Automatic Allison 6 Speed"
+      ],
+      "availability": "Truck Dealer",
+      "dateAdded": "May 25th, 2023",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Volvo_VNL_(2018)",
+        "revid": 305584
+      }
+    },
+    {
+      "id": "volvo-vnl-2025",
+      "gameId": null,
+      "name": "Volvo VNL (2025)",
+      "manufacturer": "Volvo",
+      "electric": false,
+      "engines": [
+        {
+          "name": "Volvo D13 TC",
+          "hpMin": 405,
+          "hpMax": 500
+        }
+      ],
+      "maxHp": 500,
+      "bodyStyles": [],
+      "transmissions": [],
+      "availability": "Truck Dealer",
+      "dateAdded": "May 13, 2026",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Volvo_VNL_(2025)",
+        "revid": 311781
+      }
+    },
+    {
+      "id": "volvo-vnr-electric",
+      "gameId": null,
+      "name": "Volvo VNR Electric",
+      "manufacturer": "Volvo",
+      "electric": true,
+      "engines": [
+        {
+          "name": "Electric",
+          "hpMin": 455,
+          "hpMax": 455
+        }
+      ],
+      "maxHp": 455,
+      "bodyStyles": [],
+      "transmissions": [],
+      "availability": "Quick Jobs",
+      "dateAdded": "May 13th, 2026",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Volvo_VNR_Electric",
+        "revid": 306595
+      }
+    },
+    {
+      "id": "western-star-49x",
+      "gameId": null,
+      "name": "Western Star 49X",
+      "manufacturer": "Western Star",
+      "electric": false,
+      "engines": [
+        {
+          "name": null,
+          "hpMin": 370,
+          "hpMax": 605
+        }
+      ],
+      "maxHp": 605,
+      "bodyStyles": [
+        "Day Cab",
+        "48\" Sleeper",
+        "72\" Sleeper"
+      ],
+      "transmissions": [
+        "Manual 10/12/13/18 Speed",
+        "Automatic 6/7/12 Speed"
+      ],
+      "availability": "Truck Dealer",
+      "dateAdded": "September 30th, 2020",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Western_Star_49X",
+        "revid": 305574
+      }
+    },
+    {
+      "id": "western-star-5700xe",
+      "gameId": null,
+      "name": "Western Star 5700XE",
+      "manufacturer": "Western Star",
+      "electric": false,
+      "engines": [
+        {
+          "name": null,
+          "hpMin": 370,
+          "hpMax": 605
+        }
+      ],
+      "maxHp": 605,
+      "bodyStyles": [
+        "Day Cab",
+        "54\" Sleeper",
+        "82\" Sleeper"
+      ],
+      "transmissions": [
+        "Manual 10/13/18 Speed",
+        "Automated 12 Speed"
+      ],
+      "availability": "Used Truck Dealer",
+      "dateAdded": "January 31st, 2023",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Western_Star_5700XE",
+        "revid": 305578
+      }
+    },
+    {
+      "id": "western-star-57x",
+      "gameId": null,
+      "name": "Western Star 57X",
+      "manufacturer": "Western Star",
+      "electric": false,
+      "engines": [
+        {
+          "name": null,
+          "hpMin": 370,
+          "hpMax": 600
+        }
+      ],
+      "maxHp": 600,
+      "bodyStyles": [
+        "Day Cab",
+        "72\" Sleeper"
+      ],
+      "transmissions": [],
+      "availability": "Truck Dealer",
+      "dateAdded": "August 2nd, 2022",
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Western_Star_57X",
+        "revid": 305549
+      }
+    }
+  ]
+}

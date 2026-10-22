@@ -374,6 +374,29 @@ export function buildDataset(input) {
   }
 
 
+  // ---- Trucks -------------------------------------------------------------
+  const trucks = [];
+  for (const p of input.truckPages ?? []) {
+    if (!p.name) { issue('parseError', p.title, (p.notes ?? []).join('; ')); continue; }
+    const id = slug(p.name);
+    if (p.future) { issue('futureTruck', id, `"${p.name}" is announced but not released (no engine data); left out`); continue; }
+    if (p.maxHp == null) issue('unknownValue', id, 'no horsepower found in the engine list', { field: 'engines' });
+    trucks.push({
+      id,
+      gameId: null,
+      name: p.name,
+      manufacturer: p.manufacturer,
+      electric: p.electric,
+      engines: p.engines,
+      maxHp: p.maxHp,
+      bodyStyles: p.bodyStyles,
+      transmissions: p.transmissions,
+      availability: p.availability,
+      dateAdded: p.dateAdded,
+      wiki: { url: pageUrl(p.title), revid: p.revid },
+    });
+  }
+
   // ---- Aggregated issues ---------------------------------------------------
   const unknownByName = new Map();
   for (const u of unknownCargo) {
@@ -397,6 +420,7 @@ export function buildDataset(input) {
     companies: companies.sort(byId),
     cargo: cargo.sort(byId),
     trailers: trailers.sort(byId),
+    trucks: trucks.sort(byId),
     issues,
   };
 }
