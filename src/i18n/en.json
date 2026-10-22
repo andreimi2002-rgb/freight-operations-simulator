@@ -19,7 +19,8 @@
     "home": "Home",
     "about": "About & sources",
     "cities": "Cities",
-    "planner": "Planner"
+    "planner": "Planner",
+    "companies": "Companies"
   },
   "game": {
     "label": "Game",
@@ -356,7 +357,8 @@
     "nothingNeeded": "Base game only",
     "openPlanner": "All jobs on this route",
     "estimateNote": "Distance and drive time are estimates from real roads (© OpenStreetMap contributors, ODbL) at 55 mph. Pay is not shown: the game’s pay inputs are not public.",
-    "openSheet": "Open the job sheet"
+    "openSheet": "Open the job sheet",
+    "leadCompany": "One real job from a depot of {company}, picked at random."
   },
   "dlcs": {
     "button": "My DLCs",
@@ -429,5 +431,47 @@
   },
   "mapDlcNames": {
     "arizona": "Arizona (free DLC)"
+  },
+  "companies": {
+    "title": "American Truck Simulator companies",
+    "metaDescription": "Every company with depots on the American Truck Simulator starting map: depots, cities, cargo offered and accepted.",
+    "eyebrow": "American Truck Simulator",
+    "lead": "Every company with at least one depot on the starting map (California, Nevada, Arizona), grouped by category.",
+    "depots": "{n} depots",
+    "cities": "{n} cities",
+    "categories": {
+      "vehicle": "Vehicles",
+      "logistic": "Logistics",
+      "construction": "Construction",
+      "energy": "Energy",
+      "food": "Food",
+      "retail": "Retail",
+      "chemical": "Chemicals",
+      "quarry": "Quarrying",
+      "wood": "Wood",
+      "other": "Other"
+    }
+  },
+  "company": {
+    "metaDescription": "{name} in American Truck Simulator: {depots} depots in {cities} cities, what each depot offers and accepts, and where its cargo can go.",
+    "breadcrumb": "Companies",
+    "industry": "Industry",
+    "category": "Category",
+    "depotsCount": "Depots",
+    "citiesCount": "Cities",
+    "depotTypesTitle": "Depots",
+    "depotTypesIntro": "Each kind of depot this company runs on the starting map, with its game ID, cities and cargo.",
+    "inCities": "In",
+    "goesTitle": "Where its cargo goes",
+    "goesIntro": "Companies that accept cargo {name} offers, in another city. Computed from the depot lists; every link is a job that exists in the game.",
+    "suppliesTitle": "Who supplies it",
+    "suppliesIntro": "Companies that offer cargo {name} accepts, in another city.",
+    "cargoShared": "{n} cargo",
+    "andMore": "and {n} more",
+    "showAll": "Show all {n}",
+    "none": "None on the starting map.",
+    "generateTitle": "Generate a job from {name}",
+    "wikiLink": "{name} on Truck Simulator Wiki",
+    "monogramNote": "Monogram, not the company logo (game artwork is not used)."
   }
 }

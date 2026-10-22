@@ -4,7 +4,11 @@ An ATS / ETS2 style job generator built on the real game map, with live city pag
 
 Live at https://freight-operations-simulator.netlify.app (from `main`). The plan is in [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md) (Romanian) and the rules for contributors and tools in [AGENTS.md](AGENTS.md). The previous product, the Freight Operations Simulator (FOS), is kept as the git tag `fos-final`.
 
-## Current version: 2.0.0-alpha.8 (Arizona: the starting map is complete)
+## Current version: 2.0.0-alpha.9 (company pages)
+
+- A page for every company on the starting map (`/ats/company/<id>`): depots, cargo, where its cargo goes and who supplies it.
+
+### Arizona
 
 - Arizona added (16 cities): the starting map of ATS (California, Nevada, Arizona) is complete with 50 cities. Other states come later.
 

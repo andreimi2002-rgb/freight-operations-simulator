@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Monogram from '../../../components/Monogram.astro';
+import JobGenerator from '../../../components/JobGenerator.astro';
+import { getI18n } from '../../../i18n/index.mjs';
+import { companies, cargo, cityById } from '../../../lib/data.mjs';
+import { companyPath, companyRelations, companyCities } from '../../../lib/companies.mjs';
+import { cityPath } from '../../../lib/ats.mjs';
+
+export function getStaticPaths() {
+  return companies.map((c) => ({ params: { id: c.id }, props: { companyId: c.id } }));
+}
+
+const { t } = getI18n();
+const company = companies.find((c) => c.id === Astro.props.companyId);
+const name = company.fullName ?? company.name;
+const cargoById = new Map(cargo.map((c) => [c.id, c]));
+const names = (ids) => ids.map((id) => cargoById.get(id)).filter(Boolean).sort((a, b) => a.name.localeCompare(b.name));
+const catLabel = (c) => { try { return t(`companies.categories.${c}`); } catch { return c; } };
+const cities = companyCities(company);
+const depotCount = company.depotTypes.reduce((n, d) => n + d.cities.length, 0);
+const goes = companyRelations(company, companies, 'provides');
+const supplies = companyRelations(company, companies, 'accepts');
+const SHOW = 12;
+const firstCity = company.depotTypes[0].cities[0];
+---
+<BaseLayout
+  title={name}
+  description={t('company.metaDescription', { name, depots: depotCount, cities: cities.length })}
+>
+  <nav class="container crumbs" aria-label={t('company.breadcrumb')}>
+    <a href="/ats/companies">{t('company.breadcrumb')}</a>
+    <span aria-hidden="true">/</span>
+    <a href={`/ats/companies#cat-${company.category ?? 'other'}`}>{catLabel(company.category ?? 'other')}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{company.name}</span>
+  </nav>
+
+  <div class="container page">
+    <header class="head">
+      <Monogram name={company.name} size="lg" />
+      <div class="head-text">
+        <p class="eyebrow">{catLabel(company.category ?? 'other')}</p>
+        <h1>{name}</h1>
+        {company.industry && <p class="soft lead">{company.industry}</p>}
+      </div>
+    </header>
+
+    <ul class="facts">
+      <li class="fact"><span class="eyebrow">{t('company.depotsCount')}</span><span class="fact-value mono">{depotCount}</span></li>
+      <li class="fact"><span class="eyebrow">{t('company.citiesCount')}</span><span class="fact-value mono">{cities.length}</span></li>
+      <li class="fact"><span class="eyebrow">{t('company.category')}</span><span class="fact-value">{catLabel(company.category ?? 'other')}</span></li>
+    </ul>
+
+    <section aria-labelledby="depots-title">
+      <h2 id="depots-title">{t('company.depotTypesTitle')}</h2>
+      <p class="soft intro">{t('company.depotTypesIntro')}</p>
+      <ul class="depots">
+        {company.depotTypes.map((d) => (
+          <li class="card depot">
+            <div class="depot-head">
+              <h3>{d.type ?? t('city.unnamedDepot')}</h3>
+              <span class="badge">{d.gameId ? t('city.depotId', { id: d.gameId }) : t('city.noDepotId')}</span>
+            </div>
+            <p class="small soft">{t('company.inCities')}</p>
+            <ul class="chips">
+              {d.cities.map((cid) => {
+                const c = cityById.get(cid);
+                return <li><a class="chip chip-link" href={cityPath(c)}>{c.name}, {c.state}</a></li>;
+              })}
+            </ul>
+            {Object.keys(d.locations ?? {}).length > 0 && (
+              <ul class="plain small soft">
+                {Object.entries(d.locations).map(([cid, loc]) => <li><strong>{cityById.get(cid)?.name}:</strong> {loc}</li>)}
+              </ul>
+            )}
+            <div class="cargo-cols">
+              {[['provides', t('city.provides')], ['accepts', t('city.accepts')]].map(([side, label]) => {
+                const dlc = Object.values(d.dlcCargo ?? {}).filter((x) => x[side].length);
+                const total = d[side].length + dlc.reduce((n, x) => n + x[side].length, 0);
+                return (
+                  <details>
+                    <summary>{label} <span class="count mono">{total}</span></summary>
+                    {d[side].length
+                      ? <ul class="chips small-chips">{names(d[side]).map((c) => <li class="chip">{c.name}</li>)}</ul>
+                      : <p class="muted small">{t('city.nothing')}</p>}
+                    {dlc.map((x) => (
+                      <div class="dlc-group">
+                        <span class="badge badge-blue">{t('city.withDlc', { dlc: x.name })}</span>
+                        <ul class="chips small-chips">{names(x[side]).map((c) => <li class="chip">{c.name}</li>)}</ul>
+                      </div>
+                    ))}
+                  </details>
+                );
+              })}
+            </div>
+            {d.genericNames && <p class="muted small">{t('city.genericNote', { names: Object.keys(d.genericNames).join(', ') })}</p>}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    {[['goes', goes, t('company.goesTitle'), t('company.goesIntro', { name: company.name })], ['supplies', supplies, t('company.suppliesTitle'), t('company.suppliesIntro', { name: company.name })]].map(([key, list, title, intro]) => (
+      <section aria-labelledby={`${key}-title`}>
+        <h2 id={`${key}-title`}>{title}</h2>
+        <p class="soft intro">{intro}</p>
+        {list.length === 0
+          ? <p class="muted">{t('company.none')}</p>
+          : <>
+              <ul class="relations">
+                {list.slice(0, SHOW).map((r) => (
+                  <li class="rel">
+                    <a class="rel-name" href={companyPath(r.company)}>{r.company.fullName ?? r.company.name}</a>
+                    <span class="mono small soft">{t('company.cargoShared', { n: r.cargo.length })} · {t('companies.cities', { n: r.cities.length })}</span>
+                    <span class="small muted">{names(r.cargo).slice(0, 4).map((c) => c.name).join(', ')}{r.cargo.length > 4 ? `, ${t('company.andMore', { n: r.cargo.length - 4 })}` : ''}</span>
+                  </li>
+                ))}
+              </ul>
+              {list.length > SHOW && (
+                <details class="more">
+                  <summary>{t('company.showAll', { n: list.length })}</summary>
+                  <ul class="relations">
+                    {list.slice(SHOW).map((r) => (
+                      <li class="rel">
+                        <a class="rel-name" href={companyPath(r.company)}>{r.company.fullName ?? r.company.name}</a>
+                        <span class="mono small soft">{t('company.cargoShared', { n: r.cargo.length })} · {t('companies.cities', { n: r.cities.length })}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              )}
+            </>}
+      </section>
+    ))}
+
+    <JobGenerator company={{ id: company.id, name: company.name }} />
+
+    <p class="small"><a href={company.wiki.url} rel="noopener">{t('company.wikiLink', { name: company.name })}</a></p>
+    <p class="muted small">{t('company.monogramNote')}</p>
+  </div>
+</BaseLayout>
+
+<style>
+  .crumbs { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; font-size: 14px; color: var(--text-muted); }
+  .crumbs a { display: inline-flex; align-items: center; min-height: var(--target); color: var(--text-soft); }
+  .page { display: grid; gap: var(--space-7); padding-top: var(--space-5); }
+  .page > * { min-width: 0; }
+  .head { display: flex; gap: var(--space-5); align-items: center; }
+  .head-text { display: grid; gap: var(--space-2); min-width: 0; }
+  .head h1 { font-size: clamp(30px, 5vw, 44px); text-wrap: balance; }
+  .lead { font-size: 17px; }
+  h2 { margin-bottom: var(--space-3); }
+  .intro { margin-bottom: var(--space-4); max-width: 70ch; }
+  .small { font-size: 13px; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-3); margin: 0; padding: 0; list-style: none; }
+  .fact { display: grid; gap: var(--space-1); padding: var(--space-4); background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-md); }
+  .fact-value { font-size: 18px; font-weight: 600; }
+  .depots { display: grid; gap: var(--space-4); margin: 0; padding: 0; list-style: none; }
+  @media (min-width: 900px) { .depots { grid-template-columns: 1fr 1fr; } }
+  .depot { display: grid; gap: var(--space-3); align-content: start; min-width: 0; }
+  .depot-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2); }
+  .depot-head h3 { font-size: 18px; }
+  .chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+  .chip { display: inline-flex; align-items: center; min-height: 32px; padding: 0 var(--space-3); border: 1px solid var(--border-input); border-radius: 999px; background: var(--panel-deep); font-size: 14px; color: var(--text); }
+  .chip-link { min-height: var(--target); text-decoration: none; }
+  .chip-link:hover { border-color: var(--amber); color: var(--amber); }
+  .small-chips .chip { min-height: 28px; font-size: 13px; color: var(--text-soft); }
+  .plain { margin: 0; padding-left: 1.1em; display: grid; gap: var(--space-1); }
+  .cargo-cols { display: grid; gap: var(--space-2); }
+  details { border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--panel-deep); }
+  summary { display: flex; align-items: center; justify-content: space-between; min-height: var(--target); padding: 0 var(--space-3); cursor: pointer; font-weight: 500; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: '+'; font-family: var(--font-mono); color: var(--text-muted); margin-left: var(--space-2); }
+  details[open] summary::after { content: '−'; }
+  .count { margin-left: auto; color: var(--amber); font-variant-numeric: tabular-nums; }
+  details > :not(summary) { padding: 0 var(--space-3) var(--space-3); }
+  .dlc-group { display: grid; gap: var(--space-2); justify-items: start; margin-top: var(--space-3); }
+  .relations { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-3); margin: 0; padding: 0; list-style: none; }
+  .rel { display: grid; gap: 2px; padding: var(--space-3) var(--space-4); background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-sm); min-width: 0; }
+  .rel-name { font-weight: 600; color: var(--text); display: inline-flex; align-items: center; min-height: 32px; }
+  .rel-name:hover { color: var(--amber); }
+  .more { margin-top: var(--space-3); }
+  .more .relations { padding-top: var(--space-2); }
+  @media (max-width: 559px) { .head { align-items: flex-start; } }
+</style>

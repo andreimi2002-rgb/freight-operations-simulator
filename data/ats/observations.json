@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "description": "Jobs seen in the game by the project owner, used to calibrate estimated distances, drive times and (later) pay. Reported values, not wiki data. Add one entry per job seen in the game.",
+    "provenance": "reported by the project owner from the game",
+    "fields": {
+      "distanceKm": "distance shown in the game job offer",
+      "durationMin": "route time shown in the game",
+      "payUsd": "job pay shown in the game",
+      "market": "freight (company truck) or cargo (own trailer)",
+      "playerLevel": "player level at the time"
+    }
+  },
+  "jobs": [
+    {
+      "date": "2026-10-22",
+      "game": "ats",
+      "gameVersion": null,
+      "from": "los-angeles",
+      "to": "phoenix",
+      "cargo": "buttermilk",
+      "weightKg": 18084,
+      "market": "freight",
+      "playerLevel": 15,
+      "distanceKm": 531,
+      "durationMin": 382,
+      "payUsd": 11008,
+      "depots": null,
+      "notes": "Depots not recorded."
+    }
+  ]
+}

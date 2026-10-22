@@ -76,10 +76,10 @@ export function driveHours(km) {
  * Filters: { baseOnly, ownedDlcs: Set, allowHazmat, trailer }.
  * Cargo without a known weight is included with weight null.
  */
-export function possibleJobs(ds, { from, depot = null, to = null, baseOnly = false, ownedDlcs = null, allowHazmat = true, trailer = null } = {}) {
+export function possibleJobs(ds, { from, depot = null, to = null, baseOnly = false, ownedDlcs = null, allowHazmat = true, trailer = null, company = null } = {}) {
   const ix = indexDataset(ds);
   const out = [];
-  const sources = (ix.depotsByCity.get(from) ?? []).filter((i) => depot === null || i === depot);
+  const sources = (ix.depotsByCity.get(from) ?? []).filter((i) => (depot === null || i === depot) && (company === null || ds.depots[i].company === company));
   for (const si of sources) {
     const src = ds.depots[si];
     for (const offer of src.offers) {
@@ -155,18 +155,18 @@ export function featuredCity(ds, { date, hour }) {
  * `from` limits the start city (null = any city with jobs). Cargo without a known weight
  * is left out. Returns null when nothing matches.
  */
-export function randomJob(ds, { seed, from = null, baseOnly = false, ownedDlcs = null } = {}) {
+export function randomJob(ds, { seed, from = null, baseOnly = false, ownedDlcs = null, company = null } = {}) {
   const ix = indexDataset(ds);
   const rand = rng(seed >>> 0);
-  const starts = from ? [from] : ds.cities.map((c) => c.id).filter((id) => (ix.depotsByCity.get(id) ?? []).length);
+  const starts = from ? [from] : ds.cities.map((c) => c.id).filter((id) => (ix.depotsByCity.get(id) ?? []).some((i) => company === null || ds.depots[i].company === company));
   // Try a few start cities in seed order until one has a matching job.
   const order = [...starts];
   for (let i = order.length - 1; i > 0; i--) {
     const k = Math.floor(rand() * (i + 1));
     [order[i], order[k]] = [order[k], order[i]];
   }
-  for (const city of order.slice(0, 8)) {
-    const jobs = possibleJobs(ds, { from: city, baseOnly, ownedDlcs }).filter((j) => ix.cargo.get(j.cargo).w);
+  for (const city of order.slice(0, company ? order.length : 8)) {
+    const jobs = possibleJobs(ds, { from: city, baseOnly, ownedDlcs, company }).filter((j) => ix.cargo.get(j.cargo).w);
     if (!jobs.length) continue;
     const j = pick(rand, jobs);
     const cargo = ix.cargo.get(j.cargo);

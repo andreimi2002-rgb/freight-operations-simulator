@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Monogram from '../../components/Monogram.astro';
+import { getI18n } from '../../i18n/index.mjs';
+import { companies } from '../../lib/data.mjs';
+import { companiesByCategory, companyPath, companyCities } from '../../lib/companies.mjs';
+
+const { t } = getI18n();
+const groups = companiesByCategory(companies);
+const catLabel = (c) => { try { return t(`companies.categories.${c}`); } catch { return c; } };
+const depotCount = (co) => co.depotTypes.reduce((n, d) => n + d.cities.length, 0);
+---
+<BaseLayout title={t('companies.title')} description={t('companies.metaDescription')}>
+  <div class="container page">
+    <header class="head">
+      <p class="eyebrow">{t('companies.eyebrow')}</p>
+      <h1>{t('companies.title')}</h1>
+      <p class="soft lead">{t('companies.lead')}</p>
+    </header>
+
+    {groups.map((g) => (
+      <section aria-labelledby={`cat-${g.category}`}>
+        <header class="cat-head">
+          <h2 id={`cat-${g.category}`}>{catLabel(g.category)}</h2>
+          <span class="badge">{g.companies.length}</span>
+        </header>
+        <ul class="grid">
+          {g.companies.map((co) => (
+            <li>
+              <a class="co" href={companyPath(co)}>
+                <Monogram name={co.name} />
+                <span class="info">
+                  <span class="name">{co.fullName ?? co.name}</span>
+                  <span class="muted small">{co.industry}</span>
+                  <span class="mono small meta">{t('companies.depots', { n: depotCount(co) })} · {t('companies.cities', { n: companyCities(co).length })}</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .page { display: grid; gap: var(--space-7); padding-top: var(--space-7); }
+  .page > * { min-width: 0; }
+  .head { display: grid; gap: var(--space-3); }
+  .head h1 { font-size: clamp(30px, 5vw, 44px); text-wrap: balance; }
+  .lead { max-width: 64ch; font-size: 17px; }
+  .cat-head { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-3); margin: 0; padding: 0; list-style: none; }
+  .co { display: flex; gap: var(--space-3); align-items: flex-start; height: 100%; padding: var(--space-4); background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text); text-decoration: none; }
+  .co:hover { border-color: var(--border-input); }
+  .co:hover .name { color: var(--amber); }
+  .info { display: grid; gap: 2px; min-width: 0; }
+  .name { font-weight: 600; }
+  .small { font-size: 13px; }
+  .meta { color: var(--text-soft); }
+</style>
