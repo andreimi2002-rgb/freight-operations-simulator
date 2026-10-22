@@ -5,7 +5,7 @@ Freight World is an **ATS / ETS2 style job generator** on the real game map (cit
 
 First scope: American Truck Simulator, California and Nevada; full ATS cargo catalog. ETS2 comes later (shown as "soon").
 
-The previous product (FOS, real-world RO/HU/BG loads) is still published from `main` until the launch at the end of stage 3; its code is no longer in this branch (recover it from git history, tag `fos-final` at launch).
+Freight World is live from `main` since 2026-10-22. The previous product (FOS, real-world RO/HU/BG loads) is kept as the git tag `fos-final`.
 
 ## Stack
 - Astro (static output), Node 22.12+. `npm run build` writes `dist/`, which Netlify publishes. One HTML file per URL: every URL must work as a direct link.
@@ -30,7 +30,7 @@ The previous product (FOS, real-world RO/HU/BG loads) is still published from `m
 - Desktop and phone: no horizontal page scroll down to 320 px (wide tables scroll inside their wrapper), real `<a>`/`<button>`, targets at least 44 px, body text contrast at least 4.5:1, keyboard and touch.
 
 ## Working mode
-- One branch per stage, PR into `v2-freight-world`, reviewed on a Netlify Deploy Preview. `main` (the FOS site) stays unchanged until the launch at the end of stage 3; after that, PRs go to `main`.
+- One branch per stage or task, PR into `main` (production), reviewed on a Netlify Deploy Preview.
 - Nothing is merged without the owner's explicit approval.
 - Ask before important decisions (framework, data structure, deleting anything existing).
 - Update `CHANGELOG.md` and the version in `package.json` with every change; record plan-changing decisions in the decision log of `DEVELOPMENT_PLAN.md`.
