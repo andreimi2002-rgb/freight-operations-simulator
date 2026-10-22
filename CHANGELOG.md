@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.0.0-alpha.11 — 2026-10-22 (phase A: the job sheet as a game job offer)
+
+- **Job offer card** at the top of the job sheet, in the spirit of the in-game freight market: cargo name with our own skill icons (hazmat class, heavy, fragile, high value), from → to with company, depot type and game ID, distance, time to deliver, weight, trailer, deadline.
+- **Urgency and time to deliver** (Standard / Important / Urgent): a Freight World rule shown as simulated. The level is picked from the job id (60 / 30 / 10 %); the time allowed is the planned trip plus 50 / 25 / 10 % (at least 1 hour). Urgent and important jobs are marked on the departures boards too.
+- **Driving plan** under US Hours of Service (FMCSA, 49 CFR 395.3): at most 11 hours of driving, a 30-minute break after 8 hours, 10 hours off before driving again (stricter than the game’s sleep every 14 in-game hours). Timeline with clock times, distance per leg, breaks and rests located near the closest city on the route; the stops are numbered on the route map. The arrival time and the weather at arrival now include the breaks.
+- **Game time vs real time:** the planned trip in game hours and its real duration (1 in-game hour = 3 real minutes outside cities, Truck Simulator Wiki “Time Compression”).
+- Duplicate cards removed from the sheet (pick-up, delivery and route now live in the offer and the plan).
+- 6 new tests (94 in all).
+
 ## 2.0.0-alpha.10 — 2026-10-22 (map in the style of the in-game map)
 
 - **Map** at `/ats/map`, drawn by Freight World in a style close to the ATS in-game map: near-black background, dark land, grey state borders, pale amber roads seen from afar; zoomed in, Interstate and US highways turn bright amber and the others grey, with Interstate (red/blue), US (white shield) and state (white box) road shields; amber city dots and labels with a dark halo. Pan, wheel and pinch zoom, buttons; click a city to open it. No game files are used (owner asked SCS for permission to use the real map).

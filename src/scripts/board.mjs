@@ -3,6 +3,7 @@
 // Recomputed when the local hour changes and when the units change.
 import { departures, featuredCity, missionId } from '../engine/generator.mjs';
 import { missingDlcs } from './dlcs.mjs';
+import { urgencyOf } from '../engine/schedule.mjs';
 import { clockTime, localDateHour } from '../lib/ats.mjs';
 import { loadJobs, el, badges, depotLabel, distanceText, weightText, trailerName, cityPathOf } from './jobs.mjs';
 import { currentUnits, pageText, fill } from './units.mjs';
@@ -48,6 +49,8 @@ function render(box, ds, t) {
     const missing = missingDlcs(j.dlcs);
     const cargoCell = el('td', { class: 'b-cargo' }, el('a', { class: 'b-cargo-name', href: `/ats/mission/${missionId(ds, j)}`, title: t.board?.openJob, text: cargo.name }), badges(ds, j.cargo, j.dlcs, t));
     if (missing.length) cargoCell.append(el('span', { class: 'badge not-owned', text: t.dlcs?.notOwned }));
+    const urgency = urgencyOf(missionId(ds, j));
+    if (urgency !== 'standard') cargoCell.querySelector('.job-badges')?.prepend(el('span', { class: `badge urgency-${urgency}`, text: t.mission?.urgency?.[urgency] ?? urgency }));
     tbody.append(el('tr', { class: missing.length ? 'is-not-owned' : null },
       el('td', { class: 'b-time' }, time.text, time.nextDay ? el('small', { text: ` ${t.board?.nextDay ?? '+1'}` }) : null),
       cargoCell,

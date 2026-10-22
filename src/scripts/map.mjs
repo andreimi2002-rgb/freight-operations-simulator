@@ -9,7 +9,7 @@ import { pageText } from './units.mjs';
 
 const NS = 'http://www.w3.org/2000/svg';
 let dataPromise = null;
-const loadMap = () => (dataPromise ??= fetch('/data/ats-map.json').then((r) => { if (!r.ok) throw new Error('map'); return r.json(); }));
+export const loadMap = () => (dataPromise ??= fetch('/data/ats-map.json').then((r) => { if (!r.ok) throw new Error('map'); return r.json(); }));
 
 const svgEl = (tag, attrs = {}, parent = null) => {
   const n = document.createElementNS(NS, tag);
@@ -62,7 +62,7 @@ function boundsOf(points, pad) {
   return [Math.min(...xs) - pad, Math.min(...ys) - pad, Math.max(...xs) + pad, Math.max(...ys) + pad];
 }
 
-function render(box, data, t) {
+function render(box, data, t, opts = {}) {
   const mode = box.dataset.map;
   const cityById = new Map(data.cities.map((c) => [c.id, c]));
   const svg = svgEl('svg', { class: 'fw-map-svg', role: 'img', 'aria-label': box.dataset.mapLabel ?? '' });
@@ -87,8 +87,7 @@ function render(box, data, t) {
     const a = cityById.get(box.dataset.mapFrom);
     const b = cityById.get(box.dataset.mapTo);
     if (a && b) {
-      const graph = buildRoadGraph(data.roads);
-      const route = routeBetween(graph, a.xy, b.xy);
+      const route = opts.route ?? routeBetween(buildRoadGraph(data.roads), a.xy, b.xy);
       const pts = route ? route.points : [a.xy, b.xy];
       svgEl('path', { d: pathOf(pts), class: 'route-casing' }, world);
       svgEl('path', { d: pathOf(pts), class: route ? 'route' : 'route route-straight' }, world);
@@ -99,11 +98,20 @@ function render(box, data, t) {
     if (c) focus = [c.xy[0] - 220, c.xy[1] - 160, c.xy[0] + 220, c.xy[1] + 160];
   }
 
-  // Overlay (shields, cities) is drawn in screen units and re-positioned on zoom.
+  // Overlay (shields, cities, stops) is drawn in screen units and re-positioned on zoom.
   const overlay = svgEl('g', { class: 'overlay' }, svg);
   const shieldsG = svgEl('g', { class: 'shields' }, overlay);
   const spots = shieldSpots(data.roads).map((s) => ({ ...s, node: shieldsG.appendChild(shield(s.level, s.ref)) }));
   const citiesG = svgEl('g', { class: 'cities' }, overlay);
+  const stopsG = svgEl('g', { class: 'stops' }, overlay);
+  const stopNodes = (opts.stops ?? []).map((st) => {
+    const g = svgEl('g', { class: `stop stop-${st.kind}` }, stopsG);
+    svgEl('circle', { r: 9, class: 'stop-dot' }, g);
+    const label = svgEl('text', { y: 4, class: 'stop-text' }, g);
+    label.textContent = st.short ?? '';
+    svgEl('title', {}, g).textContent = st.label ?? '';
+    return { st, node: g };
+  });
   const highlight = new Set([box.dataset.mapCity, box.dataset.mapFrom, box.dataset.mapTo].filter(Boolean));
   const cityNodes = data.cities.map((c) => {
     const big = c.depots >= 9;
@@ -138,6 +146,10 @@ function render(box, data, t) {
     const toScreen = ([x, y]) => [x * view.k + view.x, y * view.k + view.y];
     for (const s of spots) {
       const [sx, sy] = toScreen(s.p);
+      s.node.setAttribute('transform', `translate(${sx.toFixed(1)},${sy.toFixed(1)})`);
+    }
+    for (const s of stopNodes) {
+      const [sx, sy] = toScreen(s.st.xy);
       s.node.setAttribute('transform', `translate(${sx.toFixed(1)},${sy.toFixed(1)})`);
     }
     for (const n of cityNodes) {
@@ -209,10 +221,10 @@ function render(box, data, t) {
 }
 
 /** Draw a map in an element (data-map attributes set). Used directly by the job sheet. */
-export function mountMap(box) {
+export function mountMap(box, opts = {}) {
   const t = pageText();
   return loadMap()
-    .then((data) => render(box, data, t))
+    .then((data) => render(box, data, t, opts))
     .catch(() => { box.textContent = t.map?.error ?? ''; box.classList.add('fw-map-error'); });
 }
 
