@@ -1,0 +1,122 @@
+---
+// Map in a style close to the in-game ATS map (drawn by us from public-domain data).
+import { getI18n } from '../i18n/index.mjs';
+
+interface Props {
+  mode?: 'full' | 'city' | 'route';
+  city?: string;
+  from?: string;
+  to?: string;
+  height?: string;
+  interactive?: boolean;
+  defer?: boolean;
+}
+const { mode = 'full', city, from, to, height = '560px', interactive = true, defer = false } = Astro.props;
+const { t } = getI18n();
+---
+<figure class="fw-map-wrap">
+  <div
+    class="fw-map"
+    style={`--map-h: ${height}`}
+    data-map={mode}
+    data-map-city={city}
+    data-map-from={from}
+    data-map-to={to}
+    data-map-interactive={interactive ? undefined : 'false'}
+    data-map-defer={defer ? '' : undefined}
+    data-map-label={t('map.label')}
+  >
+    <p class="fw-map-loading">{t('map.loading')}</p>
+  </div>
+  <figcaption class="muted">{t('map.caption')}</figcaption>
+</figure>
+
+<script>
+  import '../scripts/map.mjs';
+</script>
+
+<style>
+  /* Map palette taken from the look of the in-game map (dark land, grey borders, amber roads). */
+  .fw-map-wrap { margin: 0; display: grid; gap: var(--space-2); min-width: 0; }
+  .fw-map {
+    --m-bg: #0c0c0d;
+    --m-context: #121213;
+    --m-context-line: #2c2c2e;
+    --m-land: #1a1a1b;
+    --m-border: #6a6a6c;
+    --m-water: #0f1a24;
+    --m-road-far: #e3bc66;
+    --m-road-major: #f6b526;
+    --m-road-minor: #8d8d8f;
+    --m-city: #f5a524;
+    --m-halo: #000;
+    --m-route: #7dbbff;
+    position: relative;
+    height: var(--map-h);
+    max-height: 80vh;
+    min-height: 260px;
+    background: var(--m-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    touch-action: none;
+    user-select: none;
+  }
+  figcaption { font-size: 12px; }
+  .fw-map-loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--text-muted); margin: 0; }
+  .fw-map :global(.fw-map-svg) { display: block; width: 100%; height: 100%; cursor: grab; }
+  .fw-map :global(.fw-map-svg.dragging) { cursor: grabbing; }
+  .fw-map :global(.land-context) { fill: var(--m-context); stroke: var(--m-context-line); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+  .fw-map :global(.land) { fill: var(--m-land); }
+  .fw-map :global(.water) { fill: var(--m-water); }
+  .fw-map :global(.border) { fill: none; stroke: var(--m-border); stroke-width: 3.5; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+  .fw-map :global(.road) { fill: none; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; stroke: var(--m-road-far); stroke-width: 1.6; }
+  .fw-map :global(.zoomed .road-S), .fw-map :global(.zoomed .road-O) { stroke: var(--m-road-minor); stroke-width: 1.8; }
+  .fw-map :global(.zoomed .road-I), .fw-map :global(.zoomed .road-US) { stroke: var(--m-road-major); stroke-width: 3.6; }
+  .fw-map :global(.route-casing) { fill: none; stroke: #04121f; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+  .fw-map :global(.route) { fill: none; stroke: var(--m-route); stroke-width: 4.5; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+  .fw-map :global(.route-straight) { stroke-dasharray: 8 6; }
+  .fw-map :global(.shields) { display: none; }
+  .fw-map :global(.zoomed .shields) { display: inline; }
+  .fw-map :global(.sh-i-body) { fill: #1f3f9b; stroke: #fff; stroke-width: 1.2; }
+  .fw-map :global(.sh-i-top) { fill: #c6252c; }
+  .fw-map :global(.sh-us), .fw-map :global(.sh-s) { fill: #fff; stroke: #111; stroke-width: 1.2; }
+  .fw-map :global(.sh-text) { font: 700 9.5px var(--font-sans); text-anchor: middle; fill: #111; }
+  .fw-map :global(.shield-I .sh-text) { fill: #fff; }
+  .fw-map :global(.city-dot) { fill: var(--m-city); stroke: var(--m-halo); stroke-width: 1.2; }
+  .fw-map :global(.city-label) {
+    font: 600 13px var(--font-sans);
+    letter-spacing: 0.06em;
+    fill: var(--m-city);
+    stroke: var(--m-halo);
+    stroke-width: 3px;
+    paint-order: stroke;
+  }
+  .fw-map :global(.city-big .city-label) { font-size: 16px; }
+  .fw-map :global(.city-small-label .city-label) { font-size: 11px; stroke-width: 2.5px; }
+  .fw-map :global(.city-hl .city-dot) { fill: #fff; r: 6px; }
+  .fw-map :global(.city-hl .city-label) { fill: #fff; font-size: 16px; }
+  .fw-map :global(.city:hover .city-label), .fw-map :global(.city:focus .city-label) { fill: #fff; }
+  .fw-map :global(.city:focus-visible) { outline: none; }
+  .fw-map :global(.city:focus-visible .city-dot) { stroke: #fff; stroke-width: 3; }
+  .fw-map :global(.fw-map-controls) {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    display: grid;
+    gap: 6px;
+  }
+  .fw-map :global(.fw-map-controls button) {
+    width: 44px;
+    height: 44px;
+    background: rgba(18, 24, 33, 0.92);
+    color: var(--text);
+    border: 1px solid var(--border-input);
+    border-radius: 10px;
+    font: 600 20px var(--font-sans);
+    cursor: pointer;
+  }
+  .fw-map :global(.fw-map-controls button:hover) { border-color: var(--amber); }
+  .fw-map :global(.fw-map-error) { display: grid; place-items: center; color: var(--text-muted); }
+  @media (max-width: 719px) { .fw-map { max-height: 70vh; } }
+</style>

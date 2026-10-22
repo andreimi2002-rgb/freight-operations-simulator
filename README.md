@@ -4,7 +4,11 @@ An ATS / ETS2 style job generator built on the real game map, with live city pag
 
 Live at https://freight-operations-simulator.netlify.app (from `main`). The plan is in [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md) (Romanian) and the rules for contributors and tools in [AGENTS.md](AGENTS.md). The previous product, the Freight Operations Simulator (FOS), is kept as the git tag `fos-final`.
 
-## Current version: 2.0.0-alpha.9 (company pages)
+## Current version: 2.0.0-alpha.10 (map)
+
+- Map in the style of the in-game map (`/ats/map`), on city pages and with the route on job sheets; drawn from Natural Earth (public domain), `npm run map:ats`.
+
+### Company pages
 
 - A page for every company on the starting map (`/ats/company/<id>`): depots, cargo, where its cargo goes and who supplies it.
 
@@ -50,6 +54,7 @@ npm test          # node --test
 npm run collect:ats   # refresh data/ats/ from the wiki (cached)
 npm run photos:candidates   # photo candidates per city from Wikimedia Commons
 npm run distances:ats       # estimated road distances between cities (OSRM)
+npm run map:ats             # map layers from Natural Earth (data/map/ats-map.json)
 ```
 
 ## Structure

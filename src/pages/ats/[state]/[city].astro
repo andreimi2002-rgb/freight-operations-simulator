@@ -4,6 +4,7 @@ import CityHero from '../../../components/CityHero.astro';
 import WeatherIcons from '../../../components/WeatherIcons.astro';
 import DeparturesBoard from '../../../components/DeparturesBoard.astro';
 import JobGenerator from '../../../components/JobGenerator.astro';
+import AtsMap from '../../../components/AtsMap.astro';
 import { getI18n } from '../../../i18n/index.mjs';
 import { cities, companies, cargo, photos, cityById, stateByCode } from '../../../lib/data.mjs';
 import { cityParams, cityPath, cityCompanies, cityCargoCounts } from '../../../lib/ats.mjs';
@@ -97,6 +98,11 @@ const cards = [
         )}
       </section>
     </div>
+
+    <section aria-labelledby="citymap-title">
+      <h2 id="citymap-title">{t('map.cityMapTitle')}</h2>
+      <AtsMap mode="city" city={city.id} height="420px" />
+    </section>
 
     <section aria-labelledby="companies-title">
       <h2 id="companies-title">{t('city.companiesTitle')}</h2>
