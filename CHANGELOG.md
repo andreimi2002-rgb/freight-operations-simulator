@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.0-alpha.12 — 2026-10-22 (phase B1: cargo, trailer and truck pages)
+
+- **Cargo pages** (`/ats/cargo/<id>`, 295): weight, value per km (and the second value for tank or bulk trailers), hazmat class and UN number, special cargo, dynamic loading, DLC, trailers; **who offers it** and **who accepts it** (companies, depot types, cities, DLC sections); **where it can go** (number of city pairs, the five longest and shortest, each opening the planner); a job generator limited to that cargo; wiki link. Cargo list `/ats/cargo` with a name filter.
+- **Trailer pages** (`/ats/trailer/<id>`, 32): dealer models with price, buyable or company trailer, and every cargo it carries. List `/ats/trailers`.
+- **Truck pages** (`/ats/truck/<id>`, 19): make, engines with horsepower, transmissions, cabs, cities with a dealer on the starting map. List `/ats/trucks`.
+- Links to them from the job sheet (cargo, trailer, recommended trucks), city and company pages (every cargo chip) and "Cargo" in the header; catalog tabs between cargo, trailers and trucks.
+- The site now has 474 pages. 6 new tests (102 in all).
+
 ## 2.0.0-alpha.11 — 2026-10-22 (phase A: job offer, driving plan, job chain, map icons)
 
 - **Job offer card** at the top of the job sheet, in the spirit of the in-game freight market: cargo name with our own skill icons (hazmat class, heavy, fragile, high value), from → to with company, depot type and game ID, distance, time to deliver, weight, trailer, deadline.

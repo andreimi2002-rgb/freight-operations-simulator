@@ -21,7 +21,8 @@
     "cities": "Cities",
     "planner": "Planner",
     "companies": "Companies",
-    "map": "Map"
+    "map": "Map",
+    "cargo": "Cargo"
   },
   "game": {
     "label": "Game",
@@ -34,7 +35,7 @@
   },
   "stage": {
     "label": "Stage {n}",
-    "current": "Stage 4 — Job sheets",
+    "current": "Phase B — Catalog",
     "from": "From stage {n}"
   },
   "footer": {
@@ -363,7 +364,8 @@
     "openPlanner": "All jobs on this route",
     "estimateNote": "Distance and drive time are estimates from real roads (© OpenStreetMap contributors, ODbL) at 55 mph. Pay is not shown: the game’s pay inputs are not public.",
     "openSheet": "Open the job sheet",
-    "leadCompany": "One real job from a depot of {company}, picked at random."
+    "leadCompany": "One real job from a depot of {company}, picked at random.",
+    "leadCargo": "One real job carrying {cargo}, picked at random."
   },
   "dlcs": {
     "button": "My DLCs",
@@ -514,5 +516,94 @@
     "reset": "Fit the map",
     "routeTitle": "Route",
     "cityMapTitle": "On the map"
+  },
+  "catalog": {
+    "tabs": {
+      "cargo": "Cargo",
+      "trailers": "Trailers",
+      "trucks": "Trucks"
+    },
+    "tabsLabel": "Catalog",
+    "cargoTitle": "American Truck Simulator cargo",
+    "cargoMeta": "Every cargo in American Truck Simulator: weight, value per km, trailers, hazmat class and who offers or accepts it.",
+    "cargoLead": "The complete cargo catalog of the game ({n} cargo). Filter by name, then open one to see who offers it, who accepts it and where it can go.",
+    "filter": "Filter by name",
+    "filterPlaceholder": "e.g. butter, steel, excavator",
+    "cols": {
+      "name": "Cargo",
+      "weight": "Weight",
+      "value": "Value / km",
+      "trailers": "Trailers",
+      "dlc": "DLC",
+      "flags": "Special"
+    },
+    "baseGame": "Base game",
+    "shown": "{n} shown",
+    "trailersTitle": "American Truck Simulator trailers",
+    "trailersMeta": "Trailer types of American Truck Simulator: dealer models, prices and the cargo each one carries.",
+    "trailersLead": "Every trailer type the cargo list uses ({n}), with the dealer models and the cargo it carries.",
+    "trucksTitle": "American Truck Simulator trucks",
+    "trucksMeta": "Trucks of American Truck Simulator: engines, horsepower, cabs and where to buy them on the starting map.",
+    "trucksLead": "The released trucks of the game ({n}), with their engines and the cities with a dealer.",
+    "cargoCount": "{n} cargo",
+    "models": "{n} models",
+    "noModels": "No dealer model",
+    "upToHp": "up to {hp} hp",
+    "dealersOnMap": "{n} dealer cities on the map"
+  },
+  "cargoPage": {
+    "meta": "{name} in American Truck Simulator: weight, value, trailers, hazmat, who offers and accepts it, and the routes it can take.",
+    "breadcrumb": "Cargo",
+    "weight": "Weight",
+    "value": "Value per km",
+    "valueAlt": "{v} on {note}",
+    "trailers": "Trailers",
+    "dlc": "Comes with",
+    "hazmat": "Hazmat",
+    "un": "UN number",
+    "unExpected": "{un} in game (the wiki gives {expected})",
+    "special": "Special cargo",
+    "dynamic": "Dynamic loading",
+    "yes": "Yes",
+    "no": "No",
+    "none": "None",
+    "unknown": "Unknown",
+    "offeredTitle": "Offered by",
+    "acceptedTitle": "Accepted by",
+    "nobody": "Nobody on the starting map.",
+    "withDlc": "with {dlc}",
+    "routesTitle": "Where it can go",
+    "routesIntro": "{n} city pairs on the starting map where a depot offers it and a depot in the other city accepts it.",
+    "longest": "Longest",
+    "shortest": "Shortest",
+    "generateTitle": "Generate a job with {name}",
+    "wikiLink": "{name} on Truck Simulator Wiki",
+    "valueNote": "Value per km is the unit_reward_per_km of the game as listed on the wiki."
+  },
+  "trailerPage": {
+    "meta": "{name} trailer in American Truck Simulator: dealer models, prices and every cargo it carries.",
+    "breadcrumb": "Trailers",
+    "modelsTitle": "At the trailer dealer",
+    "noModels": "No dealer model on the wiki for this type (company trailer or not documented).",
+    "price": "Price",
+    "buyable": "Buyable",
+    "notBuyable": "Company trailer",
+    "articulated": "Articulated",
+    "cargoTitle": "Cargo it carries ({n})",
+    "wikiLink": "Trailer page on Truck Simulator Wiki"
+  },
+  "truckPage": {
+    "meta": "{name} in American Truck Simulator: engines, horsepower, transmissions, cabs and dealers on the starting map.",
+    "breadcrumb": "Trucks",
+    "make": "Make",
+    "maxHp": "Most powerful engine",
+    "engines": "Engines",
+    "transmissions": "Transmissions",
+    "cabs": "Cabs",
+    "added": "Added",
+    "dealersTitle": "Where to buy it on the starting map",
+    "noDealers": "No dealer for this make on the starting map.",
+    "wikiLink": "{name} on Truck Simulator Wiki",
+    "electric": "Electric"
   }
 }

@@ -82,12 +82,12 @@ const firstCity = company.depotTypes[0].cities[0];
                   <details>
                     <summary>{label} <span class="count mono">{total}</span></summary>
                     {d[side].length
-                      ? <ul class="chips small-chips">{names(d[side]).map((c) => <li class="chip">{c.name}</li>)}</ul>
+                      ? <ul class="chips small-chips">{names(d[side]).map((c) => <li><a class="chip chip-cargo" href={`/ats/cargo/${c.id}`}>{c.name}</a></li>)}</ul>
                       : <p class="muted small">{t('city.nothing')}</p>}
                     {dlc.map((x) => (
                       <div class="dlc-group">
                         <span class="badge badge-blue">{t('city.withDlc', { dlc: x.name })}</span>
-                        <ul class="chips small-chips">{names(x[side]).map((c) => <li class="chip">{c.name}</li>)}</ul>
+                        <ul class="chips small-chips">{names(x[side]).map((c) => <li><a class="chip chip-cargo" href={`/ats/cargo/${c.id}`}>{c.name}</a></li>)}</ul>
                       </div>
                     ))}
                   </details>
@@ -164,6 +164,8 @@ const firstCity = company.depotTypes[0].cities[0];
   .chip { display: inline-flex; align-items: center; min-height: 32px; padding: 0 var(--space-3); border: 1px solid var(--border-input); border-radius: 999px; background: var(--panel-deep); font-size: 14px; color: var(--text); }
   .chip-link { min-height: var(--target); text-decoration: none; }
   .chip-link:hover { border-color: var(--amber); color: var(--amber); }
+  .chip-cargo { text-decoration: none; }
+  .chip-cargo:hover { border-color: var(--amber); color: var(--amber); }
   .small-chips .chip { min-height: 28px; font-size: 13px; color: var(--text-soft); }
   .plain { margin: 0; padding-left: 1.1em; display: grid; gap: var(--space-1); }
   .cargo-cols { display: grid; gap: var(--space-2); }

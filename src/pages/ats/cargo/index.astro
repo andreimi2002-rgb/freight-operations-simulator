@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CatalogTabs from '../../../components/CatalogTabs.astro';
+import { getI18n } from '../../../i18n/index.mjs';
+import en from '../../../i18n/en.json';
+import { cargo, trailers } from '../../../lib/data.mjs';
+import { cargoPath } from '../../../lib/catalog.mjs';
+
+const { t } = getI18n();
+const trailerName = new Map(trailers.map((x) => [x.id, x.name]));
+const list = [...cargo].sort((a, b) => a.name.localeCompare(b.name));
+const fmt = (n) => n.toLocaleString('en-US');
+const weight = (c) => (c.weightLb ? (c.weightLb.min === c.weightLb.max ? `${fmt(c.weightLb.min)} lb` : `${fmt(c.weightLb.min)}–${fmt(c.weightLb.max)} lb`) : '–');
+const value = (c) => (c.valuePerKm != null ? c.valuePerKm : c.valuePerKmRange ? `${c.valuePerKmRange.min}–${c.valuePerKmRange.max}` : '–');
+const dlcName = (c) => (c.dlc === 'base' ? t('catalog.baseGame') : en.dlcNames[c.dlc] ?? c.dlc);
+const flagText = (c) => [c.hazmatClass ? `ADR ${c.hazmatClass}` : null, ...c.flags.filter((f) => f !== 'adr').map((f) => t(`board.${f === 'high-value' ? 'highValue' : f}`))].filter(Boolean).join(' · ');
+---
+<BaseLayout title={t('catalog.cargoTitle')} description={t('catalog.cargoMeta')}>
+  <div class="container page">
+    <header class="head">
+      <p class="eyebrow">{t('atsIndex.eyebrow')}</p>
+      <h1>{t('catalog.cargoTitle')}</h1>
+      <p class="soft lead">{t('catalog.cargoLead', { n: list.length })}</p>
+      <CatalogTabs active="cargo" />
+    </header>
+
+    <div class="filter">
+      <label for="cargo-filter">{t('catalog.filter')}</label>
+      <input id="cargo-filter" type="search" placeholder={t('catalog.filterPlaceholder')} autocomplete="off" />
+      <span class="muted small mono" id="cargo-count" aria-live="polite">{t('catalog.shown', { n: list.length })}</span>
+    </div>
+
+    <div class="table-scroll wrap">
+      <table id="cargo-table">
+        <thead>
+          <tr>
+            <th scope="col">{t('catalog.cols.name')}</th>
+            <th scope="col">{t('catalog.cols.weight')}</th>
+            <th scope="col">{t('catalog.cols.value')}</th>
+            <th scope="col">{t('catalog.cols.trailers')}</th>
+            <th scope="col">{t('catalog.cols.flags')}</th>
+            <th scope="col">{t('catalog.cols.dlc')}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {list.map((c) => (
+            <tr data-name={c.name.toLowerCase()}>
+              <th scope="row"><a href={cargoPath(c)}>{c.name}</a></th>
+              <td class="num">{weight(c)}</td>
+              <td class="num">{value(c)}</td>
+              <td class="soft">{c.trailerTypes.map((id) => trailerName.get(id) ?? id).join(', ')}</td>
+              <td class="soft">{flagText(c)}</td>
+              <td class="soft">{dlcName(c)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</BaseLayout>
+
+<script type="application/json" id="cargo-count-text" set:html={JSON.stringify(en.catalog.shown)}></script>
+<script>
+  const input = document.getElementById('cargo-filter');
+  const rows = [...document.querySelectorAll('#cargo-table tbody tr')];
+  const count = document.getElementById('cargo-count');
+  const template = JSON.parse(document.getElementById('cargo-count-text').textContent);
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let n = 0;
+    for (const r of rows) {
+      const show = !q || r.dataset.name.includes(q);
+      r.hidden = !show;
+      if (show) n++;
+    }
+    count.textContent = template.replace('{n}', String(n));
+  });
+</script>
+
+<style>
+  .page { display: grid; gap: var(--space-5); padding-top: var(--space-7); }
+  .page > * { min-width: 0; }
+  .head { display: grid; gap: var(--space-3); }
+  .head h1 { font-size: clamp(30px, 5vw, 44px); text-wrap: balance; }
+  .lead { max-width: 66ch; font-size: 17px; }
+  .filter { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3); }
+  .filter label { font-size: 13px; font-weight: 600; color: var(--text-soft); }
+  .filter input { min-height: var(--target); flex: 1 1 240px; max-width: 420px; padding: 0 var(--space-3); background: var(--panel-deep); color: var(--text); border: 1px solid var(--border-input); border-radius: var(--radius-sm); font: inherit; }
+  .small { font-size: 12px; }
+  .wrap { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+  table { width: 100%; min-width: 860px; border-collapse: collapse; font-size: 14px; }
+  thead th { padding: var(--space-3) var(--space-4); text-align: left; font: 500 12px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); border-bottom: 1px solid var(--border); white-space: nowrap; }
+  tbody th, tbody td { padding: var(--space-2) var(--space-4); text-align: left; border-bottom: 1px solid var(--row-line); vertical-align: top; }
+  tbody th a { display: inline-flex; align-items: center; min-height: 32px; font-weight: 600; color: var(--text); }
+  tbody th a:hover { color: var(--amber); }
+  .num { font-family: var(--font-mono); white-space: nowrap; font-variant-numeric: tabular-nums; padding-top: var(--space-3); }
+  td.soft { padding-top: var(--space-3); }
+</style>

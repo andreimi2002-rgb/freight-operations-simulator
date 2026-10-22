@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CatalogTabs from '../../components/CatalogTabs.astro';
+import { getI18n } from '../../i18n/index.mjs';
+import { trailers } from '../../lib/data.mjs';
+import { trailerPath } from '../../lib/catalog.mjs';
+
+const { t } = getI18n();
+const list = [...trailers].sort((a, b) => b.cargo.length - a.cargo.length || a.name.localeCompare(b.name));
+---
+<BaseLayout title={t('catalog.trailersTitle')} description={t('catalog.trailersMeta')}>
+  <div class="container page">
+    <header class="head">
+      <p class="eyebrow">{t('atsIndex.eyebrow')}</p>
+      <h1>{t('catalog.trailersTitle')}</h1>
+      <p class="soft lead">{t('catalog.trailersLead', { n: list.length })}</p>
+      <CatalogTabs active="trailers" />
+    </header>
+    <ul class="grid">
+      {list.map((tr) => (
+        <li>
+          <a class="item" href={trailerPath(tr)}>
+            <span class="name">{tr.name}</span>
+            <span class="mono small soft">{t('catalog.cargoCount', { n: tr.cargo.length })}</span>
+            <span class="small muted">{tr.models.length ? `${t('catalog.models', { n: tr.models.length })}: ${tr.models.map((m) => m.name).join(', ')}` : t('catalog.noModels')}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .page { display: grid; gap: var(--space-5); padding-top: var(--space-7); }
+  .page > * { min-width: 0; }
+  .head { display: grid; gap: var(--space-3); }
+  .head h1 { font-size: clamp(30px, 5vw, 44px); text-wrap: balance; }
+  .lead { max-width: 66ch; font-size: 17px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--space-3); margin: 0; padding: 0; list-style: none; }
+  .item { display: grid; gap: 2px; height: 100%; padding: var(--space-4); background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text); text-decoration: none; }
+  .item:hover { border-color: var(--border-input); }
+  .item:hover .name { color: var(--amber); }
+  .name { font-weight: 600; font-size: 17px; }
+  .small { font-size: 13px; }
+</style>

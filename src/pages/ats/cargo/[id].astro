@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import JobGenerator from '../../../components/JobGenerator.astro';
+import { getI18n } from '../../../i18n/index.mjs';
+import en from '../../../i18n/en.json';
+import { cargo, companies, trailers, distances, cityById } from '../../../lib/data.mjs';
+import { cargoDepots, cargoRoutes, trailerPath } from '../../../lib/catalog.mjs';
+import { companyPath } from '../../../lib/companies.mjs';
+import { cityPath } from '../../../lib/ats.mjs';
+
+export function getStaticPaths() {
+  return cargo.map((c) => ({ params: { id: c.id }, props: { cargoId: c.id } }));
+}
+
+const { t } = getI18n();
+const c = cargo.find((x) => x.id === Astro.props.cargoId);
+const trailerById = new Map(trailers.map((x) => [x.id, x]));
+const fmt = (n) => n.toLocaleString('en-US');
+const weight = c.weightLb ? (c.weightLb.min === c.weightLb.max ? `${fmt(c.weightLb.min)} lb` : `${fmt(c.weightLb.min)} – ${fmt(c.weightLb.max)} lb`) : t('cargoPage.unknown');
+const value = c.valuePerKm != null ? String(c.valuePerKm) : c.valuePerKmRange ? `${c.valuePerKmRange.min} – ${c.valuePerKmRange.max}` : t('cargoPage.unknown');
+const dlc = c.dlc === 'base' ? t('catalog.baseGame') : en.dlcNames[c.dlc] ?? c.dlc;
+const special = [...c.flags.filter((f) => f !== 'adr').map((f) => t(`board.${f === 'high-value' ? 'highValue' : f}`))];
+const offered = cargoDepots(c.id, companies, 'provides');
+const accepted = cargoDepots(c.id, companies, 'accepts');
+const routes = cargoRoutes(c.id, companies, distances);
+const mi = (km) => `${fmt(Math.round(km / 1.609344))} mi`;
+const cityLabel = (id) => { const x = cityById.get(id); return x ? `${x.name}, ${x.state}` : id; };
+---
+<BaseLayout title={c.name} description={t('cargoPage.meta', { name: c.name })}>
+  <nav class="container crumbs" aria-label={t('cargoPage.breadcrumb')}>
+    <a href="/ats/cargo">{t('cargoPage.breadcrumb')}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{c.name}</span>
+  </nav>
+
+  <div class="container page">
+    <header class="head">
+      <p class="eyebrow">{dlc}</p>
+      <h1>{c.name}</h1>
+    </header>
+
+    <ul class="facts">
+      <li class="fact"><span class="eyebrow">{t('cargoPage.weight')}</span><span class="fact-value mono">{weight}</span></li>
+      <li class="fact"><span class="eyebrow">{t('cargoPage.value')}</span><span class="fact-value mono">{value}</span>
+        {c.valuePerKmAlt?.map((a) => <span class="small muted">{t('cargoPage.valueAlt', { v: a.value, note: a.note ?? '' })}</span>)}
+      </li>
+      <li class="fact"><span class="eyebrow">{t('cargoPage.hazmat')}</span><span class="fact-value">{c.hazmatClass ? `ADR ${c.hazmatClass}` : t('cargoPage.none')}</span>
+        {c.un && <span class="small muted">{c.unExpected ? t('cargoPage.unExpected', { un: c.un, expected: c.unExpected }) : `${t('cargoPage.un')} ${c.un}`}</span>}
+      </li>
+      <li class="fact"><span class="eyebrow">{t('cargoPage.special')}</span><span class="fact-value">{special.length ? special.join(' · ') : t('cargoPage.none')}</span></li>
+      <li class="fact"><span class="eyebrow">{t('cargoPage.dynamic')}</span><span class="fact-value">{c.dynamicLoading === true ? t('cargoPage.yes') : c.dynamicLoading === false ? t('cargoPage.no') : t('cargoPage.unknown')}</span></li>
+      <li class="fact"><span class="eyebrow">{t('cargoPage.dlc')}</span><span class="fact-value">{dlc}</span></li>
+    </ul>
+
+    <section aria-labelledby="trailers-title">
+      <h2 id="trailers-title">{t('cargoPage.trailers')}</h2>
+      <ul class="chips">
+        {c.trailerTypes.map((id) => {
+          const tr = trailerById.get(id);
+          return <li><a class="chip chip-link" href={trailerPath({ id })}>{tr?.name ?? id}</a></li>;
+        })}
+      </ul>
+    </section>
+
+    <div class="two">
+      {[['offered', offered, t('cargoPage.offeredTitle')], ['accepted', accepted, t('cargoPage.acceptedTitle')]].map(([key, list, title]) => (
+        <section aria-labelledby={`${key}-title`}>
+          <h2 id={`${key}-title`}>{title} <span class="badge">{list.length}</span></h2>
+          {list.length === 0
+            ? <p class="muted">{t('cargoPage.nobody')}</p>
+            : <ul class="depots">
+                {list.map((d) => (
+                  <li class="depot">
+                    <a class="co" href={companyPath(d.company)}>{d.company.fullName ?? d.company.name}</a>
+                    <span class="small soft">{d.type}{d.dlc && <span class="badge badge-blue">{t('cargoPage.withDlc', { dlc: d.dlc })}</span>}</span>
+                    <span class="cities">{d.cities.map((cid, i) => <><a href={cityPath(cityById.get(cid))}>{cityLabel(cid)}</a>{i < d.cities.length - 1 ? ', ' : ''}</>)}</span>
+                  </li>
+                ))}
+              </ul>}
+        </section>
+      ))}
+    </div>
+
+    {routes.count > 0 && (
+      <section aria-labelledby="routes-title">
+        <h2 id="routes-title">{t('cargoPage.routesTitle')}</h2>
+        <p class="soft intro">{t('cargoPage.routesIntro', { n: routes.count })}</p>
+        <div class="two">
+          {[['longest', routes.longest], ['shortest', routes.shortest]].map(([key, list]) => (
+            <div class="card-deep">
+              <h3 class="eyebrow">{t(`cargoPage.${key}`)}</h3>
+              <ol class="routes">
+                {list.map((r) => (
+                  <li><a href={`/ats/planner?from=${r.from}&to=${r.to}`}>{cityLabel(r.from)} → {cityLabel(r.to)}</a> <span class="mono small soft">{mi(r.km)}</span></li>
+                ))}
+              </ol>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {offered.length > 0 && routes.count > 0 && c.weightLb && <JobGenerator cargo={{ id: c.id, name: c.name }} />}
+
+    <p class="small"><a href={`https://trucksimulator.wiki.gg/wiki/${encodeURIComponent(c.name.replace(/ /g, '_'))}`} rel="noopener">{t('cargoPage.wikiLink', { name: c.name })}</a></p>
+    <p class="muted small">{t('cargoPage.valueNote')}</p>
+  </div>
+</BaseLayout>
+
+<style>
+  .crumbs { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; font-size: 14px; color: var(--text-muted); }
+  .crumbs a { display: inline-flex; align-items: center; min-height: var(--target); color: var(--text-soft); }
+  .page { display: grid; gap: var(--space-6); padding-top: var(--space-4); }
+  .page > * { min-width: 0; }
+  .head { display: grid; gap: var(--space-2); }
+  .head h1 { font-size: clamp(30px, 5vw, 46px); text-wrap: balance; }
+  h2 { margin-bottom: var(--space-3); display: flex; align-items: center; gap: var(--space-2); }
+  .intro { margin-bottom: var(--space-4); }
+  .small { font-size: 13px; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: var(--space-3); margin: 0; padding: 0; list-style: none; }
+  .fact { display: grid; gap: var(--space-1); align-content: start; padding: var(--space-4); background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-md); }
+  .fact-value { font-size: 17px; font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+  .chip-link { display: inline-flex; align-items: center; min-height: var(--target); padding: 0 var(--space-3); border: 1px solid var(--border-input); border-radius: 999px; background: var(--panel-deep); color: var(--text); text-decoration: none; }
+  .chip-link:hover { border-color: var(--amber); color: var(--amber); }
+  .two { display: grid; gap: var(--space-5); }
+  @media (min-width: 900px) { .two { grid-template-columns: 1fr 1fr; } }
+  .two > * { min-width: 0; }
+  .depots { display: grid; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+  .depot { display: grid; gap: 2px; padding: var(--space-3) var(--space-4); background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-sm); }
+  .co { font-weight: 600; color: var(--text); display: inline-flex; min-height: 28px; align-items: center; }
+  .co:hover { color: var(--amber); }
+  .cities { font-size: 14px; }
+  .cities a { color: var(--text-soft); }
+  .routes { margin: var(--space-2) 0 0; padding-left: 1.2em; display: grid; gap: var(--space-1); }
+  .routes a { color: var(--text); }
+  .routes a:hover { color: var(--amber); }
+</style>

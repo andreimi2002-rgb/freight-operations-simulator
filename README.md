@@ -4,7 +4,11 @@ An ATS / ETS2 style job generator built on the real game map, with live city pag
 
 Live at https://freight-operations-simulator.netlify.app (from `main`). The plan is in [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md) (Romanian) and the rules for contributors and tools in [AGENTS.md](AGENTS.md). The previous product, the Freight Operations Simulator (FOS), is kept as the git tag `fos-final`.
 
-## Current version: 2.0.0-alpha.11 (job offer, urgency, driving plan)
+## Current version: 2.0.0-alpha.12 (cargo, trailer and truck pages)
+
+- A page for every cargo (who offers it, who accepts it, where it can go), trailer and truck; lists with filter.
+
+### Phase A
 
 - The job sheet opens with a job offer card like the in-game market, with urgency and time to deliver, a driving plan under US Hours of Service (breaks and rests shown on the route map) and the next jobs from the destination.
 - Map icons: city facilities and companies when zoomed in.

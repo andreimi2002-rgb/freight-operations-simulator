@@ -75,7 +75,7 @@ if (root) {
     m('fromCompany').href = `/ats/company/${src.company}`;
     m('toCompany').textContent = dst.type ? `${ds.companyById.get(dst.company).name} · ${dst.type}` : ds.companyById.get(dst.company).name;
     m('toCompany').href = `/ats/company/${dst.company}`;
-    m('cargoName').textContent = cargo.name;
+    m('cargoName').replaceChildren(el('a', { href: `/ats/cargo/${cargo.id}`, class: 'cargo-link', text: cargo.name }));
     const skills = m('skills');
     skills.replaceChildren();
     const skill = (id, title, extra) => {
@@ -191,7 +191,7 @@ if (root) {
 
     // Trailer
     const trailerIds = job.trailer ? [job.trailer] : cargo.trailers;
-    m('trailerName').textContent = job.trailer ? trailerName(ds, job.trailer) : t.mission?.anyTrailer;
+    m('trailerName').replaceChildren(job.trailer ? el('a', { href: `/ats/trailer/${job.trailer}`, text: trailerName(ds, job.trailer) }) : document.createTextNode(t.mission?.anyTrailer ?? ''));
     const models = m('trailerModels');
     models.replaceChildren();
     for (const id of trailerIds) {
@@ -211,7 +211,7 @@ if (root) {
     // Truck
     const rec = recommendTrucks(ds, job);
     m('truckNeed').textContent = fill(t.mission?.truckNeed, { hp: rec.needHp });
-    m('trucks').replaceChildren(...rec.trucks.map((tk) => el('li', {}, `${tk.name} · ${fill(t.mission?.hp, { hp: tk.hp })}`, tk.dealerHere ? el('span', { class: 'badge badge-green', text: fill(t.mission?.dealerHere, { city: fromCity.name }) }) : null)));
+    m('trucks').replaceChildren(...rec.trucks.map((tk) => el('li', {}, el('a', { href: `/ats/truck/${tk.id}`, text: tk.name }), ` · ${fill(t.mission?.hp, { hp: tk.hp })}`, tk.dealerHere ? el('span', { class: 'badge badge-green', text: fill(t.mission?.dealerHere, { city: fromCity.name }) }) : null)));
     const dealerLine = (c) => (c.dealers?.length ? fill(t.mission?.dealersIn, { city: c.name, list: c.dealers.join(', ') }) : fill(t.mission?.noDealers, { city: c.name }));
     m('dealers').textContent = `${dealerLine(fromCity)}. ${dealerLine(toCity)}.`;
 

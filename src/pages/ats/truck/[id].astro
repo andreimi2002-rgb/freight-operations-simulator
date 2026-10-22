@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getI18n } from '../../../i18n/index.mjs';
+import { trucks, cities } from '../../../lib/data.mjs';
+import { dealerCities } from '../../../lib/catalog.mjs';
+import { cityPath } from '../../../lib/ats.mjs';
+
+export function getStaticPaths() {
+  return trucks.map((x) => ({ params: { id: x.id }, props: { truckId: x.id } }));
+}
+
+const { t } = getI18n();
+const tk = trucks.find((x) => x.id === Astro.props.truckId);
+const dealers = dealerCities(tk.manufacturer, cities).sort((a, b) => a.name.localeCompare(b.name));
+const engines = tk.engines.map((e) => (e.name ? `${e.name}${e.hpMax ? `, ${e.hpMin === e.hpMax ? e.hpMax : `${e.hpMin}–${e.hpMax}`} hp` : ''}` : `${e.hpMin}–${e.hpMax} hp`));
+---
+<BaseLayout title={tk.name} description={t('truckPage.meta', { name: tk.name })}>
+  <nav class="container crumbs" aria-label={t('truckPage.breadcrumb')}>
+    <a href="/ats/trucks">{t('truckPage.breadcrumb')}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{tk.name}</span>
+  </nav>
+  <div class="container page">
+    <header class="head">
+      <p class="eyebrow">{tk.manufacturer}</p>
+      <h1>{tk.name}</h1>
+    </header>
+
+    <ul class="facts">
+      <li class="fact"><span class="eyebrow">{t('truckPage.make')}</span><span class="fact-value">{tk.manufacturer}</span></li>
+      <li class="fact"><span class="eyebrow">{t('truckPage.maxHp')}</span><span class="fact-value mono">{tk.maxHp} hp</span></li>
+      {tk.dateAdded && <li class="fact"><span class="eyebrow">{t('truckPage.added')}</span><span class="fact-value">{tk.dateAdded}</span></li>}
+    </ul>
+
+    <div class="two">
+      {[['engines', engines], ['transmissions', tk.transmissions], ['cabs', tk.bodyStyles]].filter(([, l]) => l.length).map(([key, l]) => (
+        <section class="card" aria-labelledby={`${key}-title`}>
+          <h2 id={`${key}-title`} class="eyebrow">{t(`truckPage.${key}`)}</h2>
+          <ul class="plain">{l.map((x) => <li>{x}</li>)}</ul>
+        </section>
+      ))}
+    </div>
+
+    <section aria-labelledby="dealers-title">
+      <h2 id="dealers-title">{t('truckPage.dealersTitle')}</h2>
+      {dealers.length === 0
+        ? <p class="muted">{t('truckPage.noDealers')}</p>
+        : <ul class="chips">{dealers.map((c) => <li><a class="chip-link" href={cityPath(c)}>{c.name}, {c.state}</a></li>)}</ul>}
+    </section>
+
+    <p class="small"><a href={tk.wiki.url} rel="noopener">{t('truckPage.wikiLink', { name: tk.name })}</a></p>
+  </div>
+</BaseLayout>
+
+<style>
+  .crumbs { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; font-size: 14px; color: var(--text-muted); }
+  .crumbs a { display: inline-flex; align-items: center; min-height: var(--target); color: var(--text-soft); }
+  .page { display: grid; gap: var(--space-6); padding-top: var(--space-4); }
+  .page > * { min-width: 0; }
+  .head { display: grid; gap: var(--space-2); }
+  .head h1 { font-size: clamp(30px, 5vw, 46px); }
+  h2 { margin-bottom: var(--space-3); }
+  .small { font-size: 13px; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: var(--space-3); margin: 0; padding: 0; list-style: none; }
+  .fact { display: grid; gap: var(--space-1); padding: var(--space-4); background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-md); }
+  .fact-value { font-size: 17px; font-weight: 600; }
+  .two { display: grid; gap: var(--space-4); }
+  @media (min-width: 900px) { .two { grid-template-columns: repeat(3, 1fr); } }
+  .two > * { min-width: 0; }
+  .plain { margin: 0; padding-left: 1.1em; display: grid; gap: var(--space-1); color: var(--text-soft); }
+  .chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+  .chip-link { display: inline-flex; align-items: center; min-height: var(--target); padding: 0 var(--space-3); border: 1px solid var(--border-input); border-radius: 999px; background: var(--panel-deep); color: var(--text); text-decoration: none; }
+  .chip-link:hover { border-color: var(--amber); color: var(--amber); }
+</style>
