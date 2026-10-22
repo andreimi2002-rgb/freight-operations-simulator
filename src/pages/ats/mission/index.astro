@@ -3,6 +3,7 @@
 // (/ats/mission/<id>, rewritten here by Netlify) or from ?id=<id>, and fills the sheet.
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import WeatherIcons from '../../../components/WeatherIcons.astro';
+import AtsMap from '../../../components/AtsMap.astro';
 import { getI18n } from '../../../i18n/index.mjs';
 
 const { t, meta } = getI18n();
@@ -59,6 +60,11 @@ const { t, meta } = getI18n();
             <div class="wide"><dt>{t('mission.leaveNow')}</dt><dd data-m="arrival"></dd></div>
           </dl>
           <p class="soft small" data-m="night" hidden>{t('mission.night')}</p>
+        </section>
+
+        <section class="card wide-card" aria-labelledby="m-map">
+          <h2 id="m-map" class="eyebrow">{t('map.routeTitle')}</h2>
+          <AtsMap mode="route" defer height="420px" />
         </section>
 
         <section class="card wide-card" aria-labelledby="m-weather">

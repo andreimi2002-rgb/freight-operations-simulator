@@ -6,6 +6,7 @@ import { loadJobs, el, badges, depotLabel, weightText, trailerName, cityPathOf }
 import { distance, temperature, weatherKind, weatherPath, weatherAt, isSevere, localHour, isNight } from '../lib/ats.mjs';
 import { currentUnits, pageText, fill } from './units.mjs';
 import { owned } from './dlcs.mjs';
+import { mountMap } from './map.mjs';
 
 const root = document.querySelector('[data-mission]');
 
@@ -181,6 +182,12 @@ if (root) {
       m('job').hidden = false;
       root.dataset.state = 'ready';
       render();
+      const mapBox = root.querySelector('[data-map="route"]');
+      if (mapBox) {
+        mapBox.dataset.mapFrom = job.from;
+        mapBox.dataset.mapTo = job.to;
+        mountMap(mapBox);
+      }
       document.addEventListener('fw:units', render);
       document.addEventListener('fw:dlcs', render);
     }).catch(() => fail('gone'));

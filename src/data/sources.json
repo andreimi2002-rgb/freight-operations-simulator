@@ -45,6 +45,13 @@
       "url": "https://www.openstreetmap.org",
       "licenceUrl": "https://www.openstreetmap.org/copyright",
       "stage": 3
+    },
+    {
+      "id": "naturalEarth",
+      "name": "Natural Earth",
+      "url": "https://www.naturalearthdata.com",
+      "licenceUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "stage": 6
     }
   ],
   "software": [

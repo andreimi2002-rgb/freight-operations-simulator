@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AtsMap from '../../components/AtsMap.astro';
+import { getI18n } from '../../i18n/index.mjs';
+
+const { t } = getI18n();
+---
+<BaseLayout title={t('map.title')} description={t('map.metaDescription')}>
+  <div class="container page">
+    <header class="head">
+      <p class="eyebrow">{t('map.eyebrow')}</p>
+      <h1>{t('map.title')}</h1>
+      <p class="soft lead">{t('map.lead')}</p>
+    </header>
+    <AtsMap mode="full" height="78vh" />
+  </div>
+</BaseLayout>
+
+<style>
+  .page { display: grid; gap: var(--space-5); padding-top: var(--space-7); }
+  .page > * { min-width: 0; }
+  .head { display: grid; gap: var(--space-3); }
+  .head h1 { font-size: clamp(30px, 5vw, 44px); }
+  .lead { max-width: 66ch; font-size: 17px; }
+</style>

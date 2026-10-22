@@ -10,6 +10,7 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const links = [
   { href: '/', label: t('nav.home') },
   { href: '/ats', label: t('nav.cities') },
+  { href: '/ats/map', label: t('nav.map') },
   { href: '/ats/companies', label: t('nav.companies') },
   { href: '/ats/planner', label: t('nav.planner') },
   { href: '/about', label: t('nav.about') },
@@ -29,7 +30,7 @@ const links = [
               <a
                 class="nav-link"
                 href={link.href}
-                aria-current={path === link.href ? 'page' : (link.href === '/ats' && path.startsWith('/ats/') && !/^\/ats\/(planner|compan)/.test(path) ? 'true' : (link.href === '/ats/companies' && path.startsWith('/ats/company/') ? 'true' : undefined))}
+                aria-current={path === link.href ? 'page' : (link.href === '/ats' && path.startsWith('/ats/') && !/^\/ats\/(planner|compan|map|mission)/.test(path) ? 'true' : (link.href === '/ats/companies' && path.startsWith('/ats/company/') ? 'true' : undefined))}
               >{link.label}</a>
             </li>
           ))}
@@ -81,6 +82,7 @@ const links = [
   .dlc-count:not(:empty) { margin-left: 4px; padding: 0 6px; border-radius: 999px; background: var(--amber); color: var(--on-amber); font-size: 12px; }
   .nav-list {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-1);
     margin: 0;
     padding: 0;
@@ -102,6 +104,8 @@ const links = [
 
   @media (max-width: 559px) {
     .header-tools { width: 100%; justify-content: space-between; }
-    .nav-link { padding: 0 var(--space-2); }
+    nav { width: 100%; }
+    .nav-list { flex-wrap: wrap; column-gap: 0; }
+    .nav-link { padding: 0 var(--space-2); font-size: 14px; }
   }
 </style>

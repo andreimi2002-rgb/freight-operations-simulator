@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.0-alpha.10 — 2026-10-22 (map in the style of the in-game map)
+
+- **Map** at `/ats/map`, drawn by Freight World in a style close to the ATS in-game map: near-black background, dark land, grey state borders, pale amber roads seen from afar; zoomed in, Interstate and US highways turn bright amber and the others grey, with Interstate (red/blue), US (white shield) and state (white box) road shields; amber city dots and labels with a dark halo. Pan, wheel and pinch zoom, buttons; click a city to open it. No game files are used (owner asked SCS for permission to use the real map).
+- **Map on every city page** (centred on the city) and **route on every job sheet**, drawn along the real roads with a shortest path on the map’s road graph.
+- `scripts/map/build-map.mjs` (`npm run map:ats`): Natural Earth 1:10m (public domain) roads, states and lakes for the states in scope, clipped, simplified and projected to `data/map/ats-map.json` (125 KB), served as `/data/ats-map.json`. A few local roads are missing at this scale (e.g. AZ-95 through Lake Havasu City).
+- Header: "Map" link; the navigation wraps on phones (it no longer fits on one line).
+- 3 new tests (88 in all): map layers, a route for every pair of cities (median length within 1% of the OSRM road distance), Los Angeles → Phoenix drawn along I-10.
+
 ## 2.0.0-alpha.9 — 2026-10-22 (company pages)
 
 - **Company pages:** `/ats/companies` lists the 67 companies with depots on the starting map, grouped by category; `/ats/company/<id>` shows each one: industry, depots and cities, every depot type with its game ID, cities (and gas station locations), cargo offered and accepted (DLC cargo grouped), **where its cargo goes** and **who supplies it** (computed from the depot lists: only links that exist in the game), a job generator limited to its depots, and the wiki link. A generated two-letter monogram stands in for the logo (game artwork is not used).

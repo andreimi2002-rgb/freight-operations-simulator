@@ -20,7 +20,8 @@
     "about": "About & sources",
     "cities": "Cities",
     "planner": "Planner",
-    "companies": "Companies"
+    "companies": "Companies",
+    "map": "Map"
   },
   "game": {
     "label": "Game",
@@ -149,6 +150,10 @@
     "metNorway": {
       "use": "Real weather at each city (Locationforecast, through our own cached function)",
       "licence": "CC BY 4.0: attribution required; commercial use allowed"
+    },
+    "naturalEarth": {
+      "use": "Roads, state borders and lakes of the map",
+      "licence": "Public domain"
     }
   },
   "notFound": {
@@ -473,5 +478,20 @@
     "generateTitle": "Generate a job from {name}",
     "wikiLink": "{name} on Truck Simulator Wiki",
     "monogramNote": "Monogram, not the company logo (game artwork is not used)."
+  },
+  "map": {
+    "title": "Map",
+    "metaDescription": "Map of the American Truck Simulator starting map: California, Nevada and Arizona, with every city and the main roads.",
+    "eyebrow": "American Truck Simulator",
+    "lead": "The starting map: every city and the main roads. Zoom in for road numbers; click a city to open it.",
+    "label": "Map of California, Nevada and Arizona with the cities of the game",
+    "loading": "Loading the map…",
+    "error": "The map could not be loaded.",
+    "caption": "Drawn by Freight World in the style of the in-game map from public-domain data (Natural Earth): real-world roads, so the in-game road network may differ. Not the game map.",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "reset": "Fit the map",
+    "routeTitle": "Route",
+    "cityMapTitle": "On the map"
   }
 }
