@@ -1,0 +1,55 @@
+---
+// Favorites and history. Static shell; the list lives only in this browser and is drawn
+// by src/scripts/saved-page.mjs.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getI18n } from '../i18n/index.mjs';
+
+const { t } = getI18n();
+---
+<BaseLayout title={t('saved.title')} description={t('saved.metaDescription')} noindex>
+  <div class="container page" data-saved-page>
+    <header class="head">
+      <p class="eyebrow">{t('saved.eyebrow')}</p>
+      <h1>{t('saved.title')}</h1>
+      <p class="soft lead">{t('saved.lead')}</p>
+    </header>
+
+    <section aria-labelledby="favs-title">
+      <h2 id="favs-title">{t('saved.favsTitle')}</h2>
+      <div data-favs><p class="muted">{t('saved.loading')}</p></div>
+    </section>
+
+    <section aria-labelledby="recent-title">
+      <div class="section-head">
+        <h2 id="recent-title">{t('saved.recentTitle')}</h2>
+        <button type="button" class="button button-ghost" data-clear-recent hidden>{t('saved.clearRecent')}</button>
+      </div>
+      <div data-recent><p class="muted">{t('saved.loading')}</p></div>
+    </section>
+  </div>
+</BaseLayout>
+
+<script>
+  import '../scripts/saved-page.mjs';
+</script>
+
+<style>
+  .page { display: grid; gap: var(--space-6); padding-top: var(--space-7); }
+  .page > * { min-width: 0; }
+  .head { display: grid; gap: var(--space-3); }
+  .head h1 { font-size: clamp(30px, 5vw, 44px); }
+  .lead { max-width: 66ch; font-size: 17px; }
+  h2 { margin-bottom: var(--space-3); }
+  .section-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2); }
+  .section-head h2 { margin: 0; }
+  [data-favs] :global(h3) { margin: var(--space-4) 0 var(--space-2); font-size: 13px; }
+  [data-favs] :global(ul), [data-recent] :global(ul) { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+  :global(.saved-item) { display: flex; align-items: stretch; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-md); min-width: 0; }
+  :global(.saved-item a) { flex: 1; display: grid; gap: 2px; min-width: 0; padding: var(--space-3) var(--space-4); color: var(--text); text-decoration: none; }
+  :global(.saved-item a:hover .saved-name) { color: var(--amber); }
+  :global(.saved-type) { font: 600 10px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); }
+  :global(.saved-name) { font-weight: 600; overflow-wrap: anywhere; }
+  :global(.saved-detail) { font-size: 13px; color: var(--text-muted); overflow-wrap: anywhere; }
+  :global(.saved-remove) { min-width: var(--target); background: transparent; color: var(--text-muted); border: 0; border-left: 1px solid var(--border); border-radius: 0 var(--radius-md) var(--radius-md) 0; font-size: 20px; cursor: pointer; }
+  :global(.saved-remove:hover) { color: var(--text); background: var(--panel-deep); }
+</style>

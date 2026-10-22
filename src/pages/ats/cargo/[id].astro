@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SaveButton from '../../../components/SaveButton.astro';
 import JobGenerator from '../../../components/JobGenerator.astro';
 import { getI18n } from '../../../i18n/index.mjs';
 import en from '../../../i18n/en.json';
@@ -28,11 +29,14 @@ const mi = (km) => `${fmt(Math.round(km / 1.609344))} mi`;
 const cityLabel = (id) => { const x = cityById.get(id); return x ? `${x.name}, ${x.state}` : id; };
 ---
 <BaseLayout title={title} description={t('cargoPage.meta', { name: title })} crumbs={[[t('cargoPage.breadcrumb'), '/ats/cargo'], [title, Astro.url.pathname]]}>
-  <nav class="container crumbs" aria-label={t('cargoPage.breadcrumb')}>
+  <div class="container crumbs-row">
+  <nav class="crumbs" aria-label={t('cargoPage.breadcrumb')}>
     <a href="/ats/cargo">{t('cargoPage.breadcrumb')}</a>
     <span aria-hidden="true">/</span>
     <span aria-current="page">{c.name}</span>
   </nav>
+    <SaveButton type="cargo" name={title} detail={dlc} />
+  </div>
 
   <div class="container page">
     <header class="head">

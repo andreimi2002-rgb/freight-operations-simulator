@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SaveButton from '../../../components/SaveButton.astro';
 import CityHero from '../../../components/CityHero.astro';
 import WeatherIcons from '../../../components/WeatherIcons.astro';
 import DeparturesBoard from '../../../components/DeparturesBoard.astro';
@@ -47,13 +48,16 @@ const cards = [
   image={photo ? { src: photo.src960, alt: t('seo.cityImageAlt', { name: city.name, state: state.name }) } : undefined}
 >
   <WeatherIcons />
-  <nav class="container crumbs" aria-label={t('city.breadcrumb')}>
+  <div class="container crumbs-row">
+  <nav class="crumbs" aria-label={t('city.breadcrumb')}>
     <a href="/ats">{t('city.breadcrumb')}</a>
     <span aria-hidden="true">/</span>
     <a href={`/ats#state-${state.code}`}>{state.name}</a>
     <span aria-hidden="true">/</span>
     <span aria-current="page">{city.name}</span>
   </nav>
+    <SaveButton type="city" name={city.name} detail={`${state.name}`} />
+  </div>
 
   <CityHero city={city} stateName={state.name} photo={photo} />
 

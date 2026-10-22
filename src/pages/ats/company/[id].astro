@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SaveButton from '../../../components/SaveButton.astro';
 import Monogram from '../../../components/Monogram.astro';
 import JobGenerator from '../../../components/JobGenerator.astro';
 import { getI18n } from '../../../i18n/index.mjs';
@@ -29,13 +30,16 @@ const firstCity = company.depotTypes[0].cities[0];
   description={t('company.metaDescription', { name, depots: depotCount, cities: cities.length })}
   crumbs={[[t('company.breadcrumb'), '/ats/companies'], [name, Astro.url.pathname]]}
 >
-  <nav class="container crumbs" aria-label={t('company.breadcrumb')}>
+  <div class="container crumbs-row">
+  <nav class="crumbs" aria-label={t('company.breadcrumb')}>
     <a href="/ats/companies">{t('company.breadcrumb')}</a>
     <span aria-hidden="true">/</span>
     <a href={`/ats/companies#cat-${company.category ?? 'other'}`}>{catLabel(company.category ?? 'other')}</a>
     <span aria-hidden="true">/</span>
     <span aria-current="page">{company.name}</span>
   </nav>
+    <SaveButton type="company" name={name} />
+  </div>
 
   <div class="container page">
     <header class="head">

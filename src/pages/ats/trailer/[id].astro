@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SaveButton from '../../../components/SaveButton.astro';
 import { getI18n } from '../../../i18n/index.mjs';
 import { trailers, cargo } from '../../../lib/data.mjs';
 import { cargoPath } from '../../../lib/catalog.mjs';
@@ -15,11 +16,14 @@ const list = tr.cargo.map((id) => cargoById.get(id)).filter(Boolean).sort((a, b)
 const price = (m) => (m.priceUsd != null ? `$${m.priceUsd.toLocaleString('en-US')}` : (m.pricesUsd ?? []).map((p) => `$${p.toLocaleString('en-US')}`).join(' / '));
 ---
 <BaseLayout title={`${tr.name} trailer`} description={t('trailerPage.meta', { name: tr.name })} crumbs={[[t('trailerPage.breadcrumb'), '/ats/trailers'], [tr.name, Astro.url.pathname]]}>
-  <nav class="container crumbs" aria-label={t('trailerPage.breadcrumb')}>
+  <div class="container crumbs-row">
+  <nav class="crumbs" aria-label={t('trailerPage.breadcrumb')}>
     <a href="/ats/trailers">{t('trailerPage.breadcrumb')}</a>
     <span aria-hidden="true">/</span>
     <span aria-current="page">{tr.name}</span>
   </nav>
+    <SaveButton type="trailer" name={tr.name} />
+  </div>
   <div class="container page">
     <h1>{tr.name}</h1>
 

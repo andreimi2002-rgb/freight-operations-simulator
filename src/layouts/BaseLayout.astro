@@ -13,13 +13,15 @@ interface Props {
   image?: { src: string; alt: string };
   /** Breadcrumbs as [name, path] pairs, ending with this page; emitted as schema.org JSON-LD. */
   crumbs?: [string, string][];
+  /** Pages whose content lives only in the visitor's browser are kept out of search engines. */
+  noindex?: boolean;
 }
 
 const { t, meta } = getI18n();
 // Text the browser script needs (weather labels, units), passed as data.
-const liveText = JSON.stringify({ weather: en.weather, city: en.city, units: en.units, board: en.board, planner: en.planner, dlcNames: en.dlcNames, generator: en.generator, dlcs: en.dlcs, mission: en.mission, map: en.map, facilities: en.facilities, search: en.search });
+const liveText = JSON.stringify({ weather: en.weather, city: en.city, units: en.units, board: en.board, planner: en.planner, dlcNames: en.dlcNames, generator: en.generator, dlcs: en.dlcs, mission: en.mission, map: en.map, facilities: en.facilities, search: en.search, saved: en.saved });
 const siteName = t('site.name');
-const { title, description = t('site.description'), image, crumbs } = Astro.props;
+const { title, description = t('site.description'), image, crumbs, noindex = false } = Astro.props;
 const fullTitle = title ? `${title} · ${siteName}` : siteName;
 const site = Astro.site ?? new URL(Astro.url.origin);
 const canonical = new URL(Astro.url.pathname, site).href;
@@ -40,6 +42,7 @@ const ld = [
     <meta name="theme-color" content="#0E131A" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={siteName} />

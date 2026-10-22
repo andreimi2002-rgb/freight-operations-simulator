@@ -1,0 +1,41 @@
+---
+// Star button: saves the current page to the visitor's favorites (localStorage, no account)
+// and records the visit in the history. On the job sheet the script fills in name and detail.
+import { getI18n } from '../i18n/index.mjs';
+
+interface Props {
+  type: 'city' | 'company' | 'cargo' | 'trailer' | 'truck' | 'job';
+  name?: string;
+  detail?: string;
+}
+const { t } = getI18n();
+const { type, name = '', detail = '' } = Astro.props;
+---
+<button type="button" class="save-btn" data-save data-type={type} data-name={name} data-detail={detail} aria-pressed="false">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+  <span data-save-label>{t('saved.saveButton')}</span>
+</button>
+
+<script>
+  import '../scripts/saved.mjs';
+</script>
+
+<style>
+  .save-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--target);
+    padding: 0 var(--space-3);
+    background: var(--panel-deep);
+    color: var(--text-soft);
+    border: 1px solid var(--border-input);
+    border-radius: 999px;
+    font: 600 14px var(--font-sans);
+    cursor: pointer;
+  }
+  .save-btn svg { width: 18px; height: 18px; fill: none; }
+  .save-btn:hover { color: var(--text); border-color: var(--text-muted); }
+  .save-btn[aria-pressed='true'] { color: var(--amber); border-color: var(--amber); }
+  .save-btn[aria-pressed='true'] svg { fill: currentColor; }
+</style>

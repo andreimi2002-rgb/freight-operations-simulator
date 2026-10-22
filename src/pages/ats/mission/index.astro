@@ -5,6 +5,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import WeatherIcons from '../../../components/WeatherIcons.astro';
 import AtsMap from '../../../components/AtsMap.astro';
 import SkillIcons from '../../../components/SkillIcons.astro';
+import SaveButton from '../../../components/SaveButton.astro';
 import { getI18n } from '../../../i18n/index.mjs';
 
 const { t, meta } = getI18n();
@@ -51,6 +52,7 @@ const { t, meta } = getI18n();
         <p class="muted small" data-m="realTime"></p>
         <div data-m="badges"></div>
         <div class="actions">
+          <SaveButton type="job" />
           <button type="button" class="button button-ghost" data-m="copy">{t('mission.copy')}</button>
           <a class="button button-ghost" data-m="sameRoute">{t('mission.sameRoute')}</a>
           <span class="muted small" data-m="copied" role="status"></span>
