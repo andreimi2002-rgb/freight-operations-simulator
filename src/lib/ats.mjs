@@ -139,3 +139,33 @@ export function clockTime(minutes, locale = 'en-US') {
   const text = new Intl.DateTimeFormat(locale, { timeZone: 'UTC', hour: 'numeric', minute: '2-digit' }).format(new Date(Date.UTC(2000, 0, 1, 0, m)));
   return { text, nextDay: minutes >= 1440 };
 }
+
+// ---- Job sheet helpers -----------------------------------------------------------
+
+/** The forecast entry covering a moment (hourly first, then 6-hourly), or null. */
+export function weatherAt(series, at) {
+  const t = new Date(at).getTime();
+  for (const e of series ?? []) {
+    const start = Date.parse(e.t);
+    const end = start + (e.stepH ?? 1) * 3600000;
+    if (t >= start && t < end) return e;
+  }
+  return null;
+}
+
+/** Weather that deserves a warning on a job sheet (no delay is invented, only a warning). */
+export function isSevere(entry) {
+  if (!entry) return false;
+  if (['snow', 'sleet', 'thunder', 'fog'].includes(entry.sky)) return true;
+  return entry.sky === 'rain' && entry.intensity === 'heavy';
+}
+
+/** Local hour (0-23) of a moment in a time zone. */
+export function localHour(timeZone, at) {
+  return localDateHour(timeZone, new Date(at)).hour;
+}
+
+/** Arrival at night: between 22:00 and 06:00 local time. */
+export function isNight(hour) {
+  return hour >= 22 || hour < 6;
+}

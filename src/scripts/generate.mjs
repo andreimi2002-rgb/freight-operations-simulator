@@ -1,6 +1,7 @@
 // "Generate a job" button. Each job comes from a random seed; the seed (and the start city
 // filter) go into the address (?job=…&gfrom=…&gbase=1) so the same job opens for anyone.
-import { randomJob, seedToCode, codeToSeed } from '../engine/generator.mjs';
+import { randomJob, seedToCode, codeToSeed, missionId } from '../engine/generator.mjs';
+import { owned } from './dlcs.mjs';
 import { loadJobs, el, badges, depotLabel, weightText, trailerName, cityPathOf } from './jobs.mjs';
 import { distance } from '../lib/ats.mjs';
 import { currentUnits, pageText, fill } from './units.mjs';
@@ -12,6 +13,7 @@ if (box) {
   const form = box.querySelector('[data-gen-form]');
   const from = form.querySelector('select[name="from"]');
   const base = form.querySelector('input[name="base"]');
+  const mine = form.querySelector('input[name="mine"]');
   const msg = box.querySelector('[data-gen-msg]');
   const result = box.querySelector('[data-gen-result]');
   const g = (k) => box.querySelector(`[data-g="${k}"]`);
@@ -46,6 +48,7 @@ if (box) {
     g('drive').textContent = fill(t.board?.hours, { h: job.hours });
     g('needs').textContent = job.dlcs.length ? job.dlcs.map((x) => t.dlcNames?.[x] ?? x).join(', ') : t.generator?.nothingNeeded;
     g('planner').href = `/ats/planner?from=${job.from}&to=${job.to}`;
+    g('sheet').href = `/ats/mission/${missionId(ds, job)}`;
     result.hidden = false;
     say('');
   };
@@ -59,7 +62,9 @@ if (box) {
   };
 
   const generate = (seed) => {
-    const job = randomJob(ds, { seed, from: fixedCity || from?.value || null, baseOnly: base.checked });
+    const ownedSet = mine.checked ? owned() : null;
+    if (mine.checked && !ownedSet) { result.hidden = true; say(t.dlcs?.notSet); return; }
+    const job = randomJob(ds, { seed, from: fixedCity || from?.value || null, baseOnly: base.checked, ownedDlcs: ownedSet });
     if (!job) { result.hidden = true; say(t.generator?.none); return; }
     current = job;
     show(job);

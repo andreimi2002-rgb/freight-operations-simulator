@@ -32,7 +32,7 @@
   },
   "stage": {
     "label": "Stage {n}",
-    "current": "Stage 3 — Departures and route planner",
+    "current": "Stage 4 — Job sheets",
     "from": "From stage {n}"
   },
   "footer": {
@@ -49,7 +49,7 @@
     "title": "Freight World",
     "eyebrow": "American Truck Simulator · California and Nevada first",
     "lead": "A job generator in the style of ATS and ETS2, built on the real game map: cities, companies, depots, cargo and trailers that exist in the game, with live city pages.",
-    "status": "City pages, live departures boards, the job generator and the route planner are ready for California and Nevada. Full job sheets arrive in the next stage.",
+    "status": "City pages, departures boards, the job generator, job sheets and the route planner are ready for California and Nevada.",
     "aboutCta": "Sources and licences",
     "pillarsTitle": "What Freight World will show",
     "pillars": {
@@ -63,7 +63,7 @@
       },
       "job": {
         "title": "Job sheet",
-        "text": "Cargo, weight, trailer, truck, route, required DLCs and weather, in detail."
+        "text": "Cargo, weight, trailer, recommended truck, route, weather at both ends and required DLCs, in detail."
       }
     },
     "board": {
@@ -275,7 +275,8 @@
     "heavy": "Heavy",
     "fragile": "Fragile",
     "highValue": "High value",
-    "hours": "{h} h"
+    "hours": "{h} h",
+    "openJob": "Open the job sheet"
   },
   "dlcNames": {
     "heavy-cargo-pack": "Heavy Cargo Pack",
@@ -325,7 +326,8 @@
       "needs": "Needs"
     },
     "backToAll": "All destinations",
-    "estimateNote": "Distances and drive times are estimates from real roads (© OpenStreetMap contributors, ODbL) at 55 mph. Jobs come from the depot lists on Truck Simulator Wiki."
+    "estimateNote": "Distances and drive times are estimates from real roads (© OpenStreetMap contributors, ODbL) at 55 mph. Jobs come from the depot lists on Truck Simulator Wiki.",
+    "openSheet": "Sheet"
   },
   "generator": {
     "title": "Generate a job",
@@ -352,6 +354,76 @@
     "needs": "Needs",
     "nothingNeeded": "Base game only",
     "openPlanner": "All jobs on this route",
-    "estimateNote": "Distance and drive time are estimates from real roads (© OpenStreetMap contributors, ODbL) at 55 mph. Pay is not shown: the game’s pay inputs are not public."
+    "estimateNote": "Distance and drive time are estimates from real roads (© OpenStreetMap contributors, ODbL) at 55 mph. Pay is not shown: the game’s pay inputs are not public.",
+    "openSheet": "Open the job sheet"
+  },
+  "dlcs": {
+    "button": "My DLCs",
+    "title": "My DLCs",
+    "lead": "Tick the cargo DLCs you own. Boards mark the jobs you cannot take; the generator and the planner can hide them.",
+    "cargoPacks": "Cargo DLCs",
+    "note": "Saved only in this browser. Map DLCs (states) come with the next map expansion.",
+    "save": "Save",
+    "clear": "Forget my choice",
+    "close": "Close",
+    "notOwned": "DLC not owned",
+    "onlyMine": "Only jobs for my DLCs",
+    "notSet": "Set your DLCs first (My DLCs, top right)."
+  },
+  "mission": {
+    "title": "Job sheet",
+    "metaDescription": "Full sheet of one American Truck Simulator job: depots, cargo, trailer, truck, route, weather and DLCs.",
+    "eyebrow": "Job sheet",
+    "loading": "Loading the job…",
+    "badId": "This job link is not valid.",
+    "gone": "This job no longer exists in the game data (a depot, cargo or trailer changed). Generate a new one.",
+    "generateNew": "Generate a job",
+    "copy": "Copy link",
+    "copied": "Link copied",
+    "sameRoute": "All jobs on this route",
+    "pickup": "Pick up",
+    "delivery": "Deliver",
+    "gameId": "Game ID {id}",
+    "noGameId": "No game ID on the wiki",
+    "cargo": "Cargo",
+    "weight": "Weight",
+    "weightRange": "Weight range",
+    "weightUnknown": "Weight unknown",
+    "hazmat": "Hazmat class {c}",
+    "un": "UN {un}",
+    "unExpected": "UN {un} in game (the wiki gives {expected})",
+    "flags": "Special cargo",
+    "none": "None",
+    "dlcs": "DLCs needed",
+    "noDlc": "Base game only",
+    "owned": "owned",
+    "notOwned": "not owned",
+    "trailer": "Trailer",
+    "anyTrailer": "Any of these trailers",
+    "dealerModels": "At the trailer dealer",
+    "companyTrailer": "Company trailer, not sold at the dealer",
+    "noTrailerData": "No dealer data for this trailer type",
+    "notBuyable": "not buyable",
+    "route": "Route",
+    "distance": "Distance",
+    "drive": "Drive time",
+    "leaveNow": "If you leave now",
+    "arriveAt": "arrival about {time} in {city}",
+    "night": "Arrival at night: plan a rest stop or a delivery window.",
+    "weather": "Weather",
+    "weatherFrom": "{city} now",
+    "weatherTo": "{city} at arrival",
+    "weatherLoading": "Loading…",
+    "weatherError": "Weather unavailable",
+    "weatherFar": "Arrival is beyond the forecast",
+    "severe": "Bad weather: {what} in {city}. Drive carefully; the drive time above does not include delays.",
+    "truck": "Truck",
+    "truckNeed": "Recommended: at least {hp} hp",
+    "truckRule": "Freight World rule (simulated, not from the game): at least 400 hp up to 25,000 lb, 450 hp up to 45,000 lb, 500 hp above, 550 hp for heavy cargo; brands with a dealer in the start city first; electric trucks left out (no range data).",
+    "dealerHere": "Dealer in {city}",
+    "dealersIn": "Truck dealers in {city}: {list}",
+    "noDealers": "No truck dealer in {city}",
+    "hp": "up to {hp} hp",
+    "provenance": "Depots, cargo, trailers and trucks: Truck Simulator Wiki (CC BY-SA 4.0). Distance and drive time: estimates from real roads (© OpenStreetMap contributors, ODbL) at 55 mph. Weather: MET Norway (CC BY 4.0). Pay is not shown: the game’s pay inputs are not public."
   }
 }

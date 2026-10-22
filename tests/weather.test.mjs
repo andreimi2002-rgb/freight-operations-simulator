@@ -29,7 +29,7 @@ test('the forecast is reduced to now and three local days starting today', () =>
   assert.deepEqual(w.days.map((d) => d.date), ['2026-10-20', '2026-10-21', '2026-10-22']);
   for (const d of w.days) assert.ok(d.minC <= d.maxC && d.sky, d.date);
   assert.ok(Number.isInteger(w.now.windKmh), 'wind in km/h');
-  assert.equal(w.series, undefined, 'no hourly series sent to the page');
+  assert.ok(w.series.length > 0 && w.series.every((e) => Date.parse(e.t) <= NOW + 72 * 3600000), 'a 72-hour series for the job sheet');
 });
 
 test('the function looks the city up, rounds coordinates to 4 decimals and identifies itself', async () => {

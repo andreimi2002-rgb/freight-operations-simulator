@@ -91,7 +91,10 @@ const columns = ['time', 'cargo', 'from', 'to', 'distance', 'trailer', 'weight']
   .board :global(td small) { display: block; color: var(--text-muted); font-size: 12px; margin-top: 2px; }
   :global(.b-time) { font-family: var(--font-mono); font-weight: 600; color: var(--amber); white-space: nowrap; font-variant-numeric: tabular-nums; }
   :global(.b-time small) { color: var(--text-muted); font-weight: 400; }
-  :global(.b-cargo-name) { font-weight: 600; display: block; }
+  :global(.b-cargo-name) { font-weight: 600; display: block; color: var(--text); }
+  :global(a.b-cargo-name:hover) { color: var(--amber); }
+  .board :global(tr.is-not-owned td) { opacity: 0.55; }
+  :global(.badge.not-owned) { margin-top: 4px; color: var(--text-muted); }
   :global(.job-badges) { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
   :global(.job-badges .badge) { font-size: 11px; padding: 1px 6px; }
   :global(.b-to a) { color: var(--text); font-weight: 600; }

@@ -147,3 +147,6 @@ a:hover { color: var(--text); }
   white-space: nowrap;
   border: 0;
 }
+
+/* The hidden attribute always wins over component display rules. */
+[hidden] { display: none !important; }
