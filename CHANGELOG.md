@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.0.0-alpha.14 — 2026-10-22 (phase B5: saved pages and history)
+
+- **Save** (star) on every city, company, cargo, trailer and truck page and on the job sheet. A job is saved under its canonical link as "cargo: from → to".
+- **History:** the last 30 pages opened (same page types and job sheets), newest first.
+- **`/saved`** ("Saved" in the header): saved pages grouped by type, each with a remove button, and the history with dates and a "Clear history" button. Kept out of search engines (`noindex`, not in the sitemap).
+- **Search** with an empty field shows the saved and recently opened pages.
+- Everything is kept only in this browser (localStorage, no account, nothing sent to a server). Stored data is validated on read (unknown types, links outside the site or broken JSON are dropped); with storage blocked the site works as before and simply remembers nothing. Other open tabs update when the list changes.
+- 6 new tests (114 in all).
+
 ## 2.0.0-alpha.13 — 2026-10-22 (phases B2 + B3: search and SEO)
 
 - **Search** in the header: cities, companies, cargo, trailers and trucks. Opens with the button, `/` or Ctrl+K; arrows move, Enter opens, Esc closes. The index (463 entries, 26 KB) is built with the site as `/data/search.json` and loaded on first use. `/?q=<text>` opens the search already filled in (used by the structured data below).

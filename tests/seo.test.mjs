@@ -82,6 +82,8 @@ test('built pages: unique titles and descriptions, preview tags, canonical', { s
   const meta = (html, prop) => html.match(new RegExp(`<meta (?:name|property)="${prop}" content="([^"]*)"`))?.[1];
   for (const p of pages) {
     const html = readFileSync(p, 'utf8');
+    // Pages kept out of search engines (e.g. /saved, which lives in the browser) are not in the sitemap.
+    if (meta(html, 'robots')?.includes('noindex')) continue;
     const title = html.match(/<title>([^<]*)<\/title>/)?.[1];
     const desc = meta(html, 'description');
     assert.ok(title, `${p}: title`);

@@ -39,6 +39,10 @@ const links = [
         </ul>
       </nav>
       <SearchBox />
+      <a class="saved-link" href="/saved" aria-current={path === '/saved' ? 'page' : undefined}>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <span>{t('saved.navLink')}</span>
+      </a>
       <GameSwitch />
       <UnitToggle />
       <button type="button" class="dlc-open" data-dlc-open>{t('dlcs.button')} <span class="dlc-count mono" data-dlc-count></span></button>
@@ -48,6 +52,10 @@ const links = [
 <DlcDialog />
 
 <style>
+  .saved-link { display: inline-flex; align-items: center; gap: var(--space-2); min-height: var(--target); padding: 0 var(--space-3); border: 1px solid var(--border-input); border-radius: var(--radius-md); background: var(--panel-deep); color: var(--text-soft); font: 500 14px var(--font-sans); text-decoration: none; }
+  .saved-link:hover, .saved-link[aria-current='page'] { color: var(--amber); border-color: var(--amber); }
+  .saved-link svg { width: 18px; height: 18px; }
+  @media (max-width: 559px) { .saved-link span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } }
   .site-header {
     background: var(--bg-header);
     border-bottom: 1px solid var(--border);

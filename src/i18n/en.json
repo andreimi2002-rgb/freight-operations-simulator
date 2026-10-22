@@ -620,7 +620,8 @@
       "company": "Company",
       "cargo": "Cargo",
       "trailer": "Trailer",
-      "truck": "Truck"
+      "truck": "Truck",
+      "job": "Job"
     }
   },
   "seo": {
@@ -631,5 +632,39 @@
     "cities": "{cities} cities",
     "companies": "{companies} companies",
     "cargo": "{cargo} cargo"
+  },
+  "saved": {
+    "navLink": "Saved",
+    "title": "Saved and recent",
+    "eyebrow": "Only in this browser",
+    "metaDescription": "Your saved cities, companies, cargo, trailers, trucks and jobs, and the pages you opened last. Kept only in this browser.",
+    "lead": "Press the star on any city, company, cargo, trailer, truck or job sheet to keep it here. The pages you open are listed below. Everything stays in this browser: no account, nothing is sent to us, and clearing the browser data removes it.",
+    "loading": "Loading…",
+    "favsTitle": "Saved",
+    "recentTitle": "Recently opened",
+    "clearRecent": "Clear history",
+    "noFavs": "Nothing saved yet. Press the star on a page to save it.",
+    "noRecent": "No pages opened yet.",
+    "remove": "Remove {name} from saved",
+    "saveButton": "Save",
+    "savedButton": "Saved",
+    "searchSaved": "Saved",
+    "searchRecent": "Recently opened",
+    "types": {
+      "city": "City",
+      "company": "Company",
+      "cargo": "Cargo",
+      "trailer": "Trailer",
+      "truck": "Truck",
+      "job": "Job"
+    },
+    "groups": {
+      "city": "Cities",
+      "company": "Companies",
+      "cargo": "Cargo",
+      "trailer": "Trailers",
+      "truck": "Trucks",
+      "job": "Jobs"
+    }
   }
 }

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SaveButton from '../../../components/SaveButton.astro';
 import { getI18n } from '../../../i18n/index.mjs';
 import { trucks, cities } from '../../../lib/data.mjs';
 import { dealerCities } from '../../../lib/catalog.mjs';
@@ -15,11 +16,14 @@ const dealers = dealerCities(tk.manufacturer, cities).sort((a, b) => a.name.loca
 const engines = tk.engines.map((e) => (e.name ? `${e.name}${e.hpMax ? `, ${e.hpMin === e.hpMax ? e.hpMax : `${e.hpMin}–${e.hpMax}`} hp` : ''}` : `${e.hpMin}–${e.hpMax} hp`));
 ---
 <BaseLayout title={tk.name} description={t('truckPage.meta', { name: tk.name })} crumbs={[[t('truckPage.breadcrumb'), '/ats/trucks'], [tk.name, Astro.url.pathname]]}>
-  <nav class="container crumbs" aria-label={t('truckPage.breadcrumb')}>
+  <div class="container crumbs-row">
+  <nav class="crumbs" aria-label={t('truckPage.breadcrumb')}>
     <a href="/ats/trucks">{t('truckPage.breadcrumb')}</a>
     <span aria-hidden="true">/</span>
     <span aria-current="page">{tk.name}</span>
   </nav>
+    <SaveButton type="truck" name={tk.name} detail={tk.manufacturer} />
+  </div>
   <div class="container page">
     <header class="head">
       <p class="eyebrow">{tk.manufacturer}</p>

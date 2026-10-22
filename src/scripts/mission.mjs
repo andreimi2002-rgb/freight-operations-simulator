@@ -6,6 +6,7 @@ import { loadJobs, el, badges, depotLabel, weightText, trailerName, cityPathOf }
 import { distance, temperature, weatherKind, weatherPath, weatherAt, isSevere, localHour, isNight } from '../lib/ats.mjs';
 import { currentUnits, pageText, fill } from './units.mjs';
 import { owned } from './dlcs.mjs';
+import { paintSave, recordVisit } from './saved.mjs';
 import { mountMap, loadMap } from './map.mjs';
 import { drivingPlan, urgencyOf, timeAllowedH, realMinutes } from '../engine/schedule.mjs';
 import { buildRoadGraph, routeBetween } from '../engine/roadgraph.mjs';
@@ -259,6 +260,18 @@ if (root) {
       m('job').hidden = false;
       root.dataset.state = 'ready';
       render();
+      // Favorites and history: the job is "cargo: from -> to", saved under its canonical path.
+      const save = root.querySelector('[data-save]');
+      if (save) {
+        const cargoName = ds._index.cargo.get(job.cargo)?.name ?? job.cargo;
+        const fromCity = ds.cityById.get(job.from);
+        const toCity = ds.cityById.get(job.to);
+        save.dataset.url = canonical;
+        save.dataset.name = `${cargoName}: ${fromCity.name} → ${toCity.name}`;
+        save.dataset.detail = `${fromCity.state} → ${toCity.state}`;
+        paintSave(save);
+        recordVisit(save);
+      }
       const mapBox = root.querySelector('[data-map="route"]');
       if (mapBox) {
         mapBox.dataset.mapFrom = job.from;
