@@ -4,7 +4,7 @@ import JobGenerator from '../../../components/JobGenerator.astro';
 import { getI18n } from '../../../i18n/index.mjs';
 import en from '../../../i18n/en.json';
 import { cargo, companies, trailers, distances, cityById } from '../../../lib/data.mjs';
-import { cargoDepots, cargoRoutes, trailerPath } from '../../../lib/catalog.mjs';
+import { cargoDepots, cargoRoutes, trailerPath, cargoTitle } from '../../../lib/catalog.mjs';
 import { companyPath } from '../../../lib/companies.mjs';
 import { cityPath } from '../../../lib/ats.mjs';
 
@@ -19,6 +19,7 @@ const fmt = (n) => n.toLocaleString('en-US');
 const weight = c.weightLb ? (c.weightLb.min === c.weightLb.max ? `${fmt(c.weightLb.min)} lb` : `${fmt(c.weightLb.min)} – ${fmt(c.weightLb.max)} lb`) : t('cargoPage.unknown');
 const value = c.valuePerKm != null ? String(c.valuePerKm) : c.valuePerKmRange ? `${c.valuePerKmRange.min} – ${c.valuePerKmRange.max}` : t('cargoPage.unknown');
 const dlc = c.dlc === 'base' ? t('catalog.baseGame') : en.dlcNames[c.dlc] ?? c.dlc;
+const title = cargoTitle(c, cargo, () => dlc);
 const special = [...c.flags.filter((f) => f !== 'adr').map((f) => t(`board.${f === 'high-value' ? 'highValue' : f}`))];
 const offered = cargoDepots(c.id, companies, 'provides');
 const accepted = cargoDepots(c.id, companies, 'accepts');
@@ -26,7 +27,7 @@ const routes = cargoRoutes(c.id, companies, distances);
 const mi = (km) => `${fmt(Math.round(km / 1.609344))} mi`;
 const cityLabel = (id) => { const x = cityById.get(id); return x ? `${x.name}, ${x.state}` : id; };
 ---
-<BaseLayout title={c.name} description={t('cargoPage.meta', { name: c.name })}>
+<BaseLayout title={title} description={t('cargoPage.meta', { name: title })} crumbs={[[t('cargoPage.breadcrumb'), '/ats/cargo'], [title, Astro.url.pathname]]}>
   <nav class="container crumbs" aria-label={t('cargoPage.breadcrumb')}>
     <a href="/ats/cargo">{t('cargoPage.breadcrumb')}</a>
     <span aria-hidden="true">/</span>

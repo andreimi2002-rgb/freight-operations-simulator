@@ -43,6 +43,8 @@ const cards = [
 <BaseLayout
   title={`${city.name}, ${state.code}`}
   description={t('city.metaDescription', { name: city.name, state: state.name, depots: city.depots.length })}
+  crumbs={[[t('city.breadcrumb'), '/ats'], [city.name, cityPath(city)]]}
+  image={photo ? { src: photo.src960, alt: t('seo.cityImageAlt', { name: city.name, state: state.name }) } : undefined}
 >
   <WeatherIcons />
   <nav class="container crumbs" aria-label={t('city.breadcrumb')}>

@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.0.0-alpha.13 — 2026-10-22 (phases B2 + B3: search and SEO)
+
+- **Search** in the header: cities, companies, cargo, trailers and trucks. Opens with the button, `/` or Ctrl+K; arrows move, Enter opens, Esc closes. The index (463 entries, 26 KB) is built with the site as `/data/search.json` and loaded on first use. `/?q=<text>` opens the search already filled in (used by the structured data below).
+- **sitemap.xml** (472 pages: every city, company, cargo, trailer and truck page and the static pages; job sheets left out, they are unlimited) and **robots.txt**.
+- **Link previews:** Open Graph and Twitter tags on every page (`og:url`, `og:image`, `summary_large_image`). City pages use their Wikimedia Commons photo; other pages use `/og-default.png`, made by `scripts/og/card.mjs` from the site text and the data counts.
+- **Structured data** (schema.org JSON-LD): WebSite with search on the home page, BreadcrumbList on city, company, cargo, trailer and truck pages.
+- Page URLs in the sitemap, canonical links and breadcrumbs all use the trailing-slash form Netlify serves.
+- Two cargo pairs share a name in the game (Crawler Tractor, Transformer): their page titles now add the DLC, so every page title is unique.
+- Plan: phase **B6 "Images"** (Wikimedia Commons photos for trucks, trailers and cargo marked "illustrative", our own category icons as fallback, the 2 cities without a photo, a selection tool, a question to SCS about game images).
+- 6 new tests (108 in all), including a check of the built site: unique titles and descriptions, preview tags, canonical links that match the sitemap.
+
 ## 2.0.0-alpha.12 — 2026-10-22 (phase B1: cargo, trailer and truck pages)
 
 - **Cargo pages** (`/ats/cargo/<id>`, 295): weight, value per km (and the second value for tank or bulk trailers), hazmat class and UN number, special cargo, dynamic loading, DLC, trailers; **who offers it** and **who accepts it** (companies, depot types, cities, DLC sections); **where it can go** (number of city pairs, the five longest and shortest, each opening the planner); a job generator limited to that cargo; wiki link. Cargo list `/ats/cargo` with a name filter.

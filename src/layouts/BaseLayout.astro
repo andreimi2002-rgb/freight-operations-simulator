@@ -4,19 +4,32 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { getI18n } from '../i18n/index.mjs';
 import en from '../i18n/en.json';
+import { breadcrumbLd, websiteLd, ldJson } from '../lib/seo.mjs';
 
 interface Props {
   title?: string;
   description?: string;
+  /** Link-preview image: absolute URL or site path, with its alt text. Defaults to the site card. */
+  image?: { src: string; alt: string };
+  /** Breadcrumbs as [name, path] pairs, ending with this page; emitted as schema.org JSON-LD. */
+  crumbs?: [string, string][];
 }
 
 const { t, meta } = getI18n();
 // Text the browser script needs (weather labels, units), passed as data.
-const liveText = JSON.stringify({ weather: en.weather, city: en.city, units: en.units, board: en.board, planner: en.planner, dlcNames: en.dlcNames, generator: en.generator, dlcs: en.dlcs, mission: en.mission, map: en.map, facilities: en.facilities });
+const liveText = JSON.stringify({ weather: en.weather, city: en.city, units: en.units, board: en.board, planner: en.planner, dlcNames: en.dlcNames, generator: en.generator, dlcs: en.dlcs, mission: en.mission, map: en.map, facilities: en.facilities, search: en.search });
 const siteName = t('site.name');
-const { title, description = t('site.description') } = Astro.props;
+const { title, description = t('site.description'), image, crumbs } = Astro.props;
 const fullTitle = title ? `${title} · ${siteName}` : siteName;
-const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : undefined;
+const site = Astro.site ?? new URL(Astro.url.origin);
+const canonical = new URL(Astro.url.pathname, site).href;
+const ogImage = new URL(image?.src ?? '/og-default.png', site).href;
+const ogAlt = image?.alt ?? t('seo.defaultImageAlt');
+const isHome = Astro.url.pathname === '/';
+const ld = [
+  ...(isHome ? [websiteLd(site, siteName, t('site.description'))] : []),
+  ...(crumbs?.length ? [breadcrumbLd(site, [[siteName, '/'], ...crumbs])] : []),
+];
 ---
 <!doctype html>
 <html lang={meta.lang} dir={meta.dir}>
@@ -27,11 +40,22 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : un
     <meta name="theme-color" content="#0E131A" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="canonical" href={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={ogAlt} />
+    {!image && <meta property="og:image:width" content="1200" />}
+    {!image && <meta property="og:image:height" content="630" />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogAlt} />
+    {ld.map((o) => <script type="application/ld+json" set:html={ldJson(o)}></script>)}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
   </head>
