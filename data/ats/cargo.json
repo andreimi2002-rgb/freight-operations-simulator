@@ -11,7 +11,8 @@
     "game": "ats",
     "states": [
       "CA",
-      "NV"
+      "NV",
+      "AZ"
     ],
     "description": "Complete ATS cargo catalog from the wiki cargo list. weightLb in pounds; valuePerKm is the game unit_reward_per_km as given on the wiki.",
     "sourcePage": "https://trucksimulator.wiki.gg/wiki/Cargo_types/American_Truck_Simulator",

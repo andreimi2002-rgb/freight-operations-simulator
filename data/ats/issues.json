@@ -11,10 +11,11 @@
     "game": "ats",
     "states": [
       "CA",
-      "NV"
+      "NV",
+      "AZ"
     ],
     "description": "Problems found while collecting: missing values, contradictions between pages, names that do not match. For manual checking.",
-    "count": 116
+    "count": 124
   },
   "issues": [
     {
@@ -321,6 +322,16 @@
       "detail": "in the company category but no Infobox Company (not a company with depots)"
     },
     {
+      "kind": "parseNote",
+      "entity": "peterbilt",
+      "detail": "no Locations table (page mentions a state in scope)"
+    },
+    {
+      "kind": "parseNote",
+      "entity": "peterbilt",
+      "detail": "cargo group \"Truck dealership\" has no matching depot type (page mentions a state in scope)"
+    },
+    {
       "kind": "linkResolvedByName",
       "entity": "plaster-and-sons",
       "detail": "\"Huron\" (California) links to a page that is not the city page; matched to huron by name and state"
@@ -427,6 +438,36 @@
       "kind": "mismatch",
       "entity": "reno",
       "detail": "city infobox says 6 companies; company pages give 5 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "flagstaff",
+      "detail": "city infobox says 5 companies; company pages give 6 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "nogales",
+      "detail": "city infobox says 7 companies; company pages give 8 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "phoenix",
+      "detail": "city infobox says 14 companies; company pages give 13 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "san-simon",
+      "detail": "city infobox says 3 companies; company pages give 4 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "yuma",
+      "detail": "city infobox says 7 companies; company pages give 6 depots",
       "field": "companyCount"
     },
     {
@@ -551,6 +592,14 @@
       "detail": "\"Mack Pioneer\" is announced but not released (no engine data); left out"
     },
     {
+      "kind": "unknownCargo",
+      "entity": "yoghurt",
+      "detail": "\"Yoghurt\" is not on the cargo list (left out)",
+      "seenIn": [
+        "Phoenix Freight / (unnamed)"
+      ]
+    },
+    {
       "kind": "nameVariant",
       "entity": "frozen-foods",
       "detail": "\"Frozen Foods\" is not on the cargo list; matched to \"Frozen Food\" (singular/plural)",
@@ -563,7 +612,18 @@
       "entity": "transformers",
       "detail": "\"Transformers\" is not on the cargo list; matched to \"Transformer\" (singular/plural)",
       "seenIn": [
-        "Angel City Airport / (unnamed)"
+        "Angel City Airport / (unnamed)",
+        "Dynamix / Factory"
+      ]
+    },
+    {
+      "kind": "nameVariant",
+      "entity": "concrete-barriers",
+      "detail": "\"Concrete Barriers\" is not on the cargo list; matched to \"Concrete Barrier\" (singular/plural)",
+      "seenIn": [
+        "Dynamix / Factory",
+        "Oakland Shippers / (unnamed)",
+        "Rail Export / Depot"
       ]
     },
     {
@@ -573,15 +633,6 @@
       "seenIn": [
         "Farmer's Barn / Market",
         "Home Store / Market"
-      ]
-    },
-    {
-      "kind": "nameVariant",
-      "entity": "concrete-barriers",
-      "detail": "\"Concrete Barriers\" is not on the cargo list; matched to \"Concrete Barrier\" (singular/plural)",
-      "seenIn": [
-        "Oakland Shippers / (unnamed)",
-        "Rail Export / Depot"
       ]
     },
     {
@@ -597,7 +648,8 @@
       "entity": "yard-trucks",
       "detail": "\"Yard Trucks\" is not on the cargo list; matched to \"Yard Truck\" (singular/plural)",
       "seenIn": [
-        "Port of San Francisco / (unnamed)"
+        "Port of San Francisco / (unnamed)",
+        "Technoma / Plant"
       ]
     },
     {
@@ -660,6 +712,7 @@
       "seenIn": [
         "Eddy's / Market",
         "Shop Town / Market",
+        "Tidbit / Market",
         "Wallbert / Market"
       ],
       "generic": false
@@ -714,11 +767,13 @@
         "Lone Star Forwarding / Depot",
         "Lumenauto / Dealership",
         "Oakland Shippers / (unnamed)",
+        "Pioneer / Dealership",
         "Port of San Francisco / (unnamed)",
         "Rail Export / Depot",
         "Steeler / Workshop",
         "Sunshine Crops / Garage",
-        "Voltison Motors / Export terminal"
+        "Voltison Motors / Export terminal",
+        "Wingman Aviation Center / Aircraft service"
       ],
       "generic": true
     },
@@ -743,10 +798,13 @@
         "Plaster & Sons / Building foundation",
         "Plaster & Sons / Garage",
         "Rail Export / Depot",
+        "Sea Horizon / Plant",
         "Sell Goods / Warehouse",
         "Starbridge / Warehouse",
+        "Technoma / Plant",
         "Venture / Warehouse",
-        "WDS / Waste transfer station"
+        "WDS / Waste transfer station",
+        "Wingman Aviation Center / Aircraft service"
       ],
       "generic": true
     },
@@ -791,7 +849,9 @@
         "Plaster & Sons / Warehouse",
         "Port of San Francisco / (unnamed)",
         "Rail Export / Depot",
+        "Sea Horizon / Plant",
         "Sunshine Crops / Farm",
+        "Technoma / Plant",
         "Walden's / Storage"
       ],
       "generic": true
@@ -806,6 +866,7 @@
         "Lone Star Forwarding / Depot",
         "Lumenauto / Dealership",
         "Oakland Shippers / (unnamed)",
+        "Pioneer / Dealership",
         "Port of San Francisco / (unnamed)",
         "Rail Export / Depot",
         "Voltison Motors / Export terminal",
@@ -852,7 +913,23 @@
         "primm",
         "reno",
         "tonopah",
-        "winnemucca"
+        "winnemucca",
+        "camp-verde",
+        "clifton",
+        "flagstaff",
+        "grand-canyon-village",
+        "kayenta",
+        "kingman",
+        "lake-havasu-city",
+        "nogales",
+        "page",
+        "phoenix",
+        "san-simon",
+        "show-low",
+        "sierra-vista",
+        "tucson",
+        "winslow",
+        "yuma"
       ]
     },
     {

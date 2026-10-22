@@ -3,7 +3,7 @@
     "description": "One photo per city for the city pages, from Wikimedia Commons, chosen by hand from data/photo-candidates.json (owner delegated the choice to Claude on 2026-10-21). Each entry gives the reason. photo null = placeholder.",
     "source": "Wikimedia Commons",
     "licences": "free licences per file (author and licence on each entry)",
-    "chosen": "2026-10-21",
+    "chosen": "2026-10-21 (CA, NV); 2026-10-22 (AZ)",
     "chosenBy": "Claude (delegated by the project owner)"
   },
   "photos": {
@@ -538,6 +538,250 @@
         "verified": "2026-10-21"
       },
       "reason": "main street of Winnemucca with the hills behind"
+    },
+    "camp-verde": {
+      "photo": {
+        "file": "2016-366-205 Turn up the Monsoon to 11 (27891462433).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/2016-366-205_Turn_up_the_Monsoon_to_11_%2827891462433%29.jpg/1920px-2016-366-205_Turn_up_the_Monsoon_to_11_%2827891462433%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/2016-366-205_Turn_up_the_Monsoon_to_11_%2827891462433%29.jpg/960px-2016-366-205_Turn_up_the_Monsoon_to_11_%2827891462433%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2016-366-205_Turn_up_the_Monsoon_to_11_(27891462433).jpg",
+        "author": "cogdogblog",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1600,
+        "height": 862,
+        "from": "Commons category \"Camp Verde, Arizona\"",
+        "verified": "2026-10-22"
+      },
+      "reason": "high-desert sky and scrub near Camp Verde; the only landscape photo (the others are a thin banner, a historic portrait and a sunset silhouette)"
+    },
+    "clifton": {
+      "photo": {
+        "file": "Clifton, AZ train station.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Clifton%2C_AZ_train_station.jpg/1920px-Clifton%2C_AZ_train_station.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Clifton%2C_AZ_train_station.jpg/960px-Clifton%2C_AZ_train_station.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Clifton,_AZ_train_station.jpg",
+        "author": "Ron Reiring",
+        "licence": "CC BY-SA 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "width": 1600,
+        "height": 1074,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-22"
+      },
+      "reason": "the historic Clifton railroad depot below the canyon walls"
+    },
+    "flagstaff": {
+      "photo": {
+        "file": "Atop Mount Elden.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/5/51/Atop_Mount_Elden.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Atop_Mount_Elden.jpg/960px-Atop_Mount_Elden.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Atop_Mount_Elden.jpg",
+        "author": "John Vetterli",
+        "licence": "CC BY-SA 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "width": 1600,
+        "height": 1067,
+        "from": "Commons category \"Flagstaff, Arizona\"",
+        "verified": "2026-10-22"
+      },
+      "reason": "Flagstaff seen from the forested hills"
+    },
+    "grand-canyon-village": {
+      "photo": {
+        "file": "Grand Canyon Village-Grand Canyon Railroad Station-1901-2.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg/1920px-Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg/960px-Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg",
+        "author": "Marine 69-71",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1600,
+        "height": 1200,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-22"
+      },
+      "reason": "the historic Grand Canyon Depot in the village"
+    },
+    "kayenta": {
+      "photo": {
+        "file": "DESDE EL RINCON DE JOHN FORD - panoramio.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg/1920px-DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg/960px-DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg",
+        "author": "Manuel Velazquez",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+        "width": 1600,
+        "height": 1063,
+        "from": "Commons category \"Kayenta, Arizona\"",
+        "verified": "2026-10-22"
+      },
+      "reason": "Monument Valley buttes near Kayenta"
+    },
+    "kingman": {
+      "photo": {
+        "file": "2012, View S, Kingman Cloudburst - panoramio.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/2012%2C_View_S%2C_Kingman_Cloudburst_-_panoramio.jpg/1920px-2012%2C_View_S%2C_Kingman_Cloudburst_-_panoramio.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/2012%2C_View_S%2C_Kingman_Cloudburst_-_panoramio.jpg/960px-2012%2C_View_S%2C_Kingman_Cloudburst_-_panoramio.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2012,_View_S,_Kingman_Cloudburst_-_panoramio.jpg",
+        "author": "Chris English",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1200,
+        "from": "Commons category \"Kingman, Arizona\"",
+        "verified": "2026-10-22"
+      },
+      "reason": "high desert at sunset near Kingman"
+    },
+    "lake-havasu-city": {
+      "photo": {
+        "file": "London Bridge, Lake Havasu City - 2011 (Aerial Photo).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/London_Bridge%2C_Lake_Havasu_City_-_2011_%28Aerial_Photo%29.jpg/1920px-London_Bridge%2C_Lake_Havasu_City_-_2011_%28Aerial_Photo%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/London_Bridge%2C_Lake_Havasu_City_-_2011_%28Aerial_Photo%29.jpg/960px-London_Bridge%2C_Lake_Havasu_City_-_2011_%28Aerial_Photo%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:London_Bridge,_Lake_Havasu_City_-_2011_(Aerial_Photo).jpg",
+        "author": "S. Winkvist",
+        "licence": "CC0",
+        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 1600,
+        "height": 1067,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-22"
+      },
+      "reason": "aerial view of Lake Havasu City and London Bridge"
+    },
+    "nogales": {
+      "photo": {
+        "file": "Nogales.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/4/42/Nogales.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Nogales.jpg/960px-Nogales.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Nogales.jpg",
+        "author": "Salvador Vitanza",
+        "licence": "CC BY-SA 2.5",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "width": 1600,
+        "height": 1066,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-22"
+      },
+      "reason": "Nogales on its hills along the border"
+    },
+    "page": {
+      "photo": {
+        "file": "Lake Powell - Page, Arizona (50560887677).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Lake_Powell_-_Page%2C_Arizona_%2850560887677%29.jpg/1920px-Lake_Powell_-_Page%2C_Arizona_%2850560887677%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Lake_Powell_-_Page%2C_Arizona_%2850560887677%29.jpg/960px-Lake_Powell_-_Page%2C_Arizona_%2850560887677%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Lake_Powell_-_Page,_Arizona_(50560887677).jpg",
+        "author": "G. Lamar",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1600,
+        "height": 900,
+        "from": "Commons category \"Page, Arizona\"",
+        "verified": "2026-10-22"
+      },
+      "reason": "Lake Powell at Page under a dramatic sky"
+    },
+    "phoenix": {
+      "photo": {
+        "file": "Downtown Phoenix Aerial Looking Northeast.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Downtown_Phoenix_Aerial_Looking_Northeast.jpg/1920px-Downtown_Phoenix_Aerial_Looking_Northeast.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Downtown_Phoenix_Aerial_Looking_Northeast.jpg/960px-Downtown_Phoenix_Aerial_Looking_Northeast.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Downtown_Phoenix_Aerial_Looking_Northeast.jpg",
+        "author": "DPPed",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1236,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-22"
+      },
+      "reason": "downtown Phoenix skyline with the mountains behind"
+    },
+    "san-simon": {
+      "photo": null,
+      "reason": "no free photo of the town on Commons that passes the rules"
+    },
+    "show-low": {
+      "photo": {
+        "file": "ShowLow AZ from northwest.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/b/bb/ShowLow_AZ_from_northwest.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/ShowLow_AZ_from_northwest.jpg/960px-ShowLow_AZ_from_northwest.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:ShowLow_AZ_from_northwest.jpg",
+        "author": "Ixnayonthetimmay",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1600,
+        "height": 1200,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-22"
+      },
+      "reason": "Show Low seen over the pine forest"
+    },
+    "sierra-vista": {
+      "photo": {
+        "file": "Moon over Sierra Vista - panoramio.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Moon_over_Sierra_Vista_-_panoramio.jpg/1920px-Moon_over_Sierra_Vista_-_panoramio.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Moon_over_Sierra_Vista_-_panoramio.jpg/960px-Moon_over_Sierra_Vista_-_panoramio.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Moon_over_Sierra_Vista_-_panoramio.jpg",
+        "author": "maarit u",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+        "width": 1600,
+        "height": 899,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-22"
+      },
+      "reason": "Sierra Vista at dusk"
+    },
+    "tucson": {
+      "photo": {
+        "file": "CatalinasAndTucsonAZ.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/CatalinasAndTucsonAZ.jpg/1920px-CatalinasAndTucsonAZ.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/CatalinasAndTucsonAZ.jpg/960px-CatalinasAndTucsonAZ.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:CatalinasAndTucsonAZ.jpg",
+        "author": "unknown; cleaned up, rotated and levels adjustment by Howcheng .",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1600,
+        "height": 1106,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-22"
+      },
+      "reason": "downtown Tucson with the Santa Catalina Mountains"
+    },
+    "winslow": {
+      "photo": {
+        "file": "Arizona US 66 Standing on the Corner Park Winslow Arizona.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Arizona_US_66_Standing_on_the_Corner_Park_Winslow_Arizona.jpg/1920px-Arizona_US_66_Standing_on_the_Corner_Park_Winslow_Arizona.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Arizona_US_66_Standing_on_the_Corner_Park_Winslow_Arizona.jpg/960px-Arizona_US_66_Standing_on_the_Corner_Park_Winslow_Arizona.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Arizona_US_66_Standing_on_the_Corner_Park_Winslow_Arizona.jpg",
+        "author": "TimothyMN",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1600,
+        "height": 1200,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-22"
+      },
+      "reason": "Standin on the Corner park on Route 66 in Winslow"
+    },
+    "yuma": {
+      "photo": {
+        "file": "Old Yuma City Hall.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Old_Yuma_City_Hall.jpg/1920px-Old_Yuma_City_Hall.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Old_Yuma_City_Hall.jpg/960px-Old_Yuma_City_Hall.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Old_Yuma_City_Hall.jpg",
+        "author": "Cbl62",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 940,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-22"
+      },
+      "reason": "historic building in downtown Yuma"
     }
   }
 }

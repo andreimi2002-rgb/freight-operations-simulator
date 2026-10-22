@@ -26,7 +26,7 @@ const coords = city.coordinates;
         </div>}
     <div class="scrim" aria-hidden="true"></div>
     <div class="container title-wrap">
-      <p class="eyebrow on-photo">{stateName} · {city.dlc === 'base' ? t('city.dlcBase') : city.dlc}</p>
+      <p class="eyebrow on-photo">{stateName} · {city.dlc === 'base' ? t('city.dlcBase') : t(`mapDlcNames.${city.dlc}`)}</p>
       <h1 id="city-title">{city.name}</h1>
     </div>
   </div>

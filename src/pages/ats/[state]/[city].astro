@@ -31,7 +31,7 @@ const facilityDetails = city.facilityDetails.filter((d) => {
 });
 const cards = [
   { label: t('city.cards.state'), value: state.name },
-  { label: t('city.cards.dlc'), value: city.dlc === 'base' ? t('city.dlcBase') : city.dlc },
+  { label: t('city.cards.dlc'), value: city.dlc === 'base' ? t('city.dlcBase') : t(`mapDlcNames.${city.dlc}`) },
   { label: t('city.cards.depots'), value: String(city.depots.length), mono: true },
   { label: t('city.cards.provides'), value: t('city.cargoCount', { n: counts.provides }), mono: true },
   { label: t('city.cards.accepts'), value: t('city.cargoCount', { n: counts.accepts }), mono: true },

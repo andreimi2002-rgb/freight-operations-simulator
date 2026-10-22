@@ -1,7 +1,7 @@
 {
   "meta": {
     "description": "What the ATS collector (scripts/ats/collect.mjs) gathers. States are data: adding a state means adding an entry here and running the script again.",
-    "updated": "2026-10-21"
+    "updated": "2026-10-22"
   },
   "game": "ats",
   "wiki": {
@@ -30,6 +30,17 @@
       "name": "Nevada",
       "category": "Cities in Nevada",
       "wikidata": "Q1227"
+    },
+    {
+      "code": "AZ",
+      "name": "Arizona",
+      "category": "Cities in Arizona",
+      "wikidata": "Q816",
+      "timezones": {
+        "MST": "America/Phoenix",
+        "MDT": "America/Phoenix"
+      },
+      "note": "Arizona does not observe daylight saving time (except the Navajo Nation), so Mountain time there is America/Phoenix."
     }
   ],
   "timezones": {

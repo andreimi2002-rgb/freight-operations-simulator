@@ -47,9 +47,9 @@
   },
   "home": {
     "title": "Freight World",
-    "eyebrow": "American Truck Simulator · California and Nevada first",
+    "eyebrow": "American Truck Simulator · California, Nevada and Arizona",
     "lead": "A job generator in the style of ATS and ETS2, built on the real game map: cities, companies, depots, cargo and trailers that exist in the game, with live city pages.",
-    "status": "City pages, departures boards, the job generator, job sheets and the route planner are ready for California and Nevada.",
+    "status": "City pages, departures boards, the job generator, job sheets and the route planner cover the starting map: California, Nevada and Arizona.",
     "aboutCta": "Sources and licences",
     "pillarsTitle": "What Freight World will show",
     "pillars": {
@@ -95,7 +95,7 @@
       "images": "No logos, screenshots or other images from the games. City photos come from Wikimedia Commons with author and licence."
     },
     "sourcesTitle": "Sources and licences",
-    "sourcesIntro": "The sources Freight World uses or will use. Game data for California and Nevada is collected since stage 1 and shown on the city pages since stage 2.",
+    "sourcesIntro": "The sources Freight World uses. Game data covers the starting map of American Truck Simulator: California, Nevada and Arizona.",
     "sourcesCaption": "Data sources, their use and their licences.",
     "cols": {
       "source": "Source",
@@ -166,10 +166,10 @@
   "atsIndex": {
     "title": "American Truck Simulator cities",
     "eyebrow": "American Truck Simulator",
-    "lead": "Every city in the game for the states covered so far, with its depots, facilities and roads. More states follow.",
+    "lead": "Every city of the starting map (California, Nevada and the free Arizona DLC), with its depots, facilities and roads. More states follow later.",
     "depots": "{n} depots",
     "cities": "{n} cities",
-    "metaDescription": "Cities of American Truck Simulator in California and Nevada, with depots, local time and real weather."
+    "metaDescription": "Cities of American Truck Simulator in California, Nevada and Arizona, with depots, local time and real weather."
   },
   "city": {
     "metaDescription": "{name}, {state} in American Truck Simulator: {depots} depots, local time and real weather.",
@@ -234,7 +234,8 @@
     "port": "Port",
     "toll": "Toll",
     "viewpoint": "Viewpoint",
-    "agricheck": "Agricultural inspection station"
+    "agricheck": "Agricultural inspection station",
+    "airport": "Airport"
   },
   "weather": {
     "clear": "Clear",
@@ -425,5 +426,8 @@
     "noDealers": "No truck dealer in {city}",
     "hp": "up to {hp} hp",
     "provenance": "Depots, cargo, trailers and trucks: Truck Simulator Wiki (CC BY-SA 4.0). Distance and drive time: estimates from real roads (© OpenStreetMap contributors, ODbL) at 55 mph. Weather: MET Norway (CC BY 4.0). Pay is not shown: the game’s pay inputs are not public."
+  },
+  "mapDlcNames": {
+    "arizona": "Arizona (free DLC)"
   }
 }

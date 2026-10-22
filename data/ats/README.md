@@ -50,6 +50,6 @@ The script makes at most one request per second per host, sends a clear User-Age
 
 To add a state: add it to `scope.json` (`code`, `name`, wiki `category`, `wikidata` item) and run the script again.
 
-## Last run (2026-10-21)
+## Last run (2026-10-22)
 
-34 cities (CA 24, NV 10), 59 companies, 244 depots, 295 cargo, 32 trailer types (27 with trailer data), 112 entries in issues.json (13 of them are the approved corrections, listed for transparency).
+50 cities (CA 24, NV 10, AZ 16), 67 companies, 347 depots, 295 cargo, 32 trailer types, 19 trucks, 124 entries in issues.json.

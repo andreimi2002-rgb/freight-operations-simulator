@@ -320,7 +320,8 @@ apoi PR `v2-freight-world` → `main` cu deploy preview; după aprobarea proprie
 **Gata când:** orice cursă din tabelă deschide o fișă completă și corectă.
 
 ### Etapa 5 — Extinderea hărții
-- Restul statelor ATS, stat cu stat.
+- **Arizona** (DLC gratuit) a fost adăugată pe 2026-10-22: harta de start ATS (California, Nevada, Arizona) e completă.
+- Restul statelor ATS, stat cu stat, **după ce aplicația e mai completă** (decizia proprietarului, 2026-10-22).
 - Apoi ETS2, cu aceeași structură de date (țări în loc de state).
 
 ### Etapa 6 — Extra (de discutat)
@@ -400,3 +401,4 @@ apoi PR `v2-freight-world` → `main` cu deploy preview; după aprobarea proprie
 | 2026-10-22 | Etapa 4: vremea rea la plecare sau destinație dă **doar avertisment**, fără întârzieri inventate. Regulile de weekend și sezon se **amână** (jocul nu are date pentru ele). |
 | 2026-10-22 | Camioanele ATS se colectează de pe wiki (19 lansate; cele anunțate rămân pe dinafară). **Camionul recomandat** e o regulă Freight World, afișată ca „simulat”: ≥ 400 CP până la 25.000 lb, ≥ 450 CP până la 45.000 lb, ≥ 500 CP peste, ≥ 550 CP pentru marfă „heavy”; întâi mărcile cu dealer în orașul de plecare; fără camioane electrice (lipsesc datele de autonomie). |
 | 2026-10-22 | ID-ul fișei de cursă e format din ID-uri stabile (oraș, depozit, marfă, destinație, remorcă, greutate), ca linkurile să rămână valabile după o reîmprospătare a datelor. „My DLCs” se salvează doar în browser; fără o alegere salvată nu se filtrează nimic. |
+| 2026-10-22 | Se adaugă **doar Arizona** acum, ca harta de start (jocul de bază + DLC-ul gratuit) să fie completă; celelalte state vin după ce aplicația e mai completă. Arizona folosește fusul `America/Phoenix` (fără ora de vară), definit ca excepție pe stat în `scope.json`. San Simon rămâne fără poză (nicio poză liberă potrivită pe Commons). |

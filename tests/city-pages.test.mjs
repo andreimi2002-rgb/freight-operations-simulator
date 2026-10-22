@@ -129,3 +129,13 @@ test('job sheet helpers: weather at a time, severe weather, night', async () => 
   assert.ok(!isSevere({ sky: 'rain', intensity: 'light' }) && !isSevere(null));
   assert.ok(isNight(23) && isNight(3) && !isNight(6) && !isNight(21));
 });
+
+test('every map DLC of a city has a display name', () => {
+  for (const d of new Set(cities.map((c) => c.dlc).filter((d) => d !== "base"))) assert.ok(en.mapDlcNames?.[d], `no name for map DLC "${d}"`);
+});
+
+test('Arizona cities use America/Phoenix (no daylight saving time)', () => {
+  const az = cities.filter((c) => c.state === "AZ");
+  assert.ok(az.length > 0);
+  for (const c of az) assert.equal(c.timezone.iana, "America/Phoenix", c.id);
+});

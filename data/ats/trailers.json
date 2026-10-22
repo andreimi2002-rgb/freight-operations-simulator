@@ -11,7 +11,8 @@
     "game": "ats",
     "states": [
       "CA",
-      "NV"
+      "NV",
+      "AZ"
     ],
     "description": "Trailer types named on the cargo list, each with the dealer trailer models (wiki trailer pages) that belong to it. priceUsd is the base dealer price shown on the wiki.",
     "count": 32

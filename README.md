@@ -4,7 +4,11 @@ An ATS / ETS2 style job generator built on the real game map, with live city pag
 
 Live at https://freight-operations-simulator.netlify.app (from `main`). The plan is in [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md) (Romanian) and the rules for contributors and tools in [AGENTS.md](AGENTS.md). The previous product, the Freight Operations Simulator (FOS), is kept as the git tag `fos-final`.
 
-## Current version: 2.0.0-alpha.7 (stage 4: job sheets)
+## Current version: 2.0.0-alpha.8 (Arizona: the starting map is complete)
+
+- Arizona added (16 cities): the starting map of ATS (California, Nevada, Arizona) is complete with 50 cities. Other states come later.
+
+### Stage 4
 
 - A full sheet for every job at `/ats/mission/<id>`: depots with game ids, cargo, hazmat, trailer with dealer models, recommended trucks, distance and arrival time, weather at both ends with bad-weather warnings, required DLCs.
 - "Generate a job" button; "My DLCs" saved in the browser and used by boards, generator and planner.
@@ -22,7 +26,7 @@ Live at https://freight-operations-simulator.netlify.app (from `main`). The plan
 
 ### Stage 1
 
-- Game data collected from Truck Simulator Wiki (CC BY-SA 4.0) into [data/ats/](data/ats/): 34 cities, 59 companies, 244 depots, 295 cargo, 32 trailer types, owner-approved name corrections in `aliases.json`, plus `issues.json` for manual checking. City coordinates from Wikidata (CC0). See [data/ats/README.md](data/ats/README.md).
+- Game data collected from Truck Simulator Wiki (CC BY-SA 4.0) into [data/ats/](data/ats/): 34 cities, 59 companies, 244 depots at the time (now 50 cities with Arizona), 295 cargo, 32 trailer types, owner-approved name corrections in `aliases.json`, plus `issues.json` for manual checking. City coordinates from Wikidata (CC0). See [data/ats/README.md](data/ats/README.md).
 - Collector: `npm run collect:ats` (cached, one request per second).
 
 ### Stage 0

@@ -9,9 +9,9 @@
     "licence": "ODbL 1.0",
     "licenceUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
     "attribution": "© OpenStreetMap contributors",
-    "retrieved": "2026-10-21",
+    "retrieved": "2026-10-22",
     "generator": "scripts/ats/distances.mjs",
-    "count": 1122
+    "count": 2450
   },
   "pairs": [
     {
@@ -28,9 +28,21 @@
     },
     {
       "from": "bakersfield",
+      "to": "camp-verde",
+      "km": 830.7,
+      "carMinutes": 564
+    },
+    {
+      "from": "bakersfield",
       "to": "carson-city",
       "km": 561.2,
       "carMinutes": 454
+    },
+    {
+      "from": "bakersfield",
+      "to": "clifton",
+      "km": 1110.9,
+      "carMinutes": 797
     },
     {
       "from": "bakersfield",
@@ -58,9 +70,21 @@
     },
     {
       "from": "bakersfield",
+      "to": "flagstaff",
+      "km": 781.4,
+      "carMinutes": 522
+    },
+    {
+      "from": "bakersfield",
       "to": "fresno",
       "km": 180.8,
       "carMinutes": 125
+    },
+    {
+      "from": "bakersfield",
+      "to": "grand-canyon-village",
+      "km": 815.6,
+      "carMinutes": 556
     },
     {
       "from": "bakersfield",
@@ -88,6 +112,24 @@
     },
     {
       "from": "bakersfield",
+      "to": "kayenta",
+      "km": 1015,
+      "carMinutes": 692
+    },
+    {
+      "from": "bakersfield",
+      "to": "kingman",
+      "km": 543.7,
+      "carMinutes": 371
+    },
+    {
+      "from": "bakersfield",
+      "to": "lake-havasu-city",
+      "km": 508.8,
+      "carMinutes": 358
+    },
+    {
+      "from": "bakersfield",
       "to": "las-vegas",
       "km": 458.4,
       "carMinutes": 319
@@ -112,6 +154,12 @@
     },
     {
       "from": "bakersfield",
+      "to": "nogales",
+      "km": 1061.7,
+      "carMinutes": 717
+    },
+    {
+      "from": "bakersfield",
       "to": "oakland",
       "km": 436.5,
       "carMinutes": 303
@@ -121,6 +169,18 @@
       "to": "oxnard",
       "km": 192.6,
       "carMinutes": 149
+    },
+    {
+      "from": "bakersfield",
+      "to": "page",
+      "km": 895.5,
+      "carMinutes": 636
+    },
+    {
+      "from": "bakersfield",
+      "to": "phoenix",
+      "km": 776.5,
+      "carMinutes": 529
     },
     {
       "from": "bakersfield",
@@ -172,6 +232,12 @@
     },
     {
       "from": "bakersfield",
+      "to": "san-simon",
+      "km": 1154.7,
+      "carMinutes": 770
+    },
+    {
+      "from": "bakersfield",
       "to": "santa-cruz",
       "km": 393.9,
       "carMinutes": 286
@@ -181,6 +247,18 @@
       "to": "santa-maria",
       "km": 206.4,
       "carMinutes": 157
+    },
+    {
+      "from": "bakersfield",
+      "to": "show-low",
+      "km": 997.7,
+      "carMinutes": 669
+    },
+    {
+      "from": "bakersfield",
+      "to": "sierra-vista",
+      "km": 1078.9,
+      "carMinutes": 733
     },
     {
       "from": "bakersfield",
@@ -202,6 +280,12 @@
     },
     {
       "from": "bakersfield",
+      "to": "tucson",
+      "km": 963.5,
+      "carMinutes": 653
+    },
+    {
+      "from": "bakersfield",
       "to": "ukiah",
       "km": 625.9,
       "carMinutes": 443
@@ -211,6 +295,18 @@
       "to": "winnemucca",
       "km": 876.6,
       "carMinutes": 626
+    },
+    {
+      "from": "bakersfield",
+      "to": "winslow",
+      "km": 867.3,
+      "carMinutes": 573
+    },
+    {
+      "from": "bakersfield",
+      "to": "yuma",
+      "km": 615.5,
+      "carMinutes": 436
     },
     {
       "from": "barstow",
@@ -226,9 +322,21 @@
     },
     {
       "from": "barstow",
+      "to": "camp-verde",
+      "km": 622.5,
+      "carMinutes": 417
+    },
+    {
+      "from": "barstow",
       "to": "carson-city",
       "km": 617.3,
       "carMinutes": 477
+    },
+    {
+      "from": "barstow",
+      "to": "clifton",
+      "km": 933.5,
+      "carMinutes": 684
     },
     {
       "from": "barstow",
@@ -256,9 +364,21 @@
     },
     {
       "from": "barstow",
+      "to": "flagstaff",
+      "km": 573.2,
+      "carMinutes": 374
+    },
+    {
+      "from": "barstow",
       "to": "fresno",
       "km": 389.9,
       "carMinutes": 273
+    },
+    {
+      "from": "barstow",
+      "to": "grand-canyon-village",
+      "km": 607.4,
+      "carMinutes": 408
     },
     {
       "from": "barstow",
@@ -286,6 +406,24 @@
     },
     {
       "from": "barstow",
+      "to": "kayenta",
+      "km": 806.9,
+      "carMinutes": 544
+    },
+    {
+      "from": "barstow",
+      "to": "kingman",
+      "km": 335.5,
+      "carMinutes": 223
+    },
+    {
+      "from": "barstow",
+      "to": "lake-havasu-city",
+      "km": 300.6,
+      "carMinutes": 210
+    },
+    {
+      "from": "barstow",
       "to": "las-vegas",
       "km": 249.8,
       "carMinutes": 171
@@ -310,6 +448,12 @@
     },
     {
       "from": "barstow",
+      "to": "nogales",
+      "km": 884.3,
+      "carMinutes": 605
+    },
+    {
+      "from": "barstow",
       "to": "oakland",
       "km": 643.9,
       "carMinutes": 449
@@ -319,6 +463,18 @@
       "to": "oxnard",
       "km": 275.6,
       "carMinutes": 197
+    },
+    {
+      "from": "barstow",
+      "to": "page",
+      "km": 686.9,
+      "carMinutes": 488
+    },
+    {
+      "from": "barstow",
+      "to": "phoenix",
+      "km": 599.1,
+      "carMinutes": 416
     },
     {
       "from": "barstow",
@@ -370,6 +526,12 @@
     },
     {
       "from": "barstow",
+      "to": "san-simon",
+      "km": 977.3,
+      "carMinutes": 658
+    },
+    {
+      "from": "barstow",
       "to": "santa-cruz",
       "km": 601.3,
       "carMinutes": 432
@@ -379,6 +541,18 @@
       "to": "santa-maria",
       "km": 390.5,
       "carMinutes": 295
+    },
+    {
+      "from": "barstow",
+      "to": "show-low",
+      "km": 789.5,
+      "carMinutes": 522
+    },
+    {
+      "from": "barstow",
+      "to": "sierra-vista",
+      "km": 901.5,
+      "carMinutes": 620
     },
     {
       "from": "barstow",
@@ -400,6 +574,12 @@
     },
     {
       "from": "barstow",
+      "to": "tucson",
+      "km": 786.1,
+      "carMinutes": 540
+    },
+    {
+      "from": "barstow",
       "to": "ukiah",
       "km": 833.3,
       "carMinutes": 589
@@ -409,6 +589,18 @@
       "to": "winnemucca",
       "km": 852.8,
       "carMinutes": 610
+    },
+    {
+      "from": "barstow",
+      "to": "winslow",
+      "km": 659.2,
+      "carMinutes": 425
+    },
+    {
+      "from": "barstow",
+      "to": "yuma",
+      "km": 465.8,
+      "carMinutes": 324
     },
     {
       "from": "blythe",
@@ -424,9 +616,21 @@
     },
     {
       "from": "blythe",
+      "to": "camp-verde",
+      "km": 371,
+      "carMinutes": 244
+    },
+    {
+      "from": "blythe",
       "to": "carson-city",
       "km": 947.3,
       "carMinutes": 705
+    },
+    {
+      "from": "blythe",
+      "to": "clifton",
+      "km": 576.2,
+      "carMinutes": 427
     },
     {
       "from": "blythe",
@@ -454,9 +658,21 @@
     },
     {
       "from": "blythe",
+      "to": "flagstaff",
+      "km": 462.1,
+      "carMinutes": 304
+    },
+    {
+      "from": "blythe",
       "to": "fresno",
       "km": 713.5,
       "carMinutes": 492
+    },
+    {
+      "from": "blythe",
+      "to": "grand-canyon-village",
+      "km": 515.5,
+      "carMinutes": 358
     },
     {
       "from": "blythe",
@@ -484,6 +700,24 @@
     },
     {
       "from": "blythe",
+      "to": "kayenta",
+      "km": 695.8,
+      "carMinutes": 474
+    },
+    {
+      "from": "blythe",
+      "to": "kingman",
+      "km": 243.5,
+      "carMinutes": 173
+    },
+    {
+      "from": "blythe",
+      "to": "lake-havasu-city",
+      "km": 155.2,
+      "carMinutes": 118
+    },
+    {
+      "from": "blythe",
       "to": "las-vegas",
       "km": 334.7,
       "carMinutes": 241
@@ -508,6 +742,12 @@
     },
     {
       "from": "blythe",
+      "to": "nogales",
+      "km": 527,
+      "carMinutes": 348
+    },
+    {
+      "from": "blythe",
       "to": "oakland",
       "km": 951.8,
       "carMinutes": 652
@@ -517,6 +757,18 @@
       "to": "oxnard",
       "km": 461.5,
       "carMinutes": 323
+    },
+    {
+      "from": "blythe",
+      "to": "page",
+      "km": 671.9,
+      "carMinutes": 460
+    },
+    {
+      "from": "blythe",
+      "to": "phoenix",
+      "km": 241.7,
+      "carMinutes": 159
     },
     {
       "from": "blythe",
@@ -568,6 +820,12 @@
     },
     {
       "from": "blythe",
+      "to": "san-simon",
+      "km": 619.9,
+      "carMinutes": 400
+    },
+    {
+      "from": "blythe",
       "to": "santa-cruz",
       "km": 909.2,
       "carMinutes": 635
@@ -577,6 +835,18 @@
       "to": "santa-maria",
       "km": 614.8,
       "carMinutes": 441
+    },
+    {
+      "from": "blythe",
+      "to": "show-low",
+      "km": 521.1,
+      "carMinutes": 371
+    },
+    {
+      "from": "blythe",
+      "to": "sierra-vista",
+      "km": 544.1,
+      "carMinutes": 363
     },
     {
       "from": "blythe",
@@ -598,6 +868,12 @@
     },
     {
       "from": "blythe",
+      "to": "tucson",
+      "km": 428.7,
+      "carMinutes": 283
+    },
+    {
+      "from": "blythe",
       "to": "ukiah",
       "km": 1141.2,
       "carMinutes": 793
@@ -607,6 +883,312 @@
       "to": "winnemucca",
       "km": 1088.1,
       "carMinutes": 762
+    },
+    {
+      "from": "blythe",
+      "to": "winslow",
+      "km": 548.1,
+      "carMinutes": 355
+    },
+    {
+      "from": "blythe",
+      "to": "yuma",
+      "km": 143.8,
+      "carMinutes": 122
+    },
+    {
+      "from": "camp-verde",
+      "to": "bakersfield",
+      "km": 831.1,
+      "carMinutes": 565
+    },
+    {
+      "from": "camp-verde",
+      "to": "barstow",
+      "km": 623.9,
+      "carMinutes": 416
+    },
+    {
+      "from": "camp-verde",
+      "to": "blythe",
+      "km": 371.1,
+      "carMinutes": 245
+    },
+    {
+      "from": "camp-verde",
+      "to": "carson-city",
+      "km": 1139,
+      "carMinutes": 823
+    },
+    {
+      "from": "camp-verde",
+      "to": "clifton",
+      "km": 415.8,
+      "carMinutes": 354
+    },
+    {
+      "from": "camp-verde",
+      "to": "el-centro",
+      "km": 522.2,
+      "carMinutes": 359
+    },
+    {
+      "from": "camp-verde",
+      "to": "elko",
+      "km": 1144.7,
+      "carMinutes": 818
+    },
+    {
+      "from": "camp-verde",
+      "to": "ely",
+      "km": 843.7,
+      "carMinutes": 610
+    },
+    {
+      "from": "camp-verde",
+      "to": "eureka",
+      "km": 1706.3,
+      "carMinutes": 1196
+    },
+    {
+      "from": "camp-verde",
+      "to": "flagstaff",
+      "km": 97.5,
+      "carMinutes": 69
+    },
+    {
+      "from": "camp-verde",
+      "to": "fresno",
+      "km": 1011.6,
+      "carMinutes": 686
+    },
+    {
+      "from": "camp-verde",
+      "to": "grand-canyon-village",
+      "km": 227.7,
+      "carMinutes": 164
+    },
+    {
+      "from": "camp-verde",
+      "to": "hilt",
+      "km": 1590.6,
+      "carMinutes": 1156
+    },
+    {
+      "from": "camp-verde",
+      "to": "huron",
+      "km": 979.8,
+      "carMinutes": 671
+    },
+    {
+      "from": "camp-verde",
+      "to": "indio",
+      "km": 528.3,
+      "carMinutes": 351
+    },
+    {
+      "from": "camp-verde",
+      "to": "jackpot",
+      "km": 1172.4,
+      "carMinutes": 843
+    },
+    {
+      "from": "camp-verde",
+      "to": "kayenta",
+      "km": 331.2,
+      "carMinutes": 239
+    },
+    {
+      "from": "camp-verde",
+      "to": "kingman",
+      "km": 289.9,
+      "carMinutes": 199
+    },
+    {
+      "from": "camp-verde",
+      "to": "lake-havasu-city",
+      "km": 391.3,
+      "carMinutes": 270
+    },
+    {
+      "from": "camp-verde",
+      "to": "las-vegas",
+      "km": 460.5,
+      "carMinutes": 327
+    },
+    {
+      "from": "camp-verde",
+      "to": "los-angeles",
+      "km": 729.7,
+      "carMinutes": 488
+    },
+    {
+      "from": "camp-verde",
+      "to": "modesto",
+      "km": 1159.7,
+      "carMinutes": 794
+    },
+    {
+      "from": "camp-verde",
+      "to": "mojave",
+      "km": 746.3,
+      "carMinutes": 511
+    },
+    {
+      "from": "camp-verde",
+      "to": "nogales",
+      "km": 432,
+      "carMinutes": 290
+    },
+    {
+      "from": "camp-verde",
+      "to": "oakland",
+      "km": 1265.6,
+      "carMinutes": 862
+    },
+    {
+      "from": "camp-verde",
+      "to": "oxnard",
+      "km": 831.7,
+      "carMinutes": 564
+    },
+    {
+      "from": "camp-verde",
+      "to": "page",
+      "km": 307.4,
+      "carMinutes": 226
+    },
+    {
+      "from": "camp-verde",
+      "to": "phoenix",
+      "km": 146.9,
+      "carMinutes": 102
+    },
+    {
+      "from": "camp-verde",
+      "to": "pioche",
+      "km": 694.3,
+      "carMinutes": 525
+    },
+    {
+      "from": "camp-verde",
+      "to": "primm",
+      "km": 474.2,
+      "carMinutes": 340
+    },
+    {
+      "from": "camp-verde",
+      "to": "redding",
+      "km": 1546.7,
+      "carMinutes": 1049
+    },
+    {
+      "from": "camp-verde",
+      "to": "reno",
+      "km": 1152.4,
+      "carMinutes": 835
+    },
+    {
+      "from": "camp-verde",
+      "to": "sacramento",
+      "km": 1275.3,
+      "carMinutes": 875
+    },
+    {
+      "from": "camp-verde",
+      "to": "san-diego",
+      "km": 701.2,
+      "carMinutes": 480
+    },
+    {
+      "from": "camp-verde",
+      "to": "san-francisco",
+      "km": 1285.3,
+      "carMinutes": 879
+    },
+    {
+      "from": "camp-verde",
+      "to": "san-jose",
+      "km": 1214.1,
+      "carMinutes": 835
+    },
+    {
+      "from": "camp-verde",
+      "to": "san-simon",
+      "km": 524.9,
+      "carMinutes": 343
+    },
+    {
+      "from": "camp-verde",
+      "to": "santa-cruz",
+      "km": 1223,
+      "carMinutes": 845
+    },
+    {
+      "from": "camp-verde",
+      "to": "santa-maria",
+      "km": 985.1,
+      "carMinutes": 682
+    },
+    {
+      "from": "camp-verde",
+      "to": "show-low",
+      "km": 234,
+      "carMinutes": 199
+    },
+    {
+      "from": "camp-verde",
+      "to": "sierra-vista",
+      "km": 449.2,
+      "carMinutes": 306
+    },
+    {
+      "from": "camp-verde",
+      "to": "stockton",
+      "km": 1206,
+      "carMinutes": 824
+    },
+    {
+      "from": "camp-verde",
+      "to": "tonopah",
+      "km": 797.7,
+      "carMinutes": 561
+    },
+    {
+      "from": "camp-verde",
+      "to": "truckee",
+      "km": 1208.2,
+      "carMinutes": 876
+    },
+    {
+      "from": "camp-verde",
+      "to": "tucson",
+      "km": 333.7,
+      "carMinutes": 226
+    },
+    {
+      "from": "camp-verde",
+      "to": "ukiah",
+      "km": 1455,
+      "carMinutes": 1002
+    },
+    {
+      "from": "camp-verde",
+      "to": "winnemucca",
+      "km": 1214,
+      "carMinutes": 848
+    },
+    {
+      "from": "camp-verde",
+      "to": "winslow",
+      "km": 183.5,
+      "carMinutes": 120
+    },
+    {
+      "from": "camp-verde",
+      "to": "yuma",
+      "km": 425.8,
+      "carMinutes": 294
     },
     {
       "from": "carson-city",
@@ -625,6 +1207,18 @@
       "to": "blythe",
       "km": 950.1,
       "carMinutes": 705
+    },
+    {
+      "from": "carson-city",
+      "to": "camp-verde",
+      "km": 1138.7,
+      "carMinutes": 826
+    },
+    {
+      "from": "carson-city",
+      "to": "clifton",
+      "km": 1485,
+      "carMinutes": 1128
     },
     {
       "from": "carson-city",
@@ -652,9 +1246,21 @@
     },
     {
       "from": "carson-city",
+      "to": "flagstaff",
+      "km": 1089.4,
+      "carMinutes": 784
+    },
+    {
+      "from": "carson-city",
       "to": "fresno",
       "km": 387.1,
       "carMinutes": 338
+    },
+    {
+      "from": "carson-city",
+      "to": "grand-canyon-village",
+      "km": 1123.6,
+      "carMinutes": 818
     },
     {
       "from": "carson-city",
@@ -682,6 +1288,24 @@
     },
     {
       "from": "carson-city",
+      "to": "kayenta",
+      "km": 1241.9,
+      "carMinutes": 916
+    },
+    {
+      "from": "carson-city",
+      "to": "kingman",
+      "km": 851.7,
+      "carMinutes": 632
+    },
+    {
+      "from": "carson-city",
+      "to": "lake-havasu-city",
+      "km": 928,
+      "carMinutes": 677
+    },
+    {
+      "from": "carson-city",
       "to": "las-vegas",
       "km": 681.9,
       "carMinutes": 503
@@ -706,6 +1330,12 @@
     },
     {
       "from": "carson-city",
+      "to": "nogales",
+      "km": 1435.8,
+      "carMinutes": 1048
+    },
+    {
+      "from": "carson-city",
       "to": "oakland",
       "km": 343.2,
       "carMinutes": 277
@@ -715,6 +1345,18 @@
       "to": "oxnard",
       "km": 742.9,
       "carMinutes": 572
+    },
+    {
+      "from": "carson-city",
+      "to": "page",
+      "km": 1083.8,
+      "carMinutes": 797
+    },
+    {
+      "from": "carson-city",
+      "to": "phoenix",
+      "km": 1140,
+      "carMinutes": 859
     },
     {
       "from": "carson-city",
@@ -766,6 +1408,12 @@
     },
     {
       "from": "carson-city",
+      "to": "san-simon",
+      "km": 1528.8,
+      "carMinutes": 1101
+    },
+    {
+      "from": "carson-city",
       "to": "santa-cruz",
       "km": 404.8,
       "carMinutes": 342
@@ -775,6 +1423,18 @@
       "to": "santa-maria",
       "km": 683.2,
       "carMinutes": 532
+    },
+    {
+      "from": "carson-city",
+      "to": "show-low",
+      "km": 1305.7,
+      "carMinutes": 931
+    },
+    {
+      "from": "carson-city",
+      "to": "sierra-vista",
+      "km": 1453,
+      "carMinutes": 1064
     },
     {
       "from": "carson-city",
@@ -796,6 +1456,12 @@
     },
     {
       "from": "carson-city",
+      "to": "tucson",
+      "km": 1337.6,
+      "carMinutes": 984
+    },
+    {
+      "from": "carson-city",
       "to": "ukiah",
       "km": 447.3,
       "carMinutes": 355
@@ -805,6 +1471,312 @@
       "to": "winnemucca",
       "km": 291.2,
       "carMinutes": 198
+    },
+    {
+      "from": "carson-city",
+      "to": "winslow",
+      "km": 1175.3,
+      "carMinutes": 834
+    },
+    {
+      "from": "carson-city",
+      "to": "yuma",
+      "km": 1030,
+      "carMinutes": 767
+    },
+    {
+      "from": "clifton",
+      "to": "bakersfield",
+      "km": 1111.8,
+      "carMinutes": 797
+    },
+    {
+      "from": "clifton",
+      "to": "barstow",
+      "km": 934.3,
+      "carMinutes": 683
+    },
+    {
+      "from": "clifton",
+      "to": "blythe",
+      "km": 576.1,
+      "carMinutes": 427
+    },
+    {
+      "from": "clifton",
+      "to": "camp-verde",
+      "km": 415.2,
+      "carMinutes": 352
+    },
+    {
+      "from": "clifton",
+      "to": "carson-city",
+      "km": 1484.8,
+      "carMinutes": 1126
+    },
+    {
+      "from": "clifton",
+      "to": "el-centro",
+      "km": 749.2,
+      "carMinutes": 503
+    },
+    {
+      "from": "clifton",
+      "to": "elko",
+      "km": 1490.5,
+      "carMinutes": 1120
+    },
+    {
+      "from": "clifton",
+      "to": "ely",
+      "km": 1189.5,
+      "carMinutes": 913
+    },
+    {
+      "from": "clifton",
+      "to": "eureka",
+      "km": 1967.7,
+      "carMinutes": 1410
+    },
+    {
+      "from": "clifton",
+      "to": "flagstaff",
+      "km": 551.7,
+      "carMinutes": 412
+    },
+    {
+      "from": "clifton",
+      "to": "fresno",
+      "km": 1288.7,
+      "carMinutes": 916
+    },
+    {
+      "from": "clifton",
+      "to": "grand-canyon-village",
+      "km": 690.5,
+      "carMinutes": 513
+    },
+    {
+      "from": "clifton",
+      "to": "hilt",
+      "km": 1996.1,
+      "carMinutes": 1397
+    },
+    {
+      "from": "clifton",
+      "to": "huron",
+      "km": 1241.3,
+      "carMinutes": 885
+    },
+    {
+      "from": "clifton",
+      "to": "indio",
+      "km": 733.3,
+      "carMinutes": 533
+    },
+    {
+      "from": "clifton",
+      "to": "jackpot",
+      "km": 1518.2,
+      "carMinutes": 1145
+    },
+    {
+      "from": "clifton",
+      "to": "kayenta",
+      "km": 600.5,
+      "carMinutes": 558
+    },
+    {
+      "from": "clifton",
+      "to": "kingman",
+      "km": 635.7,
+      "carMinutes": 501
+    },
+    {
+      "from": "clifton",
+      "to": "lake-havasu-city",
+      "km": 657.3,
+      "carMinutes": 494
+    },
+    {
+      "from": "clifton",
+      "to": "las-vegas",
+      "km": 806.3,
+      "carMinutes": 629
+    },
+    {
+      "from": "clifton",
+      "to": "los-angeles",
+      "km": 934.7,
+      "carMinutes": 670
+    },
+    {
+      "from": "clifton",
+      "to": "modesto",
+      "km": 1436.9,
+      "carMinutes": 1023
+    },
+    {
+      "from": "clifton",
+      "to": "mojave",
+      "km": 1006.1,
+      "carMinutes": 740
+    },
+    {
+      "from": "clifton",
+      "to": "nogales",
+      "km": 313.6,
+      "carMinutes": 243
+    },
+    {
+      "from": "clifton",
+      "to": "oakland",
+      "km": 1527,
+      "carMinutes": 1076
+    },
+    {
+      "from": "clifton",
+      "to": "oxnard",
+      "km": 1036.8,
+      "carMinutes": 746
+    },
+    {
+      "from": "clifton",
+      "to": "page",
+      "km": 752.6,
+      "carMinutes": 563
+    },
+    {
+      "from": "clifton",
+      "to": "phoenix",
+      "km": 334.5,
+      "carMinutes": 272
+    },
+    {
+      "from": "clifton",
+      "to": "pioche",
+      "km": 1080.7,
+      "carMinutes": 842
+    },
+    {
+      "from": "clifton",
+      "to": "primm",
+      "km": 820,
+      "carMinutes": 643
+    },
+    {
+      "from": "clifton",
+      "to": "redding",
+      "km": 1808.1,
+      "carMinutes": 1263
+    },
+    {
+      "from": "clifton",
+      "to": "reno",
+      "km": 1498.2,
+      "carMinutes": 1137
+    },
+    {
+      "from": "clifton",
+      "to": "sacramento",
+      "km": 1550.3,
+      "carMinutes": 1091
+    },
+    {
+      "from": "clifton",
+      "to": "san-diego",
+      "km": 928.2,
+      "carMinutes": 624
+    },
+    {
+      "from": "clifton",
+      "to": "san-francisco",
+      "km": 1546.7,
+      "carMinutes": 1093
+    },
+    {
+      "from": "clifton",
+      "to": "san-jose",
+      "km": 1475.5,
+      "carMinutes": 1048
+    },
+    {
+      "from": "clifton",
+      "to": "san-simon",
+      "km": 157.2,
+      "carMinutes": 123
+    },
+    {
+      "from": "clifton",
+      "to": "santa-cruz",
+      "km": 1484.4,
+      "carMinutes": 1059
+    },
+    {
+      "from": "clifton",
+      "to": "santa-maria",
+      "km": 1190.1,
+      "carMinutes": 865
+    },
+    {
+      "from": "clifton",
+      "to": "show-low",
+      "km": 328,
+      "carMinutes": 254
+    },
+    {
+      "from": "clifton",
+      "to": "sierra-vista",
+      "km": 252.1,
+      "carMinutes": 192
+    },
+    {
+      "from": "clifton",
+      "to": "stockton",
+      "km": 1474.7,
+      "carMinutes": 1038
+    },
+    {
+      "from": "clifton",
+      "to": "tonopah",
+      "km": 1143.5,
+      "carMinutes": 863
+    },
+    {
+      "from": "clifton",
+      "to": "truckee",
+      "km": 1554,
+      "carMinutes": 1178
+    },
+    {
+      "from": "clifton",
+      "to": "tucson",
+      "km": 270.3,
+      "carMinutes": 197
+    },
+    {
+      "from": "clifton",
+      "to": "ukiah",
+      "km": 1716.5,
+      "carMinutes": 1216
+    },
+    {
+      "from": "clifton",
+      "to": "winnemucca",
+      "km": 1559.7,
+      "carMinutes": 1150
+    },
+    {
+      "from": "clifton",
+      "to": "winslow",
+      "km": 458.9,
+      "carMinutes": 352
+    },
+    {
+      "from": "clifton",
+      "to": "yuma",
+      "km": 652.8,
+      "carMinutes": 438
     },
     {
       "from": "el-centro",
@@ -826,9 +1798,21 @@
     },
     {
       "from": "el-centro",
+      "to": "camp-verde",
+      "km": 521.7,
+      "carMinutes": 358
+    },
+    {
+      "from": "el-centro",
       "to": "carson-city",
       "km": 930.1,
       "carMinutes": 704
+    },
+    {
+      "from": "el-centro",
+      "to": "clifton",
+      "km": 749.2,
+      "carMinutes": 504
     },
     {
       "from": "el-centro",
@@ -850,9 +1834,21 @@
     },
     {
       "from": "el-centro",
+      "to": "flagstaff",
+      "km": 612.8,
+      "carMinutes": 418
+    },
+    {
+      "from": "el-centro",
       "to": "fresno",
       "km": 696.4,
       "carMinutes": 491
+    },
+    {
+      "from": "el-centro",
+      "to": "grand-canyon-village",
+      "km": 680.7,
+      "carMinutes": 477
     },
     {
       "from": "el-centro",
@@ -880,6 +1876,24 @@
     },
     {
       "from": "el-centro",
+      "to": "kayenta",
+      "km": 846.4,
+      "carMinutes": 588
+    },
+    {
+      "from": "el-centro",
+      "to": "kingman",
+      "km": 408.8,
+      "carMinutes": 292
+    },
+    {
+      "from": "el-centro",
+      "to": "lake-havasu-city",
+      "km": 319.6,
+      "carMinutes": 237
+    },
+    {
+      "from": "el-centro",
       "to": "las-vegas",
       "km": 499.9,
       "carMinutes": 360
@@ -904,6 +1918,12 @@
     },
     {
       "from": "el-centro",
+      "to": "nogales",
+      "km": 581,
+      "carMinutes": 383
+    },
+    {
+      "from": "el-centro",
       "to": "oakland",
       "km": 934.6,
       "carMinutes": 651
@@ -913,6 +1933,18 @@
       "to": "oxnard",
       "km": 444.4,
       "carMinutes": 322
+    },
+    {
+      "from": "el-centro",
+      "to": "page",
+      "km": 822.6,
+      "carMinutes": 574
+    },
+    {
+      "from": "el-centro",
+      "to": "phoenix",
+      "km": 392.4,
+      "carMinutes": 273
     },
     {
       "from": "el-centro",
@@ -964,6 +1996,12 @@
     },
     {
       "from": "el-centro",
+      "to": "san-simon",
+      "km": 674,
+      "carMinutes": 436
+    },
+    {
+      "from": "el-centro",
       "to": "santa-cruz",
       "km": 892,
       "carMinutes": 634
@@ -973,6 +2011,18 @@
       "to": "santa-maria",
       "km": 597.7,
       "carMinutes": 440
+    },
+    {
+      "from": "el-centro",
+      "to": "show-low",
+      "km": 660,
+      "carMinutes": 473
+    },
+    {
+      "from": "el-centro",
+      "to": "sierra-vista",
+      "km": 598.2,
+      "carMinutes": 398
     },
     {
       "from": "el-centro",
@@ -994,6 +2044,12 @@
     },
     {
       "from": "el-centro",
+      "to": "tucson",
+      "km": 482.8,
+      "carMinutes": 318
+    },
+    {
+      "from": "el-centro",
       "to": "ukiah",
       "km": 1124.1,
       "carMinutes": 792
@@ -1003,6 +2059,18 @@
       "to": "winnemucca",
       "km": 1165.6,
       "carMinutes": 837
+    },
+    {
+      "from": "el-centro",
+      "to": "winslow",
+      "km": 698.7,
+      "carMinutes": 469
+    },
+    {
+      "from": "el-centro",
+      "to": "yuma",
+      "km": 99.5,
+      "carMinutes": 71
     },
     {
       "from": "elko",
@@ -1024,9 +2092,21 @@
     },
     {
       "from": "elko",
+      "to": "camp-verde",
+      "km": 1144.1,
+      "carMinutes": 820
+    },
+    {
+      "from": "elko",
       "to": "carson-city",
       "km": 490.2,
       "carMinutes": 319
+    },
+    {
+      "from": "elko",
+      "to": "clifton",
+      "km": 1490.5,
+      "carMinutes": 1122
     },
     {
       "from": "elko",
@@ -1048,9 +2128,21 @@
     },
     {
       "from": "elko",
+      "to": "flagstaff",
+      "km": 1094.8,
+      "carMinutes": 778
+    },
+    {
+      "from": "elko",
       "to": "fresno",
       "km": 942.4,
       "carMinutes": 633
+    },
+    {
+      "from": "elko",
+      "to": "grand-canyon-village",
+      "km": 1129,
+      "carMinutes": 812
     },
     {
       "from": "elko",
@@ -1078,6 +2170,24 @@
     },
     {
       "from": "elko",
+      "to": "kayenta",
+      "km": 1024.6,
+      "carMinutes": 706
+    },
+    {
+      "from": "elko",
+      "to": "kingman",
+      "km": 857.1,
+      "carMinutes": 626
+    },
+    {
+      "from": "elko",
+      "to": "lake-havasu-city",
+      "km": 933.5,
+      "carMinutes": 671
+    },
+    {
+      "from": "elko",
       "to": "las-vegas",
       "km": 692.2,
       "carMinutes": 497
@@ -1102,6 +2212,12 @@
     },
     {
       "from": "elko",
+      "to": "nogales",
+      "km": 1441.3,
+      "carMinutes": 1042
+    },
+    {
+      "from": "elko",
       "to": "oakland",
       "km": 809,
       "carMinutes": 537
@@ -1111,6 +2227,18 @@
       "to": "oxnard",
       "km": 1086.1,
       "carMinutes": 777
+    },
+    {
+      "from": "elko",
+      "to": "page",
+      "km": 893.7,
+      "carMinutes": 648
+    },
+    {
+      "from": "elko",
+      "to": "phoenix",
+      "km": 1145.4,
+      "carMinutes": 853
     },
     {
       "from": "elko",
@@ -1162,6 +2290,12 @@
     },
     {
       "from": "elko",
+      "to": "san-simon",
+      "km": 1534.2,
+      "carMinutes": 1095
+    },
+    {
+      "from": "elko",
       "to": "santa-cruz",
       "km": 910.8,
       "carMinutes": 616
@@ -1171,6 +2305,18 @@
       "to": "santa-maria",
       "km": 1195.3,
       "carMinutes": 810
+    },
+    {
+      "from": "elko",
+      "to": "show-low",
+      "km": 1311.1,
+      "carMinutes": 925
+    },
+    {
+      "from": "elko",
+      "to": "sierra-vista",
+      "km": 1458.4,
+      "carMinutes": 1058
     },
     {
       "from": "elko",
@@ -1192,6 +2338,12 @@
     },
     {
       "from": "elko",
+      "to": "tucson",
+      "km": 1343,
+      "carMinutes": 978
+    },
+    {
+      "from": "elko",
       "to": "ukiah",
       "km": 850.8,
       "carMinutes": 612
@@ -1201,6 +2353,18 @@
       "to": "winnemucca",
       "km": 200.8,
       "carMinutes": 130
+    },
+    {
+      "from": "elko",
+      "to": "winslow",
+      "km": 1180.8,
+      "carMinutes": 828
+    },
+    {
+      "from": "elko",
+      "to": "yuma",
+      "km": 1157.4,
+      "carMinutes": 843
     },
     {
       "from": "ely",
@@ -1222,9 +2386,21 @@
     },
     {
       "from": "ely",
+      "to": "camp-verde",
+      "km": 843.3,
+      "carMinutes": 613
+    },
+    {
+      "from": "ely",
       "to": "carson-city",
       "km": 513.9,
       "carMinutes": 381
+    },
+    {
+      "from": "ely",
+      "to": "clifton",
+      "km": 1189.7,
+      "carMinutes": 915
     },
     {
       "from": "ely",
@@ -1246,9 +2422,21 @@
     },
     {
       "from": "ely",
+      "to": "flagstaff",
+      "km": 794,
+      "carMinutes": 570
+    },
+    {
+      "from": "ely",
       "to": "fresno",
       "km": 732.5,
       "carMinutes": 618
+    },
+    {
+      "from": "ely",
+      "to": "grand-canyon-village",
+      "km": 828.2,
+      "carMinutes": 604
     },
     {
       "from": "ely",
@@ -1276,6 +2464,24 @@
     },
     {
       "from": "ely",
+      "to": "kayenta",
+      "km": 751,
+      "carMinutes": 559
+    },
+    {
+      "from": "ely",
+      "to": "kingman",
+      "km": 556.3,
+      "carMinutes": 419
+    },
+    {
+      "from": "ely",
+      "to": "lake-havasu-city",
+      "km": 632.7,
+      "carMinutes": 464
+    },
+    {
+      "from": "ely",
       "to": "las-vegas",
       "km": 391.4,
       "carMinutes": 290
@@ -1300,6 +2506,12 @@
     },
     {
       "from": "ely",
+      "to": "nogales",
+      "km": 1140.5,
+      "carMinutes": 835
+    },
+    {
+      "from": "ely",
       "to": "oakland",
       "km": 859.5,
       "carMinutes": 623
@@ -1309,6 +2521,18 @@
       "to": "oxnard",
       "km": 914.4,
       "carMinutes": 650
+    },
+    {
+      "from": "ely",
+      "to": "page",
+      "km": 592.9,
+      "carMinutes": 441
+    },
+    {
+      "from": "ely",
+      "to": "phoenix",
+      "km": 844.7,
+      "carMinutes": 646
     },
     {
       "from": "ely",
@@ -1360,6 +2584,12 @@
     },
     {
       "from": "ely",
+      "to": "san-simon",
+      "km": 1233.4,
+      "carMinutes": 888
+    },
+    {
+      "from": "ely",
       "to": "santa-cruz",
       "km": 961.3,
       "carMinutes": 703
@@ -1369,6 +2599,18 @@
       "to": "santa-maria",
       "km": 1004.1,
       "carMinutes": 730
+    },
+    {
+      "from": "ely",
+      "to": "show-low",
+      "km": 1010.3,
+      "carMinutes": 717
+    },
+    {
+      "from": "ely",
+      "to": "sierra-vista",
+      "km": 1157.6,
+      "carMinutes": 851
     },
     {
       "from": "ely",
@@ -1390,6 +2632,12 @@
     },
     {
       "from": "ely",
+      "to": "tucson",
+      "km": 1042.2,
+      "carMinutes": 770
+    },
+    {
+      "from": "ely",
       "to": "ukiah",
       "km": 901.2,
       "carMinutes": 699
@@ -1399,6 +2647,18 @@
       "to": "winnemucca",
       "km": 435.4,
       "carMinutes": 297
+    },
+    {
+      "from": "ely",
+      "to": "winslow",
+      "km": 880,
+      "carMinutes": 621
+    },
+    {
+      "from": "ely",
+      "to": "yuma",
+      "km": 856.6,
+      "carMinutes": 636
     },
     {
       "from": "eureka",
@@ -1420,9 +2680,21 @@
     },
     {
       "from": "eureka",
+      "to": "camp-verde",
+      "km": 1707.3,
+      "carMinutes": 1196
+    },
+    {
+      "from": "eureka",
       "to": "carson-city",
       "km": 603,
       "carMinutes": 453
+    },
+    {
+      "from": "eureka",
+      "to": "clifton",
+      "km": 1967.4,
+      "carMinutes": 1411
     },
     {
       "from": "eureka",
@@ -1444,9 +2716,21 @@
     },
     {
       "from": "eureka",
+      "to": "flagstaff",
+      "km": 1657.9,
+      "carMinutes": 1154
+    },
+    {
+      "from": "eureka",
       "to": "fresno",
       "km": 720.2,
       "carMinutes": 538
+    },
+    {
+      "from": "eureka",
+      "to": "grand-canyon-village",
+      "km": 1692.2,
+      "carMinutes": 1188
     },
     {
       "from": "eureka",
@@ -1474,6 +2758,24 @@
     },
     {
       "from": "eureka",
+      "to": "kayenta",
+      "km": 1891.6,
+      "carMinutes": 1323
+    },
+    {
+      "from": "eureka",
+      "to": "kingman",
+      "km": 1420.3,
+      "carMinutes": 1002
+    },
+    {
+      "from": "eureka",
+      "to": "lake-havasu-city",
+      "km": 1385.4,
+      "carMinutes": 989
+    },
+    {
+      "from": "eureka",
       "to": "las-vegas",
       "km": 1244.5,
       "carMinutes": 928
@@ -1498,6 +2800,12 @@
     },
     {
       "from": "eureka",
+      "to": "nogales",
+      "km": 1918.2,
+      "carMinutes": 1331
+    },
+    {
+      "from": "eureka",
       "to": "oakland",
       "km": 445,
       "carMinutes": 340
@@ -1507,6 +2815,18 @@
       "to": "oxnard",
       "km": 1015.1,
       "carMinutes": 760
+    },
+    {
+      "from": "eureka",
+      "to": "page",
+      "km": 1646.5,
+      "carMinutes": 1223
+    },
+    {
+      "from": "eureka",
+      "to": "phoenix",
+      "km": 1633,
+      "carMinutes": 1143
     },
     {
       "from": "eureka",
@@ -1558,6 +2878,12 @@
     },
     {
       "from": "eureka",
+      "to": "san-simon",
+      "km": 2011.2,
+      "carMinutes": 1384
+    },
+    {
+      "from": "eureka",
       "to": "santa-cruz",
       "km": 555.7,
       "carMinutes": 425
@@ -1567,6 +2893,18 @@
       "to": "santa-maria",
       "km": 854.3,
       "carMinutes": 635
+    },
+    {
+      "from": "eureka",
+      "to": "show-low",
+      "km": 1874.3,
+      "carMinutes": 1301
+    },
+    {
+      "from": "eureka",
+      "to": "sierra-vista",
+      "km": 1935.4,
+      "carMinutes": 1347
     },
     {
       "from": "eureka",
@@ -1588,6 +2926,12 @@
     },
     {
       "from": "eureka",
+      "to": "tucson",
+      "km": 1820,
+      "carMinutes": 1267
+    },
+    {
+      "from": "eureka",
       "to": "ukiah",
       "km": 252,
       "carMinutes": 196
@@ -1597,6 +2941,312 @@
       "to": "winnemucca",
       "km": 816.2,
       "carMinutes": 584
+    },
+    {
+      "from": "eureka",
+      "to": "winslow",
+      "km": 1743.9,
+      "carMinutes": 1204
+    },
+    {
+      "from": "eureka",
+      "to": "yuma",
+      "km": 1472,
+      "carMinutes": 1050
+    },
+    {
+      "from": "flagstaff",
+      "to": "bakersfield",
+      "km": 780.7,
+      "carMinutes": 522
+    },
+    {
+      "from": "flagstaff",
+      "to": "barstow",
+      "km": 573.5,
+      "carMinutes": 374
+    },
+    {
+      "from": "flagstaff",
+      "to": "blythe",
+      "km": 460.2,
+      "carMinutes": 304
+    },
+    {
+      "from": "flagstaff",
+      "to": "camp-verde",
+      "km": 96.4,
+      "carMinutes": 69
+    },
+    {
+      "from": "flagstaff",
+      "to": "carson-city",
+      "km": 1088.5,
+      "carMinutes": 781
+    },
+    {
+      "from": "flagstaff",
+      "to": "clifton",
+      "km": 551.5,
+      "carMinutes": 413
+    },
+    {
+      "from": "flagstaff",
+      "to": "el-centro",
+      "km": 611.3,
+      "carMinutes": 418
+    },
+    {
+      "from": "flagstaff",
+      "to": "elko",
+      "km": 1094.3,
+      "carMinutes": 776
+    },
+    {
+      "from": "flagstaff",
+      "to": "ely",
+      "km": 793.2,
+      "carMinutes": 568
+    },
+    {
+      "from": "flagstaff",
+      "to": "eureka",
+      "km": 1655.8,
+      "carMinutes": 1153
+    },
+    {
+      "from": "flagstaff",
+      "to": "fresno",
+      "km": 961.1,
+      "carMinutes": 644
+    },
+    {
+      "from": "flagstaff",
+      "to": "grand-canyon-village",
+      "km": 127.2,
+      "carMinutes": 113
+    },
+    {
+      "from": "flagstaff",
+      "to": "hilt",
+      "km": 1540.1,
+      "carMinutes": 1114
+    },
+    {
+      "from": "flagstaff",
+      "to": "huron",
+      "km": 929.4,
+      "carMinutes": 628
+    },
+    {
+      "from": "flagstaff",
+      "to": "indio",
+      "km": 594.9,
+      "carMinutes": 400
+    },
+    {
+      "from": "flagstaff",
+      "to": "jackpot",
+      "km": 1121.9,
+      "carMinutes": 801
+    },
+    {
+      "from": "flagstaff",
+      "to": "kayenta",
+      "km": 239.8,
+      "carMinutes": 183
+    },
+    {
+      "from": "flagstaff",
+      "to": "kingman",
+      "km": 239.4,
+      "carMinutes": 156
+    },
+    {
+      "from": "flagstaff",
+      "to": "lake-havasu-city",
+      "km": 340.8,
+      "carMinutes": 227
+    },
+    {
+      "from": "flagstaff",
+      "to": "las-vegas",
+      "km": 410,
+      "carMinutes": 285
+    },
+    {
+      "from": "flagstaff",
+      "to": "los-angeles",
+      "km": 756.1,
+      "carMinutes": 499
+    },
+    {
+      "from": "flagstaff",
+      "to": "modesto",
+      "km": 1109.3,
+      "carMinutes": 751
+    },
+    {
+      "from": "flagstaff",
+      "to": "mojave",
+      "km": 695.9,
+      "carMinutes": 468
+    },
+    {
+      "from": "flagstaff",
+      "to": "nogales",
+      "km": 521.1,
+      "carMinutes": 350
+    },
+    {
+      "from": "flagstaff",
+      "to": "oakland",
+      "km": 1215.1,
+      "carMinutes": 819
+    },
+    {
+      "from": "flagstaff",
+      "to": "oxnard",
+      "km": 846.9,
+      "carMinutes": 567
+    },
+    {
+      "from": "flagstaff",
+      "to": "page",
+      "km": 215.9,
+      "carMinutes": 170
+    },
+    {
+      "from": "flagstaff",
+      "to": "phoenix",
+      "km": 236,
+      "carMinutes": 162
+    },
+    {
+      "from": "flagstaff",
+      "to": "pioche",
+      "km": 602.9,
+      "carMinutes": 468
+    },
+    {
+      "from": "flagstaff",
+      "to": "primm",
+      "km": 423.8,
+      "carMinutes": 298
+    },
+    {
+      "from": "flagstaff",
+      "to": "redding",
+      "km": 1496.2,
+      "carMinutes": 1006
+    },
+    {
+      "from": "flagstaff",
+      "to": "reno",
+      "km": 1101.9,
+      "carMinutes": 792
+    },
+    {
+      "from": "flagstaff",
+      "to": "sacramento",
+      "km": 1224.9,
+      "carMinutes": 833
+    },
+    {
+      "from": "flagstaff",
+      "to": "san-diego",
+      "km": 790.3,
+      "carMinutes": 539
+    },
+    {
+      "from": "flagstaff",
+      "to": "san-francisco",
+      "km": 1234.8,
+      "carMinutes": 836
+    },
+    {
+      "from": "flagstaff",
+      "to": "san-jose",
+      "km": 1163.6,
+      "carMinutes": 792
+    },
+    {
+      "from": "flagstaff",
+      "to": "san-simon",
+      "km": 614,
+      "carMinutes": 402
+    },
+    {
+      "from": "flagstaff",
+      "to": "santa-cruz",
+      "km": 1172.5,
+      "carMinutes": 802
+    },
+    {
+      "from": "flagstaff",
+      "to": "santa-maria",
+      "km": 961.8,
+      "carMinutes": 665
+    },
+    {
+      "from": "flagstaff",
+      "to": "show-low",
+      "km": 224.8,
+      "carMinutes": 162
+    },
+    {
+      "from": "flagstaff",
+      "to": "sierra-vista",
+      "km": 538.2,
+      "carMinutes": 365
+    },
+    {
+      "from": "flagstaff",
+      "to": "stockton",
+      "km": 1155.5,
+      "carMinutes": 782
+    },
+    {
+      "from": "flagstaff",
+      "to": "tonopah",
+      "km": 747.2,
+      "carMinutes": 519
+    },
+    {
+      "from": "flagstaff",
+      "to": "truckee",
+      "km": 1157.8,
+      "carMinutes": 834
+    },
+    {
+      "from": "flagstaff",
+      "to": "tucson",
+      "km": 422.8,
+      "carMinutes": 285
+    },
+    {
+      "from": "flagstaff",
+      "to": "ukiah",
+      "km": 1404.6,
+      "carMinutes": 960
+    },
+    {
+      "from": "flagstaff",
+      "to": "winnemucca",
+      "km": 1163.5,
+      "carMinutes": 805
+    },
+    {
+      "from": "flagstaff",
+      "to": "winslow",
+      "km": 94.4,
+      "carMinutes": 65
+    },
+    {
+      "from": "flagstaff",
+      "to": "yuma",
+      "km": 514.9,
+      "carMinutes": 353
     },
     {
       "from": "fresno",
@@ -1618,9 +3268,21 @@
     },
     {
       "from": "fresno",
+      "to": "camp-verde",
+      "km": 1011.5,
+      "carMinutes": 686
+    },
+    {
+      "from": "fresno",
       "to": "carson-city",
       "km": 386,
       "carMinutes": 338
+    },
+    {
+      "from": "fresno",
+      "to": "clifton",
+      "km": 1287.5,
+      "carMinutes": 916
     },
     {
       "from": "fresno",
@@ -1648,6 +3310,18 @@
     },
     {
       "from": "fresno",
+      "to": "flagstaff",
+      "km": 962.2,
+      "carMinutes": 644
+    },
+    {
+      "from": "fresno",
+      "to": "grand-canyon-village",
+      "km": 996.4,
+      "carMinutes": 678
+    },
+    {
+      "from": "fresno",
       "to": "hilt",
       "km": 718.3,
       "carMinutes": 507
@@ -1669,6 +3343,24 @@
       "to": "jackpot",
       "km": 1130.4,
       "carMinutes": 754
+    },
+    {
+      "from": "fresno",
+      "to": "kayenta",
+      "km": 1195.9,
+      "carMinutes": 813
+    },
+    {
+      "from": "fresno",
+      "to": "kingman",
+      "km": 724.5,
+      "carMinutes": 492
+    },
+    {
+      "from": "fresno",
+      "to": "lake-havasu-city",
+      "km": 689.6,
+      "carMinutes": 479
     },
     {
       "from": "fresno",
@@ -1696,6 +3388,12 @@
     },
     {
       "from": "fresno",
+      "to": "nogales",
+      "km": 1238.3,
+      "carMinutes": 836
+    },
+    {
+      "from": "fresno",
       "to": "oakland",
       "km": 278.5,
       "carMinutes": 205
@@ -1705,6 +3403,18 @@
       "to": "oxnard",
       "km": 369.3,
       "carMinutes": 268
+    },
+    {
+      "from": "fresno",
+      "to": "page",
+      "km": 1076.3,
+      "carMinutes": 758
+    },
+    {
+      "from": "fresno",
+      "to": "phoenix",
+      "km": 953.1,
+      "carMinutes": 648
     },
     {
       "from": "fresno",
@@ -1756,6 +3466,12 @@
     },
     {
       "from": "fresno",
+      "to": "san-simon",
+      "km": 1331.3,
+      "carMinutes": 889
+    },
+    {
+      "from": "fresno",
       "to": "santa-cruz",
       "km": 244.4,
       "carMinutes": 191
@@ -1765,6 +3481,18 @@
       "to": "santa-maria",
       "km": 278.9,
       "carMinutes": 216
+    },
+    {
+      "from": "fresno",
+      "to": "show-low",
+      "km": 1178.5,
+      "carMinutes": 791
+    },
+    {
+      "from": "fresno",
+      "to": "sierra-vista",
+      "km": 1255.5,
+      "carMinutes": 852
     },
     {
       "from": "fresno",
@@ -1786,6 +3514,12 @@
     },
     {
       "from": "fresno",
+      "to": "tucson",
+      "km": 1140.1,
+      "carMinutes": 772
+    },
+    {
+      "from": "fresno",
       "to": "ukiah",
       "km": 468,
       "carMinutes": 345
@@ -1795,6 +3529,312 @@
       "to": "winnemucca",
       "km": 743.2,
       "carMinutes": 513
+    },
+    {
+      "from": "fresno",
+      "to": "winslow",
+      "km": 1048.2,
+      "carMinutes": 694
+    },
+    {
+      "from": "fresno",
+      "to": "yuma",
+      "km": 792.1,
+      "carMinutes": 555
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "bakersfield",
+      "km": 815.2,
+      "carMinutes": 557
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "barstow",
+      "km": 608,
+      "carMinutes": 408
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "blythe",
+      "km": 516.3,
+      "carMinutes": 358
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "camp-verde",
+      "km": 225.9,
+      "carMinutes": 163
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "carson-city",
+      "km": 1123,
+      "carMinutes": 815
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "clifton",
+      "km": 690.3,
+      "carMinutes": 513
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "el-centro",
+      "km": 680.9,
+      "carMinutes": 477
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "elko",
+      "km": 1128.8,
+      "carMinutes": 810
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "ely",
+      "km": 827.7,
+      "carMinutes": 602
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "eureka",
+      "km": 1690.3,
+      "carMinutes": 1188
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "flagstaff",
+      "km": 127.1,
+      "carMinutes": 113
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "fresno",
+      "km": 995.6,
+      "carMinutes": 678
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "hilt",
+      "km": 1574.6,
+      "carMinutes": 1148
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "huron",
+      "km": 963.9,
+      "carMinutes": 662
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "indio",
+      "km": 629.4,
+      "carMinutes": 435
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "jackpot",
+      "km": 1156.4,
+      "carMinutes": 835
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "kayenta",
+      "km": 246.5,
+      "carMinutes": 197
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "kingman",
+      "km": 273.9,
+      "carMinutes": 190
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "lake-havasu-city",
+      "km": 375.3,
+      "carMinutes": 262
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "las-vegas",
+      "km": 444.5,
+      "carMinutes": 319
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "los-angeles",
+      "km": 790.6,
+      "carMinutes": 533
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "modesto",
+      "km": 1143.8,
+      "carMinutes": 786
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "mojave",
+      "km": 730.4,
+      "carMinutes": 503
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "nogales",
+      "km": 650.5,
+      "carMinutes": 443
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "oakland",
+      "km": 1249.6,
+      "carMinutes": 854
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "oxnard",
+      "km": 881.4,
+      "carMinutes": 602
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "page",
+      "km": 222.7,
+      "carMinutes": 184
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "phoenix",
+      "km": 365.5,
+      "carMinutes": 255
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "pioche",
+      "km": 609.7,
+      "carMinutes": 483
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "primm",
+      "km": 458.3,
+      "carMinutes": 332
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "redding",
+      "km": 1530.7,
+      "carMinutes": 1041
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "reno",
+      "km": 1136.4,
+      "carMinutes": 827
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "sacramento",
+      "km": 1259.4,
+      "carMinutes": 867
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "san-diego",
+      "km": 856.5,
+      "carMinutes": 599
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "san-francisco",
+      "km": 1269.3,
+      "carMinutes": 871
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "san-jose",
+      "km": 1198.1,
+      "carMinutes": 826
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "san-simon",
+      "km": 743.5,
+      "carMinutes": 496
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "santa-cruz",
+      "km": 1207,
+      "carMinutes": 837
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "santa-maria",
+      "km": 996.3,
+      "carMinutes": 700
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "show-low",
+      "km": 363.5,
+      "carMinutes": 262
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "sierra-vista",
+      "km": 667.7,
+      "carMinutes": 459
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "stockton",
+      "km": 1190,
+      "carMinutes": 816
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "tonopah",
+      "km": 781.7,
+      "carMinutes": 553
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "truckee",
+      "km": 1192.3,
+      "carMinutes": 868
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "tucson",
+      "km": 552.3,
+      "carMinutes": 379
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "ukiah",
+      "km": 1439.1,
+      "carMinutes": 994
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "winnemucca",
+      "km": 1198,
+      "carMinutes": 840
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "winslow",
+      "km": 233.1,
+      "carMinutes": 166
+    },
+    {
+      "from": "grand-canyon-village",
+      "to": "yuma",
+      "km": 559.2,
+      "carMinutes": 442
     },
     {
       "from": "hilt",
@@ -1816,9 +3856,21 @@
     },
     {
       "from": "hilt",
+      "to": "camp-verde",
+      "km": 1590.8,
+      "carMinutes": 1161
+    },
+    {
+      "from": "hilt",
       "to": "carson-city",
       "km": 492.4,
       "carMinutes": 363
+    },
+    {
+      "from": "hilt",
+      "to": "clifton",
+      "km": 1994.4,
+      "carMinutes": 1397
     },
     {
       "from": "hilt",
@@ -1846,9 +3898,21 @@
     },
     {
       "from": "hilt",
+      "to": "flagstaff",
+      "km": 1541.5,
+      "carMinutes": 1118
+    },
+    {
+      "from": "hilt",
       "to": "fresno",
       "km": 718.1,
       "carMinutes": 506
+    },
+    {
+      "from": "hilt",
+      "to": "grand-canyon-village",
+      "km": 1575.7,
+      "carMinutes": 1152
     },
     {
       "from": "hilt",
@@ -1867,6 +3931,24 @@
       "to": "jackpot",
       "km": 1092.8,
       "carMinutes": 735
+    },
+    {
+      "from": "hilt",
+      "to": "kayenta",
+      "km": 1694,
+      "carMinutes": 1251
+    },
+    {
+      "from": "hilt",
+      "to": "kingman",
+      "km": 1303.8,
+      "carMinutes": 967
+    },
+    {
+      "from": "hilt",
+      "to": "lake-havasu-city",
+      "km": 1412.4,
+      "carMinutes": 975
     },
     {
       "from": "hilt",
@@ -1894,6 +3976,12 @@
     },
     {
       "from": "hilt",
+      "to": "nogales",
+      "km": 1945.2,
+      "carMinutes": 1317
+    },
+    {
+      "from": "hilt",
       "to": "oakland",
       "km": 529.7,
       "carMinutes": 369
@@ -1903,6 +3991,18 @@
       "to": "oxnard",
       "km": 1076.2,
       "carMinutes": 748
+    },
+    {
+      "from": "hilt",
+      "to": "page",
+      "km": 1535.9,
+      "carMinutes": 1132
+    },
+    {
+      "from": "hilt",
+      "to": "phoenix",
+      "km": 1660,
+      "carMinutes": 1129
     },
     {
       "from": "hilt",
@@ -1954,6 +4054,12 @@
     },
     {
       "from": "hilt",
+      "to": "san-simon",
+      "km": 2038.2,
+      "carMinutes": 1370
+    },
+    {
+      "from": "hilt",
       "to": "santa-cruz",
       "km": 631.5,
       "carMinutes": 449
@@ -1963,6 +4069,18 @@
       "to": "santa-maria",
       "km": 928.7,
       "carMinutes": 657
+    },
+    {
+      "from": "hilt",
+      "to": "show-low",
+      "km": 1757.8,
+      "carMinutes": 1266
+    },
+    {
+      "from": "hilt",
+      "to": "sierra-vista",
+      "km": 1962.4,
+      "carMinutes": 1333
     },
     {
       "from": "hilt",
@@ -1984,6 +4102,12 @@
     },
     {
       "from": "hilt",
+      "to": "tucson",
+      "km": 1847,
+      "carMinutes": 1253
+    },
+    {
+      "from": "hilt",
       "to": "ukiah",
       "km": 490.1,
       "carMinutes": 368
@@ -1993,6 +4117,18 @@
       "to": "winnemucca",
       "km": 705.6,
       "carMinutes": 493
+    },
+    {
+      "from": "hilt",
+      "to": "winslow",
+      "km": 1627.4,
+      "carMinutes": 1169
+    },
+    {
+      "from": "hilt",
+      "to": "yuma",
+      "km": 1499,
+      "carMinutes": 1035
     },
     {
       "from": "huron",
@@ -2014,9 +4150,21 @@
     },
     {
       "from": "huron",
+      "to": "camp-verde",
+      "km": 979.9,
+      "carMinutes": 670
+    },
+    {
+      "from": "huron",
       "to": "carson-city",
       "km": 480.4,
       "carMinutes": 381
+    },
+    {
+      "from": "huron",
+      "to": "clifton",
+      "km": 1240.1,
+      "carMinutes": 885
     },
     {
       "from": "huron",
@@ -2044,9 +4192,21 @@
     },
     {
       "from": "huron",
+      "to": "flagstaff",
+      "km": 930.6,
+      "carMinutes": 628
+    },
+    {
+      "from": "huron",
       "to": "fresno",
       "km": 90.6,
       "carMinutes": 72
+    },
+    {
+      "from": "huron",
+      "to": "grand-canyon-village",
+      "km": 964.8,
+      "carMinutes": 662
     },
     {
       "from": "huron",
@@ -2065,6 +4225,24 @@
       "to": "jackpot",
       "km": 1182.6,
       "carMinutes": 779
+    },
+    {
+      "from": "huron",
+      "to": "kayenta",
+      "km": 1164.3,
+      "carMinutes": 797
+    },
+    {
+      "from": "huron",
+      "to": "kingman",
+      "km": 692.9,
+      "carMinutes": 476
+    },
+    {
+      "from": "huron",
+      "to": "lake-havasu-city",
+      "km": 658,
+      "carMinutes": 463
     },
     {
       "from": "huron",
@@ -2092,6 +4270,12 @@
     },
     {
       "from": "huron",
+      "to": "nogales",
+      "km": 1190.9,
+      "carMinutes": 806
+    },
+    {
+      "from": "huron",
       "to": "oakland",
       "km": 294.6,
       "carMinutes": 206
@@ -2101,6 +4285,18 @@
       "to": "oxnard",
       "km": 321.8,
       "carMinutes": 237
+    },
+    {
+      "from": "huron",
+      "to": "page",
+      "km": 1044.7,
+      "carMinutes": 742
+    },
+    {
+      "from": "huron",
+      "to": "phoenix",
+      "km": 905.6,
+      "carMinutes": 617
     },
     {
       "from": "huron",
@@ -2152,6 +4348,12 @@
     },
     {
       "from": "huron",
+      "to": "san-simon",
+      "km": 1283.8,
+      "carMinutes": 858
+    },
+    {
+      "from": "huron",
       "to": "santa-cruz",
       "km": 252,
       "carMinutes": 189
@@ -2161,6 +4363,18 @@
       "to": "santa-maria",
       "km": 209.8,
       "carMinutes": 165
+    },
+    {
+      "from": "huron",
+      "to": "show-low",
+      "km": 1146.9,
+      "carMinutes": 775
+    },
+    {
+      "from": "huron",
+      "to": "sierra-vista",
+      "km": 1208,
+      "carMinutes": 821
     },
     {
       "from": "huron",
@@ -2182,6 +4396,12 @@
     },
     {
       "from": "huron",
+      "to": "tucson",
+      "km": 1092.6,
+      "carMinutes": 741
+    },
+    {
+      "from": "huron",
       "to": "ukiah",
       "km": 484,
       "carMinutes": 346
@@ -2191,6 +4411,18 @@
       "to": "winnemucca",
       "km": 795.5,
       "carMinutes": 538
+    },
+    {
+      "from": "huron",
+      "to": "winslow",
+      "km": 1016.6,
+      "carMinutes": 678
+    },
+    {
+      "from": "huron",
+      "to": "yuma",
+      "km": 744.7,
+      "carMinutes": 524
     },
     {
       "from": "indio",
@@ -2212,9 +4444,21 @@
     },
     {
       "from": "indio",
+      "to": "camp-verde",
+      "km": 529.2,
+      "carMinutes": 350
+    },
+    {
+      "from": "indio",
       "to": "carson-city",
       "km": 792.7,
       "carMinutes": 602
+    },
+    {
+      "from": "indio",
+      "to": "clifton",
+      "km": 734.4,
+      "carMinutes": 533
     },
     {
       "from": "indio",
@@ -2242,9 +4486,21 @@
     },
     {
       "from": "indio",
+      "to": "flagstaff",
+      "km": 596.2,
+      "carMinutes": 400
+    },
+    {
+      "from": "indio",
       "to": "fresno",
       "km": 559,
       "carMinutes": 389
+    },
+    {
+      "from": "indio",
+      "to": "grand-canyon-village",
+      "km": 630.4,
+      "carMinutes": 434
     },
     {
       "from": "indio",
@@ -2263,6 +4519,24 @@
       "to": "jackpot",
       "km": 1161.5,
       "carMinutes": 833
+    },
+    {
+      "from": "indio",
+      "to": "kayenta",
+      "km": 829.9,
+      "carMinutes": 570
+    },
+    {
+      "from": "indio",
+      "to": "kingman",
+      "km": 358.5,
+      "carMinutes": 249
+    },
+    {
+      "from": "indio",
+      "to": "lake-havasu-city",
+      "km": 281.3,
+      "carMinutes": 212
     },
     {
       "from": "indio",
@@ -2290,6 +4564,12 @@
     },
     {
       "from": "indio",
+      "to": "nogales",
+      "km": 685.2,
+      "carMinutes": 453
+    },
+    {
+      "from": "indio",
       "to": "oakland",
       "km": 797.2,
       "carMinutes": 550
@@ -2299,6 +4579,18 @@
       "to": "oxnard",
       "km": 307,
       "carMinutes": 220
+    },
+    {
+      "from": "indio",
+      "to": "page",
+      "km": 806,
+      "carMinutes": 557
+    },
+    {
+      "from": "indio",
+      "to": "phoenix",
+      "km": 399.9,
+      "carMinutes": 265
     },
     {
       "from": "indio",
@@ -2350,6 +4642,12 @@
     },
     {
       "from": "indio",
+      "to": "san-simon",
+      "km": 778.1,
+      "carMinutes": 506
+    },
+    {
+      "from": "indio",
       "to": "santa-cruz",
       "km": 754.6,
       "carMinutes": 532
@@ -2359,6 +4657,18 @@
       "to": "santa-maria",
       "km": 460.3,
       "carMinutes": 338
+    },
+    {
+      "from": "indio",
+      "to": "show-low",
+      "km": 679.3,
+      "carMinutes": 477
+    },
+    {
+      "from": "indio",
+      "to": "sierra-vista",
+      "km": 702.3,
+      "carMinutes": 469
     },
     {
       "from": "indio",
@@ -2380,6 +4690,12 @@
     },
     {
       "from": "indio",
+      "to": "tucson",
+      "km": 586.9,
+      "carMinutes": 389
+    },
+    {
+      "from": "indio",
       "to": "ukiah",
       "km": 986.7,
       "carMinutes": 690
@@ -2389,6 +4705,18 @@
       "to": "winnemucca",
       "km": 1028.2,
       "carMinutes": 735
+    },
+    {
+      "from": "indio",
+      "to": "winslow",
+      "km": 682.2,
+      "carMinutes": 451
+    },
+    {
+      "from": "indio",
+      "to": "yuma",
+      "km": 239,
+      "carMinutes": 172
     },
     {
       "from": "jackpot",
@@ -2410,9 +4738,21 @@
     },
     {
       "from": "jackpot",
+      "to": "camp-verde",
+      "km": 1172,
+      "carMinutes": 845
+    },
+    {
+      "from": "jackpot",
       "to": "carson-city",
       "km": 678.5,
       "carMinutes": 439
+    },
+    {
+      "from": "jackpot",
+      "to": "clifton",
+      "km": 1518.4,
+      "carMinutes": 1147
     },
     {
       "from": "jackpot",
@@ -2440,9 +4780,21 @@
     },
     {
       "from": "jackpot",
+      "to": "flagstaff",
+      "km": 1122.7,
+      "carMinutes": 803
+    },
+    {
+      "from": "jackpot",
       "to": "fresno",
       "km": 1130.7,
       "carMinutes": 753
+    },
+    {
+      "from": "jackpot",
+      "to": "grand-canyon-village",
+      "km": 1157,
+      "carMinutes": 837
     },
     {
       "from": "jackpot",
@@ -2461,6 +4813,24 @@
       "to": "indio",
       "km": 1160,
       "carMinutes": 833
+    },
+    {
+      "from": "jackpot",
+      "to": "kayenta",
+      "km": 1052.5,
+      "carMinutes": 732
+    },
+    {
+      "from": "jackpot",
+      "to": "kingman",
+      "km": 885,
+      "carMinutes": 651
+    },
+    {
+      "from": "jackpot",
+      "to": "lake-havasu-city",
+      "km": 961.4,
+      "carMinutes": 696
     },
     {
       "from": "jackpot",
@@ -2488,6 +4858,12 @@
     },
     {
       "from": "jackpot",
+      "to": "nogales",
+      "km": 1469.2,
+      "carMinutes": 1068
+    },
+    {
+      "from": "jackpot",
       "to": "oakland",
       "km": 997.3,
       "carMinutes": 657
@@ -2497,6 +4873,18 @@
       "to": "oxnard",
       "km": 1243.2,
       "carMinutes": 883
+    },
+    {
+      "from": "jackpot",
+      "to": "page",
+      "km": 921.6,
+      "carMinutes": 673
+    },
+    {
+      "from": "jackpot",
+      "to": "phoenix",
+      "km": 1173.4,
+      "carMinutes": 879
     },
     {
       "from": "jackpot",
@@ -2548,6 +4936,12 @@
     },
     {
       "from": "jackpot",
+      "to": "san-simon",
+      "km": 1562.1,
+      "carMinutes": 1120
+    },
+    {
+      "from": "jackpot",
       "to": "santa-cruz",
       "km": 1099.1,
       "carMinutes": 736
@@ -2557,6 +4951,18 @@
       "to": "santa-maria",
       "km": 1383.6,
       "carMinutes": 930
+    },
+    {
+      "from": "jackpot",
+      "to": "show-low",
+      "km": 1339,
+      "carMinutes": 950
+    },
+    {
+      "from": "jackpot",
+      "to": "sierra-vista",
+      "km": 1486.4,
+      "carMinutes": 1083
     },
     {
       "from": "jackpot",
@@ -2578,6 +4984,12 @@
     },
     {
       "from": "jackpot",
+      "to": "tucson",
+      "km": 1370.9,
+      "carMinutes": 1003
+    },
+    {
+      "from": "jackpot",
       "to": "ukiah",
       "km": 1039.1,
       "carMinutes": 732
@@ -2587,6 +4999,900 @@
       "to": "winnemucca",
       "km": 389.1,
       "carMinutes": 250
+    },
+    {
+      "from": "jackpot",
+      "to": "winslow",
+      "km": 1208.7,
+      "carMinutes": 853
+    },
+    {
+      "from": "jackpot",
+      "to": "yuma",
+      "km": 1185.3,
+      "carMinutes": 869
+    },
+    {
+      "from": "kayenta",
+      "to": "bakersfield",
+      "km": 1014.4,
+      "carMinutes": 693
+    },
+    {
+      "from": "kayenta",
+      "to": "barstow",
+      "km": 807.2,
+      "carMinutes": 545
+    },
+    {
+      "from": "kayenta",
+      "to": "blythe",
+      "km": 693.9,
+      "carMinutes": 475
+    },
+    {
+      "from": "kayenta",
+      "to": "camp-verde",
+      "km": 330.2,
+      "carMinutes": 240
+    },
+    {
+      "from": "kayenta",
+      "to": "carson-city",
+      "km": 1241.7,
+      "carMinutes": 915
+    },
+    {
+      "from": "kayenta",
+      "to": "clifton",
+      "km": 600.5,
+      "carMinutes": 559
+    },
+    {
+      "from": "kayenta",
+      "to": "el-centro",
+      "km": 845,
+      "carMinutes": 589
+    },
+    {
+      "from": "kayenta",
+      "to": "elko",
+      "km": 1024.7,
+      "carMinutes": 706
+    },
+    {
+      "from": "kayenta",
+      "to": "ely",
+      "km": 750.8,
+      "carMinutes": 559
+    },
+    {
+      "from": "kayenta",
+      "to": "eureka",
+      "km": 1889.6,
+      "carMinutes": 1324
+    },
+    {
+      "from": "kayenta",
+      "to": "flagstaff",
+      "km": 239.5,
+      "carMinutes": 184
+    },
+    {
+      "from": "kayenta",
+      "to": "fresno",
+      "km": 1194.9,
+      "carMinutes": 815
+    },
+    {
+      "from": "kayenta",
+      "to": "grand-canyon-village",
+      "km": 246.4,
+      "carMinutes": 197
+    },
+    {
+      "from": "kayenta",
+      "to": "hilt",
+      "km": 1693.2,
+      "carMinutes": 1248
+    },
+    {
+      "from": "kayenta",
+      "to": "huron",
+      "km": 1163.1,
+      "carMinutes": 799
+    },
+    {
+      "from": "kayenta",
+      "to": "indio",
+      "km": 828.6,
+      "carMinutes": 571
+    },
+    {
+      "from": "kayenta",
+      "to": "jackpot",
+      "km": 1052.3,
+      "carMinutes": 732
+    },
+    {
+      "from": "kayenta",
+      "to": "kingman",
+      "km": 473.2,
+      "carMinutes": 327
+    },
+    {
+      "from": "kayenta",
+      "to": "lake-havasu-city",
+      "km": 574.6,
+      "carMinutes": 399
+    },
+    {
+      "from": "kayenta",
+      "to": "las-vegas",
+      "km": 596.6,
+      "carMinutes": 440
+    },
+    {
+      "from": "kayenta",
+      "to": "los-angeles",
+      "km": 989.8,
+      "carMinutes": 670
+    },
+    {
+      "from": "kayenta",
+      "to": "modesto",
+      "km": 1343,
+      "carMinutes": 922
+    },
+    {
+      "from": "kayenta",
+      "to": "mojave",
+      "km": 929.6,
+      "carMinutes": 639
+    },
+    {
+      "from": "kayenta",
+      "to": "nogales",
+      "km": 754.8,
+      "carMinutes": 521
+    },
+    {
+      "from": "kayenta",
+      "to": "oakland",
+      "km": 1448.9,
+      "carMinutes": 990
+    },
+    {
+      "from": "kayenta",
+      "to": "oxnard",
+      "km": 1080.7,
+      "carMinutes": 738
+    },
+    {
+      "from": "kayenta",
+      "to": "page",
+      "km": 158.7,
+      "carMinutes": 120
+    },
+    {
+      "from": "kayenta",
+      "to": "phoenix",
+      "km": 469.8,
+      "carMinutes": 333
+    },
+    {
+      "from": "kayenta",
+      "to": "pioche",
+      "km": 577.9,
+      "carMinutes": 436
+    },
+    {
+      "from": "kayenta",
+      "to": "primm",
+      "km": 657.5,
+      "carMinutes": 469
+    },
+    {
+      "from": "kayenta",
+      "to": "redding",
+      "km": 1568,
+      "carMinutes": 1162
+    },
+    {
+      "from": "kayenta",
+      "to": "reno",
+      "km": 1255.1,
+      "carMinutes": 926
+    },
+    {
+      "from": "kayenta",
+      "to": "sacramento",
+      "km": 1458.6,
+      "carMinutes": 1004
+    },
+    {
+      "from": "kayenta",
+      "to": "san-diego",
+      "km": 1024,
+      "carMinutes": 710
+    },
+    {
+      "from": "kayenta",
+      "to": "san-francisco",
+      "km": 1468.6,
+      "carMinutes": 1007
+    },
+    {
+      "from": "kayenta",
+      "to": "san-jose",
+      "km": 1397.3,
+      "carMinutes": 963
+    },
+    {
+      "from": "kayenta",
+      "to": "san-simon",
+      "km": 847.8,
+      "carMinutes": 573
+    },
+    {
+      "from": "kayenta",
+      "to": "santa-cruz",
+      "km": 1406.3,
+      "carMinutes": 973
+    },
+    {
+      "from": "kayenta",
+      "to": "santa-maria",
+      "km": 1195.5,
+      "carMinutes": 836
+    },
+    {
+      "from": "kayenta",
+      "to": "show-low",
+      "km": 361.9,
+      "carMinutes": 314
+    },
+    {
+      "from": "kayenta",
+      "to": "sierra-vista",
+      "km": 772,
+      "carMinutes": 536
+    },
+    {
+      "from": "kayenta",
+      "to": "stockton",
+      "km": 1389.3,
+      "carMinutes": 953
+    },
+    {
+      "from": "kayenta",
+      "to": "tonopah",
+      "km": 883.2,
+      "carMinutes": 646
+    },
+    {
+      "from": "kayenta",
+      "to": "truckee",
+      "km": 1310.9,
+      "carMinutes": 967
+    },
+    {
+      "from": "kayenta",
+      "to": "tucson",
+      "km": 656.6,
+      "carMinutes": 456
+    },
+    {
+      "from": "kayenta",
+      "to": "ukiah",
+      "km": 1638.3,
+      "carMinutes": 1131
+    },
+    {
+      "from": "kayenta",
+      "to": "winnemucca",
+      "km": 1225,
+      "carMinutes": 831
+    },
+    {
+      "from": "kayenta",
+      "to": "winslow",
+      "km": 243,
+      "carMinutes": 225
+    },
+    {
+      "from": "kayenta",
+      "to": "yuma",
+      "km": 748.6,
+      "carMinutes": 524
+    },
+    {
+      "from": "kingman",
+      "to": "bakersfield",
+      "km": 543.8,
+      "carMinutes": 372
+    },
+    {
+      "from": "kingman",
+      "to": "barstow",
+      "km": 336.6,
+      "carMinutes": 223
+    },
+    {
+      "from": "kingman",
+      "to": "blythe",
+      "km": 244.9,
+      "carMinutes": 173
+    },
+    {
+      "from": "kingman",
+      "to": "camp-verde",
+      "km": 288.4,
+      "carMinutes": 198
+    },
+    {
+      "from": "kingman",
+      "to": "carson-city",
+      "km": 851.6,
+      "carMinutes": 631
+    },
+    {
+      "from": "kingman",
+      "to": "clifton",
+      "km": 634.8,
+      "carMinutes": 500
+    },
+    {
+      "from": "kingman",
+      "to": "el-centro",
+      "km": 409.4,
+      "carMinutes": 293
+    },
+    {
+      "from": "kingman",
+      "to": "elko",
+      "km": 857.4,
+      "carMinutes": 625
+    },
+    {
+      "from": "kingman",
+      "to": "ely",
+      "km": 556.3,
+      "carMinutes": 418
+    },
+    {
+      "from": "kingman",
+      "to": "eureka",
+      "km": 1418.9,
+      "carMinutes": 1003
+    },
+    {
+      "from": "kingman",
+      "to": "flagstaff",
+      "km": 239.1,
+      "carMinutes": 156
+    },
+    {
+      "from": "kingman",
+      "to": "fresno",
+      "km": 724.2,
+      "carMinutes": 493
+    },
+    {
+      "from": "kingman",
+      "to": "grand-canyon-village",
+      "km": 273.4,
+      "carMinutes": 190
+    },
+    {
+      "from": "kingman",
+      "to": "hilt",
+      "km": 1303.2,
+      "carMinutes": 964
+    },
+    {
+      "from": "kingman",
+      "to": "huron",
+      "km": 692.5,
+      "carMinutes": 478
+    },
+    {
+      "from": "kingman",
+      "to": "indio",
+      "km": 358,
+      "carMinutes": 250
+    },
+    {
+      "from": "kingman",
+      "to": "jackpot",
+      "km": 885,
+      "carMinutes": 650
+    },
+    {
+      "from": "kingman",
+      "to": "kayenta",
+      "km": 472.8,
+      "carMinutes": 325
+    },
+    {
+      "from": "kingman",
+      "to": "lake-havasu-city",
+      "km": 103.9,
+      "carMinutes": 77
+    },
+    {
+      "from": "kingman",
+      "to": "las-vegas",
+      "km": 173.1,
+      "carMinutes": 135
+    },
+    {
+      "from": "kingman",
+      "to": "los-angeles",
+      "km": 519.1,
+      "carMinutes": 349
+    },
+    {
+      "from": "kingman",
+      "to": "modesto",
+      "km": 872.3,
+      "carMinutes": 601
+    },
+    {
+      "from": "kingman",
+      "to": "mojave",
+      "km": 459,
+      "carMinutes": 318
+    },
+    {
+      "from": "kingman",
+      "to": "nogales",
+      "km": 585.6,
+      "carMinutes": 421
+    },
+    {
+      "from": "kingman",
+      "to": "oakland",
+      "km": 978.2,
+      "carMinutes": 669
+    },
+    {
+      "from": "kingman",
+      "to": "oxnard",
+      "km": 610,
+      "carMinutes": 417
+    },
+    {
+      "from": "kingman",
+      "to": "page",
+      "km": 449,
+      "carMinutes": 312
+    },
+    {
+      "from": "kingman",
+      "to": "phoenix",
+      "km": 289.8,
+      "carMinutes": 232
+    },
+    {
+      "from": "kingman",
+      "to": "pioche",
+      "km": 447.5,
+      "carMinutes": 347
+    },
+    {
+      "from": "kingman",
+      "to": "primm",
+      "km": 186.9,
+      "carMinutes": 148
+    },
+    {
+      "from": "kingman",
+      "to": "redding",
+      "km": 1259.3,
+      "carMinutes": 856
+    },
+    {
+      "from": "kingman",
+      "to": "reno",
+      "km": 865,
+      "carMinutes": 642
+    },
+    {
+      "from": "kingman",
+      "to": "sacramento",
+      "km": 988,
+      "carMinutes": 682
+    },
+    {
+      "from": "kingman",
+      "to": "san-diego",
+      "km": 585,
+      "carMinutes": 415
+    },
+    {
+      "from": "kingman",
+      "to": "san-francisco",
+      "km": 997.9,
+      "carMinutes": 686
+    },
+    {
+      "from": "kingman",
+      "to": "san-jose",
+      "km": 926.7,
+      "carMinutes": 642
+    },
+    {
+      "from": "kingman",
+      "to": "san-simon",
+      "km": 678.6,
+      "carMinutes": 474
+    },
+    {
+      "from": "kingman",
+      "to": "santa-cruz",
+      "km": 935.6,
+      "carMinutes": 652
+    },
+    {
+      "from": "kingman",
+      "to": "santa-maria",
+      "km": 724.8,
+      "carMinutes": 515
+    },
+    {
+      "from": "kingman",
+      "to": "show-low",
+      "km": 455.5,
+      "carMinutes": 303
+    },
+    {
+      "from": "kingman",
+      "to": "sierra-vista",
+      "km": 602.8,
+      "carMinutes": 436
+    },
+    {
+      "from": "kingman",
+      "to": "stockton",
+      "km": 918.6,
+      "carMinutes": 631
+    },
+    {
+      "from": "kingman",
+      "to": "tonopah",
+      "km": 510.3,
+      "carMinutes": 368
+    },
+    {
+      "from": "kingman",
+      "to": "truckee",
+      "km": 920.8,
+      "carMinutes": 683
+    },
+    {
+      "from": "kingman",
+      "to": "tucson",
+      "km": 487.4,
+      "carMinutes": 356
+    },
+    {
+      "from": "kingman",
+      "to": "ukiah",
+      "km": 1167.7,
+      "carMinutes": 810
+    },
+    {
+      "from": "kingman",
+      "to": "winnemucca",
+      "km": 926.6,
+      "carMinutes": 655
+    },
+    {
+      "from": "kingman",
+      "to": "winslow",
+      "km": 325.1,
+      "carMinutes": 206
+    },
+    {
+      "from": "kingman",
+      "to": "yuma",
+      "km": 349.2,
+      "carMinutes": 261
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "bakersfield",
+      "km": 509.8,
+      "carMinutes": 359
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "barstow",
+      "km": 302.6,
+      "carMinutes": 210
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "blythe",
+      "km": 155,
+      "carMinutes": 119
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "camp-verde",
+      "km": 391.6,
+      "carMinutes": 270
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "carson-city",
+      "km": 929.5,
+      "carMinutes": 677
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "clifton",
+      "km": 657.4,
+      "carMinutes": 495
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "el-centro",
+      "km": 319.6,
+      "carMinutes": 238
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "elko",
+      "km": 935.2,
+      "carMinutes": 671
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "ely",
+      "km": 634.1,
+      "carMinutes": 464
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "eureka",
+      "km": 1385,
+      "carMinutes": 990
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "flagstaff",
+      "km": 342.3,
+      "carMinutes": 228
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "fresno",
+      "km": 690.3,
+      "carMinutes": 480
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "grand-canyon-village",
+      "km": 376.5,
+      "carMinutes": 262
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "hilt",
+      "km": 1413.4,
+      "carMinutes": 977
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "huron",
+      "km": 658.5,
+      "carMinutes": 465
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "indio",
+      "km": 280.1,
+      "carMinutes": 212
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "jackpot",
+      "km": 962.8,
+      "carMinutes": 696
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "kayenta",
+      "km": 576,
+      "carMinutes": 398
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "kingman",
+      "km": 104.6,
+      "carMinutes": 77
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "las-vegas",
+      "km": 250.9,
+      "carMinutes": 181
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "los-angeles",
+      "km": 485.2,
+      "carMinutes": 336
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "modesto",
+      "km": 838.4,
+      "carMinutes": 588
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "mojave",
+      "km": 425,
+      "carMinutes": 305
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "nogales",
+      "km": 608.2,
+      "carMinutes": 415
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "oakland",
+      "km": 944.3,
+      "carMinutes": 656
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "oxnard",
+      "km": 576.1,
+      "carMinutes": 404
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "page",
+      "km": 552.1,
+      "carMinutes": 384
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "phoenix",
+      "km": 323,
+      "carMinutes": 227
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "pioche",
+      "km": 525.3,
+      "carMinutes": 393
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "primm",
+      "km": 223.6,
+      "carMinutes": 171
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "redding",
+      "km": 1225.4,
+      "carMinutes": 843
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "reno",
+      "km": 942.9,
+      "carMinutes": 688
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "sacramento",
+      "km": 954,
+      "carMinutes": 669
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "san-diego",
+      "km": 502.9,
+      "carMinutes": 363
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "san-francisco",
+      "km": 964,
+      "carMinutes": 673
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "san-jose",
+      "km": 892.7,
+      "carMinutes": 629
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "san-simon",
+      "km": 701.1,
+      "carMinutes": 468
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "santa-cruz",
+      "km": 901.7,
+      "carMinutes": 639
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "santa-maria",
+      "km": 690.9,
+      "carMinutes": 502
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "show-low",
+      "km": 558.6,
+      "carMinutes": 375
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "sierra-vista",
+      "km": 625.3,
+      "carMinutes": 431
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "stockton",
+      "km": 884.7,
+      "carMinutes": 618
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "tonopah",
+      "km": 588.1,
+      "carMinutes": 414
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "truckee",
+      "km": 998.7,
+      "carMinutes": 729
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "tucson",
+      "km": 509.9,
+      "carMinutes": 351
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "ukiah",
+      "km": 1133.7,
+      "carMinutes": 796
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "winnemucca",
+      "km": 1004.4,
+      "carMinutes": 701
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "winslow",
+      "km": 428.2,
+      "carMinutes": 279
+    },
+    {
+      "from": "lake-havasu-city",
+      "to": "yuma",
+      "km": 248.4,
+      "carMinutes": 193
     },
     {
       "from": "las-vegas",
@@ -2608,9 +5914,21 @@
     },
     {
       "from": "las-vegas",
+      "to": "camp-verde",
+      "km": 459.6,
+      "carMinutes": 328
+    },
+    {
+      "from": "las-vegas",
       "to": "carson-city",
       "km": 681.5,
       "carMinutes": 502
+    },
+    {
+      "from": "las-vegas",
+      "to": "clifton",
+      "km": 805.9,
+      "carMinutes": 631
     },
     {
       "from": "las-vegas",
@@ -2638,9 +5956,21 @@
     },
     {
       "from": "las-vegas",
+      "to": "flagstaff",
+      "km": 410.2,
+      "carMinutes": 286
+    },
+    {
+      "from": "las-vegas",
       "to": "fresno",
       "km": 639,
       "carMinutes": 443
+    },
+    {
+      "from": "las-vegas",
+      "to": "grand-canyon-village",
+      "km": 444.5,
+      "carMinutes": 320
     },
     {
       "from": "las-vegas",
@@ -2668,6 +5998,24 @@
     },
     {
       "from": "las-vegas",
+      "to": "kayenta",
+      "km": 595.8,
+      "carMinutes": 440
+    },
+    {
+      "from": "las-vegas",
+      "to": "kingman",
+      "km": 172.6,
+      "carMinutes": 135
+    },
+    {
+      "from": "las-vegas",
+      "to": "lake-havasu-city",
+      "km": 248.9,
+      "carMinutes": 179
+    },
+    {
+      "from": "las-vegas",
       "to": "los-angeles",
       "km": 434,
       "carMinutes": 298
@@ -2686,6 +6034,12 @@
     },
     {
       "from": "las-vegas",
+      "to": "nogales",
+      "km": 756.7,
+      "carMinutes": 551
+    },
+    {
+      "from": "las-vegas",
       "to": "oakland",
       "km": 893,
       "carMinutes": 619
@@ -2695,6 +6049,18 @@
       "to": "oxnard",
       "km": 524.8,
       "carMinutes": 366
+    },
+    {
+      "from": "las-vegas",
+      "to": "page",
+      "km": 437.7,
+      "carMinutes": 322
+    },
+    {
+      "from": "las-vegas",
+      "to": "phoenix",
+      "km": 460.9,
+      "carMinutes": 362
     },
     {
       "from": "las-vegas",
@@ -2746,6 +6112,12 @@
     },
     {
       "from": "las-vegas",
+      "to": "san-simon",
+      "km": 849.7,
+      "carMinutes": 604
+    },
+    {
+      "from": "las-vegas",
       "to": "santa-cruz",
       "km": 850.4,
       "carMinutes": 601
@@ -2755,6 +6127,18 @@
       "to": "santa-maria",
       "km": 639.7,
       "carMinutes": 464
+    },
+    {
+      "from": "las-vegas",
+      "to": "show-low",
+      "km": 626.6,
+      "carMinutes": 433
+    },
+    {
+      "from": "las-vegas",
+      "to": "sierra-vista",
+      "km": 773.9,
+      "carMinutes": 566
     },
     {
       "from": "las-vegas",
@@ -2776,6 +6160,12 @@
     },
     {
       "from": "las-vegas",
+      "to": "tucson",
+      "km": 658.5,
+      "carMinutes": 486
+    },
+    {
+      "from": "las-vegas",
       "to": "ukiah",
       "km": 1082.5,
       "carMinutes": 759
@@ -2785,6 +6175,18 @@
       "to": "winnemucca",
       "km": 756.5,
       "carMinutes": 527
+    },
+    {
+      "from": "las-vegas",
+      "to": "winslow",
+      "km": 496.2,
+      "carMinutes": 337
+    },
+    {
+      "from": "las-vegas",
+      "to": "yuma",
+      "km": 472.8,
+      "carMinutes": 352
     },
     {
       "from": "los-angeles",
@@ -2806,9 +6208,21 @@
     },
     {
       "from": "los-angeles",
+      "to": "camp-verde",
+      "km": 729.1,
+      "carMinutes": 487
+    },
+    {
+      "from": "los-angeles",
       "to": "carson-city",
       "km": 705.4,
       "carMinutes": 540
+    },
+    {
+      "from": "los-angeles",
+      "to": "clifton",
+      "km": 934.3,
+      "carMinutes": 670
     },
     {
       "from": "los-angeles",
@@ -2836,9 +6250,21 @@
     },
     {
       "from": "los-angeles",
+      "to": "flagstaff",
+      "km": 755.5,
+      "carMinutes": 500
+    },
+    {
+      "from": "los-angeles",
       "to": "fresno",
       "km": 356.7,
       "carMinutes": 251
+    },
+    {
+      "from": "los-angeles",
+      "to": "grand-canyon-village",
+      "km": 789.8,
+      "carMinutes": 534
     },
     {
       "from": "los-angeles",
@@ -2866,6 +6292,24 @@
     },
     {
       "from": "los-angeles",
+      "to": "kayenta",
+      "km": 989.2,
+      "carMinutes": 669
+    },
+    {
+      "from": "los-angeles",
+      "to": "kingman",
+      "km": 517.9,
+      "carMinutes": 348
+    },
+    {
+      "from": "los-angeles",
+      "to": "lake-havasu-city",
+      "km": 483,
+      "carMinutes": 335
+    },
+    {
+      "from": "los-angeles",
       "to": "las-vegas",
       "km": 432.6,
       "carMinutes": 297
@@ -2884,6 +6328,12 @@
     },
     {
       "from": "los-angeles",
+      "to": "nogales",
+      "km": 885.1,
+      "carMinutes": 591
+    },
+    {
+      "from": "los-angeles",
       "to": "oakland",
       "km": 595,
       "carMinutes": 411
@@ -2893,6 +6343,18 @@
       "to": "oxnard",
       "km": 101.7,
       "carMinutes": 79
+    },
+    {
+      "from": "los-angeles",
+      "to": "page",
+      "km": 869.7,
+      "carMinutes": 614
+    },
+    {
+      "from": "los-angeles",
+      "to": "phoenix",
+      "km": 599.8,
+      "carMinutes": 402
     },
     {
       "from": "los-angeles",
@@ -2944,6 +6406,12 @@
     },
     {
       "from": "los-angeles",
+      "to": "san-simon",
+      "km": 978,
+      "carMinutes": 644
+    },
+    {
+      "from": "los-angeles",
       "to": "santa-cruz",
       "km": 552.4,
       "carMinutes": 394
@@ -2953,6 +6421,18 @@
       "to": "santa-maria",
       "km": 255,
       "carMinutes": 197
+    },
+    {
+      "from": "los-angeles",
+      "to": "show-low",
+      "km": 879.2,
+      "carMinutes": 614
+    },
+    {
+      "from": "los-angeles",
+      "to": "sierra-vista",
+      "km": 902.2,
+      "carMinutes": 606
     },
     {
       "from": "los-angeles",
@@ -2974,6 +6454,12 @@
     },
     {
       "from": "los-angeles",
+      "to": "tucson",
+      "km": 786.8,
+      "carMinutes": 526
+    },
+    {
+      "from": "los-angeles",
       "to": "ukiah",
       "km": 784.4,
       "carMinutes": 551
@@ -2983,6 +6469,18 @@
       "to": "winnemucca",
       "km": 940.8,
       "carMinutes": 673
+    },
+    {
+      "from": "los-angeles",
+      "to": "winslow",
+      "km": 841.5,
+      "carMinutes": 550
+    },
+    {
+      "from": "los-angeles",
+      "to": "yuma",
+      "km": 438.9,
+      "carMinutes": 309
     },
     {
       "from": "modesto",
@@ -3004,9 +6502,21 @@
     },
     {
       "from": "modesto",
+      "to": "camp-verde",
+      "km": 1160,
+      "carMinutes": 793
+    },
+    {
+      "from": "modesto",
       "to": "carson-city",
       "km": 269.6,
       "carMinutes": 245
+    },
+    {
+      "from": "modesto",
+      "to": "clifton",
+      "km": 1436,
+      "carMinutes": 1023
     },
     {
       "from": "modesto",
@@ -3034,9 +6544,21 @@
     },
     {
       "from": "modesto",
+      "to": "flagstaff",
+      "km": 1110.7,
+      "carMinutes": 751
+    },
+    {
+      "from": "modesto",
       "to": "fresno",
       "km": 154.2,
       "carMinutes": 116
+    },
+    {
+      "from": "modesto",
+      "to": "grand-canyon-village",
+      "km": 1144.9,
+      "carMinutes": 785
     },
     {
       "from": "modesto",
@@ -3064,6 +6586,24 @@
     },
     {
       "from": "modesto",
+      "to": "kayenta",
+      "km": 1344.4,
+      "carMinutes": 920
+    },
+    {
+      "from": "modesto",
+      "to": "kingman",
+      "km": 873,
+      "carMinutes": 599
+    },
+    {
+      "from": "modesto",
+      "to": "lake-havasu-city",
+      "km": 838.1,
+      "carMinutes": 586
+    },
+    {
+      "from": "modesto",
       "to": "las-vegas",
       "km": 787.8,
       "carMinutes": 548
@@ -3082,6 +6622,12 @@
     },
     {
       "from": "modesto",
+      "to": "nogales",
+      "km": 1386.9,
+      "carMinutes": 944
+    },
+    {
+      "from": "modesto",
       "to": "oakland",
       "km": 127.9,
       "carMinutes": 97
@@ -3091,6 +6637,18 @@
       "to": "oxnard",
       "km": 517.8,
       "carMinutes": 375
+    },
+    {
+      "from": "modesto",
+      "to": "page",
+      "km": 1224.8,
+      "carMinutes": 865
+    },
+    {
+      "from": "modesto",
+      "to": "phoenix",
+      "km": 1101.6,
+      "carMinutes": 755
     },
     {
       "from": "modesto",
@@ -3142,6 +6700,12 @@
     },
     {
       "from": "modesto",
+      "to": "san-simon",
+      "km": 1479.8,
+      "carMinutes": 996
+    },
+    {
+      "from": "modesto",
       "to": "santa-cruz",
       "km": 178.5,
       "carMinutes": 142
@@ -3151,6 +6715,18 @@
       "to": "santa-maria",
       "km": 408.7,
       "carMinutes": 308
+    },
+    {
+      "from": "modesto",
+      "to": "show-low",
+      "km": 1327,
+      "carMinutes": 898
+    },
+    {
+      "from": "modesto",
+      "to": "sierra-vista",
+      "km": 1404,
+      "carMinutes": 959
     },
     {
       "from": "modesto",
@@ -3172,6 +6748,12 @@
     },
     {
       "from": "modesto",
+      "to": "tucson",
+      "km": 1288.6,
+      "carMinutes": 879
+    },
+    {
+      "from": "modesto",
       "to": "ukiah",
       "km": 317.3,
       "carMinutes": 237
@@ -3181,6 +6763,18 @@
       "to": "winnemucca",
       "km": 592.6,
       "carMinutes": 405
+    },
+    {
+      "from": "modesto",
+      "to": "winslow",
+      "km": 1196.7,
+      "carMinutes": 801
+    },
+    {
+      "from": "modesto",
+      "to": "yuma",
+      "km": 940.6,
+      "carMinutes": 662
     },
     {
       "from": "mojave",
@@ -3202,9 +6796,21 @@
     },
     {
       "from": "mojave",
+      "to": "camp-verde",
+      "km": 746.4,
+      "carMinutes": 511
+    },
+    {
+      "from": "mojave",
       "to": "carson-city",
       "km": 565.6,
       "carMinutes": 446
+    },
+    {
+      "from": "mojave",
+      "to": "clifton",
+      "km": 1006.6,
+      "carMinutes": 740
     },
     {
       "from": "mojave",
@@ -3232,9 +6838,21 @@
     },
     {
       "from": "mojave",
+      "to": "flagstaff",
+      "km": 697,
+      "carMinutes": 469
+    },
+    {
+      "from": "mojave",
       "to": "fresno",
       "km": 291.2,
       "carMinutes": 213
+    },
+    {
+      "from": "mojave",
+      "to": "grand-canyon-village",
+      "km": 731.3,
+      "carMinutes": 503
     },
     {
       "from": "mojave",
@@ -3262,6 +6880,24 @@
     },
     {
       "from": "mojave",
+      "to": "kayenta",
+      "km": 930.7,
+      "carMinutes": 639
+    },
+    {
+      "from": "mojave",
+      "to": "kingman",
+      "km": 459.3,
+      "carMinutes": 318
+    },
+    {
+      "from": "mojave",
+      "to": "lake-havasu-city",
+      "km": 424.5,
+      "carMinutes": 305
+    },
+    {
+      "from": "mojave",
       "to": "las-vegas",
       "km": 374.1,
       "carMinutes": 266
@@ -3280,6 +6916,12 @@
     },
     {
       "from": "mojave",
+      "to": "nogales",
+      "km": 957.4,
+      "carMinutes": 660
+    },
+    {
+      "from": "mojave",
       "to": "oakland",
       "km": 545.2,
       "carMinutes": 389
@@ -3289,6 +6931,18 @@
       "to": "oxnard",
       "km": 187.3,
       "carMinutes": 150
+    },
+    {
+      "from": "mojave",
+      "to": "page",
+      "km": 811.2,
+      "carMinutes": 583
+    },
+    {
+      "from": "mojave",
+      "to": "phoenix",
+      "km": 672.2,
+      "carMinutes": 472
     },
     {
       "from": "mojave",
@@ -3340,6 +6994,12 @@
     },
     {
       "from": "mojave",
+      "to": "san-simon",
+      "km": 1050.3,
+      "carMinutes": 713
+    },
+    {
+      "from": "mojave",
       "to": "santa-cruz",
       "km": 502.6,
       "carMinutes": 372
@@ -3349,6 +7009,18 @@
       "to": "santa-maria",
       "km": 280.3,
       "carMinutes": 230
+    },
+    {
+      "from": "mojave",
+      "to": "show-low",
+      "km": 913.4,
+      "carMinutes": 616
+    },
+    {
+      "from": "mojave",
+      "to": "sierra-vista",
+      "km": 974.5,
+      "carMinutes": 676
     },
     {
       "from": "mojave",
@@ -3370,6 +7042,12 @@
     },
     {
       "from": "mojave",
+      "to": "tucson",
+      "km": 859.1,
+      "carMinutes": 596
+    },
+    {
+      "from": "mojave",
       "to": "ukiah",
       "km": 734.6,
       "carMinutes": 529
@@ -3379,6 +7057,312 @@
       "to": "winnemucca",
       "km": 801.1,
       "carMinutes": 578
+    },
+    {
+      "from": "mojave",
+      "to": "winslow",
+      "km": 783,
+      "carMinutes": 520
+    },
+    {
+      "from": "mojave",
+      "to": "yuma",
+      "km": 511.2,
+      "carMinutes": 379
+    },
+    {
+      "from": "nogales",
+      "to": "bakersfield",
+      "km": 1063.9,
+      "carMinutes": 719
+    },
+    {
+      "from": "nogales",
+      "to": "barstow",
+      "km": 886.4,
+      "carMinutes": 606
+    },
+    {
+      "from": "nogales",
+      "to": "blythe",
+      "km": 528.2,
+      "carMinutes": 349
+    },
+    {
+      "from": "nogales",
+      "to": "camp-verde",
+      "km": 432.6,
+      "carMinutes": 291
+    },
+    {
+      "from": "nogales",
+      "to": "carson-city",
+      "km": 1436.9,
+      "carMinutes": 1048
+    },
+    {
+      "from": "nogales",
+      "to": "clifton",
+      "km": 313.7,
+      "carMinutes": 244
+    },
+    {
+      "from": "nogales",
+      "to": "el-centro",
+      "km": 582.5,
+      "carMinutes": 383
+    },
+    {
+      "from": "nogales",
+      "to": "elko",
+      "km": 1442.6,
+      "carMinutes": 1043
+    },
+    {
+      "from": "nogales",
+      "to": "ely",
+      "km": 1141.6,
+      "carMinutes": 835
+    },
+    {
+      "from": "nogales",
+      "to": "eureka",
+      "km": 1919.8,
+      "carMinutes": 1332
+    },
+    {
+      "from": "nogales",
+      "to": "flagstaff",
+      "km": 523.7,
+      "carMinutes": 351
+    },
+    {
+      "from": "nogales",
+      "to": "fresno",
+      "km": 1240.8,
+      "carMinutes": 838
+    },
+    {
+      "from": "nogales",
+      "to": "grand-canyon-village",
+      "km": 653.9,
+      "carMinutes": 445
+    },
+    {
+      "from": "nogales",
+      "to": "hilt",
+      "km": 1948.2,
+      "carMinutes": 1319
+    },
+    {
+      "from": "nogales",
+      "to": "huron",
+      "km": 1193.3,
+      "carMinutes": 807
+    },
+    {
+      "from": "nogales",
+      "to": "indio",
+      "km": 685.4,
+      "carMinutes": 455
+    },
+    {
+      "from": "nogales",
+      "to": "jackpot",
+      "km": 1470.2,
+      "carMinutes": 1067
+    },
+    {
+      "from": "nogales",
+      "to": "kayenta",
+      "km": 757.4,
+      "carMinutes": 521
+    },
+    {
+      "from": "nogales",
+      "to": "kingman",
+      "km": 587.7,
+      "carMinutes": 423
+    },
+    {
+      "from": "nogales",
+      "to": "lake-havasu-city",
+      "km": 609.4,
+      "carMinutes": 416
+    },
+    {
+      "from": "nogales",
+      "to": "las-vegas",
+      "km": 758.3,
+      "carMinutes": 552
+    },
+    {
+      "from": "nogales",
+      "to": "los-angeles",
+      "km": 886.8,
+      "carMinutes": 593
+    },
+    {
+      "from": "nogales",
+      "to": "modesto",
+      "km": 1389,
+      "carMinutes": 946
+    },
+    {
+      "from": "nogales",
+      "to": "mojave",
+      "km": 958.1,
+      "carMinutes": 662
+    },
+    {
+      "from": "nogales",
+      "to": "oakland",
+      "km": 1479.1,
+      "carMinutes": 998
+    },
+    {
+      "from": "nogales",
+      "to": "oxnard",
+      "km": 988.8,
+      "carMinutes": 669
+    },
+    {
+      "from": "nogales",
+      "to": "page",
+      "km": 733.5,
+      "carMinutes": 507
+    },
+    {
+      "from": "nogales",
+      "to": "phoenix",
+      "km": 286.6,
+      "carMinutes": 195
+    },
+    {
+      "from": "nogales",
+      "to": "pioche",
+      "km": 1032.8,
+      "carMinutes": 764
+    },
+    {
+      "from": "nogales",
+      "to": "primm",
+      "km": 772.1,
+      "carMinutes": 565
+    },
+    {
+      "from": "nogales",
+      "to": "redding",
+      "km": 1760.2,
+      "carMinutes": 1185
+    },
+    {
+      "from": "nogales",
+      "to": "reno",
+      "km": 1450.3,
+      "carMinutes": 1059
+    },
+    {
+      "from": "nogales",
+      "to": "sacramento",
+      "km": 1502.4,
+      "carMinutes": 1013
+    },
+    {
+      "from": "nogales",
+      "to": "san-diego",
+      "km": 761.5,
+      "carMinutes": 504
+    },
+    {
+      "from": "nogales",
+      "to": "san-francisco",
+      "km": 1498.8,
+      "carMinutes": 1015
+    },
+    {
+      "from": "nogales",
+      "to": "san-jose",
+      "km": 1427.6,
+      "carMinutes": 971
+    },
+    {
+      "from": "nogales",
+      "to": "san-simon",
+      "km": 238.5,
+      "carMinutes": 175
+    },
+    {
+      "from": "nogales",
+      "to": "santa-cruz",
+      "km": 1436.5,
+      "carMinutes": 981
+    },
+    {
+      "from": "nogales",
+      "to": "santa-maria",
+      "km": 1142.2,
+      "carMinutes": 787
+    },
+    {
+      "from": "nogales",
+      "to": "show-low",
+      "km": 406.2,
+      "carMinutes": 320
+    },
+    {
+      "from": "nogales",
+      "to": "sierra-vista",
+      "km": 102.3,
+      "carMinutes": 91
+    },
+    {
+      "from": "nogales",
+      "to": "stockton",
+      "km": 1426.8,
+      "carMinutes": 960
+    },
+    {
+      "from": "nogales",
+      "to": "tonopah",
+      "km": 1095.6,
+      "carMinutes": 785
+    },
+    {
+      "from": "nogales",
+      "to": "truckee",
+      "km": 1506.1,
+      "carMinutes": 1101
+    },
+    {
+      "from": "nogales",
+      "to": "tucson",
+      "km": 110.8,
+      "carMinutes": 83
+    },
+    {
+      "from": "nogales",
+      "to": "ukiah",
+      "km": 1668.5,
+      "carMinutes": 1138
+    },
+    {
+      "from": "nogales",
+      "to": "winnemucca",
+      "km": 1511.8,
+      "carMinutes": 1072
+    },
+    {
+      "from": "nogales",
+      "to": "winslow",
+      "km": 609.7,
+      "carMinutes": 402
+    },
+    {
+      "from": "nogales",
+      "to": "yuma",
+      "km": 486,
+      "carMinutes": 319
     },
     {
       "from": "oakland",
@@ -3400,9 +7384,21 @@
     },
     {
       "from": "oakland",
+      "to": "camp-verde",
+      "km": 1265.3,
+      "carMinutes": 861
+    },
+    {
+      "from": "oakland",
       "to": "carson-city",
       "km": 341.9,
       "carMinutes": 278
+    },
+    {
+      "from": "oakland",
+      "to": "clifton",
+      "km": 1525.5,
+      "carMinutes": 1077
     },
     {
       "from": "oakland",
@@ -3430,9 +7426,21 @@
     },
     {
       "from": "oakland",
+      "to": "flagstaff",
+      "km": 1216,
+      "carMinutes": 819
+    },
+    {
+      "from": "oakland",
       "to": "fresno",
       "km": 278.2,
       "carMinutes": 203
+    },
+    {
+      "from": "oakland",
+      "to": "grand-canyon-village",
+      "km": 1250.2,
+      "carMinutes": 853
     },
     {
       "from": "oakland",
@@ -3460,6 +7468,24 @@
     },
     {
       "from": "oakland",
+      "to": "kayenta",
+      "km": 1449.7,
+      "carMinutes": 989
+    },
+    {
+      "from": "oakland",
+      "to": "kingman",
+      "km": 978.3,
+      "carMinutes": 668
+    },
+    {
+      "from": "oakland",
+      "to": "lake-havasu-city",
+      "km": 943.4,
+      "carMinutes": 655
+    },
+    {
+      "from": "oakland",
       "to": "las-vegas",
       "km": 893.1,
       "carMinutes": 616
@@ -3484,9 +7510,27 @@
     },
     {
       "from": "oakland",
+      "to": "nogales",
+      "km": 1476.3,
+      "carMinutes": 997
+    },
+    {
+      "from": "oakland",
       "to": "oxnard",
       "km": 571.4,
       "carMinutes": 424
+    },
+    {
+      "from": "oakland",
+      "to": "page",
+      "km": 1330.1,
+      "carMinutes": 933
+    },
+    {
+      "from": "oakland",
+      "to": "phoenix",
+      "km": 1191.1,
+      "carMinutes": 808
     },
     {
       "from": "oakland",
@@ -3538,6 +7582,12 @@
     },
     {
       "from": "oakland",
+      "to": "san-simon",
+      "km": 1569.2,
+      "carMinutes": 1050
+    },
+    {
+      "from": "oakland",
       "to": "santa-cruz",
       "km": 112.1,
       "carMinutes": 89
@@ -3547,6 +7597,18 @@
       "to": "santa-maria",
       "km": 410.7,
       "carMinutes": 299
+    },
+    {
+      "from": "oakland",
+      "to": "show-low",
+      "km": 1432.3,
+      "carMinutes": 966
+    },
+    {
+      "from": "oakland",
+      "to": "sierra-vista",
+      "km": 1493.5,
+      "carMinutes": 1012
     },
     {
       "from": "oakland",
@@ -3568,6 +7630,12 @@
     },
     {
       "from": "oakland",
+      "to": "tucson",
+      "km": 1378.1,
+      "carMinutes": 932
+    },
+    {
+      "from": "oakland",
       "to": "ukiah",
       "km": 193.9,
       "carMinutes": 147
@@ -3577,6 +7645,18 @@
       "to": "winnemucca",
       "km": 610.2,
       "carMinutes": 416
+    },
+    {
+      "from": "oakland",
+      "to": "winslow",
+      "km": 1302,
+      "carMinutes": 870
+    },
+    {
+      "from": "oakland",
+      "to": "yuma",
+      "km": 1030.1,
+      "carMinutes": 715
     },
     {
       "from": "oxnard",
@@ -3598,9 +7678,21 @@
     },
     {
       "from": "oxnard",
+      "to": "camp-verde",
+      "km": 828.4,
+      "carMinutes": 563
+    },
+    {
+      "from": "oxnard",
       "to": "carson-city",
       "km": 741.5,
       "carMinutes": 575
+    },
+    {
+      "from": "oxnard",
+      "to": "clifton",
+      "km": 1033.5,
+      "carMinutes": 747
     },
     {
       "from": "oxnard",
@@ -3628,9 +7720,21 @@
     },
     {
       "from": "oxnard",
+      "to": "flagstaff",
+      "km": 845.9,
+      "carMinutes": 567
+    },
+    {
+      "from": "oxnard",
       "to": "fresno",
       "km": 369.3,
       "carMinutes": 268
+    },
+    {
+      "from": "oxnard",
+      "to": "grand-canyon-village",
+      "km": 880.1,
+      "carMinutes": 601
     },
     {
       "from": "oxnard",
@@ -3658,6 +7762,24 @@
     },
     {
       "from": "oxnard",
+      "to": "kayenta",
+      "km": 1079.5,
+      "carMinutes": 737
+    },
+    {
+      "from": "oxnard",
+      "to": "kingman",
+      "km": 608.2,
+      "carMinutes": 416
+    },
+    {
+      "from": "oxnard",
+      "to": "lake-havasu-city",
+      "km": 573.3,
+      "carMinutes": 403
+    },
+    {
+      "from": "oxnard",
       "to": "las-vegas",
       "km": 522.9,
       "carMinutes": 365
@@ -3682,9 +7804,27 @@
     },
     {
       "from": "oxnard",
+      "to": "nogales",
+      "km": 984.3,
+      "carMinutes": 667
+    },
+    {
+      "from": "oxnard",
       "to": "oakland",
       "km": 570.5,
       "carMinutes": 423
+    },
+    {
+      "from": "oxnard",
+      "to": "page",
+      "km": 960,
+      "carMinutes": 682
+    },
+    {
+      "from": "oxnard",
+      "to": "phoenix",
+      "km": 699.1,
+      "carMinutes": 478
     },
     {
       "from": "oxnard",
@@ -3736,6 +7876,12 @@
     },
     {
       "from": "oxnard",
+      "to": "san-simon",
+      "km": 1077.2,
+      "carMinutes": 720
+    },
+    {
+      "from": "oxnard",
       "to": "santa-cruz",
       "km": 473.1,
       "carMinutes": 358
@@ -3745,6 +7891,18 @@
       "to": "santa-maria",
       "km": 163.8,
       "carMinutes": 131
+    },
+    {
+      "from": "oxnard",
+      "to": "show-low",
+      "km": 978.4,
+      "carMinutes": 690
+    },
+    {
+      "from": "oxnard",
+      "to": "sierra-vista",
+      "km": 1001.5,
+      "carMinutes": 682
     },
     {
       "from": "oxnard",
@@ -3766,6 +7924,12 @@
     },
     {
       "from": "oxnard",
+      "to": "tucson",
+      "km": 886,
+      "carMinutes": 602
+    },
+    {
+      "from": "oxnard",
       "to": "ukiah",
       "km": 763.2,
       "carMinutes": 567
@@ -3775,6 +7939,606 @@
       "to": "winnemucca",
       "km": 977,
       "carMinutes": 707
+    },
+    {
+      "from": "oxnard",
+      "to": "winslow",
+      "km": 931.8,
+      "carMinutes": 618
+    },
+    {
+      "from": "oxnard",
+      "to": "yuma",
+      "km": 538.1,
+      "carMinutes": 385
+    },
+    {
+      "from": "page",
+      "to": "bakersfield",
+      "km": 895.5,
+      "carMinutes": 637
+    },
+    {
+      "from": "page",
+      "to": "barstow",
+      "km": 686.6,
+      "carMinutes": 488
+    },
+    {
+      "from": "page",
+      "to": "blythe",
+      "km": 670.2,
+      "carMinutes": 462
+    },
+    {
+      "from": "page",
+      "to": "camp-verde",
+      "km": 306.4,
+      "carMinutes": 227
+    },
+    {
+      "from": "page",
+      "to": "carson-city",
+      "km": 1083.7,
+      "carMinutes": 797
+    },
+    {
+      "from": "page",
+      "to": "clifton",
+      "km": 752.5,
+      "carMinutes": 564
+    },
+    {
+      "from": "page",
+      "to": "el-centro",
+      "km": 821.3,
+      "carMinutes": 576
+    },
+    {
+      "from": "page",
+      "to": "elko",
+      "km": 893.8,
+      "carMinutes": 649
+    },
+    {
+      "from": "page",
+      "to": "ely",
+      "km": 592.8,
+      "carMinutes": 441
+    },
+    {
+      "from": "page",
+      "to": "eureka",
+      "km": 1645.9,
+      "carMinutes": 1220
+    },
+    {
+      "from": "page",
+      "to": "flagstaff",
+      "km": 215.7,
+      "carMinutes": 170
+    },
+    {
+      "from": "page",
+      "to": "fresno",
+      "km": 1075.9,
+      "carMinutes": 758
+    },
+    {
+      "from": "page",
+      "to": "grand-canyon-village",
+      "km": 222.7,
+      "carMinutes": 184
+    },
+    {
+      "from": "page",
+      "to": "hilt",
+      "km": 1535.2,
+      "carMinutes": 1130
+    },
+    {
+      "from": "page",
+      "to": "huron",
+      "km": 1044.2,
+      "carMinutes": 743
+    },
+    {
+      "from": "page",
+      "to": "indio",
+      "km": 804.9,
+      "carMinutes": 558
+    },
+    {
+      "from": "page",
+      "to": "jackpot",
+      "km": 921.5,
+      "carMinutes": 673
+    },
+    {
+      "from": "page",
+      "to": "kayenta",
+      "km": 158.8,
+      "carMinutes": 120
+    },
+    {
+      "from": "page",
+      "to": "kingman",
+      "km": 449.4,
+      "carMinutes": 314
+    },
+    {
+      "from": "page",
+      "to": "lake-havasu-city",
+      "km": 550.8,
+      "carMinutes": 385
+    },
+    {
+      "from": "page",
+      "to": "las-vegas",
+      "km": 438.7,
+      "carMinutes": 322
+    },
+    {
+      "from": "page",
+      "to": "los-angeles",
+      "km": 870.8,
+      "carMinutes": 614
+    },
+    {
+      "from": "page",
+      "to": "modesto",
+      "km": 1224.1,
+      "carMinutes": 866
+    },
+    {
+      "from": "page",
+      "to": "mojave",
+      "km": 810.7,
+      "carMinutes": 583
+    },
+    {
+      "from": "page",
+      "to": "nogales",
+      "km": 731.1,
+      "carMinutes": 507
+    },
+    {
+      "from": "page",
+      "to": "oakland",
+      "km": 1329.9,
+      "carMinutes": 934
+    },
+    {
+      "from": "page",
+      "to": "oxnard",
+      "km": 961.7,
+      "carMinutes": 682
+    },
+    {
+      "from": "page",
+      "to": "phoenix",
+      "km": 446,
+      "carMinutes": 319
+    },
+    {
+      "from": "page",
+      "to": "pioche",
+      "km": 419.9,
+      "carMinutes": 318
+    },
+    {
+      "from": "page",
+      "to": "primm",
+      "km": 505.5,
+      "carMinutes": 366
+    },
+    {
+      "from": "page",
+      "to": "redding",
+      "km": 1410,
+      "carMinutes": 1044
+    },
+    {
+      "from": "page",
+      "to": "reno",
+      "km": 1097.1,
+      "carMinutes": 808
+    },
+    {
+      "from": "page",
+      "to": "sacramento",
+      "km": 1339.7,
+      "carMinutes": 947
+    },
+    {
+      "from": "page",
+      "to": "san-diego",
+      "km": 969.4,
+      "carMinutes": 683
+    },
+    {
+      "from": "page",
+      "to": "san-francisco",
+      "km": 1349.6,
+      "carMinutes": 951
+    },
+    {
+      "from": "page",
+      "to": "san-jose",
+      "km": 1278.4,
+      "carMinutes": 907
+    },
+    {
+      "from": "page",
+      "to": "san-simon",
+      "km": 824,
+      "carMinutes": 560
+    },
+    {
+      "from": "page",
+      "to": "santa-cruz",
+      "km": 1287.3,
+      "carMinutes": 917
+    },
+    {
+      "from": "page",
+      "to": "santa-maria",
+      "km": 1076.5,
+      "carMinutes": 780
+    },
+    {
+      "from": "page",
+      "to": "show-low",
+      "km": 425.7,
+      "carMinutes": 313
+    },
+    {
+      "from": "page",
+      "to": "sierra-vista",
+      "km": 748.2,
+      "carMinutes": 523
+    },
+    {
+      "from": "page",
+      "to": "stockton",
+      "km": 1270.3,
+      "carMinutes": 896
+    },
+    {
+      "from": "page",
+      "to": "tonopah",
+      "km": 725.2,
+      "carMinutes": 528
+    },
+    {
+      "from": "page",
+      "to": "truckee",
+      "km": 1152.9,
+      "carMinutes": 849
+    },
+    {
+      "from": "page",
+      "to": "tucson",
+      "km": 632.8,
+      "carMinutes": 443
+    },
+    {
+      "from": "page",
+      "to": "ukiah",
+      "km": 1519.4,
+      "carMinutes": 1075
+    },
+    {
+      "from": "page",
+      "to": "winnemucca",
+      "km": 1028.2,
+      "carMinutes": 738
+    },
+    {
+      "from": "page",
+      "to": "winslow",
+      "km": 295.4,
+      "carMinutes": 216
+    },
+    {
+      "from": "page",
+      "to": "yuma",
+      "km": 724.9,
+      "carMinutes": 511
+    },
+    {
+      "from": "phoenix",
+      "to": "bakersfield",
+      "km": 777.2,
+      "carMinutes": 529
+    },
+    {
+      "from": "phoenix",
+      "to": "barstow",
+      "km": 599.8,
+      "carMinutes": 415
+    },
+    {
+      "from": "phoenix",
+      "to": "blythe",
+      "km": 241.5,
+      "carMinutes": 159
+    },
+    {
+      "from": "phoenix",
+      "to": "camp-verde",
+      "km": 146,
+      "carMinutes": 101
+    },
+    {
+      "from": "phoenix",
+      "to": "carson-city",
+      "km": 1139.6,
+      "carMinutes": 857
+    },
+    {
+      "from": "phoenix",
+      "to": "clifton",
+      "km": 334.8,
+      "carMinutes": 274
+    },
+    {
+      "from": "phoenix",
+      "to": "el-centro",
+      "km": 392.7,
+      "carMinutes": 273
+    },
+    {
+      "from": "phoenix",
+      "to": "elko",
+      "km": 1145.3,
+      "carMinutes": 852
+    },
+    {
+      "from": "phoenix",
+      "to": "ely",
+      "km": 844.3,
+      "carMinutes": 644
+    },
+    {
+      "from": "phoenix",
+      "to": "eureka",
+      "km": 1633.1,
+      "carMinutes": 1142
+    },
+    {
+      "from": "phoenix",
+      "to": "flagstaff",
+      "km": 237.1,
+      "carMinutes": 161
+    },
+    {
+      "from": "phoenix",
+      "to": "fresno",
+      "km": 954.2,
+      "carMinutes": 648
+    },
+    {
+      "from": "phoenix",
+      "to": "grand-canyon-village",
+      "km": 367.3,
+      "carMinutes": 255
+    },
+    {
+      "from": "phoenix",
+      "to": "hilt",
+      "km": 1661.5,
+      "carMinutes": 1128
+    },
+    {
+      "from": "phoenix",
+      "to": "huron",
+      "km": 906.7,
+      "carMinutes": 616
+    },
+    {
+      "from": "phoenix",
+      "to": "indio",
+      "km": 398.7,
+      "carMinutes": 265
+    },
+    {
+      "from": "phoenix",
+      "to": "jackpot",
+      "km": 1173,
+      "carMinutes": 876
+    },
+    {
+      "from": "phoenix",
+      "to": "kayenta",
+      "km": 470.8,
+      "carMinutes": 331
+    },
+    {
+      "from": "phoenix",
+      "to": "kingman",
+      "km": 290.4,
+      "carMinutes": 232
+    },
+    {
+      "from": "phoenix",
+      "to": "lake-havasu-city",
+      "km": 322.7,
+      "carMinutes": 226
+    },
+    {
+      "from": "phoenix",
+      "to": "las-vegas",
+      "km": 461.1,
+      "carMinutes": 361
+    },
+    {
+      "from": "phoenix",
+      "to": "los-angeles",
+      "km": 600.2,
+      "carMinutes": 402
+    },
+    {
+      "from": "phoenix",
+      "to": "modesto",
+      "km": 1102.3,
+      "carMinutes": 755
+    },
+    {
+      "from": "phoenix",
+      "to": "mojave",
+      "km": 671.5,
+      "carMinutes": 471
+    },
+    {
+      "from": "phoenix",
+      "to": "nogales",
+      "km": 285.6,
+      "carMinutes": 195
+    },
+    {
+      "from": "phoenix",
+      "to": "oakland",
+      "km": 1192.5,
+      "carMinutes": 808
+    },
+    {
+      "from": "phoenix",
+      "to": "oxnard",
+      "km": 702.2,
+      "carMinutes": 478
+    },
+    {
+      "from": "phoenix",
+      "to": "page",
+      "km": 446.9,
+      "carMinutes": 318
+    },
+    {
+      "from": "phoenix",
+      "to": "pioche",
+      "km": 735.5,
+      "carMinutes": 573
+    },
+    {
+      "from": "phoenix",
+      "to": "primm",
+      "km": 474.8,
+      "carMinutes": 374
+    },
+    {
+      "from": "phoenix",
+      "to": "redding",
+      "km": 1473.5,
+      "carMinutes": 995
+    },
+    {
+      "from": "phoenix",
+      "to": "reno",
+      "km": 1153,
+      "carMinutes": 868
+    },
+    {
+      "from": "phoenix",
+      "to": "sacramento",
+      "km": 1215.7,
+      "carMinutes": 823
+    },
+    {
+      "from": "phoenix",
+      "to": "san-diego",
+      "km": 571.7,
+      "carMinutes": 394
+    },
+    {
+      "from": "phoenix",
+      "to": "san-francisco",
+      "km": 1212.1,
+      "carMinutes": 824
+    },
+    {
+      "from": "phoenix",
+      "to": "san-jose",
+      "km": 1140.9,
+      "carMinutes": 780
+    },
+    {
+      "from": "phoenix",
+      "to": "san-simon",
+      "km": 378.6,
+      "carMinutes": 248
+    },
+    {
+      "from": "phoenix",
+      "to": "santa-cruz",
+      "km": 1149.8,
+      "carMinutes": 791
+    },
+    {
+      "from": "phoenix",
+      "to": "santa-maria",
+      "km": 855.5,
+      "carMinutes": 596
+    },
+    {
+      "from": "phoenix",
+      "to": "show-low",
+      "km": 279.8,
+      "carMinutes": 218
+    },
+    {
+      "from": "phoenix",
+      "to": "sierra-vista",
+      "km": 302.8,
+      "carMinutes": 210
+    },
+    {
+      "from": "phoenix",
+      "to": "stockton",
+      "km": 1140.2,
+      "carMinutes": 770
+    },
+    {
+      "from": "phoenix",
+      "to": "tonopah",
+      "km": 798.3,
+      "carMinutes": 594
+    },
+    {
+      "from": "phoenix",
+      "to": "truckee",
+      "km": 1208.8,
+      "carMinutes": 910
+    },
+    {
+      "from": "phoenix",
+      "to": "tucson",
+      "km": 187.4,
+      "carMinutes": 130
+    },
+    {
+      "from": "phoenix",
+      "to": "ukiah",
+      "km": 1381.9,
+      "carMinutes": 948
+    },
+    {
+      "from": "phoenix",
+      "to": "winnemucca",
+      "km": 1214.5,
+      "carMinutes": 881
+    },
+    {
+      "from": "phoenix",
+      "to": "winslow",
+      "km": 323.1,
+      "carMinutes": 212
+    },
+    {
+      "from": "phoenix",
+      "to": "yuma",
+      "km": 296.2,
+      "carMinutes": 208
     },
     {
       "from": "pioche",
@@ -3796,9 +8560,21 @@
     },
     {
       "from": "pioche",
+      "to": "camp-verde",
+      "km": 693.5,
+      "carMinutes": 526
+    },
+    {
+      "from": "pioche",
       "to": "carson-city",
       "km": 686.8,
       "carMinutes": 504
+    },
+    {
+      "from": "pioche",
+      "to": "clifton",
+      "km": 1080.9,
+      "carMinutes": 844
     },
     {
       "from": "pioche",
@@ -3826,9 +8602,21 @@
     },
     {
       "from": "pioche",
+      "to": "flagstaff",
+      "km": 602.8,
+      "carMinutes": 469
+    },
+    {
+      "from": "pioche",
       "to": "fresno",
       "km": 919.9,
       "carMinutes": 655
+    },
+    {
+      "from": "pioche",
+      "to": "grand-canyon-village",
+      "km": 609.7,
+      "carMinutes": 482
     },
     {
       "from": "pioche",
@@ -3856,6 +8644,24 @@
     },
     {
       "from": "pioche",
+      "to": "kayenta",
+      "km": 578.1,
+      "carMinutes": 436
+    },
+    {
+      "from": "pioche",
+      "to": "kingman",
+      "km": 447.5,
+      "carMinutes": 348
+    },
+    {
+      "from": "pioche",
+      "to": "lake-havasu-city",
+      "km": 523.9,
+      "carMinutes": 393
+    },
+    {
+      "from": "pioche",
       "to": "las-vegas",
       "km": 282.6,
       "carMinutes": 219
@@ -3880,6 +8686,12 @@
     },
     {
       "from": "pioche",
+      "to": "nogales",
+      "km": 1031.7,
+      "carMinutes": 764
+    },
+    {
+      "from": "pioche",
       "to": "oakland",
       "km": 1032.4,
       "carMinutes": 746
@@ -3889,6 +8701,18 @@
       "to": "oxnard",
       "km": 805.7,
       "carMinutes": 579
+    },
+    {
+      "from": "pioche",
+      "to": "page",
+      "km": 420,
+      "carMinutes": 318
+    },
+    {
+      "from": "pioche",
+      "to": "phoenix",
+      "km": 735.9,
+      "carMinutes": 575
     },
     {
       "from": "pioche",
@@ -3934,6 +8758,12 @@
     },
     {
       "from": "pioche",
+      "to": "san-simon",
+      "km": 1124.6,
+      "carMinutes": 817
+    },
+    {
+      "from": "pioche",
       "to": "santa-cruz",
       "km": 962,
       "carMinutes": 800
@@ -3943,6 +8773,18 @@
       "to": "santa-maria",
       "km": 920.5,
       "carMinutes": 677
+    },
+    {
+      "from": "pioche",
+      "to": "show-low",
+      "km": 812.8,
+      "carMinutes": 611
+    },
+    {
+      "from": "pioche",
+      "to": "sierra-vista",
+      "km": 1048.9,
+      "carMinutes": 780
     },
     {
       "from": "pioche",
@@ -3964,6 +8806,12 @@
     },
     {
       "from": "pioche",
+      "to": "tucson",
+      "km": 933.4,
+      "carMinutes": 700
+    },
+    {
+      "from": "pioche",
       "to": "ukiah",
       "km": 1074.2,
       "carMinutes": 822
@@ -3973,6 +8821,18 @@
       "to": "winnemucca",
       "km": 608.3,
       "carMinutes": 420
+    },
+    {
+      "from": "pioche",
+      "to": "winslow",
+      "km": 682.4,
+      "carMinutes": 515
+    },
+    {
+      "from": "pioche",
+      "to": "yuma",
+      "km": 747.8,
+      "carMinutes": 565
     },
     {
       "from": "primm",
@@ -3994,9 +8854,21 @@
     },
     {
       "from": "primm",
+      "to": "camp-verde",
+      "km": 473.6,
+      "carMinutes": 343
+    },
+    {
+      "from": "primm",
       "to": "carson-city",
       "km": 747.4,
       "carMinutes": 547
+    },
+    {
+      "from": "primm",
+      "to": "clifton",
+      "km": 820,
+      "carMinutes": 645
     },
     {
       "from": "primm",
@@ -4024,9 +8896,21 @@
     },
     {
       "from": "primm",
+      "to": "flagstaff",
+      "km": 424.3,
+      "carMinutes": 301
+    },
+    {
+      "from": "primm",
       "to": "fresno",
       "km": 570.6,
       "carMinutes": 394
+    },
+    {
+      "from": "primm",
+      "to": "grand-canyon-village",
+      "km": 458.5,
+      "carMinutes": 335
     },
     {
       "from": "primm",
@@ -4054,6 +8938,24 @@
     },
     {
       "from": "primm",
+      "to": "kayenta",
+      "km": 658,
+      "carMinutes": 470
+    },
+    {
+      "from": "primm",
+      "to": "kingman",
+      "km": 186.6,
+      "carMinutes": 149
+    },
+    {
+      "from": "primm",
+      "to": "lake-havasu-city",
+      "km": 222.5,
+      "carMinutes": 172
+    },
+    {
+      "from": "primm",
       "to": "las-vegas",
       "km": 68.4,
       "carMinutes": 50
@@ -4078,6 +8980,12 @@
     },
     {
       "from": "primm",
+      "to": "nogales",
+      "km": 770.8,
+      "carMinutes": 566
+    },
+    {
+      "from": "primm",
       "to": "oakland",
       "km": 824.6,
       "carMinutes": 570
@@ -4087,6 +8995,18 @@
       "to": "oxnard",
       "km": 456.3,
       "carMinutes": 318
+    },
+    {
+      "from": "primm",
+      "to": "page",
+      "km": 505.5,
+      "carMinutes": 367
+    },
+    {
+      "from": "primm",
+      "to": "phoenix",
+      "km": 475,
+      "carMinutes": 377
     },
     {
       "from": "primm",
@@ -4132,6 +9052,12 @@
     },
     {
       "from": "primm",
+      "to": "san-simon",
+      "km": 863.7,
+      "carMinutes": 618
+    },
+    {
+      "from": "primm",
       "to": "santa-cruz",
       "km": 782,
       "carMinutes": 553
@@ -4141,6 +9067,18 @@
       "to": "santa-maria",
       "km": 571.2,
       "carMinutes": 416
+    },
+    {
+      "from": "primm",
+      "to": "show-low",
+      "km": 640.6,
+      "carMinutes": 448
+    },
+    {
+      "from": "primm",
+      "to": "sierra-vista",
+      "km": 787.9,
+      "carMinutes": 581
     },
     {
       "from": "primm",
@@ -4162,6 +9100,12 @@
     },
     {
       "from": "primm",
+      "to": "tucson",
+      "km": 672.5,
+      "carMinutes": 501
+    },
+    {
+      "from": "primm",
       "to": "ukiah",
       "km": 1014,
       "carMinutes": 710
@@ -4171,6 +9115,18 @@
       "to": "winnemucca",
       "km": 822.3,
       "carMinutes": 571
+    },
+    {
+      "from": "primm",
+      "to": "winslow",
+      "km": 510.3,
+      "carMinutes": 351
+    },
+    {
+      "from": "primm",
+      "to": "yuma",
+      "km": 446.4,
+      "carMinutes": 344
     },
     {
       "from": "redding",
@@ -4192,9 +9148,21 @@
     },
     {
       "from": "redding",
+      "to": "camp-verde",
+      "km": 1546.3,
+      "carMinutes": 1048
+    },
+    {
+      "from": "redding",
       "to": "carson-city",
       "km": 367.3,
       "carMinutes": 278
+    },
+    {
+      "from": "redding",
+      "to": "clifton",
+      "km": 1806.5,
+      "carMinutes": 1263
     },
     {
       "from": "redding",
@@ -4222,9 +9190,21 @@
     },
     {
       "from": "redding",
+      "to": "flagstaff",
+      "km": 1497,
+      "carMinutes": 1006
+    },
+    {
+      "from": "redding",
       "to": "fresno",
       "km": 530.1,
       "carMinutes": 372
+    },
+    {
+      "from": "redding",
+      "to": "grand-canyon-village",
+      "km": 1531.2,
+      "carMinutes": 1040
     },
     {
       "from": "redding",
@@ -4252,6 +9232,24 @@
     },
     {
       "from": "redding",
+      "to": "kayenta",
+      "km": 1568.9,
+      "carMinutes": 1165
+    },
+    {
+      "from": "redding",
+      "to": "kingman",
+      "km": 1259.3,
+      "carMinutes": 854
+    },
+    {
+      "from": "redding",
+      "to": "lake-havasu-city",
+      "km": 1224.4,
+      "carMinutes": 841
+    },
+    {
+      "from": "redding",
       "to": "las-vegas",
       "km": 1008.8,
       "carMinutes": 752
@@ -4276,6 +9274,12 @@
     },
     {
       "from": "redding",
+      "to": "nogales",
+      "km": 1757.3,
+      "carMinutes": 1183
+    },
+    {
+      "from": "redding",
       "to": "oakland",
       "km": 341.7,
       "carMinutes": 236
@@ -4285,6 +9289,18 @@
       "to": "oxnard",
       "km": 888.2,
       "carMinutes": 615
+    },
+    {
+      "from": "redding",
+      "to": "page",
+      "km": 1410.8,
+      "carMinutes": 1047
+    },
+    {
+      "from": "redding",
+      "to": "phoenix",
+      "km": 1472,
+      "carMinutes": 995
     },
     {
       "from": "redding",
@@ -4330,6 +9346,12 @@
     },
     {
       "from": "redding",
+      "to": "san-simon",
+      "km": 1850.2,
+      "carMinutes": 1236
+    },
+    {
+      "from": "redding",
       "to": "santa-cruz",
       "km": 443.5,
       "carMinutes": 315
@@ -4339,6 +9361,18 @@
       "to": "santa-maria",
       "km": 740.8,
       "carMinutes": 523
+    },
+    {
+      "from": "redding",
+      "to": "show-low",
+      "km": 1713.3,
+      "carMinutes": 1153
+    },
+    {
+      "from": "redding",
+      "to": "sierra-vista",
+      "km": 1774.4,
+      "carMinutes": 1199
     },
     {
       "from": "redding",
@@ -4360,6 +9394,12 @@
     },
     {
       "from": "redding",
+      "to": "tucson",
+      "km": 1659,
+      "carMinutes": 1119
+    },
+    {
+      "from": "redding",
       "to": "ukiah",
       "km": 302.1,
       "carMinutes": 234
@@ -4369,6 +9409,18 @@
       "to": "winnemucca",
       "km": 580.5,
       "carMinutes": 408
+    },
+    {
+      "from": "redding",
+      "to": "winslow",
+      "km": 1582.9,
+      "carMinutes": 1056
+    },
+    {
+      "from": "redding",
+      "to": "yuma",
+      "km": 1311.1,
+      "carMinutes": 902
     },
     {
       "from": "reno",
@@ -4390,9 +9442,21 @@
     },
     {
       "from": "reno",
+      "to": "camp-verde",
+      "km": 1152,
+      "carMinutes": 837
+    },
+    {
+      "from": "reno",
       "to": "carson-city",
       "km": 52.2,
       "carMinutes": 40
+    },
+    {
+      "from": "reno",
+      "to": "clifton",
+      "km": 1498.4,
+      "carMinutes": 1139
     },
     {
       "from": "reno",
@@ -4420,9 +9484,21 @@
     },
     {
       "from": "reno",
+      "to": "flagstaff",
+      "km": 1102.7,
+      "carMinutes": 795
+    },
+    {
+      "from": "reno",
       "to": "fresno",
       "km": 478.8,
       "carMinutes": 347
+    },
+    {
+      "from": "reno",
+      "to": "grand-canyon-village",
+      "km": 1137,
+      "carMinutes": 829
     },
     {
       "from": "reno",
@@ -4450,6 +9526,24 @@
     },
     {
       "from": "reno",
+      "to": "kayenta",
+      "km": 1255.3,
+      "carMinutes": 927
+    },
+    {
+      "from": "reno",
+      "to": "kingman",
+      "km": 865,
+      "carMinutes": 643
+    },
+    {
+      "from": "reno",
+      "to": "lake-havasu-city",
+      "km": 941.4,
+      "carMinutes": 688
+    },
+    {
+      "from": "reno",
       "to": "las-vegas",
       "km": 695.2,
       "carMinutes": 514
@@ -4474,6 +9568,12 @@
     },
     {
       "from": "reno",
+      "to": "nogales",
+      "km": 1449.2,
+      "carMinutes": 1059
+    },
+    {
+      "from": "reno",
       "to": "oakland",
       "km": 345.4,
       "carMinutes": 251
@@ -4483,6 +9583,18 @@
       "to": "oxnard",
       "km": 843.7,
       "carMinutes": 596
+    },
+    {
+      "from": "reno",
+      "to": "page",
+      "km": 1097.2,
+      "carMinutes": 808
+    },
+    {
+      "from": "reno",
+      "to": "phoenix",
+      "km": 1153.4,
+      "carMinutes": 870
     },
     {
       "from": "reno",
@@ -4528,6 +9640,12 @@
     },
     {
       "from": "reno",
+      "to": "san-simon",
+      "km": 1542.1,
+      "carMinutes": 1112
+    },
+    {
+      "from": "reno",
       "to": "santa-cruz",
       "km": 447.2,
       "carMinutes": 330
@@ -4537,6 +9655,18 @@
       "to": "santa-maria",
       "km": 731.7,
       "carMinutes": 524
+    },
+    {
+      "from": "reno",
+      "to": "show-low",
+      "km": 1319.1,
+      "carMinutes": 942
+    },
+    {
+      "from": "reno",
+      "to": "sierra-vista",
+      "km": 1466.4,
+      "carMinutes": 1075
     },
     {
       "from": "reno",
@@ -4558,6 +9688,12 @@
     },
     {
       "from": "reno",
+      "to": "tucson",
+      "km": 1350.9,
+      "carMinutes": 995
+    },
+    {
+      "from": "reno",
       "to": "ukiah",
       "km": 387.2,
       "carMinutes": 326
@@ -4567,6 +9703,18 @@
       "to": "winnemucca",
       "km": 266.9,
       "carMinutes": 170
+    },
+    {
+      "from": "reno",
+      "to": "winslow",
+      "km": 1188.7,
+      "carMinutes": 845
+    },
+    {
+      "from": "reno",
+      "to": "yuma",
+      "km": 1080.6,
+      "carMinutes": 803
     },
     {
       "from": "sacramento",
@@ -4588,9 +9736,21 @@
     },
     {
       "from": "sacramento",
+      "to": "camp-verde",
+      "km": 1275.3,
+      "carMinutes": 875
+    },
+    {
+      "from": "sacramento",
       "to": "carson-city",
       "km": 210.4,
       "carMinutes": 184
+    },
+    {
+      "from": "sacramento",
+      "to": "clifton",
+      "km": 1549.5,
+      "carMinutes": 1091
     },
     {
       "from": "sacramento",
@@ -4618,9 +9778,21 @@
     },
     {
       "from": "sacramento",
+      "to": "flagstaff",
+      "km": 1226,
+      "carMinutes": 832
+    },
+    {
+      "from": "sacramento",
       "to": "fresno",
       "km": 269.5,
       "carMinutes": 198
+    },
+    {
+      "from": "sacramento",
+      "to": "grand-canyon-village",
+      "km": 1260.3,
+      "carMinutes": 866
     },
     {
       "from": "sacramento",
@@ -4648,6 +9820,24 @@
     },
     {
       "from": "sacramento",
+      "to": "kayenta",
+      "km": 1459.7,
+      "carMinutes": 1002
+    },
+    {
+      "from": "sacramento",
+      "to": "kingman",
+      "km": 988.3,
+      "carMinutes": 681
+    },
+    {
+      "from": "sacramento",
+      "to": "lake-havasu-city",
+      "km": 953.5,
+      "carMinutes": 668
+    },
+    {
+      "from": "sacramento",
       "to": "las-vegas",
       "km": 903.1,
       "carMinutes": 630
@@ -4672,6 +9862,12 @@
     },
     {
       "from": "sacramento",
+      "to": "nogales",
+      "km": 1500.3,
+      "carMinutes": 1012
+    },
+    {
+      "from": "sacramento",
       "to": "oakland",
       "km": 134.7,
       "carMinutes": 101
@@ -4681,6 +9877,18 @@
       "to": "oxnard",
       "km": 631.2,
       "carMinutes": 443
+    },
+    {
+      "from": "sacramento",
+      "to": "page",
+      "km": 1340.2,
+      "carMinutes": 947
+    },
+    {
+      "from": "sacramento",
+      "to": "phoenix",
+      "km": 1215,
+      "carMinutes": 823
     },
     {
       "from": "sacramento",
@@ -4726,6 +9934,12 @@
     },
     {
       "from": "sacramento",
+      "to": "san-simon",
+      "km": 1593.2,
+      "carMinutes": 1064
+    },
+    {
+      "from": "sacramento",
       "to": "santa-cruz",
       "km": 236.5,
       "carMinutes": 180
@@ -4735,6 +9949,18 @@
       "to": "santa-maria",
       "km": 519.2,
       "carMinutes": 371
+    },
+    {
+      "from": "sacramento",
+      "to": "show-low",
+      "km": 1442.4,
+      "carMinutes": 980
+    },
+    {
+      "from": "sacramento",
+      "to": "sierra-vista",
+      "km": 1517.4,
+      "carMinutes": 1027
     },
     {
       "from": "sacramento",
@@ -4756,6 +9982,12 @@
     },
     {
       "from": "sacramento",
+      "to": "tucson",
+      "km": 1402,
+      "carMinutes": 947
+    },
+    {
+      "from": "sacramento",
       "to": "ukiah",
       "km": 238.8,
       "carMinutes": 178
@@ -4765,6 +9997,18 @@
       "to": "winnemucca",
       "km": 477.1,
       "carMinutes": 321
+    },
+    {
+      "from": "sacramento",
+      "to": "winslow",
+      "km": 1312,
+      "carMinutes": 883
+    },
+    {
+      "from": "sacramento",
+      "to": "yuma",
+      "km": 1054.1,
+      "carMinutes": 730
     },
     {
       "from": "san-diego",
@@ -4786,9 +10030,21 @@
     },
     {
       "from": "san-diego",
+      "to": "camp-verde",
+      "km": 700,
+      "carMinutes": 478
+    },
+    {
+      "from": "san-diego",
       "to": "carson-city",
       "km": 845.6,
       "carMinutes": 642
+    },
+    {
+      "from": "san-diego",
+      "to": "clifton",
+      "km": 927.5,
+      "carMinutes": 625
     },
     {
       "from": "san-diego",
@@ -4816,9 +10072,21 @@
     },
     {
       "from": "san-diego",
+      "to": "flagstaff",
+      "km": 791,
+      "carMinutes": 539
+    },
+    {
+      "from": "san-diego",
       "to": "fresno",
       "km": 549.7,
       "carMinutes": 388
+    },
+    {
+      "from": "san-diego",
+      "to": "grand-canyon-village",
+      "km": 856.1,
+      "carMinutes": 598
     },
     {
       "from": "san-diego",
@@ -4846,6 +10114,24 @@
     },
     {
       "from": "san-diego",
+      "to": "kayenta",
+      "km": 1024.7,
+      "carMinutes": 708
+    },
+    {
+      "from": "san-diego",
+      "to": "kingman",
+      "km": 584.2,
+      "carMinutes": 413
+    },
+    {
+      "from": "san-diego",
+      "to": "lake-havasu-city",
+      "km": 502.9,
+      "carMinutes": 362
+    },
+    {
+      "from": "san-diego",
       "to": "las-vegas",
       "km": 531.6,
       "carMinutes": 366
@@ -4870,6 +10156,12 @@
     },
     {
       "from": "san-diego",
+      "to": "nogales",
+      "km": 759.3,
+      "carMinutes": 503
+    },
+    {
+      "from": "san-diego",
       "to": "oakland",
       "km": 787.9,
       "carMinutes": 549
@@ -4879,6 +10171,18 @@
       "to": "oxnard",
       "km": 297.7,
       "carMinutes": 219
+    },
+    {
+      "from": "san-diego",
+      "to": "page",
+      "km": 968.7,
+      "carMinutes": 683
+    },
+    {
+      "from": "san-diego",
+      "to": "phoenix",
+      "km": 570.7,
+      "carMinutes": 394
     },
     {
       "from": "san-diego",
@@ -4924,6 +10228,12 @@
     },
     {
       "from": "san-diego",
+      "to": "san-simon",
+      "km": 852.2,
+      "carMinutes": 556
+    },
+    {
+      "from": "san-diego",
       "to": "santa-cruz",
       "km": 745.3,
       "carMinutes": 532
@@ -4933,6 +10243,18 @@
       "to": "santa-maria",
       "km": 451,
       "carMinutes": 337
+    },
+    {
+      "from": "san-diego",
+      "to": "show-low",
+      "km": 838.2,
+      "carMinutes": 594
+    },
+    {
+      "from": "san-diego",
+      "to": "sierra-vista",
+      "km": 776.5,
+      "carMinutes": 519
     },
     {
       "from": "san-diego",
@@ -4954,6 +10276,12 @@
     },
     {
       "from": "san-diego",
+      "to": "tucson",
+      "km": 661.1,
+      "carMinutes": 439
+    },
+    {
+      "from": "san-diego",
       "to": "ukiah",
       "km": 977.4,
       "carMinutes": 689
@@ -4963,6 +10291,18 @@
       "to": "winnemucca",
       "km": 1081,
       "carMinutes": 774
+    },
+    {
+      "from": "san-diego",
+      "to": "winslow",
+      "km": 877,
+      "carMinutes": 589
+    },
+    {
+      "from": "san-diego",
+      "to": "yuma",
+      "km": 277.8,
+      "carMinutes": 191
     },
     {
       "from": "san-francisco",
@@ -4984,9 +10324,21 @@
     },
     {
       "from": "san-francisco",
+      "to": "camp-verde",
+      "km": 1284,
+      "carMinutes": 877
+    },
+    {
+      "from": "san-francisco",
       "to": "carson-city",
       "km": 347.8,
       "carMinutes": 285
+    },
+    {
+      "from": "san-francisco",
+      "to": "clifton",
+      "km": 1544.2,
+      "carMinutes": 1093
     },
     {
       "from": "san-francisco",
@@ -5014,9 +10366,21 @@
     },
     {
       "from": "san-francisco",
+      "to": "flagstaff",
+      "km": 1234.7,
+      "carMinutes": 835
+    },
+    {
+      "from": "san-francisco",
       "to": "fresno",
       "km": 296.9,
       "carMinutes": 219
+    },
+    {
+      "from": "san-francisco",
+      "to": "grand-canyon-village",
+      "km": 1268.9,
+      "carMinutes": 869
     },
     {
       "from": "san-francisco",
@@ -5044,6 +10408,24 @@
     },
     {
       "from": "san-francisco",
+      "to": "kayenta",
+      "km": 1468.4,
+      "carMinutes": 1005
+    },
+    {
+      "from": "san-francisco",
+      "to": "kingman",
+      "km": 997,
+      "carMinutes": 684
+    },
+    {
+      "from": "san-francisco",
+      "to": "lake-havasu-city",
+      "km": 962.1,
+      "carMinutes": 671
+    },
+    {
+      "from": "san-francisco",
       "to": "las-vegas",
       "km": 911.7,
       "carMinutes": 632
@@ -5068,6 +10450,12 @@
     },
     {
       "from": "san-francisco",
+      "to": "nogales",
+      "km": 1495,
+      "carMinutes": 1013
+    },
+    {
+      "from": "san-francisco",
       "to": "oakland",
       "km": 21.8,
       "carMinutes": 21
@@ -5077,6 +10465,18 @@
       "to": "oxnard",
       "km": 584.6,
       "carMinutes": 433
+    },
+    {
+      "from": "san-francisco",
+      "to": "page",
+      "km": 1348.8,
+      "carMinutes": 949
+    },
+    {
+      "from": "san-francisco",
+      "to": "phoenix",
+      "km": 1209.7,
+      "carMinutes": 824
     },
     {
       "from": "san-francisco",
@@ -5122,6 +10522,12 @@
     },
     {
       "from": "san-francisco",
+      "to": "san-simon",
+      "km": 1587.9,
+      "carMinutes": 1066
+    },
+    {
+      "from": "san-francisco",
       "to": "santa-cruz",
       "km": 117.2,
       "carMinutes": 93
@@ -5131,6 +10537,18 @@
       "to": "santa-maria",
       "km": 423.9,
       "carMinutes": 308
+    },
+    {
+      "from": "san-francisco",
+      "to": "show-low",
+      "km": 1451,
+      "carMinutes": 982
+    },
+    {
+      "from": "san-francisco",
+      "to": "sierra-vista",
+      "km": 1512.1,
+      "carMinutes": 1028
     },
     {
       "from": "san-francisco",
@@ -5152,6 +10570,12 @@
     },
     {
       "from": "san-francisco",
+      "to": "tucson",
+      "km": 1396.7,
+      "carMinutes": 948
+    },
+    {
+      "from": "san-francisco",
       "to": "ukiah",
       "km": 185.5,
       "carMinutes": 147
@@ -5161,6 +10585,18 @@
       "to": "winnemucca",
       "km": 616.1,
       "carMinutes": 424
+    },
+    {
+      "from": "san-francisco",
+      "to": "winslow",
+      "km": 1320.7,
+      "carMinutes": 886
+    },
+    {
+      "from": "san-francisco",
+      "to": "yuma",
+      "km": 1048.8,
+      "carMinutes": 731
     },
     {
       "from": "san-jose",
@@ -5182,9 +10618,21 @@
     },
     {
       "from": "san-jose",
+      "to": "camp-verde",
+      "km": 1214.5,
+      "carMinutes": 835
+    },
+    {
+      "from": "san-jose",
       "to": "carson-city",
       "km": 361.2,
       "carMinutes": 310
+    },
+    {
+      "from": "san-jose",
+      "to": "clifton",
+      "km": 1474.6,
+      "carMinutes": 1050
     },
     {
       "from": "san-jose",
@@ -5212,9 +10660,21 @@
     },
     {
       "from": "san-jose",
+      "to": "flagstaff",
+      "km": 1165.1,
+      "carMinutes": 793
+    },
+    {
+      "from": "san-jose",
       "to": "fresno",
       "km": 236.4,
       "carMinutes": 182
+    },
+    {
+      "from": "san-jose",
+      "to": "grand-canyon-village",
+      "km": 1199.4,
+      "carMinutes": 827
     },
     {
       "from": "san-jose",
@@ -5242,6 +10702,24 @@
     },
     {
       "from": "san-jose",
+      "to": "kayenta",
+      "km": 1398.8,
+      "carMinutes": 962
+    },
+    {
+      "from": "san-jose",
+      "to": "kingman",
+      "km": 927.5,
+      "carMinutes": 641
+    },
+    {
+      "from": "san-jose",
+      "to": "lake-havasu-city",
+      "km": 892.6,
+      "carMinutes": 628
+    },
+    {
+      "from": "san-jose",
       "to": "las-vegas",
       "km": 842.2,
       "carMinutes": 590
@@ -5266,6 +10744,12 @@
     },
     {
       "from": "san-jose",
+      "to": "nogales",
+      "km": 1425.4,
+      "carMinutes": 971
+    },
+    {
+      "from": "san-jose",
       "to": "oakland",
       "km": 70.3,
       "carMinutes": 56
@@ -5275,6 +10759,18 @@
       "to": "oxnard",
       "km": 506.8,
       "carMinutes": 377
+    },
+    {
+      "from": "san-jose",
+      "to": "page",
+      "km": 1279.3,
+      "carMinutes": 907
+    },
+    {
+      "from": "san-jose",
+      "to": "phoenix",
+      "km": 1140.2,
+      "carMinutes": 782
     },
     {
       "from": "san-jose",
@@ -5320,6 +10816,12 @@
     },
     {
       "from": "san-jose",
+      "to": "san-simon",
+      "km": 1518.4,
+      "carMinutes": 1023
+    },
+    {
+      "from": "san-jose",
       "to": "santa-cruz",
       "km": 49.4,
       "carMinutes": 48
@@ -5329,6 +10831,18 @@
       "to": "santa-maria",
       "km": 346,
       "carMinutes": 252
+    },
+    {
+      "from": "san-jose",
+      "to": "show-low",
+      "km": 1381.5,
+      "carMinutes": 940
+    },
+    {
+      "from": "san-jose",
+      "to": "sierra-vista",
+      "km": 1442.6,
+      "carMinutes": 986
     },
     {
       "from": "san-jose",
@@ -5350,6 +10864,12 @@
     },
     {
       "from": "san-jose",
+      "to": "tucson",
+      "km": 1327.2,
+      "carMinutes": 906
+    },
+    {
+      "from": "san-jose",
       "to": "ukiah",
       "km": 263,
       "carMinutes": 200
@@ -5359,6 +10879,312 @@
       "to": "winnemucca",
       "km": 670.1,
       "carMinutes": 462
+    },
+    {
+      "from": "san-jose",
+      "to": "winslow",
+      "km": 1251.1,
+      "carMinutes": 843
+    },
+    {
+      "from": "san-jose",
+      "to": "yuma",
+      "km": 979.2,
+      "carMinutes": 689
+    },
+    {
+      "from": "san-simon",
+      "to": "bakersfield",
+      "km": 1155.5,
+      "carMinutes": 771
+    },
+    {
+      "from": "san-simon",
+      "to": "barstow",
+      "km": 978,
+      "carMinutes": 657
+    },
+    {
+      "from": "san-simon",
+      "to": "blythe",
+      "km": 619.8,
+      "carMinutes": 401
+    },
+    {
+      "from": "san-simon",
+      "to": "camp-verde",
+      "km": 524.2,
+      "carMinutes": 342
+    },
+    {
+      "from": "san-simon",
+      "to": "carson-city",
+      "km": 1528.5,
+      "carMinutes": 1099
+    },
+    {
+      "from": "san-simon",
+      "to": "clifton",
+      "km": 158.3,
+      "carMinutes": 125
+    },
+    {
+      "from": "san-simon",
+      "to": "el-centro",
+      "km": 674.1,
+      "carMinutes": 435
+    },
+    {
+      "from": "san-simon",
+      "to": "elko",
+      "km": 1534.2,
+      "carMinutes": 1094
+    },
+    {
+      "from": "san-simon",
+      "to": "ely",
+      "km": 1233.2,
+      "carMinutes": 887
+    },
+    {
+      "from": "san-simon",
+      "to": "eureka",
+      "km": 2011.4,
+      "carMinutes": 1384
+    },
+    {
+      "from": "san-simon",
+      "to": "flagstaff",
+      "km": 615.3,
+      "carMinutes": 403
+    },
+    {
+      "from": "san-simon",
+      "to": "fresno",
+      "km": 1332.4,
+      "carMinutes": 889
+    },
+    {
+      "from": "san-simon",
+      "to": "grand-canyon-village",
+      "km": 745.5,
+      "carMinutes": 497
+    },
+    {
+      "from": "san-simon",
+      "to": "hilt",
+      "km": 2039.8,
+      "carMinutes": 1370
+    },
+    {
+      "from": "san-simon",
+      "to": "huron",
+      "km": 1285,
+      "carMinutes": 858
+    },
+    {
+      "from": "san-simon",
+      "to": "indio",
+      "km": 777,
+      "carMinutes": 507
+    },
+    {
+      "from": "san-simon",
+      "to": "jackpot",
+      "km": 1561.9,
+      "carMinutes": 1119
+    },
+    {
+      "from": "san-simon",
+      "to": "kayenta",
+      "km": 849,
+      "carMinutes": 572
+    },
+    {
+      "from": "san-simon",
+      "to": "kingman",
+      "km": 679.4,
+      "carMinutes": 475
+    },
+    {
+      "from": "san-simon",
+      "to": "lake-havasu-city",
+      "km": 701,
+      "carMinutes": 468
+    },
+    {
+      "from": "san-simon",
+      "to": "las-vegas",
+      "km": 850,
+      "carMinutes": 603
+    },
+    {
+      "from": "san-simon",
+      "to": "los-angeles",
+      "km": 978.4,
+      "carMinutes": 644
+    },
+    {
+      "from": "san-simon",
+      "to": "modesto",
+      "km": 1480.6,
+      "carMinutes": 997
+    },
+    {
+      "from": "san-simon",
+      "to": "mojave",
+      "km": 1049.8,
+      "carMinutes": 713
+    },
+    {
+      "from": "san-simon",
+      "to": "nogales",
+      "km": 238.5,
+      "carMinutes": 175
+    },
+    {
+      "from": "san-simon",
+      "to": "oakland",
+      "km": 1570.7,
+      "carMinutes": 1050
+    },
+    {
+      "from": "san-simon",
+      "to": "oxnard",
+      "km": 1080.5,
+      "carMinutes": 720
+    },
+    {
+      "from": "san-simon",
+      "to": "page",
+      "km": 825.2,
+      "carMinutes": 559
+    },
+    {
+      "from": "san-simon",
+      "to": "phoenix",
+      "km": 378.2,
+      "carMinutes": 246
+    },
+    {
+      "from": "san-simon",
+      "to": "pioche",
+      "km": 1124.4,
+      "carMinutes": 816
+    },
+    {
+      "from": "san-simon",
+      "to": "primm",
+      "km": 863.7,
+      "carMinutes": 616
+    },
+    {
+      "from": "san-simon",
+      "to": "redding",
+      "km": 1851.8,
+      "carMinutes": 1236
+    },
+    {
+      "from": "san-simon",
+      "to": "reno",
+      "km": 1541.9,
+      "carMinutes": 1111
+    },
+    {
+      "from": "san-simon",
+      "to": "sacramento",
+      "km": 1594,
+      "carMinutes": 1065
+    },
+    {
+      "from": "san-simon",
+      "to": "san-diego",
+      "km": 853.1,
+      "carMinutes": 556
+    },
+    {
+      "from": "san-simon",
+      "to": "san-francisco",
+      "km": 1590.4,
+      "carMinutes": 1066
+    },
+    {
+      "from": "san-simon",
+      "to": "san-jose",
+      "km": 1519.2,
+      "carMinutes": 1022
+    },
+    {
+      "from": "san-simon",
+      "to": "santa-cruz",
+      "km": 1528.1,
+      "carMinutes": 1032
+    },
+    {
+      "from": "san-simon",
+      "to": "santa-maria",
+      "km": 1233.8,
+      "carMinutes": 838
+    },
+    {
+      "from": "san-simon",
+      "to": "show-low",
+      "km": 353.7,
+      "carMinutes": 269
+    },
+    {
+      "from": "san-simon",
+      "to": "sierra-vista",
+      "km": 177,
+      "carMinutes": 124
+    },
+    {
+      "from": "san-simon",
+      "to": "stockton",
+      "km": 1518.4,
+      "carMinutes": 1012
+    },
+    {
+      "from": "san-simon",
+      "to": "tonopah",
+      "km": 1187.2,
+      "carMinutes": 837
+    },
+    {
+      "from": "san-simon",
+      "to": "truckee",
+      "km": 1597.7,
+      "carMinutes": 1152
+    },
+    {
+      "from": "san-simon",
+      "to": "tucson",
+      "km": 195.1,
+      "carMinutes": 129
+    },
+    {
+      "from": "san-simon",
+      "to": "ukiah",
+      "km": 1760.2,
+      "carMinutes": 1190
+    },
+    {
+      "from": "san-simon",
+      "to": "winnemucca",
+      "km": 1603.4,
+      "carMinutes": 1124
+    },
+    {
+      "from": "san-simon",
+      "to": "winslow",
+      "km": 484.6,
+      "carMinutes": 367
+    },
+    {
+      "from": "san-simon",
+      "to": "yuma",
+      "km": 577.7,
+      "carMinutes": 370
     },
     {
       "from": "santa-cruz",
@@ -5380,9 +11206,21 @@
     },
     {
       "from": "santa-cruz",
+      "to": "camp-verde",
+      "km": 1223.3,
+      "carMinutes": 845
+    },
+    {
+      "from": "santa-cruz",
       "to": "carson-city",
       "km": 402.9,
       "carMinutes": 342
+    },
+    {
+      "from": "santa-cruz",
+      "to": "clifton",
+      "km": 1483.5,
+      "carMinutes": 1061
     },
     {
       "from": "santa-cruz",
@@ -5410,9 +11248,21 @@
     },
     {
       "from": "santa-cruz",
+      "to": "flagstaff",
+      "km": 1174,
+      "carMinutes": 803
+    },
+    {
+      "from": "santa-cruz",
       "to": "fresno",
       "km": 245.3,
       "carMinutes": 192
+    },
+    {
+      "from": "santa-cruz",
+      "to": "grand-canyon-village",
+      "km": 1208.2,
+      "carMinutes": 837
     },
     {
       "from": "santa-cruz",
@@ -5440,6 +11290,24 @@
     },
     {
       "from": "santa-cruz",
+      "to": "kayenta",
+      "km": 1407.7,
+      "carMinutes": 973
+    },
+    {
+      "from": "santa-cruz",
+      "to": "kingman",
+      "km": 936.3,
+      "carMinutes": 652
+    },
+    {
+      "from": "santa-cruz",
+      "to": "lake-havasu-city",
+      "km": 901.4,
+      "carMinutes": 639
+    },
+    {
+      "from": "santa-cruz",
       "to": "las-vegas",
       "km": 851.1,
       "carMinutes": 600
@@ -5464,6 +11332,12 @@
     },
     {
       "from": "santa-cruz",
+      "to": "nogales",
+      "km": 1434.3,
+      "carMinutes": 981
+    },
+    {
+      "from": "santa-cruz",
       "to": "oakland",
       "km": 111.7,
       "carMinutes": 88
@@ -5473,6 +11347,18 @@
       "to": "oxnard",
       "km": 472.8,
       "carMinutes": 357
+    },
+    {
+      "from": "santa-cruz",
+      "to": "page",
+      "km": 1288.1,
+      "carMinutes": 917
+    },
+    {
+      "from": "santa-cruz",
+      "to": "phoenix",
+      "km": 1149.1,
+      "carMinutes": 792
     },
     {
       "from": "santa-cruz",
@@ -5524,9 +11410,27 @@
     },
     {
       "from": "santa-cruz",
+      "to": "san-simon",
+      "km": 1527.2,
+      "carMinutes": 1034
+    },
+    {
+      "from": "santa-cruz",
       "to": "santa-maria",
       "km": 312.1,
       "carMinutes": 231
+    },
+    {
+      "from": "santa-cruz",
+      "to": "show-low",
+      "km": 1390.3,
+      "carMinutes": 950
+    },
+    {
+      "from": "santa-cruz",
+      "to": "sierra-vista",
+      "km": 1451.5,
+      "carMinutes": 996
     },
     {
       "from": "santa-cruz",
@@ -5548,6 +11452,12 @@
     },
     {
       "from": "santa-cruz",
+      "to": "tucson",
+      "km": 1336,
+      "carMinutes": 916
+    },
+    {
+      "from": "santa-cruz",
       "to": "ukiah",
       "km": 304.3,
       "carMinutes": 231
@@ -5557,6 +11467,18 @@
       "to": "winnemucca",
       "km": 711.8,
       "carMinutes": 494
+    },
+    {
+      "from": "santa-cruz",
+      "to": "winslow",
+      "km": 1260,
+      "carMinutes": 854
+    },
+    {
+      "from": "santa-cruz",
+      "to": "yuma",
+      "km": 988.1,
+      "carMinutes": 699
     },
     {
       "from": "santa-maria",
@@ -5578,9 +11500,21 @@
     },
     {
       "from": "santa-maria",
+      "to": "camp-verde",
+      "km": 982.8,
+      "carMinutes": 681
+    },
+    {
+      "from": "santa-maria",
       "to": "carson-city",
       "km": 681.6,
       "carMinutes": 532
+    },
+    {
+      "from": "santa-maria",
+      "to": "clifton",
+      "km": 1188,
+      "carMinutes": 864
     },
     {
       "from": "santa-maria",
@@ -5608,9 +11542,21 @@
     },
     {
       "from": "santa-maria",
+      "to": "flagstaff",
+      "km": 963.8,
+      "carMinutes": 666
+    },
+    {
+      "from": "santa-maria",
       "to": "fresno",
       "km": 279.3,
       "carMinutes": 217
+    },
+    {
+      "from": "santa-maria",
+      "to": "grand-canyon-village",
+      "km": 998,
+      "carMinutes": 700
     },
     {
       "from": "santa-maria",
@@ -5638,6 +11584,24 @@
     },
     {
       "from": "santa-maria",
+      "to": "kayenta",
+      "km": 1197.5,
+      "carMinutes": 836
+    },
+    {
+      "from": "santa-maria",
+      "to": "kingman",
+      "km": 726.1,
+      "carMinutes": 515
+    },
+    {
+      "from": "santa-maria",
+      "to": "lake-havasu-city",
+      "km": 691.2,
+      "carMinutes": 502
+    },
+    {
+      "from": "santa-maria",
       "to": "las-vegas",
       "km": 640.9,
       "carMinutes": 464
@@ -5662,6 +11626,12 @@
     },
     {
       "from": "santa-maria",
+      "to": "nogales",
+      "km": 1138.8,
+      "carMinutes": 785
+    },
+    {
+      "from": "santa-maria",
       "to": "oakland",
       "km": 410.1,
       "carMinutes": 298
@@ -5671,6 +11641,18 @@
       "to": "oxnard",
       "km": 163.9,
       "carMinutes": 130
+    },
+    {
+      "from": "santa-maria",
+      "to": "page",
+      "km": 1077.9,
+      "carMinutes": 781
+    },
+    {
+      "from": "santa-maria",
+      "to": "phoenix",
+      "km": 853.5,
+      "carMinutes": 596
     },
     {
       "from": "santa-maria",
@@ -5722,9 +11704,27 @@
     },
     {
       "from": "santa-maria",
+      "to": "san-simon",
+      "km": 1231.7,
+      "carMinutes": 837
+    },
+    {
+      "from": "santa-maria",
       "to": "santa-cruz",
       "km": 312.7,
       "carMinutes": 232
+    },
+    {
+      "from": "santa-maria",
+      "to": "show-low",
+      "km": 1132.9,
+      "carMinutes": 808
+    },
+    {
+      "from": "santa-maria",
+      "to": "sierra-vista",
+      "km": 1155.9,
+      "carMinutes": 800
     },
     {
       "from": "santa-maria",
@@ -5746,6 +11746,12 @@
     },
     {
       "from": "santa-maria",
+      "to": "tucson",
+      "km": 1040.5,
+      "carMinutes": 720
+    },
+    {
+      "from": "santa-maria",
       "to": "ukiah",
       "km": 602.8,
       "carMinutes": 441
@@ -5755,6 +11761,606 @@
       "to": "winnemucca",
       "km": 996.7,
       "carMinutes": 689
+    },
+    {
+      "from": "santa-maria",
+      "to": "winslow",
+      "km": 1049.8,
+      "carMinutes": 717
+    },
+    {
+      "from": "santa-maria",
+      "to": "yuma",
+      "km": 692.6,
+      "carMinutes": 503
+    },
+    {
+      "from": "show-low",
+      "to": "bakersfield",
+      "km": 997.7,
+      "carMinutes": 671
+    },
+    {
+      "from": "show-low",
+      "to": "barstow",
+      "km": 790.4,
+      "carMinutes": 522
+    },
+    {
+      "from": "show-low",
+      "to": "blythe",
+      "km": 520.8,
+      "carMinutes": 371
+    },
+    {
+      "from": "show-low",
+      "to": "camp-verde",
+      "km": 233.9,
+      "carMinutes": 199
+    },
+    {
+      "from": "show-low",
+      "to": "carson-city",
+      "km": 1305.5,
+      "carMinutes": 929
+    },
+    {
+      "from": "show-low",
+      "to": "clifton",
+      "km": 327.8,
+      "carMinutes": 254
+    },
+    {
+      "from": "show-low",
+      "to": "el-centro",
+      "km": 657.4,
+      "carMinutes": 472
+    },
+    {
+      "from": "show-low",
+      "to": "elko",
+      "km": 1311.2,
+      "carMinutes": 924
+    },
+    {
+      "from": "show-low",
+      "to": "ely",
+      "km": 1010.2,
+      "carMinutes": 716
+    },
+    {
+      "from": "show-low",
+      "to": "eureka",
+      "km": 1872.8,
+      "carMinutes": 1302
+    },
+    {
+      "from": "show-low",
+      "to": "flagstaff",
+      "km": 224.8,
+      "carMinutes": 162
+    },
+    {
+      "from": "show-low",
+      "to": "fresno",
+      "km": 1178.1,
+      "carMinutes": 792
+    },
+    {
+      "from": "show-low",
+      "to": "grand-canyon-village",
+      "km": 363.5,
+      "carMinutes": 263
+    },
+    {
+      "from": "show-low",
+      "to": "hilt",
+      "km": 1757.1,
+      "carMinutes": 1262
+    },
+    {
+      "from": "show-low",
+      "to": "huron",
+      "km": 1146.4,
+      "carMinutes": 776
+    },
+    {
+      "from": "show-low",
+      "to": "indio",
+      "km": 678,
+      "carMinutes": 477
+    },
+    {
+      "from": "show-low",
+      "to": "jackpot",
+      "km": 1338.9,
+      "carMinutes": 949
+    },
+    {
+      "from": "show-low",
+      "to": "kayenta",
+      "km": 361.6,
+      "carMinutes": 314
+    },
+    {
+      "from": "show-low",
+      "to": "kingman",
+      "km": 456.4,
+      "carMinutes": 304
+    },
+    {
+      "from": "show-low",
+      "to": "lake-havasu-city",
+      "km": 557.8,
+      "carMinutes": 376
+    },
+    {
+      "from": "show-low",
+      "to": "las-vegas",
+      "km": 627,
+      "carMinutes": 433
+    },
+    {
+      "from": "show-low",
+      "to": "los-angeles",
+      "km": 879.4,
+      "carMinutes": 615
+    },
+    {
+      "from": "show-low",
+      "to": "modesto",
+      "km": 1326.2,
+      "carMinutes": 900
+    },
+    {
+      "from": "show-low",
+      "to": "mojave",
+      "km": 912.8,
+      "carMinutes": 617
+    },
+    {
+      "from": "show-low",
+      "to": "nogales",
+      "km": 405.2,
+      "carMinutes": 319
+    },
+    {
+      "from": "show-low",
+      "to": "oakland",
+      "km": 1432.1,
+      "carMinutes": 968
+    },
+    {
+      "from": "show-low",
+      "to": "oxnard",
+      "km": 981.5,
+      "carMinutes": 691
+    },
+    {
+      "from": "show-low",
+      "to": "page",
+      "km": 425.6,
+      "carMinutes": 312
+    },
+    {
+      "from": "show-low",
+      "to": "phoenix",
+      "km": 279.2,
+      "carMinutes": 217
+    },
+    {
+      "from": "show-low",
+      "to": "pioche",
+      "km": 812.6,
+      "carMinutes": 611
+    },
+    {
+      "from": "show-low",
+      "to": "primm",
+      "km": 640.8,
+      "carMinutes": 446
+    },
+    {
+      "from": "show-low",
+      "to": "redding",
+      "km": 1713.2,
+      "carMinutes": 1155
+    },
+    {
+      "from": "show-low",
+      "to": "reno",
+      "km": 1318.9,
+      "carMinutes": 941
+    },
+    {
+      "from": "show-low",
+      "to": "sacramento",
+      "km": 1441.8,
+      "carMinutes": 981
+    },
+    {
+      "from": "show-low",
+      "to": "san-diego",
+      "km": 836.4,
+      "carMinutes": 593
+    },
+    {
+      "from": "show-low",
+      "to": "san-francisco",
+      "km": 1451.8,
+      "carMinutes": 985
+    },
+    {
+      "from": "show-low",
+      "to": "san-jose",
+      "km": 1380.6,
+      "carMinutes": 940
+    },
+    {
+      "from": "show-low",
+      "to": "san-simon",
+      "km": 353.9,
+      "carMinutes": 269
+    },
+    {
+      "from": "show-low",
+      "to": "santa-cruz",
+      "km": 1389.5,
+      "carMinutes": 951
+    },
+    {
+      "from": "show-low",
+      "to": "santa-maria",
+      "km": 1134.8,
+      "carMinutes": 809
+    },
+    {
+      "from": "show-low",
+      "to": "sierra-vista",
+      "km": 422.3,
+      "carMinutes": 334
+    },
+    {
+      "from": "show-low",
+      "to": "stockton",
+      "km": 1372.5,
+      "carMinutes": 930
+    },
+    {
+      "from": "show-low",
+      "to": "tonopah",
+      "km": 964.2,
+      "carMinutes": 667
+    },
+    {
+      "from": "show-low",
+      "to": "truckee",
+      "km": 1374.7,
+      "carMinutes": 982
+    },
+    {
+      "from": "show-low",
+      "to": "tucson",
+      "km": 304.4,
+      "carMinutes": 251
+    },
+    {
+      "from": "show-low",
+      "to": "ukiah",
+      "km": 1621.5,
+      "carMinutes": 1108
+    },
+    {
+      "from": "show-low",
+      "to": "winnemucca",
+      "km": 1380.5,
+      "carMinutes": 954
+    },
+    {
+      "from": "show-low",
+      "to": "winslow",
+      "km": 132,
+      "carMinutes": 101
+    },
+    {
+      "from": "show-low",
+      "to": "yuma",
+      "km": 561,
+      "carMinutes": 407
+    },
+    {
+      "from": "sierra-vista",
+      "to": "bakersfield",
+      "km": 1079.9,
+      "carMinutes": 734
+    },
+    {
+      "from": "sierra-vista",
+      "to": "barstow",
+      "km": 902.5,
+      "carMinutes": 620
+    },
+    {
+      "from": "sierra-vista",
+      "to": "blythe",
+      "km": 544.3,
+      "carMinutes": 364
+    },
+    {
+      "from": "sierra-vista",
+      "to": "camp-verde",
+      "km": 448.7,
+      "carMinutes": 306
+    },
+    {
+      "from": "sierra-vista",
+      "to": "carson-city",
+      "km": 1453,
+      "carMinutes": 1063
+    },
+    {
+      "from": "sierra-vista",
+      "to": "clifton",
+      "km": 252.1,
+      "carMinutes": 192
+    },
+    {
+      "from": "sierra-vista",
+      "to": "el-centro",
+      "km": 598.5,
+      "carMinutes": 398
+    },
+    {
+      "from": "sierra-vista",
+      "to": "elko",
+      "km": 1458.7,
+      "carMinutes": 1057
+    },
+    {
+      "from": "sierra-vista",
+      "to": "ely",
+      "km": 1157.6,
+      "carMinutes": 850
+    },
+    {
+      "from": "sierra-vista",
+      "to": "eureka",
+      "km": 1935.9,
+      "carMinutes": 1347
+    },
+    {
+      "from": "sierra-vista",
+      "to": "flagstaff",
+      "km": 539.8,
+      "carMinutes": 366
+    },
+    {
+      "from": "sierra-vista",
+      "to": "fresno",
+      "km": 1256.9,
+      "carMinutes": 853
+    },
+    {
+      "from": "sierra-vista",
+      "to": "grand-canyon-village",
+      "km": 669.9,
+      "carMinutes": 460
+    },
+    {
+      "from": "sierra-vista",
+      "to": "hilt",
+      "km": 1964.3,
+      "carMinutes": 1334
+    },
+    {
+      "from": "sierra-vista",
+      "to": "huron",
+      "km": 1209.4,
+      "carMinutes": 822
+    },
+    {
+      "from": "sierra-vista",
+      "to": "indio",
+      "km": 701.5,
+      "carMinutes": 470
+    },
+    {
+      "from": "sierra-vista",
+      "to": "jackpot",
+      "km": 1486.3,
+      "carMinutes": 1082
+    },
+    {
+      "from": "sierra-vista",
+      "to": "kayenta",
+      "km": 773.5,
+      "carMinutes": 535
+    },
+    {
+      "from": "sierra-vista",
+      "to": "kingman",
+      "km": 603.8,
+      "carMinutes": 438
+    },
+    {
+      "from": "sierra-vista",
+      "to": "lake-havasu-city",
+      "km": 625.4,
+      "carMinutes": 431
+    },
+    {
+      "from": "sierra-vista",
+      "to": "las-vegas",
+      "km": 774.4,
+      "carMinutes": 566
+    },
+    {
+      "from": "sierra-vista",
+      "to": "los-angeles",
+      "km": 902.9,
+      "carMinutes": 607
+    },
+    {
+      "from": "sierra-vista",
+      "to": "modesto",
+      "km": 1405,
+      "carMinutes": 960
+    },
+    {
+      "from": "sierra-vista",
+      "to": "mojave",
+      "km": 974.2,
+      "carMinutes": 677
+    },
+    {
+      "from": "sierra-vista",
+      "to": "nogales",
+      "km": 102.2,
+      "carMinutes": 91
+    },
+    {
+      "from": "sierra-vista",
+      "to": "oakland",
+      "km": 1495.2,
+      "carMinutes": 1013
+    },
+    {
+      "from": "sierra-vista",
+      "to": "oxnard",
+      "km": 1004.9,
+      "carMinutes": 683
+    },
+    {
+      "from": "sierra-vista",
+      "to": "page",
+      "km": 749.6,
+      "carMinutes": 522
+    },
+    {
+      "from": "sierra-vista",
+      "to": "phoenix",
+      "km": 302.7,
+      "carMinutes": 209
+    },
+    {
+      "from": "sierra-vista",
+      "to": "pioche",
+      "km": 1048.8,
+      "carMinutes": 779
+    },
+    {
+      "from": "sierra-vista",
+      "to": "primm",
+      "km": 788.2,
+      "carMinutes": 580
+    },
+    {
+      "from": "sierra-vista",
+      "to": "redding",
+      "km": 1776.3,
+      "carMinutes": 1200
+    },
+    {
+      "from": "sierra-vista",
+      "to": "reno",
+      "km": 1466.4,
+      "carMinutes": 1074
+    },
+    {
+      "from": "sierra-vista",
+      "to": "sacramento",
+      "km": 1518.4,
+      "carMinutes": 1028
+    },
+    {
+      "from": "sierra-vista",
+      "to": "san-diego",
+      "km": 777.6,
+      "carMinutes": 519
+    },
+    {
+      "from": "sierra-vista",
+      "to": "san-francisco",
+      "km": 1514.8,
+      "carMinutes": 1030
+    },
+    {
+      "from": "sierra-vista",
+      "to": "san-jose",
+      "km": 1443.6,
+      "carMinutes": 985
+    },
+    {
+      "from": "sierra-vista",
+      "to": "san-simon",
+      "km": 176.9,
+      "carMinutes": 124
+    },
+    {
+      "from": "sierra-vista",
+      "to": "santa-cruz",
+      "km": 1452.6,
+      "carMinutes": 996
+    },
+    {
+      "from": "sierra-vista",
+      "to": "santa-maria",
+      "km": 1158.3,
+      "carMinutes": 802
+    },
+    {
+      "from": "sierra-vista",
+      "to": "show-low",
+      "km": 422.3,
+      "carMinutes": 335
+    },
+    {
+      "from": "sierra-vista",
+      "to": "stockton",
+      "km": 1442.9,
+      "carMinutes": 975
+    },
+    {
+      "from": "sierra-vista",
+      "to": "tonopah",
+      "km": 1111.6,
+      "carMinutes": 800
+    },
+    {
+      "from": "sierra-vista",
+      "to": "truckee",
+      "km": 1522.2,
+      "carMinutes": 1115
+    },
+    {
+      "from": "sierra-vista",
+      "to": "tucson",
+      "km": 119.6,
+      "carMinutes": 92
+    },
+    {
+      "from": "sierra-vista",
+      "to": "ukiah",
+      "km": 1684.6,
+      "carMinutes": 1153
+    },
+    {
+      "from": "sierra-vista",
+      "to": "winnemucca",
+      "km": 1527.9,
+      "carMinutes": 1087
+    },
+    {
+      "from": "sierra-vista",
+      "to": "winslow",
+      "km": 625.8,
+      "carMinutes": 416
+    },
+    {
+      "from": "sierra-vista",
+      "to": "yuma",
+      "km": 502.1,
+      "carMinutes": 333
     },
     {
       "from": "stockton",
@@ -5776,9 +12382,21 @@
     },
     {
       "from": "stockton",
+      "to": "camp-verde",
+      "km": 1213.2,
+      "carMinutes": 823
+    },
+    {
+      "from": "stockton",
       "to": "carson-city",
       "km": 237.9,
       "carMinutes": 216
+    },
+    {
+      "from": "stockton",
+      "to": "clifton",
+      "km": 1473.4,
+      "carMinutes": 1039
     },
     {
       "from": "stockton",
@@ -5806,9 +12424,21 @@
     },
     {
       "from": "stockton",
+      "to": "flagstaff",
+      "km": 1163.9,
+      "carMinutes": 781
+    },
+    {
+      "from": "stockton",
       "to": "fresno",
       "km": 200.1,
       "carMinutes": 147
+    },
+    {
+      "from": "stockton",
+      "to": "grand-canyon-village",
+      "km": 1198.2,
+      "carMinutes": 815
     },
     {
       "from": "stockton",
@@ -5832,6 +12462,24 @@
       "from": "stockton",
       "to": "jackpot",
       "km": 941.1,
+      "carMinutes": 617
+    },
+    {
+      "from": "stockton",
+      "to": "kayenta",
+      "km": 1397.6,
+      "carMinutes": 951
+    },
+    {
+      "from": "stockton",
+      "to": "kingman",
+      "km": 926.2,
+      "carMinutes": 630
+    },
+    {
+      "from": "stockton",
+      "to": "lake-havasu-city",
+      "km": 891.3,
       "carMinutes": 617
     },
     {
@@ -5860,6 +12508,12 @@
     },
     {
       "from": "stockton",
+      "to": "nogales",
+      "km": 1424.2,
+      "carMinutes": 959
+    },
+    {
+      "from": "stockton",
       "to": "oakland",
       "km": 114.2,
       "carMinutes": 84
@@ -5869,6 +12523,18 @@
       "to": "oxnard",
       "km": 555.1,
       "carMinutes": 390
+    },
+    {
+      "from": "stockton",
+      "to": "page",
+      "km": 1278,
+      "carMinutes": 895
+    },
+    {
+      "from": "stockton",
+      "to": "phoenix",
+      "km": 1139,
+      "carMinutes": 770
     },
     {
       "from": "stockton",
@@ -5920,6 +12586,12 @@
     },
     {
       "from": "stockton",
+      "to": "san-simon",
+      "km": 1517.1,
+      "carMinutes": 1012
+    },
+    {
+      "from": "stockton",
       "to": "santa-cruz",
       "km": 164.8,
       "carMinutes": 129
@@ -5929,6 +12601,18 @@
       "to": "santa-maria",
       "km": 443.1,
       "carMinutes": 318
+    },
+    {
+      "from": "stockton",
+      "to": "show-low",
+      "km": 1380.2,
+      "carMinutes": 928
+    },
+    {
+      "from": "stockton",
+      "to": "sierra-vista",
+      "km": 1441.4,
+      "carMinutes": 974
     },
     {
       "from": "stockton",
@@ -5944,6 +12628,12 @@
     },
     {
       "from": "stockton",
+      "to": "tucson",
+      "km": 1326,
+      "carMinutes": 894
+    },
+    {
+      "from": "stockton",
       "to": "ukiah",
       "km": 256.2,
       "carMinutes": 201
@@ -5953,6 +12643,18 @@
       "to": "winnemucca",
       "km": 554,
       "carMinutes": 375
+    },
+    {
+      "from": "stockton",
+      "to": "winslow",
+      "km": 1249.9,
+      "carMinutes": 832
+    },
+    {
+      "from": "stockton",
+      "to": "yuma",
+      "km": 978,
+      "carMinutes": 677
     },
     {
       "from": "tonopah",
@@ -5974,9 +12676,21 @@
     },
     {
       "from": "tonopah",
+      "to": "camp-verde",
+      "km": 797.3,
+      "carMinutes": 563
+    },
+    {
+      "from": "tonopah",
       "to": "carson-city",
       "km": 358.5,
       "carMinutes": 269
+    },
+    {
+      "from": "tonopah",
+      "to": "clifton",
+      "km": 1143.6,
+      "carMinutes": 866
     },
     {
       "from": "tonopah",
@@ -6004,9 +12718,21 @@
     },
     {
       "from": "tonopah",
+      "to": "flagstaff",
+      "km": 748,
+      "carMinutes": 521
+    },
+    {
+      "from": "tonopah",
       "to": "fresno",
       "km": 459.8,
       "carMinutes": 433
+    },
+    {
+      "from": "tonopah",
+      "to": "grand-canyon-village",
+      "km": 782.2,
+      "carMinutes": 555
     },
     {
       "from": "tonopah",
@@ -6034,6 +12760,24 @@
     },
     {
       "from": "tonopah",
+      "to": "kayenta",
+      "km": 883.3,
+      "carMinutes": 647
+    },
+    {
+      "from": "tonopah",
+      "to": "kingman",
+      "km": 510.3,
+      "carMinutes": 370
+    },
+    {
+      "from": "tonopah",
+      "to": "lake-havasu-city",
+      "km": 586.6,
+      "carMinutes": 414
+    },
+    {
+      "from": "tonopah",
       "to": "las-vegas",
       "km": 340.5,
       "carMinutes": 240
@@ -6058,6 +12802,12 @@
     },
     {
       "from": "tonopah",
+      "to": "nogales",
+      "km": 1094.4,
+      "carMinutes": 786
+    },
+    {
+      "from": "tonopah",
       "to": "oakland",
       "km": 562.4,
       "carMinutes": 497
@@ -6067,6 +12817,18 @@
       "to": "oxnard",
       "km": 650.6,
       "carMinutes": 480
+    },
+    {
+      "from": "tonopah",
+      "to": "page",
+      "km": 725.2,
+      "carMinutes": 529
+    },
+    {
+      "from": "tonopah",
+      "to": "phoenix",
+      "km": 798.6,
+      "carMinutes": 597
     },
     {
       "from": "tonopah",
@@ -6118,6 +12880,12 @@
     },
     {
       "from": "tonopah",
+      "to": "san-simon",
+      "km": 1187.4,
+      "carMinutes": 839
+    },
+    {
+      "from": "tonopah",
       "to": "santa-cruz",
       "km": 613,
       "carMinutes": 542
@@ -6127,6 +12895,18 @@
       "to": "santa-maria",
       "km": 731.3,
       "carMinutes": 545
+    },
+    {
+      "from": "tonopah",
+      "to": "show-low",
+      "km": 964.3,
+      "carMinutes": 668
+    },
+    {
+      "from": "tonopah",
+      "to": "sierra-vista",
+      "km": 1111.6,
+      "carMinutes": 801
     },
     {
       "from": "tonopah",
@@ -6142,6 +12922,12 @@
     },
     {
       "from": "tonopah",
+      "to": "tucson",
+      "km": 996.2,
+      "carMinutes": 721
+    },
+    {
+      "from": "tonopah",
       "to": "ukiah",
       "km": 781,
       "carMinutes": 600
@@ -6151,6 +12937,18 @@
       "to": "winnemucca",
       "km": 417.8,
       "carMinutes": 289
+    },
+    {
+      "from": "tonopah",
+      "to": "winslow",
+      "km": 833.9,
+      "carMinutes": 572
+    },
+    {
+      "from": "tonopah",
+      "to": "yuma",
+      "km": 810.5,
+      "carMinutes": 587
     },
     {
       "from": "truckee",
@@ -6172,9 +12970,21 @@
     },
     {
       "from": "truckee",
+      "to": "camp-verde",
+      "km": 1209.1,
+      "carMinutes": 880
+    },
+    {
+      "from": "truckee",
       "to": "carson-city",
       "km": 77.7,
       "carMinutes": 82
+    },
+    {
+      "from": "truckee",
+      "to": "clifton",
+      "km": 1555.5,
+      "carMinutes": 1182
     },
     {
       "from": "truckee",
@@ -6202,9 +13012,21 @@
     },
     {
       "from": "truckee",
+      "to": "flagstaff",
+      "km": 1159.8,
+      "carMinutes": 837
+    },
+    {
+      "from": "truckee",
       "to": "fresno",
       "km": 427.4,
       "carMinutes": 312
+    },
+    {
+      "from": "truckee",
+      "to": "grand-canyon-village",
+      "km": 1194,
+      "carMinutes": 872
     },
     {
       "from": "truckee",
@@ -6232,6 +13054,24 @@
     },
     {
       "from": "truckee",
+      "to": "kayenta",
+      "km": 1312.3,
+      "carMinutes": 970
+    },
+    {
+      "from": "truckee",
+      "to": "kingman",
+      "km": 922.1,
+      "carMinutes": 686
+    },
+    {
+      "from": "truckee",
+      "to": "lake-havasu-city",
+      "km": 998.5,
+      "carMinutes": 731
+    },
+    {
+      "from": "truckee",
       "to": "las-vegas",
       "km": 752.3,
       "carMinutes": 557
@@ -6256,6 +13096,12 @@
     },
     {
       "from": "truckee",
+      "to": "nogales",
+      "km": 1506.3,
+      "carMinutes": 1102
+    },
+    {
+      "from": "truckee",
       "to": "oakland",
       "km": 294,
       "carMinutes": 216
@@ -6265,6 +13111,18 @@
       "to": "oxnard",
       "km": 792.3,
       "carMinutes": 561
+    },
+    {
+      "from": "truckee",
+      "to": "page",
+      "km": 1154.3,
+      "carMinutes": 851
+    },
+    {
+      "from": "truckee",
+      "to": "phoenix",
+      "km": 1210.5,
+      "carMinutes": 913
     },
     {
       "from": "truckee",
@@ -6316,6 +13174,12 @@
     },
     {
       "from": "truckee",
+      "to": "san-simon",
+      "km": 1599.2,
+      "carMinutes": 1155
+    },
+    {
+      "from": "truckee",
       "to": "santa-cruz",
       "km": 395.8,
       "carMinutes": 295
@@ -6325,6 +13189,18 @@
       "to": "santa-maria",
       "km": 680.3,
       "carMinutes": 489
+    },
+    {
+      "from": "truckee",
+      "to": "show-low",
+      "km": 1376.1,
+      "carMinutes": 985
+    },
+    {
+      "from": "truckee",
+      "to": "sierra-vista",
+      "km": 1523.5,
+      "carMinutes": 1118
     },
     {
       "from": "truckee",
@@ -6340,6 +13216,12 @@
     },
     {
       "from": "truckee",
+      "to": "tucson",
+      "km": 1408,
+      "carMinutes": 1038
+    },
+    {
+      "from": "truckee",
       "to": "ukiah",
       "km": 335.8,
       "carMinutes": 291
@@ -6349,6 +13231,312 @@
       "to": "winnemucca",
       "km": 323.9,
       "carMinutes": 213
+    },
+    {
+      "from": "truckee",
+      "to": "winslow",
+      "km": 1245.8,
+      "carMinutes": 888
+    },
+    {
+      "from": "truckee",
+      "to": "yuma",
+      "km": 1094.7,
+      "carMinutes": 835
+    },
+    {
+      "from": "tucson",
+      "to": "bakersfield",
+      "km": 963.2,
+      "carMinutes": 653
+    },
+    {
+      "from": "tucson",
+      "to": "barstow",
+      "km": 785.8,
+      "carMinutes": 539
+    },
+    {
+      "from": "tucson",
+      "to": "blythe",
+      "km": 427.5,
+      "carMinutes": 283
+    },
+    {
+      "from": "tucson",
+      "to": "camp-verde",
+      "km": 332,
+      "carMinutes": 225
+    },
+    {
+      "from": "tucson",
+      "to": "carson-city",
+      "km": 1336.2,
+      "carMinutes": 982
+    },
+    {
+      "from": "tucson",
+      "to": "clifton",
+      "km": 270.1,
+      "carMinutes": 198
+    },
+    {
+      "from": "tucson",
+      "to": "el-centro",
+      "km": 481.8,
+      "carMinutes": 317
+    },
+    {
+      "from": "tucson",
+      "to": "elko",
+      "km": 1341.9,
+      "carMinutes": 976
+    },
+    {
+      "from": "tucson",
+      "to": "ely",
+      "km": 1040.9,
+      "carMinutes": 769
+    },
+    {
+      "from": "tucson",
+      "to": "eureka",
+      "km": 1819.1,
+      "carMinutes": 1266
+    },
+    {
+      "from": "tucson",
+      "to": "flagstaff",
+      "km": 423.1,
+      "carMinutes": 285
+    },
+    {
+      "from": "tucson",
+      "to": "fresno",
+      "km": 1140.2,
+      "carMinutes": 772
+    },
+    {
+      "from": "tucson",
+      "to": "grand-canyon-village",
+      "km": 553.2,
+      "carMinutes": 379
+    },
+    {
+      "from": "tucson",
+      "to": "hilt",
+      "km": 1847.5,
+      "carMinutes": 1253
+    },
+    {
+      "from": "tucson",
+      "to": "huron",
+      "km": 1092.7,
+      "carMinutes": 741
+    },
+    {
+      "from": "tucson",
+      "to": "indio",
+      "km": 584.7,
+      "carMinutes": 389
+    },
+    {
+      "from": "tucson",
+      "to": "jackpot",
+      "km": 1369.6,
+      "carMinutes": 1001
+    },
+    {
+      "from": "tucson",
+      "to": "kayenta",
+      "km": 656.7,
+      "carMinutes": 454
+    },
+    {
+      "from": "tucson",
+      "to": "kingman",
+      "km": 487.1,
+      "carMinutes": 357
+    },
+    {
+      "from": "tucson",
+      "to": "lake-havasu-city",
+      "km": 508.7,
+      "carMinutes": 350
+    },
+    {
+      "from": "tucson",
+      "to": "las-vegas",
+      "km": 657.7,
+      "carMinutes": 485
+    },
+    {
+      "from": "tucson",
+      "to": "los-angeles",
+      "km": 786.2,
+      "carMinutes": 526
+    },
+    {
+      "from": "tucson",
+      "to": "modesto",
+      "km": 1288.3,
+      "carMinutes": 879
+    },
+    {
+      "from": "tucson",
+      "to": "mojave",
+      "km": 857.5,
+      "carMinutes": 595
+    },
+    {
+      "from": "tucson",
+      "to": "nogales",
+      "km": 108.9,
+      "carMinutes": 81
+    },
+    {
+      "from": "tucson",
+      "to": "oakland",
+      "km": 1378.5,
+      "carMinutes": 932
+    },
+    {
+      "from": "tucson",
+      "to": "oxnard",
+      "km": 888.2,
+      "carMinutes": 602
+    },
+    {
+      "from": "tucson",
+      "to": "page",
+      "km": 632.9,
+      "carMinutes": 441
+    },
+    {
+      "from": "tucson",
+      "to": "phoenix",
+      "km": 186,
+      "carMinutes": 128
+    },
+    {
+      "from": "tucson",
+      "to": "pioche",
+      "km": 932.1,
+      "carMinutes": 698
+    },
+    {
+      "from": "tucson",
+      "to": "primm",
+      "km": 671.5,
+      "carMinutes": 499
+    },
+    {
+      "from": "tucson",
+      "to": "redding",
+      "km": 1659.5,
+      "carMinutes": 1119
+    },
+    {
+      "from": "tucson",
+      "to": "reno",
+      "km": 1349.6,
+      "carMinutes": 993
+    },
+    {
+      "from": "tucson",
+      "to": "sacramento",
+      "km": 1401.7,
+      "carMinutes": 947
+    },
+    {
+      "from": "tucson",
+      "to": "san-diego",
+      "km": 660.8,
+      "carMinutes": 438
+    },
+    {
+      "from": "tucson",
+      "to": "san-francisco",
+      "km": 1398.1,
+      "carMinutes": 949
+    },
+    {
+      "from": "tucson",
+      "to": "san-jose",
+      "km": 1326.9,
+      "carMinutes": 904
+    },
+    {
+      "from": "tucson",
+      "to": "san-simon",
+      "km": 194.9,
+      "carMinutes": 129
+    },
+    {
+      "from": "tucson",
+      "to": "santa-cruz",
+      "km": 1335.8,
+      "carMinutes": 915
+    },
+    {
+      "from": "tucson",
+      "to": "santa-maria",
+      "km": 1041.5,
+      "carMinutes": 720
+    },
+    {
+      "from": "tucson",
+      "to": "show-low",
+      "km": 304.1,
+      "carMinutes": 250
+    },
+    {
+      "from": "tucson",
+      "to": "sierra-vista",
+      "km": 119.2,
+      "carMinutes": 92
+    },
+    {
+      "from": "tucson",
+      "to": "stockton",
+      "km": 1326.2,
+      "carMinutes": 894
+    },
+    {
+      "from": "tucson",
+      "to": "tonopah",
+      "km": 994.9,
+      "carMinutes": 719
+    },
+    {
+      "from": "tucson",
+      "to": "truckee",
+      "km": 1405.4,
+      "carMinutes": 1034
+    },
+    {
+      "from": "tucson",
+      "to": "ukiah",
+      "km": 1567.9,
+      "carMinutes": 1072
+    },
+    {
+      "from": "tucson",
+      "to": "winnemucca",
+      "km": 1411.2,
+      "carMinutes": 1006
+    },
+    {
+      "from": "tucson",
+      "to": "winslow",
+      "km": 509,
+      "carMinutes": 335
+    },
+    {
+      "from": "tucson",
+      "to": "yuma",
+      "km": 385.4,
+      "carMinutes": 252
     },
     {
       "from": "ukiah",
@@ -6370,9 +13558,21 @@
     },
     {
       "from": "ukiah",
+      "to": "camp-verde",
+      "km": 1456.1,
+      "carMinutes": 1002
+    },
+    {
+      "from": "ukiah",
       "to": "carson-city",
       "km": 446.1,
       "carMinutes": 355
+    },
+    {
+      "from": "ukiah",
+      "to": "clifton",
+      "km": 1716.3,
+      "carMinutes": 1217
     },
     {
       "from": "ukiah",
@@ -6400,9 +13600,21 @@
     },
     {
       "from": "ukiah",
+      "to": "flagstaff",
+      "km": 1406.8,
+      "carMinutes": 960
+    },
+    {
+      "from": "ukiah",
       "to": "fresno",
       "km": 469,
       "carMinutes": 344
+    },
+    {
+      "from": "ukiah",
+      "to": "grand-canyon-village",
+      "km": 1441,
+      "carMinutes": 994
     },
     {
       "from": "ukiah",
@@ -6430,6 +13642,24 @@
     },
     {
       "from": "ukiah",
+      "to": "kayenta",
+      "km": 1640.5,
+      "carMinutes": 1129
+    },
+    {
+      "from": "ukiah",
+      "to": "kingman",
+      "km": 1169.1,
+      "carMinutes": 808
+    },
+    {
+      "from": "ukiah",
+      "to": "lake-havasu-city",
+      "km": 1134.2,
+      "carMinutes": 795
+    },
+    {
+      "from": "ukiah",
       "to": "las-vegas",
       "km": 1083.9,
       "carMinutes": 757
@@ -6454,6 +13684,12 @@
     },
     {
       "from": "ukiah",
+      "to": "nogales",
+      "km": 1667.1,
+      "carMinutes": 1138
+    },
+    {
+      "from": "ukiah",
       "to": "oakland",
       "km": 193.9,
       "carMinutes": 146
@@ -6463,6 +13699,18 @@
       "to": "oxnard",
       "km": 763.9,
       "carMinutes": 566
+    },
+    {
+      "from": "ukiah",
+      "to": "page",
+      "km": 1520.9,
+      "carMinutes": 1074
+    },
+    {
+      "from": "ukiah",
+      "to": "phoenix",
+      "km": 1381.9,
+      "carMinutes": 949
     },
     {
       "from": "ukiah",
@@ -6514,6 +13762,12 @@
     },
     {
       "from": "ukiah",
+      "to": "san-simon",
+      "km": 1760,
+      "carMinutes": 1190
+    },
+    {
+      "from": "ukiah",
       "to": "santa-cruz",
       "km": 304.5,
       "carMinutes": 232
@@ -6523,6 +13777,18 @@
       "to": "santa-maria",
       "km": 603.1,
       "carMinutes": 441
+    },
+    {
+      "from": "ukiah",
+      "to": "show-low",
+      "km": 1623.1,
+      "carMinutes": 1107
+    },
+    {
+      "from": "ukiah",
+      "to": "sierra-vista",
+      "km": 1684.2,
+      "carMinutes": 1153
     },
     {
       "from": "ukiah",
@@ -6544,9 +13810,27 @@
     },
     {
       "from": "ukiah",
+      "to": "tucson",
+      "km": 1568.8,
+      "carMinutes": 1073
+    },
+    {
+      "from": "ukiah",
       "to": "winnemucca",
       "km": 653.2,
       "carMinutes": 492
+    },
+    {
+      "from": "ukiah",
+      "to": "winslow",
+      "km": 1492.8,
+      "carMinutes": 1010
+    },
+    {
+      "from": "ukiah",
+      "to": "yuma",
+      "km": 1220.9,
+      "carMinutes": 856
     },
     {
       "from": "winnemucca",
@@ -6568,9 +13852,21 @@
     },
     {
       "from": "winnemucca",
+      "to": "camp-verde",
+      "km": 1212.8,
+      "carMinutes": 848
+    },
+    {
+      "from": "winnemucca",
       "to": "carson-city",
       "km": 291.2,
       "carMinutes": 198
+    },
+    {
+      "from": "winnemucca",
+      "to": "clifton",
+      "km": 1559.2,
+      "carMinutes": 1151
     },
     {
       "from": "winnemucca",
@@ -6598,9 +13894,21 @@
     },
     {
       "from": "winnemucca",
+      "to": "flagstaff",
+      "km": 1163.5,
+      "carMinutes": 806
+    },
+    {
+      "from": "winnemucca",
       "to": "fresno",
       "km": 743.5,
       "carMinutes": 512
+    },
+    {
+      "from": "winnemucca",
+      "to": "grand-canyon-village",
+      "km": 1197.7,
+      "carMinutes": 840
     },
     {
       "from": "winnemucca",
@@ -6628,6 +13936,24 @@
     },
     {
       "from": "winnemucca",
+      "to": "kayenta",
+      "km": 1224.7,
+      "carMinutes": 830
+    },
+    {
+      "from": "winnemucca",
+      "to": "kingman",
+      "km": 925.8,
+      "carMinutes": 655
+    },
+    {
+      "from": "winnemucca",
+      "to": "lake-havasu-city",
+      "km": 1002.2,
+      "carMinutes": 699
+    },
+    {
+      "from": "winnemucca",
       "to": "las-vegas",
       "km": 756,
       "carMinutes": 525
@@ -6652,6 +13978,12 @@
     },
     {
       "from": "winnemucca",
+      "to": "nogales",
+      "km": 1510,
+      "carMinutes": 1071
+    },
+    {
+      "from": "winnemucca",
       "to": "oakland",
       "km": 610.1,
       "carMinutes": 416
@@ -6661,6 +13993,18 @@
       "to": "oxnard",
       "km": 977.3,
       "carMinutes": 706
+    },
+    {
+      "from": "winnemucca",
+      "to": "page",
+      "km": 1027.9,
+      "carMinutes": 737
+    },
+    {
+      "from": "winnemucca",
+      "to": "phoenix",
+      "km": 1214.2,
+      "carMinutes": 882
     },
     {
       "from": "winnemucca",
@@ -6712,6 +14056,12 @@
     },
     {
       "from": "winnemucca",
+      "to": "san-simon",
+      "km": 1602.9,
+      "carMinutes": 1124
+    },
+    {
+      "from": "winnemucca",
       "to": "santa-cruz",
       "km": 711.9,
       "carMinutes": 495
@@ -6721,6 +14071,18 @@
       "to": "santa-maria",
       "km": 996.4,
       "carMinutes": 689
+    },
+    {
+      "from": "winnemucca",
+      "to": "show-low",
+      "km": 1379.8,
+      "carMinutes": 953
+    },
+    {
+      "from": "winnemucca",
+      "to": "sierra-vista",
+      "km": 1527.1,
+      "carMinutes": 1086
     },
     {
       "from": "winnemucca",
@@ -6742,9 +14104,615 @@
     },
     {
       "from": "winnemucca",
+      "to": "tucson",
+      "km": 1411.7,
+      "carMinutes": 1006
+    },
+    {
+      "from": "winnemucca",
       "to": "ukiah",
       "km": 651.8,
       "carMinutes": 491
+    },
+    {
+      "from": "winnemucca",
+      "to": "winslow",
+      "km": 1249.5,
+      "carMinutes": 857
+    },
+    {
+      "from": "winnemucca",
+      "to": "yuma",
+      "km": 1226.1,
+      "carMinutes": 872
+    },
+    {
+      "from": "winslow",
+      "to": "bakersfield",
+      "km": 866.6,
+      "carMinutes": 574
+    },
+    {
+      "from": "winslow",
+      "to": "barstow",
+      "km": 659.4,
+      "carMinutes": 425
+    },
+    {
+      "from": "winslow",
+      "to": "blythe",
+      "km": 546,
+      "carMinutes": 355
+    },
+    {
+      "from": "winslow",
+      "to": "camp-verde",
+      "km": 182.3,
+      "carMinutes": 121
+    },
+    {
+      "from": "winslow",
+      "to": "carson-city",
+      "km": 1174.4,
+      "carMinutes": 832
+    },
+    {
+      "from": "winslow",
+      "to": "clifton",
+      "km": 458.7,
+      "carMinutes": 352
+    },
+    {
+      "from": "winslow",
+      "to": "el-centro",
+      "km": 697.2,
+      "carMinutes": 469
+    },
+    {
+      "from": "winslow",
+      "to": "elko",
+      "km": 1180.2,
+      "carMinutes": 827
+    },
+    {
+      "from": "winslow",
+      "to": "ely",
+      "km": 879.1,
+      "carMinutes": 620
+    },
+    {
+      "from": "winslow",
+      "to": "eureka",
+      "km": 1741.7,
+      "carMinutes": 1205
+    },
+    {
+      "from": "winslow",
+      "to": "flagstaff",
+      "km": 93.7,
+      "carMinutes": 65
+    },
+    {
+      "from": "winslow",
+      "to": "fresno",
+      "km": 1047,
+      "carMinutes": 695
+    },
+    {
+      "from": "winslow",
+      "to": "grand-canyon-village",
+      "km": 232.5,
+      "carMinutes": 166
+    },
+    {
+      "from": "winslow",
+      "to": "hilt",
+      "km": 1626,
+      "carMinutes": 1165
+    },
+    {
+      "from": "winslow",
+      "to": "huron",
+      "km": 1015.3,
+      "carMinutes": 680
+    },
+    {
+      "from": "winslow",
+      "to": "indio",
+      "km": 680.8,
+      "carMinutes": 452
+    },
+    {
+      "from": "winslow",
+      "to": "jackpot",
+      "km": 1207.8,
+      "carMinutes": 852
+    },
+    {
+      "from": "winslow",
+      "to": "kayenta",
+      "km": 243.2,
+      "carMinutes": 226
+    },
+    {
+      "from": "winslow",
+      "to": "kingman",
+      "km": 325.3,
+      "carMinutes": 208
+    },
+    {
+      "from": "winslow",
+      "to": "lake-havasu-city",
+      "km": 426.7,
+      "carMinutes": 279
+    },
+    {
+      "from": "winslow",
+      "to": "las-vegas",
+      "km": 495.9,
+      "carMinutes": 336
+    },
+    {
+      "from": "winslow",
+      "to": "los-angeles",
+      "km": 842,
+      "carMinutes": 551
+    },
+    {
+      "from": "winslow",
+      "to": "modesto",
+      "km": 1195.2,
+      "carMinutes": 803
+    },
+    {
+      "from": "winslow",
+      "to": "mojave",
+      "km": 781.8,
+      "carMinutes": 520
+    },
+    {
+      "from": "winslow",
+      "to": "nogales",
+      "km": 607,
+      "carMinutes": 401
+    },
+    {
+      "from": "winslow",
+      "to": "oakland",
+      "km": 1301,
+      "carMinutes": 871
+    },
+    {
+      "from": "winslow",
+      "to": "oxnard",
+      "km": 932.8,
+      "carMinutes": 619
+    },
+    {
+      "from": "winslow",
+      "to": "page",
+      "km": 294.6,
+      "carMinutes": 215
+    },
+    {
+      "from": "winslow",
+      "to": "phoenix",
+      "km": 321.9,
+      "carMinutes": 213
+    },
+    {
+      "from": "winslow",
+      "to": "pioche",
+      "km": 681.6,
+      "carMinutes": 514
+    },
+    {
+      "from": "winslow",
+      "to": "primm",
+      "km": 509.7,
+      "carMinutes": 349
+    },
+    {
+      "from": "winslow",
+      "to": "redding",
+      "km": 1582.1,
+      "carMinutes": 1058
+    },
+    {
+      "from": "winslow",
+      "to": "reno",
+      "km": 1187.8,
+      "carMinutes": 844
+    },
+    {
+      "from": "winslow",
+      "to": "sacramento",
+      "km": 1310.8,
+      "carMinutes": 884
+    },
+    {
+      "from": "winslow",
+      "to": "san-diego",
+      "km": 876.2,
+      "carMinutes": 590
+    },
+    {
+      "from": "winslow",
+      "to": "san-francisco",
+      "km": 1320.7,
+      "carMinutes": 888
+    },
+    {
+      "from": "winslow",
+      "to": "san-jose",
+      "km": 1249.5,
+      "carMinutes": 844
+    },
+    {
+      "from": "winslow",
+      "to": "san-simon",
+      "km": 484.7,
+      "carMinutes": 367
+    },
+    {
+      "from": "winslow",
+      "to": "santa-cruz",
+      "km": 1258.4,
+      "carMinutes": 854
+    },
+    {
+      "from": "winslow",
+      "to": "santa-maria",
+      "km": 1047.7,
+      "carMinutes": 717
+    },
+    {
+      "from": "winslow",
+      "to": "show-low",
+      "km": 131.9,
+      "carMinutes": 101
+    },
+    {
+      "from": "winslow",
+      "to": "sierra-vista",
+      "km": 624.1,
+      "carMinutes": 417
+    },
+    {
+      "from": "winslow",
+      "to": "stockton",
+      "km": 1241.4,
+      "carMinutes": 833
+    },
+    {
+      "from": "winslow",
+      "to": "tonopah",
+      "km": 833.1,
+      "carMinutes": 570
+    },
+    {
+      "from": "winslow",
+      "to": "truckee",
+      "km": 1243.6,
+      "carMinutes": 885
+    },
+    {
+      "from": "winslow",
+      "to": "tucson",
+      "km": 508.7,
+      "carMinutes": 336
+    },
+    {
+      "from": "winslow",
+      "to": "ukiah",
+      "km": 1490.5,
+      "carMinutes": 1011
+    },
+    {
+      "from": "winslow",
+      "to": "winnemucca",
+      "km": 1249.4,
+      "carMinutes": 857
+    },
+    {
+      "from": "winslow",
+      "to": "yuma",
+      "km": 600.8,
+      "carMinutes": 405
+    },
+    {
+      "from": "yuma",
+      "to": "bakersfield",
+      "km": 616.2,
+      "carMinutes": 436
+    },
+    {
+      "from": "yuma",
+      "to": "barstow",
+      "km": 464.4,
+      "carMinutes": 324
+    },
+    {
+      "from": "yuma",
+      "to": "blythe",
+      "km": 143.7,
+      "carMinutes": 121
+    },
+    {
+      "from": "yuma",
+      "to": "camp-verde",
+      "km": 425,
+      "carMinutes": 293
+    },
+    {
+      "from": "yuma",
+      "to": "carson-city",
+      "km": 1026.9,
+      "carMinutes": 768
+    },
+    {
+      "from": "yuma",
+      "to": "clifton",
+      "km": 652.5,
+      "carMinutes": 439
+    },
+    {
+      "from": "yuma",
+      "to": "el-centro",
+      "km": 99.7,
+      "carMinutes": 71
+    },
+    {
+      "from": "yuma",
+      "to": "elko",
+      "km": 1158,
+      "carMinutes": 844
+    },
+    {
+      "from": "yuma",
+      "to": "ely",
+      "km": 856.9,
+      "carMinutes": 636
+    },
+    {
+      "from": "yuma",
+      "to": "eureka",
+      "km": 1472.1,
+      "carMinutes": 1049
+    },
+    {
+      "from": "yuma",
+      "to": "flagstaff",
+      "km": 516.1,
+      "carMinutes": 353
+    },
+    {
+      "from": "yuma",
+      "to": "fresno",
+      "km": 793.2,
+      "carMinutes": 555
+    },
+    {
+      "from": "yuma",
+      "to": "grand-canyon-village",
+      "km": 559.6,
+      "carMinutes": 440
+    },
+    {
+      "from": "yuma",
+      "to": "hilt",
+      "km": 1500.5,
+      "carMinutes": 1036
+    },
+    {
+      "from": "yuma",
+      "to": "huron",
+      "km": 745.7,
+      "carMinutes": 524
+    },
+    {
+      "from": "yuma",
+      "to": "indio",
+      "km": 237.7,
+      "carMinutes": 172
+    },
+    {
+      "from": "yuma",
+      "to": "jackpot",
+      "km": 1185.6,
+      "carMinutes": 868
+    },
+    {
+      "from": "yuma",
+      "to": "kayenta",
+      "km": 749.8,
+      "carMinutes": 522
+    },
+    {
+      "from": "yuma",
+      "to": "kingman",
+      "km": 348.9,
+      "carMinutes": 260
+    },
+    {
+      "from": "yuma",
+      "to": "lake-havasu-city",
+      "km": 248.3,
+      "carMinutes": 193
+    },
+    {
+      "from": "yuma",
+      "to": "las-vegas",
+      "km": 473.7,
+      "carMinutes": 353
+    },
+    {
+      "from": "yuma",
+      "to": "los-angeles",
+      "km": 439.1,
+      "carMinutes": 310
+    },
+    {
+      "from": "yuma",
+      "to": "modesto",
+      "km": 941.3,
+      "carMinutes": 663
+    },
+    {
+      "from": "yuma",
+      "to": "mojave",
+      "km": 510.5,
+      "carMinutes": 379
+    },
+    {
+      "from": "yuma",
+      "to": "nogales",
+      "km": 484.4,
+      "carMinutes": 317
+    },
+    {
+      "from": "yuma",
+      "to": "oakland",
+      "km": 1031.4,
+      "carMinutes": 715
+    },
+    {
+      "from": "yuma",
+      "to": "oxnard",
+      "km": 541.2,
+      "carMinutes": 386
+    },
+    {
+      "from": "yuma",
+      "to": "page",
+      "km": 725.9,
+      "carMinutes": 509
+    },
+    {
+      "from": "yuma",
+      "to": "phoenix",
+      "km": 295.7,
+      "carMinutes": 208
+    },
+    {
+      "from": "yuma",
+      "to": "pioche",
+      "km": 748.1,
+      "carMinutes": 565
+    },
+    {
+      "from": "yuma",
+      "to": "primm",
+      "km": 446.3,
+      "carMinutes": 343
+    },
+    {
+      "from": "yuma",
+      "to": "redding",
+      "km": 1312.5,
+      "carMinutes": 902
+    },
+    {
+      "from": "yuma",
+      "to": "reno",
+      "km": 1078.5,
+      "carMinutes": 804
+    },
+    {
+      "from": "yuma",
+      "to": "sacramento",
+      "km": 1054.7,
+      "carMinutes": 730
+    },
+    {
+      "from": "yuma",
+      "to": "san-diego",
+      "km": 278.7,
+      "carMinutes": 192
+    },
+    {
+      "from": "yuma",
+      "to": "san-francisco",
+      "km": 1051.1,
+      "carMinutes": 732
+    },
+    {
+      "from": "yuma",
+      "to": "san-jose",
+      "km": 979.9,
+      "carMinutes": 688
+    },
+    {
+      "from": "yuma",
+      "to": "san-simon",
+      "km": 577.3,
+      "carMinutes": 370
+    },
+    {
+      "from": "yuma",
+      "to": "santa-cruz",
+      "km": 988.8,
+      "carMinutes": 698
+    },
+    {
+      "from": "yuma",
+      "to": "santa-maria",
+      "km": 694.5,
+      "carMinutes": 504
+    },
+    {
+      "from": "yuma",
+      "to": "show-low",
+      "km": 563.3,
+      "carMinutes": 408
+    },
+    {
+      "from": "yuma",
+      "to": "sierra-vista",
+      "km": 501.5,
+      "carMinutes": 333
+    },
+    {
+      "from": "yuma",
+      "to": "stockton",
+      "km": 979.2,
+      "carMinutes": 677
+    },
+    {
+      "from": "yuma",
+      "to": "tonopah",
+      "km": 810.9,
+      "carMinutes": 586
+    },
+    {
+      "from": "yuma",
+      "to": "truckee",
+      "km": 1091.8,
+      "carMinutes": 835
+    },
+    {
+      "from": "yuma",
+      "to": "tucson",
+      "km": 386.1,
+      "carMinutes": 253
+    },
+    {
+      "from": "yuma",
+      "to": "ukiah",
+      "km": 1220.9,
+      "carMinutes": 855
+    },
+    {
+      "from": "yuma",
+      "to": "winnemucca",
+      "km": 1227.2,
+      "carMinutes": 873
+    },
+    {
+      "from": "yuma",
+      "to": "winslow",
+      "km": 602.1,
+      "carMinutes": 403
     }
   ]
 }
