@@ -47,3 +47,16 @@ test('Los Angeles to Phoenix is drawn along Interstate 10', () => {
   const refs = new Set(r.roads.filter((i) => i >= 0).map((i) => `${map.roads[i].level}${map.roads[i].ref}`));
   assert.ok(refs.has('I10'), [...refs].join(','));
 });
+
+test('map cities carry their facilities and companies for the icons', () => {
+  const { companies } = JSON.parse(readFileSync(`${root}data/ats/companies.json`, 'utf8'));
+  const ids = new Set(companies.map((c) => c.id));
+  const en = JSON.parse(readFileSync(`${root}src/i18n/en.json`, 'utf8'));
+  for (const c of map.cities) {
+    const city = cities.find((x) => x.id === c.id);
+    assert.deepEqual(c.facilities, city.facilities, c.id);
+    assert.deepEqual(c.companies.map((x) => x[0]).sort(), [...new Set(city.depots.map((d) => d.company))].sort(), c.id);
+    for (const [id] of c.companies) assert.ok(ids.has(id));
+    for (const f of c.facilities) assert.ok(en.facilities[f], `label for ${f}`);
+  }
+});

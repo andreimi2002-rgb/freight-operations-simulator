@@ -95,6 +95,8 @@ const columns = ['time', 'cargo', 'from', 'to', 'distance', 'trailer', 'weight']
   :global(a.b-cargo-name:hover) { color: var(--amber); }
   .board :global(tr.is-not-owned td) { opacity: 0.55; }
   :global(.badge.not-owned) { margin-top: 4px; color: var(--text-muted); }
+  :global(.badge.urgency-important) { color: var(--amber); border-color: color-mix(in srgb, var(--amber) 50%, var(--border)); }
+  :global(.badge.urgency-urgent) { color: #ff8a7a; border-color: color-mix(in srgb, #ff8a7a 55%, var(--border)); }
   :global(.job-badges) { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
   :global(.job-badges .badge) { font-size: 11px; padding: 1px 6px; }
   :global(.b-to a) { color: var(--text); font-weight: 600; }

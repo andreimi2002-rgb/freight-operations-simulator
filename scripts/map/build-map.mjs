@@ -117,7 +117,18 @@ const lakes = lakesGeo.features
 
 // Cities from the game data, projected the same way.
 const { cities } = JSON.parse(readFileSync(join(root, 'data/ats/cities.json'), 'utf8'));
-const cityPts = cities.filter((c) => c.coordinates).map((c) => ({ id: c.id, name: c.name, state: c.state, depots: c.depots.length, xy: project([c.coordinates.lon, c.coordinates.lat]) }));
+const { companies } = JSON.parse(readFileSync(join(root, 'data/ats/companies.json'), 'utf8'));
+const companyName = new Map(companies.map((c) => [c.id, c.name]));
+const cityPts = cities.filter((c) => c.coordinates).map((c) => ({
+  id: c.id,
+  name: c.name,
+  state: c.state,
+  depots: c.depots.length,
+  xy: project([c.coordinates.lon, c.coordinates.lat]),
+  facilities: c.facilities,
+  // One entry per company with a depot in the city: [id, name].
+  companies: [...new Set(c.depots.map((d) => d.company))].sort().map((id) => [id, companyName.get(id) ?? id]),
+}));
 
 // Bounds of the states in scope.
 const all = states.flatMap((s) => s.rings.flat());

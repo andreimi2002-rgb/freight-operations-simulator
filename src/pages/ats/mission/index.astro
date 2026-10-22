@@ -4,44 +4,63 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import WeatherIcons from '../../../components/WeatherIcons.astro';
 import AtsMap from '../../../components/AtsMap.astro';
+import SkillIcons from '../../../components/SkillIcons.astro';
 import { getI18n } from '../../../i18n/index.mjs';
 
 const { t, meta } = getI18n();
 ---
 <BaseLayout title={t('mission.title')} description={t('mission.metaDescription')}>
   <WeatherIcons />
+  <SkillIcons />
   <div class="container sheet" data-mission data-locale={meta.intlLocale} data-state="loading">
     <p class="soft state-msg" data-m="msg">{t('mission.loading')}</p>
     <a class="button button-primary state-new" href="/">{t('mission.generateNew')}</a>
 
     <article class="job" data-m="job" hidden>
-      <header class="head">
-        <p class="eyebrow mono" data-m="eyebrow"></p>
-        <h1 class="route"><a data-m="fromLink"></a> <span aria-hidden="true">→</span> <a data-m="toLink"></a></h1>
-        <p class="cargo-line"><span data-m="cargoName"></span></p>
+      <header class="offer" aria-labelledby="m-cargo-title">
+        <div class="offer-top">
+          <p class="eyebrow mono">{t('mission.offer')}</p>
+          <span class="urgency" data-m="urgency"></span>
+        </div>
+        <div class="offer-cargo">
+          <h1 id="m-cargo-title" class="cargo-title" data-m="cargoName"></h1>
+          <span class="skills" data-m="skills"></span>
+        </div>
+        <div class="offer-route">
+          <div class="end">
+            <span class="eyebrow">{t('mission.from')}</span>
+            <a class="end-city" data-m="fromLink"></a>
+            <a class="end-co" data-m="fromCompany"></a>
+            <span class="mono muted small" data-m="pickupId"></span>
+          </div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="end">
+            <span class="eyebrow">{t('mission.to')}</span>
+            <a class="end-city" data-m="toLink"></a>
+            <a class="end-co" data-m="toCompany"></a>
+            <span class="mono muted small" data-m="deliveryId"></span>
+          </div>
+        </div>
+        <dl class="offer-stats">
+          <div><dt>{t('mission.distance')}</dt><dd class="mono" data-m="offerDistance"></dd></div>
+          <div><dt>{t('mission.timeAllowed')}</dt><dd class="mono" data-m="offerTime"></dd></div>
+          <div><dt data-m="offerWeightLabel">{t('mission.weight')}</dt><dd class="mono" data-m="offerWeight"></dd></div>
+          <div><dt>{t('mission.trailer')}</dt><dd data-m="offerTrailer"></dd></div>
+        </dl>
+        <p class="offer-deadline" data-m="deadline"></p>
+        <p class="muted small" data-m="realTime"></p>
         <div data-m="badges"></div>
         <div class="actions">
           <button type="button" class="button button-ghost" data-m="copy">{t('mission.copy')}</button>
           <a class="button button-ghost" data-m="sameRoute">{t('mission.sameRoute')}</a>
           <span class="muted small" data-m="copied" role="status"></span>
         </div>
+        <p class="muted small">{t('mission.urgencyRule')}</p>
       </header>
 
       <div class="warn" data-m="warnings" hidden></div>
 
       <div class="grid">
-        <section class="card" aria-labelledby="m-pickup">
-          <h2 id="m-pickup" class="eyebrow">{t('mission.pickup')}</h2>
-          <p class="big"><a class="co-link" data-m="pickupCompany"></a></p>
-          <p class="soft" data-m="pickupWhere"></p>
-          <p class="mono muted small" data-m="pickupId"></p>
-        </section>
-        <section class="card" aria-labelledby="m-delivery">
-          <h2 id="m-delivery" class="eyebrow">{t('mission.delivery')}</h2>
-          <p class="big"><a class="co-link" data-m="deliveryCompany"></a></p>
-          <p class="soft" data-m="deliveryWhere"></p>
-          <p class="mono muted small" data-m="deliveryId"></p>
-        </section>
 
         <section class="card" aria-labelledby="m-cargo">
           <h2 id="m-cargo" class="eyebrow">{t('mission.cargo')}</h2>
@@ -52,14 +71,19 @@ const { t, meta } = getI18n();
           </dl>
         </section>
 
-        <section class="card" aria-labelledby="m-route">
-          <h2 id="m-route" class="eyebrow">{t('mission.route')}</h2>
-          <dl class="facts">
-            <div><dt>{t('mission.distance')}</dt><dd class="mono" data-m="distance"></dd></div>
-            <div><dt>{t('mission.drive')}</dt><dd class="mono" data-m="drive"></dd></div>
-            <div class="wide"><dt>{t('mission.leaveNow')}</dt><dd data-m="arrival"></dd></div>
-          </dl>
+
+        <section class="card wide-card" aria-labelledby="m-plan">
+          <h2 id="m-plan" class="eyebrow">{t('mission.planTitle')}</h2>
+          <ol class="plan" data-m="plan"></ol>
           <p class="soft small" data-m="night" hidden>{t('mission.night')}</p>
+          <p class="muted small">{t('mission.planRule')}</p>
+        </section>
+
+        <section class="card wide-card" aria-labelledby="m-chain">
+          <h2 id="m-chain" class="eyebrow" data-m="chainTitle">{t('mission.chainTitle')}</h2>
+          <p class="soft small" data-m="chainIntro"></p>
+          <ul class="chain" data-m="chain"></ul>
+          <a class="small" data-m="chainAll"></a>
         </section>
 
         <section class="card wide-card" aria-labelledby="m-map">
@@ -105,6 +129,45 @@ const { t, meta } = getI18n();
   .state-new { display: none; justify-self: start; }
   .sheet[data-state='error'] .state-new { display: inline-flex; }
   .job { display: grid; gap: var(--space-5); }
+  .offer { display: grid; gap: var(--space-4); padding: var(--space-5); background: var(--bg-header); border: 1px solid var(--border-input); border-radius: var(--radius-lg); }
+  .offer-top { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+  .urgency { font: 600 12px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border-input); color: var(--text-soft); }
+  .urgency.u-important { color: var(--amber); border-color: color-mix(in srgb, var(--amber) 50%, var(--border)); }
+  .urgency.u-urgent { color: #ff8a7a; border-color: color-mix(in srgb, #ff8a7a 55%, var(--border)); }
+  .offer-cargo { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
+  .cargo-title { font-size: clamp(30px, 5vw, 46px); line-height: 1.05; text-wrap: balance; }
+  .skills { display: inline-flex; gap: var(--space-2); }
+  .skills :global(.skill) { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: var(--panel); border: 1px solid var(--border-input); color: var(--amber); }
+  .skills :global(.skill svg) { width: 20px; height: 20px; }
+  .skills :global(.skill-adr) { color: #ff8a7a; position: relative; }
+  .skills :global(.skill-adr b) { position: absolute; font: 700 9px var(--font-mono); color: #ff8a7a; }
+  .offer-route { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: var(--space-4); align-items: center; }
+  .end { display: grid; gap: 2px; min-width: 0; }
+  .end-city { font-size: 22px; font-weight: 700; color: var(--text); }
+  .end-co { color: var(--text-soft); overflow-wrap: anywhere; }
+  .end a:hover { color: var(--amber); }
+  .arrow { font-size: 28px; color: var(--amber); }
+  .offer-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-3); margin: 0; }
+  .offer-stats > div { display: grid; gap: 2px; padding: var(--space-3); background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-sm); min-width: 0; }
+  .offer-stats dd { font-size: 18px; }
+  .offer-deadline { font-weight: 600; }
+  .chain { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--space-3); }
+  .chain :global(li a) { display: grid; gap: 2px; padding: var(--space-3) var(--space-4); background: var(--panel-deep); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text); text-decoration: none; height: 100%; }
+  .chain :global(li a:hover) { border-color: var(--amber); }
+  .chain :global(.c-cargo) { font-weight: 600; }
+  .chain :global(.c-meta) { font: 12px var(--font-mono); color: var(--text-soft); }
+  .chain :global(.c-tags) { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+  .plan { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  .plan :global(li) { display: grid; grid-template-columns: 72px 26px minmax(0, 1fr); gap: var(--space-3); align-items: start; padding: var(--space-2) 0; border-bottom: 1px solid var(--row-line); }
+  .plan :global(li:last-child) { border-bottom: 0; }
+  .plan :global(.p-time) { font: 600 13px var(--font-mono); color: var(--amber); font-variant-numeric: tabular-nums; }
+  .plan :global(.p-dot) { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font: 700 11px var(--font-sans); color: #04121f; background: var(--text-soft); }
+  .plan :global(.p-drive .p-dot) { background: var(--amber); }
+  .plan :global(.p-break .p-dot) { background: #7dbbff; }
+  .plan :global(.p-rest .p-dot) { background: #b48cff; }
+  .plan :global(.p-end .p-dot) { background: var(--green); }
+  .plan :global(.p-text small) { display: block; color: var(--text-muted); }
+  @media (max-width: 559px) { .offer-route { grid-template-columns: 1fr; } .arrow { transform: rotate(90deg); justify-self: start; } }
   .head { display: grid; gap: var(--space-2); }
   .route { font-size: clamp(30px, 5vw, 48px); line-height: 1.1; text-wrap: balance; }
   .route a { color: var(--text); text-decoration-color: var(--border-input); }
