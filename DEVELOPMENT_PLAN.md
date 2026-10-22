@@ -389,11 +389,15 @@ Principii pentru toate fazele: nimic inventat (regulă reală, estimare marcată
 ### Faza F — Comunitate și VTC (Etapa 6, restul)
 Comparații între orașe, „cele mai bune curse” dintr-un oraș, funcții pentru companii virtuale (TruckersMP: tabela companiei, convoaie, clasamente — după verificarea condițiilor TruckersMP).
 
+### Faza H — Harta completă: ATS și ETS2 cu toate DLC-urile (înainte de lansarea comercială)
+Decizia proprietarului (2026-10-22): **la lansarea comercială, ATS și ETS2 trebuie să fie complete, cu toate DLC-urile de hartă.** Freight World devine „un wiki ATS/ETS2 mai bun”: date structurate pentru fiecare oraș, companie, marfă, remorcă și camion, plus generator, planificator și fișe de cursă.
+1. **Restul statelor ATS**, stat cu stat (un stat = o intrare în `scope.json` + colectare, poze, distanțe, hartă).
+2. **ETS2**: aceeași structură de date, cu țări în loc de state; diferențe de tratat: monede și unități (EUR, km, tone), feriboturi și trenuri pe rute, regulile UE de condus (Reg. 561/2006), remorci și combinații europene, harta Europei în stilul ETS2.
+3. **Unelte pentru scară** (sute de orașe): colectare și verificări automate, poze propuse automat cu reguli stricte și verificate de proprietar pe o pagină de selecție, distanțe și hartă generate pe regiune.
+4. Comutatorul ATS / ETS2 din meniu devine activ.
+
 ### Faza G — Lansare comercială (Etapa 8)
 Acordul SCS, formă legală (PFA / SRL), termeni și politică de confidențialitate, plăți prin merchant of record (Paddle / Lemon Squeezy), pachetele gratuit / Premium / VTC; donațiile (Ko-fi / Patreon) pot porni oricând.
-
-### Faza H — Extinderea hărții (Etapa 5, când aplicația e mai completă)
-Restul statelor ATS, apoi ETS2 (aceeași structură de date; un stat sau o țară nouă = o intrare în `scope.json` + colectare, poze, distanțe, hartă).
 
 ### În paralel, oricând
 - Răspunsul SCS (harta reală, datele din joc, SDK, monetizare) poate schimba fazele A5, D1 și E.
@@ -459,4 +463,5 @@ Restul statelor ATS, apoi ETS2 (aceeași structură de date; un stat sau o țar�
 | 2026-10-22 | Se adaugă **doar Arizona** acum, ca harta de start (jocul de bază + DLC-ul gratuit) să fie completă; celelalte state vin după ce aplicația e mai completă. Arizona folosește fusul `America/Phoenix` (fără ora de vară), definit ca excepție pe stat în `scope.json`. San Simon rămâne fără poză (nicio poză liberă potrivită pe Commons). |
 | 2026-10-22 | **Paginile de companie** (Etapa 6, prima parte): doar cele 67 de companii cu depozite pe harta de start; cu secțiunile calculate „Where its cargo goes” și „Who supplies it” (doar legături posibile în joc). Fără logo-uri (grafică din joc): monogram generat. Cursele văzute în joc de proprietar se notează în `data/ats/observations.json` pentru calibrare (prima: LA → Phoenix, 531 km în joc vs 600 km estimat). |
 | 2026-10-22 | **Harta**: varianta „în stil SCS”, desenată de noi, cât mai apropiată de harta din ATS (după capturile proprietarului, folosite doar ca referință, nepuse în proiect). Date: Natural Earth 1:10m (domeniu public); drumurile sunt cele reale, rețeaua din joc poate diferi. Rutele de pe fișă urmează drumurile (cel mai scurt drum pe graful hărții). Proprietarul a cerut acordul SCS (info@scssoft.com) pentru harta reală, datele din joc, SDK-ul de telemetrie și monetizare; dacă acceptă, harta poate fi înlocuită. |
-| 2026-10-22 | **Roadmap după lansare** (secțiunea 8b): fazele A (senzația de joc) → B (descoperire, SEO) → C (calibrare, când vin date din joc) → D (realism avansat) → E (aplicația companion, după răspunsul SCS) → F (comunitate, VTC) → G (comercial) → H (alte state, ETS2). Propunerile noi de realism și design (termen și urgență, HOS, lanț de curse, pictograme, split-flap, mod GPS și cabină, pagini de marfă, căutare) sunt incluse în aceste faze. |
+| 2026-10-22 | **Roadmap după lansare** (secțiunea 8b): fazele A (senzația de joc) → B (descoperire, SEO) → C (calibrare, când vin date din joc) → D (realism avansat) → E (aplicația companion, după răspunsul SCS) → F (comunitate, VTC) → **H (harta completă ATS + ETS2 cu toate DLC-urile)** → G (lansare comercială). Propunerile noi de realism și design sunt incluse în aceste faze. |
+| 2026-10-22 | **Viziune:** Freight World = un wiki ATS/ETS2 mai bun (date structurate, fără texte copiate) plus generator, planificator și fișe de cursă. La lansarea comercială, ATS și ETS2 trebuie să fie complete, cu toate DLC-urile de hartă (decizia proprietarului). |
