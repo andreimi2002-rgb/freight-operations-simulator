@@ -155,7 +155,7 @@ export function featuredCity(ds, { date, hour }) {
  * `from` limits the start city (null = any city with jobs). Cargo without a known weight
  * is left out. Returns null when nothing matches.
  */
-export function randomJob(ds, { seed, from = null, baseOnly = false } = {}) {
+export function randomJob(ds, { seed, from = null, baseOnly = false, ownedDlcs = null } = {}) {
   const ix = indexDataset(ds);
   const rand = rng(seed >>> 0);
   const starts = from ? [from] : ds.cities.map((c) => c.id).filter((id) => (ix.depotsByCity.get(id) ?? []).length);
@@ -166,7 +166,7 @@ export function randomJob(ds, { seed, from = null, baseOnly = false } = {}) {
     [order[i], order[k]] = [order[k], order[i]];
   }
   for (const city of order.slice(0, 8)) {
-    const jobs = possibleJobs(ds, { from: city, baseOnly }).filter((j) => ix.cargo.get(j.cargo).w);
+    const jobs = possibleJobs(ds, { from: city, baseOnly, ownedDlcs }).filter((j) => ix.cargo.get(j.cargo).w);
     if (!jobs.length) continue;
     const j = pick(rand, jobs);
     const cargo = ix.cargo.get(j.cargo);
@@ -180,3 +180,68 @@ export function randomJob(ds, { seed, from = null, baseOnly = false } = {}) {
 /** Seed ⇄ short code for the address ("a1b2c3d4"). */
 export const seedToCode = (seed) => (seed >>> 0).toString(16).padStart(8, '0');
 export const codeToSeed = (code) => (/^[0-9a-f]{1,8}$/i.test(String(code ?? '')) ? parseInt(code, 16) >>> 0 : null);
+
+// ---- Job sheet: stable ids and truck recommendation ------------------------------
+
+const slugish = (s) => String(s ?? 'depot').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+
+/** Stable key of a depot: its game id, or company + type when the wiki gives none. */
+export function depotKey(depot) {
+  return depot.gameId ?? `${depot.company}--${slugish(depot.type)}`;
+}
+
+/**
+ * Job id for the sheet URL, built from stable ids so it survives a data refresh:
+ * from.depot.cargo.to.depot.trailer.weight ("-" for trailer/weight when not chosen).
+ */
+export function missionId(ds, job) {
+  const src = ds.depots[job.source];
+  const dst = ds.depots[job.destination];
+  return [src.city, depotKey(src), job.cargo, dst.city, depotKey(dst), job.trailer ?? '-', job.weightLb ?? '-'].join('.');
+}
+
+/** Resolve a job id against the current data: the job, or { error } saying why not. */
+export function resolveMission(ds, id) {
+  const parts = String(id ?? '').split('.');
+  if (parts.length !== 7) return { error: 'badId' };
+  const [from, srcKey, cargoId, to, dstKey, trailer, weight] = parts;
+  const ix = indexDataset(ds);
+  const cargo = ix.cargo.get(cargoId);
+  if (!cargo) return { error: 'gone' };
+  const find = (city, key) => (ix.depotsByCity.get(city) ?? []).find((i) => depotKey(ds.depots[i]) === key);
+  const source = find(from, srcKey);
+  const destination = find(to, dstKey);
+  if (source === undefined || destination === undefined) return { error: 'gone' };
+  const job = possibleJobs(ds, { from, depot: source, to }).find((j) => j.cargo === cargoId && j.destination === destination);
+  if (!job) return { error: 'gone' };
+  const trailerId = trailer === '-' ? null : trailer;
+  if (trailerId && !cargo.trailers.includes(trailerId)) return { error: 'gone' };
+  const weightLb = weight === '-' ? null : Number(weight);
+  if (weightLb !== null && (!Number.isFinite(weightLb) || !cargo.w || weightLb < cargo.w[0] || weightLb > cargo.w[1])) return { error: 'gone' };
+  return { ...job, from, trailer: trailerId, weightLb };
+}
+
+/**
+ * Freight World truck recommendation (a simulated rule, shown as such on the sheet):
+ * minimum engine power by cargo weight, more for heavy cargo; trucks sold at a dealer in
+ * the start city first; electric trucks left out (no range data).
+ */
+export const TRUCK_RULE = { bands: [{ upToLb: 25000, hp: 400 }, { upToLb: 45000, hp: 450 }, { upToLb: Infinity, hp: 500 }], heavyHp: 550 };
+
+export function neededHp(cargo, weightLb) {
+  if (cargo.flags.includes('heavy')) return TRUCK_RULE.heavyHp;
+  const w = weightLb ?? cargo.w?.[1] ?? 0;
+  return TRUCK_RULE.bands.find((b) => w <= b.upToLb).hp;
+}
+
+export function recommendTrucks(ds, job, { max = 4 } = {}) {
+  const ix = indexDataset(ds);
+  const cargo = ix.cargo.get(job.cargo);
+  const need = neededHp(cargo, job.weightLb);
+  const dealers = new Set((ix.cities.get(job.from)?.dealers ?? []).map((d) => d.toLowerCase()));
+  const list = (ds.trucks ?? [])
+    .filter((t) => !t.electric && t.hp != null && t.hp >= need)
+    .map((t) => ({ ...t, dealerHere: dealers.has(String(t.make).toLowerCase()) }))
+    .sort((a, b) => Number(b.dealerHere) - Number(a.dealerHere) || a.hp - b.hp || a.name.localeCompare(b.name));
+  return { needHp: need, trucks: list.slice(0, max) };
+}

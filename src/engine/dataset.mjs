@@ -11,7 +11,7 @@
  *   km: Record<string, number>   // "from>to" → km (estimated)
  * }}
  */
-export function buildJobDataset({ cities, companies, cargo, trailers, distances }) {
+export function buildJobDataset({ cities, companies, cargo, trailers, distances, trucks = [] }) {
   const depots = [];
   for (const co of companies) {
     for (const d of co.depotTypes) {
@@ -29,7 +29,7 @@ export function buildJobDataset({ cities, companies, cargo, trailers, distances 
   const km = {};
   for (const p of distances.pairs) km[`${p.from}>${p.to}`] = p.km;
   return {
-    cities: cities.map((c) => ({ id: c.id, name: c.name, state: c.state, tz: c.timezone.iana })),
+    cities: cities.map((c) => ({ id: c.id, name: c.name, state: c.state, tz: c.timezone.iana, dealers: c.truckDealers ?? [] })),
     cargo: cargo.map((c) => ({
       id: c.id,
       name: c.name,
@@ -38,9 +38,17 @@ export function buildJobDataset({ cities, companies, cargo, trailers, distances 
       trailers: c.trailerTypes,
       flags: c.flags,
       hz: c.hazmatClass ?? null,
+      un: c.un ?? null,
+      unExpected: c.unExpected ?? null,
     })),
-    trailers: trailers.map((t) => ({ id: t.id, name: t.name, ownable: t.models.some((m) => m.ownable) ? true : (t.models.length ? false : null) })),
-    companies: companies.map((c) => ({ id: c.id, name: c.fullName ?? c.name })),
+    trailers: trailers.map((t) => ({
+      id: t.id,
+      name: t.name,
+      ownable: t.models.some((m) => m.ownable) ? true : (t.models.length ? false : null),
+      models: t.models.map((m) => ({ name: m.name, priceUsd: m.priceUsd, pricesUsd: m.pricesUsd ?? [], ownable: m.ownable })),
+    })),
+    trucks: trucks.map((t) => ({ id: t.id, name: t.name, make: t.manufacturer, hp: t.maxHp, electric: t.electric })),
+    companies: companies.map((c) => ({ id: c.id, name: c.fullName ?? c.name, industry: c.industry ?? null })),
     depots,
     km,
   };
@@ -72,7 +80,7 @@ export function packJobDataset(ds) {
   for (let i = 0; i < ids.length; i++) {
     km.push(ids.map((to, j) => (i === j ? 0 : ds.km[`${ids[i]}>${to}`] ?? -1)));
   }
-  return { v: 1, cities: ds.cities, cargo: ds.cargo, trailers: ds.trailers, companies: ds.companies, dlcs, types, depots, km };
+  return { v: 2, cities: ds.cities, cargo: ds.cargo, trailers: ds.trailers, trucks: ds.trucks, companies: ds.companies, dlcs, types, depots, km };
 }
 
 export function unpackJobDataset(p) {
@@ -81,5 +89,5 @@ export function unpackJobDataset(p) {
   const depots = p.depots.map(([ci, ti]) => ({ city: p.cities[ci].id, ...types[ti] }));
   const km = {};
   p.km.forEach((row, i) => row.forEach((v, j) => { if (i !== j && v >= 0) km[`${p.cities[i].id}>${p.cities[j].id}`] = v; }));
-  return { cities: p.cities, cargo: p.cargo, trailers: p.trailers, companies: p.companies, depots, km };
+  return { cities: p.cities, cargo: p.cargo, trailers: p.trailers, trucks: p.trucks ?? [], companies: p.companies, depots, km };
 }
