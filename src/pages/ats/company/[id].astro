@@ -27,6 +27,7 @@ const firstCity = company.depotTypes[0].cities[0];
 <BaseLayout
   title={name}
   description={t('company.metaDescription', { name, depots: depotCount, cities: cities.length })}
+  crumbs={[[t('company.breadcrumb'), '/ats/companies'], [name, Astro.url.pathname]]}
 >
   <nav class="container crumbs" aria-label={t('company.breadcrumb')}>
     <a href="/ats/companies">{t('company.breadcrumb')}</a>

@@ -1,0 +1,79 @@
+---
+// Header search: a button that opens a dialog with instant results (cities, companies,
+// cargo, trailers, trucks). Keyboard: "/" or Ctrl+K opens it; arrows move; Enter opens.
+import { getI18n } from '../i18n/index.mjs';
+
+const { t } = getI18n();
+---
+<button type="button" class="search-open" data-search-open aria-haspopup="dialog">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  <span>{t('search.button')}</span>
+  <kbd>/</kbd>
+</button>
+
+<dialog id="search-dialog" class="search-dialog" aria-label={t('search.label')}>
+  <div class="search-inner">
+    <div class="search-field">
+      <label for="search-input" class="visually-hidden">{t('search.label')}</label>
+      <input
+        id="search-input"
+        type="search"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder={t('search.placeholder')}
+        role="combobox"
+        aria-expanded="false"
+        aria-controls="search-results"
+        aria-autocomplete="list"
+      />
+      <button type="button" class="search-close" data-search-close aria-label={t('search.close')}>Esc</button>
+    </div>
+    <ul id="search-results" class="search-results" role="listbox" aria-label={t('search.results')}></ul>
+    <p class="search-hint muted" data-search-hint>{t('search.hint')}</p>
+  </div>
+</dialog>
+
+<script>
+  import '../scripts/search.mjs';
+</script>
+
+<style>
+  .search-open {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: var(--target);
+    padding: 0 var(--space-3);
+    background: var(--panel-deep);
+    color: var(--text-soft);
+    border: 1px solid var(--border-input);
+    border-radius: var(--radius-md);
+    font: 500 14px var(--font-sans);
+    cursor: pointer;
+  }
+  .search-open:hover { color: var(--text); border-color: var(--text-muted); }
+  .search-open svg { width: 18px; height: 18px; }
+  kbd { font: 600 11px var(--font-mono); padding: 1px 6px; border: 1px solid var(--border-input); border-radius: 5px; color: var(--text-muted); }
+  .search-dialog {
+    width: min(640px, calc(100vw - 2 * var(--gutter)));
+    margin-top: 10vh;
+    padding: 0;
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--border-input);
+    border-radius: var(--radius-lg);
+  }
+  .search-dialog::backdrop { background: rgba(5, 8, 12, 0.7); }
+  .search-inner { display: grid; }
+  .search-field { display: flex; gap: var(--space-2); padding: var(--space-3); border-bottom: 1px solid var(--border); }
+  .search-field input { flex: 1; min-width: 0; min-height: var(--target); padding: 0 var(--space-3); background: var(--panel-deep); color: var(--text); border: 1px solid var(--border-input); border-radius: var(--radius-sm); font: 500 17px var(--font-sans); }
+  .search-close { min-width: 52px; min-height: var(--target); background: transparent; color: var(--text-muted); border: 1px solid var(--border-input); border-radius: var(--radius-sm); font: 600 12px var(--font-mono); cursor: pointer; }
+  .search-results { list-style: none; margin: 0; padding: var(--space-2); max-height: 60vh; overflow-y: auto; }
+  .search-results :global(li a) { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px var(--space-3); align-items: center; min-height: var(--target); padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm); color: var(--text); text-decoration: none; }
+  .search-results :global(li a[aria-selected='true']), .search-results :global(li a:hover) { background: var(--panel-deep); outline: 1px solid var(--amber); }
+  .search-results :global(.s-type) { grid-row: span 2; font: 600 10px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); width: 64px; }
+  .search-results :global(.s-name) { font-weight: 600; }
+  .search-results :global(.s-detail) { font-size: 12px; color: var(--text-muted); }
+  .search-hint { padding: 0 var(--space-4) var(--space-3); font-size: 12px; }
+  @media (max-width: 559px) { .search-open span, .search-open kbd { display: none; } .search-dialog { margin-top: 4vh; } }
+</style>

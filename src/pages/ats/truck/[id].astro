@@ -14,7 +14,7 @@ const tk = trucks.find((x) => x.id === Astro.props.truckId);
 const dealers = dealerCities(tk.manufacturer, cities).sort((a, b) => a.name.localeCompare(b.name));
 const engines = tk.engines.map((e) => (e.name ? `${e.name}${e.hpMax ? `, ${e.hpMin === e.hpMax ? e.hpMax : `${e.hpMin}–${e.hpMax}`} hp` : ''}` : `${e.hpMin}–${e.hpMax} hp`));
 ---
-<BaseLayout title={tk.name} description={t('truckPage.meta', { name: tk.name })}>
+<BaseLayout title={tk.name} description={t('truckPage.meta', { name: tk.name })} crumbs={[[t('truckPage.breadcrumb'), '/ats/trucks'], [tk.name, Astro.url.pathname]]}>
   <nav class="container crumbs" aria-label={t('truckPage.breadcrumb')}>
     <a href="/ats/trucks">{t('truckPage.breadcrumb')}</a>
     <span aria-hidden="true">/</span>

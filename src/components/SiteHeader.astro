@@ -3,6 +3,7 @@ import Logo from './Logo.astro';
 import GameSwitch from './GameSwitch.astro';
 import UnitToggle from './UnitToggle.astro';
 import DlcDialog from './DlcDialog.astro';
+import SearchBox from './SearchBox.astro';
 import { getI18n } from '../i18n/index.mjs';
 
 const { t } = getI18n();
@@ -37,6 +38,7 @@ const links = [
           ))}
         </ul>
       </nav>
+      <SearchBox />
       <GameSwitch />
       <UnitToggle />
       <button type="button" class="dlc-open" data-dlc-open>{t('dlcs.button')} <span class="dlc-count mono" data-dlc-count></span></button>

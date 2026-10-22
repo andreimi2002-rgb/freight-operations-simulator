@@ -361,10 +361,16 @@ Principii pentru toate fazele: nimic inventat (regulă reală, estimare marcată
 
 ### Faza B — Descoperire, căutare, creștere
 1. **Pagini de marfă** (`/ats/cargo/<id>`), **de remorcă** și **de camion**, din datele existente.
-2. **Căutare rapidă** în header (oraș, companie, marfă).
-3. **SEO:** sitemap.xml, robots.txt, date structurate, imagini de previzualizare (Open Graph) pentru orașe, companii, mărfuri, fișe.
+2. **Căutare rapidă** în header (oraș, companie, marfă, remorcă, camion; tastele `/` sau Ctrl+K). *Gata în 2.0.0-alpha.13.*
+3. **SEO:** sitemap.xml, robots.txt, date structurate, imagini de previzualizare (Open Graph) pentru orașe, companii, mărfuri, fișe. *Gata în 2.0.0-alpha.13 (fișele de cursă rămân în afara sitemap-ului: sunt nelimitate).*
 4. **Domeniu propriu** (singurul cost), **statistici fără cookie-uri**, **pagină / canal de feedback**.
 5. **Favorite și istoric local** (în browser, fără cont).
+6. **Imagini** pentru camioane, remorci și mărfuri:
+   - poze reale de pe **Wikimedia Commons**, cu autor, licență și link, marcate „ilustrativ” (camionul sau marfa din realitate, nu din joc);
+   - unde nu există o poză potrivită: **pictograme proprii pe categorii** (cisternă, platformă, frigorific, utilaje etc.);
+   - **căutare extinsă** pentru cele 2 orașe fără poză (Santa Maria, San Simon);
+   - un **instrument de selecție** (candidați + alegere + motiv, ca la orașe), necesar și pentru Faza H (mii de imagini);
+   - o întrebare în plus către SCS: dacă putem folosi imagini din joc sau de pe wiki (acum nu: sunt ale SCS).
 
 ### Faza C — Calibrare (când proprietarul trimite date din joc)
 1. **Distanțe și durate:** factor de corecție din 4–5 curse notate (`data/ats/observations.json`; acum 1: LA → Phoenix, 531 km în joc vs 600 km estimat).
@@ -467,4 +473,5 @@ Acordul SCS, formă legală (PFA / SRL), termeni și politică de confidențiali
 | 2026-10-22 | **Viziune:** Freight World = un wiki ATS/ETS2 mai bun (date structurate, fără texte copiate) plus generator, planificator și fișe de cursă. La lansarea comercială, ATS și ETS2 trebuie să fie complete, cu toate DLC-urile de hartă (decizia proprietarului). |
 | 2026-10-22 | Faza A, partea 1: fișa cursei ca ofertă din joc; **urgență și termen** = regulă Freight World „simulat” (nivel ales din ID-ul cursei 60/30/10 %, marjă 50/25/10 % peste timpul planificat, minimum 1 h); **plan de condus** după regulile FMCSA (11 h condus, pauză 30 min după 8 h, odihnă 10 h), mai stricte decât regula din joc (somn la 14 h); timpul din joc vs real după wiki (1 oră în joc = 3 min reale). |
 | 2026-10-22 | Faza A, partea 2 (în același PR, lansată odată, la cererea proprietarului): **lanțul de curse** (curse reale din orașul de livrare, întâi cele cu aceeași remorcă, apoi cele spre casă) și **pictogramele de pe hartă** (facilitățile orașului și companiile lui, la zoom; pictograme desenate de noi). Pozițiile sunt la oraș, nu exacte ca în joc. |
+| 2026-10-22 | Fazele B2 + B3 într-un PR: **căutare** în header (index generat la build, `/data/search.json`, 463 de intrări); **SEO**: sitemap.xml (472 de pagini, fără fișele de cursă), robots.txt, Open Graph și Twitter (poza orașului pe paginile de oraș, altfel o imagine Freight World generată din datele noastre), date structurate (WebSite cu căutare, BreadcrumbList). Două perechi de mărfuri cu același nume (Crawler Tractor, Transformer) primesc DLC-ul în titlu. **Faza B6 „Imagini”** adăugată în plan. |
 | 2026-10-22 | **Domeniul** va fi **freightworld.app** (ales de proprietar, cumpărat mai târziu; adresa netlify.app va redirecționa). Faza B1: pagini de marfă, remorcă și camion (474 de pagini în total), cu relațiile calculate din datele depozitelor. |

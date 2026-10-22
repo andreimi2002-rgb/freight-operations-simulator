@@ -605,5 +605,31 @@
     "noDealers": "No dealer for this make on the starting map.",
     "wikiLink": "{name} on Truck Simulator Wiki",
     "electric": "Electric"
+  },
+  "search": {
+    "button": "Search",
+    "label": "Search Freight World",
+    "placeholder": "City, company, cargo, trailer or truck",
+    "close": "Close search",
+    "results": "Search results",
+    "hint": "Type to search. Shortcut: / or Ctrl+K. Arrows to move, Enter to open.",
+    "loading": "Loading…",
+    "none": "Nothing found for “{q}”.",
+    "types": {
+      "city": "City",
+      "company": "Company",
+      "cargo": "Cargo",
+      "trailer": "Trailer",
+      "truck": "Truck"
+    }
+  },
+  "seo": {
+    "defaultImageAlt": "Freight World: American Truck Simulator jobs, cities and companies",
+    "cityImageAlt": "{name}, {state} (real-world photo, illustrative)"
+  },
+  "og": {
+    "cities": "{cities} cities",
+    "companies": "{companies} companies",
+    "cargo": "{cargo} cargo"
   }
 }

@@ -14,7 +14,7 @@ const cargoById = new Map(cargo.map((c) => [c.id, c]));
 const list = tr.cargo.map((id) => cargoById.get(id)).filter(Boolean).sort((a, b) => a.name.localeCompare(b.name));
 const price = (m) => (m.priceUsd != null ? `$${m.priceUsd.toLocaleString('en-US')}` : (m.pricesUsd ?? []).map((p) => `$${p.toLocaleString('en-US')}`).join(' / '));
 ---
-<BaseLayout title={`${tr.name} trailer`} description={t('trailerPage.meta', { name: tr.name })}>
+<BaseLayout title={`${tr.name} trailer`} description={t('trailerPage.meta', { name: tr.name })} crumbs={[[t('trailerPage.breadcrumb'), '/ats/trailers'], [tr.name, Astro.url.pathname]]}>
   <nav class="container crumbs" aria-label={t('trailerPage.breadcrumb')}>
     <a href="/ats/trailers">{t('trailerPage.breadcrumb')}</a>
     <span aria-hidden="true">/</span>

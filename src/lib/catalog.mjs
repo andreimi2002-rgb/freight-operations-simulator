@@ -5,6 +5,11 @@ export const cargoPath = (c) => `/ats/cargo/${c.id}`;
 export const trailerPath = (t) => `/ats/trailer/${t.id}`;
 export const truckPath = (t) => `/ats/truck/${t.id}`;
 
+/** Cargo name, with its DLC label added when another cargo has the same name (e.g. two Crawler Tractors). */
+export function cargoTitle(c, all, dlcLabel) {
+  return all.some((x) => x !== c && x.name === c.name) ? `${c.name} (${dlcLabel(c.dlc)})` : c.name;
+}
+
 /** Depot types that offer (side "provides") or accept (side "accepts") a cargo, with the DLC section. */
 export function cargoDepots(cargoId, companies, side) {
   const out = [];
