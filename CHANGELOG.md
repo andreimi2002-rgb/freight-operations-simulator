@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.0-alpha.8 — 2026-10-22 (Arizona: the starting map is complete)
+
+- **Arizona** (free DLC) added: 16 cities, now 50 in all (CA 24, NV 10, AZ 16), 67 companies and 347 depots. Arizona does not observe daylight saving time, so its cities use `America/Phoenix` (a per-state time zone override in `data/ats/scope.json`).
+- **Photos:** 15 of the 16 Arizona cities have a photo chosen by looking at each candidate (reasons in `data/photos.json`); San Simon keeps a placeholder (no free photo on Commons passes the rules).
+- **Distances** recomputed for all 2,450 city pairs (OSRM, OpenStreetMap).
+- Map DLC names on city pages ("Arizona (free DLC)"), new "Airport" facility label, texts updated for the starting map.
+- 2 new tests (80 in all): map DLC names, Arizona time zone. All 16 Arizona pages checked in Chrome at phone width.
+
 ## 2.0.0-alpha.7 — 2026-10-22 (Freight World, stage 4: job sheets)
 
 - **Launched:** Freight World replaced FOS on freight-operations-simulator.netlify.app (PR #16; FOS kept as git tag `fos-final`). Work now goes to `main` through pull requests.
