@@ -11,7 +11,8 @@
     "game": "ats",
     "states": [
       "CA",
-      "NV"
+      "NV",
+      "AZ"
     ],
     "description": "Current cities of the game in the states in scope (removed and future cities excluded). Depots come from the company pages.",
     "extraSources": [
@@ -24,7 +25,7 @@
         "note": "Coordinates of the real-world city (P625), matched through the English Wikipedia article \"<City>, <State>\" and checked to lie in the state. They are real-world coordinates, not positions on the game map."
       }
     ],
-    "count": 34
+    "count": 50
   },
   "cities": [
     {
@@ -216,6 +217,7 @@
       ],
       "neighbors": [
         "bakersfield",
+        "kingman",
         "las-vegas",
         "los-angeles",
         "mojave",
@@ -284,7 +286,9 @@
       ],
       "neighbors": [
         "indio",
-        "los-angeles"
+        "los-angeles",
+        "phoenix",
+        "yuma"
       ],
       "landmarks": [
         "Blythe Agricultural Inspection Station"
@@ -292,6 +296,87 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Blythe",
         "revid": 296951
+      }
+    },
+    {
+      "id": "camp-verde",
+      "gameId": null,
+      "name": "Camp Verde",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 34.56361,
+        "lon": -111.85444,
+        "wikidata": "Q983745"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw1",
+          "type": "Small sawmill"
+        },
+        {
+          "company": "farmers-barn",
+          "depotGameId": "fb_farm_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "gastream",
+          "depotGameId": "gas_che_str",
+          "type": "Chemical storage"
+        },
+        {
+          "company": "mon-coeur",
+          "depotGameId": "mon_farm",
+          "type": "Vineyard"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest"
+      ],
+      "facilityDetails": [
+        "Vortex gas station with a rest stop"
+      ],
+      "roads": [
+        "I-17",
+        "AZ 260"
+      ],
+      "neighbors": [
+        "flagstaff",
+        "phoenix",
+        "show-low"
+      ],
+      "landmarks": [
+        "434 South Main Street",
+        "Anasazi Animal Clinic",
+        "Boler's Bar",
+        "Camp Verde Grows",
+        "Camp Verde Historical Society",
+        "Cowboy Corner",
+        "Montezuma Inn",
+        "Northern Arizona Healthcare Camp Verde Campus"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Camp_Verde",
+        "revid": 296019
       }
     },
     {
@@ -373,6 +458,63 @@
       }
     },
     {
+      "id": "clifton",
+      "gameId": null,
+      "name": "Clifton",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": "1.32",
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 33.0509,
+        "lon": -109.29618,
+        "wikidata": "Q691583"
+      },
+      "companyCount": 3,
+      "depots": [
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_qry",
+          "type": "Quarry"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "Along US 191"
+        },
+        {
+          "company": "tidbit",
+          "depotGameId": "tid_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Gallon Oil gas station",
+        "Service shop with a rest stop"
+      ],
+      "roads": [
+        "US 191"
+      ],
+      "neighbors": [
+        "kayenta"
+      ],
+      "landmarks": [],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Clifton",
+        "revid": 294526
+      }
+    },
+    {
       "id": "el-centro",
       "gameId": null,
       "name": "El Centro",
@@ -439,7 +581,9 @@
       ],
       "neighbors": [
         "indio",
-        "san-diego"
+        "phoenix",
+        "san-diego",
+        "yuma"
       ],
       "landmarks": [
         "Downtown Arch",
@@ -697,6 +841,99 @@
       }
     },
     {
+      "id": "flagstaff",
+      "gameId": null,
+      "name": "Flagstaff",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 35.19917,
+        "lon": -111.63111,
+        "wikidata": "Q79842"
+      },
+      "companyCount": 5,
+      "depots": [
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "farmers-barn",
+          "depotGameId": "fb_farm_pln",
+          "type": "Feed mill"
+        },
+        {
+          "company": "farmers-barn",
+          "depotGameId": "fb_farm_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "greenpetrol",
+          "depotGameId": "grp_oil_gst",
+          "type": null,
+          "location": "At the end of Butler Avenue south of I-40 exit 198"
+        },
+        {
+          "company": "hms-machinery",
+          "depotGameId": "hms_con_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "wds",
+          "depotGameId": "wds_wst_whs",
+          "type": "Waste transfer station"
+        }
+      ],
+      "truckDealers": [
+        "International"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "International truck dealer",
+        "GreenPetrol truck stop with a weigh station"
+      ],
+      "roads": [
+        "I-17",
+        "I-40",
+        "SR 40B (4)",
+        "US 89",
+        "US 180"
+      ],
+      "neighbors": [
+        "camp-verde",
+        "grand-canyon-village",
+        "kayenta",
+        "kingman",
+        "los-angeles",
+        "page",
+        "phoenix"
+      ],
+      "landmarks": [
+        "Flagstaff City Hall",
+        "Flagstaff Station",
+        "Hotel Monte Vista",
+        "The Museum Station"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Flagstaff",
+        "revid": 296021
+      }
+    },
+    {
       "id": "fresno",
       "gameId": null,
       "name": "Fresno",
@@ -832,6 +1069,70 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Fresno",
         "revid": 297731
+      }
+    },
+    {
+      "id": "grand-canyon-village",
+      "gameId": null,
+      "name": "Grand Canyon Village",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 36.05333,
+        "lon": -112.13944,
+        "wikidata": "Q182273"
+      },
+      "companyCount": 4,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_wrk",
+          "type": "Roadworks"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "tidbit",
+          "depotGameId": "tid_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "wingman-aviation-center",
+          "depotGameId": "wac_air_svc",
+          "type": "Aircraft service"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "viewpoint"
+      ],
+      "facilityDetails": [],
+      "roads": [
+        "AZ 64"
+      ],
+      "neighbors": [
+        "flagstaff"
+      ],
+      "landmarks": [
+        "El Tovar Hotel",
+        "Grand Canyon",
+        "Grand Canyon National Park Headquarters",
+        "Grand Canyon Station",
+        "Grand Canyon Visitor Center",
+        "Ranger Operations Building",
+        "Yavapai Lodge"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Grand_Canyon_Village",
+        "revid": 295711
       }
     },
     {
@@ -1040,7 +1341,8 @@
       "neighbors": [
         "blythe",
         "el-centro",
-        "los-angeles"
+        "los-angeles",
+        "phoenix"
       ],
       "landmarks": [
         "Fantasy Springs Resort Casino",
@@ -1105,6 +1407,276 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Jackpot",
         "revid": 266752
+      }
+    },
+    {
+      "id": "kayenta",
+      "gameId": null,
+      "name": "Kayenta",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 36.71389,
+        "lon": -110.26,
+        "wikidata": "Q1253305"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "elegrid",
+          "depotGameId": "ele_epw_sit",
+          "type": "Electric substation"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "At the intersection of US 160 and US 163"
+        },
+        {
+          "company": "gastream",
+          "depotGameId": "gas_che_str",
+          "type": "Chemical storage"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "venture",
+          "depotGameId": "ven_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest"
+      ],
+      "facilityDetails": [
+        "Gallon Oil gas station with a rest stop"
+      ],
+      "roads": [
+        "US 160",
+        "US 163"
+      ],
+      "neighbors": [
+        "flagstaff",
+        "grand-canyon-village",
+        "page"
+      ],
+      "landmarks": [
+        "Bashas'",
+        "Blue Coffee Pot Restaurant",
+        "Jo D's Laundry",
+        "Kayenta Fire Department",
+        "Kayenta Mobile Home Park sign",
+        "Kayenta Township"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Kayenta",
+        "revid": 294960
+      }
+    },
+    {
+      "id": "kingman",
+      "gameId": null,
+      "name": "Kingman",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 35.20833,
+        "lon": -114.025,
+        "wikidata": "Q79733"
+      },
+      "companyCount": 10,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "chemso",
+          "depotGameId": "chm_che_plnt",
+          "type": "Chemical plant"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_qry",
+          "type": "Quarry"
+        },
+        {
+          "company": "dynamix",
+          "depotGameId": "dyn_car_pln",
+          "type": "Factory"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "haulett",
+          "depotGameId": "hau_oil_gst",
+          "type": null,
+          "location": "North of I-40 US 93 exit 53"
+        },
+        {
+          "company": "hms-machinery",
+          "depotGameId": "hms_con_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "technoma",
+          "depotGameId": "tch_el_pln",
+          "type": "Plant"
+        }
+      ],
+      "truckDealers": [
+        "Freightliner"
+      ],
+      "facilities": [
+        "dealer",
+        "gas",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Freightliner truck dealer with a service shop and rest stop",
+        "Haulett truck stop with a weigh station",
+        "WP truck stop with a service shop and weigh station"
+      ],
+      "roads": [
+        "I-40",
+        "US 93",
+        "AZ 66"
+      ],
+      "neighbors": [
+        "barstow",
+        "flagstaff",
+        "las-vegas",
+        "los-angeles",
+        "phoenix"
+      ],
+      "landmarks": [
+        "Kingman sign",
+        "Kingman Station",
+        "Kingman Veterans Memorial",
+        "Kingman Visitor Center",
+        "Mr. D'z Route 66 Diner",
+        "Route 66 water tanks"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Kingman",
+        "revid": 296023
+      }
+    },
+    {
+      "id": "lake-havasu-city",
+      "gameId": null,
+      "name": "Lake Havasu City",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": "1.58",
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 34.49,
+        "lon": -114.30889,
+        "wikidata": "Q79435"
+      },
+      "companyCount": 7,
+      "depots": [
+        {
+          "company": "apade",
+          "depotGameId": "apa_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "bloomscape",
+          "depotGameId": "blo_frm_str",
+          "type": "Storage"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "pioneer",
+          "depotGameId": "pio_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit2",
+          "type": "House construction site"
+        },
+        {
+          "company": "sea-horizon",
+          "depotGameId": "sh_shp_pln",
+          "type": "Plant"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas"
+      ],
+      "facilityDetails": [
+        "Aron gas station"
+      ],
+      "roads": [
+        "AZ 95"
+      ],
+      "neighbors": [
+        "kingman",
+        "yuma"
+      ],
+      "landmarks": [
+        "HRMC Finance Office/Learning Center/Education Office",
+        "HRMC Havasu Surgery Center",
+        "London Bridge",
+        "London Bridge Resort",
+        "Wheeler Park"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Lake_Havasu_City",
+        "revid": 311499
       }
     },
     {
@@ -1201,7 +1773,9 @@
       ],
       "neighbors": [
         "ely",
+        "kingman",
         "los-angeles",
+        "phoenix",
         "pioche",
         "primm",
         "reno",
@@ -1400,6 +1974,7 @@
         "las-vegas",
         "mojave",
         "oxnard",
+        "phoenix",
         "primm",
         "reno",
         "sacramento",
@@ -1656,6 +2231,90 @@
       }
     },
     {
+      "id": "nogales",
+      "gameId": null,
+      "name": "Nogales",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 31.35389,
+        "lon": -110.93917,
+        "wikidata": "Q79783"
+      },
+      "companyCount": 7,
+      "depots": [
+        {
+          "company": "apade",
+          "depotGameId": "apa_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_qry",
+          "type": "Quarry"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "Along Mariposa Rd"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit1",
+          "type": "Building foundation"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm_grg",
+          "type": "Garage"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest"
+      ],
+      "facilityDetails": [
+        "Gallon Oil gas station",
+        "NAF truck stop"
+      ],
+      "roads": [
+        "I-19"
+      ],
+      "neighbors": [
+        "tucson"
+      ],
+      "landmarks": [
+        "Pimeria Alta History Museum",
+        "Nogales-Grand Avenue Port of Entry"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Nogales",
+        "revid": 296025
+      }
+    },
+    {
       "id": "oakland",
       "gameId": null,
       "name": "Oakland",
@@ -1869,6 +2528,235 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Oxnard",
         "revid": 296961
+      }
+    },
+    {
+      "id": "page",
+      "gameId": null,
+      "name": "Page",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 36.9142,
+        "lon": -111.46,
+        "wikidata": "Q79940"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_wrk",
+          "type": "Roadworks"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "At the intersection of US 89 and Haul Rd"
+        },
+        {
+          "company": "pioneer",
+          "depotGameId": "pio_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "steeler",
+          "depotGameId": "st_met_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service",
+        "viewpoint"
+      ],
+      "facilityDetails": [
+        "Gallon Oil gas station with a rest stop",
+        "Service shop with a rest stop"
+      ],
+      "roads": [
+        "US 89",
+        "AZ 98"
+      ],
+      "neighbors": [
+        "flagstaff",
+        "grand-canyon-village",
+        "kayenta"
+      ],
+      "landmarks": [
+        "Big Lake Trading Post",
+        "Carl Hayden Visitor Center",
+        "Glen Canyon Bridge",
+        "Glen Canyon Dam",
+        "Page Community Center",
+        "Page Community United Methodist Church",
+        "Page High School",
+        "St. David's Episcopal Church"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Page",
+        "revid": 301219
+      }
+    },
+    {
+      "id": "phoenix",
+      "gameId": null,
+      "name": "Phoenix",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 33.44833,
+        "lon": -112.07389,
+        "wikidata": "Q16556"
+      },
+      "companyCount": 14,
+      "depots": [
+        {
+          "company": "42-print",
+          "depotGameId": "42p_print",
+          "type": "Printing plant"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_farm",
+          "type": "Farm"
+        },
+        {
+          "company": "charged",
+          "depotGameId": "cha_el_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "chemso",
+          "depotGameId": "chm_che_plnt",
+          "type": "Chemical plant"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "West of I-17 exit 201 on the north side of the city"
+        },
+        {
+          "company": "phoenix-freight",
+          "depotGameId": "aport_phx",
+          "type": null
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "venture",
+          "depotGameId": "ven_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [
+        "Kenworth"
+      ],
+      "facilities": [
+        "airport",
+        "dealer",
+        "garage",
+        "gas",
+        "recruitment",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Gallon Oil gas station",
+        "Recruitment agency",
+        "Rest stop (x3)",
+        "Kenworth truck dealer"
+      ],
+      "roads": [
+        "I-10",
+        "I-17",
+        "US 60",
+        "AZ 51",
+        "AZ 85",
+        "AZ 303"
+      ],
+      "neighbors": [
+        "blythe",
+        "camp-verde",
+        "flagstaff",
+        "kingman",
+        "las-vegas",
+        "los-angeles",
+        "show-low",
+        "tucson"
+      ],
+      "landmarks": [
+        "44 Monroe",
+        "100 West Washington",
+        "Arizona Center",
+        "Bank of America Tower",
+        "Chase Tower",
+        "CityScape Office Tower",
+        "Hyatt Regency Phoenix",
+        "One North Central",
+        "Phoenix Sky Harbor International Airport",
+        "Renaissance Square",
+        "Sheraton Phoenix Downtown",
+        "Tovrea Castle",
+        "U.S. Bank Center",
+        "Westin Phoenix Downtown",
+        "Westward Ho"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Phoenix",
+        "revid": 296026
       }
     },
     {
@@ -2459,7 +3347,8 @@
       "neighbors": [
         "barstow",
         "el-centro",
-        "los-angeles"
+        "los-angeles",
+        "yuma"
       ],
       "landmarks": [
         "450 B Street",
@@ -2753,6 +3642,69 @@
       }
     },
     {
+      "id": "san-simon",
+      "gameId": null,
+      "name": "San Simon",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 32.2678,
+        "lon": -109.228,
+        "wikidata": "Q5245006"
+      },
+      "companyCount": 3,
+      "depots": [
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "Along BU 10 at I-10 exit 378"
+        },
+        {
+          "company": "mon-coeur",
+          "depotGameId": "mon_farm",
+          "type": "Vineyard"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm_grg",
+          "type": "Garage"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest"
+      ],
+      "facilityDetails": [
+        "Gallon Oil truck stop"
+      ],
+      "roads": [
+        "I-10",
+        "SR 10 Bus",
+        "Minor road"
+      ],
+      "neighbors": [
+        "phoenix",
+        "tucson"
+      ],
+      "landmarks": [],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/San_Simon",
+        "revid": 296027
+      }
+    },
+    {
       "id": "santa-cruz",
       "gameId": null,
       "name": "Santa Cruz",
@@ -2930,6 +3882,151 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Santa_Maria",
         "revid": 297807
+      }
+    },
+    {
+      "id": "show-low",
+      "gameId": null,
+      "name": "Show Low",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 34.2436,
+        "lon": -110.04817,
+        "wikidata": "Q936839"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "avalanche-steel",
+          "depotGameId": "avs_met_scr",
+          "type": "Scrapyard"
+        },
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_farm",
+          "type": "Farm"
+        },
+        {
+          "company": "hms-machinery",
+          "depotGameId": "hms_con_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "pioneer",
+          "depotGameId": "pio_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "venture",
+          "depotGameId": "ven_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "airport",
+        "gas",
+        "rest"
+      ],
+      "facilityDetails": [
+        "Gallon Oil gas station with a rest stop"
+      ],
+      "roads": [
+        "US 60",
+        "AZ 77",
+        "AZ 260",
+        "Minor road"
+      ],
+      "neighbors": [
+        "camp-verde",
+        "phoenix",
+        "tucson"
+      ],
+      "landmarks": [
+        "Arts Alliance of the White Mountains",
+        "Card game mural",
+        "Card Game Monument",
+        "Church of Jesus Christ of Latter-day Saints",
+        "Show Low Regional Airport",
+        "The Victorian",
+        "Thunderbird Motel",
+        "Tower Offices"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Show_Low",
+        "revid": 294868
+      }
+    },
+    {
+      "id": "sierra-vista",
+      "gameId": null,
+      "name": "Sierra Vista",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 31.54556,
+        "lon": -110.27556,
+        "wikidata": "Q79891"
+      },
+      "companyCount": 4,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_qry",
+          "type": "Quarry"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "recruitment"
+      ],
+      "facilityDetails": [
+        "Recruitment agency"
+      ],
+      "roads": [
+        "AZ 90",
+        "AZ 92"
+      ],
+      "neighbors": [
+        "tucson"
+      ],
+      "landmarks": [
+        "Fort Huachuca sign"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Sierra_Vista",
+        "revid": 261010
       }
     },
     {
@@ -3204,6 +4301,104 @@
       }
     },
     {
+      "id": "tucson",
+      "gameId": null,
+      "name": "Tucson",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 32.22167,
+        "lon": -110.92639,
+        "wikidata": "Q18575"
+      },
+      "companyCount": 7,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_wrk",
+          "type": "Roadworks"
+        },
+        {
+          "company": "charged",
+          "depotGameId": "cha_el_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": "gal_oil_str",
+          "type": "Fuel storage"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [
+        "Volvo"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "recruitment",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "NAF gas station (2x)",
+        "Recruitment agency",
+        "Service shop with a rest stop",
+        "Volvo truck dealer"
+      ],
+      "roads": [
+        "I-10",
+        "I-19",
+        "AZ 77"
+      ],
+      "neighbors": [
+        "nogales",
+        "phoenix",
+        "san-simon",
+        "show-low"
+      ],
+      "landmarks": [
+        "Bank of America Plaza",
+        "Hotel Arizona",
+        "One South Church",
+        "Pima County Legal Services Building",
+        "Pima County Superior Court",
+        "Sentinel Peak",
+        "Tucson City Hall",
+        "Tucson Federal Building"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Tucson",
+        "revid": 296028
+      }
+    },
+    {
       "id": "ukiah",
       "gameId": null,
       "name": "Ukiah",
@@ -3323,6 +4518,186 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Winnemucca",
         "revid": 312583
+      }
+    },
+    {
+      "id": "winslow",
+      "gameId": null,
+      "name": "Winslow",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": "1.58",
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 35.02861,
+        "lon": -110.70083,
+        "wikidata": "Q79727"
+      },
+      "companyCount": 7,
+      "depots": [
+        {
+          "company": "american-lines",
+          "depotGameId": "aml_rail_str",
+          "type": "Storage"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_live_auc",
+          "type": "Livestock auction"
+        },
+        {
+          "company": "haulett",
+          "depotGameId": "hau_oil_gst",
+          "type": null,
+          "location": "South of I-40 US 180 exit 255"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "tidbit",
+          "depotGameId": "tid_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service",
+        "viewpoint",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Gallon Oil truck stop",
+        "Haulett truck stop with a service shop and weigh station"
+      ],
+      "roads": [
+        "I-40",
+        "SR 40 Spur",
+        "US 180",
+        "AZ 87",
+        "AZ 99"
+      ],
+      "neighbors": [
+        "flagstaff",
+        "kingman"
+      ],
+      "landmarks": [
+        "La Posada Hotel",
+        "Route 66 Plaza",
+        "St. Joseph's Catholic Church",
+        "Standin' on the Corner Park",
+        "United States Post Office",
+        "Winslow Visitor Center"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Winslow",
+        "revid": 296029
+      }
+    },
+    {
+      "id": "yuma",
+      "gameId": null,
+      "name": "Yuma",
+      "state": "AZ",
+      "dlc": "arizona",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Phoenix"
+      },
+      "coordinates": {
+        "lat": 32.69222,
+        "lon": -114.61528,
+        "wikidata": "Q79820"
+      },
+      "companyCount": 7,
+      "depots": [
+        {
+          "company": "apade",
+          "depotGameId": "apa_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit",
+          "type": "Building construction site"
+        },
+        {
+          "company": "rail-export",
+          "depotGameId": "re_train",
+          "type": "Depot"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        },
+        {
+          "company": "venture",
+          "depotGameId": "ven_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [
+        "Peterbilt"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Aron gas station",
+        "Rest stop",
+        "Service shop with a rest stop",
+        "Peterbilt truck dealer",
+        "Phoenix truck stop with a weigh station"
+      ],
+      "roads": [
+        "I-8",
+        "US 95"
+      ],
+      "neighbors": [
+        "el-centro",
+        "phoenix",
+        "san-diego",
+        "tucson"
+      ],
+      "landmarks": [
+        "Colorado River",
+        "Ocean to Ocean Bridge",
+        "St. Thomas Yuma Indian Mission",
+        "Yuma Main Canal"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Yuma",
+        "revid": 296030
       }
     }
   ]

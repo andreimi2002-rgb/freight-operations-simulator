@@ -119,7 +119,8 @@ export function buildDataset(input) {
     if (!state) { issue('parseError', p.title, `state "${p.state}" not in scope`); continue; }
     let id = slug(p.name);
     if (cities.some((c) => c.id === id)) id = `${id}-${state.code.toLowerCase()}`;
-    const iana = scope.timezones[p.timezoneGame] ?? null;
+    // A state may override the game time zone mapping (Arizona: no daylight saving time).
+    const iana = state.timezones?.[p.timezoneGame] ?? scope.timezones[p.timezoneGame] ?? null;
     if (!iana) issue('unknownValue', id, `time zone "${p.timezoneGame}" has no IANA mapping in scope.json`, { field: 'timezone' });
     const city = {
       id,

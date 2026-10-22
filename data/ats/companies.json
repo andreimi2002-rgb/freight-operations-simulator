@@ -11,10 +11,11 @@
     "game": "ats",
     "states": [
       "CA",
-      "NV"
+      "NV",
+      "AZ"
     ],
     "description": "Companies with at least one depot in the states in scope; only depot types present in scope are listed. gameId / defIds are the company definition names given on the wiki.",
-    "count": 59
+    "count": 67
   },
   "companies": [
     {
@@ -166,7 +167,8 @@
           "gameId": "42p_print",
           "type": "Printing plant",
           "cities": [
-            "las-vegas"
+            "las-vegas",
+            "phoenix"
           ],
           "locations": {},
           "accepts": [
@@ -348,7 +350,8 @@
           "gameId": "aml_rail_str",
           "type": "Storage",
           "cities": [
-            "bakersfield"
+            "bakersfield",
+            "winslow"
           ],
           "locations": {},
           "accepts": [
@@ -931,9 +934,12 @@
           "type": "Warehouse",
           "cities": [
             "fresno",
+            "lake-havasu-city",
             "las-vegas",
+            "nogales",
             "reno",
-            "sacramento"
+            "sacramento",
+            "yuma"
           ],
           "locations": {},
           "accepts": [
@@ -1036,7 +1042,8 @@
           "cities": [
             "los-angeles",
             "modesto",
-            "oakland"
+            "oakland",
+            "show-low"
           ],
           "locations": {},
           "accepts": [
@@ -1211,7 +1218,10 @@
           "cities": [
             "los-angeles",
             "san-francisco",
-            "truckee"
+            "sierra-vista",
+            "truckee",
+            "tucson",
+            "winslow"
           ],
           "locations": {},
           "accepts": [
@@ -1314,7 +1324,10 @@
           "type": "Service shop",
           "cities": [
             "barstow",
+            "kayenta",
+            "kingman",
             "las-vegas",
+            "phoenix",
             "san-diego",
             "san-francisco",
             "san-jose",
@@ -1460,14 +1473,17 @@
             "bakersfield",
             "ely",
             "fresno",
+            "grand-canyon-village",
             "hilt",
             "huron",
             "indio",
             "los-angeles",
+            "page",
             "sacramento",
             "santa-maria",
             "stockton",
-            "truckee"
+            "truckee",
+            "tucson"
           ],
           "locations": {},
           "accepts": [
@@ -1590,6 +1606,7 @@
           "gameId": "blo_frm_str",
           "type": "Storage",
           "cities": [
+            "lake-havasu-city",
             "oxnard"
           ],
           "locations": {},
@@ -1717,7 +1734,9 @@
             "fresno",
             "huron",
             "modesto",
-            "redding"
+            "phoenix",
+            "redding",
+            "show-low"
           ],
           "locations": {},
           "accepts": [
@@ -1845,7 +1864,8 @@
           "type": "Livestock auction",
           "cities": [
             "fresno",
-            "redding"
+            "redding",
+            "winslow"
           ],
           "locations": {},
           "accepts": [
@@ -2176,7 +2196,9 @@
           "gameId": "cha_el_mkt",
           "type": "Market",
           "cities": [
-            "las-vegas"
+            "las-vegas",
+            "phoenix",
+            "tucson"
           ],
           "locations": {},
           "accepts": [
@@ -2222,7 +2244,9 @@
           "gameId": "chm_che_plnt",
           "type": "Chemical plant",
           "cities": [
-            "bakersfield"
+            "bakersfield",
+            "kingman",
+            "phoenix"
           ],
           "locations": {},
           "accepts": [
@@ -2387,7 +2411,11 @@
           "type": "Quarry",
           "cities": [
             "carson-city",
-            "elko"
+            "clifton",
+            "elko",
+            "kingman",
+            "nogales",
+            "sierra-vista"
           ],
           "locations": {},
           "accepts": [
@@ -2658,6 +2686,7 @@
           "gameId": "cm_min_str",
           "type": "Storage",
           "cities": [
+            "phoenix",
             "pioche",
             "redding",
             "san-diego",
@@ -3133,6 +3162,7 @@
           "gameId": "dg_wd_saw1",
           "type": "Small sawmill",
           "cities": [
+            "camp-verde",
             "eureka",
             "truckee"
           ],
@@ -3369,6 +3399,103 @@
       }
     },
     {
+      "id": "dynamix",
+      "name": "Dynamix",
+      "fullName": null,
+      "category": "vehicle",
+      "industry": "Tire manufacturing",
+      "defIds": [
+        "dyn_car_pln"
+      ],
+      "depotTypes": [
+        {
+          "gameId": "dyn_car_pln",
+          "type": "Factory",
+          "cities": [
+            "kingman"
+          ],
+          "locations": {},
+          "accepts": [
+            "air-conditioning-units",
+            "borates",
+            "bromine",
+            "cables",
+            "chemical-granules",
+            "concrete-barrier",
+            "cooling-tower",
+            "cotton-seed",
+            "crude-oil",
+            "diesel",
+            "dry-van",
+            "electronic-components",
+            "forklifts",
+            "heat-exchanger",
+            "iron-pipes",
+            "machine-parts",
+            "material-handler",
+            "moving-containers",
+            "office-supplies",
+            "paint",
+            "paper",
+            "scaffolding",
+            "scissor-lift",
+            "solvents",
+            "sulphur",
+            "sulphuric-acid",
+            "talc-powder",
+            "transformer",
+            "ventilation-shaft",
+            "wire-rod-coil",
+            "yard-truck"
+          ],
+          "provides": [
+            "big-tires",
+            "concrete-barrier",
+            "empty-pallets",
+            "ibc-containers",
+            "industrial-pallets",
+            "material-handler",
+            "moving-containers",
+            "reservoir-tank",
+            "scaffolding",
+            "scissor-lift",
+            "tires",
+            "used-packaging",
+            "waste-paper",
+            "yard-truck"
+          ],
+          "dlcCargo": {
+            "heavy-cargo-pack": {
+              "name": "Heavy Cargo Pack",
+              "accepts": [
+                "cable-reel",
+                "transformer-heavy-cargo-pack"
+              ],
+              "provides": []
+            },
+            "bobcat-cargo-pack": {
+              "name": "Bobcat Cargo Pack",
+              "accepts": [
+                "forklift-bobcat-d30"
+              ],
+              "provides": []
+            },
+            "volvo-construction-equipment": {
+              "name": "Volvo Construction Equipment",
+              "accepts": [],
+              "provides": [
+                "wheels-with-volvo-rims"
+              ]
+            }
+          }
+        }
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Dynamix",
+        "revid": 311823
+      }
+    },
+    {
       "id": "eddys",
       "name": "Eddy's",
       "fullName": null,
@@ -3389,7 +3516,9 @@
             "las-vegas",
             "reno",
             "san-diego",
-            "san-francisco"
+            "san-francisco",
+            "sierra-vista",
+            "yuma"
           ],
           "locations": {},
           "accepts": [
@@ -3527,6 +3656,7 @@
           "gameId": "ele_epw_sit",
           "type": "Electric substation",
           "cities": [
+            "kayenta",
             "mojave",
             "san-diego"
           ],
@@ -3603,13 +3733,17 @@
           "type": "Warehouse",
           "cities": [
             "elko",
+            "flagstaff",
             "fresno",
+            "kingman",
             "las-vegas",
             "los-angeles",
+            "phoenix",
             "redding",
             "sacramento",
             "san-diego",
-            "stockton"
+            "stockton",
+            "tucson"
           ],
           "locations": {},
           "accepts": [
@@ -3818,6 +3952,8 @@
           "gameId": "fb_farm_mkt",
           "type": "Market",
           "cities": [
+            "camp-verde",
+            "flagstaff",
             "huron"
           ],
           "locations": {},
@@ -3866,6 +4002,7 @@
           "type": "Feed mill",
           "cities": [
             "el-centro",
+            "flagstaff",
             "sacramento"
           ],
           "locations": {},
@@ -4034,6 +4171,7 @@
           "type": "Fuel storage",
           "cities": [
             "fresno",
+            "tucson",
             "winnemucca"
           ],
           "locations": {},
@@ -4469,12 +4607,24 @@
           "gameId": null,
           "type": "Gas station",
           "cities": [
+            "clifton",
             "el-centro",
             "elko",
+            "kayenta",
             "los-angeles",
-            "modesto"
+            "modesto",
+            "nogales",
+            "page",
+            "phoenix",
+            "san-simon"
           ],
           "locations": {
+            "clifton": "Along US 191",
+            "kayenta": "At the intersection of US 160 and US 163",
+            "nogales": "Along Mariposa Rd",
+            "page": "At the intersection of US 89 and Haul Rd",
+            "phoenix": "West of I-17 exit 201 on the north side of the city",
+            "san-simon": "Along BU 10 at I-10 exit 378",
             "el-centro": "South of I-8 exit 115 on the south side of the city",
             "los-angeles": "On Alameda St south of I-10 exit 15",
             "modesto": "At the intersection of 7th St and Pecos Ave on the south side of the city near CA 99 exit 223",
@@ -4509,8 +4659,10 @@
           "type": "Chemical storage",
           "cities": [
             "blythe",
+            "camp-verde",
             "el-centro",
             "indio",
+            "kayenta",
             "primm",
             "santa-maria"
           ],
@@ -4846,6 +4998,39 @@
       }
     },
     {
+      "id": "greenpetrol",
+      "name": "GreenPetrol",
+      "fullName": null,
+      "category": "energy",
+      "industry": "Gas stations",
+      "defIds": [
+        "grp_oil_gst"
+      ],
+      "depotTypes": [
+        {
+          "gameId": "grp_oil_gst",
+          "type": null,
+          "cities": [
+            "flagstaff"
+          ],
+          "locations": {
+            "flagstaff": "At the end of Butler Avenue south of I-40 exit 198"
+          },
+          "accepts": [
+            "diesel",
+            "gasoline",
+            "propane"
+          ],
+          "provides": [],
+          "dlcCargo": {}
+        }
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/GreenPetrol",
+        "revid": 298703
+      }
+    },
+    {
       "id": "haulett",
       "name": "Haulett",
       "fullName": null,
@@ -4859,9 +5044,13 @@
           "gameId": "hau_oil_gst",
           "type": null,
           "cities": [
-            "primm"
+            "kingman",
+            "primm",
+            "winslow"
           ],
           "locations": {
+            "kingman": "North of I-40 US 93 exit 53",
+            "winslow": "South of I-40 US 180 exit 255",
             "primm": "West of I-15 exit 1"
           },
           "accepts": [
@@ -4959,9 +5148,12 @@
           "type": "Service shop",
           "cities": [
             "bakersfield",
+            "flagstaff",
+            "kingman",
             "oakland",
             "redding",
-            "san-diego"
+            "san-diego",
+            "show-low"
           ],
           "locations": {},
           "accepts": [
@@ -5269,6 +5461,8 @@
           "gameId": "hs_mkt",
           "type": "Market",
           "cities": [
+            "kingman",
+            "lake-havasu-city",
             "los-angeles",
             "modesto",
             "redding",
@@ -6143,7 +6337,8 @@
             "reno",
             "san-francisco",
             "san-jose",
-            "santa-maria"
+            "santa-maria",
+            "winslow"
           ],
           "locations": {},
           "accepts": [
@@ -6212,9 +6407,11 @@
           "gameId": "mon_farm",
           "type": "Vineyard",
           "cities": [
+            "camp-verde",
             "fresno",
             "sacramento",
             "san-diego",
+            "san-simon",
             "ukiah"
           ],
           "locations": {},
@@ -6971,6 +7168,248 @@
       }
     },
     {
+      "id": "phoenix-freight",
+      "name": "Phoenix Freight",
+      "fullName": null,
+      "category": "logistic",
+      "industry": "Airport logistics",
+      "defIds": [
+        "aport_phx"
+      ],
+      "depotTypes": [
+        {
+          "gameId": "aport_phx",
+          "type": null,
+          "cities": [
+            "phoenix"
+          ],
+          "locations": {},
+          "accepts": [
+            "aircraft-engine",
+            "aircraft-wing",
+            "almond-boxes",
+            "aromatics",
+            "barley",
+            "batteries",
+            "beverages",
+            "bromine",
+            "buttermilk",
+            "cables",
+            "cars",
+            "construction-houses",
+            "corn",
+            "dry-fruits",
+            "dry-van",
+            "drywall",
+            "electronic-components",
+            "ethanol",
+            "excavated-soil",
+            "flour",
+            "forklifts",
+            "frozen-fruits",
+            "frozen-vegetables",
+            "fruit-juice",
+            "fruits",
+            "grain",
+            "gravel",
+            "heat-exchanger",
+            "home-accessories",
+            "household-appliances",
+            "iron-pipes",
+            "jet-engine-inlet-cowl",
+            "lemonade",
+            "material-handler",
+            "meat",
+            "milk",
+            "motor-grader",
+            "moving-containers",
+            "nuts",
+            "office-supplies",
+            "oil-pipes",
+            "pelleted-animal-food",
+            "pesticides",
+            "potatoes",
+            "power-generator",
+            "refrigerated-trailer",
+            "rice",
+            "rye",
+            "sand",
+            "scaffolding",
+            "scissor-lift",
+            "silica",
+            "soybean",
+            "stones",
+            "sugar-beet",
+            "trailers",
+            "transformer",
+            "vegetables",
+            "wheat",
+            "wind-turbine-nacelle",
+            "wind-turbine-tower",
+            "wire-rod-coil",
+            "yard-truck"
+          ],
+          "provides": [
+            "air-conditioning-units",
+            "aircraft-engine",
+            "aircraft-wing",
+            "batteries",
+            "beverages",
+            "bromine",
+            "butter",
+            "buttermilk",
+            "cables",
+            "cans",
+            "car-parts",
+            "cheese",
+            "clothes",
+            "cooling-tower",
+            "dry-milk",
+            "electronic-components",
+            "empty-bottles",
+            "fertilizer",
+            "flour",
+            "forklifts",
+            "frozen-food",
+            "frozen-fruits",
+            "frozen-vegetables",
+            "furniture",
+            "heat-exchanger",
+            "home-accessories",
+            "household-appliances",
+            "ice-cream",
+            "insulation-panels",
+            "iron-pipes",
+            "jet-engine-inlet-cowl",
+            "lemonade",
+            "lye",
+            "machine-parts",
+            "material-handler",
+            "mercuric-chloride",
+            "milk",
+            "motor-grader",
+            "moving-containers",
+            "office-supplies",
+            "oil-pipes",
+            "packaged-food",
+            "paper",
+            "pesticides",
+            "potassium",
+            "roof-shingles",
+            "sawdust-panels",
+            "scaffolding",
+            "scissor-lift",
+            "soda-ash",
+            "tableware",
+            "toys",
+            "transformer",
+            "ventilation-shaft",
+            "wind-turbine-nacelle",
+            "wind-turbine-tower",
+            "wire-rod-coil",
+            "wood-shavings",
+            "yard-truck"
+          ],
+          "dlcCargo": {
+            "heavy-cargo-pack": {
+              "name": "Heavy Cargo Pack",
+              "accepts": [
+                "cable-reel",
+                "transformer-heavy-cargo-pack"
+              ],
+              "provides": [
+                "cable-reel",
+                "transformer-heavy-cargo-pack"
+              ]
+            },
+            "bobcat-cargo-pack": {
+              "name": "Bobcat Cargo Pack",
+              "accepts": [
+                "forklift-bobcat-d30"
+              ],
+              "provides": [
+                "forklift-bobcat-d30"
+              ]
+            }
+          }
+        }
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Phoenix_Freight",
+        "revid": 311804
+      }
+    },
+    {
+      "id": "pioneer",
+      "name": "Pioneer",
+      "fullName": null,
+      "category": "vehicle",
+      "industry": "Passenger vehicle retail",
+      "defIds": [
+        "pio_car_dlr"
+      ],
+      "depotTypes": [
+        {
+          "gameId": "pio_car_dlr",
+          "type": "Dealership",
+          "cities": [
+            "lake-havasu-city",
+            "page",
+            "show-low"
+          ],
+          "locations": {},
+          "accepts": [
+            "car-parts",
+            "cars",
+            "diesel",
+            "dump-truck",
+            "gasoline",
+            "medium-truck-chassis",
+            "moving-containers",
+            "municipal-truck",
+            "office-supplies",
+            "pickups-crane",
+            "pickups-passenger",
+            "recreational-vehicle-campers",
+            "recreational-vehicle-motorhomes",
+            "service-truck",
+            "tires",
+            "trailers",
+            "utility-terrain-vehicles"
+          ],
+          "provides": [
+            "cars",
+            "dump-truck",
+            "medium-truck-chassis",
+            "moving-containers",
+            "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
+            "recreational-vehicle-campers",
+            "recreational-vehicle-motorhomes",
+            "service-truck",
+            "trailers",
+            "utility-terrain-vehicles"
+          ],
+          "dlcCargo": {},
+          "genericNames": {
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ],
+            "Recreational Vehicle": [
+              "recreational-vehicle-campers",
+              "recreational-vehicle-motorhomes"
+            ]
+          }
+        }
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Pioneer",
+        "revid": 311857
+      }
+    },
+    {
       "id": "plaster-and-sons",
       "name": "Plaster & Sons",
       "fullName": null,
@@ -6995,7 +7434,8 @@
             "reno",
             "san-diego",
             "santa-cruz",
-            "truckee"
+            "truckee",
+            "yuma"
           ],
           "locations": {},
           "accepts": [
@@ -7121,6 +7561,7 @@
           "cities": [
             "carson-city",
             "los-angeles",
+            "nogales",
             "san-francisco"
           ],
           "locations": {},
@@ -7261,6 +7702,7 @@
           "type": "House construction site",
           "cities": [
             "eureka",
+            "lake-havasu-city",
             "san-francisco"
           ],
           "locations": {},
@@ -7366,7 +7808,10 @@
             "ely",
             "eureka",
             "indio",
-            "san-jose"
+            "nogales",
+            "san-jose",
+            "show-low",
+            "tucson"
           ],
           "locations": {},
           "accepts": [
@@ -7453,6 +7898,8 @@
           "gameId": "pns_con_grg",
           "type": "Garage",
           "cities": [
+            "kingman",
+            "phoenix",
             "stockton"
           ],
           "locations": {},
@@ -7825,7 +8272,8 @@
             "bakersfield",
             "elko",
             "los-angeles",
-            "stockton"
+            "stockton",
+            "yuma"
           ],
           "locations": {},
           "accepts": [
@@ -8292,6 +8740,95 @@
       }
     },
     {
+      "id": "sea-horizon",
+      "name": "Sea Horizon",
+      "fullName": null,
+      "category": "vehicle",
+      "industry": "Shipbuilding",
+      "defIds": [
+        "sh_shp_mar",
+        "sh_shp_plnt"
+      ],
+      "depotTypes": [
+        {
+          "gameId": "sh_shp_pln",
+          "type": "Plant",
+          "cities": [
+            "lake-havasu-city"
+          ],
+          "locations": {},
+          "accepts": [
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
+            "cables",
+            "computers",
+            "curtains",
+            "drywall",
+            "electronic-components",
+            "forklifts",
+            "furniture",
+            "geo-membranes-rolls",
+            "glass",
+            "home-accessories",
+            "lumber-beams",
+            "lumber-boards",
+            "metal-coil",
+            "moving-containers",
+            "packed-lumber",
+            "paint",
+            "scaffolding",
+            "scissor-lift",
+            "wire-rod-coil"
+          ],
+          "provides": [
+            "boat",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
+            "glass-racks",
+            "moving-containers",
+            "scaffolding",
+            "scissor-lift",
+            "scrap-metals",
+            "speed-motor-boat",
+            "used-packaging",
+            "waste-paper"
+          ],
+          "dlcCargo": {
+            "heavy-cargo-pack": {
+              "name": "Heavy Cargo Pack",
+              "accepts": [
+                "all-terrain-crane"
+              ],
+              "provides": [
+                "all-terrain-crane"
+              ]
+            },
+            "bobcat-cargo-pack": {
+              "name": "Bobcat Cargo Pack",
+              "accepts": [
+                "forklift-bobcat-d30"
+              ],
+              "provides": []
+            }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ],
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
+          }
+        }
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Sea_Horizon",
+        "revid": 313433
+      }
+    },
+    {
       "id": "sell-goods",
       "name": "Sell Goods",
       "fullName": null,
@@ -8307,8 +8844,12 @@
           "cities": [
             "barstow",
             "blythe",
+            "camp-verde",
             "jackpot",
+            "nogales",
             "oakland",
+            "page",
+            "phoenix",
             "redding",
             "sacramento",
             "san-jose",
@@ -8521,8 +9062,11 @@
           "type": "Market",
           "cities": [
             "eureka",
+            "kayenta",
             "las-vegas",
             "modesto",
+            "nogales",
+            "page",
             "primm",
             "santa-maria",
             "truckee"
@@ -8602,10 +9146,14 @@
           "cities": [
             "carson-city",
             "el-centro",
+            "grand-canyon-village",
+            "lake-havasu-city",
             "mojave",
+            "phoenix",
             "sacramento",
             "san-jose",
-            "santa-cruz"
+            "santa-cruz",
+            "winslow"
           ],
           "locations": {},
           "accepts": [
@@ -8814,7 +9362,8 @@
           "gameId": "st_met_whs",
           "type": "Warehouse",
           "cities": [
-            "el-centro"
+            "el-centro",
+            "page"
           ],
           "locations": {},
           "accepts": [
@@ -8989,15 +9538,18 @@
           "gameId": "sc_frm",
           "type": "Farm",
           "cities": [
+            "camp-verde",
             "huron",
             "indio",
             "jackpot",
             "modesto",
             "oxnard",
             "sacramento",
+            "san-simon",
             "santa-cruz",
             "santa-maria",
-            "winnemucca"
+            "winnemucca",
+            "yuma"
           ],
           "locations": {},
           "accepts": [
@@ -9144,7 +9696,9 @@
             "blythe",
             "carson-city",
             "huron",
+            "nogales",
             "oxnard",
+            "san-simon",
             "tonopah"
           ],
           "locations": {},
@@ -9285,6 +9839,221 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Sunshine_Crops",
         "revid": 311864
+      }
+    },
+    {
+      "id": "technoma",
+      "name": "Technoma",
+      "fullName": null,
+      "category": "construction",
+      "industry": "Electronics manufacturing",
+      "defIds": [
+        "tch_el_pln"
+      ],
+      "depotTypes": [
+        {
+          "gameId": "tch_el_pln",
+          "type": "Plant",
+          "cities": [
+            "kingman"
+          ],
+          "locations": {},
+          "accepts": [
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
+            "borates",
+            "boric-acid",
+            "bromine",
+            "cables",
+            "computers",
+            "crawler-carrier",
+            "diesel",
+            "dry-van",
+            "drywall",
+            "dumpster",
+            "electronic-components",
+            "empty-pallets",
+            "ethanol",
+            "forklifts",
+            "gasoline",
+            "glass",
+            "heat-exchanger",
+            "ibc-containers",
+            "industrial-pallets",
+            "insulation-panels",
+            "lumber-beams",
+            "lumber-boards",
+            "machine-parts",
+            "material-handler",
+            "metal-coil",
+            "moving-containers",
+            "office-supplies",
+            "packed-lumber",
+            "paint",
+            "paper",
+            "pressure-tank",
+            "sawdust-panels",
+            "scaffolding",
+            "scissor-lift",
+            "silane",
+            "square-tubing",
+            "sulphuric-acid",
+            "telescopic-handler",
+            "tvs",
+            "ventilation-shaft",
+            "wire-rod-coil",
+            "yard-truck"
+          ],
+          "provides": [
+            "air-conditioning-units",
+            "batteries",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
+            "cables",
+            "circuit-breakers",
+            "cooling-tower",
+            "crawler-carrier",
+            "dumpster",
+            "electronic-components",
+            "empty-pallets",
+            "forklifts",
+            "generator-set",
+            "glass-racks",
+            "heat-exchanger",
+            "household-appliances",
+            "ibc-containers",
+            "machine-parts",
+            "material-handler",
+            "moving-containers",
+            "power-generator",
+            "scaffolding",
+            "scissor-lift",
+            "scrap-metals",
+            "telescopic-handler",
+            "transformer",
+            "tvs",
+            "used-packaging",
+            "ventilation-shaft",
+            "waste-paper",
+            "wire-rod-coil",
+            "yard-truck"
+          ],
+          "dlcCargo": {
+            "heavy-cargo-pack": {
+              "name": "Heavy Cargo Pack",
+              "accepts": [
+                "all-terrain-crane"
+              ],
+              "provides": [
+                "all-terrain-crane",
+                "transformer-heavy-cargo-pack"
+              ]
+            },
+            "jcb-equipment-pack": {
+              "name": "JCB Equipment Pack",
+              "accepts": [
+                "telescopic-handler-jcb-540-180"
+              ],
+              "provides": [
+                "compact-generators-jcb-g100rs"
+              ]
+            },
+            "bobcat-cargo-pack": {
+              "name": "Bobcat Cargo Pack",
+              "accepts": [
+                "agricultural-telehandler-bobcat-tl3070",
+                "forklift-bobcat-d30"
+              ],
+              "provides": [
+                "agricultural-telehandler-bobcat-tl3070",
+                "forklift-bobcat-d30"
+              ]
+            }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ],
+            "Lumber": [
+              "lumber-beams",
+              "lumber-boards"
+            ]
+          }
+        }
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Technoma",
+        "revid": 311868
+      }
+    },
+    {
+      "id": "tidbit",
+      "name": "Tidbit",
+      "fullName": null,
+      "category": "retail",
+      "industry": "Grocery",
+      "defIds": [
+        "tid_mkt"
+      ],
+      "depotTypes": [
+        {
+          "gameId": "tid_mkt",
+          "type": "Market",
+          "cities": [
+            "clifton",
+            "grand-canyon-village",
+            "winslow"
+          ],
+          "locations": {},
+          "accepts": [
+            "almond-boxes",
+            "beverages",
+            "butter",
+            "buttermilk",
+            "cheese",
+            "clothes",
+            "dry-fruits",
+            "dry-milk",
+            "dry-van",
+            "flour",
+            "frozen-food",
+            "frozen-fruits",
+            "frozen-vegetables",
+            "fruits",
+            "home-accessories",
+            "ice-cream",
+            "lemonade",
+            "meat",
+            "milk",
+            "moving-containers",
+            "nuts",
+            "office-supplies",
+            "packaged-food",
+            "paper",
+            "pelleted-animal-food",
+            "potatoes",
+            "refrigerated-trailer",
+            "rice",
+            "salt",
+            "sugar",
+            "toys",
+            "tvs",
+            "vegetables",
+            "yogurt"
+          ],
+          "provides": [
+            "empty-pallets",
+            "moving-containers",
+            "used-packaging",
+            "waste-paper"
+          ],
+          "dlcCargo": {}
+        }
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Tidbit",
+        "revid": 311869
       }
     },
     {
@@ -9490,11 +10259,15 @@
           "gameId": "ven_whs",
           "type": "Warehouse",
           "cities": [
+            "kayenta",
             "los-angeles",
             "modesto",
+            "phoenix",
             "sacramento",
             "san-francisco",
-            "winnemucca"
+            "show-low",
+            "winnemucca",
+            "yuma"
           ],
           "locations": {},
           "accepts": [
@@ -10054,6 +10827,8 @@
             "los-angeles",
             "redding",
             "reno",
+            "sierra-vista",
+            "tucson",
             "ukiah"
           ],
           "locations": {},
@@ -10129,6 +10904,7 @@
           "gameId": "wds_wst_whs",
           "type": "Waste transfer station",
           "cities": [
+            "flagstaff",
             "oxnard"
           ],
           "locations": {},
@@ -10240,6 +11016,101 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/WDS",
         "revid": 304926
+      }
+    },
+    {
+      "id": "wingman-aviation-center",
+      "name": "Wingman Aviation Center",
+      "fullName": null,
+      "category": "vehicle",
+      "industry": "Aviation",
+      "defIds": [
+        "wac_air_svc"
+      ],
+      "depotTypes": [
+        {
+          "gameId": "wac_air_svc",
+          "type": "Aircraft service",
+          "cities": [
+            "grand-canyon-village"
+          ],
+          "locations": {},
+          "accepts": [
+            "air-conditioning-units",
+            "aircraft-engine",
+            "aircraft-wing",
+            "batteries",
+            "boom-lift-articulated",
+            "boom-lift-telescopic",
+            "cables",
+            "computers",
+            "cooling-tower",
+            "diesel",
+            "drywall",
+            "dump-truck",
+            "forklifts",
+            "gasoline",
+            "glass",
+            "jet-engine-inlet-cowl",
+            "medium-truck-chassis",
+            "metal-coil",
+            "moving-containers",
+            "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
+            "scaffolding",
+            "scissor-lift",
+            "service-truck",
+            "tires",
+            "transformer",
+            "ventilation-shaft",
+            "wire-rod-coil"
+          ],
+          "provides": [
+            "aircraft-engine",
+            "aircraft-wing",
+            "dump-truck",
+            "empty-pallets",
+            "glass-racks",
+            "industrial-pallets",
+            "jet-engine-inlet-cowl",
+            "medium-truck-chassis",
+            "moving-containers",
+            "municipal-truck",
+            "pickups-crane",
+            "pickups-passenger",
+            "reservoir-tank",
+            "scaffolding",
+            "scissor-lift",
+            "scrap-metals",
+            "service-truck",
+            "used-packaging",
+            "waste-paper"
+          ],
+          "dlcCargo": {
+            "bobcat-cargo-pack": {
+              "name": "Bobcat Cargo Pack",
+              "accepts": [
+                "forklift-bobcat-d30"
+              ],
+              "provides": []
+            }
+          },
+          "genericNames": {
+            "Boom Lift": [
+              "boom-lift-articulated",
+              "boom-lift-telescopic"
+            ],
+            "Pickups": [
+              "pickups-crane",
+              "pickups-passenger"
+            ]
+          }
+        }
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Wingman_Aviation_Center",
+        "revid": 304893
       }
     },
     {
