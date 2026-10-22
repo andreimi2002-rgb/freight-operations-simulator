@@ -18,6 +18,7 @@ if (box) {
   const result = box.querySelector('[data-gen-result]');
   const g = (k) => box.querySelector(`[data-g="${k}"]`);
   const fixedCity = box.dataset.genCity || null;
+  const fixedCompany = box.dataset.genCompany || null;
   let current = null;
   let ds = null;
 
@@ -64,7 +65,7 @@ if (box) {
   const generate = (seed) => {
     const ownedSet = mine.checked ? owned() : null;
     if (mine.checked && !ownedSet) { result.hidden = true; say(t.dlcs?.notSet); return; }
-    const job = randomJob(ds, { seed, from: fixedCity || from?.value || null, baseOnly: base.checked, ownedDlcs: ownedSet });
+    const job = randomJob(ds, { seed, from: fixedCity || from?.value || null, baseOnly: base.checked, ownedDlcs: ownedSet, company: fixedCompany });
     if (!job) { result.hidden = true; say(t.generator?.none); return; }
     current = job;
     show(job);

@@ -74,9 +74,11 @@ if (root) {
 
     const companyOf = (d) => ds.companyById.get(d.company);
     m('pickupCompany').textContent = companyOf(src).name;
+    m('pickupCompany').href = `/ats/company/${src.company}`;
     m('pickupWhere').textContent = `${src.type ?? ''}${src.type ? ', ' : ''}${fromCity.name}, ${fromCity.state}`;
     m('pickupId').textContent = src.gameId ? fill(t.mission?.gameId, { id: src.gameId }) : t.mission?.noGameId;
     m('deliveryCompany').textContent = companyOf(dst).name;
+    m('deliveryCompany').href = `/ats/company/${dst.company}`;
     m('deliveryWhere').textContent = `${dst.type ?? ''}${dst.type ? ', ' : ''}${toCity.name}, ${toCity.state}`;
     m('deliveryId').textContent = dst.gameId ? fill(t.mission?.gameId, { id: dst.gameId }) : t.mission?.noGameId;
 

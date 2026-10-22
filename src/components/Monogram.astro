@@ -1,0 +1,24 @@
+---
+// Company monogram: two letters on a dark tile. Not the company logo (game artwork is not used).
+import { monogram } from '../lib/companies.mjs';
+
+interface Props { name: string; size?: 'sm' | 'lg' }
+const { name, size = 'sm' } = Astro.props;
+---
+<span class:list={['mono-tile', size]} aria-hidden="true">{monogram(name)}</span>
+
+<style>
+  .mono-tile {
+    display: inline-grid;
+    place-items: center;
+    flex: none;
+    background: var(--panel-deep);
+    border: 1px solid var(--border-input);
+    color: var(--amber);
+    font-family: var(--font-mono);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .sm { width: 40px; height: 40px; border-radius: 10px; font-size: 14px; }
+  .lg { width: 72px; height: 72px; border-radius: 16px; font-size: 26px; }
+</style>

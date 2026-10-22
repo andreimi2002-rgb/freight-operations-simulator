@@ -7,6 +7,7 @@ import JobGenerator from '../../../components/JobGenerator.astro';
 import { getI18n } from '../../../i18n/index.mjs';
 import { cities, companies, cargo, photos, cityById, stateByCode } from '../../../lib/data.mjs';
 import { cityParams, cityPath, cityCompanies, cityCargoCounts } from '../../../lib/ats.mjs';
+import { companyPath } from '../../../lib/companies.mjs';
 
 export function getStaticPaths() {
   return cityParams(cities);
@@ -104,7 +105,7 @@ const cards = [
         {groups.map((g) => (
           <li class="company">
             <header class="co-head">
-              <h3>{g.company.fullName ?? g.company.name}</h3>
+              <h3><a class="co-link" href={companyPath(g.company)}>{g.company.fullName ?? g.company.name}</a></h3>
               {g.company.industry && <span class="muted small">{g.company.industry}</span>}
             </header>
             {g.depots.map((d) => (
@@ -188,6 +189,8 @@ const cards = [
   .company { display: grid; gap: var(--space-3); align-content: start; padding: var(--space-5); background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-lg); min-width: 0; }
   .co-head { display: grid; gap: 2px; }
   .co-head h3 { font-size: 18px; }
+  .co-link { color: var(--text); }
+  .co-link:hover { color: var(--amber); }
   .depot { display: grid; gap: var(--space-2); padding-top: var(--space-3); border-top: 1px solid var(--row-line); }
   .depot-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2); }
   .depot-type { font-weight: 600; }

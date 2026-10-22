@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.0-alpha.9 — 2026-10-22 (company pages)
+
+- **Company pages:** `/ats/companies` lists the 67 companies with depots on the starting map, grouped by category; `/ats/company/<id>` shows each one: industry, depots and cities, every depot type with its game ID, cities (and gas station locations), cargo offered and accepted (DLC cargo grouped), **where its cargo goes** and **who supplies it** (computed from the depot lists: only links that exist in the game), a job generator limited to its depots, and the wiki link. A generated two-letter monogram stands in for the logo (game artwork is not used).
+- Links to company pages from city pages and job sheets; "Companies" in the header.
+- `data/ats/observations.json`: jobs seen in the game by the owner, for calibrating distances and pay later (first entry: Los Angeles → Phoenix, 531 km, 6 h 22 min).
+- 5 new tests (85 in all).
+
 ## 2.0.0-alpha.8 — 2026-10-22 (Arizona: the starting map is complete)
 
 - **Arizona** (free DLC) added: 16 cities, now 50 in all (CA 24, NV 10, AZ 16), 67 companies and 347 depots. Arizona does not observe daylight saving time, so its cities use `America/Phoenix` (a per-state time zone override in `data/ats/scope.json`).

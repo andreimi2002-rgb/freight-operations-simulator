@@ -24,6 +24,7 @@ Not affiliated with SCS Software. No images from the games are stored.
 | `aliases.json` | Owner-approved corrections for cargo names that do not match the cargo list (typos, a different wording, generic names mapped to every variant). Edited by hand. |
 | `trucks.json` | Released ATS trucks (announced ones are left out and listed in `issues.json`): make, engines with horsepower range, transmissions, cabs, wiki link. |
 | `distances.json` | Estimated road distances (km) between every ordered pair of cities, from OSRM on OpenStreetMap roads (ODbL, © OpenStreetMap contributors). Marked as estimates; `calibrationFactor` will hold a correction once checked against in-game distances. Written by `scripts/ats/distances.mjs`. |
+| `observations.json` | Jobs seen in the game by the project owner (distance, time, pay, cargo, market, level), to calibrate estimates later. Reported values, edited by hand. |
 | `issues.json` | Everything to check by hand: empty values, contradictions between pages, names that do not match, counts that differ. |
 
 Every file has a `meta` block with the source, licence, retrieval date, attribution and generator.

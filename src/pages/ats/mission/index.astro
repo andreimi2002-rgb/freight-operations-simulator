@@ -31,13 +31,13 @@ const { t, meta } = getI18n();
       <div class="grid">
         <section class="card" aria-labelledby="m-pickup">
           <h2 id="m-pickup" class="eyebrow">{t('mission.pickup')}</h2>
-          <p class="big" data-m="pickupCompany"></p>
+          <p class="big"><a class="co-link" data-m="pickupCompany"></a></p>
           <p class="soft" data-m="pickupWhere"></p>
           <p class="mono muted small" data-m="pickupId"></p>
         </section>
         <section class="card" aria-labelledby="m-delivery">
           <h2 id="m-delivery" class="eyebrow">{t('mission.delivery')}</h2>
-          <p class="big" data-m="deliveryCompany"></p>
+          <p class="big"><a class="co-link" data-m="deliveryCompany"></a></p>
           <p class="soft" data-m="deliveryWhere"></p>
           <p class="mono muted small" data-m="deliveryId"></p>
         </section>
@@ -113,6 +113,8 @@ const { t, meta } = getI18n();
   .grid > * { min-width: 0; }
   .card { display: grid; gap: var(--space-2); align-content: start; }
   .big { font-size: 18px; font-weight: 600; }
+  .co-link { color: var(--text); }
+  .co-link:hover { color: var(--amber); }
   .small { font-size: 13px; }
   .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-3); margin: 0; }
   .facts > div { display: grid; gap: 2px; min-width: 0; }
