@@ -345,6 +345,61 @@ apoi PR `v2-freight-world` → `main` cu deploy preview; după aprobarea proprie
 
 ---
 
+## 8b. Roadmap după lansare (actualizat 2026-10-22)
+
+**Stare:** Etapele 0–4 sunt gata și live, plus Arizona (harta de start completă: 50 de orașe), paginile de companie (Etapa 6, prima parte) și harta în stil ATS. Etapele 5–8 de mai sus rămân direcția; fazele de mai jos sunt ordinea concretă de lucru.
+
+Principii pentru toate fazele: nimic inventat (regulă reală, estimare marcată sau „simulat Freight World”); fără imagini, sunete sau logo-uri din joc; totul trece prin PR cu deploy preview și aprobarea proprietarului.
+
+### Faza A — Senzația de joc (următoarea)
+1. **Fișa cursei în stilul ofertei din joc:** card ca în piața de mărfuri (marfa, de la → la, distanță, termen, greutate), pictograme de abilități desenate de noi.
+2. **Termen de livrare și urgență** (Standard / Important / Urgent), calculate din distanță, pauzele obligatorii și o marjă; marcate „simulat”.
+3. **Plan de condus cu pauze (HOS, reguli FMCSA reale):** max. 11 h de condus, pauză 30 min după 8 h, odihnă 10 h; ora și locul pauzelor pe ruta de pe hartă.
+4. **Timp în joc vs timp real** (scara de timp a jocului, ~20×) pe fișă.
+5. **Harta: pictograme** — companiile/depozitele grupate la oraș (cu link), facilitățile orașului (garaj, service, cântar, dealer, hotel, recrutare), în stilul pictogramelor din joc; filtru de straturi.
+6. **Lanț de curse:** după livrare, ce poți lua mai departe din orașul de destinație (spre orice sau spre un oraș ales).
+
+### Faza B — Descoperire, căutare, creștere
+1. **Pagini de marfă** (`/ats/cargo/<id>`), **de remorcă** și **de camion**, din datele existente.
+2. **Căutare rapidă** în header (oraș, companie, marfă).
+3. **SEO:** sitemap.xml, robots.txt, date structurate, imagini de previzualizare (Open Graph) pentru orașe, companii, mărfuri, fișe.
+4. **Domeniu propriu** (singurul cost), **statistici fără cookie-uri**, **pagină / canal de feedback**.
+5. **Favorite și istoric local** (în browser, fără cont).
+
+### Faza C — Calibrare (când proprietarul trimite date din joc)
+1. **Distanțe și durate:** factor de corecție din 4–5 curse notate (`data/ats/observations.json`; acum 1: LA → Phoenix, 531 km în joc vs 600 km estimat).
+2. **Plata estimată:** formula de pe wiki calibrată pe 5–10 curse cu mărfuri diferite; afișată ca „plată estimată” cu baza ei.
+3. **Greutățile lipsă** („???”, 31 de mărfuri), din joc.
+
+### Faza D — Realism avansat
+1. **Puncte pe drum:** benzinării, odihne, cântare, puncte de vedere între orașe (listele de pe wiki), pe hartă și pe rută.
+2. **Cântare și limite de greutate** pe rută (80.000 lb total; avertisment „oversize / permis special”).
+3. **Combinații de remorci legale pe stat** (tabelul Long Combination Vehicles de pe wiki).
+4. **Combustibil pe rută** (estimare marcată) și unde alimentezi.
+5. **Vremea pe tot traseul** (nu doar la capete) și **zi/noapte pe rută** (răsărit, apus).
+6. **Design:** tabela de plecări cu efect split-flap (o singură animație, oprită la „mișcare redusă”); pagina de acasă cu harta și orașele cu plecări în ora curentă; **mod GPS** pe fișă (lista drumurilor și ieșirilor); **mod cabină** pentru al doilea ecran (ceas, vreme la destinație, rută).
+7. **Mai multe limbi** (română, germană, poloneză), câte un fișier JSON.
+
+### Faza E — Aplicația companion (Etapa 7; depinde de răspunsul SCS)
+1. Cercetare: SCS Telemetry SDK, pluginurile existente, drumul datelor joc → aplicație desktop → site / telefon.
+2. Prototip desktop care citește cursa activă și o arată în designul Freight World.
+3. Legarea cursei live de paginile de oraș și de fișe (telemetria dă și ID-urile interne care lipsesc acum).
+4. Primul backend: conturi, istoric, statistici.
+
+### Faza F — Comunitate și VTC (Etapa 6, restul)
+Comparații între orașe, „cele mai bune curse” dintr-un oraș, funcții pentru companii virtuale (TruckersMP: tabela companiei, convoaie, clasamente — după verificarea condițiilor TruckersMP).
+
+### Faza G — Lansare comercială (Etapa 8)
+Acordul SCS, formă legală (PFA / SRL), termeni și politică de confidențialitate, plăți prin merchant of record (Paddle / Lemon Squeezy), pachetele gratuit / Premium / VTC; donațiile (Ko-fi / Patreon) pot porni oricând.
+
+### Faza H — Extinderea hărții (Etapa 5, când aplicația e mai completă)
+Restul statelor ATS, apoi ETS2 (aceeași structură de date; un stat sau o țară nouă = o intrare în `scope.json` + colectare, poze, distanțe, hartă).
+
+### În paralel, oricând
+- Răspunsul SCS (harta reală, datele din joc, SDK, monetizare) poate schimba fazele A5, D1 și E.
+- Lucruri mici: poze pentru Santa Maria și San Simon, corecturi pe wiki pentru `issues.json`, testare pe telefon real și cu cititor de ecran, fișa pentru imprimare.
+- Proprietarul: curse notate din joc (Faza C), ștergerea cheii Geoapify din Netlify.
+
 ## 9. Mod de lucru pentru Claude Code
 
 - Citește acest fișier la începutul fiecărei etape.
@@ -404,3 +459,4 @@ apoi PR `v2-freight-world` → `main` cu deploy preview; după aprobarea proprie
 | 2026-10-22 | Se adaugă **doar Arizona** acum, ca harta de start (jocul de bază + DLC-ul gratuit) să fie completă; celelalte state vin după ce aplicația e mai completă. Arizona folosește fusul `America/Phoenix` (fără ora de vară), definit ca excepție pe stat în `scope.json`. San Simon rămâne fără poză (nicio poză liberă potrivită pe Commons). |
 | 2026-10-22 | **Paginile de companie** (Etapa 6, prima parte): doar cele 67 de companii cu depozite pe harta de start; cu secțiunile calculate „Where its cargo goes” și „Who supplies it” (doar legături posibile în joc). Fără logo-uri (grafică din joc): monogram generat. Cursele văzute în joc de proprietar se notează în `data/ats/observations.json` pentru calibrare (prima: LA → Phoenix, 531 km în joc vs 600 km estimat). |
 | 2026-10-22 | **Harta**: varianta „în stil SCS”, desenată de noi, cât mai apropiată de harta din ATS (după capturile proprietarului, folosite doar ca referință, nepuse în proiect). Date: Natural Earth 1:10m (domeniu public); drumurile sunt cele reale, rețeaua din joc poate diferi. Rutele de pe fișă urmează drumurile (cel mai scurt drum pe graful hărții). Proprietarul a cerut acordul SCS (info@scssoft.com) pentru harta reală, datele din joc, SDK-ul de telemetrie și monetizare; dacă acceptă, harta poate fi înlocuită. |
+| 2026-10-22 | **Roadmap după lansare** (secțiunea 8b): fazele A (senzația de joc) → B (descoperire, SEO) → C (calibrare, când vin date din joc) → D (realism avansat) → E (aplicația companion, după răspunsul SCS) → F (comunitate, VTC) → G (comercial) → H (alte state, ETS2). Propunerile noi de realism și design (termen și urgență, HOS, lanț de curse, pictograme, split-flap, mod GPS și cabină, pagini de marfă, căutare) sunt incluse în aceste faze. |
