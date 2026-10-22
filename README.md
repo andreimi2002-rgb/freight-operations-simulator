@@ -2,9 +2,15 @@
 
 An ATS / ETS2 style job generator built on the real game map, with live city pages: real local time, real weather and a real city photo. Not a game and not a real freight exchange. Not affiliated with SCS Software.
 
-This is the `v2-freight-world` branch. The plan is in [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md) (Romanian) and the rules for contributors and tools in [AGENTS.md](AGENTS.md). The previous product, the Freight Operations Simulator (FOS), is still published from `main` until Freight World replaces it at the end of stage 3.
+Live at https://freight-operations-simulator.netlify.app (from `main`). The plan is in [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md) (Romanian) and the rules for contributors and tools in [AGENTS.md](AGENTS.md). The previous product, the Freight Operations Simulator (FOS), is kept as the git tag `fos-final`.
 
-## Current version: 2.0.0-alpha.5 (stage 3: departures and route planner)
+## Current version: 2.0.0-alpha.7 (stage 4: job sheets)
+
+- A full sheet for every job at `/ats/mission/<id>`: depots with game ids, cargo, hazmat, trailer with dealer models, recommended trucks, distance and arrival time, weather at both ends with bad-weather warnings, required DLCs.
+- "Generate a job" button; "My DLCs" saved in the browser and used by boards, generator and planner.
+- ATS trucks collected from the wiki (`data/ats/trucks.json`).
+
+### Stage 3
 
 - Live departures boards on every city page and on the home page, from a deterministic job generator (`src/engine/`): only jobs possible in the game, new ones every hour. Route planner at `/ats/planner`.
 - Estimated road distances between all cities (`data/ats/distances.json`, OpenStreetMap via OSRM); `npm run distances:ats`.
@@ -41,7 +47,7 @@ npm run distances:ats       # estimated road distances between cities (OSRM)
 ## Structure
 
 ```
-src/pages/         one file per URL (index, about, 404, ats/index, ats/[state]/[city])
+src/pages/         one file per URL (index, about, 404, ats/index, ats/[state]/[city], ats/planner, ats/mission)
 src/engine/        job generator and job dataset (pure, reusable)
 src/lib/           data access and pure helpers for the pages (units, weather, formatting)
 src/scripts/       browser code: clock, weather, units switch, departures boards, route planner

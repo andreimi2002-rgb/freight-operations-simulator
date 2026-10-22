@@ -12,7 +12,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
 import { createClient, mediaWiki, USER_AGENT } from './lib/wiki-client.mjs';
-import { parseCityPage, parseCompanyPage, parseCargoList, parseTrailerPage } from './lib/parse-ats.mjs';
+import { parseCityPage, parseCompanyPage, parseCargoList, parseTrailerPage, parseTruckPage } from './lib/parse-ats.mjs';
 import { linkTargets } from './lib/wikitext.mjs';
 import { coordinatesFor } from './lib/wikidata.mjs';
 import { buildDataset } from './lib/build.mjs';
@@ -101,6 +101,15 @@ const trailerPages = trailerTitles.map((t) => {
   }
 }
 
+// 4c. Trucks.
+log('trucks…');
+const truckTitles = await wiki.categoryMembers(scope.wiki.truckCategory);
+const truckRaw = await wiki.pages(truckTitles);
+const truckPages = truckTitles.map((t) => {
+  const p = truckRaw.get(t);
+  return p ? { ...parseTruckPage(p.title, p.text), revid: p.revid } : { title: t, notes: ['page missing'] };
+});
+
 // 5. Resolve redirects for every linked title we need to match.
 log('redirects…');
 const stateNames = new Set(scope.states.map((s) => s.name));
@@ -133,7 +142,7 @@ const coordinates = await coordinatesFor(client, prelim.filter((c) => c.stateQid
 const aliases = JSON.parse(readFileSync(join(outDir, 'aliases.json'), 'utf8'));
 const data = buildDataset({
   aliases,
-  scope, cityPages, companyPages, cargoRows: cargoList.rows, cargoSummary: cargoList.summary, trailerPages, titleRedirects, coordinates, pageUrl,
+  scope, cityPages, companyPages, cargoRows: cargoList.rows, cargoSummary: cargoList.summary, trailerPages, truckPages, titleRedirects, coordinates, pageUrl,
 });
 for (const note of cargoList.notes) data.issues.push({ kind: 'parseError', entity: 'cargo list', detail: note });
 
@@ -179,6 +188,10 @@ const files = {
     meta: { ...wikiMeta, description: 'Trailer types named on the cargo list, each with the dealer trailer models (wiki trailer pages) that belong to it. priceUsd is the base dealer price shown on the wiki.', count: data.trailers.length },
     trailers: data.trailers,
   },
+  'trucks.json': {
+    meta: { ...wikiMeta, description: 'Trucks of the game (released models only; announced ones are left out and listed in issues.json). Engines with their horsepower range as given on the wiki.', count: data.trucks.length },
+    trucks: data.trucks,
+  },
   'issues.json': {
     meta: { ...wikiMeta, description: 'Problems found while collecting: missing values, contradictions between pages, names that do not match. For manual checking.', count: data.issues.length },
     issues: data.issues,
@@ -198,6 +211,7 @@ console.log(JSON.stringify({
   depots: data.cities.reduce((n, c) => n + c.depots.length, 0),
   cargo: data.cargo.length,
   trailers: data.trailers.length,
+  trucks: data.trucks.length,
   issues: data.issues.length,
   issuesByKind: kinds,
   network: st,

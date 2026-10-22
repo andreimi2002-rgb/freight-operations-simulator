@@ -5,6 +5,7 @@ import companiesFile from '../../data/ats/companies.json';
 import cargoFile from '../../data/ats/cargo.json';
 import trailersFile from '../../data/ats/trailers.json';
 import distancesFile from '../../data/ats/distances.json';
+import trucksFile from '../../data/ats/trucks.json';
 import photosFile from '../../data/photos.json';
 
 export const scope = scopeFile;
@@ -14,6 +15,7 @@ export const companies = companiesFile.companies;
 export const cargo = cargoFile.cargo;
 export const trailers = trailersFile.trailers;
 export const distances = distancesFile;
+export const trucks = trucksFile.trucks;
 export const photos = photosFile.photos;
 
 export const cityById = new Map(cities.map((c) => [c.id, c]));

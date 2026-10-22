@@ -34,6 +34,10 @@ const states = statesWithCities(scope, cities);
       <input type="checkbox" id={`gen-base${city ? '-city' : ''}`} name="base" />
       <span>{t('generator.baseOnly')}</span>
     </label>
+    <label class="check" for={`gen-mine${city ? '-city' : ''}`}>
+      <input type="checkbox" id={`gen-mine${city ? '-city' : ''}`} name="mine" />
+      <span>{t('dlcs.onlyMine')}</span>
+    </label>
     <button type="submit" class="button button-primary gen-go" data-gen-go>{t('generator.button')}</button>
   </form>
 
@@ -56,7 +60,8 @@ const states = statesWithCities(scope, cities);
       <div class="wide"><dt>{t('generator.needs')}</dt><dd data-g="needs"></dd></div>
     </dl>
     <div class="job-actions">
-      <button type="button" class="button button-primary" data-gen-again>{t('generator.again')}</button>
+      <a class="button button-primary" data-g="sheet">{t('generator.openSheet')}</a>
+      <button type="button" class="button button-ghost" data-gen-again>{t('generator.again')}</button>
       <a class="button button-ghost" data-g="planner">{t('generator.openPlanner')}</a>
       <button type="button" class="button button-ghost" data-gen-share>{t('generator.share')}</button>
       <span class="muted small" data-gen-copied role="status"></span>

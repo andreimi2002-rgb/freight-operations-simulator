@@ -115,3 +115,17 @@ test('thumbUrl builds Commons thumbnails from thumbnails and originals', async (
   );
   assert.equal(thumbUrl('https://example.com/x.jpg', 960), null);
 });
+
+test('job sheet helpers: weather at a time, severe weather, night', async () => {
+  const { weatherAt, isSevere, isNight } = await import('../src/lib/ats.mjs');
+  const series = [
+    { t: '2026-10-22T10:00:00Z', stepH: 1, sky: 'clear' },
+    { t: '2026-10-22T11:00:00Z', stepH: 6, sky: 'snow' },
+  ];
+  assert.equal(weatherAt(series, '2026-10-22T10:30:00Z').sky, 'clear');
+  assert.equal(weatherAt(series, '2026-10-22T15:59:00Z').sky, 'snow');
+  assert.equal(weatherAt(series, '2026-10-23T10:00:00Z'), null);
+  assert.ok(isSevere({ sky: 'snow' }) && isSevere({ sky: 'fog' }) && isSevere({ sky: 'rain', intensity: 'heavy' }));
+  assert.ok(!isSevere({ sky: 'rain', intensity: 'light' }) && !isSevere(null));
+  assert.ok(isNight(23) && isNight(3) && !isNight(6) && !isNight(21));
+});

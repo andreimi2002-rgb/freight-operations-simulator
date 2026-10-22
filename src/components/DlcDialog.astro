@@ -1,0 +1,55 @@
+---
+// "My DLCs" dialog, opened from the header. The list of cargo DLCs comes from the data.
+import { getI18n } from '../i18n/index.mjs';
+import en from '../i18n/en.json';
+import { cargo } from '../lib/data.mjs';
+
+const { t } = getI18n();
+const dlcs = [...new Set(cargo.map((c) => c.dlc).filter((d) => d && d !== 'base'))].sort();
+---
+<dialog id="dlc-dialog" class="dlc-dialog" aria-labelledby="dlc-title">
+  <form method="dialog" class="dlc-form">
+    <h2 id="dlc-title">{t('dlcs.title')}</h2>
+    <p class="soft">{t('dlcs.lead')}</p>
+    <fieldset>
+      <legend class="eyebrow">{t('dlcs.cargoPacks')}</legend>
+      {dlcs.map((d) => (
+        <label class="check" for={`dlc-${d}`}>
+          <input type="checkbox" id={`dlc-${d}`} name="dlc" value={d} />
+          <span>{en.dlcNames[d] ?? d}</span>
+        </label>
+      ))}
+    </fieldset>
+    <p class="muted small">{t('dlcs.note')}</p>
+    <div class="actions">
+      <button type="button" class="button button-primary" data-dlc-save>{t('dlcs.save')}</button>
+      <button type="button" class="button button-ghost" data-dlc-clear>{t('dlcs.clear')}</button>
+      <button type="button" class="button button-ghost" data-dlc-close>{t('dlcs.close')}</button>
+    </div>
+  </form>
+</dialog>
+
+<script>
+  import '../scripts/dlcs.mjs';
+</script>
+
+<style>
+  .dlc-dialog {
+    width: min(520px, calc(100vw - 2 * var(--gutter)));
+    max-height: calc(100vh - 48px);
+    padding: 0;
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--border-input);
+    border-radius: var(--radius-lg);
+  }
+  .dlc-dialog::backdrop { background: rgba(5, 8, 12, 0.7); }
+  .dlc-form { display: grid; gap: var(--space-4); padding: var(--space-5); }
+  h2 { font-size: 22px; }
+  fieldset { display: grid; gap: 2px; margin: 0; padding: 0; border: 0; }
+  legend { margin-bottom: var(--space-2); }
+  .check { display: flex; align-items: center; gap: var(--space-3); min-height: var(--target); cursor: pointer; }
+  .check input { width: 20px; height: 20px; accent-color: var(--amber); flex: none; }
+  .actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+  .small { font-size: 13px; }
+</style>

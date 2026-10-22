@@ -110,3 +110,17 @@ test('every approved alias points to cargo in the catalog', () => {
     for (const id of a.cargo) assert.ok(cargoIds.has(id), `${a.name} → ${id}`);
   }
 });
+
+test('trucks: released models only, with horsepower and a wiki link', () => {
+  const { meta, trucks } = load('trucks.json');
+  assert.equal(meta.licence, 'CC BY-SA 4.0');
+  assert.ok(trucks.length >= 10);
+  for (const t of trucks) {
+    assert.match(t.id, /^[a-z0-9]+(-[a-z0-9]+)*$/);
+    assert.ok(t.manufacturer, `${t.id}: manufacturer`);
+    assert.ok(t.maxHp >= 300 && t.maxHp <= 800, `${t.id}: maxHp ${t.maxHp}`);
+    assert.match(t.wiki.url, /^https:\/\/trucksimulator\.wiki\.gg\/wiki\//);
+  }
+  const future = issues.filter((i) => i.kind === 'futureTruck').map((i) => i.entity);
+  for (const f of future) assert.ok(!trucks.some((t) => t.id === f), `${f} is announced only`);
+});

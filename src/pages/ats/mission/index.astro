@@ -1,0 +1,133 @@
+---
+// Job sheet. One static page: the script reads the job id from the path
+// (/ats/mission/<id>, rewritten here by Netlify) or from ?id=<id>, and fills the sheet.
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import WeatherIcons from '../../../components/WeatherIcons.astro';
+import { getI18n } from '../../../i18n/index.mjs';
+
+const { t, meta } = getI18n();
+---
+<BaseLayout title={t('mission.title')} description={t('mission.metaDescription')}>
+  <WeatherIcons />
+  <div class="container sheet" data-mission data-locale={meta.intlLocale} data-state="loading">
+    <p class="soft state-msg" data-m="msg">{t('mission.loading')}</p>
+    <a class="button button-primary state-new" href="/">{t('mission.generateNew')}</a>
+
+    <article class="job" data-m="job" hidden>
+      <header class="head">
+        <p class="eyebrow mono" data-m="eyebrow"></p>
+        <h1 class="route"><a data-m="fromLink"></a> <span aria-hidden="true">→</span> <a data-m="toLink"></a></h1>
+        <p class="cargo-line"><span data-m="cargoName"></span></p>
+        <div data-m="badges"></div>
+        <div class="actions">
+          <button type="button" class="button button-ghost" data-m="copy">{t('mission.copy')}</button>
+          <a class="button button-ghost" data-m="sameRoute">{t('mission.sameRoute')}</a>
+          <span class="muted small" data-m="copied" role="status"></span>
+        </div>
+      </header>
+
+      <div class="warn" data-m="warnings" hidden></div>
+
+      <div class="grid">
+        <section class="card" aria-labelledby="m-pickup">
+          <h2 id="m-pickup" class="eyebrow">{t('mission.pickup')}</h2>
+          <p class="big" data-m="pickupCompany"></p>
+          <p class="soft" data-m="pickupWhere"></p>
+          <p class="mono muted small" data-m="pickupId"></p>
+        </section>
+        <section class="card" aria-labelledby="m-delivery">
+          <h2 id="m-delivery" class="eyebrow">{t('mission.delivery')}</h2>
+          <p class="big" data-m="deliveryCompany"></p>
+          <p class="soft" data-m="deliveryWhere"></p>
+          <p class="mono muted small" data-m="deliveryId"></p>
+        </section>
+
+        <section class="card" aria-labelledby="m-cargo">
+          <h2 id="m-cargo" class="eyebrow">{t('mission.cargo')}</h2>
+          <dl class="facts">
+            <div><dt data-m="weightLabel">{t('mission.weight')}</dt><dd class="mono" data-m="weight"></dd></div>
+            <div><dt>{t('mission.flags')}</dt><dd data-m="flags"></dd></div>
+            <div class="wide"><dt>{t('mission.dlcs')}</dt><dd data-m="dlcs"></dd></div>
+          </dl>
+        </section>
+
+        <section class="card" aria-labelledby="m-route">
+          <h2 id="m-route" class="eyebrow">{t('mission.route')}</h2>
+          <dl class="facts">
+            <div><dt>{t('mission.distance')}</dt><dd class="mono" data-m="distance"></dd></div>
+            <div><dt>{t('mission.drive')}</dt><dd class="mono" data-m="drive"></dd></div>
+            <div class="wide"><dt>{t('mission.leaveNow')}</dt><dd data-m="arrival"></dd></div>
+          </dl>
+          <p class="soft small" data-m="night" hidden>{t('mission.night')}</p>
+        </section>
+
+        <section class="card wide-card" aria-labelledby="m-weather">
+          <h2 id="m-weather" class="eyebrow">{t('mission.weather')}</h2>
+          <div class="wx-pair">
+            <div class="wx" data-m="wxFrom"><p class="wx-title soft"></p><div class="wx-row"><span class="wx-icon"></span><span class="wx-temp mono"></span><span class="wx-label"></span></div></div>
+            <div class="wx" data-m="wxTo"><p class="wx-title soft"></p><div class="wx-row"><span class="wx-icon"></span><span class="wx-temp mono"></span><span class="wx-label"></span></div></div>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="m-trailer">
+          <h2 id="m-trailer" class="eyebrow">{t('mission.trailer')}</h2>
+          <p class="big" data-m="trailerName"></p>
+          <ul class="plain" data-m="trailerModels"></ul>
+        </section>
+
+        <section class="card" aria-labelledby="m-truck">
+          <h2 id="m-truck" class="eyebrow">{t('mission.truck')}</h2>
+          <p class="big" data-m="truckNeed"></p>
+          <ul class="plain" data-m="trucks"></ul>
+          <p class="soft small" data-m="dealers"></p>
+          <p class="muted small">{t('mission.truckRule')}</p>
+        </section>
+      </div>
+
+      <p class="muted small provenance">{t('mission.provenance')}</p>
+    </article>
+  </div>
+</BaseLayout>
+
+<script>
+  import '../../../scripts/mission.mjs';
+</script>
+
+<style>
+  .sheet { display: grid; gap: var(--space-5); padding-top: var(--space-7); }
+  .sheet > * { min-width: 0; }
+  .state-new { display: none; justify-self: start; }
+  .sheet[data-state='error'] .state-new { display: inline-flex; }
+  .job { display: grid; gap: var(--space-5); }
+  .head { display: grid; gap: var(--space-2); }
+  .route { font-size: clamp(30px, 5vw, 48px); line-height: 1.1; text-wrap: balance; }
+  .route a { color: var(--text); text-decoration-color: var(--border-input); }
+  .route a:hover { color: var(--amber); }
+  .route span { color: var(--amber); }
+  .cargo-line { font-size: 20px; font-weight: 600; color: var(--text-soft); }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin-top: var(--space-2); }
+  .warn { display: grid; gap: var(--space-2); padding: var(--space-4); border: 1px solid color-mix(in srgb, var(--amber) 55%, var(--border)); border-radius: var(--radius-md); background: color-mix(in srgb, var(--amber) 8%, var(--panel)); }
+  .warn :global(p) { margin: 0; }
+  .grid { display: grid; gap: var(--space-4); }
+  @media (min-width: 820px) { .grid { grid-template-columns: 1fr 1fr; } .wide-card { grid-column: 1 / -1; } }
+  .grid > * { min-width: 0; }
+  .card { display: grid; gap: var(--space-2); align-content: start; }
+  .big { font-size: 18px; font-weight: 600; }
+  .small { font-size: 13px; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-3); margin: 0; }
+  .facts > div { display: grid; gap: 2px; min-width: 0; }
+  .facts .wide { grid-column: 1 / -1; }
+  dt { font: 500 11px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+  dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+  .plain { margin: 0; padding-left: 1.1em; display: grid; gap: var(--space-1); color: var(--text-soft); }
+  .plain :global(.badge) { margin-left: 6px; }
+  .wx-pair { display: grid; gap: var(--space-4); }
+  @media (min-width: 640px) { .wx-pair { grid-template-columns: 1fr 1fr; } }
+  .wx { display: grid; gap: var(--space-2); padding: var(--space-3); background: var(--panel-deep); border: 1px solid var(--border); border-radius: var(--radius-sm); }
+  .wx-row { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+  .wx-icon :global(svg) { width: 40px; height: 40px; display: block; }
+  .wx-temp { font-size: 28px; font-weight: 600; }
+  .wx-label { font-weight: 600; }
+  .sheet :global(.job-badges) { display: flex; flex-wrap: wrap; gap: 4px; }
+  .provenance { max-width: 80ch; }
+</style>

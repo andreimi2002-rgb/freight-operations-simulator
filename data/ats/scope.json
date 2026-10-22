@@ -15,7 +15,8 @@
     ],
     "companyCategory": "American Truck Simulator Companies",
     "trailerCategory": "American Truck Simulator Trailers",
-    "cargoListPage": "Cargo types/American Truck Simulator"
+    "cargoListPage": "Cargo types/American Truck Simulator",
+    "truckCategory": "Included trucks for American Truck Simulator"
   },
   "states": [
     {

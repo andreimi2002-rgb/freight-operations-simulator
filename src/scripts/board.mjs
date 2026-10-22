@@ -1,7 +1,8 @@
 // Departures boards: every element with data-board-city (a city) or data-board-featured
 // (the city of the hour, home page) gets the jobs leaving in the next six hours.
 // Recomputed when the local hour changes and when the units change.
-import { departures, featuredCity } from '../engine/generator.mjs';
+import { departures, featuredCity, missionId } from '../engine/generator.mjs';
+import { missingDlcs } from './dlcs.mjs';
 import { clockTime, localDateHour } from '../lib/ats.mjs';
 import { loadJobs, el, badges, depotLabel, distanceText, weightText, trailerName, cityPathOf } from './jobs.mjs';
 import { currentUnits, pageText, fill } from './units.mjs';
@@ -44,9 +45,12 @@ function render(box, ds, t) {
     const toCity = ds.cityById.get(j.to);
     const time = clockTime(j.departMinute, locale);
     const cargo = ds._index.cargo.get(j.cargo);
-    tbody.append(el('tr', {},
+    const missing = missingDlcs(j.dlcs);
+    const cargoCell = el('td', { class: 'b-cargo' }, el('a', { class: 'b-cargo-name', href: `/ats/mission/${missionId(ds, j)}`, title: t.board?.openJob, text: cargo.name }), badges(ds, j.cargo, j.dlcs, t));
+    if (missing.length) cargoCell.append(el('span', { class: 'badge not-owned', text: t.dlcs?.notOwned }));
+    tbody.append(el('tr', { class: missing.length ? 'is-not-owned' : null },
       el('td', { class: 'b-time' }, time.text, time.nextDay ? el('small', { text: ` ${t.board?.nextDay ?? '+1'}` }) : null),
-      el('td', { class: 'b-cargo' }, el('span', { class: 'b-cargo-name', text: cargo.name }), badges(ds, j.cargo, j.dlcs, t)),
+      cargoCell,
       el('td', { class: 'b-from', text: depotLabel(ds, src) }),
       el('td', { class: 'b-to' }, el('a', { href: cityPathOf(toCity), text: toCity.name }), el('small', { text: depotLabel(ds, dst) })),
       el('td', { class: 'b-dist', text: distanceText(j.km, units, j.hours, t) }),
@@ -64,6 +68,7 @@ if (boards.length) {
     const all = () => boards.forEach((b) => render(b, ds, t));
     all();
     document.addEventListener('fw:units', all);
+    document.addEventListener('fw:dlcs', all);
     // Check every 30 s whether the local hour (or the featured city) changed.
     setInterval(() => {
       for (const b of boards) {

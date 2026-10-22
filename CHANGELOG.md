@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.0.0-alpha.7 — 2026-10-22 (Freight World, stage 4: job sheets)
+
+- **Launched:** Freight World replaced FOS on freight-operations-simulator.netlify.app (PR #16; FOS kept as git tag `fos-final`). Work now goes to `main` through pull requests.
+- **Job sheet** at `/ats/mission/<id>`, opened from the departures boards, the job generator and the route planner. The id is made of stable game ids (city, depot, cargo, destination, trailer, weight), so links survive a data refresh; a job that no longer exists says so. The sheet shows: pick-up and delivery depots with their game ids; cargo weight (or range), hazmat class and UN number (with the wiki's correction when the in-game number is flagged), special cargo flags; required DLCs (owned or not); distance, estimated drive time and arrival time if leaving now, with a night-arrival note; weather now at the start and at the destination at the arrival time; the trailer type with its dealer models (price, buyable or company trailer); recommended trucks.
+- **Bad weather** at either end (snow, sleet, thunderstorm, fog, heavy rain) raises a warning; no delay is invented (owner's decision). Weekend and season rules are postponed (no game data).
+- **Trucks:** the collector now reads the 19 released ATS trucks from the wiki (`data/ats/trucks.json`: make, engines with horsepower range, transmissions, cabs); 4 announced trucks are left out and listed in issues.json. **Truck recommendation**, a Freight World rule shown as simulated: at least 400 hp up to 25,000 lb, 450 hp up to 45,000 lb, 500 hp above, 550 hp for heavy cargo; brands with a dealer in the start city first; electric trucks left out.
+- **My DLCs:** a header button opens a dialog to tick the cargo DLCs you own (saved in this browser). Boards dim the jobs you cannot take; the generator and the planner get "Only jobs for my DLCs".
+- The weather function also returns a 72-hour series (for the arrival time). Netlify rewrites `/ats/mission/*` to the sheet page.
+- 4 new tests (78 in all): sheet ids round trip and stale jobs, truck rule, sheet weather helpers, truck data.
+
 ## 2.0.0-alpha.6 — 2026-10-22 (Generate a job)
 
 - **Generate a job** button on the home page (from any city or a chosen one) and on every city page (from that city): one real job picked at random, with route, cargo and badges, pick-up and delivery depots, trailer, weight, distance, estimated drive time and the DLCs it needs. Option "Career start: base game only". Each job has a code in the address (`?job=…`), so the same job opens for anyone; "Copy link" copies it, "All jobs on this route" opens the planner.

@@ -10,6 +10,7 @@ const root = fileURLToPath(new URL('..', import.meta.url));
 const load = (f) => JSON.parse(readFileSync(`${root}data/ats/${f}.json`, 'utf8'));
 const distances = load('distances');
 const ds = buildJobDataset({
+  trucks: load('trucks').trucks,
   cities: load('cities').cities,
   companies: load('companies').companies,
   cargo: load('cargo').cargo,
@@ -139,4 +140,45 @@ test('job codes in the address round-trip and reject junk', () => {
   assert.equal(codeToSeed(seedToCode(0xdeadbeef)), 0xdeadbeef);
   assert.equal(codeToSeed("xyz"), null);
   assert.equal(codeToSeed(null), null);
+});
+
+test('job sheet ids survive a round trip and reject jobs that no longer exist', async () => {
+  const { missionId, resolveMission, depotKey } = await import('../src/engine/generator.mjs');
+  for (const city of ['sacramento', 'reno', 'los-angeles']) {
+    for (const j of departures(ds, { city, date: '2026-10-22', hour: 10 })) {
+      const id = missionId(ds, j);
+      const r = resolveMission(ds, id);
+      assert.equal(r.error, undefined, id);
+      assert.equal(r.cargo, j.cargo);
+      assert.equal(r.destination, j.destination);
+      assert.equal(r.trailer, j.trailer);
+      assert.equal(r.weightLb, j.weightLb);
+      assertValid(r, city);
+    }
+  }
+  const any = possibleJobs(ds, { from: 'sacramento' })[0];
+  const open = resolveMission(ds, missionId(ds, { ...any, trailer: null, weightLb: null }));
+  assert.equal(open.trailer, null);
+  assert.equal(open.weightLb, null);
+  assert.equal(resolveMission(ds, 'x.y').error, 'badId');
+  const j = departures(ds, { city: 'sacramento', date: '2026-10-22', hour: 10 })[0];
+  const parts = missionId(ds, j).split('.');
+  assert.equal(resolveMission(ds, [...parts.slice(0, 2), 'not-a-cargo', ...parts.slice(3)].join('.')).error, 'gone');
+  assert.equal(resolveMission(ds, [...parts.slice(0, 6), '999999999'].join('.')).error, 'gone', 'weight out of range');
+  assert.equal(depotKey({ gameId: null, company: 'driverse', type: null }), 'driverse--depot');
+});
+
+test('truck recommendation follows the stated rule', async () => {
+  const { recommendTrucks, neededHp, TRUCK_RULE } = await import('../src/engine/generator.mjs');
+  const fakeCargo = (flags = [], w = [10000, 20000]) => ({ flags, w });
+  assert.equal(neededHp(fakeCargo(), 20000), 400);
+  assert.equal(neededHp(fakeCargo(), 30000), 450);
+  assert.equal(neededHp(fakeCargo(), 50000), 500);
+  assert.equal(neededHp(fakeCargo(['heavy']), 10000), TRUCK_RULE.heavyHp);
+  const j = departures(ds, { city: 'sacramento', date: '2026-10-22', hour: 10 })[0];
+  const rec = recommendTrucks(ds, j);
+  assert.ok(rec.trucks.length > 0);
+  assert.ok(rec.trucks.every((t) => t.hp >= rec.needHp && !t.electric));
+  const dealerFlags = rec.trucks.map((t) => t.dealerHere);
+  assert.deepEqual(dealerFlags, [...dealerFlags].sort((a, b) => Number(b) - Number(a)), 'dealer-in-city trucks first');
 });

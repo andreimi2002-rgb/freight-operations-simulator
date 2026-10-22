@@ -2,6 +2,7 @@
 import Logo from './Logo.astro';
 import GameSwitch from './GameSwitch.astro';
 import UnitToggle from './UnitToggle.astro';
+import DlcDialog from './DlcDialog.astro';
 import { getI18n } from '../i18n/index.mjs';
 
 const { t } = getI18n();
@@ -35,9 +36,11 @@ const links = [
       </nav>
       <GameSwitch />
       <UnitToggle />
+      <button type="button" class="dlc-open" data-dlc-open>{t('dlcs.button')} <span class="dlc-count mono" data-dlc-count></span></button>
     </div>
   </div>
 </header>
+<DlcDialog />
 
 <style>
   .site-header {
@@ -72,6 +75,9 @@ const links = [
     align-items: center;
     gap: var(--space-2) var(--space-4);
   }
+  .dlc-open { min-height: var(--target); padding: 0 var(--space-3); background: var(--panel-deep); color: var(--text); border: 1px solid var(--border-input); border-radius: var(--radius-md); font: 600 14px var(--font-sans); cursor: pointer; }
+  .dlc-open:hover { border-color: var(--amber); }
+  .dlc-count:not(:empty) { margin-left: 4px; padding: 0 6px; border-radius: 999px; background: var(--amber); color: var(--on-amber); font-size: 12px; }
   .nav-list {
     display: flex;
     gap: var(--space-1);

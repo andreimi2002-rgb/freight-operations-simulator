@@ -1,7 +1,8 @@
 // Route planner: every real job from a city (or one of its depots) to another city, or a
 // list of destinations when no destination is chosen. State lives in the URL query
 // (?from=&depot=&to=&trailer=&base=1&hazmat=0) so a plan can be bookmarked or shared.
-import { possibleJobs } from '../engine/generator.mjs';
+import { possibleJobs, missionId } from '../engine/generator.mjs';
+import { owned } from './dlcs.mjs';
 import { loadJobs, el, badges, depotLabel, distanceText, weightText, trailerName, cityPathOf } from './jobs.mjs';
 import { currentUnits, pageText, fill } from './units.mjs';
 
@@ -20,6 +21,7 @@ if (form && results) {
     trailer: form.querySelector('#pl-trailer'),
     base: form.querySelector('#pl-base'),
     hazmat: form.querySelector('#pl-hazmat'),
+    mine: form.querySelector('#pl-mine'),
   };
   let shown = PAGE;
 
@@ -30,6 +32,7 @@ if (form && results) {
   if (q.get('trailer')) f.trailer.value = q.get('trailer');
   f.base.checked = q.get('base') === '1';
   f.hazmat.checked = q.get('hazmat') !== '0';
+  f.mine.checked = q.get('mine') === '1';
   const wantedDepot = q.get('depot');
 
   const setMsg = (text) => { msg.textContent = text ?? ''; msg.hidden = !text; };
@@ -53,6 +56,7 @@ if (form && results) {
       if (f.trailer.value) p.set('trailer', f.trailer.value);
       if (f.base.checked) p.set('base', '1');
       if (!f.hazmat.checked) p.set('hazmat', '0');
+      if (f.mine.checked) p.set('mine', '1');
       const qs = p.toString();
       history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
     };
@@ -63,7 +67,10 @@ if (form && results) {
       const from = f.from.value;
       if (!from) { setMsg(t.planner?.pickFrom); return; }
       const fromCity = ds.cityById.get(from);
+      const ownedSet = f.mine.checked ? owned() : null;
+      if (f.mine.checked && !ownedSet) { setMsg(t.dlcs?.notSet); return; }
       const jobs = possibleJobs(ds, {
+        ownedDlcs: ownedSet,
         from,
         depot: f.depot.value === '' ? null : Number(f.depot.value),
         to: f.to.value || null,
@@ -123,7 +130,7 @@ if (form && results) {
         const cargo = ds._index.cargo.get(j.cargo);
         const w = cargo.w ? `${weightText(cargo.w[0], units)} – ${weightText(cargo.w[1], units)}` : t.planner?.weightUnknown;
         tbody.append(el('tr', {},
-          el('td', {}, el('strong', { text: cargo.name }), badges(ds, j.cargo, j.dlcs, t)),
+          el('td', {}, el('a', { class: 'cargo-link', href: `/ats/mission/${missionId(ds, { ...j, trailer: null, weightLb: null })}`, text: cargo.name }), badges(ds, j.cargo, j.dlcs, t)),
           el('td', { text: depotLabel(ds, ds.depots[j.source]) }),
           el('td', { text: depotLabel(ds, ds.depots[j.destination]) }),
           el('td', { text: cargo.trailers.map((id) => trailerName(ds, id)).join(', ') }),
@@ -157,6 +164,7 @@ if (form && results) {
     });
     form.addEventListener('submit', (e) => e.preventDefault());
     document.addEventListener('fw:units', render);
+    document.addEventListener('fw:dlcs', render);
     results.dataset.state = 'ready';
     render();
   }).catch(() => { setMsg(t.planner?.error); results.dataset.state = 'error'; });

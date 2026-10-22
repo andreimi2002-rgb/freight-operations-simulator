@@ -506,3 +506,42 @@ export function parseTrailerPage(title, text) {
     notes: [],
   };
 }
+
+/**
+ * One engine entry → { name, hpMin, hpMax }. Two layouts exist on the wiki:
+ * "Mack MP8, 415–505 hp (309–377 kW)" and a bare range "370 hp (276 kW) – 625 hp (466 kW)".
+ */
+export function parseEngine(item) {
+  const text = strip(item).replace(/\u00a0/g, ' ');
+  const name = text.includes(',') ? text.split(',')[0].trim() : null;
+  const hp = [];
+  for (const m of text.matchAll(/(\d{3})\s*(?:[–—-]\s*(\d{3}))?\s*hp/gi)) {
+    hp.push(Number(m[1]));
+    if (m[2]) hp.push(Number(m[2]));
+  }
+  return { name, hpMin: hp.length ? Math.min(...hp) : null, hpMax: hp.length ? Math.max(...hp) : null };
+}
+
+/** A truck page ({{Infobox_Truck}}). Future (announced, not released) trucks are flagged. */
+export function parseTruckPage(title, text) {
+  const box = infobox(text, /^Infobox[ _]Truck$/i);
+  if (!box) return { title, notes: ['no Infobox Truck'] };
+  const items = listItems(box.engine);
+  const engines = (items.length ? items : [box.engine ?? ""]).map(parseEngine).filter((e) => e.name || e.hpMax != null);
+  const hp = engines.map((e) => e.hpMax).filter(Number.isFinite);
+  return {
+    title,
+    name: strip(box.title1) || title,
+    manufacturer: strip(box.manufacturer) || null,
+    engines,
+    maxHp: hp.length ? Math.max(...hp) : null,
+    minHp: engines.map((e) => e.hpMin).filter(Number.isFinite).reduce((a, b) => Math.min(a, b), Infinity),
+    transmissions: listItems(box.transmission).map(strip).filter(Boolean),
+    bodyStyles: listItems(box.body_style).map(strip).filter(Boolean),
+    availability: strip(box.availability) || null,
+    dateAdded: strip(box.date_added) || null,
+    future: findTemplates(text, /^Future$/i).some((t) => /^ats$/i.test(t.params[1] ?? '')) || !engines.length,
+    electric: /\[\[Category:Electric Trucks/i.test(text),
+    notes: [],
+  };
+}

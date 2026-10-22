@@ -5,7 +5,7 @@
     "licence": "CC BY-SA 4.0",
     "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "attribution": "Game data from Truck Simulator Wiki contributors (trucksimulator.wiki.gg), CC BY-SA 4.0.",
-    "retrieved": "2026-10-21",
+    "retrieved": "2026-10-22",
     "generator": "scripts/ats/collect.mjs",
     "userAgent": "FreightWorldDataBot/0.1 (https://github.com/andreimi2002-rgb/freight-operations-simulator; fan project data collection)",
     "game": "ats",
@@ -14,7 +14,7 @@
       "NV"
     ],
     "description": "Problems found while collecting: missing values, contradictions between pages, names that do not match. For manual checking.",
-    "count": 112
+    "count": 116
   },
   "issues": [
     {
@@ -529,6 +529,26 @@
       "kind": "countMismatch",
       "entity": "cargo",
       "detail": "cargo list summary (as of 1.61) says 294 cargoes in total; the table has 295"
+    },
+    {
+      "kind": "futureTruck",
+      "entity": "freightliner-ecascadia",
+      "detail": "\"Freightliner eCascadia\" is announced but not released (no engine data); left out"
+    },
+    {
+      "kind": "futureTruck",
+      "entity": "international-hx",
+      "detail": "\"International HX\" is announced but not released (no engine data); left out"
+    },
+    {
+      "kind": "futureTruck",
+      "entity": "kenworth-w990",
+      "detail": "\"Kenworth W990\" is announced but not released (no engine data); left out"
+    },
+    {
+      "kind": "futureTruck",
+      "entity": "mack-pioneer",
+      "detail": "\"Mack Pioneer\" is announced but not released (no engine data); left out"
     },
     {
       "kind": "nameVariant",
