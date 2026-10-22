@@ -5,19 +5,20 @@ import { getI18n } from '../i18n/index.mjs';
 import { scope, cities } from '../lib/data.mjs';
 import { statesWithCities } from '../lib/ats.mjs';
 
-interface Props { city?: { id: string; name: string }; company?: { id: string; name: string } }
-const { city, company } = Astro.props;
+interface Props { city?: { id: string; name: string }; company?: { id: string; name: string }; cargo?: { id: string; name: string } }
+const { city, company, cargo } = Astro.props;
+const fixed = city || company || cargo;
 const { t, meta } = getI18n();
 const states = statesWithCities(scope, cities);
 ---
-<section class="gen card" aria-labelledby="gen-title" data-gen data-gen-city={city?.id} data-gen-company={company?.id} data-locale={meta.intlLocale} data-state="idle">
+<section class="gen card" aria-labelledby="gen-title" data-gen data-gen-city={city?.id} data-gen-company={company?.id} data-gen-cargo={cargo?.id} data-locale={meta.intlLocale} data-state="idle">
   <div class="gen-head">
-    <h2 id="gen-title">{company ? t('company.generateTitle', { name: company.name }) : t('generator.title')}</h2>
-    <p class="soft">{company ? t('generator.leadCompany', { company: company.name }) : city ? t('generator.leadCity', { city: city.name }) : t('generator.lead')}</p>
+    <h2 id="gen-title">{company ? t('company.generateTitle', { name: company.name }) : cargo ? t('cargoPage.generateTitle', { name: cargo.name }) : t('generator.title')}</h2>
+    <p class="soft">{company ? t('generator.leadCompany', { company: company.name }) : cargo ? t('generator.leadCargo', { cargo: cargo.name }) : city ? t('generator.leadCity', { city: city.name }) : t('generator.lead')}</p>
   </div>
 
   <form class="gen-form" data-gen-form>
-    {!city && !company && (
+    {!fixed && (
       <div class="field">
         <label for="gen-from">{t('generator.from')}</label>
         <select id="gen-from" name="from">
@@ -30,12 +31,12 @@ const states = statesWithCities(scope, cities);
         </select>
       </div>
     )}
-    <label class="check" for={`gen-base${city || company ? '-fixed' : ''}`}>
-      <input type="checkbox" id={`gen-base${city || company ? '-fixed' : ''}`} name="base" />
+    <label class="check" for={`gen-base${fixed ? '-fixed' : ''}`}>
+      <input type="checkbox" id={`gen-base${fixed ? '-fixed' : ''}`} name="base" />
       <span>{t('generator.baseOnly')}</span>
     </label>
-    <label class="check" for={`gen-mine${city || company ? '-fixed' : ''}`}>
-      <input type="checkbox" id={`gen-mine${city || company ? '-fixed' : ''}`} name="mine" />
+    <label class="check" for={`gen-mine${fixed ? '-fixed' : ''}`}>
+      <input type="checkbox" id={`gen-mine${fixed ? '-fixed' : ''}`} name="mine" />
       <span>{t('dlcs.onlyMine')}</span>
     </label>
     <button type="submit" class="button button-primary gen-go" data-gen-go>{t('generator.button')}</button>

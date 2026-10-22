@@ -12,6 +12,7 @@ const links = [
   { href: '/ats', label: t('nav.cities') },
   { href: '/ats/map', label: t('nav.map') },
   { href: '/ats/companies', label: t('nav.companies') },
+  { href: '/ats/cargo', label: t('nav.cargo') },
   { href: '/ats/planner', label: t('nav.planner') },
   { href: '/about', label: t('nav.about') },
 ];
@@ -30,7 +31,7 @@ const links = [
               <a
                 class="nav-link"
                 href={link.href}
-                aria-current={path === link.href ? 'page' : (link.href === '/ats' && path.startsWith('/ats/') && !/^\/ats\/(planner|compan|map|mission)/.test(path) ? 'true' : (link.href === '/ats/companies' && path.startsWith('/ats/company/') ? 'true' : undefined))}
+                aria-current={path === link.href ? 'page' : (link.href === '/ats' && path.startsWith('/ats/') && !/^\/ats\/(planner|compan|map|mission|cargo|trailer|truck)/.test(path) ? 'true' : (link.href === '/ats/companies' && path.startsWith('/ats/company/') ? 'true' : (link.href === '/ats/cargo' && /^\/ats\/(cargo\/|trailer|truck)/.test(path) ? 'true' : undefined)))}
               >{link.label}</a>
             </li>
           ))}

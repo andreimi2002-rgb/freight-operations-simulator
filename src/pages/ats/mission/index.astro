@@ -136,6 +136,8 @@ const { t, meta } = getI18n();
   .urgency.u-urgent { color: #ff8a7a; border-color: color-mix(in srgb, #ff8a7a 55%, var(--border)); }
   .offer-cargo { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
   .cargo-title { font-size: clamp(30px, 5vw, 46px); line-height: 1.05; text-wrap: balance; }
+  .cargo-title :global(a) { color: var(--text); text-decoration-color: var(--border-input); }
+  .cargo-title :global(a:hover) { color: var(--amber); }
   .skills { display: inline-flex; gap: var(--space-2); }
   .skills :global(.skill) { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: var(--panel); border: 1px solid var(--border-input); color: var(--amber); }
   .skills :global(.skill svg) { width: 20px; height: 20px; }
