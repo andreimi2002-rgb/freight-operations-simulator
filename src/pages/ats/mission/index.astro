@@ -79,6 +79,13 @@ const { t, meta } = getI18n();
           <p class="muted small">{t('mission.planRule')}</p>
         </section>
 
+        <section class="card wide-card" aria-labelledby="m-chain">
+          <h2 id="m-chain" class="eyebrow" data-m="chainTitle">{t('mission.chainTitle')}</h2>
+          <p class="soft small" data-m="chainIntro"></p>
+          <ul class="chain" data-m="chain"></ul>
+          <a class="small" data-m="chainAll"></a>
+        </section>
+
         <section class="card wide-card" aria-labelledby="m-map">
           <h2 id="m-map" class="eyebrow">{t('map.routeTitle')}</h2>
           <AtsMap mode="route" defer height="420px" />
@@ -144,6 +151,12 @@ const { t, meta } = getI18n();
   .offer-stats > div { display: grid; gap: 2px; padding: var(--space-3); background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-sm); min-width: 0; }
   .offer-stats dd { font-size: 18px; }
   .offer-deadline { font-weight: 600; }
+  .chain { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--space-3); }
+  .chain :global(li a) { display: grid; gap: 2px; padding: var(--space-3) var(--space-4); background: var(--panel-deep); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text); text-decoration: none; height: 100%; }
+  .chain :global(li a:hover) { border-color: var(--amber); }
+  .chain :global(.c-cargo) { font-weight: 600; }
+  .chain :global(.c-meta) { font: 12px var(--font-mono); color: var(--text-soft); }
+  .chain :global(.c-tags) { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
   .plan { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
   .plan :global(li) { display: grid; grid-template-columns: 72px 26px minmax(0, 1fr); gap: var(--space-3); align-items: start; padding: var(--space-2) 0; border-bottom: 1px solid var(--row-line); }
   .plan :global(li:last-child) { border-bottom: 0; }

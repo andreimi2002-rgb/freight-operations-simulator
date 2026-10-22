@@ -245,3 +245,37 @@ export function recommendTrucks(ds, job, { max = 4 } = {}) {
     .sort((a, b) => Number(b.dealerHere) - Number(a.dealerHere) || a.hp - b.hp || a.name.localeCompare(b.name));
   return { needHp: need, trucks: list.slice(0, max) };
 }
+
+// ---- Job chain: what to take next from the destination ------------------------------
+
+/**
+ * Next jobs from the city a job delivers to (so the truck does not run empty).
+ * Picks `count` jobs with different cargo, reproducible from the current job; jobs that can
+ * use the same trailer type come first, then jobs heading back towards the start city.
+ * Each result carries a trailer (the same one when possible) and a weight.
+ */
+export function chainJobs(ds, job, { count = 6, ownedDlcs = null, baseOnly = false } = {}) {
+  const ix = indexDataset(ds);
+  const all = possibleJobs(ds, { from: job.to, ownedDlcs, baseOnly }).filter((j) => ix.cargo.get(j.cargo).w);
+  if (!all.length) return [];
+  const rand = rng(hash(`chain|${job.from}|${job.to}|${job.cargo}|${job.source}|${job.destination}`));
+  const home = ds.km[`${job.to}>${job.from}`] ?? Infinity;
+  const scored = all.map((j) => {
+    const cargo = ix.cargo.get(j.cargo);
+    const sameTrailer = Boolean(job.trailer && cargo.trailers.includes(job.trailer));
+    const backHome = j.to === job.from || (ds.km[`${j.to}>${job.from}`] ?? Infinity) < home * 0.5;
+    return { j, cargo, sameTrailer, backHome, r: rand() };
+  });
+  scored.sort((a, b) => Number(b.sameTrailer) - Number(a.sameTrailer) || Number(b.backHome) - Number(a.backHome) || a.r - b.r);
+  const out = [];
+  const seenCargo = new Set();
+  for (const s of scored) {
+    if (out.length >= count) break;
+    if (seenCargo.has(s.cargo.id)) continue;
+    seenCargo.add(s.cargo.id);
+    const [wMin, wMax] = s.cargo.w;
+    const weightLb = Math.min(wMax, Math.max(wMin, Math.round((wMin + rand() * (wMax - wMin)) / 10) * 10));
+    out.push({ ...s.j, from: job.to, trailer: s.sameTrailer ? job.trailer : s.cargo.trailers[0], weightLb, sameTrailer: s.sameTrailer, backHome: s.backHome });
+  }
+  return out;
+}

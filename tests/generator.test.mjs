@@ -182,3 +182,24 @@ test('truck recommendation follows the stated rule', async () => {
   const dealerFlags = rec.trucks.map((t) => t.dealerHere);
   assert.deepEqual(dealerFlags, [...dealerFlags].sort((a, b) => Number(b) - Number(a)), 'dealer-in-city trucks first');
 });
+
+test('job chain: real jobs from the destination, different cargo, same trailer first', async () => {
+  const { chainJobs, resolveMission, missionId } = await import('../src/engine/generator.mjs');
+  for (const city of ['los-angeles', 'phoenix', 'reno']) {
+    for (const j of departures(ds, { city, date: '2026-10-22', hour: 11 }).slice(0, 4)) {
+      const job = { ...j, from: city };
+      const chain = chainJobs(ds, job);
+      assert.ok(chain.length > 0, `${city}: chain`);
+      assert.equal(new Set(chain.map((c) => c.cargo)).size, chain.length, 'different cargo');
+      let seenOther = false;
+      for (const c of chain) {
+        assertValid(c, job.to);
+        if (!c.sameTrailer) seenOther = true;
+        else assert.ok(!seenOther, 'same-trailer jobs come first');
+        if (c.sameTrailer) assert.equal(c.trailer, job.trailer);
+        assert.equal(resolveMission(ds, missionId(ds, c)).error, undefined, 'each chain job has a valid sheet');
+      }
+      assert.deepEqual(chain, chainJobs(ds, job), 'reproducible');
+    }
+  }
+});

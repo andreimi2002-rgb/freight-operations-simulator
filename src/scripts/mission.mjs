@@ -1,7 +1,7 @@
 // Job sheet: resolve the job id against the current data and fill the page. Weather at the
 // start (now) and at the destination (at the estimated arrival if leaving now) comes from
 // /api/weather/<city>; bad weather only raises a warning, no delay is invented.
-import { resolveMission, recommendTrucks, missionId } from '../engine/generator.mjs';
+import { resolveMission, recommendTrucks, missionId, chainJobs } from '../engine/generator.mjs';
 import { loadJobs, el, badges, depotLabel, weightText, trailerName, cityPathOf } from './jobs.mjs';
 import { distance, temperature, weatherKind, weatherPath, weatherAt, isSevere, localHour, isNight } from '../lib/ats.mjs';
 import { currentUnits, pageText, fill } from './units.mjs';
@@ -167,6 +167,27 @@ if (root) {
     // Route
     const arrive = startMs + plan.totalH * 3600000;
     m('night').hidden = !isNight(localHour(toCity.tz, arrive));
+
+    // Job chain: what to take next from the destination
+    const chain = chainJobs(ds, job, { ownedDlcs: owned() });
+    m('chainTitle').textContent = fill(t.mission?.chainTitle, { city: toCity.name });
+    m('chainIntro').textContent = fill(t.mission?.chainIntro, { city: toCity.name });
+    m('chain').replaceChildren(...chain.map((c) => {
+      const cc = ds._index.cargo.get(c.cargo);
+      const to = ds.cityById.get(c.to);
+      const d = distance(c.km, units);
+      const tags = el('span', { class: 'c-tags' });
+      if (c.sameTrailer) tags.append(el('span', { class: 'badge badge-green', text: t.mission?.sameTrailer }));
+      if (c.backHome) tags.append(el('span', { class: 'badge', text: fill(t.mission?.towards, { city: fromCity.name }) }));
+      for (const dl of c.dlcs) tags.append(el('span', { class: 'badge badge-blue', text: t.dlcNames?.[dl] ?? dl }));
+      return el('li', {}, el('a', { href: `/ats/mission/${missionId(ds, c)}` },
+        el('span', { class: 'c-cargo', text: cc.name }),
+        el('span', { text: `→ ${to.name}, ${to.state}` }),
+        el('span', { class: 'c-meta', text: `${d.value.toLocaleString('en-US')} ${d.unit} · ${trailerName(ds, c.trailer)} · ${weightText(c.weightLb, units)}` }),
+        tags));
+    }));
+    m('chainAll').textContent = fill(t.mission?.chainAll, { city: toCity.name });
+    m('chainAll').href = `/ats/planner?from=${job.to}`;
 
     // Trailer
     const trailerIds = job.trailer ? [job.trailer] : cargo.trailers;

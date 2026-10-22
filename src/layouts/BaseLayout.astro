@@ -12,7 +12,7 @@ interface Props {
 
 const { t, meta } = getI18n();
 // Text the browser script needs (weather labels, units), passed as data.
-const liveText = JSON.stringify({ weather: en.weather, city: en.city, units: en.units, board: en.board, planner: en.planner, dlcNames: en.dlcNames, generator: en.generator, dlcs: en.dlcs, mission: en.mission, map: en.map });
+const liveText = JSON.stringify({ weather: en.weather, city: en.city, units: en.units, board: en.board, planner: en.planner, dlcNames: en.dlcNames, generator: en.generator, dlcs: en.dlcs, mission: en.mission, map: en.map, facilities: en.facilities });
 const siteName = t('site.name');
 const { title, description = t('site.description') } = Astro.props;
 const fullTitle = title ? `${title} · ${siteName}` : siteName;

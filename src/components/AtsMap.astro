@@ -83,6 +83,13 @@ const { t } = getI18n();
   .fw-map :global(.sh-us), .fw-map :global(.sh-s) { fill: #fff; stroke: #111; stroke-width: 1.2; }
   .fw-map :global(.sh-text) { font: 700 9.5px var(--font-sans); text-anchor: middle; fill: #111; }
   .fw-map :global(.shield-I .sh-text) { fill: #fff; }
+  .fw-map :global(.city-facilities), .fw-map :global(.city-companies) { display: none; }
+  .fw-map :global(.zoomed .city-facilities) { display: inline; }
+  .fw-map :global(.close .city-companies) { display: inline; }
+  .fw-map :global(.co-chip rect) { fill: #121821; stroke: var(--m-city); stroke-width: 1; }
+  .fw-map :global(.co-chip text) { font: 700 9px var(--font-mono); text-anchor: middle; fill: var(--m-city); }
+  .fw-map :global(.co-chip:hover rect) { fill: var(--m-city); }
+  .fw-map :global(.co-chip:hover text) { fill: #121821; }
   .fw-map :global(.stop-dot) { stroke: #04121f; stroke-width: 2; }
   .fw-map :global(.stop-break .stop-dot) { fill: #7dbbff; }
   .fw-map :global(.stop-rest .stop-dot) { fill: #b48cff; }

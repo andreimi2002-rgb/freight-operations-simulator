@@ -6,7 +6,8 @@ Live at https://freight-operations-simulator.netlify.app (from `main`). The plan
 
 ## Current version: 2.0.0-alpha.11 (job offer, urgency, driving plan)
 
-- The job sheet opens with a job offer card like the in-game market, with urgency and time to deliver, and a driving plan under US Hours of Service with breaks and rests shown on the route map.
+- The job sheet opens with a job offer card like the in-game market, with urgency and time to deliver, a driving plan under US Hours of Service (breaks and rests shown on the route map) and the next jobs from the destination.
+- Map icons: city facilities and companies when zoomed in.
 
 ### Map
 

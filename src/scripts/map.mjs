@@ -6,6 +6,7 @@
 //   data-map="route" data-map-from=id data-map-to=id   a job's route
 import { buildRoadGraph, routeBetween } from '../engine/roadgraph.mjs';
 import { pageText } from './units.mjs';
+import { monogram } from '../lib/companies.mjs';
 
 const NS = 'http://www.w3.org/2000/svg';
 let dataPromise = null;
@@ -17,6 +18,24 @@ const svgEl = (tag, attrs = {}, parent = null) => {
   if (parent) parent.append(n);
   return n;
 };
+// Facility icons: rounded square + white glyph (24x24 box, drawn at 16 px).
+const FACILITY = {
+  gas: { c: '#1f9d55', d: 'M7 5h7v14H7z M14 9h2l2 2v6a1 1 0 0 1-2 0v-4h-2 M9 7h3v3H9z' },
+  hotel: { c: '#2b6cd6', d: 'M5 17V8 M5 13h14v4 M19 17v-4 M8 12a2 2 0 1 0 0-.1' },
+  rest: { c: '#2b6cd6', d: 'M8 18V6h5a3.5 3.5 0 0 1 0 7H8' },
+  recruitment: { c: '#7a3fc4', d: 'M9 10a2.5 2.5 0 1 0 0-.1 M5 18c0-3 2-5 4-5s4 2 4 5 M16 9a2 2 0 1 0 0-.1 M14 13c3 0 5 2 5 5' },
+  garage: { c: '#5f6368', d: 'M5 18V10l7-4 7 4v8 M8 18v-5h8v5' },
+  service: { c: '#5f6368', d: 'M15 5a4 4 0 0 0-4 5l-6 6 3 3 6-6a4 4 0 0 0 5-4l-2 2-2-2 2-2z' },
+  weigh: { c: '#5f6368', d: 'M12 5v14 M6 8h12 M6 8l-2 6h4z M18 8l-2 6h4z M8 19h8' },
+  dealer: { c: '#5f6368', d: 'M4 15V9h9v6 M13 11h4l3 3v1h-7 M7 17a1.5 1.5 0 1 0 0-.1 M16 17a1.5 1.5 0 1 0 0-.1' },
+  viewpoint: { c: '#5f6368', d: 'M5 9h3l1.5-2h5L16 9h3v9H5z M12 15a2.5 2.5 0 1 0 0-.1' },
+  port: { c: '#1b6b8f', d: 'M12 5v12 M8 8h8 M6 13c0 3 3 5 6 5s6-2 6-5' },
+  airport: { c: '#1b6b8f', d: 'M12 4v16 M4 13l8-3 8 3 M9 19l3-1 3 1' },
+  toll: { c: '#5f6368', d: 'M14.5 8.5C14 7.5 13 7 12 7c-1.7 0-3 .9-3 2.2 0 2.8 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2-1.2 0-2.3-.6-2.8-1.6 M12 5v14' },
+  agricheck: { c: '#2f8f3a', d: 'M6 18c0-7 5-11 12-12-1 7-5 12-12 12z M6 18l6-6' },
+};
+const FACILITY_ORDER = ['gas', 'rest', 'hotel', 'service', 'garage', 'dealer', 'weigh', 'recruitment', 'port', 'airport', 'toll', 'viewpoint', 'agricheck'];
+
 const pathOf = (pts) => `M${pts.map((p) => `${p[0]},${p[1]}`).join('L')}`;
 const ringsPath = (rings) => rings.map((r) => `${pathOf(r)}Z`).join('');
 
@@ -120,7 +139,25 @@ function render(box, data, t, opts = {}) {
     const label = svgEl('text', { x: 8, y: -7, class: 'city-label' }, link);
     label.textContent = c.name;
     svgEl('title', {}, link).textContent = c.name;
-    return { c, node: link, big };
+    // Facilities: a row of icons under the name (zoomed in).
+    const fac = svgEl('g', { class: 'city-facilities', transform: 'translate(8,2)' }, citiesG);
+    FACILITY_ORDER.filter((f) => (c.facilities ?? []).includes(f)).forEach((f, i) => {
+      const def = FACILITY[f];
+      const g = svgEl('g', { transform: `translate(${i * 19},0)`, class: 'fac' }, fac);
+      svgEl('rect', { width: 17, height: 17, rx: 4, fill: def.c, stroke: '#000', 'stroke-width': 1 }, g);
+      svgEl('path', { d: def.d, transform: 'translate(1.5,1.5) scale(0.58)', fill: 'none', stroke: '#fff', 'stroke-width': 2.2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, g);
+      svgEl('title', {}, g).textContent = t.facilities?.[f] ?? f;
+    });
+    // Companies: monogram chips linking to the company pages (zoomed in further).
+    const cos = svgEl('g', { class: 'city-companies', transform: 'translate(8,23)' }, citiesG);
+    (c.companies ?? []).forEach(([id, name], i) => {
+      const a = svgEl('a', { href: `/ats/company/${id}`, class: 'co-chip', transform: `translate(${(i % 6) * 27},${Math.floor(i / 6) * 19})` }, cos);
+      svgEl('rect', { width: 25, height: 17, rx: 3 }, a);
+      const tx = svgEl('text', { x: 12.5, y: 12.5 }, a);
+      tx.textContent = monogram(name);
+      svgEl('title', {}, a).textContent = name;
+    });
+    return { c, node: link, big, fac, cos };
   });
 
   box.replaceChildren(svg);
@@ -143,6 +180,7 @@ function render(box, data, t, opts = {}) {
     const zoom = view.k / baseK;
     svg.classList.toggle('zoomed', zoom >= 2.2);
     svg.classList.toggle('far', zoom < 1.4);
+    svg.classList.toggle('close', zoom >= 4);
     const toScreen = ([x, y]) => [x * view.k + view.x, y * view.k + view.y];
     for (const s of spots) {
       const [sx, sy] = toScreen(s.p);
@@ -155,6 +193,8 @@ function render(box, data, t, opts = {}) {
     for (const n of cityNodes) {
       const [sx, sy] = toScreen(n.c.xy);
       n.node.setAttribute('transform', `translate(${sx.toFixed(1)},${sy.toFixed(1)})`);
+      n.fac.setAttribute('transform', `translate(${(sx + 8).toFixed(1)},${(sy + 2).toFixed(1)})`);
+      n.cos.setAttribute('transform', `translate(${(sx + 8).toFixed(1)},${(sy + 23).toFixed(1)})`);
       n.node.classList.toggle('city-small-label', !n.big && zoom < 1.4 && !highlight.has(n.c.id));
     }
   };
