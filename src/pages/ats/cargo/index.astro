@@ -3,7 +3,8 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import CatalogTabs from '../../../components/CatalogTabs.astro';
 import { getI18n } from '../../../i18n/index.mjs';
 import en from '../../../i18n/en.json';
-import { cargo, trailers } from '../../../lib/data.mjs';
+import { cargo, trailers, categories } from '../../../lib/data.mjs';
+import { cargoCategory, iconSvg } from '../../../lib/media.mjs';
 import { cargoPath } from '../../../lib/catalog.mjs';
 
 const { t } = getI18n();
@@ -45,7 +46,7 @@ const flagText = (c) => [c.hazmatClass ? `ADR ${c.hazmatClass}` : null, ...c.fla
         <tbody>
           {list.map((c) => (
             <tr data-name={c.name.toLowerCase()}>
-              <th scope="row"><a href={cargoPath(c)}>{c.name}</a></th>
+              <th scope="row"><a href={cargoPath(c)}><span class="row-icon" set:html={iconSvg(cargoCategory(c, categories))} />{c.name}</a></th>
               <td class="num">{weight(c)}</td>
               <td class="num">{value(c)}</td>
               <td class="soft">{c.trailerTypes.map((id) => trailerName.get(id) ?? id).join(', ')}</td>
@@ -93,6 +94,9 @@ const flagText = (c) => [c.hazmatClass ? `ADR ${c.hazmatClass}` : null, ...c.fla
   tbody th, tbody td { padding: var(--space-2) var(--space-4); text-align: left; border-bottom: 1px solid var(--row-line); vertical-align: top; }
   tbody th a { display: inline-flex; align-items: center; min-height: 32px; font-weight: 600; color: var(--text); }
   tbody th a:hover { color: var(--amber); }
+  .row-icon { flex: none; width: 34px; margin-right: var(--space-3); color: var(--text-muted); }
+  .row-icon :global(svg) { display: block; width: 100%; height: auto; }
+  tbody th a:hover .row-icon { color: var(--amber); }
   .num { font-family: var(--font-mono); white-space: nowrap; font-variant-numeric: tabular-nums; padding-top: var(--space-3); }
   td.soft { padding-top: var(--space-3); }
 </style>

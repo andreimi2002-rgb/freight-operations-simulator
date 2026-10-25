@@ -321,7 +321,7 @@ apoi PR `v2-freight-world` → `main` cu deploy preview; după aprobarea proprie
 
 ### Etapa 5 — Extinderea hărții
 - **Arizona** (DLC gratuit) a fost adăugată pe 2026-10-22: harta de start ATS (California, Nevada, Arizona) e completă.
-- Restul statelor ATS, stat cu stat, **după ce aplicația e mai completă** (decizia proprietarului, 2026-10-22).
+- Restul statelor ATS: inițial **după ce aplicația e mai completă** (decizia proprietarului, 2026-10-22). Revizuit pe 2026-10-25: primul val (New Mexico, Oregon, Washington) vine mai devreme, imediat după Faza B6; vezi Faza S în §8b.
 - Apoi ETS2, cu aceeași structură de date (țări în loc de state).
 
 ### Etapa 6 — Extra (de discutat)
@@ -345,13 +345,17 @@ apoi PR `v2-freight-world` → `main` cu deploy preview; după aprobarea proprie
 
 ---
 
-## 8b. Roadmap după lansare (actualizat 2026-10-22)
+## 8b. Roadmap după lansare (actualizat 2026-10-25)
 
-**Stare:** Etapele 0–4 sunt gata și live, plus Arizona (harta de start completă: 50 de orașe), paginile de companie (Etapa 6, prima parte) și harta în stil ATS. Etapele 5–8 de mai sus rămân direcția; fazele de mai jos sunt ordinea concretă de lucru.
+**Stare:** Etapele 0–4 sunt gata și live, plus Arizona (harta de start completă: 50 de orașe), paginile de companie (Etapa 6, prima parte) și harta în stil ATS. Faza A și fazele B1, B2, B3, B5 sunt gata și live (2.0.0-alpha.14). Etapele 5–8 de mai sus rămân direcția; fazele de mai jos sunt ordinea concretă de lucru.
+
+**Ordinea următoare (revizuită 2026-10-25):** Faza B6 (imagini, gata în 2.0.0-alpha.15) → **Faza S** (New Mexico, Oregon, Washington; următoarea) → Faza C / D. Faza B4 (domeniu, statistici, feedback) se amână pentru mai târziu.
 
 Principii pentru toate fazele: nimic inventat (regulă reală, estimare marcată sau „simulat Freight World”); fără imagini, sunete sau logo-uri din joc; totul trece prin PR cu deploy preview și aprobarea proprietarului.
 
-### Faza A — Senzația de joc (următoarea)
+**Economia de publicări (2026-10-25):** fiecare deploy Netlify (inclusiv fiecare push într-un PR deschis, care face un deploy preview) consumă credite. De aceea: PR-uri mai mari și mai puține (o fază întreagă într-un PR), push doar când lucrul e gata de revizie (nu commit cu commit), iar schimbările care ating doar planul intră în PR-ul următor de cod, nu într-un PR separat.
+
+### Faza A — Senzația de joc *(gata în 2.0.0-alpha.11)*
 1. **Fișa cursei în stilul ofertei din joc:** card ca în piața de mărfuri (marfa, de la → la, distanță, termen, greutate), pictograme de abilități desenate de noi.
 2. **Termen de livrare și urgență** (Standard / Important / Urgent), calculate din distanță, pauzele obligatorii și o marjă; marcate „simulat”.
 3. **Plan de condus cu pauze (HOS, reguli FMCSA reale):** max. 11 h de condus, pauză 30 min după 8 h, odihnă 10 h; ora și locul pauzelor pe ruta de pe hartă.
@@ -360,17 +364,27 @@ Principii pentru toate fazele: nimic inventat (regulă reală, estimare marcată
 6. **Lanț de curse:** după livrare, ce poți lua mai departe din orașul de destinație (spre orice sau spre un oraș ales).
 
 ### Faza B — Descoperire, căutare, creștere
-1. **Pagini de marfă** (`/ats/cargo/<id>`), **de remorcă** și **de camion**, din datele existente.
+1. **Pagini de marfă** (`/ats/cargo/<id>`), **de remorcă** și **de camion**, din datele existente. *Gata în 2.0.0-alpha.12.*
 2. **Căutare rapidă** în header (oraș, companie, marfă, remorcă, camion; tastele `/` sau Ctrl+K). *Gata în 2.0.0-alpha.13.*
 3. **SEO:** sitemap.xml, robots.txt, date structurate, imagini de previzualizare (Open Graph) pentru orașe, companii, mărfuri, fișe. *Gata în 2.0.0-alpha.13 (fișele de cursă rămân în afara sitemap-ului: sunt nelimitate).*
-4. **Domeniu propriu** (singurul cost), **statistici fără cookie-uri**, **pagină / canal de feedback**.
+4. **Domeniu propriu** (singurul cost), **statistici fără cookie-uri**, **pagină / canal de feedback**. *Amânat (decizia proprietarului, 2026-10-25): toată faza B4 vine mai târziu, înainte de lansarea comercială.*
 5. **Favorite și istoric local** (în browser, fără cont). *Gata în 2.0.0-alpha.14.*
-6. **Imagini** pentru camioane, remorci și mărfuri:
+6. **Imagini** pentru camioane, remorci și mărfuri. *Gata în 2.0.0-alpha.15 (16 din 19 camioane, 25 din 32 de remorci, 76 de mărfuri generice cu poză „ilustrativ”; restul cu pictograme proprii pe 11 categorii; Santa Maria are poză, San Simon rămâne fără).*
    - poze reale de pe **Wikimedia Commons**, cu autor, licență și link, marcate „ilustrativ” (camionul sau marfa din realitate, nu din joc);
    - unde nu există o poză potrivită: **pictograme proprii pe categorii** (cisternă, platformă, frigorific, utilaje etc.);
    - **căutare extinsă** pentru cele 2 orașe fără poză (Santa Maria, San Simon);
-   - un **instrument de selecție** (candidați + alegere + motiv, ca la orașe), necesar și pentru Faza H (mii de imagini);
+   - un **instrument de selecție** (candidați + alegere + motiv, ca la orașe): *mutat în Faza H (decizia proprietarului, 2026-10-25); în B6 alege Claude, cu motivul scris, iar proprietarul verifică în deploy preview;*
    - o întrebare în plus către SCS: dacă putem folosi imagini din joc sau de pe wiki (acum nu: sunt ale SCS).
+
+### Faza S — Primul val de state noi: New Mexico, Oregon, Washington (următoarea)
+Decizia proprietarului (2026-10-25): statele noi vin mai devreme decât în planul inițial, **toate trei într-un singur PR** (economia de publicări).
+1. **Datele:** câte o intrare în `data/ats/scope.json` pentru fiecare stat, apoi colectorul (`scripts/ats/collect.mjs`) rulat din nou: orașe, companii, depozite, mărfuri oferite și acceptate, facilități. Contradicțiile de pe wiki merg în `data/ats/issues.json`.
+2. **Poze de oraș** din Wikimedia Commons, alese ca până acum (`data/photos.json`, cu motivul), cu instrumentul de selecție din B6.
+3. **Distanțe și hartă:** distanțele între orașe recalculate pentru harta lărgită (rute care trec prin mai multe state) și harta în stil ATS extinsă cu cele trei state.
+4. **DLC-uri de hartă:** New Mexico, Oregon și Washington sunt DLC-uri plătite. „My DLCs” primește și DLC-urile de hartă (anunțat deja în interfață), iar tabela, generatorul și planificatorul marchează sau ascund cursele care au nevoie de ele.
+5. Paginile, căutarea, sitemap-ul și testele acoperă automat statele noi, fiindcă statele sunt date, nu cod.
+
+**Gata când:** orice oraș din cele trei state are pagină, plecări și curse corecte spre și dinspre harta de start, iar cursele care cer un DLC de hartă sunt marcate.
 
 ### Faza C — Calibrare (când proprietarul trimite date din joc)
 1. **Distanțe și durate:** factor de corecție din 4–5 curse notate (`data/ats/observations.json`; acum 1: LA → Phoenix, 531 km în joc vs 600 km estimat).
@@ -397,9 +411,9 @@ Comparații între orașe, „cele mai bune curse” dintr-un oraș, funcții pe
 
 ### Faza H — Harta completă: ATS și ETS2 cu toate DLC-urile (înainte de lansarea comercială)
 Decizia proprietarului (2026-10-22): **la lansarea comercială, ATS și ETS2 trebuie să fie complete, cu toate DLC-urile de hartă.** Freight World devine „un wiki ATS/ETS2 mai bun”: date structurate pentru fiecare oraș, companie, marfă, remorcă și camion, plus generator, planificator și fișe de cursă.
-1. **Restul statelor ATS**, stat cu stat (un stat = o intrare în `scope.json` + colectare, poze, distanțe, hartă).
+1. **Restul statelor ATS** (după primul val din Faza S), grupate în PR-uri cu mai multe state (un stat = o intrare în `scope.json` + colectare, poze, distanțe, hartă).
 2. **ETS2**: aceeași structură de date, cu țări în loc de state; diferențe de tratat: monede și unități (EUR, km, tone), feriboturi și trenuri pe rute, regulile UE de condus (Reg. 561/2006), remorci și combinații europene, harta Europei în stilul ETS2.
-3. **Unelte pentru scară** (sute de orașe): colectare și verificări automate, poze propuse automat cu reguli stricte și verificate de proprietar pe o pagină de selecție, distanțe și hartă generate pe regiune.
+3. **Unelte pentru scară** (sute de orașe): colectare și verificări automate, poze propuse automat cu reguli stricte și verificate de proprietar pe o pagină de selecție (instrumentul de selecție mutat aici din B6), distanțe și hartă generate pe regiune.
 4. Comutatorul ATS / ETS2 din meniu devine activ.
 
 ### Faza G — Lansare comercială (Etapa 8)
@@ -476,3 +490,5 @@ Acordul SCS, formă legală (PFA / SRL), termeni și politică de confidențiali
 | 2026-10-22 | Fazele B2 + B3 într-un PR: **căutare** în header (index generat la build, `/data/search.json`, 463 de intrări); **SEO**: sitemap.xml (472 de pagini, fără fișele de cursă), robots.txt, Open Graph și Twitter (poza orașului pe paginile de oraș, altfel o imagine Freight World generată din datele noastre), date structurate (WebSite cu căutare, BreadcrumbList). Două perechi de mărfuri cu același nume (Crawler Tractor, Transformer) primesc DLC-ul în titlu. **Faza B6 „Imagini”** adăugată în plan. |
 | 2026-10-22 | Faza B5: **favorite și istoric** doar în browser (localStorage, fără cont, nimic trimis la server): steaua „Save” pe paginile de oraș, companie, marfă, remorcă, camion și pe fișa cursei; ultimele 30 de pagini deschise; pagina `/saved` (ținută în afara motoarelor de căutare, `noindex`); căutarea cu câmpul gol arată salvatele și ultimele deschise. Dacă browserul blochează stocarea, site-ul merge normal, doar nu ține minte. |
 | 2026-10-22 | **Domeniul** va fi **freightworld.app** (ales de proprietar, cumpărat mai târziu; adresa netlify.app va redirecționa). Faza B1: pagini de marfă, remorcă și camion (474 de pagini în total), cu relațiile calculate din datele depozitelor. |
+| 2026-10-25 | **Plan revizuit:** ordinea devine B6 (imagini) → **Faza S** (New Mexico, Oregon, Washington, toate trei într-un singur PR) → C / D; statele noi vin mai devreme decât „după ce aplicația e mai completă”. **Faza B4** (domeniul freightworld.app, statistici, feedback) se amână pentru mai târziu. **Economia de publicări:** deploy-urile Netlify costă credite, deci PR-uri mai mari și mai puține, push doar când lucrul e gata de revizie, iar schimbările doar de plan intră în PR-ul următor de cod. |
+| 2026-10-25 | **Faza B6: imagini.** Poze reale de pe Wikimedia Commons, marcate „ilustrativ” (cu autor, licență și link), pentru camioane, remorci și mărfurile generice; utilajele de marcă și mărfurile ambigue nu primesc poză, ci pictograma categoriei (11 categorii de remorcă, desenate de noi, definite ca date în `data/categories.json`). Candidații vin din `scripts/photos/catalog-candidates.mjs`; Claude a ales fiecare poză uitându-se la ea (delegat de proprietar, fără pagină de selecție), cu motivul scris în `data/catalog-photos.json`, inclusiv pentru refuzuri. Generația camionului verificată vizual: unde nu se poate confirma (Cascadia 2024, VNR Electric, 57X) rămâne pictograma. Miniaturile Commons doar la lățimi standard (500 / 1280 px). Santa Maria primește o poză aeriană; San Simon rămâne fără (s-au găsit doar valea și râul). |

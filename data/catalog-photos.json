@@ -1,0 +1,1991 @@
+{
+  "meta": {
+    "description": "Illustrative real-world photos for the truck, trailer and cargo pages (phase B6), from Wikimedia Commons, chosen by hand from data/catalog-photo-candidates.json (owner delegated the choice to Claude on 2026-10-25). Each entry gives the reason. No entry = our own category icon.",
+    "source": "Wikimedia Commons",
+    "licences": "free licences per file (author and licence on each entry)",
+    "chosen": "2026-10-25",
+    "chosenBy": "Claude (delegated by the project owner)"
+  },
+  "trucks": {
+    "freightliner-cascadia": {
+      "photo": {
+        "file": "2018 Freightliner Cascadia.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/2018_Freightliner_Cascadia.jpg/1280px-2018_Freightliner_Cascadia.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/2018_Freightliner_Cascadia.jpg/500px-2018_Freightliner_Cascadia.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2018_Freightliner_Cascadia.jpg",
+        "author": "Tdorante10",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 774,
+        "from": "Commons search \"Freightliner New Cascadia\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "2018 Cascadia of the fifth generation (the 2019 model in the game), clear front-side view"
+    },
+    "freightliner-cascadia-2024": {
+      "photo": null,
+      "reason": "no free photo on Commons clearly shows the 2024 refresh; the candidates are the earlier fifth generation or cannot be told apart"
+    },
+    "international-9900i": {
+      "photo": {
+        "file": "2005 INTERNATIONAL 9900i EAGLE (29961817262).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/2005_INTERNATIONAL_9900i_EAGLE_%2829961817262%29.jpg/1280px-2005_INTERNATIONAL_9900i_EAGLE_%2829961817262%29.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/2005_INTERNATIONAL_9900i_EAGLE_%2829961817262%29.jpg/500px-2005_INTERNATIONAL_9900i_EAGLE_%2829961817262%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2005_INTERNATIONAL_9900i_EAGLE_(29961817262).jpg",
+        "author": "Greg Gjerdingen from Willmar, USA",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Wikidata image (P18) of Q16254484 \"International 9000\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "2005 International 9900i Eagle, whole truck in side-front view"
+    },
+    "international-lonestar": {
+      "photo": {
+        "file": "2020 International Lone Star Semi Tractor.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/2020_International_Lone_Star_Semi_Tractor.jpg/1280px-2020_International_Lone_Star_Semi_Tractor.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/2020_International_Lone_Star_Semi_Tractor.jpg/500px-2020_International_Lone_Star_Semi_Tractor.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2020_International_Lone_Star_Semi_Tractor.jpg",
+        "author": "Greg Gjerdingen",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 720,
+        "from": "Commons search \"International LoneStar\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "2020 International LoneStar tractor, clear side-front view in daylight"
+    },
+    "international-lt": {
+      "photo": {
+        "file": "2019 International LT 625 trailer truck, front left.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/2019_International_LT_625_trailer_truck%2C_front_left.jpg/1280px-2019_International_LT_625_trailer_truck%2C_front_left.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/2019_International_LT_625_trailer_truck%2C_front_left.jpg/500px-2019_International_LT_625_trailer_truck%2C_front_left.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2019_International_LT_625_trailer_truck,_front_left.jpg",
+        "author": "Mr.choppers",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 889,
+        "from": "Commons search \"International LT625\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "2019 International LT625 sleeper, front-left view of the whole tractor"
+    },
+    "kenworth-t680-2014": {
+      "photo": {
+        "file": "2016 Kenworth T680.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/2016_Kenworth_T680.jpg/1280px-2016_Kenworth_T680.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/2016_Kenworth_T680.jpg/500px-2016_Kenworth_T680.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2016_Kenworth_T680.jpg",
+        "author": "Thecohorts",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"Kenworth T680\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "2016 Kenworth T680 of the first generation, whole truck in side view"
+    },
+    "kenworth-t680-2022": {
+      "photo": {
+        "file": "Our company truck in front of new warehouse.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Our_company_truck_in_front_of_new_warehouse.jpg/1280px-Our_company_truck_in_front_of_new_warehouse.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Our_company_truck_in_front_of_new_warehouse.jpg/500px-Our_company_truck_in_front_of_new_warehouse.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Our_company_truck_in_front_of_new_warehouse.jpg",
+        "author": "Meiborg trucking",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 742,
+        "from": "Commons search \"Kenworth T680 2022\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "T680 Next Gen (new headlights and hood) with a sleeper and trailer; the file named 2022 T680 shows the older look"
+    },
+    "kenworth-w900": {
+      "photo": {
+        "file": "Kenworth W900 semi in red.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Kenworth_W900_semi_in_red.jpg/1280px-Kenworth_W900_semi_in_red.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Kenworth_W900_semi_in_red.jpg/500px-Kenworth_W900_semi_in_red.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Kenworth_W900_semi_in_red.jpg",
+        "author": "PRA",
+        "licence": "CC BY 2.5",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
+        "width": 1280,
+        "height": 907,
+        "from": "Wikidata image (P18) of Q17126324 \"Kenworth W900\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "red Kenworth W900 long-hood with a trailer, photographed in California"
+    },
+    "mack-anthem": {
+      "photo": {
+        "file": "2025 Mack Anthem 6x4 tractor (Stand Up Sleeper) in Lacquer Red, front right.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/2025_Mack_Anthem_6x4_tractor_%28Stand_Up_Sleeper%29_in_Lacquer_Red%2C_front_right.jpg/1280px-2025_Mack_Anthem_6x4_tractor_%28Stand_Up_Sleeper%29_in_Lacquer_Red%2C_front_right.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/2025_Mack_Anthem_6x4_tractor_%28Stand_Up_Sleeper%29_in_Lacquer_Red%2C_front_right.jpg/500px-2025_Mack_Anthem_6x4_tractor_%28Stand_Up_Sleeper%29_in_Lacquer_Red%2C_front_right.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2025_Mack_Anthem_6x4_tractor_(Stand_Up_Sleeper)_in_Lacquer_Red,_front_right.jpg",
+        "author": "Mr.choppers",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 882,
+        "from": "Commons search \"Mack Anthem\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "2025 Mack Anthem 6x4 sleeper tractor, front-right view"
+    },
+    "mack-pinnacle": {
+      "photo": {
+        "file": "2018 Mack Pinnacle CXU613 sleeper cab.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/2018_Mack_Pinnacle_CXU613_sleeper_cab.jpg/1280px-2018_Mack_Pinnacle_CXU613_sleeper_cab.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/2018_Mack_Pinnacle_CXU613_sleeper_cab.jpg/500px-2018_Mack_Pinnacle_CXU613_sleeper_cab.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2018_Mack_Pinnacle_CXU613_sleeper_cab.jpg",
+        "author": "MercurySable99",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 891,
+        "from": "Commons search \"Mack Pinnacle\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "2018 Mack Pinnacle CXU613 sleeper cab, whole tractor"
+    },
+    "peterbilt-389": {
+      "photo": {
+        "file": "Peterbilt 389 - Moses Lake, WA, USA.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Peterbilt_389_-_Moses_Lake%2C_WA%2C_USA.jpg/1280px-Peterbilt_389_-_Moses_Lake%2C_WA%2C_USA.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Peterbilt_389_-_Moses_Lake%2C_WA%2C_USA.jpg/500px-Peterbilt_389_-_Moses_Lake%2C_WA%2C_USA.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Peterbilt_389_-_Moses_Lake,_WA,_USA.jpg",
+        "author": "Ewkada",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+        "width": 1280,
+        "height": 1024,
+        "from": "Commons search \"Peterbilt 389\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "Peterbilt 389 sleeper in Moses Lake, Washington, clear front-side view"
+    },
+    "peterbilt-579": {
+      "photo": {
+        "file": "Peterbilt 579 Lone Pine 2018-04-07 California 01.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Peterbilt_579_Lone_Pine_2018-04-07_California_01.jpg/1280px-Peterbilt_579_Lone_Pine_2018-04-07_California_01.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Peterbilt_579_Lone_Pine_2018-04-07_California_01.jpg/500px-Peterbilt_579_Lone_Pine_2018-04-07_California_01.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Peterbilt_579_Lone_Pine_2018-04-07_California_01.jpg",
+        "author": "Agnieszka Kwiecień, Nova",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"Peterbilt 579\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "Peterbilt 579 with a dry van on Main Street in Lone Pine, California"
+    },
+    "volvo-vnl-2014": {
+      "photo": {
+        "file": "2016 Volvo VNL 670.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/2016_Volvo_VNL_670.jpg/1280px-2016_Volvo_VNL_670.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/2016_Volvo_VNL_670.jpg/500px-2016_Volvo_VNL_670.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2016_Volvo_VNL_670.jpg",
+        "author": "Thecohorts",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 720,
+        "from": "Commons search \"Volvo VNL 670\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "2016 Volvo VNL 670, the VNL look of the 2014 model in the game, whole tractor"
+    },
+    "volvo-vnl-2018": {
+      "photo": {
+        "file": "Volvo VNL 860 Globetrotter XL - 2.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Volvo_VNL_860_Globetrotter_XL_-_2.jpg/1280px-Volvo_VNL_860_Globetrotter_XL_-_2.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Volvo_VNL_860_Globetrotter_XL_-_2.jpg/500px-Volvo_VNL_860_Globetrotter_XL_-_2.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Volvo_VNL_860_Globetrotter_XL_-_2.jpg",
+        "author": "Oleg Yunakov",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"Volvo VNL 860\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "VNL 860 of the 2018–2024 look (V-shaped grille), whole tractor"
+    },
+    "volvo-vnl-2025": {
+      "photo": {
+        "file": "VolvoVNL 860, IAA 2024, Hanover (P1190901).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/VolvoVNL_860%2C_IAA_2024%2C_Hanover_%28P1190901%29.jpg/1280px-VolvoVNL_860%2C_IAA_2024%2C_Hanover_%28P1190901%29.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/VolvoVNL_860%2C_IAA_2024%2C_Hanover_%28P1190901%29.jpg/500px-VolvoVNL_860%2C_IAA_2024%2C_Hanover_%28P1190901%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:VolvoVNL_860,_IAA_2024,_Hanover_(P1190901).jpg",
+        "author": "Matti Blume",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"Volvo VNL 2014\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "the all-new VNL 860 shown at IAA Transportation 2024, front view"
+    },
+    "volvo-vnr-electric": {
+      "photo": null,
+      "reason": "no free photo of a VNR Electric among the candidates (they show other Volvo VN models)"
+    },
+    "western-star-49x": {
+      "photo": {
+        "file": "Western Star 49X SFA 8x4, right.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Western_Star_49X_SFA_8x4%2C_right.jpg/1280px-Western_Star_49X_SFA_8x4%2C_right.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Western_Star_49X_SFA_8x4%2C_right.jpg/500px-Western_Star_49X_SFA_8x4%2C_right.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Western_Star_49X_SFA_8x4,_right.jpg",
+        "author": "Bill Beers",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1280,
+        "height": 720,
+        "from": "Commons search \"Western Star 49X\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "Western Star 49X (set-forward axle), right side view of the whole truck"
+    },
+    "western-star-5700xe": {
+      "photo": {
+        "file": "2019 Western Star 5700XE vintage car transporter in Greenwich CT.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/2019_Western_Star_5700XE_vintage_car_transporter_in_Greenwich_CT.jpg/1280px-2019_Western_Star_5700XE_vintage_car_transporter_in_Greenwich_CT.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/2019_Western_Star_5700XE_vintage_car_transporter_in_Greenwich_CT.jpg/500px-2019_Western_Star_5700XE_vintage_car_transporter_in_Greenwich_CT.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2019_Western_Star_5700XE_vintage_car_transporter_in_Greenwich_CT.jpg",
+        "author": "Mr.choppers",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 844,
+        "from": "Commons search \"Western Star 5700XE\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "2019 Western Star 5700XE with a large sleeper, whole truck"
+    },
+    "western-star-57x": {
+      "photo": null,
+      "reason": "no free photo of a Western Star 57X found on Commons or Wikidata"
+    }
+  },
+  "trailers": {
+    "blade-trailer": {
+      "photo": {
+        "file": "Wind Turbine Blade Delivery on the A9 Trunk Road, Sutherland, UK - geograph.org.uk - 7214977.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Wind_Turbine_Blade_Delivery_on_the_A9_Trunk_Road%2C_Sutherland%2C_UK_-_geograph.org.uk_-_7214977.jpg/1280px-Wind_Turbine_Blade_Delivery_on_the_A9_Trunk_Road%2C_Sutherland%2C_UK_-_geograph.org.uk_-_7214977.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Wind_Turbine_Blade_Delivery_on_the_A9_Trunk_Road%2C_Sutherland%2C_UK_-_geograph.org.uk_-_7214977.jpg/500px-Wind_Turbine_Blade_Delivery_on_the_A9_Trunk_Road%2C_Sutherland%2C_UK_-_geograph.org.uk_-_7214977.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Wind_Turbine_Blade_Delivery_on_the_A9_Trunk_Road,_Sutherland,_UK_-_geograph.org.uk_-_7214977.jpg",
+        "author": "Andrew Tryon",
+        "licence": "CC BY-SA 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "width": 1280,
+        "height": 848,
+        "from": "Commons search \"wind turbine blade transport truck\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a wind turbine blade on an extendable blade trailer on the A9 in Scotland"
+    },
+    "bulk-feed": {
+      "photo": null,
+      "reason": "no free photo of an American bulk feed trailer among the candidates (they show fuel tankers and parcel vans)"
+    },
+    "car-transporter": {
+      "photo": {
+        "file": "2015 Peterbilt 388 car hauler in Black, Front Left, 09-26-2022.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/2015_Peterbilt_388_car_hauler_in_Black%2C_Front_Left%2C_09-26-2022.jpg/1280px-2015_Peterbilt_388_car_hauler_in_Black%2C_Front_Left%2C_09-26-2022.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/2015_Peterbilt_388_car_hauler_in_Black%2C_Front_Left%2C_09-26-2022.jpg/500px-2015_Peterbilt_388_car_hauler_in_Black%2C_Front_Left%2C_09-26-2022.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2015_Peterbilt_388_car_hauler_in_Black,_Front_Left,_09-26-2022.jpg",
+        "author": "Elise240SX",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 558,
+        "from": "Commons search \"car carrier trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "2015 Peterbilt 388 with an American car hauler, side view"
+    },
+    "chemical-tank": {
+      "photo": {
+        "file": "Hazardous chemical transport vehicle - 鲁C81T0挂.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Hazardous_chemical_transport_vehicle_-_%E9%B2%81C81T0%E6%8C%82.jpg/1280px-Hazardous_chemical_transport_vehicle_-_%E9%B2%81C81T0%E6%8C%82.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Hazardous_chemical_transport_vehicle_-_%E9%B2%81C81T0%E6%8C%82.jpg/500px-Hazardous_chemical_transport_vehicle_-_%E9%B2%81C81T0%E6%8C%82.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Hazardous_chemical_transport_vehicle_-_%E9%B2%81C81T0%E6%8C%82.jpg",
+        "author": "François Nguyen",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"chemical tank trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a stainless steel tank semi-trailer for hazardous chemicals, whole rig in side view"
+    },
+    "chip-van": {
+      "photo": {
+        "file": "Flistipping.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Flistipping.jpg/1280px-Flistipping.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Flistipping.jpg/500px-Flistipping.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Flistipping.jpg",
+        "author": "Eivindmy",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons search \"wood chip trailer truck\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a wood chip semi-trailer tipping its load"
+    },
+    "container-carrier": {
+      "photo": {
+        "file": "APL container truck.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/APL_container_truck.jpg/1280px-APL_container_truck.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/APL_container_truck.jpg/500px-APL_container_truck.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:APL_container_truck.jpg",
+        "author": "CartleR255",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 410,
+        "from": "Commons search \"container chassis truck\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a container on a chassis hauled on an American freeway"
+    },
+    "drop-deck": {
+      "photo": {
+        "file": "DAF 95-De Rooy (NL)-2003.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/DAF_95-De_Rooy_%28NL%29-2003.jpg/1280px-DAF_95-De_Rooy_%28NL%29-2003.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/DAF_95-De_Rooy_%28NL%29-2003.jpg/500px-DAF_95-De_Rooy_%28NL%29-2003.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:DAF_95-De_Rooy_(NL)-2003.jpg",
+        "author": "No machine-readable author provided. Klever assumed (based on copyright claims).",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"step deck trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a drop deck (step deck with ramps) carrying a tractor unit on a motorway"
+    },
+    "dry-bulk": {
+      "photo": {
+        "file": "Dry bulk truck of Barney Trucking on US 95.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Dry_bulk_truck_of_Barney_Trucking_on_US_95.jpg/1280px-Dry_bulk_truck_of_Barney_Trucking_on_US_95.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Dry_bulk_truck_of_Barney_Trucking_on_US_95.jpg/500px-Dry_bulk_truck_of_Barney_Trucking_on_US_95.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Dry_bulk_truck_of_Barney_Trucking_on_US_95.jpg",
+        "author": "D'oh Boy (Mark Holloway) from Beatty, Nevada, USA",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 558,
+        "from": "Commons search \"dry bulk tank trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "pneumatic dry bulk trailers (doubles) on US 95 in Beatty, Nevada"
+    },
+    "dry-van": {
+      "photo": {
+        "file": "CN Intermodal truck Memphis TN.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/CN_Intermodal_truck_Memphis_TN.jpg/1280px-CN_Intermodal_truck_Memphis_TN.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/CN_Intermodal_truck_Memphis_TN.jpg/500px-CN_Intermodal_truck_Memphis_TN.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:CN_Intermodal_truck_Memphis_TN.jpg",
+        "author": "Thomas R Machnitzki (thomas@machnitzki.com)",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+        "width": 1280,
+        "height": 962,
+        "from": "Commons search \"53 foot trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a 53-foot dry van trailer behind a tractor in Memphis, Tennessee"
+    },
+    "dumper": {
+      "photo": {
+        "file": "AX34445 (17.03.28, Motorvej 501)DSC 3751 Optimizer (37328810746).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/AX34445_%2817.03.28%2C_Motorvej_501%29DSC_3751_Optimizer_%2837328810746%29.jpg/1280px-AX34445_%2817.03.28%2C_Motorvej_501%29DSC_3751_Optimizer_%2837328810746%29.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/AX34445_%2817.03.28%2C_Motorvej_501%29DSC_3751_Optimizer_%2837328810746%29.jpg/500px-AX34445_%2817.03.28%2C_Motorvej_501%29DSC_3751_Optimizer_%2837328810746%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:AX34445_(17.03.28,_Motorvej_501)DSC_3751_Optimizer_(37328810746).jpg",
+        "author": "Lav Ulv from Viby J, Denmark",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 720,
+        "from": "Commons search \"end dump trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "an end dump semi-trailer (tipper) on a motorway, side-front view"
+    },
+    "flatbed": {
+      "photo": {
+        "file": "Flatbed trailer Memphis TN 2013-07-28 011.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flatbed_trailer_Memphis_TN_2013-07-28_011.jpg/1280px-Flatbed_trailer_Memphis_TN_2013-07-28_011.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flatbed_trailer_Memphis_TN_2013-07-28_011.jpg/500px-Flatbed_trailer_Memphis_TN_2013-07-28_011.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Flatbed_trailer_Memphis_TN_2013-07-28_011.jpg",
+        "author": "Thomas R Machnitzki ( thomas machnitzki.com)",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"flatbed semi-trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "an empty American flatbed semi-trailer in Memphis, Tennessee"
+    },
+    "food-tank": {
+      "photo": {
+        "file": "Müller milk tanker in Longnor - geograph.org.uk - 7919111.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/M%C3%BCller_milk_tanker_in_Longnor_-_geograph.org.uk_-_7919111.jpg/1280px-M%C3%BCller_milk_tanker_in_Longnor_-_geograph.org.uk_-_7919111.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/M%C3%BCller_milk_tanker_in_Longnor_-_geograph.org.uk_-_7919111.jpg/500px-M%C3%BCller_milk_tanker_in_Longnor_-_geograph.org.uk_-_7919111.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:M%C3%BCller_milk_tanker_in_Longnor_-_geograph.org.uk_-_7919111.jpg",
+        "author": "TCExplorer",
+        "licence": "CC BY-SA 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "width": 1280,
+        "height": 964,
+        "from": "Commons search \"milk tank trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a stainless milk tanker on a country road"
+    },
+    "frac-tank": {
+      "photo": {
+        "file": "Water tanks preparing for a frac job.JPG",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Water_tanks_preparing_for_a_frac_job.JPG/1280px-Water_tanks_preparing_for_a_frac_job.JPG",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Water_tanks_preparing_for_a_frac_job.JPG/500px-Water_tanks_preparing_for_a_frac_job.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:Water_tanks_preparing_for_a_frac_job.JPG",
+        "author": "Joshua Doubek",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"frac tank\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a row of frac tanks set up on a site for a frac job"
+    },
+    "fuel-tank": {
+      "photo": {
+        "file": "Haycock Petroleum Kenworth W900L tanker (4).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Haycock_Petroleum_Kenworth_W900L_tanker_%284%29.jpg/1280px-Haycock_Petroleum_Kenworth_W900L_tanker_%284%29.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Haycock_Petroleum_Kenworth_W900L_tanker_%284%29.jpg/500px-Haycock_Petroleum_Kenworth_W900L_tanker_%284%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Haycock_Petroleum_Kenworth_W900L_tanker_(4).jpg",
+        "author": "D'oh Boy (Mark Holloway) from Beatty, Nevada, USA",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 746,
+        "from": "Commons search \"fuel tanker truck USA\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a fuel tanker behind a Kenworth W900L in Beatty, Nevada, side view"
+    },
+    "gas-tank": {
+      "photo": {
+        "file": "LPG tank truck on US 95.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/LPG_tank_truck_on_US_95.jpg/1280px-LPG_tank_truck_on_US_95.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/LPG_tank_truck_on_US_95.jpg/500px-LPG_tank_truck_on_US_95.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:LPG_tank_truck_on_US_95.jpg",
+        "author": "D'oh Boy (Mark Holloway) from Beatty, Nevada, USA",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 723,
+        "from": "Commons search \"propane tank trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a propane (LPG) tank trailer on US 95 in Beatty, Nevada"
+    },
+    "hopper": {
+      "photo": {
+        "file": "Hopperbottomsalemcountynewjersey280121.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Hopperbottomsalemcountynewjersey280121.jpg/1280px-Hopperbottomsalemcountynewjersey280121.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Hopperbottomsalemcountynewjersey280121.jpg/500px-Hopperbottomsalemcountynewjersey280121.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Hopperbottomsalemcountynewjersey280121.jpg",
+        "author": "Acornembryo",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"hopper bottom trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a hopper bottom grain trailer, side view"
+    },
+    "house-transporter": {
+      "photo": {
+        "file": "Moving the Ladd Carriage House.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Moving_the_Ladd_Carriage_House.jpg/1280px-Moving_the_Ladd_Carriage_House.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Moving_the_Ladd_Carriage_House.jpg/500px-Moving_the_Ladd_Carriage_House.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Moving_the_Ladd_Carriage_House.jpg",
+        "author": "Ennetws",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 563,
+        "from": "Commons search \"house moving truck\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a carriage house being moved on a trailer through the streets"
+    },
+    "insulated": {
+      "photo": {
+        "file": "Insulated semi-trailer - rear.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Insulated_semi-trailer_-_rear.jpg/1280px-Insulated_semi-trailer_-_rear.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Insulated_semi-trailer_-_rear.jpg/500px-Insulated_semi-trailer_-_rear.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Insulated_semi-trailer_-_rear.jpg",
+        "author": "Eric Polk",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 1427,
+        "from": "Commons search \"insulated trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "an insulated semi-trailer on I-710 in Los Angeles, rear view"
+    },
+    "knuckleboom-loader": {
+      "photo": {
+        "file": "Unhitching Log Truck Trailer (34393997613).jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Unhitching_Log_Truck_Trailer_%2834393997613%29.jpg/1280px-Unhitching_Log_Truck_Trailer_%2834393997613%29.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Unhitching_Log_Truck_Trailer_%2834393997613%29.jpg/500px-Unhitching_Log_Truck_Trailer_%2834393997613%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Unhitching_Log_Truck_Trailer_(34393997613).jpg",
+        "author": "BLM Oregon & Washington",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 720,
+        "from": "Commons search \"log loader trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a knuckleboom loader lifting a log trailer at a logging landing"
+    },
+    "livestock": {
+      "photo": null,
+      "reason": "no free photo of a livestock semi-trailer among the candidates"
+    },
+    "log": {
+      "photo": {
+        "file": "Logging Truck PA D.D.Teoli Jr.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Logging_Truck_PA_D.D.Teoli_Jr.jpg/1280px-Logging_Truck_PA_D.D.Teoli_Jr.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Logging_Truck_PA_D.D.Teoli_Jr.jpg/500px-Logging_Truck_PA_D.D.Teoli_Jr.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Logging_Truck_PA_D.D.Teoli_Jr.jpg",
+        "author": "Danielteolijr",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 846,
+        "from": "Commons search \"log truck trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a loaded logging truck and trailer in Pennsylvania"
+    },
+    "lowboy": {
+      "photo": {
+        "file": "Talbert Lowboy Trailer (2).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Talbert_Lowboy_Trailer_%282%29.jpg/1280px-Talbert_Lowboy_Trailer_%282%29.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Talbert_Lowboy_Trailer_%282%29.jpg/500px-Talbert_Lowboy_Trailer_%282%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Talbert_Lowboy_Trailer_(2).jpg",
+        "author": "Joedamadman",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons search \"lowboy trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a lowboy trailer loaded with a crawler crane"
+    },
+    "lowboy-55l": {
+      "photo": null,
+      "reason": "the only candidates are manufacturer images with a pasted background, not photos"
+    },
+    "lowboy-boat": {
+      "photo": {
+        "file": "Hero boat on a truck.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Hero_boat_on_a_truck.jpg/1280px-Hero_boat_on_a_truck.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Hero_boat_on_a_truck.jpg/500px-Hero_boat_on_a_truck.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Hero_boat_on_a_truck.jpg",
+        "author": "Oleg Yunakov",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"boat transport truck\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a boat carried on a low trailer by road"
+    },
+    "lowboy-double": {
+      "photo": {
+        "file": "Accusteel Heavy Haul.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Accusteel_Heavy_Haul.jpg/1280px-Accusteel_Heavy_Haul.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Accusteel_Heavy_Haul.jpg/500px-Accusteel_Heavy_Haul.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Accusteel_Heavy_Haul.jpg",
+        "author": "Accusteel",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"heavy haul trailer jeep dolly\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "an 80-ton multi-axle heavy haul trailer moving a mining machine part"
+    },
+    "lowboy-triple": {
+      "photo": {
+        "file": "777B On its way to Alberta Canada from Empire Cat in Mesa AZ, via Empire Transport.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/777B_On_its_way_to_Alberta_Canada_from_Empire_Cat_in_Mesa_AZ%2C_via_Empire_Transport.jpg/1280px-777B_On_its_way_to_Alberta_Canada_from_Empire_Cat_in_Mesa_AZ%2C_via_Empire_Transport.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/777B_On_its_way_to_Alberta_Canada_from_Empire_Cat_in_Mesa_AZ%2C_via_Empire_Transport.jpg/500px-777B_On_its_way_to_Alberta_Canada_from_Empire_Cat_in_Mesa_AZ%2C_via_Empire_Transport.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:777B_On_its_way_to_Alberta_Canada_from_Empire_Cat_in_Mesa_AZ,_via_Empire_Transport.jpg",
+        "author": "Kanihan",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons search \"multi-axle heavy haul trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a Cat 777B haul truck on a multi-axle heavy haul trailer, leaving Mesa, Arizona"
+    },
+    "mobile-barrier": {
+      "photo": null,
+      "reason": "no free photo of a mobile barrier trailer among the candidates"
+    },
+    "refrigerated": {
+      "photo": {
+        "file": "Chereau-semiremorque-byRundvald.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Chereau-semiremorque-byRundvald.jpg/1280px-Chereau-semiremorque-byRundvald.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Chereau-semiremorque-byRundvald.jpg/500px-Chereau-semiremorque-byRundvald.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Chereau-semiremorque-byRundvald.jpg",
+        "author": "Rundvald",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"refrigerated trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a refrigerated semi-trailer with its cooling unit, three-quarter rear view"
+    },
+    "sliding-tarp": {
+      "photo": {
+        "file": "Curtainside-RollingTarp-SemiTrailer - Interstate 5.png",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Curtainside-RollingTarp-SemiTrailer_-_Interstate_5.png/1280px-Curtainside-RollingTarp-SemiTrailer_-_Interstate_5.png",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Curtainside-RollingTarp-SemiTrailer_-_Interstate_5.png/500px-Curtainside-RollingTarp-SemiTrailer_-_Interstate_5.png",
+        "page": "https://commons.wikimedia.org/wiki/File:Curtainside-RollingTarp-SemiTrailer_-_Interstate_5.png",
+        "author": "Ewkada",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"rolling tarp trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a rolling tarp (curtainside) semi-trailer on Interstate 5 in Bellingham, Washington"
+    },
+    "truck-transporter": {
+      "photo": null,
+      "reason": "no free photo of trucks moved in a saddle mount (drive-away) among the candidates"
+    },
+    "tub-grinder": {
+      "photo": null,
+      "reason": "no free photo of a tub grinder among the candidates"
+    },
+    "van-transporter": {
+      "photo": null,
+      "reason": "no clear free photo of a car hauler with pickups or SUVs among the candidates"
+    }
+  },
+  "cargo": {
+    "all-terrain-crane": {
+      "photo": {
+        "file": "Terex-Demag Telescopic all terrain crane AC 700.JPG",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Terex-Demag_Telescopic_all_terrain_crane_AC_700.JPG/1280px-Terex-Demag_Telescopic_all_terrain_crane_AC_700.JPG",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Terex-Demag_Telescopic_all_terrain_crane_AC_700.JPG/500px-Terex-Demag_Telescopic_all_terrain_crane_AC_700.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:Terex-Demag_Telescopic_all_terrain_crane_AC_700.JPG",
+        "author": "AlfvanBeem",
+        "licence": "CC0",
+        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"all terrain crane\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a multi-axle telescopic all terrain crane"
+    },
+    "almond-boxes": {
+      "photo": {
+        "file": "Almonds - in shell, shell cracked open, shelled, blanched.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Almonds_-_in_shell%2C_shell_cracked_open%2C_shelled%2C_blanched.jpg/1280px-Almonds_-_in_shell%2C_shell_cracked_open%2C_shelled%2C_blanched.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Almonds_-_in_shell%2C_shell_cracked_open%2C_shelled%2C_blanched.jpg/500px-Almonds_-_in_shell%2C_shell_cracked_open%2C_shelled%2C_blanched.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Almonds_-_in_shell,_shell_cracked_open,_shelled,_blanched.jpg",
+        "author": "Ivar Leidus",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons search \"almonds\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "almonds in shell, cracked, shelled and blanched"
+    },
+    "aluminum-ingots": {
+      "photo": {
+        "file": "Aluminum ingots loaded on truck.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Aluminum_ingots_loaded_on_truck.jpg/1280px-Aluminum_ingots_loaded_on_truck.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Aluminum_ingots_loaded_on_truck.jpg/500px-Aluminum_ingots_loaded_on_truck.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Aluminum_ingots_loaded_on_truck.jpg",
+        "author": "Fumikas Sagisavas",
+        "licence": "CC0",
+        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"aluminium ingots\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "aluminium ingots loaded on a truck"
+    },
+    "backhoe-loader": {
+      "photo": {
+        "file": "Backhoe loader Cat420E left.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Backhoe_loader_Cat420E_left.jpg/1280px-Backhoe_loader_Cat420E_left.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Backhoe_loader_Cat420E_left.jpg/500px-Backhoe_loader_Cat420E_left.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Backhoe_loader_Cat420E_left.jpg",
+        "author": "Shaun Greiner from Creve Coeur, United States of America",
+        "licence": "CC BY-SA 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "width": 1280,
+        "height": 851,
+        "from": "Wikidata image (P18) of Q913743 \"backhoe loader\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a backhoe loader, left side, whole machine"
+    },
+    "barley": {
+      "photo": {
+        "file": "Barley grains 4.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Barley_grains_4.jpg/1280px-Barley_grains_4.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Barley_grains_4.jpg/500px-Barley_grains_4.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Barley_grains_4.jpg",
+        "author": "국립국어원",
+        "licence": "CC BY-SA 2.0 kr",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/kr/deed.en",
+        "width": 1280,
+        "height": 1050,
+        "from": "Commons search \"barley grains\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a bowl of unhulled barley grains"
+    },
+    "batteries": {
+      "photo": null,
+      "reason": "the candidates show branded car batteries; no neutral photo"
+    },
+    "beverages": {
+      "photo": null,
+      "reason": "the candidates show branded drinks in shop fridges; no neutral photo"
+    },
+    "boat": {
+      "photo": {
+        "file": "Fast boat on car trailer.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Fast_boat_on_car_trailer.jpg/1280px-Fast_boat_on_car_trailer.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Fast_boat_on_car_trailer.jpg/500px-Fast_boat_on_car_trailer.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Fast_boat_on_car_trailer.jpg",
+        "author": "Willis Jim, U.S. Fish and Wildlife Service",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"motor boat on trailer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a fast motor boat on a road trailer"
+    },
+    "bulldozer": {
+      "photo": {
+        "file": "Liebherr bulldozer-20240815-RM-171958.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Liebherr_bulldozer-20240815-RM-171958.jpg/1280px-Liebherr_bulldozer-20240815-RM-171958.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Liebherr_bulldozer-20240815-RM-171958.jpg/500px-Liebherr_bulldozer-20240815-RM-171958.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Liebherr_bulldozer-20240815-RM-171958.jpg",
+        "author": "Reinhold Möller Ermell",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"bulldozer\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a crawler bulldozer, front view"
+    },
+    "butter": {
+      "photo": {
+        "file": "2023 Masło w maselniczce.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/2023_Mas%C5%82o_w_maselniczce.jpg/1280px-2023_Mas%C5%82o_w_maselniczce.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/2023_Mas%C5%82o_w_maselniczce.jpg/500px-2023_Mas%C5%82o_w_maselniczce.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2023_Mas%C5%82o_w_maselniczce.jpg",
+        "author": "Jacek Halicki",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 793,
+        "from": "Commons search \"butter\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a block of butter in a butter dish"
+    },
+    "cable-reel": {
+      "photo": {
+        "file": "Optical fibre cable reel Finland.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Optical_fibre_cable_reel_Finland.jpg/1280px-Optical_fibre_cable_reel_Finland.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Optical_fibre_cable_reel_Finland.jpg/500px-Optical_fibre_cable_reel_Finland.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Optical_fibre_cable_reel_Finland.jpg",
+        "author": "Antti Leppänen",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1280,
+        "height": 850,
+        "from": "Commons search \"cable reel\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a cable wound on a large wooden reel"
+    },
+    "cars": {
+      "photo": null,
+      "reason": "no clear free photo of new cars among the candidates"
+    },
+    "cattle-equipment": {
+      "photo": null,
+      "reason": "the candidates are paintings of cattle, not equipment"
+    },
+    "cement": {
+      "photo": {
+        "file": "Cement 02 (cropped).jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Cement_02_%28cropped%29.jpg/1280px-Cement_02_%28cropped%29.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Cement_02_%28cropped%29.jpg/500px-Cement_02_%28cropped%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Cement_02_(cropped).jpg",
+        "author": "Szlomo Lejb",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 1254,
+        "from": "Wikidata image (P18) of Q45190 \"cement\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "cement powder in an open sack"
+    },
+    "cheese": {
+      "photo": {
+        "file": "Meule du Plateau cheese wheels in the ripening cellar, Terre de fromages, Herve, 2025.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Meule_du_Plateau_cheese_wheels_in_the_ripening_cellar%2C_Terre_de_fromages%2C_Herve%2C_2025.jpg/1280px-Meule_du_Plateau_cheese_wheels_in_the_ripening_cellar%2C_Terre_de_fromages%2C_Herve%2C_2025.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Meule_du_Plateau_cheese_wheels_in_the_ripening_cellar%2C_Terre_de_fromages%2C_Herve%2C_2025.jpg/500px-Meule_du_Plateau_cheese_wheels_in_the_ripening_cellar%2C_Terre_de_fromages%2C_Herve%2C_2025.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Meule_du_Plateau_cheese_wheels_in_the_ripening_cellar,_Terre_de_fromages,_Herve,_2025.jpg",
+        "author": "DimiTalen",
+        "licence": "CC0",
+        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 1280,
+        "height": 1920,
+        "from": "Commons search \"cheese wheels\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "cheese wheels ripening on cellar shelves"
+    },
+    "clothes": {
+      "photo": null,
+      "reason": "no clear free photo of clothing as goods among the candidates"
+    },
+    "compact-tractor": {
+      "photo": {
+        "file": "Kubota compact tractor equipped with a Kubota LA713 front loader.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Kubota_compact_tractor_equipped_with_a_Kubota_LA713_front_loader.jpg/1280px-Kubota_compact_tractor_equipped_with_a_Kubota_LA713_front_loader.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Kubota_compact_tractor_equipped_with_a_Kubota_LA713_front_loader.jpg/500px-Kubota_compact_tractor_equipped_with_a_Kubota_LA713_front_loader.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Kubota_compact_tractor_equipped_with_a_Kubota_LA713_front_loader.jpg",
+        "author": "Novoklimov",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1280,
+        "height": 720,
+        "from": "Commons search \"compact tractor\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a compact tractor with a front loader"
+    },
+    "concrete-barrier": {
+      "photo": {
+        "file": "BarreiraNewJersey.JPG",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/BarreiraNewJersey.JPG/1280px-BarreiraNewJersey.JPG",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/BarreiraNewJersey.JPG/500px-BarreiraNewJersey.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:BarreiraNewJersey.JPG",
+        "author": "CorreiaPM",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 960,
+        "from": "Wikidata image (P18) of Q2300314 \"Jersey barrier\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a precast concrete (New Jersey) barrier"
+    },
+    "concrete-tubes-large": {
+      "photo": {
+        "file": "Concrete pipes need a soft touch - geograph.org.uk - 5708326.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Concrete_pipes_need_a_soft_touch_-_geograph.org.uk_-_5708326.jpg/1280px-Concrete_pipes_need_a_soft_touch_-_geograph.org.uk_-_5708326.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Concrete_pipes_need_a_soft_touch_-_geograph.org.uk_-_5708326.jpg/500px-Concrete_pipes_need_a_soft_touch_-_geograph.org.uk_-_5708326.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Concrete_pipes_need_a_soft_touch_-_geograph.org.uk_-_5708326.jpg",
+        "author": "Neil Owen",
+        "licence": "CC BY-SA 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "width": 1280,
+        "height": 1730,
+        "from": "Commons search \"concrete pipes\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "large concrete pipes on a site"
+    },
+    "corn": {
+      "photo": {
+        "file": "Corn Kernels 4151 (1576648135).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Corn_Kernels_4151_%281576648135%29.jpg/1280px-Corn_Kernels_4151_%281576648135%29.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Corn_Kernels_4151_%281576648135%29.jpg/500px-Corn_Kernels_4151_%281576648135%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Corn_Kernels_4151_(1576648135).jpg",
+        "author": "James Emery from Douglasville, United States",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"corn kernels\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "dried corn kernels, close-up"
+    },
+    "cotton-lint": {
+      "photo": {
+        "file": "Cotton Bales (3892638918).jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Cotton_Bales_%283892638918%29.jpg/1280px-Cotton_Bales_%283892638918%29.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Cotton_Bales_%283892638918%29.jpg/500px-Cotton_Bales_%283892638918%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Cotton_Bales_(3892638918).jpg",
+        "author": "Peretz Partensky from San Francisco, USA",
+        "licence": "CC BY-SA 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "width": 1280,
+        "height": 530,
+        "from": "Commons search \"cotton bales\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "stacked bales of cotton"
+    },
+    "cotton-seed": {
+      "photo": null,
+      "reason": "the candidates are maps and bottles of oil, not cottonseed"
+    },
+    "crude-oil": {
+      "photo": {
+        "file": "Petroleum sample.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Petroleum_sample.jpg/1280px-Petroleum_sample.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Petroleum_sample.jpg/500px-Petroleum_sample.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Petroleum_sample.jpg",
+        "author": "Nefronus",
+        "licence": "CC0",
+        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 1280,
+        "height": 1279,
+        "from": "Wikidata image (P18) of Q22656 \"petroleum\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a sample of crude oil in a flask and a beaker"
+    },
+    "dry-fruits": {
+      "photo": {
+        "file": "Dried berries.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Dried_berries.jpg/1280px-Dried_berries.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Dried_berries.jpg/500px-Dried_berries.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Dried_berries.jpg",
+        "author": "WhistlingBird",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 964,
+        "from": "Wikidata image (P18) of Q234901 \"dried fruit\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "an assortment of dried fruits and berries"
+    },
+    "drywall": {
+      "photo": null,
+      "reason": "the candidates are close-ups of walls, not drywall sheets as goods"
+    },
+    "dump-truck": {
+      "photo": {
+        "file": "Mercedes-Benz Arocs - dump truck version (1).JPG",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Mercedes-Benz_Arocs_-_dump_truck_version_%281%29.JPG/1280px-Mercedes-Benz_Arocs_-_dump_truck_version_%281%29.JPG",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Mercedes-Benz_Arocs_-_dump_truck_version_%281%29.JPG/500px-Mercedes-Benz_Arocs_-_dump_truck_version_%281%29.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Arocs_-_dump_truck_version_(1).JPG",
+        "author": "High Contrast",
+        "licence": "CC BY 3.0 de",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0/de/deed.en",
+        "width": 1280,
+        "height": 893,
+        "from": "Wikidata image (P18) of Q3246458 \"dump truck\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a heavy-duty construction dump truck"
+    },
+    "dumpster": {
+      "photo": {
+        "file": "Roll-Off.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Roll-Off.jpg/1280px-Roll-Off.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Roll-Off.jpg/500px-Roll-Off.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Roll-Off.jpg",
+        "author": "Boomer77",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 662,
+        "from": "Commons search \"roll-off dumpster\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a roll-off container on a roll-off truck"
+    },
+    "empty-pallets": {
+      "photo": {
+        "file": "Wooden-pallets stacked 8.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Wooden-pallets_stacked_8.jpg/1280px-Wooden-pallets_stacked_8.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Wooden-pallets_stacked_8.jpg/500px-Wooden-pallets_stacked_8.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Wooden-pallets_stacked_8.jpg",
+        "author": "W.carter",
+        "licence": "CC0",
+        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 1280,
+        "height": 869,
+        "from": "Commons search \"stacked wooden pallets\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "stacked empty wooden pallets"
+    },
+    "excavated-soil": {
+      "photo": {
+        "file": "Soil heap in Pilverlands Field (42 acres) - geograph.org.uk - 8119089.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Soil_heap_in_Pilverlands_Field_%2842_acres%29_-_geograph.org.uk_-_8119089.jpg/1280px-Soil_heap_in_Pilverlands_Field_%2842_acres%29_-_geograph.org.uk_-_8119089.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Soil_heap_in_Pilverlands_Field_%2842_acres%29_-_geograph.org.uk_-_8119089.jpg/500px-Soil_heap_in_Pilverlands_Field_%2842_acres%29_-_geograph.org.uk_-_8119089.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Soil_heap_in_Pilverlands_Field_(42_acres)_-_geograph.org.uk_-_8119089.jpg",
+        "author": "Mr Ignavy",
+        "licence": "CC BY-SA 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"soil heap\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a heap of excavated soil in a field"
+    },
+    "excavator": {
+      "photo": {
+        "file": "Caterpillar 330 excavator on a pile of dirt.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Caterpillar_330_excavator_on_a_pile_of_dirt.jpg/1280px-Caterpillar_330_excavator_on_a_pile_of_dirt.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Caterpillar_330_excavator_on_a_pile_of_dirt.jpg/500px-Caterpillar_330_excavator_on_a_pile_of_dirt.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Caterpillar_330_excavator_on_a_pile_of_dirt.jpg",
+        "author": "Matthew T Rader",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons search \"excavator\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a crawler excavator working on a pile of dirt"
+    },
+    "flour": {
+      "photo": {
+        "file": "Atta flour.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Atta_flour.jpg/1280px-Atta_flour.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Atta_flour.jpg/500px-Atta_flour.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Atta_flour.jpg",
+        "author": "Nga Ahorangi",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 966,
+        "from": "Wikidata image (P18) of Q36465 \"flour\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a bowl of flour"
+    },
+    "forklifts": {
+      "photo": {
+        "file": "Hyster 50XT forklift parked in downtown Campbell.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Hyster_50XT_forklift_parked_in_downtown_Campbell.jpg/1280px-Hyster_50XT_forklift_parked_in_downtown_Campbell.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Hyster_50XT_forklift_parked_in_downtown_Campbell.jpg/500px-Hyster_50XT_forklift_parked_in_downtown_Campbell.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Hyster_50XT_forklift_parked_in_downtown_Campbell.jpg",
+        "author": "Grendelkhan",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Wikidata image (P18) of Q41577 \"forklift\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a counterbalance forklift parked in Campbell, California"
+    },
+    "frozen-vegetables": {
+      "photo": {
+        "file": "Frozen peas.JPG",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Frozen_peas.JPG/1280px-Frozen_peas.JPG",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Frozen_peas.JPG/500px-Frozen_peas.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:Frozen_peas.JPG",
+        "author": "Photo by and (c) 2007 Jina Lee",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"frozen vegetables\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "frozen peas, close-up"
+    },
+    "fruits": {
+      "photo": {
+        "file": "Winterswijk (NL), Wochenmarkt -- 2016 -- 4139.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Winterswijk_%28NL%29%2C_Wochenmarkt_--_2016_--_4139.jpg/1280px-Winterswijk_%28NL%29%2C_Wochenmarkt_--_2016_--_4139.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Winterswijk_%28NL%29%2C_Wochenmarkt_--_2016_--_4139.jpg/500px-Winterswijk_%28NL%29%2C_Wochenmarkt_--_2016_--_4139.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Winterswijk_(NL),_Wochenmarkt_--_2016_--_4139.jpg",
+        "author": "Dietmar Rabich",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons search \"fruit crates\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "crates of oranges at a market"
+    },
+    "furniture": {
+      "photo": {
+        "file": "Furniture exhibits in Masfurniture, Hunsur (3).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Furniture_exhibits_in_Masfurniture%2C_Hunsur_%283%29.jpg/1280px-Furniture_exhibits_in_Masfurniture%2C_Hunsur_%283%29.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Furniture_exhibits_in_Masfurniture%2C_Hunsur_%283%29.jpg/500px-Furniture_exhibits_in_Masfurniture%2C_Hunsur_%283%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Furniture_exhibits_in_Masfurniture,_Hunsur_(3).jpg",
+        "author": "iMahesh",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons search \"furniture\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "sofas, chairs and tables in a furniture showroom"
+    },
+    "garbage-truck": {
+      "photo": {
+        "file": "Garbage truck in Tomaszów Mazowiecki, Poland.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Garbage_truck_in_Tomasz%C3%B3w_Mazowiecki%2C_Poland.jpg/1280px-Garbage_truck_in_Tomasz%C3%B3w_Mazowiecki%2C_Poland.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Garbage_truck_in_Tomasz%C3%B3w_Mazowiecki%2C_Poland.jpg/500px-Garbage_truck_in_Tomasz%C3%B3w_Mazowiecki%2C_Poland.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Garbage_truck_in_Tomasz%C3%B3w_Mazowiecki,_Poland.jpg",
+        "author": "Warszawska róg Szerokiej w Tomaszowie Mazowieckim, w województwie łódzkim, PL, EU",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 720,
+        "from": "Commons search \"garbage truck\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a rear-loader garbage truck, side view"
+    },
+    "glass": {
+      "photo": null,
+      "reason": "no clear free photo of glass sheets as goods among the candidates"
+    },
+    "grain": {
+      "photo": {
+        "file": "Filling the grain pile near elevator at Creston, WA. (36659109360).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Filling_the_grain_pile_near_elevator_at_Creston%2C_WA._%2836659109360%29.jpg/1280px-Filling_the_grain_pile_near_elevator_at_Creston%2C_WA._%2836659109360%29.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Filling_the_grain_pile_near_elevator_at_Creston%2C_WA._%2836659109360%29.jpg/500px-Filling_the_grain_pile_near_elevator_at_Creston%2C_WA._%2836659109360%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Filling_the_grain_pile_near_elevator_at_Creston,_WA._(36659109360).jpg",
+        "author": "Robert Ashworth from Bellingham, WA., USA",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"grain pile\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a grain pile being filled near an elevator in Creston, Washington"
+    },
+    "gravel": {
+      "photo": {
+        "file": "Gravel Stones.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Gravel_Stones.jpg/1280px-Gravel_Stones.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Gravel_Stones.jpg/500px-Gravel_Stones.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Gravel_Stones.jpg",
+        "author": "Saral Shots",
+        "licence": "CC0",
+        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"gravel\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "crushed gravel for concrete, close-up"
+    },
+    "gypsum": {
+      "photo": null,
+      "reason": "the candidates are mineral specimens, not gypsum as a bulk material"
+    },
+    "harvester": {
+      "photo": {
+        "file": "Claas Lexion 480-20080806-RM-133435.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Claas_Lexion_480-20080806-RM-133435.jpg/1280px-Claas_Lexion_480-20080806-RM-133435.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Claas_Lexion_480-20080806-RM-133435.jpg/500px-Claas_Lexion_480-20080806-RM-133435.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Claas_Lexion_480-20080806-RM-133435.jpg",
+        "author": "Ermell",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"combine harvester\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a combine harvester at work in a wheat field"
+    },
+    "hay": {
+      "photo": {
+        "file": "Round hay bales on a field, with hawkweed in the foreground, near Durnal, Yvoir, 2025.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Round_hay_bales_on_a_field%2C_with_hawkweed_in_the_foreground%2C_near_Durnal%2C_Yvoir%2C_2025.jpg/1280px-Round_hay_bales_on_a_field%2C_with_hawkweed_in_the_foreground%2C_near_Durnal%2C_Yvoir%2C_2025.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Round_hay_bales_on_a_field%2C_with_hawkweed_in_the_foreground%2C_near_Durnal%2C_Yvoir%2C_2025.jpg/500px-Round_hay_bales_on_a_field%2C_with_hawkweed_in_the_foreground%2C_near_Durnal%2C_Yvoir%2C_2025.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Round_hay_bales_on_a_field,_with_hawkweed_in_the_foreground,_near_Durnal,_Yvoir,_2025.jpg",
+        "author": "DimiTalen",
+        "licence": "CC0",
+        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons search \"hay bales\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "round hay bales in a field"
+    },
+    "ibc-containers": {
+      "photo": {
+        "file": "Intermediate bulk containers.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Intermediate_bulk_containers.jpg/1280px-Intermediate_bulk_containers.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Intermediate_bulk_containers.jpg/500px-Intermediate_bulk_containers.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Intermediate_bulk_containers.jpg",
+        "author": "Cjp24",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 1238,
+        "from": "Commons search \"intermediate bulk container\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "intermediate bulk containers (IBC totes) on pallets"
+    },
+    "ice-cream": {
+      "photo": {
+        "file": "A cup of three ice cream in Victoria Peak Hong Kong.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/A_cup_of_three_ice_cream_in_Victoria_Peak_Hong_Kong.jpg/1280px-A_cup_of_three_ice_cream_in_Victoria_Peak_Hong_Kong.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/A_cup_of_three_ice_cream_in_Victoria_Peak_Hong_Kong.jpg/500px-A_cup_of_three_ice_cream_in_Victoria_Peak_Hong_Kong.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:A_cup_of_three_ice_cream_in_Victoria_Peak_Hong_Kong.jpg",
+        "author": "Peachyeung316",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"ice cream\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "three scoops of ice cream in a cup"
+    },
+    "iron-pipes": {
+      "photo": {
+        "file": "Seamless Steel Pipes.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Seamless_Steel_Pipes.jpg/1280px-Seamless_Steel_Pipes.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Seamless_Steel_Pipes.jpg/500px-Seamless_Steel_Pipes.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Seamless_Steel_Pipes.jpg",
+        "author": "Seamless Steel Pipes",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"steel pipes\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "bundles of seamless steel pipes"
+    },
+    "limestone": {
+      "photo": {
+        "file": "Limestone outcrop in Citatah.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Limestone_outcrop_in_Citatah.jpg/1280px-Limestone_outcrop_in_Citatah.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Limestone_outcrop_in_Citatah.jpg/500px-Limestone_outcrop_in_Citatah.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Limestone_outcrop_in_Citatah.jpg",
+        "author": "Luthfibadr28",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Wikidata image (P18) of Q23757 \"limestone\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a large limestone outcrop"
+    },
+    "live-cattle": {
+      "photo": {
+        "file": "Cow female black white.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Cow_female_black_white.jpg/1280px-Cow_female_black_white.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Cow_female_black_white.jpg/500px-Cow_female_black_white.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Cow_female_black_white.jpg",
+        "author": "Keith Weller/USDA",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 854,
+        "from": "Wikidata image (P18) of Q830 \"cattle\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a Holstein-Friesian cow in a meadow"
+    },
+    "live-pigs": {
+      "photo": {
+        "file": "Cochon domestique (Sus scrofa domesticus) (2).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Cochon_domestique_%28Sus_scrofa_domesticus%29_%282%29.jpg/1280px-Cochon_domestique_%28Sus_scrofa_domesticus%29_%282%29.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Cochon_domestique_%28Sus_scrofa_domesticus%29_%282%29.jpg/500px-Cochon_domestique_%28Sus_scrofa_domesticus%29_%282%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Cochon_domestique_(Sus_scrofa_domesticus)_(2).jpg",
+        "author": "Gzen92",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons search \"domestic pigs\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a domestic pig at a farm"
+    },
+    "live-sheep": {
+      "photo": {
+        "file": "Cologne Germany Flock-of-sheep-01.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Cologne_Germany_Flock-of-sheep-01.jpg/1280px-Cologne_Germany_Flock-of-sheep-01.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Cologne_Germany_Flock-of-sheep-01.jpg/500px-Cologne_Germany_Flock-of-sheep-01.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Cologne_Germany_Flock-of-sheep-01.jpg",
+        "author": "CEphoto, Uwe Aranas",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 605,
+        "from": "Commons search \"sheep flock\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a flock of sheep grazing"
+    },
+    "logs": {
+      "photo": {
+        "file": "Pine log cross-sections, Teutendorf, 2016-09-17.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Pine_log_cross-sections%2C_Teutendorf%2C_2016-09-17.jpg/1280px-Pine_log_cross-sections%2C_Teutendorf%2C_2016-09-17.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Pine_log_cross-sections%2C_Teutendorf%2C_2016-09-17.jpg/500px-Pine_log_cross-sections%2C_Teutendorf%2C_2016-09-17.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Pine_log_cross-sections,_Teutendorf,_2016-09-17.jpg",
+        "author": "Radomianin",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons search \"log pile\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "cross-sections of freshly felled pine logs"
+    },
+    "lumber-beams": {
+      "photo": null,
+      "reason": "no clear free photo of lumber beams among the candidates"
+    },
+    "lumber-boards": {
+      "photo": null,
+      "reason": "no clear free photo of lumber boards among the candidates"
+    },
+    "meat": {
+      "photo": {
+        "file": "FoodMeat.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/FoodMeat.jpg/1280px-FoodMeat.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/FoodMeat.jpg/500px-FoodMeat.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:FoodMeat.jpg",
+        "author": "Unknown photographer",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 849,
+        "from": "Commons search \"meat\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "red meat, poultry and pork on a cutting board"
+    },
+    "metal-coil": {
+      "photo": {
+        "file": "Rolled coil in Oulu Jun2009 001.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Rolled_coil_in_Oulu_Jun2009_001.jpg/1280px-Rolled_coil_in_Oulu_Jun2009_001.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Rolled_coil_in_Oulu_Jun2009_001.jpg/500px-Rolled_coil_in_Oulu_Jun2009_001.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Rolled_coil_in_Oulu_Jun2009_001.jpg",
+        "author": "Methem (Mikko J. Putkonen)",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 854,
+        "from": "Commons search \"steel coil\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a rolled steel coil on a rail flatcar"
+    },
+    "milk": {
+      "photo": {
+        "file": "Glass of Milk (33657535532).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Glass_of_Milk_%2833657535532%29.jpg/1280px-Glass_of_Milk_%2833657535532%29.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Glass_of_Milk_%2833657535532%29.jpg/500px-Glass_of_Milk_%2833657535532%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Glass_of_Milk_(33657535532).jpg",
+        "author": "NIAID",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 1283,
+        "from": "Wikidata image (P18) of Q8495 \"milk\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a glass of milk"
+    },
+    "motor-grader": {
+      "photo": {
+        "file": "Motoniveladora 01.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Motoniveladora_01.jpg/1280px-Motoniveladora_01.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Motoniveladora_01.jpg/500px-Motoniveladora_01.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Motoniveladora_01.jpg",
+        "author": "No machine-readable author provided. Tano4595 assumed (based on copyright claims).",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "width": 1280,
+        "height": 853,
+        "from": "Wikidata image (P18) of Q217694 \"grader\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a motor grader, whole machine"
+    },
+    "nuts": {
+      "photo": {
+        "file": "Mixed Nuts (Alabama Extension).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Mixed_Nuts_%28Alabama_Extension%29.jpg/1280px-Mixed_Nuts_%28Alabama_Extension%29.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Mixed_Nuts_%28Alabama_Extension%29.jpg/500px-Mixed_Nuts_%28Alabama_Extension%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Mixed_Nuts_(Alabama_Extension).jpg",
+        "author": "Alabama Extension",
+        "licence": "CC0",
+        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons search \"mixed nuts\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a bowl of mixed nuts"
+    },
+    "packed-lumber": {
+      "photo": null,
+      "reason": "no clear free photo of packed lumber among the candidates"
+    },
+    "paper": {
+      "photo": null,
+      "reason": "the candidates are tissue rolls and unrelated objects, not paper reels"
+    },
+    "potatoes": {
+      "photo": {
+        "file": "Solanum tuberosum Red Scarlett20170523 7825.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Solanum_tuberosum_Red_Scarlett20170523_7825.jpg/1280px-Solanum_tuberosum_Red_Scarlett20170523_7825.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Solanum_tuberosum_Red_Scarlett20170523_7825.jpg/500px-Solanum_tuberosum_Red_Scarlett20170523_7825.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Solanum_tuberosum_Red_Scarlett20170523_7825.jpg",
+        "author": "Bff",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 1280,
+        "from": "Commons search \"potatoes\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "red-skinned potatoes"
+    },
+    "pumpjack": {
+      "photo": {
+        "file": "Oil pumpjack in the Permian Basin.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Oil_pumpjack_in_the_Permian_Basin.jpg/1280px-Oil_pumpjack_in_the_Permian_Basin.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Oil_pumpjack_in_the_Permian_Basin.jpg/500px-Oil_pumpjack_in_the_Permian_Basin.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Oil_pumpjack_in_the_Permian_Basin.jpg",
+        "author": "Quintin Soloviev",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons search \"pumpjack\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "an oil pumpjack on a well in the Permian Basin, Texas"
+    },
+    "railcar": {
+      "photo": {
+        "file": "2018-03-02 (212) Old freight wagon without RIC-number at Bahnhof St. Valentin.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2018-03-02_%28212%29_Old_freight_wagon_without_RIC-number_at_Bahnhof_St._Valentin.jpg/1280px-2018-03-02_%28212%29_Old_freight_wagon_without_RIC-number_at_Bahnhof_St._Valentin.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2018-03-02_%28212%29_Old_freight_wagon_without_RIC-number_at_Bahnhof_St._Valentin.jpg/500px-2018-03-02_%28212%29_Old_freight_wagon_without_RIC-number_at_Bahnhof_St._Valentin.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2018-03-02_(212)_Old_freight_wagon_without_RIC-number_at_Bahnhof_St._Valentin.jpg",
+        "author": "GT1976",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"freight railcar\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "an old open freight wagon on a siding"
+    },
+    "rails": {
+      "photo": null,
+      "reason": "the candidates show railway tracks in use, not rails as goods"
+    },
+    "rice": {
+      "photo": {
+        "file": "Rice Grains at Bakin Dogo Market Kaduna North.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Rice_Grains_at_Bakin_Dogo_Market_Kaduna_North.jpg/1280px-Rice_Grains_at_Bakin_Dogo_Market_Kaduna_North.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Rice_Grains_at_Bakin_Dogo_Market_Kaduna_North.jpg/500px-Rice_Grains_at_Bakin_Dogo_Market_Kaduna_North.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Rice_Grains_at_Bakin_Dogo_Market_Kaduna_North.jpg",
+        "author": "JoabJacob",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"rice grains\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a heap of rice grains"
+    },
+    "roadroller": {
+      "photo": {
+        "file": "Caterpillar CB54B roller on dirt lot in Campbell.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Caterpillar_CB54B_roller_on_dirt_lot_in_Campbell.jpg/1280px-Caterpillar_CB54B_roller_on_dirt_lot_in_Campbell.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Caterpillar_CB54B_roller_on_dirt_lot_in_Campbell.jpg/500px-Caterpillar_CB54B_roller_on_dirt_lot_in_Campbell.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Caterpillar_CB54B_roller_on_dirt_lot_in_Campbell.jpg",
+        "author": "Grendelkhan",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 964,
+        "from": "Commons search \"road roller\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a tandem road roller parked at a job site in Campbell, California"
+    },
+    "roof-shingles": {
+      "photo": {
+        "file": "Asphalt Shingles Texture DTXR-ST-AP-1.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Asphalt_Shingles_Texture_DTXR-ST-AP-1.jpg/1280px-Asphalt_Shingles_Texture_DTXR-ST-AP-1.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Asphalt_Shingles_Texture_DTXR-ST-AP-1.jpg/500px-Asphalt_Shingles_Texture_DTXR-ST-AP-1.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Asphalt_Shingles_Texture_DTXR-ST-AP-1.jpg",
+        "author": "Shadowmeld Photography",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 857,
+        "from": "Commons search \"asphalt shingles\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "asphalt roof shingles, close-up"
+    },
+    "rye": {
+      "photo": {
+        "file": "Rye grains rotated.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Rye_grains_rotated.jpg/1280px-Rye_grains_rotated.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Rye_grains_rotated.jpg/500px-Rye_grains_rotated.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Rye_grains_rotated.jpg",
+        "author": "Agronom",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 962,
+        "from": "Commons search \"rye grains\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "rye grains, close-up"
+    },
+    "salt": {
+      "photo": {
+        "file": "Salt pile in Goa (traditional salt at Batim).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Salt_pile_in_Goa_%28traditional_salt_at_Batim%29.jpg/1280px-Salt_pile_in_Goa_%28traditional_salt_at_Batim%29.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Salt_pile_in_Goa_%28traditional_salt_at_Batim%29.jpg/500px-Salt_pile_in_Goa_%28traditional_salt_at_Batim%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Salt_pile_in_Goa_(traditional_salt_at_Batim).jpg",
+        "author": "Fredericknoronha",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1280,
+        "height": 720,
+        "from": "Commons search \"salt pile\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a pile of salt at a salt pan"
+    },
+    "sand": {
+      "photo": {
+        "file": "Pile of sand by the soccer fields at Brastad Arena.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Pile_of_sand_by_the_soccer_fields_at_Brastad_Arena.jpg/1280px-Pile_of_sand_by_the_soccer_fields_at_Brastad_Arena.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Pile_of_sand_by_the_soccer_fields_at_Brastad_Arena.jpg/500px-Pile_of_sand_by_the_soccer_fields_at_Brastad_Arena.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Pile_of_sand_by_the_soccer_fields_at_Brastad_Arena.jpg",
+        "author": "W.carter",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons search \"sand pile\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a pile of fine sand"
+    },
+    "scaffolding": {
+      "photo": null,
+      "reason": "the candidates show scaffolding on buildings, not scaffolding parts as goods"
+    },
+    "school-bus": {
+      "photo": {
+        "file": "ICCE First Student Wallkill School Bus.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/ICCE_First_Student_Wallkill_School_Bus.jpg/1280px-ICCE_First_Student_Wallkill_School_Bus.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/ICCE_First_Student_Wallkill_School_Bus.jpg/500px-ICCE_First_Student_Wallkill_School_Bus.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:ICCE_First_Student_Wallkill_School_Bus.jpg",
+        "author": "Die4kids",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 811,
+        "from": "Wikidata image (P18) of Q58678 \"school bus\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a yellow American school bus"
+    },
+    "scissor-lift": {
+      "photo": {
+        "file": "Scherenarbeitsbühne.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Scherenarbeitsb%C3%BChne.jpg/1280px-Scherenarbeitsb%C3%BChne.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Scherenarbeitsb%C3%BChne.jpg/500px-Scherenarbeitsb%C3%BChne.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Scherenarbeitsb%C3%BChne.jpg",
+        "author": "ParadoxxX8",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 1821,
+        "from": "Wikidata image (P18) of Q18088363 \"scissor lift\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "an extended scissor lift platform"
+    },
+    "scrap-metals": {
+      "photo": {
+        "file": "Metal scrap in Aomi.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Metal_scrap_in_Aomi.jpg/1280px-Metal_scrap_in_Aomi.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Metal_scrap_in_Aomi.jpg/500px-Metal_scrap_in_Aomi.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Metal_scrap_in_Aomi.jpg",
+        "author": "Syced",
+        "licence": "CC0",
+        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"scrap metal\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "piles and bales of metal scrap"
+    },
+    "scrapped-cars": {
+      "photo": {
+        "file": "Auto scrapyard 1.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Auto_scrapyard_1.jpg/1280px-Auto_scrapyard_1.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Auto_scrapyard_1.jpg/500px-Auto_scrapyard_1.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Auto_scrapyard_1.jpg",
+        "author": "IFCAR",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 904,
+        "from": "Wikidata image (P18) of Q137691444 \"car wrecking yard\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "crushed cars stacked at an auto scrapyard in Maryland"
+    },
+    "soybean": {
+      "photo": {
+        "file": "Glycine max 003.JPG",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Glycine_max_003.JPG/1280px-Glycine_max_003.JPG",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Glycine_max_003.JPG/500px-Glycine_max_003.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:Glycine_max_003.JPG",
+        "author": "H. Zell",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Commons search \"soybeans\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "soybean pods on the plant"
+    },
+    "stones": {
+      "photo": null,
+      "reason": "the candidates are landscapes and rock formations, not stones as goods"
+    },
+    "sugar": {
+      "photo": {
+        "file": "Sugar 2xmacro.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Sugar_2xmacro.jpg/1280px-Sugar_2xmacro.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Sugar_2xmacro.jpg/500px-Sugar_2xmacro.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Sugar_2xmacro.jpg",
+        "author": "Lauri Andler (Phantom)",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "width": 1280,
+        "height": 854,
+        "from": "Wikidata image (P18) of Q11002 \"sugar\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a pile of white sugar, macro"
+    },
+    "sugar-beet": {
+      "photo": {
+        "file": "SugarBeet.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/SugarBeet.jpg/1280px-SugarBeet.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/SugarBeet.jpg/500px-SugarBeet.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:SugarBeet.jpg",
+        "author": "USDA",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 1935,
+        "from": "Commons search \"sugar beets\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "two sugar beet roots"
+    },
+    "sulphur": {
+      "photo": {
+        "file": "Sulfur - El Desierto mine, San Pablo de Napa, Daniel Campos Province, Potosí, Bolivia.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Sulfur_-_El_Desierto_mine%2C_San_Pablo_de_Napa%2C_Daniel_Campos_Province%2C_Potos%C3%AD%2C_Bolivia.jpg/1280px-Sulfur_-_El_Desierto_mine%2C_San_Pablo_de_Napa%2C_Daniel_Campos_Province%2C_Potos%C3%AD%2C_Bolivia.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Sulfur_-_El_Desierto_mine%2C_San_Pablo_de_Napa%2C_Daniel_Campos_Province%2C_Potos%C3%AD%2C_Bolivia.jpg/500px-Sulfur_-_El_Desierto_mine%2C_San_Pablo_de_Napa%2C_Daniel_Campos_Province%2C_Potos%C3%AD%2C_Bolivia.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Sulfur_-_El_Desierto_mine,_San_Pablo_de_Napa,_Daniel_Campos_Province,_Potos%C3%AD,_Bolivia.jpg",
+        "author": "Ivar Leidus",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 1066,
+        "from": "Wikidata image (P18) of Q682 \"sulfur\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "sulphur crystals"
+    },
+    "tires": {
+      "photo": {
+        "file": "Stack of tires in the sun.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Stack_of_tires_in_the_sun.jpg/1280px-Stack_of_tires_in_the_sun.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Stack_of_tires_in_the_sun.jpg/500px-Stack_of_tires_in_the_sun.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Stack_of_tires_in_the_sun.jpg",
+        "author": "PheobeLongneck",
+        "licence": "CC0",
+        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 1280,
+        "height": 1918,
+        "from": "Commons search \"tires stack\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a stack of used car tires"
+    },
+    "tractor": {
+      "photo": {
+        "file": "Zetor Crystal.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Zetor_Crystal.jpg/1280px-Zetor_Crystal.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Zetor_Crystal.jpg/500px-Zetor_Crystal.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Zetor_Crystal.jpg",
+        "author": "Fruitman cz",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 851,
+        "from": "Wikidata image (P18) of Q39495 \"tractor\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a modern farm tractor in a field"
+    },
+    "trees": {
+      "photo": {
+        "file": "Tree nursery.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Tree_nursery.jpg/1280px-Tree_nursery.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Tree_nursery.jpg/500px-Tree_nursery.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Tree_nursery.jpg",
+        "author": "3steph14",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 1706,
+        "from": "Commons search \"nursery trees\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "young trees in pots at a tree nursery"
+    },
+    "utility-poles": {
+      "photo": {
+        "file": "Rawlinna (AU), Utility Pole -- 2019 -- 0621.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Rawlinna_%28AU%29%2C_Utility_Pole_--_2019_--_0621.jpg/1280px-Rawlinna_%28AU%29%2C_Utility_Pole_--_2019_--_0621.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Rawlinna_%28AU%29%2C_Utility_Pole_--_2019_--_0621.jpg/500px-Rawlinna_%28AU%29%2C_Utility_Pole_--_2019_--_0621.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Rawlinna_(AU),_Utility_Pole_--_2019_--_0621.jpg",
+        "author": "Dietmar Rabich",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 1920,
+        "from": "Commons search \"utility poles\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a wooden utility pole"
+    },
+    "vegetables": {
+      "photo": {
+        "file": "Kleinmarkthalle Frankfurt Gemüsestand.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Kleinmarkthalle_Frankfurt_Gem%C3%BCsestand.jpg/1280px-Kleinmarkthalle_Frankfurt_Gem%C3%BCsestand.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Kleinmarkthalle_Frankfurt_Gem%C3%BCsestand.jpg/500px-Kleinmarkthalle_Frankfurt_Gem%C3%BCsestand.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Kleinmarkthalle_Frankfurt_Gem%C3%BCsestand.jpg",
+        "author": "EvaK",
+        "licence": "CC BY-SA 2.5",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "width": 1280,
+        "height": 851,
+        "from": "Wikidata image (P18) of Q11004 \"vegetable\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a vegetable stall at a market hall"
+    },
+    "waste-paper": {
+      "photo": {
+        "file": "Paper recycling in Ponte a Serraglio.JPG",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Paper_recycling_in_Ponte_a_Serraglio.JPG/1280px-Paper_recycling_in_Ponte_a_Serraglio.JPG",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Paper_recycling_in_Ponte_a_Serraglio.JPG/500px-Paper_recycling_in_Ponte_a_Serraglio.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:Paper_recycling_in_Ponte_a_Serraglio.JPG",
+        "author": "H005",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 850,
+        "from": "Commons search \"paper recycling\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "used paper collected for recycling"
+    },
+    "wheat": {
+      "photo": {
+        "file": "Grains of wheat 01.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Grains_of_wheat_01.jpg/1280px-Grains_of_wheat_01.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Grains_of_wheat_01.jpg/500px-Grains_of_wheat_01.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Grains_of_wheat_01.jpg",
+        "author": "Raman Deep",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 1706,
+        "from": "Commons search \"wheat grains\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "grains of wheat in a hand"
+    },
+    "wheel-loader": {
+      "photo": {
+        "file": "CASE 321F Compact Wheel Loader, Windsor, Ontario, 2025-06-23.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/CASE_321F_Compact_Wheel_Loader%2C_Windsor%2C_Ontario%2C_2025-06-23.jpg/1280px-CASE_321F_Compact_Wheel_Loader%2C_Windsor%2C_Ontario%2C_2025-06-23.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/CASE_321F_Compact_Wheel_Loader%2C_Windsor%2C_Ontario%2C_2025-06-23.jpg/500px-CASE_321F_Compact_Wheel_Loader%2C_Windsor%2C_Ontario%2C_2025-06-23.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:CASE_321F_Compact_Wheel_Loader,_Windsor,_Ontario,_2025-06-23.jpg",
+        "author": "Crisco 1492",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 849,
+        "from": "Commons search \"wheel loader\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a compact wheel loader"
+    },
+    "wind-turbine-blade": {
+      "photo": {
+        "file": "Farma wiatraków Bukowsko .JPG",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Farma_wiatrak%C3%B3w_Bukowsko_.JPG/1280px-Farma_wiatrak%C3%B3w_Bukowsko_.JPG",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Farma_wiatrak%C3%B3w_Bukowsko_.JPG/500px-Farma_wiatrak%C3%B3w_Bukowsko_.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:Farma_wiatrak%C3%B3w_Bukowsko_.JPG",
+        "author": "Korona b",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Wikidata image (P18) of Q15768944 \"wind turbine blade\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a wind turbine blade on the ground at a wind farm site"
+    },
+    "wind-turbine-nacelle": {
+      "photo": {
+        "file": "Eolienne Rochereau Nacelle.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Eolienne_Rochereau_Nacelle.jpg/1280px-Eolienne_Rochereau_Nacelle.jpg",
+        "src500": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Eolienne_Rochereau_Nacelle.jpg/500px-Eolienne_Rochereau_Nacelle.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Eolienne_Rochereau_Nacelle.jpg",
+        "author": "Remi Jouan",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "width": 1280,
+        "height": 853,
+        "from": "Commons search \"wind turbine nacelle\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a wind turbine nacelle on the ground before lifting"
+    },
+    "wind-turbine-tower": {
+      "photo": {
+        "file": "Wind turbine tower section on the move - geograph.org.uk - 8239943.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Wind_turbine_tower_section_on_the_move_-_geograph.org.uk_-_8239943.jpg/1280px-Wind_turbine_tower_section_on_the_move_-_geograph.org.uk_-_8239943.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Wind_turbine_tower_section_on_the_move_-_geograph.org.uk_-_8239943.jpg/500px-Wind_turbine_tower_section_on_the_move_-_geograph.org.uk_-_8239943.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Wind_turbine_tower_section_on_the_move_-_geograph.org.uk_-_8239943.jpg",
+        "author": "M J Roscoe",
+        "licence": "CC BY-SA 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons search \"wind turbine tower section\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a wind turbine tower section on the move by road"
+    },
+    "wood-shavings": {
+      "photo": {
+        "file": "Wood Shavings from a Chainsaw.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Wood_Shavings_from_a_Chainsaw.jpg/1280px-Wood_Shavings_from_a_Chainsaw.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Wood_Shavings_from_a_Chainsaw.jpg/500px-Wood_Shavings_from_a_Chainsaw.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Wood_Shavings_from_a_Chainsaw.jpg",
+        "author": "Terasaface",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 1280,
+        "from": "Commons search \"wood shavings\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a heap of wood shavings"
+    },
+    "yogurt": {
+      "photo": {
+        "file": "Joghurt.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Joghurt.jpg/1280px-Joghurt.jpg",
+        "src500": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Joghurt.jpg/500px-Joghurt.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Joghurt.jpg",
+        "author": "No machine-readable author provided. Rainer Zenz assumed (based on copyright claims).",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "width": 1280,
+        "height": 1074,
+        "from": "Wikidata image (P18) of Q13317 \"yogurt\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a plate of yogurt"
+    }
+  }
+}

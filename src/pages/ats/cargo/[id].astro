@@ -2,9 +2,11 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SaveButton from '../../../components/SaveButton.astro';
 import JobGenerator from '../../../components/JobGenerator.astro';
+import CatalogMedia from '../../../components/CatalogMedia.astro';
 import { getI18n } from '../../../i18n/index.mjs';
 import en from '../../../i18n/en.json';
-import { cargo, companies, trailers, distances, cityById } from '../../../lib/data.mjs';
+import { cargo, companies, trailers, distances, cityById, categories, catalogPhotos } from '../../../lib/data.mjs';
+import { catalogPhoto, cargoCategory } from '../../../lib/media.mjs';
 import { cargoDepots, cargoRoutes, trailerPath, cargoTitle } from '../../../lib/catalog.mjs';
 import { companyPath } from '../../../lib/companies.mjs';
 import { cityPath } from '../../../lib/ats.mjs';
@@ -15,6 +17,8 @@ export function getStaticPaths() {
 
 const { t } = getI18n();
 const c = cargo.find((x) => x.id === Astro.props.cargoId);
+const photo = catalogPhoto('cargo', c.id, catalogPhotos);
+const category = cargoCategory(c, categories);
 const trailerById = new Map(trailers.map((x) => [x.id, x]));
 const fmt = (n) => n.toLocaleString('en-US');
 const weight = c.weightLb ? (c.weightLb.min === c.weightLb.max ? `${fmt(c.weightLb.min)} lb` : `${fmt(c.weightLb.min)} – ${fmt(c.weightLb.max)} lb`) : t('cargoPage.unknown');
@@ -28,7 +32,7 @@ const routes = cargoRoutes(c.id, companies, distances);
 const mi = (km) => `${fmt(Math.round(km / 1.609344))} mi`;
 const cityLabel = (id) => { const x = cityById.get(id); return x ? `${x.name}, ${x.state}` : id; };
 ---
-<BaseLayout title={title} description={t('cargoPage.meta', { name: title })} crumbs={[[t('cargoPage.breadcrumb'), '/ats/cargo'], [title, Astro.url.pathname]]}>
+<BaseLayout title={title} image={photo ? { src: photo.src, alt: t('media.photoAlt', { name: c.name.toLowerCase() }) } : undefined} description={t('cargoPage.meta', { name: title })} crumbs={[[t('cargoPage.breadcrumb'), '/ats/cargo'], [title, Astro.url.pathname]]}>
   <div class="container crumbs-row">
   <nav class="crumbs" aria-label={t('cargoPage.breadcrumb')}>
     <a href="/ats/cargo">{t('cargoPage.breadcrumb')}</a>
@@ -39,10 +43,13 @@ const cityLabel = (id) => { const x = cityById.get(id); return x ? `${x.name}, $
   </div>
 
   <div class="container page">
-    <header class="head">
-      <p class="eyebrow">{dlc}</p>
-      <h1>{c.name}</h1>
-    </header>
+    <div class="intro">
+      <header class="head">
+        <p class="eyebrow">{dlc}</p>
+        <h1>{c.name}</h1>
+      </header>
+      <CatalogMedia photo={photo} icon={category} name={c.name.toLowerCase()} />
+    </div>
 
     <ul class="facts">
       <li class="fact"><span class="eyebrow">{t('cargoPage.weight')}</span><span class="fact-value mono">{weight}</span></li>
@@ -117,6 +124,9 @@ const cityLabel = (id) => { const x = cityById.get(id); return x ? `${x.name}, $
   .crumbs a { display: inline-flex; align-items: center; min-height: var(--target); color: var(--text-soft); }
   .page { display: grid; gap: var(--space-6); padding-top: var(--space-4); }
   .page > * { min-width: 0; }
+  .intro { display: grid; gap: var(--space-5); align-items: center; }
+  @media (min-width: 900px) { .intro { grid-template-columns: minmax(0, 1fr) minmax(0, 560px); } }
+  .intro > * { min-width: 0; }
   .head { display: grid; gap: var(--space-2); }
   .head h1 { font-size: clamp(30px, 5vw, 46px); text-wrap: balance; }
   h2 { margin-bottom: var(--space-3); display: flex; align-items: center; gap: var(--space-2); }

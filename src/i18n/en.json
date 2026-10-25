@@ -95,7 +95,7 @@
       "real": "Cities, companies, depots, cargo and trailers come only from the game, as documented on Truck Simulator Wiki. Nothing is invented.",
       "unknown": "What is not known for certain is stored as empty or marked as an estimate, never guessed.",
       "ids": "Internal game IDs are kept where the wiki gives them, so live game data can be linked later.",
-      "images": "No logos, screenshots or other images from the games. City photos come from Wikimedia Commons with author and licence."
+      "images": "No logos, screenshots or other images from the games. City photos come from Wikimedia Commons with author and licence. Trucks, trailers and cargo show a real-world photo marked illustrative, or a Freight World icon."
     },
     "sourcesTitle": "Sources and licences",
     "sourcesIntro": "The sources Freight World uses. Game data covers the starting map of American Truck Simulator: California, Nevada and Arizona.",
@@ -125,7 +125,7 @@
       "licence": "Computed, no external data"
     },
     "commons": {
-      "use": "Real city photos, chosen by hand once per city",
+      "use": "Real city photos, chosen by hand once per city; illustrative real-world photos of trucks, trailers and some cargo",
       "licence": "Free licences per file (CC BY, CC BY-SA, public domain); author and licence shown on each photo"
     },
     "osm": {
@@ -666,5 +666,31 @@
       "truck": "Trucks",
       "job": "Jobs"
     }
+  },
+  "media": {
+    "illustrative": "Illustrative",
+    "realWorld": "Real-world {name}, not the model in the game.",
+    "photoAlt": "Real-world {name} (illustrative photo)",
+    "photoCredit": "Photo: {author}",
+    "publicDomain": "Public domain",
+    "source": "Wikimedia Commons",
+    "iconNote": "No suitable free photo yet: Freight World icon for this trailer category.",
+    "categoriesTitle": "Trailer category",
+    "categories": {
+      "box": "Box van",
+      "reefer": "Refrigerated",
+      "flatbed": "Flatbed",
+      "heavy": "Heavy haul",
+      "tank": "Tank",
+      "bulk": "Bulk",
+      "container": "Container",
+      "vehicles": "Vehicle transport",
+      "timber": "Timber",
+      "livestock": "Livestock",
+      "special": "Special transport",
+      "truck": "Truck",
+      "general": "General cargo"
+    },
+    "trailerName": "{name} trailer"
   }
 }

@@ -1,0 +1,60 @@
+---
+// Illustrative media of a truck, trailer or cargo page: a real-world photo from Wikimedia
+// Commons (chosen by hand, marked illustrative, with author, licence and link), or our own
+// category icon when there is no suitable free photo. Never an image from the game.
+import { getI18n } from '../i18n/index.mjs';
+import { iconSvg } from '../lib/media.mjs';
+
+interface Props { photo: any | null; icon: string; name: string }
+const { photo, icon, name } = Astro.props;
+const { t } = getI18n();
+const category = t(`media.categories.${icon}`);
+---
+<figure class:list={["media", { "is-icon": !photo }]}>
+  {photo
+    ? <div class="frame">
+        <img
+          src={photo.src}
+          srcset={`${photo.src500} 500w, ${photo.src} ${photo.width}w`}
+          sizes="(min-width: 900px) 560px, 100vw"
+          alt={t('media.photoAlt', { name })}
+          width={photo.width}
+          height={photo.height}
+          decoding="async"
+        />
+      </div>
+    : <div class="frame icon-frame">
+        <span class="icon" set:html={iconSvg(icon)} />
+      </div>}
+  <figcaption class="caption">
+    {photo
+      ? <>
+          <span class="tag">{t('media.illustrative')}</span>
+          <span>{t('media.realWorld', { name })}</span>
+          <span class="credit">
+            {t('media.photoCredit', { author: photo.author ?? t('media.publicDomain') })}
+            {' · '}
+            {photo.licenceUrl ? <a href={photo.licenceUrl} rel="noopener">{photo.licence}</a> : photo.licence}
+            {' · '}
+            <a href={photo.page} rel="noopener">{t('media.source')}</a>
+          </span>
+        </>
+      : <>
+          <span class="tag">{category}</span>
+          <span>{t('media.iconNote')}</span>
+        </>}
+  </figcaption>
+</figure>
+
+<style>
+  .media { display: grid; gap: var(--space-2); margin: 0; min-width: 0; }
+  .frame { aspect-ratio: 3 / 2; overflow: hidden; background: var(--panel-deep); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+  .frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .icon-frame { display: grid; place-items: center; aspect-ratio: 2 / 1; }
+  .icon { display: block; width: min(52%, 260px); color: var(--amber); }
+  .icon :global(svg) { display: block; width: 100%; height: auto; }
+  .caption { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-1) var(--space-2); font-size: 12px; color: var(--text-muted); }
+  .tag { font: 500 11px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-soft); padding: 1px var(--space-2); border: 1px solid var(--border-input); border-radius: 999px; }
+  .credit { flex-basis: 100%; }
+  .credit a { color: var(--text-soft); }
+</style>

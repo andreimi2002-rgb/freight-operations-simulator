@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SaveButton from '../../../components/SaveButton.astro';
+import CatalogMedia from '../../../components/CatalogMedia.astro';
 import { getI18n } from '../../../i18n/index.mjs';
-import { trucks, cities } from '../../../lib/data.mjs';
+import { trucks, cities, catalogPhotos } from '../../../lib/data.mjs';
+import { catalogPhoto } from '../../../lib/media.mjs';
 import { dealerCities } from '../../../lib/catalog.mjs';
 import { cityPath } from '../../../lib/ats.mjs';
 
@@ -12,10 +14,11 @@ export function getStaticPaths() {
 
 const { t } = getI18n();
 const tk = trucks.find((x) => x.id === Astro.props.truckId);
+const photo = catalogPhoto('trucks', tk.id, catalogPhotos);
 const dealers = dealerCities(tk.manufacturer, cities).sort((a, b) => a.name.localeCompare(b.name));
 const engines = tk.engines.map((e) => (e.name ? `${e.name}${e.hpMax ? `, ${e.hpMin === e.hpMax ? e.hpMax : `${e.hpMin}–${e.hpMax}`} hp` : ''}` : `${e.hpMin}–${e.hpMax} hp`));
 ---
-<BaseLayout title={tk.name} description={t('truckPage.meta', { name: tk.name })} crumbs={[[t('truckPage.breadcrumb'), '/ats/trucks'], [tk.name, Astro.url.pathname]]}>
+<BaseLayout title={tk.name} image={photo ? { src: photo.src, alt: t('media.photoAlt', { name: tk.name }) } : undefined} description={t('truckPage.meta', { name: tk.name })} crumbs={[[t('truckPage.breadcrumb'), '/ats/trucks'], [tk.name, Astro.url.pathname]]}>
   <div class="container crumbs-row">
   <nav class="crumbs" aria-label={t('truckPage.breadcrumb')}>
     <a href="/ats/trucks">{t('truckPage.breadcrumb')}</a>
@@ -25,10 +28,13 @@ const engines = tk.engines.map((e) => (e.name ? `${e.name}${e.hpMax ? `, ${e.hpM
     <SaveButton type="truck" name={tk.name} detail={tk.manufacturer} />
   </div>
   <div class="container page">
-    <header class="head">
-      <p class="eyebrow">{tk.manufacturer}</p>
-      <h1>{tk.name}</h1>
-    </header>
+    <div class="intro">
+      <header class="head">
+        <p class="eyebrow">{tk.manufacturer}</p>
+        <h1>{tk.name}</h1>
+      </header>
+      <CatalogMedia photo={photo} icon="truck" name={tk.name} />
+    </div>
 
     <ul class="facts">
       <li class="fact"><span class="eyebrow">{t('truckPage.make')}</span><span class="fact-value">{tk.manufacturer}</span></li>
@@ -61,6 +67,9 @@ const engines = tk.engines.map((e) => (e.name ? `${e.name}${e.hpMax ? `, ${e.hpM
   .crumbs a { display: inline-flex; align-items: center; min-height: var(--target); color: var(--text-soft); }
   .page { display: grid; gap: var(--space-6); padding-top: var(--space-4); }
   .page > * { min-width: 0; }
+  .intro { display: grid; gap: var(--space-5); align-items: center; }
+  @media (min-width: 900px) { .intro { grid-template-columns: minmax(0, 1fr) minmax(0, 560px); } }
+  .intro > * { min-width: 0; }
   .head { display: grid; gap: var(--space-2); }
   .head h1 { font-size: clamp(30px, 5vw, 46px); }
   h2 { margin-bottom: var(--space-3); }

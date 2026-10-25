@@ -50,6 +50,7 @@ Live at https://freight-operations-simulator.netlify.app (from `main`). The plan
 
 - A page for every city at `/ats/<state>/<city>` with the real photo, live local time, real weather (MET Norway), depots with what they offer and accept, facilities, roads, neighbouring cities and landmarks. City list at `/ats/`. US / metric units switch.
 - City photos from Wikimedia Commons, one per city (`data/photos.json`); candidates with `npm run photos:candidates`.
+- Illustrative real-world photos of trucks, trailers and generic cargo (`data/catalog-photos.json`, candidates with `npm run photos:catalog` from `data/catalog-photo-queries.json`); our own category icons (`data/categories.json`, `src/lib/media.mjs`) where there is no suitable photo.
 
 ### Stage 1
 
@@ -72,6 +73,7 @@ npm run build     # static site in dist/
 npm test          # node --test
 npm run collect:ats   # refresh data/ats/ from the wiki (cached)
 npm run photos:candidates   # photo candidates per city from Wikimedia Commons
+npm run photos:catalog      # photo candidates for trucks, trailers, generic cargo and cities without a photo
 npm run distances:ats       # estimated road distances between cities (OSRM)
 npm run map:ats             # map layers from Natural Earth (data/map/ats-map.json)
 ```

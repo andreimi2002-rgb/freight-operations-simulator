@@ -2,7 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CatalogTabs from '../../components/CatalogTabs.astro';
 import { getI18n } from '../../i18n/index.mjs';
-import { trucks, cities } from '../../lib/data.mjs';
+import { trucks, cities, catalogPhotos } from '../../lib/data.mjs';
+import { catalogPhoto, iconSvg } from '../../lib/media.mjs';
 import { truckPath, dealerCities } from '../../lib/catalog.mjs';
 
 const { t } = getI18n();
@@ -20,6 +21,9 @@ const list = [...trucks].sort((a, b) => a.name.localeCompare(b.name));
       {list.map((tk) => (
         <li>
           <a class="item" href={truckPath(tk)}>
+            {catalogPhoto('trucks', tk.id, catalogPhotos)
+              ? <img class="thumb" src={catalogPhoto('trucks', tk.id, catalogPhotos).src500} alt="" width="500" height="333" loading="lazy" decoding="async" />
+              : <span class="thumb icon" set:html={iconSvg('truck')} />}
             <span class="eyebrow">{tk.manufacturer}</span>
             <span class="name">{tk.name}</span>
             <span class="mono small soft">{t('catalog.upToHp', { hp: tk.maxHp })}{tk.electric ? ` · ${t('truckPage.electric')}` : ''}</span>
@@ -37,6 +41,10 @@ const list = [...trucks].sort((a, b) => a.name.localeCompare(b.name));
   .head { display: grid; gap: var(--space-3); }
   .head h1 { font-size: clamp(30px, 5vw, 44px); text-wrap: balance; }
   .lead { max-width: 66ch; font-size: 17px; }
+  .thumb { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; margin-bottom: var(--space-2); border-radius: var(--radius-sm); background: var(--panel-deep); }
+  .thumb.icon { display: grid; place-items: center; color: var(--text-muted); }
+  .thumb.icon :global(svg) { width: 56%; height: auto; }
+  .item:hover .thumb.icon { color: var(--amber); }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--space-3); margin: 0; padding: 0; list-style: none; }
   .item { display: grid; gap: 2px; height: 100%; padding: var(--space-4); background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text); text-decoration: none; }
   .item:hover { border-color: var(--border-input); }

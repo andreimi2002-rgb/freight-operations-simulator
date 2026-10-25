@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import SaveButton from '../../../components/SaveButton.astro';
+import CatalogMedia from '../../../components/CatalogMedia.astro';
 import { getI18n } from '../../../i18n/index.mjs';
-import { trailers, cargo } from '../../../lib/data.mjs';
+import { trailers, cargo, categories, catalogPhotos } from '../../../lib/data.mjs';
+import { catalogPhoto, trailerCategory } from '../../../lib/media.mjs';
 import { cargoPath } from '../../../lib/catalog.mjs';
 
 export function getStaticPaths() {
@@ -11,11 +13,13 @@ export function getStaticPaths() {
 
 const { t } = getI18n();
 const tr = trailers.find((x) => x.id === Astro.props.trailerId);
+const photo = catalogPhoto('trailers', tr.id, catalogPhotos);
+const category = trailerCategory(tr.id, categories);
 const cargoById = new Map(cargo.map((c) => [c.id, c]));
 const list = tr.cargo.map((id) => cargoById.get(id)).filter(Boolean).sort((a, b) => a.name.localeCompare(b.name));
 const price = (m) => (m.priceUsd != null ? `$${m.priceUsd.toLocaleString('en-US')}` : (m.pricesUsd ?? []).map((p) => `$${p.toLocaleString('en-US')}`).join(' / '));
 ---
-<BaseLayout title={`${tr.name} trailer`} description={t('trailerPage.meta', { name: tr.name })} crumbs={[[t('trailerPage.breadcrumb'), '/ats/trailers'], [tr.name, Astro.url.pathname]]}>
+<BaseLayout title={`${tr.name} trailer`} image={photo ? { src: photo.src, alt: t('media.photoAlt', { name: t('media.trailerName', { name: tr.name }) }) } : undefined} description={t('trailerPage.meta', { name: tr.name })} crumbs={[[t('trailerPage.breadcrumb'), '/ats/trailers'], [tr.name, Astro.url.pathname]]}>
   <div class="container crumbs-row">
   <nav class="crumbs" aria-label={t('trailerPage.breadcrumb')}>
     <a href="/ats/trailers">{t('trailerPage.breadcrumb')}</a>
@@ -25,7 +29,13 @@ const price = (m) => (m.priceUsd != null ? `$${m.priceUsd.toLocaleString('en-US'
     <SaveButton type="trailer" name={tr.name} />
   </div>
   <div class="container page">
-    <h1>{tr.name}</h1>
+    <div class="intro">
+      <header class="head">
+        <p class="eyebrow">{t('media.categoriesTitle')}: {t(`media.categories.${category}`)}</p>
+        <h1>{tr.name}</h1>
+      </header>
+      <CatalogMedia photo={photo} icon={category} name={t('media.trailerName', { name: tr.name })} />
+    </div>
 
     <section aria-labelledby="models-title">
       <h2 id="models-title">{t('trailerPage.modelsTitle')}</h2>
@@ -57,6 +67,10 @@ const price = (m) => (m.priceUsd != null ? `$${m.priceUsd.toLocaleString('en-US'
   .crumbs a { display: inline-flex; align-items: center; min-height: var(--target); color: var(--text-soft); }
   .page { display: grid; gap: var(--space-6); padding-top: var(--space-4); }
   .page > * { min-width: 0; }
+  .intro { display: grid; gap: var(--space-5); align-items: center; }
+  @media (min-width: 900px) { .intro { grid-template-columns: minmax(0, 1fr) minmax(0, 560px); } }
+  .intro > * { min-width: 0; }
+  .head { display: grid; gap: var(--space-2); }
   h1 { font-size: clamp(30px, 5vw, 46px); }
   h2 { margin-bottom: var(--space-3); }
   .small { font-size: 13px; }
