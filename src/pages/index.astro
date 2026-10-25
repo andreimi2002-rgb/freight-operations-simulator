@@ -3,8 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import DeparturesBoard from '../components/DeparturesBoard.astro';
 import JobGenerator from '../components/JobGenerator.astro';
 import { getI18n } from '../i18n/index.mjs';
+import { scope as scopeFile } from '../lib/data.mjs';
+import { stateList } from '../lib/ats.mjs';
 
-const { t } = getI18n();
+const { t, meta } = getI18n();
 const pillars = [
   { id: 'city', stage: 2, href: '/ats' },
   { id: 'board', stage: 3, href: '/ats/planner' },
@@ -14,10 +16,10 @@ const pillars = [
 <BaseLayout>
   <section class="hero">
     <div class="container hero-inner">
-      <p class="eyebrow">{t('home.eyebrow')}</p>
+      <p class="eyebrow">{t('home.eyebrow', { states: stateList(scopeFile, meta.intlLocale) })}</p>
       <h1 class="hero-title">{t('home.title')}</h1>
       <p class="hero-lead">{t('home.lead')}</p>
-      <p class="hero-status"><span class="badge badge-amber">{t('stage.current')}</span> <span>{t('home.status')}</span></p>
+      <p class="hero-status"><span class="badge badge-amber">{t('stage.current')}</span> <span>{t('home.status', { states: stateList(scopeFile, meta.intlLocale) })}</span></p>
       <div class="hero-actions">
         <a class="button button-primary" href="/ats">{t('home.citiesCta')}</a>
         <a class="button button-ghost" href="/about">{t('home.aboutCta')}</a>

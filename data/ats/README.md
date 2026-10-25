@@ -1,6 +1,6 @@
 # data/ats — American Truck Simulator game data
 
-Game data for the states listed in [`scope.json`](scope.json) (now California and Nevada), collected from **Truck Simulator Wiki** by [`scripts/ats/collect.mjs`](../../scripts/ats/collect.mjs).
+Game data for the states listed in [`scope.json`](scope.json) (now California, Nevada, Arizona, New Mexico, Oregon and Washington), collected from **Truck Simulator Wiki** by [`scripts/ats/collect.mjs`](../../scripts/ats/collect.mjs).
 
 ## Licence and attribution
 
@@ -23,6 +23,7 @@ Not affiliated with SCS Software. No images from the games are stored.
 | `trailers.json` | Trailer types named on the cargo list, each with the cargo it carries and the dealer trailer models (wiki trailer pages) that belong to it. |
 | `aliases.json` | Owner-approved corrections for cargo names that do not match the cargo list (typos, a different wording, generic names mapped to every variant). Edited by hand. |
 | `trucks.json` | Released ATS trucks (announced ones are left out and listed in `issues.json`): make, engines with horsepower range, transmissions, cabs, wiki link. |
+| `route-states.json` | States crossed by the route between two cities, besides the states of the two cities, on the roads of our map (`data/map/ats-map.json`, Natural Earth). Used for the map DLCs a job needs. Computed, not game data. Written by `scripts/map/route-states.mjs`. |
 | `distances.json` | Estimated road distances (km) between every ordered pair of cities, from OSRM on OpenStreetMap roads (ODbL, © OpenStreetMap contributors). Marked as estimates; `calibrationFactor` will hold a correction once checked against in-game distances. Written by `scripts/ats/distances.mjs`. |
 | `observations.json` | Jobs seen in the game by the project owner (distance, time, pay, cargo, market, level), to calibrate estimates later. Reported values, edited by hand. |
 | `issues.json` | Everything to check by hand: empty values, contradictions between pages, names that do not match, counts that differ. |

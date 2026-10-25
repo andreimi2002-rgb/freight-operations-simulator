@@ -1,6 +1,6 @@
 {
   "name": "freight-world",
-  "version": "2.0.0-alpha.15",
+  "version": "2.0.0-alpha.16",
   "private": true,
   "type": "module",
   "description": "Freight World: an ATS / ETS2 job generator with live city pages.",
@@ -16,7 +16,8 @@
     "photos:candidates": "node scripts/photos/candidates.mjs",
     "photos:catalog": "node scripts/photos/catalog-candidates.mjs",
     "distances:ats": "node scripts/ats/distances.mjs",
-    "map:ats": "node scripts/map/build-map.mjs"
+    "map:ats": "node scripts/map/build-map.mjs",
+    "routes:ats": "node scripts/map/route-states.mjs"
   },
   "dependencies": {
     "astro": "7.3.8"

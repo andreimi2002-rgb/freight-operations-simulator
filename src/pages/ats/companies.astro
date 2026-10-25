@@ -2,10 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Monogram from '../../components/Monogram.astro';
 import { getI18n } from '../../i18n/index.mjs';
+import { scope as scopeFile } from '../../lib/data.mjs';
+import { stateList } from '../../lib/ats.mjs';
 import { companies } from '../../lib/data.mjs';
 import { companiesByCategory, companyPath, companyCities } from '../../lib/companies.mjs';
 
-const { t } = getI18n();
+const { t, meta } = getI18n();
 const groups = companiesByCategory(companies);
 const catLabel = (c) => { try { return t(`companies.categories.${c}`); } catch { return c; } };
 const depotCount = (co) => co.depotTypes.reduce((n, d) => n + d.cities.length, 0);
@@ -15,7 +17,7 @@ const depotCount = (co) => co.depotTypes.reduce((n, d) => n + d.cities.length, 0
     <header class="head">
       <p class="eyebrow">{t('companies.eyebrow')}</p>
       <h1>{t('companies.title')}</h1>
-      <p class="soft lead">{t('companies.lead')}</p>
+      <p class="soft lead">{t('companies.lead', { states: stateList(scopeFile, meta.intlLocale) })}</p>
     </header>
 
     {groups.map((g) => (

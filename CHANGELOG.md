@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.0.0-alpha.16 — 2026-10-25 (phase S: New Mexico, Oregon, Washington)
+
+- **Three more states:** New Mexico (14 cities), Oregon (14) and Washington (16), collected from Truck Simulator Wiki like the others. The site now covers 94 cities, 76 companies and 631 depots in six states. Time zones from the wiki (Ontario, Oregon, is on Mountain time like the game). City pages, departures boards, the generator, the planner, job sheets, search and the sitemap cover them automatically (states are data).
+- **Map DLCs:** a job needs the map DLC of every state its route touches, both ends and the states in between (Los Angeles → Seattle needs Oregon and Washington). The states crossed come from the shortest path on our map's roads, cut into pieces of at most 2 km; a state counts from 5 km of road (`scripts/map/route-states.mjs`, `npm run routes:ats`, `data/ats/route-states.json`; computed, the in-game roads may differ). Every state's DLC is the one its cities come with on the wiki.
+- **"My DLCs"** now lists the map DLCs (Arizona, New Mexico, Oregon, Washington) above the cargo DLCs. Until a choice is saved every job is shown; "Career start: base game only" hides jobs that need any DLC, map or cargo. The random job generator only starts from cities whose state the filters allow.
+- **City photos** for 43 of the 44 new cities, chosen by hand with the reason (`data/photos.json`); Wenatchee keeps a placeholder (no free photo of the city among the candidates).
+- **Distances** recomputed for all 8,742 city pairs (OSRM, estimates). **Map** redrawn with the six states; the full view keeps more room on the right for the city labels.
+- Texts that listed the states ("California, Nevada and Arizona") are now built from the scope data.
+- The job dataset sent to the browser carries the state DLCs and the route states (format version 3).
+- 6 new tests (125 in all).
+
 ## 2.0.0-alpha.15 — 2026-10-25 (phase B6: images for trucks, trailers and cargo)
 
 - **Illustrative photos** on the truck, trailer and cargo pages: real-world photos from Wikimedia Commons, marked "Illustrative" ("Real-world …, not the model in the game"), with author, licence and Commons link. 16 of 19 trucks, 25 of 32 trailers and 76 generic cargo have one (grain, butter, logs, excavator, wind turbine blade…). Branded machines (Bobcat, JCB, Volvo, Krone…) and ambiguous cargo get no photo on purpose.

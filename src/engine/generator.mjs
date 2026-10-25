@@ -6,6 +6,8 @@
 // destination depot (in another city) accepts it, the trailer is one the cargo list allows,
 // and the weight is inside the cargo's range. No pay is computed (no public formula inputs).
 
+import { mapDlcs } from './route-states.mjs';
+
 export const AVG_SPEED_KMH = 88.5; // 55 mph, the California truck speed limit; basis of the time estimate
 
 // ---- Seeded random ------------------------------------------------------------
@@ -52,14 +54,18 @@ export function indexDataset(ds) {
     if (!depotsByCity.has(d.city)) depotsByCity.set(d.city, []);
     depotsByCity.get(d.city).push(i);
   });
-  const index = { cargo, acceptors, depotsByCity, cities: new Map(ds.cities.map((c) => [c.id, c])) };
+  const cityState = new Map(ds.cities.map((c) => [c.id, c.state]));
+  const index = { cargo, acceptors, depotsByCity, cities: new Map(ds.cities.map((c) => [c.id, c])), cityState, stateDlc: ds.stateDlc ?? {}, via: ds.via ?? {} };
   Object.defineProperty(ds, '_index', { value: index, enumerable: false });
   return index;
 }
 
-/** DLCs a job needs: the cargo's pack and the DLC sections it was listed under at either end. */
-function requiredDlcs(cargo, offerDlc, acceptDlc) {
-  const set = new Set();
+/**
+ * DLCs a job needs: the cargo's pack, the DLC sections it was listed under at either end, and
+ * the map DLC of every state the route touches (both ends and the states in between).
+ */
+function requiredDlcs(cargo, offerDlc, acceptDlc, maps = []) {
+  const set = new Set(maps);
   if (cargo.dlc && cargo.dlc !== 'base') set.add(cargo.dlc);
   if (offerDlc) set.add(offerDlc);
   if (acceptDlc) set.add(acceptDlc);
@@ -93,7 +99,7 @@ export function possibleJobs(ds, { from, depot = null, to = null, baseOnly = fal
         if (dst.city === from || (to && dst.city !== to)) continue;
         const km = ds.km[`${from}>${dst.city}`];
         if (km == null) continue;
-        const dlcs = requiredDlcs(cargo, offer.dlc, acc.dlc);
+        const dlcs = requiredDlcs(cargo, offer.dlc, acc.dlc, mapDlcs(from, dst.city, ix));
         if (baseOnly && dlcs.length) continue;
         if (ownedDlcs && dlcs.some((d) => !ownedDlcs.has(d))) continue;
         out.push({ source: si, cargo: cargo.id, destination: acc.depot, to: dst.city, km, hours: driveHours(km), dlcs });
@@ -159,7 +165,12 @@ export function featuredCity(ds, { date, hour }) {
 export function randomJob(ds, { seed, from = null, baseOnly = false, ownedDlcs = null, company = null, cargo: cargoFilter = null } = {}) {
   const ix = indexDataset(ds);
   const rand = rng(seed >>> 0);
-  const starts = from ? [from] : ds.cities.map((c) => c.id).filter((id) => (ix.depotsByCity.get(id) ?? []).some((i) => (company === null || ds.depots[i].company === company) && (cargoFilter === null || ds.depots[i].offers.some((o) => o.cargo === cargoFilter))));
+  // A start city whose state needs a map DLC the filters exclude can have no job at all.
+  const mapAllowed = (id) => {
+    const dlc = ix.stateDlc[ix.cityState.get(id)] ?? 'base';
+    return dlc === 'base' || (!baseOnly && (!ownedDlcs || ownedDlcs.has(dlc)));
+  };
+  const starts = from ? [from] : ds.cities.map((c) => c.id).filter((id) => mapAllowed(id) && (ix.depotsByCity.get(id) ?? []).some((i) => (company === null || ds.depots[i].company === company) && (cargoFilter === null || ds.depots[i].offers.some((o) => o.cargo === cargoFilter))));
   // Try a few start cities in seed order until one has a matching job.
   const order = [...starts];
   for (let i = order.length - 1; i > 0; i--) {

@@ -1,0 +1,8210 @@
+{
+  "meta": {
+    "description": "States crossed by the route between two cities, besides the states of the two cities, on the roads of the Freight World map. Key \"a|b\" with the two city ids in alphabetical order (the same both ways); pairs that cross no other state are left out. Computed, not game data: the in-game road network may differ.",
+    "method": "shortest path on the road graph of data/map/ats-map.json, cut into pieces of at most 2 km; a state counts when at least 5 km of the path lie inside it",
+    "source": "Natural Earth 1:10m roads and admin-1 states (public domain), via data/map/ats-map.json",
+    "generator": "scripts/map/route-states.mjs",
+    "computed": "2026-10-25"
+  },
+  "noRoute": [],
+  "via": {
+    "aberdeen|alamogordo": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "aberdeen|albuquerque": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "aberdeen|artesia": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "aberdeen|bakersfield": [
+      "OR"
+    ],
+    "aberdeen|barstow": [
+      "OR"
+    ],
+    "aberdeen|blythe": [
+      "OR"
+    ],
+    "aberdeen|camp-verde": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "aberdeen|carlsbad": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "aberdeen|carson-city": [
+      "OR",
+      "CA"
+    ],
+    "aberdeen|clifton": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "aberdeen|clovis": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "aberdeen|el-centro": [
+      "OR"
+    ],
+    "aberdeen|elko": [
+      "OR"
+    ],
+    "aberdeen|ely": [
+      "OR"
+    ],
+    "aberdeen|eureka": [
+      "OR"
+    ],
+    "aberdeen|farmington": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "aberdeen|flagstaff": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "aberdeen|fresno": [
+      "OR"
+    ],
+    "aberdeen|gallup": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "aberdeen|grand-canyon-village": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "aberdeen|hilt": [
+      "OR"
+    ],
+    "aberdeen|hobbs": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "aberdeen|huron": [
+      "OR"
+    ],
+    "aberdeen|indio": [
+      "OR"
+    ],
+    "aberdeen|jackpot": [
+      "OR"
+    ],
+    "aberdeen|kayenta": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "aberdeen|kingman": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "aberdeen|lake-havasu-city": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "aberdeen|las-cruces": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "aberdeen|las-vegas": [
+      "OR",
+      "CA"
+    ],
+    "aberdeen|los-angeles": [
+      "OR"
+    ],
+    "aberdeen|modesto": [
+      "OR"
+    ],
+    "aberdeen|mojave": [
+      "OR"
+    ],
+    "aberdeen|nogales": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "aberdeen|oakland": [
+      "OR"
+    ],
+    "aberdeen|oxnard": [
+      "OR"
+    ],
+    "aberdeen|page": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "aberdeen|phoenix": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "aberdeen|pioche": [
+      "OR"
+    ],
+    "aberdeen|primm": [
+      "OR",
+      "CA"
+    ],
+    "aberdeen|raton": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "aberdeen|redding": [
+      "OR"
+    ],
+    "aberdeen|reno": [
+      "OR",
+      "CA"
+    ],
+    "aberdeen|roswell": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "aberdeen|sacramento": [
+      "OR"
+    ],
+    "aberdeen|san-diego": [
+      "OR"
+    ],
+    "aberdeen|san-francisco": [
+      "OR"
+    ],
+    "aberdeen|san-jose": [
+      "OR"
+    ],
+    "aberdeen|san-simon": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "aberdeen|santa-cruz": [
+      "OR"
+    ],
+    "aberdeen|santa-fe": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "aberdeen|santa-maria": [
+      "OR"
+    ],
+    "aberdeen|show-low": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "aberdeen|sierra-vista": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "aberdeen|socorro": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "aberdeen|stockton": [
+      "OR"
+    ],
+    "aberdeen|tonopah": [
+      "OR",
+      "CA"
+    ],
+    "aberdeen|truckee": [
+      "OR",
+      "NV"
+    ],
+    "aberdeen|tucson": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "aberdeen|tucumcari": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "aberdeen|ukiah": [
+      "OR"
+    ],
+    "aberdeen|vancouver": [
+      "OR"
+    ],
+    "aberdeen|winnemucca": [
+      "OR"
+    ],
+    "aberdeen|winslow": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "aberdeen|yuma": [
+      "OR",
+      "CA"
+    ],
+    "alamogordo|astoria": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "alamogordo|bakersfield": [
+      "AZ"
+    ],
+    "alamogordo|barstow": [
+      "AZ"
+    ],
+    "alamogordo|bellingham": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "alamogordo|bend": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "alamogordo|blythe": [
+      "AZ"
+    ],
+    "alamogordo|burns": [
+      "AZ",
+      "NV"
+    ],
+    "alamogordo|carson-city": [
+      "AZ",
+      "CA"
+    ],
+    "alamogordo|colville": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "alamogordo|coos-bay": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "alamogordo|el-centro": [
+      "AZ"
+    ],
+    "alamogordo|elko": [
+      "AZ"
+    ],
+    "alamogordo|ely": [
+      "AZ"
+    ],
+    "alamogordo|eugene": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "alamogordo|eureka": [
+      "AZ"
+    ],
+    "alamogordo|everett": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "alamogordo|fresno": [
+      "AZ"
+    ],
+    "alamogordo|grand-coulee": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "alamogordo|hilt": [
+      "AZ",
+      "NV"
+    ],
+    "alamogordo|huron": [
+      "AZ"
+    ],
+    "alamogordo|indio": [
+      "AZ"
+    ],
+    "alamogordo|jackpot": [
+      "AZ"
+    ],
+    "alamogordo|kennewick": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "alamogordo|klamath-falls": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "alamogordo|lakeview": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "alamogordo|las-vegas": [
+      "AZ"
+    ],
+    "alamogordo|longview": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "alamogordo|los-angeles": [
+      "AZ"
+    ],
+    "alamogordo|medford": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "alamogordo|modesto": [
+      "AZ"
+    ],
+    "alamogordo|mojave": [
+      "AZ"
+    ],
+    "alamogordo|newport": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "alamogordo|oakland": [
+      "AZ"
+    ],
+    "alamogordo|olympia": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "alamogordo|omak": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "alamogordo|ontario": [
+      "AZ",
+      "NV"
+    ],
+    "alamogordo|oxnard": [
+      "AZ"
+    ],
+    "alamogordo|pendleton": [
+      "AZ",
+      "NV"
+    ],
+    "alamogordo|pioche": [
+      "AZ"
+    ],
+    "alamogordo|port-angeles": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "alamogordo|portland": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "alamogordo|primm": [
+      "AZ"
+    ],
+    "alamogordo|redding": [
+      "AZ"
+    ],
+    "alamogordo|reno": [
+      "AZ"
+    ],
+    "alamogordo|sacramento": [
+      "AZ"
+    ],
+    "alamogordo|salem": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "alamogordo|san-diego": [
+      "AZ"
+    ],
+    "alamogordo|san-francisco": [
+      "AZ"
+    ],
+    "alamogordo|san-jose": [
+      "AZ"
+    ],
+    "alamogordo|santa-cruz": [
+      "AZ"
+    ],
+    "alamogordo|santa-maria": [
+      "AZ"
+    ],
+    "alamogordo|seattle": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "alamogordo|spokane": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "alamogordo|stockton": [
+      "AZ"
+    ],
+    "alamogordo|tacoma": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "alamogordo|the-dalles": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "alamogordo|tonopah": [
+      "AZ"
+    ],
+    "alamogordo|truckee": [
+      "AZ",
+      "NV"
+    ],
+    "alamogordo|ukiah": [
+      "AZ"
+    ],
+    "alamogordo|vancouver": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "alamogordo|wenatchee": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "alamogordo|winnemucca": [
+      "AZ"
+    ],
+    "alamogordo|yakima": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "albuquerque|astoria": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "albuquerque|bakersfield": [
+      "AZ"
+    ],
+    "albuquerque|barstow": [
+      "AZ"
+    ],
+    "albuquerque|bellingham": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "albuquerque|bend": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "albuquerque|blythe": [
+      "AZ"
+    ],
+    "albuquerque|burns": [
+      "AZ",
+      "NV"
+    ],
+    "albuquerque|carson-city": [
+      "AZ",
+      "CA"
+    ],
+    "albuquerque|colville": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "albuquerque|coos-bay": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "albuquerque|el-centro": [
+      "AZ"
+    ],
+    "albuquerque|elko": [
+      "AZ"
+    ],
+    "albuquerque|ely": [
+      "AZ"
+    ],
+    "albuquerque|eugene": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "albuquerque|eureka": [
+      "AZ"
+    ],
+    "albuquerque|everett": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "albuquerque|fresno": [
+      "AZ"
+    ],
+    "albuquerque|grand-coulee": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "albuquerque|hilt": [
+      "AZ",
+      "NV"
+    ],
+    "albuquerque|huron": [
+      "AZ"
+    ],
+    "albuquerque|indio": [
+      "AZ"
+    ],
+    "albuquerque|jackpot": [
+      "AZ"
+    ],
+    "albuquerque|kennewick": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "albuquerque|klamath-falls": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "albuquerque|lakeview": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "albuquerque|las-vegas": [
+      "AZ"
+    ],
+    "albuquerque|longview": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "albuquerque|los-angeles": [
+      "AZ"
+    ],
+    "albuquerque|medford": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "albuquerque|modesto": [
+      "AZ"
+    ],
+    "albuquerque|mojave": [
+      "AZ"
+    ],
+    "albuquerque|newport": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "albuquerque|oakland": [
+      "AZ"
+    ],
+    "albuquerque|olympia": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "albuquerque|omak": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "albuquerque|ontario": [
+      "AZ",
+      "NV"
+    ],
+    "albuquerque|oxnard": [
+      "AZ"
+    ],
+    "albuquerque|pendleton": [
+      "AZ",
+      "NV"
+    ],
+    "albuquerque|pioche": [
+      "AZ"
+    ],
+    "albuquerque|port-angeles": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "albuquerque|portland": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "albuquerque|primm": [
+      "AZ"
+    ],
+    "albuquerque|redding": [
+      "AZ",
+      "NV"
+    ],
+    "albuquerque|reno": [
+      "AZ"
+    ],
+    "albuquerque|sacramento": [
+      "AZ"
+    ],
+    "albuquerque|salem": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "albuquerque|san-diego": [
+      "AZ"
+    ],
+    "albuquerque|san-francisco": [
+      "AZ"
+    ],
+    "albuquerque|san-jose": [
+      "AZ"
+    ],
+    "albuquerque|santa-cruz": [
+      "AZ"
+    ],
+    "albuquerque|santa-maria": [
+      "AZ"
+    ],
+    "albuquerque|seattle": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "albuquerque|spokane": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "albuquerque|stockton": [
+      "AZ"
+    ],
+    "albuquerque|tacoma": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "albuquerque|the-dalles": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "albuquerque|tonopah": [
+      "AZ"
+    ],
+    "albuquerque|truckee": [
+      "AZ",
+      "NV"
+    ],
+    "albuquerque|ukiah": [
+      "AZ"
+    ],
+    "albuquerque|vancouver": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "albuquerque|wenatchee": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "albuquerque|winnemucca": [
+      "AZ"
+    ],
+    "albuquerque|yakima": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "artesia|astoria": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "artesia|bakersfield": [
+      "AZ"
+    ],
+    "artesia|barstow": [
+      "AZ"
+    ],
+    "artesia|bellingham": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "artesia|bend": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "artesia|blythe": [
+      "AZ"
+    ],
+    "artesia|burns": [
+      "AZ",
+      "NV"
+    ],
+    "artesia|carson-city": [
+      "AZ",
+      "CA"
+    ],
+    "artesia|colville": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "artesia|coos-bay": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "artesia|el-centro": [
+      "AZ"
+    ],
+    "artesia|elko": [
+      "AZ"
+    ],
+    "artesia|ely": [
+      "AZ"
+    ],
+    "artesia|eugene": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "artesia|eureka": [
+      "AZ"
+    ],
+    "artesia|everett": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "artesia|fresno": [
+      "AZ"
+    ],
+    "artesia|grand-coulee": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "artesia|hilt": [
+      "AZ",
+      "NV"
+    ],
+    "artesia|huron": [
+      "AZ"
+    ],
+    "artesia|indio": [
+      "AZ"
+    ],
+    "artesia|jackpot": [
+      "AZ"
+    ],
+    "artesia|kennewick": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "artesia|klamath-falls": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "artesia|lakeview": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "artesia|las-vegas": [
+      "AZ"
+    ],
+    "artesia|longview": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "artesia|los-angeles": [
+      "AZ"
+    ],
+    "artesia|medford": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "artesia|modesto": [
+      "AZ"
+    ],
+    "artesia|mojave": [
+      "AZ"
+    ],
+    "artesia|newport": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "artesia|oakland": [
+      "AZ"
+    ],
+    "artesia|olympia": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "artesia|omak": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "artesia|ontario": [
+      "AZ",
+      "NV"
+    ],
+    "artesia|oxnard": [
+      "AZ"
+    ],
+    "artesia|pendleton": [
+      "AZ",
+      "NV"
+    ],
+    "artesia|pioche": [
+      "AZ"
+    ],
+    "artesia|port-angeles": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "artesia|portland": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "artesia|primm": [
+      "AZ"
+    ],
+    "artesia|redding": [
+      "AZ",
+      "NV"
+    ],
+    "artesia|reno": [
+      "AZ"
+    ],
+    "artesia|sacramento": [
+      "AZ"
+    ],
+    "artesia|salem": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "artesia|san-diego": [
+      "AZ"
+    ],
+    "artesia|san-francisco": [
+      "AZ"
+    ],
+    "artesia|san-jose": [
+      "AZ"
+    ],
+    "artesia|santa-cruz": [
+      "AZ"
+    ],
+    "artesia|santa-maria": [
+      "AZ"
+    ],
+    "artesia|seattle": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "artesia|spokane": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "artesia|stockton": [
+      "AZ"
+    ],
+    "artesia|tacoma": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "artesia|the-dalles": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "artesia|tonopah": [
+      "AZ"
+    ],
+    "artesia|truckee": [
+      "AZ",
+      "NV"
+    ],
+    "artesia|ukiah": [
+      "AZ"
+    ],
+    "artesia|vancouver": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "artesia|wenatchee": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "artesia|winnemucca": [
+      "AZ"
+    ],
+    "artesia|yakima": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "astoria|camp-verde": [
+      "CA",
+      "NV"
+    ],
+    "astoria|carlsbad": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "astoria|carson-city": [
+      "CA"
+    ],
+    "astoria|clifton": [
+      "CA",
+      "NV"
+    ],
+    "astoria|clovis": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "astoria|farmington": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "astoria|flagstaff": [
+      "CA",
+      "NV"
+    ],
+    "astoria|gallup": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "astoria|grand-canyon-village": [
+      "CA",
+      "NV"
+    ],
+    "astoria|hobbs": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "astoria|kayenta": [
+      "CA",
+      "NV"
+    ],
+    "astoria|kingman": [
+      "CA",
+      "NV"
+    ],
+    "astoria|lake-havasu-city": [
+      "CA",
+      "NV"
+    ],
+    "astoria|las-cruces": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "astoria|las-vegas": [
+      "CA"
+    ],
+    "astoria|nogales": [
+      "CA",
+      "NV"
+    ],
+    "astoria|ontario": [
+      "WA"
+    ],
+    "astoria|page": [
+      "CA",
+      "NV"
+    ],
+    "astoria|pendleton": [
+      "WA"
+    ],
+    "astoria|phoenix": [
+      "CA",
+      "NV"
+    ],
+    "astoria|primm": [
+      "CA"
+    ],
+    "astoria|raton": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "astoria|reno": [
+      "CA"
+    ],
+    "astoria|roswell": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "astoria|san-simon": [
+      "CA",
+      "NV"
+    ],
+    "astoria|santa-fe": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "astoria|show-low": [
+      "CA",
+      "NV"
+    ],
+    "astoria|sierra-vista": [
+      "CA",
+      "NV"
+    ],
+    "astoria|socorro": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "astoria|the-dalles": [
+      "WA"
+    ],
+    "astoria|tonopah": [
+      "CA"
+    ],
+    "astoria|truckee": [
+      "NV"
+    ],
+    "astoria|tucson": [
+      "CA",
+      "NV"
+    ],
+    "astoria|tucumcari": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "astoria|winslow": [
+      "CA",
+      "NV"
+    ],
+    "astoria|yuma": [
+      "CA"
+    ],
+    "bakersfield|bellingham": [
+      "OR"
+    ],
+    "bakersfield|burns": [
+      "NV"
+    ],
+    "bakersfield|carlsbad": [
+      "AZ"
+    ],
+    "bakersfield|clovis": [
+      "AZ"
+    ],
+    "bakersfield|colville": [
+      "OR"
+    ],
+    "bakersfield|everett": [
+      "OR"
+    ],
+    "bakersfield|farmington": [
+      "AZ"
+    ],
+    "bakersfield|gallup": [
+      "AZ"
+    ],
+    "bakersfield|grand-coulee": [
+      "OR"
+    ],
+    "bakersfield|hobbs": [
+      "AZ"
+    ],
+    "bakersfield|kennewick": [
+      "OR"
+    ],
+    "bakersfield|lakeview": [
+      "NV"
+    ],
+    "bakersfield|las-cruces": [
+      "AZ"
+    ],
+    "bakersfield|longview": [
+      "OR"
+    ],
+    "bakersfield|olympia": [
+      "OR"
+    ],
+    "bakersfield|omak": [
+      "OR"
+    ],
+    "bakersfield|ontario": [
+      "NV"
+    ],
+    "bakersfield|pendleton": [
+      "NV"
+    ],
+    "bakersfield|port-angeles": [
+      "OR"
+    ],
+    "bakersfield|raton": [
+      "AZ"
+    ],
+    "bakersfield|roswell": [
+      "AZ"
+    ],
+    "bakersfield|santa-fe": [
+      "AZ"
+    ],
+    "bakersfield|seattle": [
+      "OR"
+    ],
+    "bakersfield|socorro": [
+      "AZ"
+    ],
+    "bakersfield|spokane": [
+      "OR"
+    ],
+    "bakersfield|tacoma": [
+      "OR"
+    ],
+    "bakersfield|tucumcari": [
+      "AZ"
+    ],
+    "bakersfield|vancouver": [
+      "OR"
+    ],
+    "bakersfield|wenatchee": [
+      "OR"
+    ],
+    "bakersfield|yakima": [
+      "OR"
+    ],
+    "barstow|bellingham": [
+      "OR"
+    ],
+    "barstow|burns": [
+      "NV"
+    ],
+    "barstow|carlsbad": [
+      "AZ"
+    ],
+    "barstow|clovis": [
+      "AZ"
+    ],
+    "barstow|colville": [
+      "NV",
+      "OR"
+    ],
+    "barstow|everett": [
+      "OR"
+    ],
+    "barstow|farmington": [
+      "AZ"
+    ],
+    "barstow|gallup": [
+      "AZ"
+    ],
+    "barstow|grand-coulee": [
+      "NV",
+      "OR"
+    ],
+    "barstow|hobbs": [
+      "AZ"
+    ],
+    "barstow|kennewick": [
+      "NV",
+      "OR"
+    ],
+    "barstow|lakeview": [
+      "NV"
+    ],
+    "barstow|las-cruces": [
+      "AZ"
+    ],
+    "barstow|longview": [
+      "OR"
+    ],
+    "barstow|olympia": [
+      "OR"
+    ],
+    "barstow|omak": [
+      "OR"
+    ],
+    "barstow|ontario": [
+      "NV"
+    ],
+    "barstow|pendleton": [
+      "NV"
+    ],
+    "barstow|port-angeles": [
+      "OR"
+    ],
+    "barstow|raton": [
+      "AZ"
+    ],
+    "barstow|roswell": [
+      "AZ"
+    ],
+    "barstow|santa-fe": [
+      "AZ"
+    ],
+    "barstow|seattle": [
+      "OR"
+    ],
+    "barstow|socorro": [
+      "AZ"
+    ],
+    "barstow|spokane": [
+      "NV",
+      "OR"
+    ],
+    "barstow|tacoma": [
+      "OR"
+    ],
+    "barstow|truckee": [
+      "NV"
+    ],
+    "barstow|tucumcari": [
+      "AZ"
+    ],
+    "barstow|vancouver": [
+      "OR"
+    ],
+    "barstow|wenatchee": [
+      "OR"
+    ],
+    "barstow|yakima": [
+      "OR"
+    ],
+    "bellingham|blythe": [
+      "OR"
+    ],
+    "bellingham|camp-verde": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "bellingham|carlsbad": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bellingham|carson-city": [
+      "OR",
+      "CA"
+    ],
+    "bellingham|clifton": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "bellingham|clovis": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bellingham|el-centro": [
+      "OR"
+    ],
+    "bellingham|elko": [
+      "OR"
+    ],
+    "bellingham|ely": [
+      "OR"
+    ],
+    "bellingham|eureka": [
+      "OR"
+    ],
+    "bellingham|farmington": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bellingham|flagstaff": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "bellingham|fresno": [
+      "OR"
+    ],
+    "bellingham|gallup": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bellingham|grand-canyon-village": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "bellingham|hilt": [
+      "OR"
+    ],
+    "bellingham|hobbs": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bellingham|huron": [
+      "OR"
+    ],
+    "bellingham|indio": [
+      "OR"
+    ],
+    "bellingham|jackpot": [
+      "OR"
+    ],
+    "bellingham|kayenta": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "bellingham|kingman": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "bellingham|lake-havasu-city": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "bellingham|las-cruces": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bellingham|las-vegas": [
+      "OR",
+      "CA"
+    ],
+    "bellingham|los-angeles": [
+      "OR"
+    ],
+    "bellingham|modesto": [
+      "OR"
+    ],
+    "bellingham|mojave": [
+      "OR"
+    ],
+    "bellingham|nogales": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "bellingham|oakland": [
+      "OR"
+    ],
+    "bellingham|oxnard": [
+      "OR"
+    ],
+    "bellingham|page": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "bellingham|phoenix": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "bellingham|pioche": [
+      "OR"
+    ],
+    "bellingham|primm": [
+      "OR",
+      "CA"
+    ],
+    "bellingham|raton": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bellingham|redding": [
+      "OR"
+    ],
+    "bellingham|reno": [
+      "OR",
+      "CA"
+    ],
+    "bellingham|roswell": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bellingham|sacramento": [
+      "OR"
+    ],
+    "bellingham|san-diego": [
+      "OR"
+    ],
+    "bellingham|san-francisco": [
+      "OR"
+    ],
+    "bellingham|san-jose": [
+      "OR"
+    ],
+    "bellingham|san-simon": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "bellingham|santa-cruz": [
+      "OR"
+    ],
+    "bellingham|santa-fe": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bellingham|santa-maria": [
+      "OR"
+    ],
+    "bellingham|show-low": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "bellingham|sierra-vista": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "bellingham|socorro": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bellingham|stockton": [
+      "OR"
+    ],
+    "bellingham|tonopah": [
+      "OR",
+      "CA"
+    ],
+    "bellingham|truckee": [
+      "OR",
+      "NV"
+    ],
+    "bellingham|tucson": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "bellingham|tucumcari": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bellingham|ukiah": [
+      "OR"
+    ],
+    "bellingham|vancouver": [
+      "OR"
+    ],
+    "bellingham|winnemucca": [
+      "OR"
+    ],
+    "bellingham|winslow": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "bellingham|yuma": [
+      "OR",
+      "CA"
+    ],
+    "bend|blythe": [
+      "NV"
+    ],
+    "bend|camp-verde": [
+      "CA",
+      "NV"
+    ],
+    "bend|carlsbad": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bend|carson-city": [
+      "CA"
+    ],
+    "bend|clifton": [
+      "CA",
+      "NV"
+    ],
+    "bend|clovis": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bend|el-centro": [
+      "NV"
+    ],
+    "bend|farmington": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bend|flagstaff": [
+      "CA",
+      "NV"
+    ],
+    "bend|gallup": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bend|grand-canyon-village": [
+      "CA",
+      "NV"
+    ],
+    "bend|hobbs": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bend|indio": [
+      "NV"
+    ],
+    "bend|kayenta": [
+      "CA",
+      "NV"
+    ],
+    "bend|kingman": [
+      "CA",
+      "NV"
+    ],
+    "bend|lake-havasu-city": [
+      "CA",
+      "NV"
+    ],
+    "bend|las-cruces": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bend|las-vegas": [
+      "CA"
+    ],
+    "bend|nogales": [
+      "CA",
+      "NV"
+    ],
+    "bend|page": [
+      "CA",
+      "NV"
+    ],
+    "bend|phoenix": [
+      "CA",
+      "NV"
+    ],
+    "bend|primm": [
+      "CA"
+    ],
+    "bend|raton": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bend|reno": [
+      "CA"
+    ],
+    "bend|roswell": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bend|san-simon": [
+      "CA",
+      "NV"
+    ],
+    "bend|santa-fe": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bend|show-low": [
+      "CA",
+      "NV"
+    ],
+    "bend|sierra-vista": [
+      "CA",
+      "NV"
+    ],
+    "bend|socorro": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bend|tonopah": [
+      "CA"
+    ],
+    "bend|truckee": [
+      "NV"
+    ],
+    "bend|tucson": [
+      "CA",
+      "NV"
+    ],
+    "bend|tucumcari": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "bend|winslow": [
+      "CA",
+      "NV"
+    ],
+    "bend|yuma": [
+      "CA",
+      "NV"
+    ],
+    "blythe|burns": [
+      "NV"
+    ],
+    "blythe|carlsbad": [
+      "AZ"
+    ],
+    "blythe|clovis": [
+      "AZ"
+    ],
+    "blythe|colville": [
+      "NV",
+      "OR"
+    ],
+    "blythe|el-centro": [
+      "AZ"
+    ],
+    "blythe|everett": [
+      "OR"
+    ],
+    "blythe|farmington": [
+      "AZ"
+    ],
+    "blythe|gallup": [
+      "AZ"
+    ],
+    "blythe|grand-coulee": [
+      "NV",
+      "OR"
+    ],
+    "blythe|hobbs": [
+      "AZ"
+    ],
+    "blythe|kennewick": [
+      "NV",
+      "OR"
+    ],
+    "blythe|lakeview": [
+      "NV"
+    ],
+    "blythe|las-cruces": [
+      "AZ"
+    ],
+    "blythe|longview": [
+      "OR"
+    ],
+    "blythe|olympia": [
+      "OR"
+    ],
+    "blythe|omak": [
+      "NV",
+      "OR"
+    ],
+    "blythe|ontario": [
+      "NV"
+    ],
+    "blythe|pendleton": [
+      "NV"
+    ],
+    "blythe|port-angeles": [
+      "OR"
+    ],
+    "blythe|raton": [
+      "AZ"
+    ],
+    "blythe|roswell": [
+      "AZ"
+    ],
+    "blythe|santa-fe": [
+      "AZ"
+    ],
+    "blythe|seattle": [
+      "OR"
+    ],
+    "blythe|socorro": [
+      "AZ"
+    ],
+    "blythe|spokane": [
+      "NV",
+      "OR"
+    ],
+    "blythe|tacoma": [
+      "OR"
+    ],
+    "blythe|the-dalles": [
+      "NV"
+    ],
+    "blythe|truckee": [
+      "NV"
+    ],
+    "blythe|tucumcari": [
+      "AZ"
+    ],
+    "blythe|vancouver": [
+      "OR"
+    ],
+    "blythe|wenatchee": [
+      "NV",
+      "OR"
+    ],
+    "blythe|yakima": [
+      "NV",
+      "OR"
+    ],
+    "burns|camp-verde": [
+      "NV"
+    ],
+    "burns|carlsbad": [
+      "NV",
+      "AZ"
+    ],
+    "burns|carson-city": [
+      "CA"
+    ],
+    "burns|clifton": [
+      "NV"
+    ],
+    "burns|clovis": [
+      "NV",
+      "AZ"
+    ],
+    "burns|el-centro": [
+      "NV"
+    ],
+    "burns|farmington": [
+      "NV",
+      "AZ"
+    ],
+    "burns|flagstaff": [
+      "NV"
+    ],
+    "burns|fresno": [
+      "NV"
+    ],
+    "burns|gallup": [
+      "NV",
+      "AZ"
+    ],
+    "burns|grand-canyon-village": [
+      "NV"
+    ],
+    "burns|hobbs": [
+      "NV",
+      "AZ"
+    ],
+    "burns|indio": [
+      "NV"
+    ],
+    "burns|kayenta": [
+      "NV"
+    ],
+    "burns|kingman": [
+      "NV"
+    ],
+    "burns|lake-havasu-city": [
+      "NV"
+    ],
+    "burns|las-cruces": [
+      "NV",
+      "AZ"
+    ],
+    "burns|los-angeles": [
+      "NV"
+    ],
+    "burns|mojave": [
+      "NV"
+    ],
+    "burns|nogales": [
+      "NV"
+    ],
+    "burns|oxnard": [
+      "NV"
+    ],
+    "burns|page": [
+      "NV"
+    ],
+    "burns|phoenix": [
+      "NV"
+    ],
+    "burns|raton": [
+      "NV",
+      "AZ"
+    ],
+    "burns|reno": [
+      "CA"
+    ],
+    "burns|roswell": [
+      "NV",
+      "AZ"
+    ],
+    "burns|san-diego": [
+      "NV"
+    ],
+    "burns|san-simon": [
+      "NV"
+    ],
+    "burns|santa-fe": [
+      "NV",
+      "AZ"
+    ],
+    "burns|show-low": [
+      "NV"
+    ],
+    "burns|sierra-vista": [
+      "NV"
+    ],
+    "burns|socorro": [
+      "NV",
+      "AZ"
+    ],
+    "burns|truckee": [
+      "NV"
+    ],
+    "burns|tucson": [
+      "NV"
+    ],
+    "burns|tucumcari": [
+      "NV",
+      "AZ"
+    ],
+    "burns|winslow": [
+      "NV"
+    ],
+    "burns|yuma": [
+      "NV",
+      "CA"
+    ],
+    "camp-verde|carson-city": [
+      "CA"
+    ],
+    "camp-verde|colville": [
+      "NV",
+      "OR"
+    ],
+    "camp-verde|coos-bay": [
+      "NV",
+      "CA"
+    ],
+    "camp-verde|eugene": [
+      "NV",
+      "CA"
+    ],
+    "camp-verde|everett": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "camp-verde|grand-coulee": [
+      "NV",
+      "OR"
+    ],
+    "camp-verde|hilt": [
+      "NV"
+    ],
+    "camp-verde|kennewick": [
+      "NV",
+      "OR"
+    ],
+    "camp-verde|klamath-falls": [
+      "NV",
+      "CA"
+    ],
+    "camp-verde|lakeview": [
+      "NV",
+      "CA"
+    ],
+    "camp-verde|longview": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "camp-verde|medford": [
+      "NV",
+      "CA"
+    ],
+    "camp-verde|newport": [
+      "NV",
+      "CA"
+    ],
+    "camp-verde|olympia": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "camp-verde|omak": [
+      "NV",
+      "OR"
+    ],
+    "camp-verde|ontario": [
+      "NV"
+    ],
+    "camp-verde|pendleton": [
+      "NV"
+    ],
+    "camp-verde|port-angeles": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "camp-verde|portland": [
+      "NV",
+      "CA"
+    ],
+    "camp-verde|redding": [
+      "NV"
+    ],
+    "camp-verde|salem": [
+      "NV",
+      "CA"
+    ],
+    "camp-verde|seattle": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "camp-verde|spokane": [
+      "NV",
+      "OR"
+    ],
+    "camp-verde|tacoma": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "camp-verde|the-dalles": [
+      "NV",
+      "CA"
+    ],
+    "camp-verde|truckee": [
+      "NV"
+    ],
+    "camp-verde|vancouver": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "camp-verde|wenatchee": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "camp-verde|yakima": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "carlsbad|carson-city": [
+      "AZ",
+      "CA"
+    ],
+    "carlsbad|colville": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "carlsbad|coos-bay": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "carlsbad|el-centro": [
+      "AZ"
+    ],
+    "carlsbad|elko": [
+      "AZ"
+    ],
+    "carlsbad|ely": [
+      "AZ"
+    ],
+    "carlsbad|eugene": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "carlsbad|eureka": [
+      "AZ"
+    ],
+    "carlsbad|everett": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "carlsbad|fresno": [
+      "AZ"
+    ],
+    "carlsbad|grand-coulee": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "carlsbad|hilt": [
+      "AZ",
+      "NV"
+    ],
+    "carlsbad|huron": [
+      "AZ"
+    ],
+    "carlsbad|indio": [
+      "AZ"
+    ],
+    "carlsbad|jackpot": [
+      "AZ"
+    ],
+    "carlsbad|kennewick": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "carlsbad|klamath-falls": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "carlsbad|lakeview": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "carlsbad|las-vegas": [
+      "AZ"
+    ],
+    "carlsbad|longview": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "carlsbad|los-angeles": [
+      "AZ"
+    ],
+    "carlsbad|medford": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "carlsbad|modesto": [
+      "AZ"
+    ],
+    "carlsbad|mojave": [
+      "AZ"
+    ],
+    "carlsbad|newport": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "carlsbad|oakland": [
+      "AZ"
+    ],
+    "carlsbad|olympia": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "carlsbad|omak": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "carlsbad|ontario": [
+      "AZ",
+      "NV"
+    ],
+    "carlsbad|oxnard": [
+      "AZ"
+    ],
+    "carlsbad|pendleton": [
+      "AZ",
+      "NV"
+    ],
+    "carlsbad|pioche": [
+      "AZ"
+    ],
+    "carlsbad|port-angeles": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "carlsbad|portland": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "carlsbad|primm": [
+      "AZ"
+    ],
+    "carlsbad|redding": [
+      "AZ",
+      "NV"
+    ],
+    "carlsbad|reno": [
+      "AZ"
+    ],
+    "carlsbad|sacramento": [
+      "AZ"
+    ],
+    "carlsbad|salem": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "carlsbad|san-diego": [
+      "AZ"
+    ],
+    "carlsbad|san-francisco": [
+      "AZ"
+    ],
+    "carlsbad|san-jose": [
+      "AZ"
+    ],
+    "carlsbad|santa-cruz": [
+      "AZ"
+    ],
+    "carlsbad|santa-maria": [
+      "AZ"
+    ],
+    "carlsbad|seattle": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "carlsbad|spokane": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "carlsbad|stockton": [
+      "AZ"
+    ],
+    "carlsbad|tacoma": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "carlsbad|the-dalles": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "carlsbad|tonopah": [
+      "AZ"
+    ],
+    "carlsbad|truckee": [
+      "AZ",
+      "NV"
+    ],
+    "carlsbad|ukiah": [
+      "AZ"
+    ],
+    "carlsbad|vancouver": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "carlsbad|wenatchee": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "carlsbad|winnemucca": [
+      "AZ"
+    ],
+    "carlsbad|yakima": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "carson-city|clifton": [
+      "CA"
+    ],
+    "carson-city|clovis": [
+      "CA",
+      "AZ"
+    ],
+    "carson-city|colville": [
+      "CA",
+      "OR"
+    ],
+    "carson-city|coos-bay": [
+      "CA"
+    ],
+    "carson-city|eugene": [
+      "CA"
+    ],
+    "carson-city|everett": [
+      "CA",
+      "OR"
+    ],
+    "carson-city|farmington": [
+      "CA",
+      "AZ"
+    ],
+    "carson-city|flagstaff": [
+      "CA"
+    ],
+    "carson-city|gallup": [
+      "CA",
+      "AZ"
+    ],
+    "carson-city|grand-canyon-village": [
+      "CA"
+    ],
+    "carson-city|grand-coulee": [
+      "CA",
+      "OR"
+    ],
+    "carson-city|hobbs": [
+      "CA",
+      "AZ"
+    ],
+    "carson-city|kayenta": [
+      "CA"
+    ],
+    "carson-city|kennewick": [
+      "CA",
+      "OR"
+    ],
+    "carson-city|kingman": [
+      "CA"
+    ],
+    "carson-city|klamath-falls": [
+      "CA"
+    ],
+    "carson-city|lake-havasu-city": [
+      "CA"
+    ],
+    "carson-city|lakeview": [
+      "CA"
+    ],
+    "carson-city|las-cruces": [
+      "CA",
+      "AZ"
+    ],
+    "carson-city|las-vegas": [
+      "CA"
+    ],
+    "carson-city|longview": [
+      "CA",
+      "OR"
+    ],
+    "carson-city|medford": [
+      "CA"
+    ],
+    "carson-city|newport": [
+      "CA"
+    ],
+    "carson-city|nogales": [
+      "CA"
+    ],
+    "carson-city|olympia": [
+      "CA",
+      "OR"
+    ],
+    "carson-city|omak": [
+      "CA",
+      "OR"
+    ],
+    "carson-city|ontario": [
+      "CA"
+    ],
+    "carson-city|page": [
+      "CA"
+    ],
+    "carson-city|pendleton": [
+      "CA"
+    ],
+    "carson-city|phoenix": [
+      "CA"
+    ],
+    "carson-city|port-angeles": [
+      "CA",
+      "OR"
+    ],
+    "carson-city|portland": [
+      "CA"
+    ],
+    "carson-city|primm": [
+      "CA"
+    ],
+    "carson-city|raton": [
+      "CA",
+      "AZ"
+    ],
+    "carson-city|roswell": [
+      "CA",
+      "AZ"
+    ],
+    "carson-city|salem": [
+      "CA"
+    ],
+    "carson-city|san-simon": [
+      "CA"
+    ],
+    "carson-city|santa-fe": [
+      "CA",
+      "AZ"
+    ],
+    "carson-city|seattle": [
+      "CA",
+      "OR"
+    ],
+    "carson-city|show-low": [
+      "CA"
+    ],
+    "carson-city|sierra-vista": [
+      "CA"
+    ],
+    "carson-city|socorro": [
+      "CA",
+      "AZ"
+    ],
+    "carson-city|spokane": [
+      "CA",
+      "OR"
+    ],
+    "carson-city|tacoma": [
+      "CA",
+      "OR"
+    ],
+    "carson-city|the-dalles": [
+      "CA"
+    ],
+    "carson-city|tucson": [
+      "CA"
+    ],
+    "carson-city|tucumcari": [
+      "CA",
+      "AZ"
+    ],
+    "carson-city|vancouver": [
+      "CA",
+      "OR"
+    ],
+    "carson-city|wenatchee": [
+      "CA",
+      "OR"
+    ],
+    "carson-city|winslow": [
+      "CA"
+    ],
+    "carson-city|yakima": [
+      "CA",
+      "OR"
+    ],
+    "carson-city|yuma": [
+      "CA"
+    ],
+    "clifton|colville": [
+      "NV",
+      "OR"
+    ],
+    "clifton|coos-bay": [
+      "NV",
+      "CA"
+    ],
+    "clifton|eugene": [
+      "NV",
+      "CA"
+    ],
+    "clifton|everett": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clifton|grand-coulee": [
+      "NV",
+      "OR"
+    ],
+    "clifton|hilt": [
+      "NV"
+    ],
+    "clifton|kennewick": [
+      "NV",
+      "OR"
+    ],
+    "clifton|klamath-falls": [
+      "NV",
+      "CA"
+    ],
+    "clifton|lakeview": [
+      "NV",
+      "CA"
+    ],
+    "clifton|longview": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clifton|medford": [
+      "NV",
+      "CA"
+    ],
+    "clifton|newport": [
+      "NV",
+      "CA"
+    ],
+    "clifton|olympia": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clifton|omak": [
+      "NV",
+      "OR"
+    ],
+    "clifton|ontario": [
+      "NV"
+    ],
+    "clifton|pendleton": [
+      "NV"
+    ],
+    "clifton|port-angeles": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clifton|portland": [
+      "NV",
+      "CA"
+    ],
+    "clifton|salem": [
+      "NV",
+      "CA"
+    ],
+    "clifton|seattle": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clifton|spokane": [
+      "NV",
+      "OR"
+    ],
+    "clifton|tacoma": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clifton|the-dalles": [
+      "NV",
+      "CA"
+    ],
+    "clifton|truckee": [
+      "NV"
+    ],
+    "clifton|vancouver": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clifton|wenatchee": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clifton|yakima": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clovis|colville": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "clovis|coos-bay": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "clovis|el-centro": [
+      "AZ"
+    ],
+    "clovis|elko": [
+      "AZ"
+    ],
+    "clovis|ely": [
+      "AZ"
+    ],
+    "clovis|eugene": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "clovis|eureka": [
+      "AZ"
+    ],
+    "clovis|everett": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clovis|fresno": [
+      "AZ"
+    ],
+    "clovis|grand-coulee": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "clovis|hilt": [
+      "AZ",
+      "NV"
+    ],
+    "clovis|huron": [
+      "AZ"
+    ],
+    "clovis|indio": [
+      "AZ"
+    ],
+    "clovis|jackpot": [
+      "AZ"
+    ],
+    "clovis|kennewick": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "clovis|klamath-falls": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "clovis|lakeview": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "clovis|las-vegas": [
+      "AZ"
+    ],
+    "clovis|longview": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clovis|los-angeles": [
+      "AZ"
+    ],
+    "clovis|medford": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "clovis|modesto": [
+      "AZ"
+    ],
+    "clovis|mojave": [
+      "AZ"
+    ],
+    "clovis|newport": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "clovis|oakland": [
+      "AZ"
+    ],
+    "clovis|olympia": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clovis|omak": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "clovis|ontario": [
+      "AZ",
+      "NV"
+    ],
+    "clovis|oxnard": [
+      "AZ"
+    ],
+    "clovis|pendleton": [
+      "AZ",
+      "NV"
+    ],
+    "clovis|pioche": [
+      "AZ"
+    ],
+    "clovis|port-angeles": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clovis|portland": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "clovis|primm": [
+      "AZ"
+    ],
+    "clovis|redding": [
+      "AZ",
+      "NV"
+    ],
+    "clovis|reno": [
+      "AZ"
+    ],
+    "clovis|sacramento": [
+      "AZ"
+    ],
+    "clovis|salem": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "clovis|san-diego": [
+      "AZ"
+    ],
+    "clovis|san-francisco": [
+      "AZ"
+    ],
+    "clovis|san-jose": [
+      "AZ"
+    ],
+    "clovis|santa-cruz": [
+      "AZ"
+    ],
+    "clovis|santa-maria": [
+      "AZ"
+    ],
+    "clovis|seattle": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clovis|spokane": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "clovis|stockton": [
+      "AZ"
+    ],
+    "clovis|tacoma": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clovis|the-dalles": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "clovis|tonopah": [
+      "AZ"
+    ],
+    "clovis|truckee": [
+      "AZ",
+      "NV"
+    ],
+    "clovis|ukiah": [
+      "AZ"
+    ],
+    "clovis|vancouver": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clovis|wenatchee": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "clovis|winnemucca": [
+      "AZ"
+    ],
+    "clovis|yakima": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "colville|el-centro": [
+      "OR",
+      "NV"
+    ],
+    "colville|elko": [
+      "OR"
+    ],
+    "colville|ely": [
+      "OR"
+    ],
+    "colville|eureka": [
+      "OR"
+    ],
+    "colville|farmington": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "colville|flagstaff": [
+      "OR",
+      "NV"
+    ],
+    "colville|fresno": [
+      "OR"
+    ],
+    "colville|gallup": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "colville|grand-canyon-village": [
+      "OR",
+      "NV"
+    ],
+    "colville|hilt": [
+      "OR"
+    ],
+    "colville|hobbs": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "colville|huron": [
+      "OR"
+    ],
+    "colville|indio": [
+      "OR",
+      "NV"
+    ],
+    "colville|jackpot": [
+      "OR"
+    ],
+    "colville|kayenta": [
+      "OR",
+      "NV"
+    ],
+    "colville|kingman": [
+      "OR",
+      "NV"
+    ],
+    "colville|lake-havasu-city": [
+      "OR",
+      "NV"
+    ],
+    "colville|las-cruces": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "colville|las-vegas": [
+      "OR"
+    ],
+    "colville|los-angeles": [
+      "OR",
+      "NV"
+    ],
+    "colville|modesto": [
+      "OR"
+    ],
+    "colville|mojave": [
+      "OR",
+      "NV"
+    ],
+    "colville|nogales": [
+      "OR",
+      "NV"
+    ],
+    "colville|oakland": [
+      "OR"
+    ],
+    "colville|oxnard": [
+      "OR"
+    ],
+    "colville|page": [
+      "OR",
+      "NV"
+    ],
+    "colville|phoenix": [
+      "OR",
+      "NV"
+    ],
+    "colville|pioche": [
+      "OR"
+    ],
+    "colville|primm": [
+      "OR"
+    ],
+    "colville|raton": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "colville|redding": [
+      "OR"
+    ],
+    "colville|reno": [
+      "OR",
+      "CA"
+    ],
+    "colville|roswell": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "colville|sacramento": [
+      "OR"
+    ],
+    "colville|san-diego": [
+      "OR",
+      "NV"
+    ],
+    "colville|san-francisco": [
+      "OR"
+    ],
+    "colville|san-jose": [
+      "OR"
+    ],
+    "colville|san-simon": [
+      "OR",
+      "NV"
+    ],
+    "colville|santa-cruz": [
+      "OR"
+    ],
+    "colville|santa-fe": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "colville|santa-maria": [
+      "OR"
+    ],
+    "colville|show-low": [
+      "OR",
+      "NV"
+    ],
+    "colville|sierra-vista": [
+      "OR",
+      "NV"
+    ],
+    "colville|socorro": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "colville|stockton": [
+      "OR"
+    ],
+    "colville|tonopah": [
+      "OR"
+    ],
+    "colville|truckee": [
+      "OR",
+      "NV"
+    ],
+    "colville|tucson": [
+      "OR",
+      "NV"
+    ],
+    "colville|tucumcari": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "colville|ukiah": [
+      "OR"
+    ],
+    "colville|vancouver": [
+      "OR"
+    ],
+    "colville|winnemucca": [
+      "OR"
+    ],
+    "colville|winslow": [
+      "OR",
+      "NV"
+    ],
+    "colville|yuma": [
+      "OR",
+      "NV",
+      "CA"
+    ],
+    "coos-bay|ely": [
+      "CA"
+    ],
+    "coos-bay|farmington": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "coos-bay|flagstaff": [
+      "CA",
+      "NV"
+    ],
+    "coos-bay|gallup": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "coos-bay|grand-canyon-village": [
+      "CA",
+      "NV"
+    ],
+    "coos-bay|hobbs": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "coos-bay|kayenta": [
+      "CA",
+      "NV"
+    ],
+    "coos-bay|kingman": [
+      "CA",
+      "NV"
+    ],
+    "coos-bay|lake-havasu-city": [
+      "CA"
+    ],
+    "coos-bay|las-cruces": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "coos-bay|las-vegas": [
+      "CA"
+    ],
+    "coos-bay|nogales": [
+      "CA",
+      "NV"
+    ],
+    "coos-bay|page": [
+      "CA",
+      "NV"
+    ],
+    "coos-bay|pendleton": [
+      "WA"
+    ],
+    "coos-bay|phoenix": [
+      "CA",
+      "NV"
+    ],
+    "coos-bay|pioche": [
+      "CA"
+    ],
+    "coos-bay|primm": [
+      "CA"
+    ],
+    "coos-bay|raton": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "coos-bay|reno": [
+      "CA"
+    ],
+    "coos-bay|roswell": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "coos-bay|san-simon": [
+      "CA",
+      "NV"
+    ],
+    "coos-bay|santa-fe": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "coos-bay|show-low": [
+      "CA",
+      "NV"
+    ],
+    "coos-bay|sierra-vista": [
+      "CA",
+      "NV"
+    ],
+    "coos-bay|socorro": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "coos-bay|tonopah": [
+      "CA"
+    ],
+    "coos-bay|truckee": [
+      "NV"
+    ],
+    "coos-bay|tucson": [
+      "CA",
+      "NV"
+    ],
+    "coos-bay|tucumcari": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "coos-bay|winslow": [
+      "CA",
+      "NV"
+    ],
+    "coos-bay|yuma": [
+      "CA"
+    ],
+    "el-centro|elko": [
+      "AZ"
+    ],
+    "el-centro|ely": [
+      "AZ"
+    ],
+    "el-centro|everett": [
+      "OR"
+    ],
+    "el-centro|farmington": [
+      "AZ"
+    ],
+    "el-centro|gallup": [
+      "AZ"
+    ],
+    "el-centro|grand-coulee": [
+      "NV",
+      "OR"
+    ],
+    "el-centro|hobbs": [
+      "AZ"
+    ],
+    "el-centro|jackpot": [
+      "AZ"
+    ],
+    "el-centro|kennewick": [
+      "NV",
+      "OR"
+    ],
+    "el-centro|lakeview": [
+      "NV"
+    ],
+    "el-centro|las-cruces": [
+      "AZ"
+    ],
+    "el-centro|las-vegas": [
+      "AZ"
+    ],
+    "el-centro|longview": [
+      "OR"
+    ],
+    "el-centro|olympia": [
+      "OR"
+    ],
+    "el-centro|omak": [
+      "NV",
+      "OR"
+    ],
+    "el-centro|ontario": [
+      "NV"
+    ],
+    "el-centro|pendleton": [
+      "NV"
+    ],
+    "el-centro|pioche": [
+      "AZ"
+    ],
+    "el-centro|port-angeles": [
+      "OR"
+    ],
+    "el-centro|raton": [
+      "AZ"
+    ],
+    "el-centro|roswell": [
+      "AZ"
+    ],
+    "el-centro|santa-fe": [
+      "AZ"
+    ],
+    "el-centro|seattle": [
+      "OR"
+    ],
+    "el-centro|socorro": [
+      "AZ"
+    ],
+    "el-centro|spokane": [
+      "NV",
+      "OR"
+    ],
+    "el-centro|tacoma": [
+      "OR"
+    ],
+    "el-centro|the-dalles": [
+      "NV"
+    ],
+    "el-centro|truckee": [
+      "NV"
+    ],
+    "el-centro|tucumcari": [
+      "AZ"
+    ],
+    "el-centro|vancouver": [
+      "OR"
+    ],
+    "el-centro|wenatchee": [
+      "NV",
+      "OR"
+    ],
+    "el-centro|yakima": [
+      "NV",
+      "OR"
+    ],
+    "elko|everett": [
+      "OR"
+    ],
+    "elko|farmington": [
+      "AZ"
+    ],
+    "elko|gallup": [
+      "AZ"
+    ],
+    "elko|grand-coulee": [
+      "OR"
+    ],
+    "elko|hilt": [
+      "OR"
+    ],
+    "elko|hobbs": [
+      "AZ"
+    ],
+    "elko|kennewick": [
+      "OR"
+    ],
+    "elko|las-cruces": [
+      "AZ"
+    ],
+    "elko|longview": [
+      "OR"
+    ],
+    "elko|olympia": [
+      "OR"
+    ],
+    "elko|omak": [
+      "OR"
+    ],
+    "elko|port-angeles": [
+      "OR"
+    ],
+    "elko|raton": [
+      "AZ"
+    ],
+    "elko|roswell": [
+      "AZ"
+    ],
+    "elko|santa-fe": [
+      "AZ"
+    ],
+    "elko|seattle": [
+      "OR"
+    ],
+    "elko|socorro": [
+      "AZ"
+    ],
+    "elko|spokane": [
+      "OR"
+    ],
+    "elko|tacoma": [
+      "OR"
+    ],
+    "elko|tucumcari": [
+      "AZ"
+    ],
+    "elko|vancouver": [
+      "OR"
+    ],
+    "elko|wenatchee": [
+      "OR"
+    ],
+    "elko|yakima": [
+      "OR"
+    ],
+    "elko|yuma": [
+      "CA"
+    ],
+    "ely|eugene": [
+      "CA"
+    ],
+    "ely|everett": [
+      "OR"
+    ],
+    "ely|farmington": [
+      "AZ"
+    ],
+    "ely|gallup": [
+      "AZ"
+    ],
+    "ely|grand-coulee": [
+      "OR"
+    ],
+    "ely|hobbs": [
+      "AZ"
+    ],
+    "ely|kennewick": [
+      "OR"
+    ],
+    "ely|klamath-falls": [
+      "CA"
+    ],
+    "ely|lakeview": [
+      "CA"
+    ],
+    "ely|las-cruces": [
+      "AZ"
+    ],
+    "ely|longview": [
+      "OR"
+    ],
+    "ely|medford": [
+      "CA"
+    ],
+    "ely|olympia": [
+      "OR"
+    ],
+    "ely|omak": [
+      "OR"
+    ],
+    "ely|port-angeles": [
+      "OR"
+    ],
+    "ely|raton": [
+      "AZ"
+    ],
+    "ely|roswell": [
+      "AZ"
+    ],
+    "ely|santa-fe": [
+      "AZ"
+    ],
+    "ely|seattle": [
+      "OR"
+    ],
+    "ely|socorro": [
+      "AZ"
+    ],
+    "ely|spokane": [
+      "OR"
+    ],
+    "ely|tacoma": [
+      "OR"
+    ],
+    "ely|tucumcari": [
+      "AZ"
+    ],
+    "ely|vancouver": [
+      "OR"
+    ],
+    "ely|wenatchee": [
+      "OR"
+    ],
+    "ely|yakima": [
+      "OR"
+    ],
+    "ely|yuma": [
+      "CA"
+    ],
+    "eugene|farmington": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "eugene|flagstaff": [
+      "CA",
+      "NV"
+    ],
+    "eugene|gallup": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "eugene|grand-canyon-village": [
+      "CA",
+      "NV"
+    ],
+    "eugene|hobbs": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "eugene|kayenta": [
+      "CA",
+      "NV"
+    ],
+    "eugene|kingman": [
+      "CA",
+      "NV"
+    ],
+    "eugene|lake-havasu-city": [
+      "CA"
+    ],
+    "eugene|las-cruces": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "eugene|las-vegas": [
+      "CA"
+    ],
+    "eugene|nogales": [
+      "CA",
+      "NV"
+    ],
+    "eugene|page": [
+      "CA",
+      "NV"
+    ],
+    "eugene|pendleton": [
+      "WA"
+    ],
+    "eugene|phoenix": [
+      "CA",
+      "NV"
+    ],
+    "eugene|pioche": [
+      "CA"
+    ],
+    "eugene|primm": [
+      "CA"
+    ],
+    "eugene|raton": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "eugene|reno": [
+      "CA"
+    ],
+    "eugene|roswell": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "eugene|san-simon": [
+      "CA",
+      "NV"
+    ],
+    "eugene|santa-fe": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "eugene|show-low": [
+      "CA",
+      "NV"
+    ],
+    "eugene|sierra-vista": [
+      "CA",
+      "NV"
+    ],
+    "eugene|socorro": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "eugene|tonopah": [
+      "CA"
+    ],
+    "eugene|truckee": [
+      "NV"
+    ],
+    "eugene|tucson": [
+      "CA",
+      "NV"
+    ],
+    "eugene|tucumcari": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "eugene|winslow": [
+      "CA",
+      "NV"
+    ],
+    "eugene|yuma": [
+      "CA"
+    ],
+    "eureka|everett": [
+      "OR"
+    ],
+    "eureka|farmington": [
+      "AZ"
+    ],
+    "eureka|gallup": [
+      "AZ"
+    ],
+    "eureka|grand-coulee": [
+      "OR"
+    ],
+    "eureka|hobbs": [
+      "AZ"
+    ],
+    "eureka|kennewick": [
+      "OR"
+    ],
+    "eureka|las-cruces": [
+      "AZ"
+    ],
+    "eureka|longview": [
+      "OR"
+    ],
+    "eureka|olympia": [
+      "OR"
+    ],
+    "eureka|omak": [
+      "OR"
+    ],
+    "eureka|port-angeles": [
+      "OR"
+    ],
+    "eureka|raton": [
+      "AZ"
+    ],
+    "eureka|roswell": [
+      "AZ"
+    ],
+    "eureka|santa-fe": [
+      "AZ"
+    ],
+    "eureka|seattle": [
+      "OR"
+    ],
+    "eureka|socorro": [
+      "AZ"
+    ],
+    "eureka|spokane": [
+      "OR"
+    ],
+    "eureka|tacoma": [
+      "OR"
+    ],
+    "eureka|tucumcari": [
+      "AZ"
+    ],
+    "eureka|vancouver": [
+      "OR"
+    ],
+    "eureka|wenatchee": [
+      "OR"
+    ],
+    "eureka|yakima": [
+      "OR"
+    ],
+    "everett|farmington": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "everett|flagstaff": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "everett|fresno": [
+      "OR"
+    ],
+    "everett|gallup": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "everett|grand-canyon-village": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "everett|hilt": [
+      "OR"
+    ],
+    "everett|hobbs": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "everett|huron": [
+      "OR"
+    ],
+    "everett|indio": [
+      "OR"
+    ],
+    "everett|jackpot": [
+      "OR"
+    ],
+    "everett|kayenta": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "everett|kingman": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "everett|lake-havasu-city": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "everett|las-cruces": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "everett|las-vegas": [
+      "OR",
+      "CA"
+    ],
+    "everett|los-angeles": [
+      "OR"
+    ],
+    "everett|modesto": [
+      "OR"
+    ],
+    "everett|mojave": [
+      "OR"
+    ],
+    "everett|nogales": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "everett|oakland": [
+      "OR"
+    ],
+    "everett|oxnard": [
+      "OR"
+    ],
+    "everett|page": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "everett|phoenix": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "everett|pioche": [
+      "OR"
+    ],
+    "everett|primm": [
+      "OR",
+      "CA"
+    ],
+    "everett|raton": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "everett|redding": [
+      "OR"
+    ],
+    "everett|reno": [
+      "OR",
+      "CA"
+    ],
+    "everett|roswell": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "everett|sacramento": [
+      "OR"
+    ],
+    "everett|san-diego": [
+      "OR"
+    ],
+    "everett|san-francisco": [
+      "OR"
+    ],
+    "everett|san-jose": [
+      "OR"
+    ],
+    "everett|san-simon": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "everett|santa-cruz": [
+      "OR"
+    ],
+    "everett|santa-fe": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "everett|santa-maria": [
+      "OR"
+    ],
+    "everett|show-low": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "everett|sierra-vista": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "everett|socorro": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "everett|stockton": [
+      "OR"
+    ],
+    "everett|tonopah": [
+      "OR",
+      "CA"
+    ],
+    "everett|truckee": [
+      "OR",
+      "NV"
+    ],
+    "everett|tucson": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "everett|tucumcari": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "everett|ukiah": [
+      "OR"
+    ],
+    "everett|vancouver": [
+      "OR"
+    ],
+    "everett|winnemucca": [
+      "OR"
+    ],
+    "everett|winslow": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "everett|yuma": [
+      "OR",
+      "CA"
+    ],
+    "farmington|fresno": [
+      "AZ"
+    ],
+    "farmington|grand-coulee": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "farmington|hilt": [
+      "AZ",
+      "NV"
+    ],
+    "farmington|huron": [
+      "AZ"
+    ],
+    "farmington|indio": [
+      "AZ"
+    ],
+    "farmington|jackpot": [
+      "AZ"
+    ],
+    "farmington|kennewick": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "farmington|klamath-falls": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "farmington|lakeview": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "farmington|las-vegas": [
+      "AZ"
+    ],
+    "farmington|longview": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "farmington|los-angeles": [
+      "AZ"
+    ],
+    "farmington|medford": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "farmington|modesto": [
+      "AZ"
+    ],
+    "farmington|mojave": [
+      "AZ"
+    ],
+    "farmington|newport": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "farmington|oakland": [
+      "AZ"
+    ],
+    "farmington|olympia": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "farmington|omak": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "farmington|ontario": [
+      "AZ",
+      "NV"
+    ],
+    "farmington|oxnard": [
+      "AZ"
+    ],
+    "farmington|pendleton": [
+      "AZ",
+      "NV"
+    ],
+    "farmington|pioche": [
+      "AZ"
+    ],
+    "farmington|port-angeles": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "farmington|portland": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "farmington|primm": [
+      "AZ"
+    ],
+    "farmington|redding": [
+      "AZ",
+      "NV"
+    ],
+    "farmington|reno": [
+      "AZ"
+    ],
+    "farmington|sacramento": [
+      "AZ"
+    ],
+    "farmington|salem": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "farmington|san-diego": [
+      "AZ"
+    ],
+    "farmington|san-francisco": [
+      "AZ"
+    ],
+    "farmington|san-jose": [
+      "AZ"
+    ],
+    "farmington|santa-cruz": [
+      "AZ"
+    ],
+    "farmington|santa-maria": [
+      "AZ"
+    ],
+    "farmington|seattle": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "farmington|spokane": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "farmington|stockton": [
+      "AZ"
+    ],
+    "farmington|tacoma": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "farmington|the-dalles": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "farmington|tonopah": [
+      "AZ"
+    ],
+    "farmington|truckee": [
+      "AZ",
+      "NV"
+    ],
+    "farmington|ukiah": [
+      "AZ"
+    ],
+    "farmington|vancouver": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "farmington|wenatchee": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "farmington|winnemucca": [
+      "AZ"
+    ],
+    "farmington|yakima": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "flagstaff|grand-coulee": [
+      "NV",
+      "OR"
+    ],
+    "flagstaff|hilt": [
+      "NV"
+    ],
+    "flagstaff|kennewick": [
+      "NV",
+      "OR"
+    ],
+    "flagstaff|klamath-falls": [
+      "NV",
+      "CA"
+    ],
+    "flagstaff|lakeview": [
+      "NV",
+      "CA"
+    ],
+    "flagstaff|longview": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "flagstaff|medford": [
+      "NV",
+      "CA"
+    ],
+    "flagstaff|newport": [
+      "NV",
+      "CA"
+    ],
+    "flagstaff|olympia": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "flagstaff|omak": [
+      "NV",
+      "OR"
+    ],
+    "flagstaff|ontario": [
+      "NV"
+    ],
+    "flagstaff|pendleton": [
+      "NV"
+    ],
+    "flagstaff|port-angeles": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "flagstaff|portland": [
+      "NV",
+      "CA"
+    ],
+    "flagstaff|redding": [
+      "NV"
+    ],
+    "flagstaff|salem": [
+      "NV",
+      "CA"
+    ],
+    "flagstaff|seattle": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "flagstaff|spokane": [
+      "NV",
+      "OR"
+    ],
+    "flagstaff|tacoma": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "flagstaff|the-dalles": [
+      "NV",
+      "CA"
+    ],
+    "flagstaff|truckee": [
+      "NV"
+    ],
+    "flagstaff|vancouver": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "flagstaff|wenatchee": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "flagstaff|yakima": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "fresno|gallup": [
+      "AZ"
+    ],
+    "fresno|grand-coulee": [
+      "OR"
+    ],
+    "fresno|hobbs": [
+      "AZ"
+    ],
+    "fresno|kennewick": [
+      "OR"
+    ],
+    "fresno|lakeview": [
+      "NV"
+    ],
+    "fresno|las-cruces": [
+      "AZ"
+    ],
+    "fresno|longview": [
+      "OR"
+    ],
+    "fresno|olympia": [
+      "OR"
+    ],
+    "fresno|omak": [
+      "OR"
+    ],
+    "fresno|ontario": [
+      "NV"
+    ],
+    "fresno|pendleton": [
+      "NV"
+    ],
+    "fresno|port-angeles": [
+      "OR"
+    ],
+    "fresno|raton": [
+      "AZ"
+    ],
+    "fresno|roswell": [
+      "AZ"
+    ],
+    "fresno|santa-fe": [
+      "AZ"
+    ],
+    "fresno|seattle": [
+      "OR"
+    ],
+    "fresno|socorro": [
+      "AZ"
+    ],
+    "fresno|spokane": [
+      "OR"
+    ],
+    "fresno|tacoma": [
+      "OR"
+    ],
+    "fresno|tucumcari": [
+      "AZ"
+    ],
+    "fresno|vancouver": [
+      "OR"
+    ],
+    "fresno|wenatchee": [
+      "OR"
+    ],
+    "fresno|yakima": [
+      "OR"
+    ],
+    "gallup|grand-coulee": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "gallup|hilt": [
+      "AZ",
+      "NV"
+    ],
+    "gallup|huron": [
+      "AZ"
+    ],
+    "gallup|indio": [
+      "AZ"
+    ],
+    "gallup|jackpot": [
+      "AZ"
+    ],
+    "gallup|kennewick": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "gallup|klamath-falls": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "gallup|lakeview": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "gallup|las-vegas": [
+      "AZ"
+    ],
+    "gallup|longview": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "gallup|los-angeles": [
+      "AZ"
+    ],
+    "gallup|medford": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "gallup|modesto": [
+      "AZ"
+    ],
+    "gallup|mojave": [
+      "AZ"
+    ],
+    "gallup|newport": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "gallup|oakland": [
+      "AZ"
+    ],
+    "gallup|olympia": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "gallup|omak": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "gallup|ontario": [
+      "AZ",
+      "NV"
+    ],
+    "gallup|oxnard": [
+      "AZ"
+    ],
+    "gallup|pendleton": [
+      "AZ",
+      "NV"
+    ],
+    "gallup|pioche": [
+      "AZ"
+    ],
+    "gallup|port-angeles": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "gallup|portland": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "gallup|primm": [
+      "AZ"
+    ],
+    "gallup|redding": [
+      "AZ",
+      "NV"
+    ],
+    "gallup|reno": [
+      "AZ"
+    ],
+    "gallup|sacramento": [
+      "AZ"
+    ],
+    "gallup|salem": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "gallup|san-diego": [
+      "AZ"
+    ],
+    "gallup|san-francisco": [
+      "AZ"
+    ],
+    "gallup|san-jose": [
+      "AZ"
+    ],
+    "gallup|santa-cruz": [
+      "AZ"
+    ],
+    "gallup|santa-maria": [
+      "AZ"
+    ],
+    "gallup|seattle": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "gallup|spokane": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "gallup|stockton": [
+      "AZ"
+    ],
+    "gallup|tacoma": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "gallup|the-dalles": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "gallup|tonopah": [
+      "AZ"
+    ],
+    "gallup|truckee": [
+      "AZ",
+      "NV"
+    ],
+    "gallup|ukiah": [
+      "AZ"
+    ],
+    "gallup|vancouver": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "gallup|wenatchee": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "gallup|winnemucca": [
+      "AZ"
+    ],
+    "gallup|yakima": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "grand-canyon-village|grand-coulee": [
+      "NV",
+      "OR"
+    ],
+    "grand-canyon-village|hilt": [
+      "NV"
+    ],
+    "grand-canyon-village|kennewick": [
+      "NV",
+      "OR"
+    ],
+    "grand-canyon-village|klamath-falls": [
+      "NV",
+      "CA"
+    ],
+    "grand-canyon-village|lakeview": [
+      "NV",
+      "CA"
+    ],
+    "grand-canyon-village|longview": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "grand-canyon-village|medford": [
+      "NV",
+      "CA"
+    ],
+    "grand-canyon-village|newport": [
+      "NV",
+      "CA"
+    ],
+    "grand-canyon-village|olympia": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "grand-canyon-village|omak": [
+      "NV",
+      "OR"
+    ],
+    "grand-canyon-village|ontario": [
+      "NV"
+    ],
+    "grand-canyon-village|pendleton": [
+      "NV"
+    ],
+    "grand-canyon-village|port-angeles": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "grand-canyon-village|portland": [
+      "NV",
+      "CA"
+    ],
+    "grand-canyon-village|redding": [
+      "NV"
+    ],
+    "grand-canyon-village|salem": [
+      "NV",
+      "CA"
+    ],
+    "grand-canyon-village|seattle": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "grand-canyon-village|spokane": [
+      "NV",
+      "OR"
+    ],
+    "grand-canyon-village|tacoma": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "grand-canyon-village|the-dalles": [
+      "NV",
+      "CA"
+    ],
+    "grand-canyon-village|truckee": [
+      "NV"
+    ],
+    "grand-canyon-village|vancouver": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "grand-canyon-village|wenatchee": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "grand-canyon-village|yakima": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "grand-coulee|hilt": [
+      "OR"
+    ],
+    "grand-coulee|hobbs": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "grand-coulee|huron": [
+      "OR"
+    ],
+    "grand-coulee|indio": [
+      "OR",
+      "NV"
+    ],
+    "grand-coulee|jackpot": [
+      "OR"
+    ],
+    "grand-coulee|kayenta": [
+      "OR",
+      "NV"
+    ],
+    "grand-coulee|kingman": [
+      "OR",
+      "NV"
+    ],
+    "grand-coulee|lake-havasu-city": [
+      "OR",
+      "NV"
+    ],
+    "grand-coulee|las-cruces": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "grand-coulee|las-vegas": [
+      "OR"
+    ],
+    "grand-coulee|los-angeles": [
+      "OR"
+    ],
+    "grand-coulee|modesto": [
+      "OR"
+    ],
+    "grand-coulee|mojave": [
+      "OR",
+      "NV"
+    ],
+    "grand-coulee|nogales": [
+      "OR",
+      "NV"
+    ],
+    "grand-coulee|oakland": [
+      "OR"
+    ],
+    "grand-coulee|oxnard": [
+      "OR"
+    ],
+    "grand-coulee|page": [
+      "OR",
+      "NV"
+    ],
+    "grand-coulee|phoenix": [
+      "OR",
+      "NV"
+    ],
+    "grand-coulee|pioche": [
+      "OR"
+    ],
+    "grand-coulee|primm": [
+      "OR"
+    ],
+    "grand-coulee|raton": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "grand-coulee|redding": [
+      "OR"
+    ],
+    "grand-coulee|reno": [
+      "OR",
+      "CA"
+    ],
+    "grand-coulee|roswell": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "grand-coulee|sacramento": [
+      "OR"
+    ],
+    "grand-coulee|san-diego": [
+      "OR",
+      "NV"
+    ],
+    "grand-coulee|san-francisco": [
+      "OR"
+    ],
+    "grand-coulee|san-jose": [
+      "OR"
+    ],
+    "grand-coulee|san-simon": [
+      "OR",
+      "NV"
+    ],
+    "grand-coulee|santa-cruz": [
+      "OR"
+    ],
+    "grand-coulee|santa-fe": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "grand-coulee|santa-maria": [
+      "OR"
+    ],
+    "grand-coulee|show-low": [
+      "OR",
+      "NV"
+    ],
+    "grand-coulee|sierra-vista": [
+      "OR",
+      "NV"
+    ],
+    "grand-coulee|socorro": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "grand-coulee|stockton": [
+      "OR"
+    ],
+    "grand-coulee|tonopah": [
+      "OR"
+    ],
+    "grand-coulee|truckee": [
+      "OR",
+      "NV"
+    ],
+    "grand-coulee|tucson": [
+      "OR",
+      "NV"
+    ],
+    "grand-coulee|tucumcari": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "grand-coulee|ukiah": [
+      "OR"
+    ],
+    "grand-coulee|vancouver": [
+      "OR"
+    ],
+    "grand-coulee|winnemucca": [
+      "OR"
+    ],
+    "grand-coulee|winslow": [
+      "OR",
+      "NV"
+    ],
+    "grand-coulee|yuma": [
+      "OR",
+      "NV",
+      "CA"
+    ],
+    "hilt|hobbs": [
+      "NV",
+      "AZ"
+    ],
+    "hilt|jackpot": [
+      "OR"
+    ],
+    "hilt|kayenta": [
+      "NV"
+    ],
+    "hilt|kennewick": [
+      "OR"
+    ],
+    "hilt|kingman": [
+      "NV"
+    ],
+    "hilt|las-cruces": [
+      "NV",
+      "AZ"
+    ],
+    "hilt|longview": [
+      "OR"
+    ],
+    "hilt|nogales": [
+      "NV"
+    ],
+    "hilt|olympia": [
+      "OR"
+    ],
+    "hilt|omak": [
+      "OR"
+    ],
+    "hilt|page": [
+      "NV"
+    ],
+    "hilt|phoenix": [
+      "NV"
+    ],
+    "hilt|port-angeles": [
+      "OR"
+    ],
+    "hilt|raton": [
+      "NV",
+      "AZ"
+    ],
+    "hilt|roswell": [
+      "NV",
+      "AZ"
+    ],
+    "hilt|san-simon": [
+      "NV"
+    ],
+    "hilt|santa-fe": [
+      "NV",
+      "AZ"
+    ],
+    "hilt|seattle": [
+      "OR"
+    ],
+    "hilt|show-low": [
+      "NV"
+    ],
+    "hilt|sierra-vista": [
+      "NV"
+    ],
+    "hilt|socorro": [
+      "NV",
+      "AZ"
+    ],
+    "hilt|spokane": [
+      "OR"
+    ],
+    "hilt|tacoma": [
+      "OR"
+    ],
+    "hilt|truckee": [
+      "NV"
+    ],
+    "hilt|tucson": [
+      "NV"
+    ],
+    "hilt|tucumcari": [
+      "NV",
+      "AZ"
+    ],
+    "hilt|vancouver": [
+      "OR"
+    ],
+    "hilt|wenatchee": [
+      "OR"
+    ],
+    "hilt|winnemucca": [
+      "OR"
+    ],
+    "hilt|winslow": [
+      "NV"
+    ],
+    "hilt|yakima": [
+      "OR"
+    ],
+    "hobbs|huron": [
+      "AZ"
+    ],
+    "hobbs|indio": [
+      "AZ"
+    ],
+    "hobbs|jackpot": [
+      "AZ"
+    ],
+    "hobbs|kennewick": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "hobbs|klamath-falls": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "hobbs|lakeview": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "hobbs|las-vegas": [
+      "AZ"
+    ],
+    "hobbs|longview": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "hobbs|los-angeles": [
+      "AZ"
+    ],
+    "hobbs|medford": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "hobbs|modesto": [
+      "AZ"
+    ],
+    "hobbs|mojave": [
+      "AZ"
+    ],
+    "hobbs|newport": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "hobbs|oakland": [
+      "AZ"
+    ],
+    "hobbs|olympia": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "hobbs|omak": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "hobbs|ontario": [
+      "AZ",
+      "NV"
+    ],
+    "hobbs|oxnard": [
+      "AZ"
+    ],
+    "hobbs|pendleton": [
+      "AZ",
+      "NV"
+    ],
+    "hobbs|pioche": [
+      "AZ"
+    ],
+    "hobbs|port-angeles": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "hobbs|portland": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "hobbs|primm": [
+      "AZ"
+    ],
+    "hobbs|redding": [
+      "AZ"
+    ],
+    "hobbs|reno": [
+      "AZ"
+    ],
+    "hobbs|sacramento": [
+      "AZ"
+    ],
+    "hobbs|salem": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "hobbs|san-diego": [
+      "AZ"
+    ],
+    "hobbs|san-francisco": [
+      "AZ"
+    ],
+    "hobbs|san-jose": [
+      "AZ"
+    ],
+    "hobbs|santa-cruz": [
+      "AZ"
+    ],
+    "hobbs|santa-maria": [
+      "AZ"
+    ],
+    "hobbs|seattle": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "hobbs|spokane": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "hobbs|stockton": [
+      "AZ"
+    ],
+    "hobbs|tacoma": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "hobbs|the-dalles": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "hobbs|tonopah": [
+      "AZ"
+    ],
+    "hobbs|truckee": [
+      "AZ",
+      "NV"
+    ],
+    "hobbs|ukiah": [
+      "AZ"
+    ],
+    "hobbs|vancouver": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "hobbs|wenatchee": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "hobbs|winnemucca": [
+      "AZ"
+    ],
+    "hobbs|yakima": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "huron|kennewick": [
+      "OR"
+    ],
+    "huron|las-cruces": [
+      "AZ"
+    ],
+    "huron|longview": [
+      "OR"
+    ],
+    "huron|olympia": [
+      "OR"
+    ],
+    "huron|omak": [
+      "OR"
+    ],
+    "huron|port-angeles": [
+      "OR"
+    ],
+    "huron|raton": [
+      "AZ"
+    ],
+    "huron|roswell": [
+      "AZ"
+    ],
+    "huron|santa-fe": [
+      "AZ"
+    ],
+    "huron|seattle": [
+      "OR"
+    ],
+    "huron|socorro": [
+      "AZ"
+    ],
+    "huron|spokane": [
+      "OR"
+    ],
+    "huron|tacoma": [
+      "OR"
+    ],
+    "huron|tucumcari": [
+      "AZ"
+    ],
+    "huron|vancouver": [
+      "OR"
+    ],
+    "huron|wenatchee": [
+      "OR"
+    ],
+    "huron|yakima": [
+      "OR"
+    ],
+    "indio|kennewick": [
+      "NV",
+      "OR"
+    ],
+    "indio|lakeview": [
+      "NV"
+    ],
+    "indio|las-cruces": [
+      "AZ"
+    ],
+    "indio|longview": [
+      "OR"
+    ],
+    "indio|olympia": [
+      "OR"
+    ],
+    "indio|omak": [
+      "NV",
+      "OR"
+    ],
+    "indio|ontario": [
+      "NV"
+    ],
+    "indio|pendleton": [
+      "NV"
+    ],
+    "indio|port-angeles": [
+      "OR"
+    ],
+    "indio|raton": [
+      "AZ"
+    ],
+    "indio|roswell": [
+      "AZ"
+    ],
+    "indio|santa-fe": [
+      "AZ"
+    ],
+    "indio|seattle": [
+      "OR"
+    ],
+    "indio|socorro": [
+      "AZ"
+    ],
+    "indio|spokane": [
+      "NV",
+      "OR"
+    ],
+    "indio|tacoma": [
+      "OR"
+    ],
+    "indio|the-dalles": [
+      "NV"
+    ],
+    "indio|truckee": [
+      "NV"
+    ],
+    "indio|tucumcari": [
+      "AZ"
+    ],
+    "indio|vancouver": [
+      "OR"
+    ],
+    "indio|wenatchee": [
+      "NV",
+      "OR"
+    ],
+    "indio|yakima": [
+      "NV",
+      "OR"
+    ],
+    "jackpot|kennewick": [
+      "OR"
+    ],
+    "jackpot|las-cruces": [
+      "AZ"
+    ],
+    "jackpot|longview": [
+      "OR"
+    ],
+    "jackpot|olympia": [
+      "OR"
+    ],
+    "jackpot|omak": [
+      "OR"
+    ],
+    "jackpot|port-angeles": [
+      "OR"
+    ],
+    "jackpot|raton": [
+      "AZ"
+    ],
+    "jackpot|roswell": [
+      "AZ"
+    ],
+    "jackpot|santa-fe": [
+      "AZ"
+    ],
+    "jackpot|seattle": [
+      "OR"
+    ],
+    "jackpot|socorro": [
+      "AZ"
+    ],
+    "jackpot|spokane": [
+      "OR"
+    ],
+    "jackpot|tacoma": [
+      "OR"
+    ],
+    "jackpot|tucumcari": [
+      "AZ"
+    ],
+    "jackpot|vancouver": [
+      "OR"
+    ],
+    "jackpot|wenatchee": [
+      "OR"
+    ],
+    "jackpot|yakima": [
+      "OR"
+    ],
+    "jackpot|yuma": [
+      "CA"
+    ],
+    "kayenta|kennewick": [
+      "NV",
+      "OR"
+    ],
+    "kayenta|klamath-falls": [
+      "NV",
+      "CA"
+    ],
+    "kayenta|lakeview": [
+      "NV",
+      "CA"
+    ],
+    "kayenta|longview": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kayenta|medford": [
+      "NV",
+      "CA"
+    ],
+    "kayenta|newport": [
+      "NV",
+      "CA"
+    ],
+    "kayenta|olympia": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kayenta|omak": [
+      "NV",
+      "OR"
+    ],
+    "kayenta|ontario": [
+      "NV"
+    ],
+    "kayenta|pendleton": [
+      "NV"
+    ],
+    "kayenta|port-angeles": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kayenta|portland": [
+      "NV",
+      "CA"
+    ],
+    "kayenta|redding": [
+      "NV"
+    ],
+    "kayenta|salem": [
+      "NV",
+      "CA"
+    ],
+    "kayenta|seattle": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kayenta|spokane": [
+      "NV",
+      "OR"
+    ],
+    "kayenta|tacoma": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kayenta|the-dalles": [
+      "NV",
+      "CA"
+    ],
+    "kayenta|truckee": [
+      "NV"
+    ],
+    "kayenta|vancouver": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kayenta|wenatchee": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kayenta|yakima": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kennewick|kingman": [
+      "OR",
+      "NV"
+    ],
+    "kennewick|lake-havasu-city": [
+      "OR",
+      "NV"
+    ],
+    "kennewick|las-cruces": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "kennewick|las-vegas": [
+      "OR"
+    ],
+    "kennewick|longview": [
+      "OR"
+    ],
+    "kennewick|los-angeles": [
+      "OR"
+    ],
+    "kennewick|modesto": [
+      "OR"
+    ],
+    "kennewick|mojave": [
+      "OR",
+      "NV"
+    ],
+    "kennewick|nogales": [
+      "OR",
+      "NV"
+    ],
+    "kennewick|oakland": [
+      "OR"
+    ],
+    "kennewick|oxnard": [
+      "OR"
+    ],
+    "kennewick|page": [
+      "OR",
+      "NV"
+    ],
+    "kennewick|phoenix": [
+      "OR",
+      "NV"
+    ],
+    "kennewick|pioche": [
+      "OR"
+    ],
+    "kennewick|primm": [
+      "OR"
+    ],
+    "kennewick|raton": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "kennewick|redding": [
+      "OR"
+    ],
+    "kennewick|reno": [
+      "OR",
+      "CA"
+    ],
+    "kennewick|roswell": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "kennewick|sacramento": [
+      "OR"
+    ],
+    "kennewick|san-diego": [
+      "OR",
+      "NV"
+    ],
+    "kennewick|san-francisco": [
+      "OR"
+    ],
+    "kennewick|san-jose": [
+      "OR"
+    ],
+    "kennewick|san-simon": [
+      "OR",
+      "NV"
+    ],
+    "kennewick|santa-cruz": [
+      "OR"
+    ],
+    "kennewick|santa-fe": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "kennewick|santa-maria": [
+      "OR"
+    ],
+    "kennewick|show-low": [
+      "OR",
+      "NV"
+    ],
+    "kennewick|sierra-vista": [
+      "OR",
+      "NV"
+    ],
+    "kennewick|socorro": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "kennewick|stockton": [
+      "OR"
+    ],
+    "kennewick|tonopah": [
+      "OR"
+    ],
+    "kennewick|truckee": [
+      "OR",
+      "NV"
+    ],
+    "kennewick|tucson": [
+      "OR",
+      "NV"
+    ],
+    "kennewick|tucumcari": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "kennewick|ukiah": [
+      "OR"
+    ],
+    "kennewick|vancouver": [
+      "OR"
+    ],
+    "kennewick|winnemucca": [
+      "OR"
+    ],
+    "kennewick|winslow": [
+      "OR",
+      "NV"
+    ],
+    "kennewick|yuma": [
+      "OR",
+      "NV",
+      "CA"
+    ],
+    "kingman|klamath-falls": [
+      "NV",
+      "CA"
+    ],
+    "kingman|lakeview": [
+      "NV",
+      "CA"
+    ],
+    "kingman|longview": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kingman|medford": [
+      "NV",
+      "CA"
+    ],
+    "kingman|newport": [
+      "NV",
+      "CA"
+    ],
+    "kingman|olympia": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kingman|omak": [
+      "NV",
+      "OR"
+    ],
+    "kingman|ontario": [
+      "NV"
+    ],
+    "kingman|pendleton": [
+      "NV"
+    ],
+    "kingman|port-angeles": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kingman|portland": [
+      "NV",
+      "CA"
+    ],
+    "kingman|redding": [
+      "NV"
+    ],
+    "kingman|salem": [
+      "NV",
+      "CA"
+    ],
+    "kingman|seattle": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kingman|spokane": [
+      "NV",
+      "OR"
+    ],
+    "kingman|tacoma": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kingman|the-dalles": [
+      "NV",
+      "CA"
+    ],
+    "kingman|truckee": [
+      "NV"
+    ],
+    "kingman|vancouver": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kingman|wenatchee": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kingman|yakima": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "kingman|yuma": [
+      "CA"
+    ],
+    "klamath-falls|lake-havasu-city": [
+      "CA"
+    ],
+    "klamath-falls|las-cruces": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "klamath-falls|las-vegas": [
+      "CA"
+    ],
+    "klamath-falls|nogales": [
+      "CA",
+      "NV"
+    ],
+    "klamath-falls|page": [
+      "CA",
+      "NV"
+    ],
+    "klamath-falls|phoenix": [
+      "CA",
+      "NV"
+    ],
+    "klamath-falls|pioche": [
+      "CA"
+    ],
+    "klamath-falls|primm": [
+      "CA"
+    ],
+    "klamath-falls|raton": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "klamath-falls|reno": [
+      "CA"
+    ],
+    "klamath-falls|roswell": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "klamath-falls|san-simon": [
+      "CA",
+      "NV"
+    ],
+    "klamath-falls|santa-fe": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "klamath-falls|show-low": [
+      "CA",
+      "NV"
+    ],
+    "klamath-falls|sierra-vista": [
+      "CA",
+      "NV"
+    ],
+    "klamath-falls|socorro": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "klamath-falls|tonopah": [
+      "CA"
+    ],
+    "klamath-falls|truckee": [
+      "NV"
+    ],
+    "klamath-falls|tucson": [
+      "CA",
+      "NV"
+    ],
+    "klamath-falls|tucumcari": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "klamath-falls|winslow": [
+      "CA",
+      "NV"
+    ],
+    "klamath-falls|yuma": [
+      "CA"
+    ],
+    "lake-havasu-city|lakeview": [
+      "NV",
+      "CA"
+    ],
+    "lake-havasu-city|longview": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "lake-havasu-city|medford": [
+      "CA"
+    ],
+    "lake-havasu-city|newport": [
+      "CA"
+    ],
+    "lake-havasu-city|olympia": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "lake-havasu-city|omak": [
+      "NV",
+      "OR"
+    ],
+    "lake-havasu-city|ontario": [
+      "NV"
+    ],
+    "lake-havasu-city|pendleton": [
+      "NV"
+    ],
+    "lake-havasu-city|port-angeles": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "lake-havasu-city|portland": [
+      "NV",
+      "CA"
+    ],
+    "lake-havasu-city|salem": [
+      "NV",
+      "CA"
+    ],
+    "lake-havasu-city|seattle": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "lake-havasu-city|spokane": [
+      "NV",
+      "OR"
+    ],
+    "lake-havasu-city|tacoma": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "lake-havasu-city|the-dalles": [
+      "NV",
+      "CA"
+    ],
+    "lake-havasu-city|truckee": [
+      "NV"
+    ],
+    "lake-havasu-city|vancouver": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "lake-havasu-city|wenatchee": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "lake-havasu-city|yakima": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "lake-havasu-city|yuma": [
+      "CA"
+    ],
+    "lakeview|las-cruces": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "lakeview|las-vegas": [
+      "CA"
+    ],
+    "lakeview|los-angeles": [
+      "NV"
+    ],
+    "lakeview|mojave": [
+      "NV"
+    ],
+    "lakeview|nogales": [
+      "CA",
+      "NV"
+    ],
+    "lakeview|oxnard": [
+      "NV"
+    ],
+    "lakeview|page": [
+      "CA",
+      "NV"
+    ],
+    "lakeview|phoenix": [
+      "CA",
+      "NV"
+    ],
+    "lakeview|pioche": [
+      "CA"
+    ],
+    "lakeview|primm": [
+      "CA"
+    ],
+    "lakeview|raton": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "lakeview|reno": [
+      "CA"
+    ],
+    "lakeview|roswell": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "lakeview|san-diego": [
+      "NV"
+    ],
+    "lakeview|san-simon": [
+      "CA",
+      "NV"
+    ],
+    "lakeview|santa-fe": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "lakeview|show-low": [
+      "CA",
+      "NV"
+    ],
+    "lakeview|sierra-vista": [
+      "CA",
+      "NV"
+    ],
+    "lakeview|socorro": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "lakeview|tonopah": [
+      "CA"
+    ],
+    "lakeview|truckee": [
+      "NV"
+    ],
+    "lakeview|tucson": [
+      "CA",
+      "NV"
+    ],
+    "lakeview|tucumcari": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "lakeview|winslow": [
+      "CA",
+      "NV"
+    ],
+    "lakeview|yuma": [
+      "CA",
+      "NV"
+    ],
+    "las-cruces|las-vegas": [
+      "AZ"
+    ],
+    "las-cruces|longview": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "las-cruces|los-angeles": [
+      "AZ"
+    ],
+    "las-cruces|medford": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "las-cruces|modesto": [
+      "AZ"
+    ],
+    "las-cruces|mojave": [
+      "AZ"
+    ],
+    "las-cruces|newport": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "las-cruces|oakland": [
+      "AZ"
+    ],
+    "las-cruces|olympia": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "las-cruces|omak": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "las-cruces|ontario": [
+      "AZ",
+      "NV"
+    ],
+    "las-cruces|oxnard": [
+      "AZ"
+    ],
+    "las-cruces|pendleton": [
+      "AZ",
+      "NV"
+    ],
+    "las-cruces|pioche": [
+      "AZ"
+    ],
+    "las-cruces|port-angeles": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "las-cruces|portland": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "las-cruces|primm": [
+      "AZ"
+    ],
+    "las-cruces|redding": [
+      "AZ"
+    ],
+    "las-cruces|reno": [
+      "AZ"
+    ],
+    "las-cruces|sacramento": [
+      "AZ"
+    ],
+    "las-cruces|salem": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "las-cruces|san-diego": [
+      "AZ"
+    ],
+    "las-cruces|san-francisco": [
+      "AZ"
+    ],
+    "las-cruces|san-jose": [
+      "AZ"
+    ],
+    "las-cruces|santa-cruz": [
+      "AZ"
+    ],
+    "las-cruces|santa-maria": [
+      "AZ"
+    ],
+    "las-cruces|seattle": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "las-cruces|spokane": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "las-cruces|stockton": [
+      "AZ"
+    ],
+    "las-cruces|tacoma": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "las-cruces|the-dalles": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "las-cruces|tonopah": [
+      "AZ"
+    ],
+    "las-cruces|truckee": [
+      "AZ",
+      "NV"
+    ],
+    "las-cruces|ukiah": [
+      "AZ"
+    ],
+    "las-cruces|vancouver": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "las-cruces|wenatchee": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "las-cruces|winnemucca": [
+      "AZ"
+    ],
+    "las-cruces|yakima": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "las-vegas|longview": [
+      "CA",
+      "OR"
+    ],
+    "las-vegas|medford": [
+      "CA"
+    ],
+    "las-vegas|newport": [
+      "CA"
+    ],
+    "las-vegas|olympia": [
+      "CA",
+      "OR"
+    ],
+    "las-vegas|omak": [
+      "OR"
+    ],
+    "las-vegas|port-angeles": [
+      "CA",
+      "OR"
+    ],
+    "las-vegas|portland": [
+      "CA"
+    ],
+    "las-vegas|raton": [
+      "AZ"
+    ],
+    "las-vegas|roswell": [
+      "AZ"
+    ],
+    "las-vegas|salem": [
+      "CA"
+    ],
+    "las-vegas|santa-fe": [
+      "AZ"
+    ],
+    "las-vegas|seattle": [
+      "CA",
+      "OR"
+    ],
+    "las-vegas|socorro": [
+      "AZ"
+    ],
+    "las-vegas|spokane": [
+      "OR"
+    ],
+    "las-vegas|tacoma": [
+      "CA",
+      "OR"
+    ],
+    "las-vegas|the-dalles": [
+      "CA"
+    ],
+    "las-vegas|tucumcari": [
+      "AZ"
+    ],
+    "las-vegas|vancouver": [
+      "CA",
+      "OR"
+    ],
+    "las-vegas|wenatchee": [
+      "CA",
+      "OR"
+    ],
+    "las-vegas|yakima": [
+      "CA",
+      "OR"
+    ],
+    "las-vegas|yuma": [
+      "CA"
+    ],
+    "longview|los-angeles": [
+      "OR"
+    ],
+    "longview|modesto": [
+      "OR"
+    ],
+    "longview|mojave": [
+      "OR"
+    ],
+    "longview|nogales": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "longview|oakland": [
+      "OR"
+    ],
+    "longview|oxnard": [
+      "OR"
+    ],
+    "longview|page": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "longview|phoenix": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "longview|pioche": [
+      "OR"
+    ],
+    "longview|primm": [
+      "OR",
+      "CA"
+    ],
+    "longview|raton": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "longview|redding": [
+      "OR"
+    ],
+    "longview|reno": [
+      "OR",
+      "CA"
+    ],
+    "longview|roswell": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "longview|sacramento": [
+      "OR"
+    ],
+    "longview|san-diego": [
+      "OR"
+    ],
+    "longview|san-francisco": [
+      "OR"
+    ],
+    "longview|san-jose": [
+      "OR"
+    ],
+    "longview|san-simon": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "longview|santa-cruz": [
+      "OR"
+    ],
+    "longview|santa-fe": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "longview|santa-maria": [
+      "OR"
+    ],
+    "longview|show-low": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "longview|sierra-vista": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "longview|socorro": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "longview|stockton": [
+      "OR"
+    ],
+    "longview|tonopah": [
+      "OR",
+      "CA"
+    ],
+    "longview|truckee": [
+      "OR",
+      "NV"
+    ],
+    "longview|tucson": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "longview|tucumcari": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "longview|ukiah": [
+      "OR"
+    ],
+    "longview|vancouver": [
+      "OR"
+    ],
+    "longview|winnemucca": [
+      "OR"
+    ],
+    "longview|winslow": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "longview|yuma": [
+      "OR",
+      "CA"
+    ],
+    "los-angeles|olympia": [
+      "OR"
+    ],
+    "los-angeles|omak": [
+      "OR"
+    ],
+    "los-angeles|ontario": [
+      "NV"
+    ],
+    "los-angeles|pendleton": [
+      "NV"
+    ],
+    "los-angeles|port-angeles": [
+      "OR"
+    ],
+    "los-angeles|raton": [
+      "AZ"
+    ],
+    "los-angeles|roswell": [
+      "AZ"
+    ],
+    "los-angeles|santa-fe": [
+      "AZ"
+    ],
+    "los-angeles|seattle": [
+      "OR"
+    ],
+    "los-angeles|socorro": [
+      "AZ"
+    ],
+    "los-angeles|spokane": [
+      "NV",
+      "OR"
+    ],
+    "los-angeles|tacoma": [
+      "OR"
+    ],
+    "los-angeles|tucumcari": [
+      "AZ"
+    ],
+    "los-angeles|vancouver": [
+      "OR"
+    ],
+    "los-angeles|wenatchee": [
+      "OR"
+    ],
+    "los-angeles|yakima": [
+      "OR"
+    ],
+    "medford|nogales": [
+      "CA",
+      "NV"
+    ],
+    "medford|page": [
+      "CA",
+      "NV"
+    ],
+    "medford|phoenix": [
+      "CA",
+      "NV"
+    ],
+    "medford|pioche": [
+      "CA"
+    ],
+    "medford|primm": [
+      "CA"
+    ],
+    "medford|raton": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "medford|reno": [
+      "CA"
+    ],
+    "medford|roswell": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "medford|san-simon": [
+      "CA",
+      "NV"
+    ],
+    "medford|santa-fe": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "medford|show-low": [
+      "CA",
+      "NV"
+    ],
+    "medford|sierra-vista": [
+      "CA",
+      "NV"
+    ],
+    "medford|socorro": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "medford|tonopah": [
+      "CA"
+    ],
+    "medford|truckee": [
+      "NV"
+    ],
+    "medford|tucson": [
+      "CA",
+      "NV"
+    ],
+    "medford|tucumcari": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "medford|winslow": [
+      "CA",
+      "NV"
+    ],
+    "medford|yuma": [
+      "CA"
+    ],
+    "modesto|olympia": [
+      "OR"
+    ],
+    "modesto|omak": [
+      "OR"
+    ],
+    "modesto|port-angeles": [
+      "OR"
+    ],
+    "modesto|raton": [
+      "AZ"
+    ],
+    "modesto|roswell": [
+      "AZ"
+    ],
+    "modesto|santa-fe": [
+      "AZ"
+    ],
+    "modesto|seattle": [
+      "OR"
+    ],
+    "modesto|socorro": [
+      "AZ"
+    ],
+    "modesto|spokane": [
+      "OR"
+    ],
+    "modesto|tacoma": [
+      "OR"
+    ],
+    "modesto|tucumcari": [
+      "AZ"
+    ],
+    "modesto|vancouver": [
+      "OR"
+    ],
+    "modesto|wenatchee": [
+      "OR"
+    ],
+    "modesto|yakima": [
+      "OR"
+    ],
+    "mojave|olympia": [
+      "OR"
+    ],
+    "mojave|omak": [
+      "OR"
+    ],
+    "mojave|ontario": [
+      "NV"
+    ],
+    "mojave|pendleton": [
+      "NV"
+    ],
+    "mojave|port-angeles": [
+      "OR"
+    ],
+    "mojave|raton": [
+      "AZ"
+    ],
+    "mojave|roswell": [
+      "AZ"
+    ],
+    "mojave|santa-fe": [
+      "AZ"
+    ],
+    "mojave|seattle": [
+      "OR"
+    ],
+    "mojave|socorro": [
+      "AZ"
+    ],
+    "mojave|spokane": [
+      "NV",
+      "OR"
+    ],
+    "mojave|tacoma": [
+      "OR"
+    ],
+    "mojave|truckee": [
+      "NV"
+    ],
+    "mojave|tucumcari": [
+      "AZ"
+    ],
+    "mojave|vancouver": [
+      "OR"
+    ],
+    "mojave|wenatchee": [
+      "OR"
+    ],
+    "mojave|yakima": [
+      "OR"
+    ],
+    "newport|nogales": [
+      "CA",
+      "NV"
+    ],
+    "newport|page": [
+      "CA",
+      "NV"
+    ],
+    "newport|pendleton": [
+      "WA"
+    ],
+    "newport|phoenix": [
+      "CA",
+      "NV"
+    ],
+    "newport|primm": [
+      "CA"
+    ],
+    "newport|raton": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "newport|reno": [
+      "CA"
+    ],
+    "newport|roswell": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "newport|san-simon": [
+      "CA",
+      "NV"
+    ],
+    "newport|santa-fe": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "newport|show-low": [
+      "CA",
+      "NV"
+    ],
+    "newport|sierra-vista": [
+      "CA",
+      "NV"
+    ],
+    "newport|socorro": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "newport|tonopah": [
+      "CA"
+    ],
+    "newport|truckee": [
+      "NV"
+    ],
+    "newport|tucson": [
+      "CA",
+      "NV"
+    ],
+    "newport|tucumcari": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "newport|winslow": [
+      "CA",
+      "NV"
+    ],
+    "newport|yuma": [
+      "CA"
+    ],
+    "nogales|olympia": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "nogales|omak": [
+      "NV",
+      "OR"
+    ],
+    "nogales|ontario": [
+      "NV"
+    ],
+    "nogales|pendleton": [
+      "NV"
+    ],
+    "nogales|port-angeles": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "nogales|portland": [
+      "NV",
+      "CA"
+    ],
+    "nogales|salem": [
+      "NV",
+      "CA"
+    ],
+    "nogales|seattle": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "nogales|spokane": [
+      "NV",
+      "OR"
+    ],
+    "nogales|tacoma": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "nogales|the-dalles": [
+      "NV",
+      "CA"
+    ],
+    "nogales|truckee": [
+      "NV"
+    ],
+    "nogales|vancouver": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "nogales|wenatchee": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "nogales|yakima": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "oakland|olympia": [
+      "OR"
+    ],
+    "oakland|omak": [
+      "OR"
+    ],
+    "oakland|port-angeles": [
+      "OR"
+    ],
+    "oakland|raton": [
+      "AZ"
+    ],
+    "oakland|roswell": [
+      "AZ"
+    ],
+    "oakland|santa-fe": [
+      "AZ"
+    ],
+    "oakland|seattle": [
+      "OR"
+    ],
+    "oakland|socorro": [
+      "AZ"
+    ],
+    "oakland|spokane": [
+      "OR"
+    ],
+    "oakland|tacoma": [
+      "OR"
+    ],
+    "oakland|tucumcari": [
+      "AZ"
+    ],
+    "oakland|vancouver": [
+      "OR"
+    ],
+    "oakland|wenatchee": [
+      "OR"
+    ],
+    "oakland|yakima": [
+      "OR"
+    ],
+    "olympia|oxnard": [
+      "OR"
+    ],
+    "olympia|page": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "olympia|phoenix": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "olympia|pioche": [
+      "OR"
+    ],
+    "olympia|primm": [
+      "OR",
+      "CA"
+    ],
+    "olympia|raton": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "olympia|redding": [
+      "OR"
+    ],
+    "olympia|reno": [
+      "OR",
+      "CA"
+    ],
+    "olympia|roswell": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "olympia|sacramento": [
+      "OR"
+    ],
+    "olympia|san-diego": [
+      "OR"
+    ],
+    "olympia|san-francisco": [
+      "OR"
+    ],
+    "olympia|san-jose": [
+      "OR"
+    ],
+    "olympia|san-simon": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "olympia|santa-cruz": [
+      "OR"
+    ],
+    "olympia|santa-fe": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "olympia|santa-maria": [
+      "OR"
+    ],
+    "olympia|show-low": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "olympia|sierra-vista": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "olympia|socorro": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "olympia|stockton": [
+      "OR"
+    ],
+    "olympia|tonopah": [
+      "OR",
+      "CA"
+    ],
+    "olympia|truckee": [
+      "OR",
+      "NV"
+    ],
+    "olympia|tucson": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "olympia|tucumcari": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "olympia|ukiah": [
+      "OR"
+    ],
+    "olympia|vancouver": [
+      "OR"
+    ],
+    "olympia|winnemucca": [
+      "OR"
+    ],
+    "olympia|winslow": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "olympia|yuma": [
+      "OR",
+      "CA"
+    ],
+    "omak|oxnard": [
+      "OR"
+    ],
+    "omak|page": [
+      "OR",
+      "NV"
+    ],
+    "omak|phoenix": [
+      "OR",
+      "NV"
+    ],
+    "omak|pioche": [
+      "OR"
+    ],
+    "omak|primm": [
+      "OR"
+    ],
+    "omak|raton": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "omak|redding": [
+      "OR"
+    ],
+    "omak|reno": [
+      "OR",
+      "CA"
+    ],
+    "omak|roswell": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "omak|sacramento": [
+      "OR"
+    ],
+    "omak|san-diego": [
+      "OR"
+    ],
+    "omak|san-francisco": [
+      "OR"
+    ],
+    "omak|san-jose": [
+      "OR"
+    ],
+    "omak|san-simon": [
+      "OR",
+      "NV"
+    ],
+    "omak|santa-cruz": [
+      "OR"
+    ],
+    "omak|santa-fe": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "omak|santa-maria": [
+      "OR"
+    ],
+    "omak|show-low": [
+      "OR",
+      "NV"
+    ],
+    "omak|sierra-vista": [
+      "OR",
+      "NV"
+    ],
+    "omak|socorro": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "omak|stockton": [
+      "OR"
+    ],
+    "omak|tonopah": [
+      "OR"
+    ],
+    "omak|truckee": [
+      "OR",
+      "NV"
+    ],
+    "omak|tucson": [
+      "OR",
+      "NV"
+    ],
+    "omak|tucumcari": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "omak|ukiah": [
+      "OR"
+    ],
+    "omak|vancouver": [
+      "OR"
+    ],
+    "omak|winnemucca": [
+      "OR"
+    ],
+    "omak|winslow": [
+      "OR",
+      "NV"
+    ],
+    "omak|yuma": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "ontario|oxnard": [
+      "NV"
+    ],
+    "ontario|page": [
+      "NV"
+    ],
+    "ontario|phoenix": [
+      "NV"
+    ],
+    "ontario|portland": [
+      "WA"
+    ],
+    "ontario|raton": [
+      "NV",
+      "AZ"
+    ],
+    "ontario|reno": [
+      "CA"
+    ],
+    "ontario|roswell": [
+      "NV",
+      "AZ"
+    ],
+    "ontario|san-diego": [
+      "NV"
+    ],
+    "ontario|san-simon": [
+      "NV"
+    ],
+    "ontario|santa-fe": [
+      "NV",
+      "AZ"
+    ],
+    "ontario|show-low": [
+      "NV"
+    ],
+    "ontario|sierra-vista": [
+      "NV"
+    ],
+    "ontario|socorro": [
+      "NV",
+      "AZ"
+    ],
+    "ontario|the-dalles": [
+      "WA"
+    ],
+    "ontario|truckee": [
+      "NV"
+    ],
+    "ontario|tucson": [
+      "NV"
+    ],
+    "ontario|tucumcari": [
+      "NV",
+      "AZ"
+    ],
+    "ontario|winslow": [
+      "NV"
+    ],
+    "ontario|yuma": [
+      "NV",
+      "CA"
+    ],
+    "oxnard|pendleton": [
+      "NV"
+    ],
+    "oxnard|port-angeles": [
+      "OR"
+    ],
+    "oxnard|raton": [
+      "AZ"
+    ],
+    "oxnard|roswell": [
+      "AZ"
+    ],
+    "oxnard|santa-fe": [
+      "AZ"
+    ],
+    "oxnard|seattle": [
+      "OR"
+    ],
+    "oxnard|socorro": [
+      "AZ"
+    ],
+    "oxnard|spokane": [
+      "OR"
+    ],
+    "oxnard|tacoma": [
+      "OR"
+    ],
+    "oxnard|tucumcari": [
+      "AZ"
+    ],
+    "oxnard|vancouver": [
+      "OR"
+    ],
+    "oxnard|wenatchee": [
+      "OR"
+    ],
+    "oxnard|yakima": [
+      "OR"
+    ],
+    "page|pendleton": [
+      "NV"
+    ],
+    "page|port-angeles": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "page|portland": [
+      "NV",
+      "CA"
+    ],
+    "page|redding": [
+      "NV"
+    ],
+    "page|salem": [
+      "NV",
+      "CA"
+    ],
+    "page|seattle": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "page|spokane": [
+      "NV",
+      "OR"
+    ],
+    "page|tacoma": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "page|the-dalles": [
+      "NV",
+      "CA"
+    ],
+    "page|truckee": [
+      "NV"
+    ],
+    "page|vancouver": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "page|wenatchee": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "page|yakima": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "pendleton|phoenix": [
+      "NV"
+    ],
+    "pendleton|portland": [
+      "WA"
+    ],
+    "pendleton|raton": [
+      "NV",
+      "AZ"
+    ],
+    "pendleton|reno": [
+      "CA"
+    ],
+    "pendleton|roswell": [
+      "NV",
+      "AZ"
+    ],
+    "pendleton|salem": [
+      "WA"
+    ],
+    "pendleton|san-diego": [
+      "NV"
+    ],
+    "pendleton|san-simon": [
+      "NV"
+    ],
+    "pendleton|santa-fe": [
+      "NV",
+      "AZ"
+    ],
+    "pendleton|show-low": [
+      "NV"
+    ],
+    "pendleton|sierra-vista": [
+      "NV"
+    ],
+    "pendleton|socorro": [
+      "NV",
+      "AZ"
+    ],
+    "pendleton|the-dalles": [
+      "WA"
+    ],
+    "pendleton|truckee": [
+      "NV"
+    ],
+    "pendleton|tucson": [
+      "NV"
+    ],
+    "pendleton|tucumcari": [
+      "NV",
+      "AZ"
+    ],
+    "pendleton|winslow": [
+      "NV"
+    ],
+    "pendleton|yuma": [
+      "NV",
+      "CA"
+    ],
+    "phoenix|port-angeles": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "phoenix|portland": [
+      "NV",
+      "CA"
+    ],
+    "phoenix|salem": [
+      "NV",
+      "CA"
+    ],
+    "phoenix|seattle": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "phoenix|spokane": [
+      "NV",
+      "OR"
+    ],
+    "phoenix|tacoma": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "phoenix|the-dalles": [
+      "NV",
+      "CA"
+    ],
+    "phoenix|truckee": [
+      "NV"
+    ],
+    "phoenix|vancouver": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "phoenix|wenatchee": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "phoenix|yakima": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "pioche|port-angeles": [
+      "OR"
+    ],
+    "pioche|raton": [
+      "AZ"
+    ],
+    "pioche|roswell": [
+      "AZ"
+    ],
+    "pioche|santa-fe": [
+      "AZ"
+    ],
+    "pioche|seattle": [
+      "OR"
+    ],
+    "pioche|socorro": [
+      "AZ"
+    ],
+    "pioche|spokane": [
+      "OR"
+    ],
+    "pioche|tacoma": [
+      "OR"
+    ],
+    "pioche|tucumcari": [
+      "AZ"
+    ],
+    "pioche|vancouver": [
+      "OR"
+    ],
+    "pioche|wenatchee": [
+      "OR"
+    ],
+    "pioche|yakima": [
+      "OR"
+    ],
+    "pioche|yuma": [
+      "CA"
+    ],
+    "port-angeles|primm": [
+      "OR",
+      "CA"
+    ],
+    "port-angeles|raton": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "port-angeles|redding": [
+      "OR"
+    ],
+    "port-angeles|reno": [
+      "OR",
+      "CA"
+    ],
+    "port-angeles|roswell": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "port-angeles|sacramento": [
+      "OR"
+    ],
+    "port-angeles|san-diego": [
+      "OR"
+    ],
+    "port-angeles|san-francisco": [
+      "OR"
+    ],
+    "port-angeles|san-jose": [
+      "OR"
+    ],
+    "port-angeles|san-simon": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "port-angeles|santa-cruz": [
+      "OR"
+    ],
+    "port-angeles|santa-fe": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "port-angeles|santa-maria": [
+      "OR"
+    ],
+    "port-angeles|show-low": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "port-angeles|sierra-vista": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "port-angeles|socorro": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "port-angeles|stockton": [
+      "OR"
+    ],
+    "port-angeles|tonopah": [
+      "OR",
+      "CA"
+    ],
+    "port-angeles|truckee": [
+      "OR",
+      "NV"
+    ],
+    "port-angeles|tucson": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "port-angeles|tucumcari": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "port-angeles|ukiah": [
+      "OR"
+    ],
+    "port-angeles|vancouver": [
+      "OR"
+    ],
+    "port-angeles|winnemucca": [
+      "OR"
+    ],
+    "port-angeles|winslow": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "port-angeles|yuma": [
+      "OR",
+      "CA"
+    ],
+    "portland|primm": [
+      "CA"
+    ],
+    "portland|raton": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "portland|reno": [
+      "CA"
+    ],
+    "portland|roswell": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "portland|san-simon": [
+      "CA",
+      "NV"
+    ],
+    "portland|santa-fe": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "portland|show-low": [
+      "CA",
+      "NV"
+    ],
+    "portland|sierra-vista": [
+      "CA",
+      "NV"
+    ],
+    "portland|socorro": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "portland|tonopah": [
+      "CA"
+    ],
+    "portland|truckee": [
+      "NV"
+    ],
+    "portland|tucson": [
+      "CA",
+      "NV"
+    ],
+    "portland|tucumcari": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "portland|winslow": [
+      "CA",
+      "NV"
+    ],
+    "portland|yuma": [
+      "CA"
+    ],
+    "primm|raton": [
+      "AZ"
+    ],
+    "primm|roswell": [
+      "AZ"
+    ],
+    "primm|salem": [
+      "CA"
+    ],
+    "primm|santa-fe": [
+      "AZ"
+    ],
+    "primm|seattle": [
+      "CA",
+      "OR"
+    ],
+    "primm|socorro": [
+      "AZ"
+    ],
+    "primm|spokane": [
+      "OR"
+    ],
+    "primm|tacoma": [
+      "CA",
+      "OR"
+    ],
+    "primm|the-dalles": [
+      "CA"
+    ],
+    "primm|tucumcari": [
+      "AZ"
+    ],
+    "primm|vancouver": [
+      "CA",
+      "OR"
+    ],
+    "primm|wenatchee": [
+      "CA",
+      "OR"
+    ],
+    "primm|yakima": [
+      "CA",
+      "OR"
+    ],
+    "primm|yuma": [
+      "CA"
+    ],
+    "raton|redding": [
+      "AZ",
+      "NV"
+    ],
+    "raton|reno": [
+      "AZ"
+    ],
+    "raton|sacramento": [
+      "AZ"
+    ],
+    "raton|salem": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "raton|san-diego": [
+      "AZ"
+    ],
+    "raton|san-francisco": [
+      "AZ"
+    ],
+    "raton|san-jose": [
+      "AZ"
+    ],
+    "raton|santa-cruz": [
+      "AZ"
+    ],
+    "raton|santa-maria": [
+      "AZ"
+    ],
+    "raton|seattle": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "raton|spokane": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "raton|stockton": [
+      "AZ"
+    ],
+    "raton|tacoma": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "raton|the-dalles": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "raton|tonopah": [
+      "AZ"
+    ],
+    "raton|truckee": [
+      "AZ",
+      "NV"
+    ],
+    "raton|ukiah": [
+      "AZ"
+    ],
+    "raton|vancouver": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "raton|wenatchee": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "raton|winnemucca": [
+      "AZ"
+    ],
+    "raton|yakima": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "redding|roswell": [
+      "NV",
+      "AZ"
+    ],
+    "redding|santa-fe": [
+      "NV",
+      "AZ"
+    ],
+    "redding|seattle": [
+      "OR"
+    ],
+    "redding|show-low": [
+      "NV"
+    ],
+    "redding|socorro": [
+      "NV",
+      "AZ"
+    ],
+    "redding|spokane": [
+      "OR"
+    ],
+    "redding|tacoma": [
+      "OR"
+    ],
+    "redding|tucumcari": [
+      "NV",
+      "AZ"
+    ],
+    "redding|vancouver": [
+      "OR"
+    ],
+    "redding|wenatchee": [
+      "OR"
+    ],
+    "redding|winslow": [
+      "NV"
+    ],
+    "redding|yakima": [
+      "OR"
+    ],
+    "reno|roswell": [
+      "AZ"
+    ],
+    "reno|salem": [
+      "CA"
+    ],
+    "reno|santa-fe": [
+      "AZ"
+    ],
+    "reno|seattle": [
+      "CA",
+      "OR"
+    ],
+    "reno|socorro": [
+      "AZ"
+    ],
+    "reno|spokane": [
+      "CA",
+      "OR"
+    ],
+    "reno|tacoma": [
+      "CA",
+      "OR"
+    ],
+    "reno|the-dalles": [
+      "CA"
+    ],
+    "reno|tucumcari": [
+      "AZ"
+    ],
+    "reno|vancouver": [
+      "CA",
+      "OR"
+    ],
+    "reno|wenatchee": [
+      "CA",
+      "OR"
+    ],
+    "reno|yakima": [
+      "CA",
+      "OR"
+    ],
+    "reno|yuma": [
+      "CA"
+    ],
+    "roswell|sacramento": [
+      "AZ"
+    ],
+    "roswell|salem": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "roswell|san-diego": [
+      "AZ"
+    ],
+    "roswell|san-francisco": [
+      "AZ"
+    ],
+    "roswell|san-jose": [
+      "AZ"
+    ],
+    "roswell|santa-cruz": [
+      "AZ"
+    ],
+    "roswell|santa-maria": [
+      "AZ"
+    ],
+    "roswell|seattle": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "roswell|spokane": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "roswell|stockton": [
+      "AZ"
+    ],
+    "roswell|tacoma": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "roswell|the-dalles": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "roswell|tonopah": [
+      "AZ"
+    ],
+    "roswell|truckee": [
+      "AZ",
+      "NV"
+    ],
+    "roswell|ukiah": [
+      "AZ"
+    ],
+    "roswell|vancouver": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "roswell|wenatchee": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "roswell|winnemucca": [
+      "AZ"
+    ],
+    "roswell|yakima": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "sacramento|santa-fe": [
+      "AZ"
+    ],
+    "sacramento|seattle": [
+      "OR"
+    ],
+    "sacramento|socorro": [
+      "AZ"
+    ],
+    "sacramento|spokane": [
+      "OR"
+    ],
+    "sacramento|tacoma": [
+      "OR"
+    ],
+    "sacramento|tucumcari": [
+      "AZ"
+    ],
+    "sacramento|vancouver": [
+      "OR"
+    ],
+    "sacramento|wenatchee": [
+      "OR"
+    ],
+    "sacramento|yakima": [
+      "OR"
+    ],
+    "salem|san-simon": [
+      "CA",
+      "NV"
+    ],
+    "salem|santa-fe": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "salem|show-low": [
+      "CA",
+      "NV"
+    ],
+    "salem|sierra-vista": [
+      "CA",
+      "NV"
+    ],
+    "salem|socorro": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "salem|tonopah": [
+      "CA"
+    ],
+    "salem|truckee": [
+      "NV"
+    ],
+    "salem|tucson": [
+      "CA",
+      "NV"
+    ],
+    "salem|tucumcari": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "salem|winslow": [
+      "CA",
+      "NV"
+    ],
+    "salem|yuma": [
+      "CA"
+    ],
+    "san-diego|santa-fe": [
+      "AZ"
+    ],
+    "san-diego|seattle": [
+      "OR"
+    ],
+    "san-diego|socorro": [
+      "AZ"
+    ],
+    "san-diego|spokane": [
+      "NV",
+      "OR"
+    ],
+    "san-diego|tacoma": [
+      "OR"
+    ],
+    "san-diego|truckee": [
+      "NV"
+    ],
+    "san-diego|tucumcari": [
+      "AZ"
+    ],
+    "san-diego|vancouver": [
+      "OR"
+    ],
+    "san-diego|wenatchee": [
+      "OR"
+    ],
+    "san-diego|yakima": [
+      "OR"
+    ],
+    "san-francisco|santa-fe": [
+      "AZ"
+    ],
+    "san-francisco|seattle": [
+      "OR"
+    ],
+    "san-francisco|socorro": [
+      "AZ"
+    ],
+    "san-francisco|spokane": [
+      "OR"
+    ],
+    "san-francisco|tacoma": [
+      "OR"
+    ],
+    "san-francisco|tucumcari": [
+      "AZ"
+    ],
+    "san-francisco|vancouver": [
+      "OR"
+    ],
+    "san-francisco|wenatchee": [
+      "OR"
+    ],
+    "san-francisco|yakima": [
+      "OR"
+    ],
+    "san-jose|santa-fe": [
+      "AZ"
+    ],
+    "san-jose|seattle": [
+      "OR"
+    ],
+    "san-jose|socorro": [
+      "AZ"
+    ],
+    "san-jose|spokane": [
+      "OR"
+    ],
+    "san-jose|tacoma": [
+      "OR"
+    ],
+    "san-jose|tucumcari": [
+      "AZ"
+    ],
+    "san-jose|vancouver": [
+      "OR"
+    ],
+    "san-jose|wenatchee": [
+      "OR"
+    ],
+    "san-jose|yakima": [
+      "OR"
+    ],
+    "san-simon|seattle": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "san-simon|spokane": [
+      "NV",
+      "OR"
+    ],
+    "san-simon|tacoma": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "san-simon|the-dalles": [
+      "NV",
+      "CA"
+    ],
+    "san-simon|truckee": [
+      "NV"
+    ],
+    "san-simon|vancouver": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "san-simon|wenatchee": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "san-simon|yakima": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "santa-cruz|santa-fe": [
+      "AZ"
+    ],
+    "santa-cruz|seattle": [
+      "OR"
+    ],
+    "santa-cruz|socorro": [
+      "AZ"
+    ],
+    "santa-cruz|spokane": [
+      "OR"
+    ],
+    "santa-cruz|tacoma": [
+      "OR"
+    ],
+    "santa-cruz|tucumcari": [
+      "AZ"
+    ],
+    "santa-cruz|vancouver": [
+      "OR"
+    ],
+    "santa-cruz|wenatchee": [
+      "OR"
+    ],
+    "santa-cruz|yakima": [
+      "OR"
+    ],
+    "santa-fe|santa-maria": [
+      "AZ"
+    ],
+    "santa-fe|seattle": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "santa-fe|spokane": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "santa-fe|stockton": [
+      "AZ"
+    ],
+    "santa-fe|tacoma": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "santa-fe|the-dalles": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "santa-fe|tonopah": [
+      "AZ"
+    ],
+    "santa-fe|truckee": [
+      "AZ",
+      "NV"
+    ],
+    "santa-fe|ukiah": [
+      "AZ"
+    ],
+    "santa-fe|vancouver": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "santa-fe|wenatchee": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "santa-fe|winnemucca": [
+      "AZ"
+    ],
+    "santa-fe|yakima": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "santa-maria|seattle": [
+      "OR"
+    ],
+    "santa-maria|socorro": [
+      "AZ"
+    ],
+    "santa-maria|spokane": [
+      "OR"
+    ],
+    "santa-maria|tacoma": [
+      "OR"
+    ],
+    "santa-maria|tucumcari": [
+      "AZ"
+    ],
+    "santa-maria|vancouver": [
+      "OR"
+    ],
+    "santa-maria|wenatchee": [
+      "OR"
+    ],
+    "santa-maria|yakima": [
+      "OR"
+    ],
+    "seattle|show-low": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "seattle|sierra-vista": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "seattle|socorro": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "seattle|stockton": [
+      "OR"
+    ],
+    "seattle|tonopah": [
+      "OR",
+      "CA"
+    ],
+    "seattle|truckee": [
+      "OR",
+      "NV"
+    ],
+    "seattle|tucson": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "seattle|tucumcari": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "seattle|ukiah": [
+      "OR"
+    ],
+    "seattle|vancouver": [
+      "OR"
+    ],
+    "seattle|winnemucca": [
+      "OR"
+    ],
+    "seattle|winslow": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "seattle|yuma": [
+      "OR",
+      "CA"
+    ],
+    "show-low|spokane": [
+      "NV",
+      "OR"
+    ],
+    "show-low|tacoma": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "show-low|the-dalles": [
+      "NV",
+      "CA"
+    ],
+    "show-low|truckee": [
+      "NV"
+    ],
+    "show-low|vancouver": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "show-low|wenatchee": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "show-low|yakima": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "sierra-vista|spokane": [
+      "NV",
+      "OR"
+    ],
+    "sierra-vista|tacoma": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "sierra-vista|the-dalles": [
+      "NV",
+      "CA"
+    ],
+    "sierra-vista|truckee": [
+      "NV"
+    ],
+    "sierra-vista|vancouver": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "sierra-vista|wenatchee": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "sierra-vista|yakima": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "socorro|spokane": [
+      "AZ",
+      "NV",
+      "OR"
+    ],
+    "socorro|stockton": [
+      "AZ"
+    ],
+    "socorro|tacoma": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "socorro|the-dalles": [
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "socorro|tonopah": [
+      "AZ"
+    ],
+    "socorro|truckee": [
+      "AZ",
+      "NV"
+    ],
+    "socorro|ukiah": [
+      "AZ"
+    ],
+    "socorro|vancouver": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "socorro|wenatchee": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "socorro|winnemucca": [
+      "AZ"
+    ],
+    "socorro|yakima": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "spokane|stockton": [
+      "OR"
+    ],
+    "spokane|tonopah": [
+      "OR"
+    ],
+    "spokane|truckee": [
+      "OR",
+      "NV"
+    ],
+    "spokane|tucson": [
+      "OR",
+      "NV"
+    ],
+    "spokane|tucumcari": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "spokane|ukiah": [
+      "OR"
+    ],
+    "spokane|vancouver": [
+      "OR"
+    ],
+    "spokane|winnemucca": [
+      "OR"
+    ],
+    "spokane|winslow": [
+      "OR",
+      "NV"
+    ],
+    "spokane|yuma": [
+      "OR",
+      "NV",
+      "CA"
+    ],
+    "stockton|tacoma": [
+      "OR"
+    ],
+    "stockton|tucumcari": [
+      "AZ"
+    ],
+    "stockton|vancouver": [
+      "OR"
+    ],
+    "stockton|wenatchee": [
+      "OR"
+    ],
+    "stockton|yakima": [
+      "OR"
+    ],
+    "tacoma|tonopah": [
+      "OR",
+      "CA"
+    ],
+    "tacoma|truckee": [
+      "OR",
+      "NV"
+    ],
+    "tacoma|tucson": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "tacoma|tucumcari": [
+      "OR",
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "tacoma|ukiah": [
+      "OR"
+    ],
+    "tacoma|vancouver": [
+      "OR"
+    ],
+    "tacoma|winnemucca": [
+      "OR"
+    ],
+    "tacoma|winslow": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "tacoma|yuma": [
+      "OR",
+      "CA"
+    ],
+    "the-dalles|tonopah": [
+      "CA"
+    ],
+    "the-dalles|truckee": [
+      "NV"
+    ],
+    "the-dalles|tucson": [
+      "CA",
+      "NV"
+    ],
+    "the-dalles|tucumcari": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "the-dalles|winslow": [
+      "CA",
+      "NV"
+    ],
+    "the-dalles|yuma": [
+      "CA",
+      "NV"
+    ],
+    "tonopah|tucumcari": [
+      "AZ"
+    ],
+    "tonopah|vancouver": [
+      "CA",
+      "OR"
+    ],
+    "tonopah|wenatchee": [
+      "CA",
+      "OR"
+    ],
+    "tonopah|yakima": [
+      "CA",
+      "OR"
+    ],
+    "tonopah|yuma": [
+      "CA"
+    ],
+    "truckee|tucson": [
+      "NV"
+    ],
+    "truckee|tucumcari": [
+      "NV",
+      "AZ"
+    ],
+    "truckee|vancouver": [
+      "NV",
+      "OR"
+    ],
+    "truckee|wenatchee": [
+      "NV",
+      "OR"
+    ],
+    "truckee|winslow": [
+      "NV"
+    ],
+    "truckee|yakima": [
+      "NV",
+      "OR"
+    ],
+    "truckee|yuma": [
+      "NV"
+    ],
+    "tucson|vancouver": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "tucson|wenatchee": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "tucson|yakima": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "tucumcari|ukiah": [
+      "AZ"
+    ],
+    "tucumcari|vancouver": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "tucumcari|wenatchee": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "tucumcari|winnemucca": [
+      "AZ"
+    ],
+    "tucumcari|yakima": [
+      "AZ",
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "ukiah|vancouver": [
+      "OR"
+    ],
+    "ukiah|wenatchee": [
+      "OR"
+    ],
+    "ukiah|yakima": [
+      "OR"
+    ],
+    "vancouver|wenatchee": [
+      "OR"
+    ],
+    "vancouver|winnemucca": [
+      "OR"
+    ],
+    "vancouver|winslow": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "vancouver|yakima": [
+      "OR"
+    ],
+    "vancouver|yuma": [
+      "OR",
+      "CA"
+    ],
+    "wenatchee|winnemucca": [
+      "OR"
+    ],
+    "wenatchee|winslow": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "wenatchee|yuma": [
+      "OR",
+      "CA",
+      "NV"
+    ],
+    "winnemucca|yakima": [
+      "OR"
+    ],
+    "winnemucca|yuma": [
+      "CA"
+    ],
+    "winslow|yakima": [
+      "NV",
+      "CA",
+      "OR"
+    ],
+    "yakima|yuma": [
+      "OR",
+      "CA",
+      "NV"
+    ]
+  }
+}

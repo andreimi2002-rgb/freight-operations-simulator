@@ -9,6 +9,7 @@ import trucksFile from '../../data/ats/trucks.json';
 import photosFile from '../../data/photos.json';
 import categoriesFile from '../../data/categories.json';
 import catalogPhotosFile from '../../data/catalog-photos.json';
+import routeStatesFile from '../../data/ats/route-states.json';
 
 export const scope = scopeFile;
 export const cities = citiesFile.cities;
@@ -22,6 +23,8 @@ export const photos = photosFile.photos;
 // Our trailer categories (for the icons) and the illustrative photos of trucks, trailers and cargo.
 export const categories = categoriesFile.categories;
 export const catalogPhotos = catalogPhotosFile;
+// States crossed between two cities (for the map DLCs a job needs).
+export const routeStates = routeStatesFile;
 
 export const cityById = new Map(cities.map((c) => [c.id, c]));
 export const stateByCode = new Map(scope.states.map((s) => [s.code, s]));

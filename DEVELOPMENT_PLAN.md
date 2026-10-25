@@ -349,7 +349,7 @@ apoi PR `v2-freight-world` → `main` cu deploy preview; după aprobarea proprie
 
 **Stare:** Etapele 0–4 sunt gata și live, plus Arizona (harta de start completă: 50 de orașe), paginile de companie (Etapa 6, prima parte) și harta în stil ATS. Faza A și fazele B1, B2, B3, B5 sunt gata și live (2.0.0-alpha.14). Etapele 5–8 de mai sus rămân direcția; fazele de mai jos sunt ordinea concretă de lucru.
 
-**Ordinea următoare (revizuită 2026-10-25):** Faza B6 (imagini, gata în 2.0.0-alpha.15) → **Faza S** (New Mexico, Oregon, Washington; următoarea) → Faza C / D. Faza B4 (domeniu, statistici, feedback) se amână pentru mai târziu.
+**Ordinea următoare (revizuită 2026-10-25):** Faza B6 (imagini, gata în 2.0.0-alpha.15) → Faza S (New Mexico, Oregon, Washington, gata în 2.0.0-alpha.16) → Faza C / D. Faza B4 (domeniu, statistici, feedback) se amână pentru mai târziu.
 
 Principii pentru toate fazele: nimic inventat (regulă reală, estimare marcată sau „simulat Freight World”); fără imagini, sunete sau logo-uri din joc; totul trece prin PR cu deploy preview și aprobarea proprietarului.
 
@@ -376,7 +376,7 @@ Principii pentru toate fazele: nimic inventat (regulă reală, estimare marcată
    - un **instrument de selecție** (candidați + alegere + motiv, ca la orașe): *mutat în Faza H (decizia proprietarului, 2026-10-25); în B6 alege Claude, cu motivul scris, iar proprietarul verifică în deploy preview;*
    - o întrebare în plus către SCS: dacă putem folosi imagini din joc sau de pe wiki (acum nu: sunt ale SCS).
 
-### Faza S — Primul val de state noi: New Mexico, Oregon, Washington (următoarea)
+### Faza S — Primul val de state noi: New Mexico, Oregon, Washington *(gata în 2.0.0-alpha.16)*
 Decizia proprietarului (2026-10-25): statele noi vin mai devreme decât în planul inițial, **toate trei într-un singur PR** (economia de publicări).
 1. **Datele:** câte o intrare în `data/ats/scope.json` pentru fiecare stat, apoi colectorul (`scripts/ats/collect.mjs`) rulat din nou: orașe, companii, depozite, mărfuri oferite și acceptate, facilități. Contradicțiile de pe wiki merg în `data/ats/issues.json`.
 2. **Poze de oraș** din Wikimedia Commons, alese ca până acum (`data/photos.json`, cu motivul), cu instrumentul de selecție din B6.
@@ -492,3 +492,4 @@ Acordul SCS, formă legală (PFA / SRL), termeni și politică de confidențiali
 | 2026-10-22 | **Domeniul** va fi **freightworld.app** (ales de proprietar, cumpărat mai târziu; adresa netlify.app va redirecționa). Faza B1: pagini de marfă, remorcă și camion (474 de pagini în total), cu relațiile calculate din datele depozitelor. |
 | 2026-10-25 | **Plan revizuit:** ordinea devine B6 (imagini) → **Faza S** (New Mexico, Oregon, Washington, toate trei într-un singur PR) → C / D; statele noi vin mai devreme decât „după ce aplicația e mai completă”. **Faza B4** (domeniul freightworld.app, statistici, feedback) se amână pentru mai târziu. **Economia de publicări:** deploy-urile Netlify costă credite, deci PR-uri mai mari și mai puține, push doar când lucrul e gata de revizie, iar schimbările doar de plan intră în PR-ul următor de cod. |
 | 2026-10-25 | **Faza B6: imagini.** Poze reale de pe Wikimedia Commons, marcate „ilustrativ” (cu autor, licență și link), pentru camioane, remorci și mărfurile generice; utilajele de marcă și mărfurile ambigue nu primesc poză, ci pictograma categoriei (11 categorii de remorcă, desenate de noi, definite ca date în `data/categories.json`). Candidații vin din `scripts/photos/catalog-candidates.mjs`; Claude a ales fiecare poză uitându-se la ea (delegat de proprietar, fără pagină de selecție), cu motivul scris în `data/catalog-photos.json`, inclusiv pentru refuzuri. Generația camionului verificată vizual: unde nu se poate confirma (Cascadia 2024, VNR Electric, 57X) rămâne pictograma. Miniaturile Commons doar la lățimi standard (500 / 1280 px). Santa Maria primește o poză aeriană; San Simon rămâne fără (s-au găsit doar valea și râul). |
+| 2026-10-25 | **Faza S: New Mexico, Oregon, Washington** într-un singur PR: 44 de orașe noi (94 în total), 76 de companii, 631 de depozite. **DLC-urile de hartă:** o cursă cere DLC-ul fiecărui stat prin care trece ruta, nu doar al capetelor (Los Angeles → Seattle cere Oregon și Washington); statele traversate se calculează pe drumurile hărții noastre (Natural Earth) și sunt marcate „calculat” (drumurile din joc pot diferi). „My DLCs” are o secțiune pentru DLC-urile de hartă; fără alegere salvată se arată toate cursele. Poze pentru 43 din 44 de orașe (Wenatchee fără). |

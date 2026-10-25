@@ -3,10 +3,321 @@
     "description": "Photo candidates for the city pages, for the owner to choose from. Not shown on the site; the chosen photo goes to data/photos.json.",
     "source": "Wikimedia Commons (files), Wikidata (P18, P948, P373), English Wikipedia (lead image)",
     "rules": "free licence with author (or public domain), photo not map/flag/collage, at least 1200 px wide",
-    "retrieved": "2026-10-22",
+    "retrieved": "2026-10-25",
     "generator": "scripts/photos/candidates.mjs"
   },
   "cities": {
+    "aberdeen": {
+      "name": "Aberdeen",
+      "state": "WA",
+      "wikidata": "Q233808",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Wikivoyage_page_banner_lady_washington.jpg/1920px-Wikivoyage_page_banner_lady_washington.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Wikivoyage_page_banner_lady_washington.jpg",
+          "file": "Wikivoyage page banner lady washington.jpg",
+          "author": "Lumpytrout",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/f/fd/US_12_Aberdeen_downtown.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:US_12_Aberdeen_downtown.jpg",
+          "file": "US 12 Aberdeen downtown.jpg",
+          "author": "Kéiryn",
+          "licence": "CC BY 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Aberdeen%2C_WA_-_Downtown_%26_Chehalis_River_from_Rt_101.jpg/1920px-Aberdeen%2C_WA_-_Downtown_%26_Chehalis_River_from_Rt_101.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Aberdeen,_WA_-_Downtown_%26_Chehalis_River_from_Rt_101.jpg",
+          "file": "Aberdeen, WA - Downtown & Chehalis River from Rt 101.jpg",
+          "author": "Joe Mabel",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1063,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": []
+    },
+    "alamogordo": {
+      "name": "Alamogordo",
+      "state": "NM",
+      "wikidata": "Q467617",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Alamogordo_banner_Toy_train_depot.jpg/1920px-Alamogordo_banner_Toy_train_depot.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Alamogordo_banner_Toy_train_depot.jpg",
+          "file": "Alamogordo banner Toy train depot.jpg",
+          "author": "AllenS",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/View_from_Thunder_Rd.JPG/1920px-View_from_Thunder_Rd.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:View_from_Thunder_Rd.JPG",
+          "file": "View from Thunder Rd.JPG",
+          "author": "Foreverstocks",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 954,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Jim_Griggs_Sports_Complex.JPG/1920px-Jim_Griggs_Sports_Complex.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:Jim_Griggs_Sports_Complex.JPG",
+          "file": "Jim Griggs Sports Complex.JPG",
+          "author": "Foreverstocks",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/82-_Long_Trip_Alone_-_panoramio.jpg/1920px-82-_Long_Trip_Alone_-_panoramio.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:82-_Long_Trip_Alone_-_panoramio.jpg",
+          "file": "82- Long Trip Alone - panoramio.jpg",
+          "author": "AudreyIski",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Alamogordo, New Mexico\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": []
+    },
+    "albuquerque": {
+      "name": "Albuquerque",
+      "state": "NM",
+      "wikidata": "Q34804",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Albuquerque_balloon_fiesta_wikivoyage_banner.jpg/1920px-Albuquerque_balloon_fiesta_wikivoyage_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Albuquerque_balloon_fiesta_wikivoyage_banner.jpg",
+          "file": "Albuquerque balloon fiesta wikivoyage banner.jpg",
+          "author": "Danae Hurst from Albuquerque, United States",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Albuquerque%2C_New_Mexico_skyline.jpg/1920px-Albuquerque%2C_New_Mexico_skyline.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Albuquerque,_New_Mexico_skyline.jpg",
+          "file": "Albuquerque, New Mexico skyline.jpg",
+          "author": "Quintin Soloviev",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 900,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/2013%2C_Albuquerque%2C_View_S%2C_Rio_Grande_River_-_panoramio.jpg/1920px-2013%2C_Albuquerque%2C_View_S%2C_Rio_Grande_River_-_panoramio.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2013,_Albuquerque,_View_S,_Rio_Grande_River_-_panoramio.jpg",
+          "file": "2013, Albuquerque, View S, Rio Grande River - panoramio.jpg",
+          "author": "Chris English",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Albuquerque\"",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/35mm_AlbuquerqueEvening_%2824317637610%29.png/1920px-35mm_AlbuquerqueEvening_%2824317637610%29.png",
+          "page": "https://commons.wikimedia.org/wiki/File:35mm_AlbuquerqueEvening_(24317637610).png",
+          "file": "35mm AlbuquerqueEvening (24317637610).png",
+          "author": "BrandonStephenson",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Commons category \"Albuquerque\"",
+          "width": 1600,
+          "height": 835,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Albuquerque Infobox Photo.png",
+          "reason": "too small"
+        },
+        {
+          "file": "ABQCityCouncil2013.png",
+          "reason": "too small"
+        },
+        {
+          "file": "Alamosa 12.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "artesia": {
+      "name": "Artesia",
+      "state": "NM",
+      "wikidata": "Q707902",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Artesia_New_Mexico_City_Hall.jpg/1920px-Artesia_New_Mexico_City_Hall.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Artesia_New_Mexico_City_Hall.jpg",
+          "file": "Artesia New Mexico City Hall.jpg",
+          "author": "AllenS",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Denkmal_in_Artesia%2C_New_Mexico.jpg/1920px-Denkmal_in_Artesia%2C_New_Mexico.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Denkmal_in_Artesia,_New_Mexico.jpg",
+          "file": "Denkmal in Artesia, New Mexico.jpg",
+          "author": "GerritR",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Artesia, New Mexico\"",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Desert_sunset_-_panoramio.jpg/1920px-Desert_sunset_-_panoramio.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Desert_sunset_-_panoramio.jpg",
+          "file": "Desert sunset - panoramio.jpg",
+          "author": "wil.jones",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Artesia, New Mexico\"",
+          "width": 1600,
+          "height": 1201,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Fountain%2C_Artesia%2C_NM_05.25.09_%283566186418%29.jpg/1920px-Fountain%2C_Artesia%2C_NM_05.25.09_%283566186418%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Fountain,_Artesia,_NM_05.25.09_(3566186418).jpg",
+          "file": "Fountain, Artesia, NM 05.25.09 (3566186418).jpg",
+          "author": "timlewisnm",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Commons category \"Artesia, New Mexico\"",
+          "width": 1600,
+          "height": 2133,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Artesia Municipal Airport-NM-19OCT1997-USGS.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Carlsbad vs artesia 2.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Greetings from Artesia, New Mexico - Large Letter Postcard (5751941401).jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "NMMap-doton-Artesia.PNG",
+          "reason": "too small"
+        },
+        {
+          "file": "The land of sunshine, a handbook of the resources, products, industries and climate of New Mexico (1904) (14782162162).jpg",
+          "reason": "licence No restrictions"
+        },
+        {
+          "file": "The land of sunshine; a handbook of the resources, products, industries and climate of New Mexico (1904) (14593875149).jpg",
+          "reason": "licence No restrictions"
+        }
+      ]
+    },
+    "astoria": {
+      "name": "Astoria",
+      "state": "OR",
+      "wikidata": "Q490724",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Astoria_banner_Megler_Bridge.jpg/1920px-Astoria_banner_Megler_Bridge.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Astoria_banner_Megler_Bridge.jpg",
+          "file": "Astoria banner Megler Bridge.jpg",
+          "author": "Farwestern Photo by Gregg M. Erickson, cropped by Jjtkk",
+          "licence": "CC BY 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Astoria%2C_OR_from_the_Astoria_Column.jpg/1920px-Astoria%2C_OR_from_the_Astoria_Column.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Astoria,_OR_from_the_Astoria_Column.jpg",
+          "file": "Astoria, OR from the Astoria Column.jpg",
+          "author": "aselfcallednowhere",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Astoria_in_the_Fall_by_Erika_Stange_%2851797657818%29.jpg/1920px-Astoria_in_the_Fall_by_Erika_Stange_%2851797657818%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Astoria_in_the_Fall_by_Erika_Stange_(51797657818).jpg",
+          "file": "Astoria in the Fall by Erika Stange (51797657818).jpg",
+          "author": "Oregon Department of Transportation",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Commons category \"Astoria, Oregon\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Astoria%2C_Columbia_River_Maritime_Museum%2C_Columbia_River_-_DPLA_-_0c2dd9d91ac920ccd32c5528ed954513.jpg/1920px-Astoria%2C_Columbia_River_Maritime_Museum%2C_Columbia_River_-_DPLA_-_0c2dd9d91ac920ccd32c5528ed954513.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Astoria,_Columbia_River_Maritime_Museum,_Columbia_River_-_DPLA_-_0c2dd9d91ac920ccd32c5528ed954513.jpg",
+          "file": "Astoria, Columbia River Maritime Museum, Columbia River - DPLA - 0c2dd9d91ac920ccd32c5528ed954513.jpg",
+          "author": "Gary Halvorson, Oregon State Archives",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Commons category \"Astoria, Oregon\"",
+          "width": 1600,
+          "height": 1071,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Astoria Oregon.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
     "bakersfield": {
       "name": "Bakersfield",
       "state": "CA",
@@ -22,7 +333,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/BakersfieldSkyline.jpg/1920px-BakersfieldSkyline.jpg",
@@ -34,7 +345,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1061,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/2009-0726-CA-Bakersfield-FoxTheater_%28cropped%29.jpg/1920px-2009-0726-CA-Bakersfield-FoxTheater_%28cropped%29.jpg",
@@ -46,7 +357,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 1212,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/1/10/DoloresHuertaReneeGoodProtestBakersfieldCalifornia.jpg",
@@ -58,7 +369,7 @@
           "from": "Commons category \"Bakersfield, California\"",
           "width": 1600,
           "height": 1198,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": []
@@ -78,7 +389,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/f/f1/City_View_of_Barstow%2C_California_from_Barstow_Road_%282013-12-08%29.jpg",
@@ -90,7 +401,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1199,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Desert_landscape_in_Barstow%2C_California%2C_2009.jpg/1920px-Desert_landscape_in_Barstow%2C_California%2C_2009.jpg",
@@ -102,7 +413,7 @@
           "from": "Commons category \"Barstow, California\"",
           "width": 1600,
           "height": 569,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Barstow1.jpg/1920px-Barstow1.jpg",
@@ -114,7 +425,7 @@
           "from": "Commons category \"Barstow, California\"",
           "width": 1600,
           "height": 2125,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -123,6 +434,139 @@
           "reason": "too small"
         }
       ]
+    },
+    "bellingham": {
+      "name": "Bellingham",
+      "state": "WA",
+      "wikidata": "Q430267",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Bellingham_Banner.jpg/1920px-Bellingham_Banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Bellingham_Banner.jpg",
+          "file": "Bellingham Banner.jpg",
+          "author": "Robert Ashworth from Bellingham, WA., USA",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 228,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Aerial_View_of_Bellingham%2C_Washington.jpg/1920px-Aerial_View_of_Bellingham%2C_Washington.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Aerial_View_of_Bellingham,_Washington.jpg",
+          "file": "Aerial View of Bellingham, Washington.jpg",
+          "author": "Nick Kelly / Faithlife Corporation",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Bellingham%2C_Washington_%28cropped%29.jpg/1920px-Bellingham%2C_Washington_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Bellingham,_Washington_(cropped).jpg",
+          "file": "Bellingham, Washington (cropped).jpg",
+          "author": "Quintin Soloviev",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 960,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/%243.19_a_gallon_%2817835305030%29.jpg/1920px-%243.19_a_gallon_%2817835305030%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:$3.19_a_gallon_(17835305030).jpg",
+          "file": "$3.19 a gallon (17835305030).jpg",
+          "author": "Robert Ashworth from Bellingham, WA., USA",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Commons category \"Bellingham, Washington\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "\"Iron Chink\" at work in Pacific American Fisheries cannery, 1905 (MOHAI 7030).jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "05 Bel 002 crop.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "05 Bel 002.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "2018 PFLAG Valentine Dance poster (38914166815).jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Aerial view of Bellingham looking south, ca 1912 (WASTATE 1649).jpeg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "bend": {
+      "name": "Bend",
+      "state": "OR",
+      "wikidata": "Q671288",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Bend_banner_Deschutes_River%2C_Drake_Park.jpg/1920px-Bend_banner_Deschutes_River%2C_Drake_Park.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Bend_banner_Deschutes_River,_Drake_Park.jpg",
+          "file": "Bend banner Deschutes River, Drake Park.jpg",
+          "author": "Another Believer , cropped by Jjtkk",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/BendORPanoramic.jpg/1920px-BendORPanoramic.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:BendORPanoramic.jpg",
+          "file": "BendORPanoramic.jpg",
+          "author": "Cacophony",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 424,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/20210803_03_Bend%2C_Oregon.jpg/1920px-20210803_03_Bend%2C_Oregon.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:20210803_03_Bend,_Oregon.jpg",
+          "file": "20210803 03 Bend, Oregon.jpg",
+          "author": "David Wilson",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/2026_09_18_Deschutes_River_Bend%2C_Oregon.jpg/1920px-2026_09_18_Deschutes_River_Bend%2C_Oregon.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2026_09_18_Deschutes_River_Bend,_Oregon.jpg",
+          "file": "2026 09 18 Deschutes River Bend, Oregon.jpg",
+          "author": "Everwest",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Commons category \"Bend, Oregon\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": []
     },
     "blythe": {
       "name": "Blythe",
@@ -139,7 +583,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Aqueduct_and_Colorado_River_-_panoramio.jpg",
@@ -151,7 +595,7 @@
           "from": "Commons category \"Blythe, California\"",
           "width": 1600,
           "height": 1078,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Arizona_and_California_State_Line%2C_the_Colorado_River%2C_2012_-_panoramio.jpg/1920px-Arizona_and_California_State_Line%2C_the_Colorado_River%2C_2012_-_panoramio.jpg",
@@ -163,7 +607,7 @@
           "from": "Commons category \"Blythe, California\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/a/a4/AT_%26_Sta_Fe_California_Southern_Railroad_-_Ripley_Branch.jpg",
@@ -175,7 +619,7 @@
           "from": "Commons category \"Blythe, California\"",
           "width": 1600,
           "height": 1356,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -186,6 +630,55 @@
         {
           "file": "Aerial Blythe 0001.JPG",
           "reason": "too small"
+        }
+      ]
+    },
+    "burns": {
+      "name": "Burns",
+      "state": "OR",
+      "wikidata": "Q6178257",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/BroadwayBurnsOR.jpg/1920px-BroadwayBurnsOR.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:BroadwayBurnsOR.jpg",
+          "file": "BroadwayBurnsOR.jpg",
+          "author": "Cacophony",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 799,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/BLM_Firefighters%2C_Moonhill_RX%2C_Burns%2C_Oregon_%2814178725594%29.jpg/1920px-BLM_Firefighters%2C_Moonhill_RX%2C_Burns%2C_Oregon_%2814178725594%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:BLM_Firefighters,_Moonhill_RX,_Burns,_Oregon_(14178725594).jpg",
+          "file": "BLM Firefighters, Moonhill RX, Burns, Oregon (14178725594).jpg",
+          "author": "Bureau of Land Management Oregon and Washington",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Burns, Oregon\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Silo_in_Burns%2C_Oregon_%2813992031779%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Silo_in_Burns,_Oregon_(13992031779).jpg",
+          "file": "Silo in Burns, Oregon (13992031779).jpg",
+          "author": "Bureau of Land Management Oregon and Washington",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Burns, Oregon\"",
+          "width": 1600,
+          "height": 1184,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Wild geese, circa 1934 (6478688733).jpg",
+          "reason": "licence No restrictions"
         }
       ]
     },
@@ -204,7 +697,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 228,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/2016-366-205_Turn_up_the_Monsoon_to_11_%2827891462433%29.jpg/1920px-2016-366-205_Turn_up_the_Monsoon_to_11_%2827891462433%29.jpg",
@@ -216,7 +709,7 @@
           "from": "Commons category \"Camp Verde, Arizona\"",
           "width": 1600,
           "height": 862,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Chief_of_the_Yavapai_Apaches_at_Date_Creek_-_Ahoochy_Kahmah_Group_of_Apache_tonto_%26_Yavapai_prisoners_of_United_States_at_Camp_Verdi_-_3_men_%26_2_women._LCCN97507937.jpg/1920px-thumbnail.jpg",
@@ -228,7 +721,7 @@
           "from": "Commons category \"Camp Verde, Arizona\"",
           "width": 1600,
           "height": 1316,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/5/55/Clouds_%282903236841%29.jpg",
@@ -240,7 +733,7 @@
           "from": "Commons category \"Camp Verde, Arizona\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -262,6 +755,75 @@
         }
       ]
     },
+    "carlsbad": {
+      "name": "Carlsbad",
+      "state": "NM",
+      "wikidata": "Q852577",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Carlsbad_New_Mexico_banner.jpg/1920px-Carlsbad_New_Mexico_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Carlsbad_New_Mexico_banner.jpg",
+          "file": "Carlsbad New Mexico banner.jpg",
+          "author": "Jirka Matousek",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Carlsbad_New_Mexico_Public_Library.jpg/1920px-Carlsbad_New_Mexico_Public_Library.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Carlsbad_New_Mexico_Public_Library.jpg",
+          "file": "Carlsbad New Mexico Public Library.jpg",
+          "author": "AllenS",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Bridge_over_Pecos_River_-_panoramio.jpg/1920px-Bridge_over_Pecos_River_-_panoramio.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Bridge_over_Pecos_River_-_panoramio.jpg",
+          "file": "Bridge over Pecos River - panoramio.jpg",
+          "author": "Ryan Leon",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Carlsbad, New Mexico\"",
+          "width": 1600,
+          "height": 1066,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Carlsbad%2C_NM_Panoramic.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Carlsbad,_NM_Panoramic.jpg",
+          "file": "Carlsbad, NM Panoramic.jpg",
+          "author": "Emann15",
+          "licence": "CC BY 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+          "from": "Commons category \"Carlsbad, New Mexico\"",
+          "width": 1600,
+          "height": 396,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Carlsbad NM Infobox.png",
+          "reason": "too small"
+        },
+        {
+          "file": "Carlsbad vs artesia 2.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Mission conducted by WCTU of Carlsbad, NM (The Union Signal, 1922).png",
+          "reason": "too small"
+        }
+      ]
+    },
     "carson-city": {
       "name": "Carson City",
       "state": "NV",
@@ -277,7 +839,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Nevada_State_Museum.jpg/1920px-Nevada_State_Museum.jpg",
@@ -289,7 +851,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Skyline_of_Carson_City%2C_NV.jpg/1920px-Skyline_of_Carson_City%2C_NV.jpg",
@@ -301,7 +863,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 1120,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Carson_City_BLM_Hosts_Outdoor_Education_Event_%2820060860414%29.jpg/1920px-Carson_City_BLM_Hosts_Outdoor_Education_Event_%2820060860414%29.jpg",
@@ -313,7 +875,7 @@
           "from": "Commons category \"Carson City, Nevada\"",
           "width": 1600,
           "height": 1150,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": []
@@ -333,7 +895,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1074,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/2/28/AZER_202%2C_South_Siding%2C_Ariz.jpg",
@@ -345,7 +907,7 @@
           "from": "Commons category \"Clifton, Arizona\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/AZER_203%2C_Clifton%2C_Ariz.jpg/1920px-AZER_203%2C_Clifton%2C_Ariz.jpg",
@@ -357,7 +919,7 @@
           "from": "Commons category \"Clifton, Arizona\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/7/74/AZER_4009%2C_Clifton%2C_Arizona_-_March_2018.jpg",
@@ -369,7 +931,7 @@
           "from": "Commons category \"Clifton, Arizona\"",
           "width": 1600,
           "height": 1071,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -383,6 +945,185 @@
         },
         {
           "file": "Clifton in 1903.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "clovis": {
+      "name": "Clovis",
+      "state": "NM",
+      "wikidata": "Q985559",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Clovis_banner.jpg/1920px-Clovis_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Clovis_banner.jpg",
+          "file": "Clovis banner.jpg",
+          "author": "Tim Evanson",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Downtown_Clovis_Evening_Sky.jpg/1920px-Downtown_Clovis_Evening_Sky.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Downtown_Clovis_Evening_Sky.jpg",
+          "file": "Downtown Clovis Evening Sky.jpg",
+          "author": "ArdenZ87",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 915,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Aerial_view_of_Clovis%2C_New_Mexico_skyline.jpg/1920px-Aerial_view_of_Clovis%2C_New_Mexico_skyline.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Clovis,_New_Mexico_skyline.jpg",
+          "file": "Aerial view of Clovis, New Mexico skyline.jpg",
+          "author": "Quintin Soloviev",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1020,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/ATSF_F45_5978_at_the_west_end_of_the_yard_in_Clovis%2C_NM_in_October_1985_%2836455837611%29.jpg/1920px-ATSF_F45_5978_at_the_west_end_of_the_yard_in_Clovis%2C_NM_in_October_1985_%2836455837611%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:ATSF_F45_5978_at_the_west_end_of_the_yard_in_Clovis,_NM_in_October_1985_(36455837611).jpg",
+          "file": "ATSF F45 5978 at the west end of the yard in Clovis, NM in October 1985 (36455837611).jpg",
+          "author": "Marty Bernard from U.S.A.",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Clovis, New Mexico\"",
+          "width": 1600,
+          "height": 1068,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Garden and Field Produce, Roosevelt County, New Mexico (15146627801).jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "colville": {
+      "name": "Colville",
+      "state": "WA",
+      "wikidata": "Q2601326",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Colville_Post_Office.jpg/1920px-Colville_Post_Office.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Colville_Post_Office.jpg",
+          "file": "Colville Post Office.jpg",
+          "author": "Crispin Stichart",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/2005_-_08_-_Fair_Parade-DSCN0050.JPG/1920px-2005_-_08_-_Fair_Parade-DSCN0050.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:2005_-_08_-_Fair_Parade-DSCN0050.JPG",
+          "file": "2005 - 08 - Fair Parade-DSCN0050.JPG",
+          "author": "No machine-readable author provided. Red9hagar~commonswiki assumed (based on copyright…",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "from": "Commons category \"Colville, Washington\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Colburn_T._Winslow_House.jpg/1920px-Colburn_T._Winslow_House.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Colburn_T._Winslow_House.jpg",
+          "file": "Colburn T. Winslow House.jpg",
+          "author": "Crispin Stichart",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Colville, Washington\"",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Colville_Flour_Mill.jpg/1920px-Colville_Flour_Mill.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Colville_Flour_Mill.jpg",
+          "file": "Colville Flour Mill.jpg",
+          "author": "Crispin Stichart",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Colville, Washington\"",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Colville Brewery, Colville, Washington, ca 1893 (WASTATE 854).jpeg",
+          "reason": "too small"
+        },
+        {
+          "file": "Colville JohnHolstHomestead Blockhouse.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Colville, Washington, nd (WASTATE 622).jpeg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "coos-bay": {
+      "name": "Coos Bay",
+      "state": "OR",
+      "wikidata": "Q913266",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Coos_Bay_Harbor_Oregon_%28cropped%29.jpg/1920px-Coos_Bay_Harbor_Oregon_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Coos_Bay_Harbor_Oregon_(cropped).jpg",
+          "file": "Coos Bay Harbor Oregon (cropped).jpg",
+          "author": "icetsarina",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Aerial_view_-_Bunker_Hill_area_of_Coos_Bay_with_Isthmus_Slough_Bridge_%282005%29.jpg/1920px-Aerial_view_-_Bunker_Hill_area_of_Coos_Bay_with_Isthmus_Slough_Bridge_%282005%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Aerial_view_-_Bunker_Hill_area_of_Coos_Bay_with_Isthmus_Slough_Bridge_(2005).jpg",
+          "file": "Aerial view - Bunker Hill area of Coos Bay with Isthmus Slough Bridge (2005).jpg",
+          "author": "Oregon Department of Transportation",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1250,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/8/86/Tioga_Building.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Tioga_Building.jpg",
+          "file": "Tioga Building.jpg",
+          "author": "DougMiller65",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 2354,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Coos Bay Clock (Coos County, Oregon scenic images) (cooDA0005).jpg",
           "reason": "too small"
         }
       ]
@@ -402,7 +1143,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/130115-N-DI587-134_%2820325482708%29.jpg/1920px-130115-N-DI587-134_%2820325482708%29.jpg",
@@ -414,7 +1155,7 @@
           "from": "Commons category \"El Centro, California\"",
           "width": 1600,
           "height": 1065,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/6/66/20210515180516_IMG_2448_Canal_Imperial_Valley.jpg",
@@ -426,7 +1167,7 @@
           "from": "Commons category \"El Centro, California\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/0/09/20220224075821_IMG_3800_Mount_Signal.jpg",
@@ -438,7 +1179,7 @@
           "from": "Commons category \"El Centro, California\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -471,7 +1212,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/2012-09-30_14_28_33_View_of_downtown_Elko_in_Nevada_from_a_bluff_to_the_south.jpg/1920px-2012-09-30_14_28_33_View_of_downtown_Elko_in_Nevada_from_a_bluff_to_the_south.jpg",
@@ -483,7 +1224,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1179,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/f/fe/024_Nevada%2C_I80_Exit_298%2C_Elko_-_Centre_Motel_%284679253272%29.jpg",
@@ -495,7 +1236,7 @@
           "from": "Commons category \"Elko, Nevada\"",
           "width": 1600,
           "height": 1280,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/04_15_09_138x_-_Flickr_-_drewj1946.jpg/1920px-04_15_09_138x_-_Flickr_-_drewj1946.jpg",
@@ -507,7 +1248,7 @@
           "from": "Commons category \"Elko, Nevada\"",
           "width": 1600,
           "height": 1071,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": []
@@ -527,7 +1268,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/2012-10-08_View_of_downtown_Ely_in_Nevada_from_the_lower_slopes_of_Ward_Mountain.jpg/1920px-2012-10-08_View_of_downtown_Ely_in_Nevada_from_the_lower_slopes_of_Ward_Mountain.jpg",
@@ -539,7 +1280,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/1950_Census_Enumeration_District_Maps_-_Nevada_%28NV%29_-_White_Pine_County_-_White_Pine_County_-_ED_17-1_to_27_-_NARA_-_24066659_%28page_1%29.jpg/1920px-1950_Census_Enumeration_District_Maps_-_Nevada_%28NV%29_-_White_Pine_County_-_White_Pine_County_-_ED_17-1_to_27_-_NARA_-_24066659_%28page_1%29.jpg",
@@ -551,7 +1292,7 @@
           "from": "Commons category \"Ely, Nevada\"",
           "width": 1600,
           "height": 1542,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/1950_Census_Enumeration_District_Maps_-_Nevada_%28NV%29_-_White_Pine_County_-_White_Pine_County_-_ED_17-1_to_27_-_NARA_-_24066659_%28page_4%29.jpg/1920px-1950_Census_Enumeration_District_Maps_-_Nevada_%28NV%29_-_White_Pine_County_-_White_Pine_County_-_ED_17-1_to_27_-_NARA_-_24066659_%28page_4%29.jpg",
@@ -563,7 +1304,51 @@
           "from": "Commons category \"Ely, Nevada\"",
           "width": 1600,
           "height": 1557,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": []
+    },
+    "eugene": {
+      "name": "Eugene",
+      "state": "OR",
+      "wikidata": "Q171224",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Eugene_banner.jpg/1920px-Eugene_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Eugene_banner.jpg",
+          "file": "Eugene banner.jpg",
+          "author": "Ljmajer , cropped by Jjtkk",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Eugene_panorama.jpg/1920px-Eugene_panorama.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Eugene_panorama.jpg",
+          "file": "Eugene panorama.jpg",
+          "author": "Ljmajer",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 662,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/102707-Oregon-Autzen-USC-UO-Sanchezpass.jpg/1920px-102707-Oregon-Autzen-USC-UO-Sanchezpass.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:102707-Oregon-Autzen-USC-UO-Sanchezpass.jpg",
+          "file": "102707-Oregon-Autzen-USC-UO-Sanchezpass.jpg",
+          "author": "Bobak Ha'Eri",
+          "licence": "CC BY 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
         }
       ],
       "rejected": []
@@ -583,7 +1368,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Humboldt_Bay_and_Eureka_aerial_view.jpg",
@@ -595,7 +1380,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1068,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Crab_Pots_Eureka_CA.jpg/1920px-Crab_Pots_Eureka_CA.jpg",
@@ -607,7 +1392,7 @@
           "from": "Commons category \"Eureka, California\"",
           "width": 1600,
           "height": 1104,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Cut_-Over_Areas_%28Repeat_Series%29_-_California_-_DPLA_-_6acde2f5e9a4b7bc585b58df7291f784.jpg/1920px-Cut_-Over_Areas_%28Repeat_Series%29_-_California_-_DPLA_-_6acde2f5e9a4b7bc585b58df7291f784.jpg",
@@ -619,12 +1404,154 @@
           "from": "Commons category \"Eureka, California\"",
           "width": 1600,
           "height": 1247,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
         {
           "file": "2005 Eureka Earthquake ShakeMap.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "everett": {
+      "name": "Everett",
+      "state": "WA",
+      "wikidata": "Q392599",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Everett_Station_-_Everett_skyline%2C_2014_%28cropped%29.jpg/1920px-Everett_Station_-_Everett_skyline%2C_2014_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Everett_Station_-_Everett_skyline,_2014_(cropped).jpg",
+          "file": "Everett Station - Everett skyline, 2014 (cropped).jpg",
+          "author": "SounderBruce",
+          "licence": "CC BY 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Everett_-_Downtown_1.jpg/1920px-Everett_-_Downtown_1.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Everett_-_Downtown_1.jpg",
+          "file": "Everett - Downtown 1.jpg",
+          "author": "Emersb",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Everett%2C_Washington.jpg/1920px-Everett%2C_Washington.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Everett,_Washington.jpg",
+          "file": "Everett, Washington.jpg",
+          "author": "Quintin Soloviev",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/%27San_Juan_Enterprise%27_-_detail_showing_old_U.S._Army_designation.jpg/1920px-%27San_Juan_Enterprise%27_-_detail_showing_old_U.S._Army_designation.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%27San_Juan_Enterprise%27_-_detail_showing_old_U.S._Army_designation.jpg",
+          "file": "'San Juan Enterprise' - detail showing old U.S. Army designation.jpg",
+          "author": "Photo by Joe Mabel",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Everett, Washington\"",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Barge from Drummond Lighterage Company of Seattle loaded with creosoted products, Everett, Washington, approximately 1909 (INDOCC 1641).jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "farmington": {
+      "name": "Farmington",
+      "state": "NM",
+      "wikidata": "Q1012695",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Farmington_New_Mexico_Banner.jpg/1920px-Farmington_New_Mexico_Banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Farmington_New_Mexico_Banner.jpg",
+          "file": "Farmington New Mexico Banner.jpg",
+          "author": "Christopher Nicol",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Farmington_Public_Library_New_Mexico.jpg/1920px-Farmington_Public_Library_New_Mexico.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Farmington_Public_Library_New_Mexico.jpg",
+          "file": "Farmington Public Library New Mexico.jpg",
+          "author": "AllenS",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Farmington_New_Mexico_Civic_Center.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Farmington_New_Mexico_Civic_Center.jpg",
+          "file": "Farmington New Mexico Civic Center.jpg",
+          "author": "AllenS",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Aerial_from_SW_NM_516_along_Animas_River%2C_US_64_along_San_Juan_River%2C_Farmington_NM.jpg/1920px-Aerial_from_SW_NM_516_along_Animas_River%2C_US_64_along_San_Juan_River%2C_Farmington_NM.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Aerial_from_SW_NM_516_along_Animas_River,_US_64_along_San_Juan_River,_Farmington_NM.jpg",
+          "file": "Aerial from SW NM 516 along Animas River, US 64 along San Juan River, Farmington NM.jpg",
+          "author": "Dicklyon",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Farmington, New Mexico\"",
+          "width": 1600,
+          "height": 1202,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "483 heading to Farmington - Flickr - drewj1946.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "483 Switching in Farmington June 1967xRP - Flickr - drewj1946.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Ancient Shore, Bisti Badlands, Farmington, New Mexico, U.S.A.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "DRGW 483 on wye at FarmingtonJune67xro - Flickr - drewj1946.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Falls are the fifth most common event leading to an occupational fatality for oil and gas extraction workers.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "FMN FAA diagram.jpg",
           "reason": "too small"
         }
       ]
@@ -644,7 +1571,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/1/15/Aerial_view_of_Flagstaff.jpg",
@@ -656,7 +1583,7 @@
           "from": "Commons category \"Flagstaff, Arizona\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Arizona_Ranch%2C_Coconino_National_Forest_2015_%2849644848671%29.jpg/1920px-Arizona_Ranch%2C_Coconino_National_Forest_2015_%2849644848671%29.jpg",
@@ -668,7 +1595,7 @@
           "from": "Commons category \"Flagstaff, Arizona\"",
           "width": 1600,
           "height": 1190,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/5/51/Atop_Mount_Elden.jpg",
@@ -680,7 +1607,7 @@
           "from": "Commons category \"Flagstaff, Arizona\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -709,7 +1636,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/4/4a/20250825-USDA-NRCS-DD-1_%2854763229950%29.jpg",
@@ -721,7 +1648,7 @@
           "from": "Commons category \"Fresno, California\"",
           "width": 1600,
           "height": 1280,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Fresno_California.jpg/1920px-Fresno_California.jpg",
@@ -733,7 +1660,7 @@
           "from": "Commons category \"Fresno, California\"",
           "width": 1600,
           "height": 900,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/20250825-USDA-NRCS-DD-2_%2854762887651%29.jpg/1920px-20250825-USDA-NRCS-DD-2_%2854762887651%29.jpg",
@@ -745,7 +1672,7 @@
           "from": "Commons category \"Fresno, California\"",
           "width": 1600,
           "height": 1655,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -767,6 +1694,71 @@
         }
       ]
     },
+    "gallup": {
+      "name": "Gallup",
+      "state": "NM",
+      "wikidata": "Q577981",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Gallup_Banner.jpg/1920px-Gallup_Banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Gallup_Banner.jpg",
+          "file": "Gallup Banner.jpg",
+          "author": "AllenS",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/McKinley_County_New_Mexico_Court_House.jpg/1920px-McKinley_County_New_Mexico_Court_House.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:McKinley_County_New_Mexico_Court_House.jpg",
+          "file": "McKinley County New Mexico Court House.jpg",
+          "author": "AllenS",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/5_of_Roger_Puta%27s_Santa_Fe_Freight_Photos_%2828287110560%29.jpg/1920px-5_of_Roger_Puta%27s_Santa_Fe_Freight_Photos_%2828287110560%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:5_of_Roger_Puta%27s_Santa_Fe_Freight_Photos_(28287110560).jpg",
+          "file": "5 of Roger Puta's Santa Fe Freight Photos (28287110560).jpg",
+          "author": "railfan 44",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Gallup, New Mexico\"",
+          "width": 1600,
+          "height": 1050,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/5_of_Roger_Puta%27s_Santa_Fe_Freight_Photos_%2828538731416%29.jpg/1920px-5_of_Roger_Puta%27s_Santa_Fe_Freight_Photos_%2828538731416%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:5_of_Roger_Puta%27s_Santa_Fe_Freight_Photos_(28538731416).jpg",
+          "file": "5 of Roger Puta's Santa Fe Freight Photos (28538731416).jpg",
+          "author": "railfan 44",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Gallup, New Mexico\"",
+          "width": 1600,
+          "height": 1138,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Gallup, New Mexico.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Coal mine, Gallup 1920.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
     "grand-canyon-village": {
       "name": "Grand Canyon Village",
       "state": "AZ",
@@ -782,7 +1774,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/2015_Grand_Canyon_Trading_Post.jpg/1920px-2015_Grand_Canyon_Trading_Post.jpg",
@@ -794,7 +1786,7 @@
           "from": "Commons category \"Grand Canyon Village\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Arizona._LOC_99446124-2.jpg/1920px-Arizona._LOC_99446124-2.jpg",
@@ -806,7 +1798,7 @@
           "from": "Commons category \"Grand Canyon Village\"",
           "width": 1600,
           "height": 1983,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Arizona._LOC_99446124-3.jpg/1920px-Arizona._LOC_99446124-3.jpg",
@@ -818,7 +1810,7 @@
           "from": "Commons category \"Grand Canyon Village\"",
           "width": 1600,
           "height": 1964,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -848,6 +1840,62 @@
         }
       ]
     },
+    "grand-coulee": {
+      "name": "Grand Coulee",
+      "state": "WA",
+      "wikidata": "Q1508192",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Grand_Coulee%2C_WA_%28banner%29.jpg/1920px-Grand_Coulee%2C_WA_%28banner%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Grand_Coulee,_WA_(banner).jpg",
+          "file": "Grand Coulee, WA (banner).jpg",
+          "author": "Steven Pavlov",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 228,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Grand_Coulee%2C_WA_%E2%80%94_Main_Street.jpg/1920px-Grand_Coulee%2C_WA_%E2%80%94_Main_Street.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Grand_Coulee,_WA_%E2%80%94_Main_Street.jpg",
+          "file": "Grand Coulee, WA — Main Street.jpg",
+          "author": "Steven Pavlov",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 900,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/1940_Census_Enumeration_District_Maps_-_Washington_-_Grant_County_-_Grand_Coulee_-_ED_13-33%2C_ED_13-34%2C_ED_13-35%2C_ED_13-36%2C_ED_13-37%2C_ED_13-38_-_NARA_-_5840569.jpg/1920px-thumbnail.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:1940_Census_Enumeration_District_Maps_-_Washington_-_Grant_County_-_Grand_Coulee_-_ED_13-33,_ED_13-34,_ED_13-35,_ED_13-36,_ED_13-37,_ED_13-38_-_NARA_-_5840569.jpg",
+          "file": "1940 Census Enumeration District Maps - Washington - Grant County - Grand Coulee - ED 13-33, ED 13-34, ED 13-35, ED 13-36, ED 13-37, ED 13-38 - NARA - 5840569.jpg",
+          "author": "Unknown author Unknown author or not provided",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Grand Coulee, Washington\"",
+          "width": 1600,
+          "height": 1321,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Another_interesting_light_effect_%2836245750043%29.jpg/1920px-Another_interesting_light_effect_%2836245750043%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Another_interesting_light_effect_(36245750043).jpg",
+          "file": "Another interesting light effect (36245750043).jpg",
+          "author": "Robert Ashworth from Bellingham, WA., USA",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Commons category \"Grand Coulee, Washington\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": []
+    },
     "hilt": {
       "name": "Hilt",
       "state": "CA",
@@ -863,7 +1911,7 @@
           "from": "Commons category \"Hilt, California\"",
           "width": 1600,
           "height": 1294,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Roger_Puta_captured_a_runby_at_Hilt%2C_CA_in_July_1982_at_Semaphore_4020._Tunnel_Motor_SD45T-2_9184_led_with_more_Tunnel_Motors_up_front_and_mid-train_--_4_Photos_%2833081931672%29.jpg/1920px-thumbnail.jpg",
@@ -875,7 +1923,7 @@
           "from": "Commons category \"Hilt, California\"",
           "width": 1600,
           "height": 1122,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Roger_Puta_captured_a_runby_at_Hilt%2C_CA_in_July_1982_at_Semaphore_4020._Tunnel_Motor_SD45T-2_9184_led_with_more_Tunnel_Motors_up_front_and_mid-train_--_4_Photos_%2833196784596%29.jpg/1920px-thumbnail.jpg",
@@ -887,7 +1935,7 @@
           "from": "Commons category \"Hilt, California\"",
           "width": 1600,
           "height": 1095,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Roger_Puta_captured_a_runby_at_Hilt%2C_CA_in_July_1982_at_Semaphore_4020._Tunnel_Motor_SD45T-2_9184_led_with_more_Tunnel_Motors_up_front_and_mid-train_--_4_Photos_%2833196785036%29.jpg/1920px-thumbnail.jpg",
@@ -899,12 +1947,85 @@
           "from": "Commons category \"Hilt, California\"",
           "width": 1600,
           "height": 1294,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
         {
           "file": "Juniperus occidentalis 8482.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "hobbs": {
+      "name": "Hobbs",
+      "state": "NM",
+      "wikidata": "Q1010782",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Hobbs_New_Mexico_Public_Library.jpg/1920px-Hobbs_New_Mexico_Public_Library.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Hobbs_New_Mexico_Public_Library.jpg",
+          "file": "Hobbs New Mexico Public Library.jpg",
+          "author": "AllenS",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Hobbs%2C_New_Mexico_%282913167656%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Hobbs,_New_Mexico_(2913167656).jpg",
+          "file": "Hobbs, New Mexico (2913167656).jpg",
+          "author": "Ken Lund from Reno, Nevada, USA",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/After_3_hours_of_driving%2C_we_see_civilization-_and_celebrate_-_panoramio.jpg/1920px-After_3_hours_of_driving%2C_we_see_civilization-_and_celebrate_-_panoramio.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:After_3_hours_of_driving,_we_see_civilization-_and_celebrate_-_panoramio.jpg",
+          "file": "After 3 hours of driving, we see civilization- and celebrate - panoramio.jpg",
+          "author": "AudreyIski",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Hobbs, New Mexico\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Hobbs%2C_New_Mexico_%282913167678%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Hobbs,_New_Mexico_(2913167678).jpg",
+          "file": "Hobbs, New Mexico (2913167678).jpg",
+          "author": "Ken Lund from Reno, Nevada, USA",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Commons category \"Hobbs, New Mexico\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Greetings from Hobbs, New Mexico - Large Letter Postcard (5311056022).jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Hobbs Industrial Airpark - New Mexico.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Hobbs NM (35751087780).jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "NMMap-doton-Hobbs.PNG",
           "reason": "too small"
         }
       ]
@@ -924,7 +2045,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 845,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/2/22/Huron_Police_Department.jpg",
@@ -936,7 +2057,7 @@
           "from": "Commons category \"Huron, California\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/6/67/CVPSouthernCanalsUSBR.jpg",
@@ -948,7 +2069,7 @@
           "from": "Commons category \"Huron, California\"",
           "width": 1600,
           "height": 2071,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -981,7 +2102,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/College_of_the_Desert.jpg/1920px-College_of_the_Desert.jpg",
@@ -993,7 +2114,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/California_National_Guard_%2849925602313%29.jpg/1920px-California_National_Guard_%2849925602313%29.jpg",
@@ -1005,7 +2126,7 @@
           "from": "Commons category \"Indio, California\"",
           "width": 1600,
           "height": 1068,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Highway_395%2C_Indio%2C_United_States_%28Unsplash%29.jpg/1920px-Highway_395%2C_Indio%2C_United_States_%28Unsplash%29.jpg",
@@ -1017,7 +2138,7 @@
           "from": "Commons category \"Indio, California\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -1042,7 +2163,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/2013-07-04_17_32_49_View_of_Jackpot_in_Nevada_from_a_hill_to_the_west.jpg/1920px-2013-07-04_17_32_49_View_of_Jackpot_in_Nevada_from_a_hill_to_the_west.jpg",
@@ -1054,7 +2175,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 806,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/2014-06-22_09_52_41_View_north_along_U.S._Route_93_entering_Jackpot%2C_Nevada.JPG/1920px-2014-06-22_09_52_41_View_north_along_U.S._Route_93_entering_Jackpot%2C_Nevada.JPG",
@@ -1066,7 +2187,7 @@
           "from": "Commons category \"Jackpot, Nevada\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/2014-06-22_09_56_59_View_north_along_U.S._Route_93_entering_Idaho_from_Jackpot%2C_Nevada.JPG/1920px-2014-06-22_09_56_59_View_north_along_U.S._Route_93_entering_Idaho_from_Jackpot%2C_Nevada.JPG",
@@ -1078,7 +2199,7 @@
           "from": "Commons category \"Jackpot, Nevada\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": []
@@ -1098,7 +2219,7 @@
           "from": "Commons category \"Kayenta, Arizona\"",
           "width": 1600,
           "height": 1372,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/2013-09-22_13_18_47_Wildflowers_along_U.S._Route_160_just_east_of_Kayenta%2C_Arizona.JPG/1920px-2013-09-22_13_18_47_Wildflowers_along_U.S._Route_160_just_east_of_Kayenta%2C_Arizona.JPG",
@@ -1110,7 +2231,7 @@
           "from": "Commons category \"Kayenta, Arizona\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg/1920px-DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg",
@@ -1122,7 +2243,7 @@
           "from": "Commons category \"Kayenta, Arizona\"",
           "width": 1600,
           "height": 1063,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Detail_from_a_huge_wall_of_pictographs_%2816134411947%29.jpg/1920px-Detail_from_a_huge_wall_of_pictographs_%2816134411947%29.jpg",
@@ -1134,7 +2255,7 @@
           "from": "Commons category \"Kayenta, Arizona\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -1149,6 +2270,83 @@
         {
           "file": "Navajo County Incorporated and Unincorporated areas Kayenta highlighted.svg",
           "reason": "type image/svg+xml"
+        }
+      ]
+    },
+    "kennewick": {
+      "name": "Kennewick",
+      "state": "WA",
+      "wikidata": "Q844033",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Kennewick-ColumbiaRiverAerial_%2831695765421%29.jpg/1920px-Kennewick-ColumbiaRiverAerial_%2831695765421%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Kennewick-ColumbiaRiverAerial_(31695765421).jpg",
+          "file": "Kennewick-ColumbiaRiverAerial (31695765421).jpg",
+          "author": "formulanone from Huntsville, United States",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/8/8f/View_from_ISS_Expedition_72%2C_Kennewick%2C_Washington%2C_April_13%2C_2025_%28ISS072-E-1080059%29_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:View_from_ISS_Expedition_72,_Kennewick,_Washington,_April_13,_2025_(ISS072-E-1080059)_(cropped).jpg",
+          "file": "View from ISS Expedition 72, Kennewick, Washington, April 13, 2025 (ISS072-E-1080059) (cropped).jpg",
+          "author": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 960,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Badger_Mountain_Kennewick_Washington.jpg/1920px-Badger_Mountain_Kennewick_Washington.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Badger_Mountain_Kennewick_Washington.jpg",
+          "file": "Badger Mountain Kennewick Washington.jpg",
+          "author": "Craig",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Commons category \"Kennewick, Washington\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Kennewick_Cable_bridge_Vietnam_memorial.jpg/1920px-Kennewick_Cable_bridge_Vietnam_memorial.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Kennewick_Cable_bridge_Vietnam_memorial.jpg",
+          "file": "Kennewick Cable bridge Vietnam memorial.jpg",
+          "author": "Hrystiv",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Kennewick, Washington\"",
+          "width": 1600,
+          "height": 630,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "88.1 the edge.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Kennewick from Jump off Joe.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Kennewick from Thompson Hill.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Spring Creek NFH migration golf 27 April 2022 (2).png",
+          "reason": "too small"
+        },
+        {
+          "file": "Spring Creek NFH migration golf 27 April 2022.png",
+          "reason": "too small"
         }
       ]
     },
@@ -1167,7 +2365,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 228,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/2012%2C_View_S%2C_Kingman_Cloudburst_-_panoramio.jpg/1920px-2012%2C_View_S%2C_Kingman_Cloudburst_-_panoramio.jpg",
@@ -1179,7 +2377,7 @@
           "from": "Commons category \"Kingman, Arizona\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/2012%2C_Walapai_AZ_Two_Burlington_Northern_Santa_Fe_Freight_Trains_-_panoramio.jpg/1920px-2012%2C_Walapai_AZ_Two_Burlington_Northern_Santa_Fe_Freight_Trains_-_panoramio.jpg",
@@ -1191,7 +2389,7 @@
           "from": "Commons category \"Kingman, Arizona\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/2012%2C_Walapai_AZ%2C_BNSF_5450_and_Santa_Fe_689_west_bound%2C_hauling_freight_-_panoramio.jpg/1920px-2012%2C_Walapai_AZ%2C_BNSF_5450_and_Santa_Fe_689_west_bound%2C_hauling_freight_-_panoramio.jpg",
@@ -1203,7 +2401,7 @@
           "from": "Commons category \"Kingman, Arizona\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -1216,6 +2414,50 @@
           "reason": "too small"
         }
       ]
+    },
+    "klamath-falls": {
+      "name": "Klamath Falls",
+      "state": "OR",
+      "wikidata": "Q846146",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Klamath_Falls_Banner.JPG/1920px-Klamath_Falls_Banner.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:Klamath_Falls_Banner.JPG",
+          "file": "Klamath Falls Banner.JPG",
+          "author": "Bobjgalindo",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Klamath_Falls_downtown.JPG/1920px-Klamath_Falls_downtown.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:Klamath_Falls_downtown.JPG",
+          "file": "Klamath Falls downtown.JPG",
+          "author": "Bobjgalindo",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Klamath_Falls_%282022%29.jpg/1920px-Klamath_Falls_%282022%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Klamath_Falls_(2022).jpg",
+          "file": "Klamath Falls (2022).jpg",
+          "author": "Yuehai1981",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 946,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": []
     },
     "lake-havasu-city": {
       "name": "Lake Havasu City",
@@ -1232,7 +2474,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/ARIZONA_%2810236367854%29.jpg/1920px-ARIZONA_%2810236367854%29.jpg",
@@ -1244,7 +2486,7 @@
           "from": "Commons category \"Lake Havasu City, Arizona\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/ARIZONA_%2810236455736%29.jpg/1920px-ARIZONA_%2810236455736%29.jpg",
@@ -1256,7 +2498,7 @@
           "from": "Commons category \"Lake Havasu City, Arizona\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/ARIZONA_%2810236542233%29.jpg/1920px-ARIZONA_%2810236542233%29.jpg",
@@ -1268,7 +2510,7 @@
           "from": "Commons category \"Lake Havasu City, Arizona\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -1290,6 +2532,112 @@
         }
       ]
     },
+    "lakeview": {
+      "name": "Lakeview",
+      "state": "OR",
+      "wikidata": "Q1975591",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Lakeview%2C_Oregon_%283884211893%29.jpg/1920px-Lakeview%2C_Oregon_%283884211893%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Lakeview,_Oregon_(3884211893).jpg",
+          "file": "Lakeview, Oregon (3884211893).jpg",
+          "author": "brx0 from Portland, USA",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Welcome_Sign%2C_Lakeview%2C_Oregon%2C_2014.JPG/1920px-Welcome_Sign%2C_Lakeview%2C_Oregon%2C_2014.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:Welcome_Sign,_Lakeview,_Oregon,_2014.JPG",
+          "file": "Welcome Sign, Lakeview, Oregon, 2014.JPG",
+          "author": "Orygun",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Collins Pine sawmill, Lakeview, Oregon, 2011.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Grain Elevator (Lake County, Oregon scenic images) (lakDA0027).jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "las-cruces": {
+      "name": "Las Cruces",
+      "state": "NM",
+      "wikidata": "Q33264",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Las_Cruces_NM_banner_San_Andres_mountains.jpg/1920px-Las_Cruces_NM_banner_San_Andres_mountains.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Las_Cruces_NM_banner_San_Andres_mountains.jpg",
+          "file": "Las Cruces NM banner San Andres mountains.jpg",
+          "author": "AllenS",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/City_of_Las_Cruces.jpg/1920px-City_of_Las_Cruces.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:City_of_Las_Cruces.jpg",
+          "file": "City of Las Cruces.jpg",
+          "author": "Jpawela",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/NMSU_BransonLibrary.jpg/1920px-NMSU_BransonLibrary.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:NMSU_BransonLibrary.jpg",
+          "file": "NMSU BransonLibrary.jpg",
+          "author": "Terry Umbenhaur",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/A_photo_of_the_Las_Cruces_border_wall_from_the_highway_in_Las_Cruces%2C_NM_%28ca78c4f7-bf45-4d9f-a061-cfbca16f219a%29.JPG/1920px-A_photo_of_the_Las_Cruces_border_wall_from_the_highway_in_Las_Cruces%2C_NM_%28ca78c4f7-bf45-4d9f-a061-cfbca16f219a%29.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:A_photo_of_the_Las_Cruces_border_wall_from_the_highway_in_Las_Cruces,_NM_(ca78c4f7-bf45-4d9f-a061-cfbca16f219a).JPG",
+          "file": "A photo of the Las Cruces border wall from the highway in Las Cruces, NM (ca78c4f7-bf45-4d9f-a061-cfbca16f219a).JPG",
+          "author": "National Trails Office ( US National Park Service )",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Las Cruces, New Mexico\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "NMMap-doton-LasCruces.PNG",
+          "reason": "too small"
+        },
+        {
+          "file": "Advert for WIA program in Las Cruces, 30 September 1898.png",
+          "reason": "too small"
+        }
+      ]
+    },
     "las-vegas": {
       "name": "Las Vegas",
       "state": "NV",
@@ -1305,7 +2653,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Downtown_Las_Vegas_from_Stratosphere_3.jpg",
@@ -1317,7 +2665,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Center_Strip_Before_Sunrise.jpg/1920px-Center_Strip_Before_Sunrise.jpg",
@@ -1329,7 +2677,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/2010-365-259_Toy_City_%284997823380%29.jpg/1920px-2010-365-259_Toy_City_%284997823380%29.jpg",
@@ -1341,7 +2689,7 @@
           "from": "Commons category \"Las Vegas\"",
           "width": 1600,
           "height": 1198,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -1350,6 +2698,62 @@
           "reason": "too small"
         }
       ]
+    },
+    "longview": {
+      "name": "Longview",
+      "state": "WA",
+      "wikidata": "Q983801",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Longviewwa1.jpg/1920px-Longviewwa1.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Longviewwa1.jpg",
+          "file": "Longviewwa1.jpg",
+          "author": "khiara jones",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Log_dump_-_Flickr_-_brewbooks_%281%29.jpg/1920px-Log_dump_-_Flickr_-_brewbooks_%281%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Log_dump_-_Flickr_-_brewbooks_(1).jpg",
+          "file": "Log dump - Flickr - brewbooks (1).jpg",
+          "author": "brewbooks from near Seattle, USA",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Commons category \"Longview, Washington\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Log_dump_-_Flickr_-_brewbooks.jpg/1920px-Log_dump_-_Flickr_-_brewbooks.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Log_dump_-_Flickr_-_brewbooks.jpg",
+          "file": "Log dump - Flickr - brewbooks.jpg",
+          "author": "brewbooks from near Seattle, USA",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Commons category \"Longview, Washington\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Scrap_metal_recycling_facility_in_Longview%2C_Washington%27s_industrial_zone.jpg/1920px-Scrap_metal_recycling_facility_in_Longview%2C_Washington%27s_industrial_zone.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Scrap_metal_recycling_facility_in_Longview,_Washington%27s_industrial_zone.jpg",
+          "file": "Scrap metal recycling facility in Longview, Washington's industrial zone.jpg",
+          "author": "Quintin Soloviev",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Commons category \"Longview, Washington\"",
+          "width": 1600,
+          "height": 1093,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": []
     },
     "los-angeles": {
       "name": "Los Angeles",
@@ -1366,7 +2770,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Los_Angeles_with_Mount_Baldy.jpg/1920px-Los_Angeles_with_Mount_Baldy.jpg",
@@ -1378,7 +2782,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 750,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Hollywood_sign_%288485145044%29.jpg/1920px-Hollywood_sign_%288485145044%29.jpg",
@@ -1390,7 +2794,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/19_01_11_LA_Coliseum_David_w_Yellow_Line_-2.jpg/1920px-19_01_11_LA_Coliseum_David_w_Yellow_Line_-2.jpg",
@@ -1402,7 +2806,7 @@
           "from": "Commons category \"Los Angeles\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -1424,6 +2828,47 @@
         }
       ]
     },
+    "medford": {
+      "name": "Medford",
+      "state": "OR",
+      "wikidata": "Q836663",
+      "candidates": [
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/6/63/Medford_from_Roxy_Ann.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Medford_from_Roxy_Ann.jpg",
+          "file": "Medford from Roxy Ann.jpg",
+          "author": "ZabMilenko at English Wikipedia",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Medford_Rogues_game.jpg/1920px-Medford_Rogues_game.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Medford_Rogues_game.jpg",
+          "file": "Medford Rogues game.jpg",
+          "author": "Brigs2381",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Medford, Oregon\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "MFR Montage 2016.png",
+          "reason": "not a photo (name)"
+        },
+        {
+          "file": "Municipal government diagram.png",
+          "reason": "too small"
+        }
+      ]
+    },
     "modesto": {
       "name": "Modesto",
       "state": "CA",
@@ -1439,7 +2884,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 228,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Modesto_California_photo_Don_Ramey_Logan.jpg/1920px-Modesto_California_photo_Don_Ramey_Logan.jpg",
@@ -1451,7 +2896,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 895,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Gallo_Center_for_the_Arts_Modesto_%28cropped%29.JPG/1920px-Gallo_Center_for_the_Arts_Modesto_%28cropped%29.JPG",
@@ -1463,7 +2908,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": []
@@ -1483,7 +2928,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/LADWP_Mojave_District_Headquarters_2016-12-10.jpg/1920px-LADWP_Mojave_District_Headquarters_2016-12-10.jpg",
@@ -1495,7 +2940,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1066,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Arid_Mojave_-_panoramio.jpg/1920px-Arid_Mojave_-_panoramio.jpg",
@@ -1507,7 +2952,7 @@
           "from": "Commons category \"Mojave, California\"",
           "width": 1600,
           "height": 352,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/CalPortland_Mojave_Cement_Plant-2.jpg/1920px-CalPortland_Mojave_Cement_Plant-2.jpg",
@@ -1519,7 +2964,7 @@
           "from": "Commons category \"Mojave, California\"",
           "width": 1600,
           "height": 1205,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -1528,6 +2973,50 @@
           "reason": "too small"
         }
       ]
+    },
+    "newport": {
+      "name": "Newport",
+      "state": "OR",
+      "wikidata": "Q824111",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Yaquina_Bay_Bridge_banner.jpg/1920px-Yaquina_Bay_Bridge_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Yaquina_Bay_Bridge_banner.jpg",
+          "file": "Yaquina Bay Bridge banner.jpg",
+          "author": "Little Mountain 5 , cropped by Jjtkk",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Newport%2C_Oregon.jpg/1920px-Newport%2C_Oregon.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Newport,_Oregon.jpg",
+          "file": "Newport, Oregon.jpg",
+          "author": "Bernard Gagnon",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1189,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Newport.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Newport.jpg",
+          "file": "Newport.jpg",
+          "author": "Becherka",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": []
     },
     "nogales": {
       "name": "Nogales",
@@ -1544,7 +3033,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1066,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/DHS_Secretary_Kristi_Noem_Travels_to_Nogales%2C_Arizona_%2854390703582%29.jpg/1920px-DHS_Secretary_Kristi_Noem_Travels_to_Nogales%2C_Arizona_%2854390703582%29.jpg",
@@ -1556,7 +3045,7 @@
           "from": "Commons category \"Nogales, Arizona\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/DHS_Secretary_Kristi_Noem_Travels_to_Nogales%2C_Arizona_%2854390703912%29.jpg/1920px-DHS_Secretary_Kristi_Noem_Travels_to_Nogales%2C_Arizona_%2854390703912%29.jpg",
@@ -1568,7 +3057,7 @@
           "from": "Commons category \"Nogales, Arizona\"",
           "width": 1600,
           "height": 1066,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/DHS_Secretary_Kristi_Noem_Travels_to_Nogales%2C_Arizona_%2854390706932%29.jpg/1920px-DHS_Secretary_Kristi_Noem_Travels_to_Nogales%2C_Arizona_%2854390706932%29.jpg",
@@ -1580,7 +3069,7 @@
           "from": "Commons category \"Nogales, Arizona\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": []
@@ -1600,7 +3089,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/OAKLAND%2C_CA%2C_USA_-_Skyline_and_Bridge.JPG/1920px-OAKLAND%2C_CA%2C_USA_-_Skyline_and_Bridge.JPG",
@@ -1612,7 +3101,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Lake_Merritt_2022-06-16.png/1920px-Lake_Merritt_2022-06-16.png",
@@ -1624,7 +3113,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 1066,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/20140223-OC-LSC-0115_%2814822531181%29.jpg/1920px-20140223-OC-LSC-0115_%2814822531181%29.jpg",
@@ -1636,10 +3125,201 @@
           "from": "Commons category \"Oakland, California\"",
           "width": 1600,
           "height": 1065,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": []
+    },
+    "olympia": {
+      "name": "Olympia",
+      "state": "WA",
+      "wikidata": "Q42735",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Olympia%2C_WA_banner_Neighborhood_Mural.jpg/1920px-Olympia%2C_WA_banner_Neighborhood_Mural.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Olympia,_WA_banner_Neighborhood_Mural.jpg",
+          "file": "Olympia, WA banner Neighborhood Mural.jpg",
+          "author": "Brylie Oxley , cropped by Jjtkk",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Capitol_Lake%2C_Olympia%2C_Washington%2C_July_20%2C_2025_%28cropped%29.jpg/1920px-Capitol_Lake%2C_Olympia%2C_Washington%2C_July_20%2C_2025_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Capitol_Lake,_Olympia,_Washington,_July_20,_2025_(cropped).jpg",
+          "file": "Capitol Lake, Olympia, Washington, July 20, 2025 (cropped).jpg",
+          "author": "OceanLoop",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 801,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/A_view_up_Pattinson_Lake%2C_Washington_USA.jpg/1920px-A_view_up_Pattinson_Lake%2C_Washington_USA.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:A_view_up_Pattinson_Lake,_Washington_USA.jpg",
+          "file": "A view up Pattinson Lake, Washington USA.jpg",
+          "author": "Bobjgalindo",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Olympia, Washington\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Boston_Harbor%2C_WA_at_Sunset.jpg/1920px-Boston_Harbor%2C_WA_at_Sunset.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Boston_Harbor,_WA_at_Sunset.jpg",
+          "file": "Boston Harbor, WA at Sunset.jpg",
+          "author": "Libbyflyguy",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Commons category \"Olympia, Washington\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "034 Puget Sound scenes (PROSCH 65).jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Aerial view of Washington State Capitol Group shortly after completion of Legislative Building, Olympia, ca 1928 (WASTATE 1940).jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Bayview Construction Materials, Eastside of Olympia, WA USA 2008 - panoramio.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Christmas at Hunter Family Farm.JPG",
+          "reason": "too small"
+        }
+      ]
+    },
+    "omak": {
+      "name": "Omak",
+      "state": "WA",
+      "wikidata": "Q1509671",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Omak%2C_WA_-_bridge_across_the_Okanagan_River.jpg/1920px-Omak%2C_WA_-_bridge_across_the_Okanagan_River.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Omak,_WA_-_bridge_across_the_Okanagan_River.jpg",
+          "file": "Omak, WA - bridge across the Okanagan River.jpg",
+          "author": "Joe Mabel",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Omak_Beverages.jpg/1920px-Omak_Beverages.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Omak_Beverages.jpg",
+          "file": "Omak Beverages.jpg",
+          "author": "B.D. world from Flickr",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Commons category \"Omak, Washington\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Omak lake balancing rock.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Omak High School basketball team.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Omak High School football.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "ontario": {
+      "name": "Ontario",
+      "state": "OR",
+      "wikidata": "Q1639059",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Ontario_Oregon_Banner.jpg/1920px-Ontario_Oregon_Banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Ontario_Oregon_Banner.jpg",
+          "file": "Ontario Oregon Banner.jpg",
+          "author": "ItsWolfeh",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/b/b8/FMIB_41496_Seining_for_salmon_at_Ontario_for_hatching_purposes.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:FMIB_41496_Seining_for_salmon_at_Ontario_for_hatching_purposes.jpeg",
+          "file": "FMIB 41496 Seining for salmon at Ontario for hatching purposes.jpeg",
+          "author": "Unknown author Unknown author",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Ontario, Oregon\"",
+          "width": 1600,
+          "height": 1041,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/c/c3/FMIB_41505_Showing_1700_feet_of_racks_in_Snake_River%2C_used_for_stopping_salmon_at_Ontario_Hatchery.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:FMIB_41505_Showing_1700_feet_of_racks_in_Snake_River,_used_for_stopping_salmon_at_Ontario_Hatchery.jpeg",
+          "file": "FMIB 41505 Showing 1700 feet of racks in Snake River, used for stopping salmon at Ontario Hatchery.jpeg",
+          "author": "Unknown author Unknown author",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Ontario, Oregon\"",
+          "width": 1600,
+          "height": 920,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Park_on_Snake_River_in_Ontario%2C_Oregon_01.jpg/1920px-Park_on_Snake_River_in_Ontario%2C_Oregon_01.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Park_on_Snake_River_in_Ontario,_Oregon_01.jpg",
+          "file": "Park on Snake River in Ontario, Oregon 01.jpg",
+          "author": "Joe Mabel",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Ontario, Oregon\"",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "DSCN6514 ontariodowntown e.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "OntarioOregon.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "OntarioMotors.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "ORMap-doton-Ontario.png",
+          "reason": "too small"
+        }
+      ]
     },
     "oxnard": {
       "name": "Oxnard",
@@ -1656,7 +3336,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Carneige_Art_Museum%2C_Oxnard.jpg/1920px-Carneige_Art_Museum%2C_Oxnard.jpg",
@@ -1668,7 +3348,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1073,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Beet_sheds%2C_Oxnard%2C_%28California%29%2C_factory_LCCN2016852580.jpg/1920px-Beet_sheds%2C_Oxnard%2C_%28California%29%2C_factory_LCCN2016852580.jpg",
@@ -1680,7 +3360,7 @@
           "from": "Commons category \"Oxnard, California\"",
           "width": 1600,
           "height": 1222,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Downtown_Oxnard_Fountain_-_panoramio.jpg/1920px-Downtown_Oxnard_Fountain_-_panoramio.jpg",
@@ -1692,7 +3372,7 @@
           "from": "Commons category \"Oxnard, California\"",
           "width": 1600,
           "height": 1180,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -1717,7 +3397,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Blick_auf_Page_AZ.JPG/1920px-Blick_auf_Page_AZ.JPG",
@@ -1729,7 +3409,7 @@
           "from": "Commons category \"Page, Arizona\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Lac_powell_2016_Glen_Canyon_Bridge_and_Visitor_Center.JPG/1920px-Lac_powell_2016_Glen_Canyon_Bridge_and_Visitor_Center.JPG",
@@ -1741,7 +3421,7 @@
           "from": "Commons category \"Page, Arizona\"",
           "width": 1600,
           "height": 899,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Lake_Powell_-_Page%2C_Arizona_%2850560887677%29.jpg/1920px-Lake_Powell_-_Page%2C_Arizona_%2850560887677%29.jpg",
@@ -1753,7 +3433,7 @@
           "from": "Commons category \"Page, Arizona\"",
           "width": 1600,
           "height": 900,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -1775,6 +3455,50 @@
         }
       ]
     },
+    "pendleton": {
+      "name": "Pendleton",
+      "state": "OR",
+      "wikidata": "Q944507",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Pendleton_Banner.jpg/1920px-Pendleton_Banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Pendleton_Banner.jpg",
+          "file": "Pendleton Banner.jpg",
+          "author": "Visitor7",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Pendleton_Oregon_downtown.jpg/1920px-Pendleton_Oregon_downtown.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Pendleton_Oregon_downtown.jpg",
+          "file": "Pendleton Oregon downtown.jpg",
+          "author": "Publichall at English Wikipedia",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Panoramic_view_of_Pendleton%2C_Oregon_-_June_2024.jpg/1920px-Panoramic_view_of_Pendleton%2C_Oregon_-_June_2024.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Pendleton,_Oregon_-_June_2024.jpg",
+          "file": "Panoramic view of Pendleton, Oregon - June 2024.jpg",
+          "author": "SounderBruce",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 866,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": []
+    },
     "phoenix": {
       "name": "Phoenix",
       "state": "AZ",
@@ -1790,7 +3514,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Phoenix%2C_Arizona.JPG/1920px-Phoenix%2C_Arizona.JPG",
@@ -1802,7 +3526,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Downtown_Phoenix_Aerial_Looking_Northeast.jpg/1920px-Downtown_Phoenix_Aerial_Looking_Northeast.jpg",
@@ -1814,7 +3538,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 1236,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/A_Phoenix_Rising_From_the_Arizona_Ash.jpg/1920px-A_Phoenix_Rising_From_the_Arizona_Ash.jpg",
@@ -1826,7 +3550,7 @@
           "from": "Commons category \"Phoenix, Arizona\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -1851,7 +3575,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/07-04-2023_Pioche%2C_NV-0009Town_sign.jpg/1920px-07-04-2023_Pioche%2C_NV-0009Town_sign.jpg",
@@ -1863,7 +3587,7 @@
           "from": "Commons category \"Pioche, Nevada\"",
           "width": 1600,
           "height": 1311,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/07-04-2023_Pioche%2C_NV-0013.jpg/1920px-07-04-2023_Pioche%2C_NV-0013.jpg",
@@ -1875,7 +3599,7 @@
           "from": "Commons category \"Pioche, Nevada\"",
           "width": 1600,
           "height": 584,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/07-04-2023_Pioche%2C_NV-0015.jpg/1920px-07-04-2023_Pioche%2C_NV-0015.jpg",
@@ -1887,10 +3611,136 @@
           "from": "Commons category \"Pioche, Nevada\"",
           "width": 1600,
           "height": 1218,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": []
+    },
+    "port-angeles": {
+      "name": "Port Angeles",
+      "state": "WA",
+      "wikidata": "Q852584",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/PortAngelesBanner.JPG/1920px-PortAngelesBanner.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:PortAngelesBanner.JPG",
+          "file": "PortAngelesBanner.JPG",
+          "author": "Doug Newman and Rastapopulous",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Portangeles_washington.jpg/1920px-Portangeles_washington.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Portangeles_washington.jpg",
+          "file": "Portangeles washington.jpg",
+          "author": "own work",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Port_Angeles_S.jpg/1920px-Port_Angeles_S.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Port_Angeles_S.jpg",
+          "file": "Port Angeles S.jpg",
+          "author": "Sea Cow",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 900,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Hurricane_Ridge_view_%2851578186441%29.jpg/1920px-Hurricane_Ridge_view_%2851578186441%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Hurricane_Ridge_view_(51578186441).jpg",
+          "file": "Hurricane Ridge view (51578186441).jpg",
+          "author": "Sheila Sund from Salem, United States",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Commons category \"Port Angeles, Washington\"",
+          "width": 1600,
+          "height": 993,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Shacks on beach among discarded lumber, Port Angeles, Washington, 1930 (WASTATE 2012).jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "portland": {
+      "name": "Portland",
+      "state": "OR",
+      "wikidata": "Q6106",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Portland_rose_test_gardens_banner.jpg/1920px-Portland_rose_test_gardens_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Portland_rose_test_gardens_banner.jpg",
+          "file": "Portland rose test gardens banner.jpg",
+          "author": "Matt Perreault",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Portland_Oregon_Aerial%2C_June_2025.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Portland_Oregon_Aerial,_June_2025.jpg",
+          "file": "Portland Oregon Aerial, June 2025.jpg",
+          "author": "Spicypepper999",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 900,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Evraz_Portland_0509.jpg/1920px-Evraz_Portland_0509.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Evraz_Portland_0509.jpg",
+          "file": "Evraz Portland 0509.jpg",
+          "author": "Unknown author Unknown author",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Commons category \"Portland, Oregon\"",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Panda_Fest_Portland.jpg/1920px-Panda_Fest_Portland.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Panda_Fest_Portland.jpg",
+          "file": "Panda Fest Portland.jpg",
+          "author": "Eetzie",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Commons category \"Portland, Oregon\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Portland, Oregon Collage.jpg",
+          "reason": "not a photo (name)"
+        },
+        {
+          "file": "SgtMaj Buenafe toys for tots 6th ESB.jpg",
+          "reason": "too small"
+        }
+      ]
     },
     "primm": {
       "name": "Primm",
@@ -1907,7 +3757,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 888,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/2015-11-03_13_13_18_First_reassurance_sign_along_northbound_Interstate_15_after_entering_Clark_County%2C_Nevada_from_San_Bernardino_County%2C_California.jpg/1920px-2015-11-03_13_13_18_First_reassurance_sign_along_northbound_Interstate_15_after_entering_Clark_County%2C_Nevada_from_San_Bernardino_County%2C_California.jpg",
@@ -1919,7 +3769,7 @@
           "from": "Commons category \"Primm, Nevada\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/2015-11-03_13_17_02_%22Welcome_to_Nevada%22_sign_along_northbound_Interstate_15_entering_Clark_County%2C_Nevada_from_San_Bernardino_County%2C_California.jpg/1920px-2015-11-03_13_17_02_%22Welcome_to_Nevada%22_sign_along_northbound_Interstate_15_entering_Clark_County%2C_Nevada_from_San_Bernardino_County%2C_California.jpg",
@@ -1931,7 +3781,7 @@
           "from": "Commons category \"Primm, Nevada\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/2/27/Primm_from_United_793_%286306324594%29.jpg",
@@ -1943,7 +3793,7 @@
           "from": "Commons category \"Primm, Nevada\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -1973,6 +3823,62 @@
         }
       ]
     },
+    "raton": {
+      "name": "Raton",
+      "state": "NM",
+      "wikidata": "Q990990",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Raton_NM_banner.jpg/1920px-Raton_NM_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Raton_NM_banner.jpg",
+          "file": "Raton NM banner.jpg",
+          "author": "Billy Hathorn",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Revised_Downtown_Raton%2C_NM_IMG_5008.JPG/1920px-Revised_Downtown_Raton%2C_NM_IMG_5008.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:Revised_Downtown_Raton,_NM_IMG_5008.JPG",
+          "file": "Revised Downtown Raton, NM IMG 5008.JPG",
+          "author": "Billy Hathorn",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Raton%2C_New_Mexico.jpg/1920px-Raton%2C_New_Mexico.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Raton,_New_Mexico.jpg",
+          "file": "Raton, New Mexico.jpg",
+          "author": "Quintin Soloviev",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/2nd_Street%2C_Raton%2C_New_Mexico.jpg/1920px-2nd_Street%2C_Raton%2C_New_Mexico.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:2nd_Street,_Raton,_New_Mexico.jpg",
+          "file": "2nd Street, Raton, New Mexico.jpg",
+          "author": "Quintin Soloviev",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Commons category \"Raton, New Mexico\"",
+          "width": 1600,
+          "height": 1143,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": []
+    },
     "redding": {
       "name": "Redding",
       "state": "CA",
@@ -1988,7 +3894,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Sundial_Bridge_at_Turtle_Bay_%28cropped%29.jpg/1920px-Sundial_Bridge_at_Turtle_Bay_%28cropped%29.jpg",
@@ -2000,7 +3906,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 844,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Way_Down_Upon_The_Sacramento_River....._-_Flickr_-_A_Guy_Named_Nyal.jpg/1920px-Way_Down_Upon_The_Sacramento_River....._-_Flickr_-_A_Guy_Named_Nyal.jpg",
@@ -2012,7 +3918,7 @@
           "from": "Commons category \"Redding, California\"",
           "width": 1600,
           "height": 1066,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Sundialbridge2.jpg",
@@ -2024,7 +3930,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 2401,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": []
@@ -2044,7 +3950,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Reno%2C_Nevada_photo_Don_Ramey_Logan.jpg/1920px-Reno%2C_Nevada_photo_Don_Ramey_Logan.jpg",
@@ -2056,7 +3962,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Amtrak_SF_-_Chicago%2C_Feb-2018_%2840367115932%29.jpg/1920px-Amtrak_SF_-_Chicago%2C_Feb-2018_%2840367115932%29.jpg",
@@ -2068,7 +3974,7 @@
           "from": "Commons category \"Reno, Nevada\"",
           "width": 1600,
           "height": 1066,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Crescent_club%2C_1900.jpg/1920px-Crescent_club%2C_1900.jpg",
@@ -2080,7 +3986,7 @@
           "from": "Commons category \"Reno, Nevada\"",
           "width": 1600,
           "height": 1083,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -2102,6 +4008,67 @@
         }
       ]
     },
+    "roswell": {
+      "name": "Roswell",
+      "state": "NM",
+      "wikidata": "Q33561",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/International_UFO_Museum_and_Research_Center_Roswell_New_Mexico_banner.jpg/1920px-International_UFO_Museum_and_Research_Center_Roswell_New_Mexico_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:International_UFO_Museum_and_Research_Center_Roswell_New_Mexico_banner.jpg",
+          "file": "International UFO Museum and Research Center Roswell New Mexico banner.jpg",
+          "author": "AllenS",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Roswell_NM_Main_Street.jpg/1920px-Roswell_NM_Main_Street.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Roswell_NM_Main_Street.jpg",
+          "file": "Roswell NM Main Street.jpg",
+          "author": "Phil Campbell",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/9/9c/RoswellNM.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:RoswellNM.jpg",
+          "file": "RoswellNM.jpg",
+          "author": "Vasiliymeshko",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1180,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/6/68/90mm_AA_gun_in_Roswell.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:90mm_AA_gun_in_Roswell.jpg",
+          "file": "90mm AA gun in Roswell.jpg",
+          "author": "Greg Goebel",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Commons category \"Roswell, New Mexico\"",
+          "width": 1600,
+          "height": 1592,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "American forests (17525937693).jpg",
+          "reason": "licence No restrictions"
+        }
+      ]
+    },
     "sacramento": {
       "name": "Sacramento",
       "state": "CA",
@@ -2117,7 +4084,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Sacramento%2C_California_skyline_in_2023.jpg/1920px-Sacramento%2C_California_skyline_in_2023.jpg",
@@ -2129,7 +4096,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 793,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Sacramento%2C_CA_skyline_%28cropped%29.jpg/1920px-Sacramento%2C_CA_skyline_%28cropped%29.jpg",
@@ -2141,7 +4108,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 901,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Airfield_Park_Natomas%2C_Sacramento%2C_California.jpg/1920px-Airfield_Park_Natomas%2C_Sacramento%2C_California.jpg",
@@ -2153,7 +4120,7 @@
           "from": "Commons category \"Sacramento, California\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -2166,6 +4133,62 @@
           "reason": "too small"
         }
       ]
+    },
+    "salem": {
+      "name": "Salem",
+      "state": "OR",
+      "wikidata": "Q43919",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Salem_banner_Oregon_State_Capitol.jpg/1920px-Salem_banner_Oregon_State_Capitol.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Salem_banner_Oregon_State_Capitol.jpg",
+          "file": "Salem banner Oregon State Capitol.jpg",
+          "author": "Farwestern Photo by Gregg M. Erickson, cropped by Jjtkk",
+          "licence": "CC BY 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Oregon_State_Capitol%2C_Andr%C3%A9_Orso_%286501975671%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Oregon_State_Capitol,_Andr%C3%A9_Orso_(6501975671).jpg",
+          "file": "Oregon State Capitol, André Orso (6501975671).jpg",
+          "author": "Oregon Department of Transportation",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1063,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Salem_Oregon_downtown.JPG/1920px-Salem_Oregon_downtown.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:Salem_Oregon_downtown.JPG",
+          "file": "Salem Oregon downtown.JPG",
+          "author": "M.O. Stevens",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1042,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Mini_salem_city_view.jpg/1920px-Mini_salem_city_view.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Mini_salem_city_view.jpg",
+          "file": "Mini salem city view.jpg",
+          "author": "Prasanth 05",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Commons category \"Salem, Oregon\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": []
     },
     "san-diego": {
       "name": "San Diego",
@@ -2182,7 +4205,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/San_Diego_skyline_18_%28cropped%29.jpg/1920px-San_Diego_skyline_18_%28cropped%29.jpg",
@@ -2194,7 +4217,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 594,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/e/ea/La_Jolla_Shores_view_%28cropped%29.jpg",
@@ -2206,7 +4229,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 1031,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Bioclean_Modular_Wetland_Friars.jpg/1920px-Bioclean_Modular_Wetland_Friars.jpg",
@@ -2218,7 +4241,7 @@
           "from": "Commons category \"San Diego, California\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -2247,7 +4270,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg/1920px-San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg",
@@ -2259,7 +4282,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 938,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Zeppelin-ride-020100925-195_%285029394846%29.jpg/1920px-Zeppelin-ride-020100925-195_%285029394846%29.jpg",
@@ -2271,7 +4294,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": []
@@ -2291,7 +4314,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Valencia_Hotel%2C_Santana_Row_%28cropped%29.jpg/1920px-Valencia_Hotel%2C_Santana_Row_%28cropped%29.jpg",
@@ -2303,7 +4326,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 1077,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/2013_10_San_Jose_by_eschipul-7199_%2810506218626%29.jpg/1920px-2013_10_San_Jose_by_eschipul-7199_%2810506218626%29.jpg",
@@ -2315,7 +4338,7 @@
           "from": "Commons category \"San Jose, California\"",
           "width": 1600,
           "height": 900,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Arts_%285976862268%29.jpg/1920px-Arts_%285976862268%29.jpg",
@@ -2327,7 +4350,7 @@
           "from": "Commons category \"San Jose, California\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -2364,7 +4387,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 231,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Santa_Cruz%2C_California_-_Boardwalk.jpg/1920px-Santa_Cruz%2C_California_-_Boardwalk.jpg",
@@ -2376,7 +4399,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 786,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Mission_Santa_Cruz_%288321945663%29.jpg/1920px-Mission_Santa_Cruz_%288321945663%29.jpg",
@@ -2388,7 +4411,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 1063,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Derby_Park.jpg/1920px-Derby_Park.jpg",
@@ -2400,10 +4423,59 @@
           "from": "Commons category \"Santa Cruz, California\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": []
+    },
+    "santa-fe": {
+      "name": "Santa Fe",
+      "state": "NM",
+      "wikidata": "Q38555",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Canyon_Road_in_Santa_Fe_banner.jpg/1920px-Canyon_Road_in_Santa_Fe_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Canyon_Road_in_Santa_Fe_banner.jpg",
+          "file": "Canyon Road in Santa Fe banner.jpg",
+          "author": "M.Bucka",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Palace_of_the_Governors.jpg/1920px-Palace_of_the_Governors.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Palace_of_the_Governors.jpg",
+          "file": "Palace of the Governors.jpg",
+          "author": "Tony Hisgett from Birmingham, UK",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 734,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Pierre_and_Claudia_Toutain-Dorbec_Art_Gallery_on_Canyon_Road%2C_Santa_Fe%2C_2004.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Pierre_and_Claudia_Toutain-Dorbec_Art_Gallery_on_Canyon_Road,_Santa_Fe,_2004.jpg",
+          "file": "Pierre and Claudia Toutain-Dorbec Art Gallery on Canyon Road, Santa Fe, 2004.jpg",
+          "author": "Pierre Toutain-Dorbec",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Santa Fe, New Mexico\"",
+          "width": 1600,
+          "height": 941,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Santa Fe NM.jpg",
+          "reason": "too small"
+        }
+      ]
     },
     "santa-maria": {
       "name": "Santa Maria",
@@ -2420,7 +4492,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -2431,6 +4503,83 @@
         {
           "file": "City Hall, angle 3, Broadway & Cook Street, Santa Maria, California LCCN2017703124 (cropped).tif",
           "reason": "type image/tiff"
+        }
+      ]
+    },
+    "seattle": {
+      "name": "Seattle",
+      "state": "WA",
+      "wikidata": "Q5083",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Seattle_3_banner.jpg/1920px-Seattle_3_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Seattle_3_banner.jpg",
+          "file": "Seattle 3 banner.jpg",
+          "author": "Seattle_3.jpg : Daniel Schwen derivative work: Jjtkk",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Seattle_aerial_2%2C_May_2023.png/1920px-Seattle_aerial_2%2C_May_2023.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Seattle_aerial_2,_May_2023.png",
+          "file": "Seattle aerial 2, May 2023.png",
+          "author": "Spicypepper999",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 686,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Space_Needle002.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Space_Needle002.jpg",
+          "file": "Space Needle002.jpg",
+          "author": "Rattlhed at English Wikipedia",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 831,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Seattle_Center_as_night_falls.jpg/1920px-Seattle_Center_as_night_falls.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Seattle_Center_as_night_falls.jpg",
+          "file": "Seattle Center as night falls.jpg",
+          "author": "Jeffery Hayes",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1000,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Brendan Benson Seattle.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Darryl McDaniels Seattle.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Patrick Keeler Seattle.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Raconteurs Seattle.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "USS Seattle crew, Seattle, ca 1926 (MOHAI 2897).jpg",
+          "reason": "too small"
         }
       ]
     },
@@ -2449,7 +4598,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 228,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/b/bb/ShowLow_AZ_from_northwest.jpg",
@@ -2461,7 +4610,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/2014%2C_View_N%2C_from_Navajo_County%2C_South_County_Complex_-_panoramio.jpg/1920px-2014%2C_View_N%2C_from_Navajo_County%2C_South_County_Complex_-_panoramio.jpg",
@@ -2473,7 +4622,7 @@
           "from": "Commons category \"Show Low, Arizona\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/A_Service_member%2C_right%2C_with_the_91st_Civil_Support_Team%2C_Arizona_National_Guard_prepares_his_suit_for_a_building_inspection_in_search_of_hazardous_materials_during_a_northern_regional_exercise_in_Show_Low_130606-Z-TA763-074.jpg/1920px-thumbnail.jpg",
@@ -2485,7 +4634,7 @@
           "from": "Commons category \"Show Low, Arizona\"",
           "width": 1600,
           "height": 1121,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -2510,7 +4659,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Moon_over_Sierra_Vista_-_panoramio.jpg/1920px-Moon_over_Sierra_Vista_-_panoramio.jpg",
@@ -2522,7 +4671,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 899,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Chairman_of_the_Joint_Chiefs_of_Staff%2C_General_Dan_Caine_visits_Joint_Task_Force_Southern_Border_in_Sierra_Vista%2C_Arizona_on_April_19%2C_2025_-_1.jpg/1920px-Chairman_of_the_Joint_Chiefs_of_Staff%2C_General_Dan_Caine_visits_Joint_Task_Force_Southern_Border_in_Sierra_Vista%2C_Arizona_on_April_19%2C_2025_-_1.jpg",
@@ -2534,7 +4683,7 @@
           "from": "Commons category \"Sierra Vista, Arizona\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Chairman_of_the_Joint_Chiefs_of_Staff%2C_General_Dan_Caine_visits_Joint_Task_Force_Southern_Border_in_Sierra_Vista%2C_Arizona_on_April_19%2C_2025_-_10.jpg/1920px-Chairman_of_the_Joint_Chiefs_of_Staff%2C_General_Dan_Caine_visits_Joint_Task_Force_Southern_Border_in_Sierra_Vista%2C_Arizona_on_April_19%2C_2025_-_10.jpg",
@@ -2546,13 +4695,147 @@
           "from": "Commons category \"Sierra Vista, Arizona\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
         {
           "file": "Cochise County Arizona Incorporated and Unincorporated areas Sierra Vista Highlighted 0466820.svg",
           "reason": "type image/svg+xml"
+        }
+      ]
+    },
+    "socorro": {
+      "name": "Socorro",
+      "state": "NM",
+      "wikidata": "Q503818",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Socorro_banner_Bosque_del_Apache_National_Wildlife_Refuge.jpg/1920px-Socorro_banner_Bosque_del_Apache_National_Wildlife_Refuge.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Socorro_banner_Bosque_del_Apache_National_Wildlife_Refuge.jpg",
+          "file": "Socorro banner Bosque del Apache National Wildlife Refuge.jpg",
+          "author": "John Fowler from Placitas, NM, USA",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 228,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Cottonwood_Trees%2C_Rio_Grande_River%2C_2012_-_panoramio.jpg/1920px-Cottonwood_Trees%2C_Rio_Grande_River%2C_2012_-_panoramio.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Cottonwood_Trees,_Rio_Grande_River,_2012_-_panoramio.jpg",
+          "file": "Cottonwood Trees, Rio Grande River, 2012 - panoramio.jpg",
+          "author": "Chris English",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Socorro, New Mexico\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/ISS015-E-5540_-_View_of_New_Mexico.jpg/1920px-ISS015-E-5540_-_View_of_New_Mexico.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:ISS015-E-5540_-_View_of_New_Mexico.jpg",
+          "file": "ISS015-E-5540 - View of New Mexico.jpg",
+          "author": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Socorro, New Mexico\"",
+          "width": 1600,
+          "height": 1060,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Junction_181_%289410826034%29.jpg/1920px-Junction_181_%289410826034%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Junction_181_(9410826034).jpg",
+          "file": "Junction 181 (9410826034).jpg",
+          "author": "Lachlan Donald from Melbourne, Australia",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Commons category \"Socorro, New Mexico\"",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "NMMap-doton-Socorro.PNG",
+          "reason": "too small"
+        },
+        {
+          "file": "Socorro aerial rev.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "spokane": {
+      "name": "Spokane",
+      "state": "WA",
+      "wikidata": "Q187805",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Spokane_banner.jpg/1920px-Spokane_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Spokane_banner.jpg",
+          "file": "Spokane banner.jpg",
+          "author": "Jdubman at English Wikipedia , cropped by Jjtkk",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/MK02733_Spokane_Upper_Falls_3x2_crop.jpg/1920px-MK02733_Spokane_Upper_Falls_3x2_crop.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:MK02733_Spokane_Upper_Falls_3x2_crop.jpg",
+          "file": "MK02733 Spokane Upper Falls 3x2 crop.jpg",
+          "author": "Martin Kraft",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Spokane_skyline_panorama_%28Aug_2019%29.jpg/1920px-Spokane_skyline_panorama_%28Aug_2019%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Spokane_skyline_panorama_(Aug_2019).jpg",
+          "file": "Spokane skyline panorama (Aug 2019).jpg",
+          "author": "SounderBruce",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 417,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Spokane%2C_Washington_skyline_%28cropped%29.jpg/1920px-Spokane%2C_Washington_skyline_%28cropped%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Spokane,_Washington_skyline_(cropped).jpg",
+          "file": "Spokane, Washington skyline (cropped).jpg",
+          "author": "Quintin Soloviev",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 880,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "20110319-SupermoonSpokaneWAUSA.JPG",
+          "reason": "too small"
+        },
+        {
+          "file": "Agricultural display, Spokane Falls, Washington, 1890 (WASTATE 859).jpeg",
+          "reason": "too small"
+        },
+        {
+          "file": "Arbor Crest Wine Cellars.jpg",
+          "reason": "too small"
         }
       ]
     },
@@ -2571,7 +4854,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Aerial_view_of_Stockton%2C_California_skyline.jpg/1920px-Aerial_view_of_Stockton%2C_California_skyline.jpg",
@@ -2583,7 +4866,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 987,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Autumn_Trees_Along_the_Banks_of_the_Calavaras_River%2C_Stockton%2C_California_%2830107173153%29.jpg/1920px-Autumn_Trees_Along_the_Banks_of_the_Calavaras_River%2C_Stockton%2C_California_%2830107173153%29.jpg",
@@ -2595,7 +4878,7 @@
           "from": "Commons category \"Stockton, California\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Deep_Water_Channel%2C_Stockton%2C_California._Sunset._%2831890729246%29.jpg/1920px-Deep_Water_Channel%2C_Stockton%2C_California._Sunset._%2831890729246%29.jpg",
@@ -2607,7 +4890,7 @@
           "from": "Commons category \"Stockton, California\"",
           "width": 1600,
           "height": 1154,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -2616,6 +4899,111 @@
           "reason": "licence No restrictions"
         }
       ]
+    },
+    "tacoma": {
+      "name": "Tacoma",
+      "state": "WA",
+      "wikidata": "Q199797",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Tacoma_banner.jpg/1920px-Tacoma_banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Tacoma_banner.jpg",
+          "file": "Tacoma banner.jpg",
+          "author": "Patrick Rodriguez, cropped by Jjtkk",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/b/be/Tacoma_Washington_Aerial%2C_June_2025.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Tacoma_Washington_Aerial,_June_2025.jpg",
+          "file": "Tacoma Washington Aerial, June 2025.jpg",
+          "author": "Spicypepper999",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 900,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/A_nice_spot_to_throw_in_a_line..._-_panoramio.jpg/1920px-A_nice_spot_to_throw_in_a_line..._-_panoramio.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:A_nice_spot_to_throw_in_a_line..._-_panoramio.jpg",
+          "file": "A nice spot to throw in a line... - panoramio.jpg",
+          "author": "Kira Picabo",
+          "licence": "CC BY 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+          "from": "Commons category \"Tacoma, Washington\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/A_view_of_Tacoma_from_the_industrial_zone.jpg/1920px-A_view_of_Tacoma_from_the_industrial_zone.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:A_view_of_Tacoma_from_the_industrial_zone.jpg",
+          "file": "A view of Tacoma from the industrial zone.jpg",
+          "author": "Bobjgalindo",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Tacoma, Washington\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Alley in Tacoma, 1986 (1649678480).jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "the-dalles": {
+      "name": "The Dalles",
+      "state": "OR",
+      "wikidata": "Q985271",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/The_Dalles_Banner.jpg/1920px-The_Dalles_Banner.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:The_Dalles_Banner.jpg",
+          "file": "The Dalles Banner.jpg",
+          "author": "oregonmildep from Salem, Oregon, United States",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/The_Dalles_Oregon_aerial.jpg/1920px-The_Dalles_Oregon_aerial.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:The_Dalles_Oregon_aerial.jpg",
+          "file": "The Dalles Oregon aerial.jpg",
+          "author": "Sam Beebe",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1199,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/f/f3/The_Dalles_OR_with_Columbia_River.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:The_Dalles_OR_with_Columbia_River.jpg",
+          "file": "The Dalles OR with Columbia River.jpg",
+          "author": "Glenn Scofield Williams",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": []
     },
     "tonopah": {
       "name": "Tonopah",
@@ -2632,7 +5020,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg/1920px-2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg",
@@ -2644,7 +5032,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/2012%2C_Tonopah%2C_Nevada_-_panoramio_%281%29.jpg/1920px-2012%2C_Tonopah%2C_Nevada_-_panoramio_%281%29.jpg",
@@ -2656,7 +5044,7 @@
           "from": "Commons category \"Tonopah, Nevada\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/2012%2C_Tonopah%2C_NV%2C_Big_Bill_Murphy_Mural_Note_-_panoramio.jpg/1920px-2012%2C_Tonopah%2C_NV%2C_Big_Bill_Murphy_Mural_Note_-_panoramio.jpg",
@@ -2668,7 +5056,7 @@
           "from": "Commons category \"Tonopah, Nevada\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -2693,7 +5081,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 228,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Truckee.jpg",
@@ -2705,7 +5093,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1018,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Trout_Creek_Beaver_Dam.jpg/1920px-Trout_Creek_Beaver_Dam.jpg",
@@ -2717,7 +5105,7 @@
           "from": "Commons category \"Truckee, California\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/%E3%83%88%E3%83%A9%E3%83%83%E3%82%AD%E3%83%BC%E9%A7%85%E3%83%9B%E3%83%BC%E3%83%A0.jpg/1920px-%E3%83%88%E3%83%A9%E3%83%83%E3%82%AD%E3%83%BC%E9%A7%85%E3%83%9B%E3%83%BC%E3%83%A0.jpg",
@@ -2729,7 +5117,7 @@
           "from": "Commons category \"Truckee, California\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": []
@@ -2749,7 +5137,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/CatalinasAndTucsonAZ.jpg/1920px-CatalinasAndTucsonAZ.jpg",
@@ -2761,7 +5149,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1106,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/View_of_Tucson_from_Sentinel_Peak_2.jpg/1920px-View_of_Tucson_from_Sentinel_Peak_2.jpg",
@@ -2773,7 +5161,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/17th_Street_and_Convent_Avenue%2C_Barrio_Viejo%2C_Tucson%2C_AZ_-_54445789657.jpg/1920px-17th_Street_and_Convent_Avenue%2C_Barrio_Viejo%2C_Tucson%2C_AZ_-_54445789657.jpg",
@@ -2785,10 +5173,71 @@
           "from": "Commons category \"Tucson, Arizona\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": []
+    },
+    "tucumcari": {
+      "name": "Tucumcari",
+      "state": "NM",
+      "wikidata": "Q986001",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Quay_County_Courthouse.jpg/1920px-Quay_County_Courthouse.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Quay_County_Courthouse.jpg",
+          "file": "Quay County Courthouse.jpg",
+          "author": "Wordbuilder",
+          "licence": "CC BY 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 1160,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Antique_Buick_at_the_Blue_Swallow_Motel.jpg/1920px-Antique_Buick_at_the_Blue_Swallow_Motel.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Antique_Buick_at_the_Blue_Swallow_Motel.jpg",
+          "file": "Antique Buick at the Blue Swallow Motel.jpg",
+          "author": "Cullen328",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Tucumcari, New Mexico\"",
+          "width": 1600,
+          "height": 1168,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Blue_Swallow_66_%2851222123730%29.jpg/1920px-Blue_Swallow_66_%2851222123730%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Blue_Swallow_66_(51222123730).jpg",
+          "file": "Blue Swallow 66 (51222123730).jpg",
+          "author": "Mobilus In Mobili",
+          "licence": "CC BY-SA 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "from": "Commons category \"Tucumcari, New Mexico\"",
+          "width": 1600,
+          "height": 669,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/9/97/Dempster-Farm-Windmills-Tucumcari-NM-2004-02.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Dempster-Farm-Windmills-Tucumcari-NM-2004-02.jpg",
+          "file": "Dempster-Farm-Windmills-Tucumcari-NM-2004-02.jpg",
+          "author": "Paul Gipe",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Tucumcari, New Mexico\"",
+          "width": 1600,
+          "height": 1074,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "NMMap-doton-Tucumcari.PNG",
+          "reason": "too small"
+        }
+      ]
     },
     "ukiah": {
       "name": "Ukiah",
@@ -2805,7 +5254,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Ukiah_Civic_Center.jpg/1920px-Ukiah_Civic_Center.jpg",
@@ -2817,7 +5266,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Palace_Hotel_in_Ukiah_%28Explored%29_-_Flickr_-_Bob_Dass.jpg/1920px-Palace_Hotel_in_Ukiah_%28Explored%29_-_Flickr_-_Bob_Dass.jpg",
@@ -2829,13 +5278,119 @@
           "from": "Commons category \"Ukiah, California\"",
           "width": 1600,
           "height": 800,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
         {
           "file": "AjahnPasanno19Sept2013.jpg",
           "reason": "too small"
+        }
+      ]
+    },
+    "vancouver": {
+      "name": "Vancouver",
+      "state": "WA",
+      "wikidata": "Q234053",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Vancouver_WA_banner_Bridge.jpg/1920px-Vancouver_WA_banner_Bridge.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Vancouver_WA_banner_Bridge.jpg",
+          "file": "Vancouver WA banner Bridge.jpg",
+          "author": "Lumpytrout",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikivoyage banner (P948)",
+          "width": 1600,
+          "height": 229,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Vancouver_WA_Aerial%2C_June_2024.jpg/1920px-Vancouver_WA_Aerial%2C_June_2024.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Vancouver_WA_Aerial,_June_2024.jpg",
+          "file": "Vancouver WA Aerial, June 2024.jpg",
+          "author": "Spicypepper999",
+          "licence": "CC0",
+          "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 686,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Officers_Row-3.jpg/1920px-Officers_Row-3.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Officers_Row-3.jpg",
+          "file": "Officers Row-3.jpg",
+          "author": "Visitor7",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Wikipedia lead image",
+          "width": 1600,
+          "height": 1067,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Vancouver%2C_WA_-_streetlamp_01.jpg/1920px-Vancouver%2C_WA_-_streetlamp_01.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Vancouver,_WA_-_streetlamp_01.jpg",
+          "file": "Vancouver, WA - streetlamp 01.jpg",
+          "author": "Joe Mabel",
+          "licence": "CC BY-SA 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "from": "Commons category \"Vancouver, Washington\"",
+          "width": 1600,
+          "height": 1063,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Waste Runs Into the Columbia River From Sluice at Vancouver's Interstate Bridge 05-1973 (4271671439).jpg",
+          "reason": "licence No restrictions"
+        }
+      ]
+    },
+    "wenatchee": {
+      "name": "Wenatchee",
+      "state": "WA",
+      "wikidata": "Q958596",
+      "candidates": [
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/e/e9/McCool%2C_Indiana%2C_December_1%3F%2C_1951_-_Postal_Cover_%2821065407481%29.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:McCool,_Indiana,_December_1%3F,_1951_-_Postal_Cover_(21065407481).jpg",
+          "file": "McCool, Indiana, December 1?, 1951 - Postal Cover (21065407481).jpg",
+          "author": "Steve Shook from Moscow, Idaho, USA",
+          "licence": "CC BY 2.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+          "from": "Commons category \"Wenatchee, Washington\"",
+          "width": 1600,
+          "height": 992,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Powerlines_at_Saddlerock_Wenatchee_Washington.jpg/1920px-Powerlines_at_Saddlerock_Wenatchee_Washington.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Powerlines_at_Saddlerock_Wenatchee_Washington.jpg",
+          "file": "Powerlines at Saddlerock Wenatchee Washington.jpg",
+          "author": "Thayne Tuason",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Wenatchee, Washington\"",
+          "width": 1600,
+          "height": 900,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Wenatchee.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "Wenatchee WA 2009.jpg",
+          "reason": "too small"
+        },
+        {
+          "file": "The Columbia River (1918) (14803423413).jpg",
+          "reason": "licence No restrictions"
         }
       ]
     },
@@ -2854,7 +5409,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 228,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/2012-10-14_41_Downtown_Winnemucca_in_Nevada_viewed_from_Winnemucca_Mountain.jpg/1920px-2012-10-14_41_Downtown_Winnemucca_in_Nevada_viewed_from_Winnemucca_Mountain.jpg",
@@ -2866,7 +5421,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/2008-07-12_Downtown_Winnemucca.jpg/1920px-2008-07-12_Downtown_Winnemucca.jpg",
@@ -2878,7 +5433,7 @@
           "from": "Commons category \"Winnemucca, Nevada\"",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/2012_Older_and_Recent_Transportation%2C_Winnemucca%2C_Nevada_-_panoramio.jpg/1920px-2012_Older_and_Recent_Transportation%2C_Winnemucca%2C_Nevada_-_panoramio.jpg",
@@ -2890,7 +5445,7 @@
           "from": "Commons category \"Winnemucca, Nevada\"",
           "width": 1600,
           "height": 1067,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": []
@@ -2910,7 +5465,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Arizona_US_66_Standing_on_the_Corner_Park_Winslow_Arizona.jpg/1920px-Arizona_US_66_Standing_on_the_Corner_Park_Winslow_Arizona.jpg",
@@ -2922,7 +5477,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Arizona_-_Winslow_-_NARA_-_23933823_%28cropped%29.jpg/1920px-Arizona_-_Winslow_-_NARA_-_23933823_%28cropped%29.jpg",
@@ -2934,7 +5489,7 @@
           "from": "Commons category \"Winslow, Arizona\"",
           "width": 1600,
           "height": 1008,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Arizona_-_Winslow_-_NARA_-_23933823.jpg/1920px-Arizona_-_Winslow_-_NARA_-_23933823.jpg",
@@ -2946,7 +5501,7 @@
           "from": "Commons category \"Winslow, Arizona\"",
           "width": 1600,
           "height": 1260,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
@@ -2960,6 +5515,75 @@
         },
         {
           "file": "ATSF Diesel locomotive cab 1943.jpg",
+          "reason": "too small"
+        }
+      ]
+    },
+    "yakima": {
+      "name": "Yakima",
+      "state": "WA",
+      "wikidata": "Q499203",
+      "candidates": [
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Yakima%2C_Washington_skyline.jpg/1920px-Yakima%2C_Washington_skyline.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Yakima,_Washington_skyline.jpg",
+          "file": "Yakima, Washington skyline.jpg",
+          "author": "Quintin Soloviev",
+          "licence": "CC BY 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+          "from": "Wikidata image (P18)",
+          "width": 1600,
+          "height": 960,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/A_late_Summer_sun_sets_at_the_end_of_%22J%22_Street_-_panoramio.jpg/1920px-A_late_Summer_sun_sets_at_the_end_of_%22J%22_Street_-_panoramio.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:A_late_Summer_sun_sets_at_the_end_of_%22J%22_Street_-_panoramio.jpg",
+          "file": "A late Summer sun sets at the end of \"J\" Street - panoramio.jpg",
+          "author": "September Autumnleaf…",
+          "licence": "CC BY 3.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+          "from": "Commons category \"Yakima, Washington\"",
+          "width": 1600,
+          "height": 958,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Angora_goats_washington_state_fair_yakima_1910.jpg/1920px-Angora_goats_washington_state_fair_yakima_1910.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Angora_goats_washington_state_fair_yakima_1910.jpg",
+          "file": "Angora goats washington state fair yakima 1910.jpg",
+          "author": "Alva L. McDonald",
+          "licence": "Public domain",
+          "licenceUrl": null,
+          "from": "Commons category \"Yakima, Washington\"",
+          "width": 1600,
+          "height": 1127,
+          "verified": "2026-10-25"
+        },
+        {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Apple_trees_in_winter.jpg/1920px-Apple_trees_in_winter.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Apple_trees_in_winter.jpg",
+          "file": "Apple trees in winter.jpg",
+          "author": "Steve Groom",
+          "licence": "CC BY-SA 4.0",
+          "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "from": "Commons category \"Yakima, Washington\"",
+          "width": 1600,
+          "height": 1200,
+          "verified": "2026-10-25"
+        }
+      ],
+      "rejected": [
+        {
+          "file": "Cascade Lumber Co log boom and mill, Yakima vicinity, 1911 (CURTIS 1205).jpeg",
+          "reason": "too small"
+        },
+        {
+          "file": "Children attending pigsty, North Yakima, Washington, 1914 (WASTATE 530).jpeg",
+          "reason": "too small"
+        },
+        {
+          "file": "Edward Whitson Obituary Headline.jpg",
           "reason": "too small"
         }
       ]
@@ -2979,7 +5603,7 @@
           "from": "Wikivoyage banner (P948)",
           "width": 1600,
           "height": 229,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Gowan_Company_Building_Yuma_Arizona.jpg/1920px-Gowan_Company_Building_Yuma_Arizona.jpg",
@@ -2991,7 +5615,7 @@
           "from": "Wikidata image (P18)",
           "width": 1600,
           "height": 1200,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Old_Yuma_City_Hall.jpg/1920px-Old_Yuma_City_Hall.jpg",
@@ -3003,7 +5627,7 @@
           "from": "Wikipedia lead image",
           "width": 1600,
           "height": 940,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         },
         {
           "src": "https://upload.wikimedia.org/wikipedia/commons/3/38/-ARIZONA-L-0001-_Colorado_River_Flood_-_Yuma_%285652606720%29.jpg",
@@ -3015,7 +5639,7 @@
           "from": "Commons category \"Yuma, Arizona\"",
           "width": 1600,
           "height": 1012,
-          "verified": "2026-10-22"
+          "verified": "2026-10-25"
         }
       ],
       "rejected": [
