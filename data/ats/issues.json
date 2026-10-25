@@ -5,17 +5,20 @@
     "licence": "CC BY-SA 4.0",
     "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "attribution": "Game data from Truck Simulator Wiki contributors (trucksimulator.wiki.gg), CC BY-SA 4.0.",
-    "retrieved": "2026-10-22",
+    "retrieved": "2026-10-25",
     "generator": "scripts/ats/collect.mjs",
     "userAgent": "FreightWorldDataBot/0.1 (https://github.com/andreimi2002-rgb/freight-operations-simulator; fan project data collection)",
     "game": "ats",
     "states": [
       "CA",
       "NV",
-      "AZ"
+      "AZ",
+      "NM",
+      "OR",
+      "WA"
     ],
     "description": "Problems found while collecting: missing values, contradictions between pages, names that do not match. For manual checking.",
-    "count": 124
+    "count": 151
   },
   "issues": [
     {
@@ -317,6 +320,21 @@
       "detail": "in the company category but no Infobox Company (not a company with depots)"
     },
     {
+      "kind": "parseNote",
+      "entity": "kenworth",
+      "detail": "no Locations table (page mentions a state in scope)"
+    },
+    {
+      "kind": "parseNote",
+      "entity": "kenworth",
+      "detail": "cargo group \"Truck dealership\" has no matching depot type (page mentions a state in scope)"
+    },
+    {
+      "kind": "parseNote",
+      "entity": "kenworth",
+      "detail": "cargo group \"Truck plant\" has no matching depot type (page mentions a state in scope)"
+    },
+    {
       "kind": "skippedPage",
       "entity": "Mack Trucks/American Truck Simulator",
       "detail": "in the company category but no Infobox Company (not a company with depots)"
@@ -335,6 +353,11 @@
       "kind": "linkResolvedByName",
       "entity": "plaster-and-sons",
       "detail": "\"Huron\" (California) links to a page that is not the city page; matched to huron by name and state"
+    },
+    {
+      "kind": "ambiguousCargo",
+      "entity": "crawler-tractor",
+      "detail": "\"Crawler Tractor\" in Port of Tacoma / (unnamed) could be crawler-tractor-heavy-cargo-pack or crawler-tractor-farm-machinery"
     },
     {
       "kind": "linkResolvedByName",
@@ -356,6 +379,21 @@
       "entity": "vortex",
       "detail": "depot type \"Gas station\" has no internal game ID on the wiki",
       "entityType": "depotType"
+    },
+    {
+      "kind": "parseNote",
+      "entity": "western-star-trucks",
+      "detail": "no Locations table (page mentions a state in scope)"
+    },
+    {
+      "kind": "parseNote",
+      "entity": "western-star-trucks",
+      "detail": "cargo group \"Truck dealership\" has no matching depot type (page mentions a state in scope)"
+    },
+    {
+      "kind": "parseNote",
+      "entity": "western-star-trucks",
+      "detail": "cargo group \"Truck plant\" has no matching depot type (page mentions a state in scope)"
     },
     {
       "kind": "mismatch",
@@ -468,6 +506,113 @@
       "kind": "mismatch",
       "entity": "yuma",
       "detail": "city infobox says 7 companies; company pages give 6 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "albuquerque",
+      "detail": "city infobox says 14 companies; company pages give 13 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "hobbs",
+      "detail": "city infobox says 5 companies; company pages give 4 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "raton",
+      "detail": "city infobox says 5 companies; company pages give 7 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "tucumcari",
+      "detail": "city infobox says 5 companies; company pages give 6 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "astoria",
+      "detail": "city infobox says 6 companies; company pages give 7 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "bend",
+      "detail": "city infobox says 8 companies; company pages give 9 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "burns",
+      "detail": "city page's Depots section mentions \"sell-goods\"; that company page does not list Burns"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "burns",
+      "detail": "city infobox says 5 companies; company pages give 4 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "coos-bay",
+      "detail": "city infobox says 6 companies; company pages give 7 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "newport",
+      "detail": "city infobox says 7 companies; company pages give 8 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "portland",
+      "detail": "city infobox says 10 companies; company pages give 8 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "aberdeen",
+      "detail": "city infobox says 5 companies; company pages give 6 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "bellingham",
+      "detail": "city infobox says 5 companies; company pages give 6 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "colville",
+      "detail": "city infobox says 8 companies; company pages give 9 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "longview",
+      "detail": "city infobox says 2 companies; company pages give 3 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "seattle",
+      "detail": "city infobox says 6 companies; company pages give 5 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "tacoma",
+      "detail": "city infobox says 7 companies; company pages give 6 depots",
+      "field": "companyCount"
+    },
+    {
+      "kind": "mismatch",
+      "entity": "vancouver",
+      "detail": "city infobox says 4 companies; company pages give 5 depots",
       "field": "companyCount"
     },
     {
@@ -601,6 +746,14 @@
     },
     {
       "kind": "nameVariant",
+      "entity": "utility-terrain-vehicle",
+      "detail": "\"Utility Terrain Vehicle\" is not on the cargo list; matched to \"Utility Terrain Vehicles\" (singular/plural)",
+      "seenIn": [
+        "ABQ Cargo Center / (unnamed)"
+      ]
+    },
+    {
+      "kind": "nameVariant",
       "entity": "frozen-foods",
       "detail": "\"Frozen Foods\" is not on the cargo list; matched to \"Frozen Food\" (singular/plural)",
       "seenIn": [
@@ -622,6 +775,7 @@
       "detail": "\"Concrete Barriers\" is not on the cargo list; matched to \"Concrete Barrier\" (singular/plural)",
       "seenIn": [
         "Dynamix / Factory",
+        "Haddock Shipyard / Shipyard",
         "Oakland Shippers / (unnamed)",
         "Rail Export / Depot"
       ]
@@ -650,6 +804,14 @@
       "seenIn": [
         "Port of San Francisco / (unnamed)",
         "Technoma / Plant"
+      ]
+    },
+    {
+      "kind": "nameVariant",
+      "entity": "air-conditioning-unit",
+      "detail": "\"Air Conditioning Unit\" is not on the cargo list; matched to \"Air Conditioning Units\" (singular/plural)",
+      "seenIn": [
+        "Portland Cargo Central / (unnamed)"
       ]
     },
     {
@@ -726,11 +888,15 @@
         "Bushnell Farms / Farm",
         "Bushnell Farms / Livestock auction",
         "Calimondo / Almond farm",
+        "Field Force / Dealership",
         "HMS Machinery / Service shop",
         "LA Seaport / (unnamed)",
         "Lone Star Forwarding / Depot",
         "Mon Coeur / Vineyard",
         "Oakland Shippers / (unnamed)",
+        "Port of Seattle / (unnamed)",
+        "Port of Tacoma / (unnamed)",
+        "Portland Cargo Central / (unnamed)",
         "Rail Export / Depot",
         "Sunshine Crops / Farm",
         "Sunshine Crops / Garage"
@@ -752,8 +918,10 @@
       "detail": "\"Pickups\" → pickups-crane, pickups-passenger (generic name on the wiki; mapped to every variant on the cargo list; data/ats/aliases.json)",
       "seenIn": [
         "18 Wheels Garage / Truck trailer service",
+        "ABQ Cargo Center / (unnamed)",
         "American Lines / Storage",
         "Angel City Airport / (unnamed)",
+        "Avalanche Steel / Steel mill",
         "Bitumen / Service shop",
         "Bushnell Farms / Livestock auction",
         "Coastline Mining / Quarry",
@@ -761,14 +929,19 @@
         "Darwing / Aircraft plant",
         "Drake Car Dealer / Dealership",
         "Elegrid / Power network service",
+        "Field Force / Dealership",
         "Gallon Oil / Service shop",
         "HMS Machinery / Service shop",
         "LA Seaport / (unnamed)",
         "Lone Star Forwarding / Depot",
         "Lumenauto / Dealership",
+        "NAMIQ / Quarry",
         "Oakland Shippers / (unnamed)",
         "Pioneer / Dealership",
         "Port of San Francisco / (unnamed)",
+        "Port of Seattle / (unnamed)",
+        "Port of Tacoma / (unnamed)",
+        "Portland Cargo Central / (unnamed)",
         "Rail Export / Depot",
         "Steeler / Workshop",
         "Sunshine Crops / Garage",
@@ -790,14 +963,20 @@
         "Enterpriser / Warehouse",
         "Gallon Oil / Oil well",
         "Gallon Oil / Service shop",
+        "Haddock Shipyard / Shipyard",
         "HMS Machinery / Service shop",
         "LA Seaport / (unnamed)",
         "Lone Star Forwarding / Depot",
         "MWM / Waste transfer station",
         "Oakland Shippers / (unnamed)",
         "Plaster & Sons / Building foundation",
+        "Plaster & Sons / Warehouse construction site",
         "Plaster & Sons / Garage",
+        "Port of Seattle / (unnamed)",
+        "Port of Tacoma / (unnamed)",
+        "Portland Cargo Central / (unnamed)",
         "Rail Export / Depot",
+        "Sea Horizon / Marina",
         "Sea Horizon / Plant",
         "Sell Goods / Warehouse",
         "Starbridge / Warehouse",
@@ -823,6 +1002,9 @@
         "Plaster & Sons / Building foundation",
         "Plaster & Sons / Warehouse",
         "Port of San Francisco / (unnamed)",
+        "Port of Seattle / (unnamed)",
+        "Port of Tacoma / (unnamed)",
+        "Portland Cargo Central / (unnamed)",
         "Rail Export / Depot"
       ],
       "generic": true
@@ -832,22 +1014,28 @@
       "entity": "lumber",
       "detail": "\"Lumber\" → lumber-beams, lumber-boards (generic name on the wiki; mapped to every variant on the cargo list; data/ats/aliases.json)",
       "seenIn": [
+        "ABQ Cargo Center / (unnamed)",
         "Angel City Airport / (unnamed)",
         "Bloomscape / Storage",
         "Bushnell Farms / Livestock auction",
         "Deepgrove / Large sawmill",
         "Deepgrove / Small sawmill",
         "Farmer's Barn / Market",
+        "Haddock Shipyard / Shipyard",
         "Heartwood Furniture / Factory",
         "Home Store / Market",
         "LA Seaport / (unnamed)",
         "Lone Star Forwarding / Depot",
         "Oakland Shippers / (unnamed)",
+        "Olthon Homes / Factory",
         "Plaster & Sons / Building construction site",
         "Plaster & Sons / Building foundation",
         "Plaster & Sons / House construction site",
         "Plaster & Sons / Warehouse",
         "Port of San Francisco / (unnamed)",
+        "Port of Seattle / (unnamed)",
+        "Port of Tacoma / (unnamed)",
+        "Portland Cargo Central / (unnamed)",
         "Rail Export / Depot",
         "Sea Horizon / Plant",
         "Sunshine Crops / Farm",
@@ -861,6 +1049,7 @@
       "entity": "recreational-vehicle",
       "detail": "\"Recreational Vehicle\" → recreational-vehicle-campers, recreational-vehicle-motorhomes (generic name on the wiki; mapped to every variant on the cargo list; data/ats/aliases.json)",
       "seenIn": [
+        "ABQ Cargo Center / (unnamed)",
         "Angel City Airport / (unnamed)",
         "LA Seaport / (unnamed)",
         "Lone Star Forwarding / Depot",
@@ -868,6 +1057,9 @@
         "Oakland Shippers / (unnamed)",
         "Pioneer / Dealership",
         "Port of San Francisco / (unnamed)",
+        "Port of Seattle / (unnamed)",
+        "Port of Tacoma / (unnamed)",
+        "Portland Cargo Central / (unnamed)",
         "Rail Export / Depot",
         "Voltison Motors / Export terminal",
         "Voltison Motors / Plant"
@@ -929,7 +1121,51 @@
         "sierra-vista",
         "tucson",
         "winslow",
-        "yuma"
+        "yuma",
+        "alamogordo",
+        "albuquerque",
+        "artesia",
+        "carlsbad",
+        "clovis",
+        "farmington",
+        "gallup",
+        "hobbs",
+        "las-cruces",
+        "raton",
+        "roswell",
+        "santa-fe",
+        "socorro",
+        "tucumcari",
+        "astoria",
+        "bend",
+        "burns",
+        "coos-bay",
+        "eugene",
+        "klamath-falls",
+        "lakeview",
+        "medford",
+        "newport",
+        "ontario",
+        "pendleton",
+        "portland",
+        "salem",
+        "the-dalles",
+        "aberdeen",
+        "bellingham",
+        "colville",
+        "everett",
+        "grand-coulee",
+        "kennewick",
+        "longview",
+        "olympia",
+        "omak",
+        "port-angeles",
+        "seattle",
+        "spokane",
+        "tacoma",
+        "vancouver",
+        "wenatchee",
+        "yakima"
       ]
     },
     {

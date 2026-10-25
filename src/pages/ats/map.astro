@@ -2,10 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AtsMap from '../../components/AtsMap.astro';
 import { getI18n } from '../../i18n/index.mjs';
+import { scope as scopeFile } from '../../lib/data.mjs';
+import { stateList } from '../../lib/ats.mjs';
 
-const { t } = getI18n();
+const { t, meta } = getI18n();
 ---
-<BaseLayout title={t('map.title')} description={t('map.metaDescription')}>
+<BaseLayout title={t('map.title')} description={t('map.metaDescription', { states: stateList(scopeFile, meta.intlLocale) })}>
   <div class="container page">
     <header class="head">
       <p class="eyebrow">{t('map.eyebrow')}</p>

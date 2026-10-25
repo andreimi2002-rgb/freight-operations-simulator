@@ -3,10 +3,90 @@
     "description": "One photo per city for the city pages, from Wikimedia Commons, chosen by hand from data/photo-candidates.json (owner delegated the choice to Claude on 2026-10-21). Each entry gives the reason. photo null = placeholder.",
     "source": "Wikimedia Commons",
     "licences": "free licences per file (author and licence on each entry)",
-    "chosen": "2026-10-21 (CA, NV); 2026-10-22 (AZ); 2026-10-25 (Santa Maria, phase B6)",
+    "chosen": "2026-10-21 (CA, NV); 2026-10-22 (AZ); 2026-10-25 (Santa Maria, phase B6); 2026-10-25 (NM, OR, WA, phase S)",
     "chosenBy": "Claude (delegated by the project owner)"
   },
   "photos": {
+    "aberdeen": {
+      "photo": {
+        "file": "Aberdeen, WA - Downtown & Chehalis River from Rt 101.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Aberdeen%2C_WA_-_Downtown_%26_Chehalis_River_from_Rt_101.jpg/1280px-Aberdeen%2C_WA_-_Downtown_%26_Chehalis_River_from_Rt_101.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Aberdeen%2C_WA_-_Downtown_%26_Chehalis_River_from_Rt_101.jpg/960px-Aberdeen%2C_WA_-_Downtown_%26_Chehalis_River_from_Rt_101.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Aberdeen,_WA_-_Downtown_%26_Chehalis_River_from_Rt_101.jpg",
+        "author": "Joe Mabel",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 850,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-25"
+      },
+      "reason": "downtown Aberdeen and the Chehalis River seen from US 101"
+    },
+    "alamogordo": {
+      "photo": {
+        "file": "View from Thunder Rd.JPG",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/View_from_Thunder_Rd.JPG/1280px-View_from_Thunder_Rd.JPG",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/View_from_Thunder_Rd.JPG/960px-View_from_Thunder_Rd.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:View_from_Thunder_Rd.JPG",
+        "author": "Foreverstocks",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 763,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "the city spread across the Tularosa Basin, seen from the foothills"
+    },
+    "albuquerque": {
+      "photo": {
+        "file": "Albuquerque, New Mexico skyline.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Albuquerque%2C_New_Mexico_skyline.jpg/1280px-Albuquerque%2C_New_Mexico_skyline.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Albuquerque%2C_New_Mexico_skyline.jpg/960px-Albuquerque%2C_New_Mexico_skyline.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Albuquerque,_New_Mexico_skyline.jpg",
+        "author": "Quintin Soloviev",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1280,
+        "height": 720,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-25"
+      },
+      "reason": "the downtown skyline in daylight"
+    },
+    "artesia": {
+      "photo": {
+        "file": "Denkmal in Artesia, New Mexico.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Denkmal_in_Artesia%2C_New_Mexico.jpg/1280px-Denkmal_in_Artesia%2C_New_Mexico.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Denkmal_in_Artesia%2C_New_Mexico.jpg/960px-Denkmal_in_Artesia%2C_New_Mexico.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Denkmal_in_Artesia,_New_Mexico.jpg",
+        "author": "GerritR",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons category \"Artesia, New Mexico\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "the bronze monument on Main Street with the refinery behind"
+    },
+    "astoria": {
+      "photo": {
+        "file": "Astoria, OR from the Astoria Column.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Astoria%2C_OR_from_the_Astoria_Column.jpg/1280px-Astoria%2C_OR_from_the_Astoria_Column.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Astoria%2C_OR_from_the_Astoria_Column.jpg/960px-Astoria%2C_OR_from_the_Astoria_Column.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Astoria,_OR_from_the_Astoria_Column.jpg",
+        "author": "aselfcallednowhere",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "the town and the Columbia River estuary seen from the Astoria Column"
+    },
     "bakersfield": {
       "photo": {
         "file": "2009-0726-CA-Bakersfield-FoxTheater (cropped).jpg",
@@ -39,6 +119,38 @@
       },
       "reason": "the town spread across the Mojave Desert with mountains behind"
     },
+    "bellingham": {
+      "photo": {
+        "file": "Bellingham, Washington (cropped).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Bellingham%2C_Washington_%28cropped%29.jpg/1280px-Bellingham%2C_Washington_%28cropped%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Bellingham%2C_Washington_%28cropped%29.jpg/960px-Bellingham%2C_Washington_%28cropped%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Bellingham,_Washington_(cropped).jpg",
+        "author": "Quintin Soloviev",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1280,
+        "height": 768,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-25"
+      },
+      "reason": "downtown Bellingham with Mount Baker behind"
+    },
+    "bend": {
+      "photo": {
+        "file": "20210803 03 Bend, Oregon.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/20210803_03_Bend%2C_Oregon.jpg/1280px-20210803_03_Bend%2C_Oregon.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/20210803_03_Bend%2C_Oregon.jpg/960px-20210803_03_Bend%2C_Oregon.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:20210803_03_Bend,_Oregon.jpg",
+        "author": "David Wilson",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-25"
+      },
+      "reason": "a downtown street in Bend in summer"
+    },
     "blythe": {
       "photo": {
         "file": "Arizona and California State Line, the Colorado River, 2012 - panoramio.jpg",
@@ -55,6 +167,54 @@
       },
       "reason": "the Colorado River at Blythe, the state line with Arizona"
     },
+    "burns": {
+      "photo": {
+        "file": "BroadwayBurnsOR.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/BroadwayBurnsOR.jpg/1280px-BroadwayBurnsOR.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/BroadwayBurnsOR.jpg/960px-BroadwayBurnsOR.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:BroadwayBurnsOR.jpg",
+        "author": "Cacophony",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 639,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "Broadway, the main street of Burns"
+    },
+    "camp-verde": {
+      "photo": {
+        "file": "2016-366-205 Turn up the Monsoon to 11 (27891462433).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/2016-366-205_Turn_up_the_Monsoon_to_11_%2827891462433%29.jpg/1920px-2016-366-205_Turn_up_the_Monsoon_to_11_%2827891462433%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/2016-366-205_Turn_up_the_Monsoon_to_11_%2827891462433%29.jpg/960px-2016-366-205_Turn_up_the_Monsoon_to_11_%2827891462433%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2016-366-205_Turn_up_the_Monsoon_to_11_(27891462433).jpg",
+        "author": "cogdogblog",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1600,
+        "height": 862,
+        "from": "Commons category \"Camp Verde, Arizona\"",
+        "verified": "2026-10-22"
+      },
+      "reason": "high-desert sky and scrub near Camp Verde; the only landscape photo (the others are a thin banner, a historic portrait and a sunset silhouette)"
+    },
+    "carlsbad": {
+      "photo": {
+        "file": "Bridge over Pecos River - panoramio.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Bridge_over_Pecos_River_-_panoramio.jpg/1280px-Bridge_over_Pecos_River_-_panoramio.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Bridge_over_Pecos_River_-_panoramio.jpg/960px-Bridge_over_Pecos_River_-_panoramio.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Bridge_over_Pecos_River_-_panoramio.jpg",
+        "author": "Ryan Leon",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 853,
+        "from": "Commons category \"Carlsbad, New Mexico\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "the Pecos River crossing in Carlsbad"
+    },
     "carson-city": {
       "photo": {
         "file": "Nevada State Museum.jpg",
@@ -70,6 +230,70 @@
         "verified": "2026-10-21"
       },
       "reason": "the Nevada State Capitol in Carson City at night"
+    },
+    "clifton": {
+      "photo": {
+        "file": "Clifton, AZ train station.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Clifton%2C_AZ_train_station.jpg/1920px-Clifton%2C_AZ_train_station.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Clifton%2C_AZ_train_station.jpg/960px-Clifton%2C_AZ_train_station.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Clifton,_AZ_train_station.jpg",
+        "author": "Ron Reiring",
+        "licence": "CC BY-SA 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "width": 1600,
+        "height": 1074,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-22"
+      },
+      "reason": "the historic Clifton railroad depot below the canyon walls"
+    },
+    "clovis": {
+      "photo": {
+        "file": "Aerial view of Clovis, New Mexico skyline.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Aerial_view_of_Clovis%2C_New_Mexico_skyline.jpg/1280px-Aerial_view_of_Clovis%2C_New_Mexico_skyline.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Aerial_view_of_Clovis%2C_New_Mexico_skyline.jpg/960px-Aerial_view_of_Clovis%2C_New_Mexico_skyline.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Clovis,_New_Mexico_skyline.jpg",
+        "author": "Quintin Soloviev",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1280,
+        "height": 816,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-25"
+      },
+      "reason": "aerial view of downtown Clovis"
+    },
+    "colville": {
+      "photo": {
+        "file": "Colville Flour Mill.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Colville_Flour_Mill.jpg/1280px-Colville_Flour_Mill.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Colville_Flour_Mill.jpg/960px-Colville_Flour_Mill.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Colville_Flour_Mill.jpg",
+        "author": "Crispin Stichart",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons category \"Colville, Washington\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "the historic flour mill on Main Street"
+    },
+    "coos-bay": {
+      "photo": {
+        "file": "Aerial view - Bunker Hill area of Coos Bay with Isthmus Slough Bridge (2005).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Aerial_view_-_Bunker_Hill_area_of_Coos_Bay_with_Isthmus_Slough_Bridge_%282005%29.jpg/1280px-Aerial_view_-_Bunker_Hill_area_of_Coos_Bay_with_Isthmus_Slough_Bridge_%282005%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Aerial_view_-_Bunker_Hill_area_of_Coos_Bay_with_Isthmus_Slough_Bridge_%282005%29.jpg/960px-Aerial_view_-_Bunker_Hill_area_of_Coos_Bay_with_Isthmus_Slough_Bridge_%282005%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Aerial_view_-_Bunker_Hill_area_of_Coos_Bay_with_Isthmus_Slough_Bridge_(2005).jpg",
+        "author": "Oregon Department of Transportation",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 1000,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "aerial view of the Bunker Hill area of Coos Bay and the bay"
     },
     "el-centro": {
       "photo": {
@@ -119,6 +343,22 @@
       },
       "reason": "Ely seen from the hills"
     },
+    "eugene": {
+      "photo": {
+        "file": "Eugene panorama.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Eugene_panorama.jpg/1280px-Eugene_panorama.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Eugene_panorama.jpg/960px-Eugene_panorama.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Eugene_panorama.jpg",
+        "author": "Ljmajer",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 530,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "Eugene spread across the Willamette Valley, seen from above"
+    },
     "eureka": {
       "photo": {
         "file": "Humboldt Bay and Eureka aerial view.jpg",
@@ -134,6 +374,54 @@
         "verified": "2026-10-21"
       },
       "reason": "aerial view of Humboldt Bay and Eureka"
+    },
+    "everett": {
+      "photo": {
+        "file": "Everett, Washington.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Everett%2C_Washington.jpg/1280px-Everett%2C_Washington.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Everett%2C_Washington.jpg/960px-Everett%2C_Washington.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Everett,_Washington.jpg",
+        "author": "Quintin Soloviev",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-25"
+      },
+      "reason": "aerial view of Everett and Port Gardner Bay"
+    },
+    "farmington": {
+      "photo": {
+        "file": "Aerial from SW NM 516 along Animas River, US 64 along San Juan River, Farmington NM.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Aerial_from_SW_NM_516_along_Animas_River%2C_US_64_along_San_Juan_River%2C_Farmington_NM.jpg/1280px-Aerial_from_SW_NM_516_along_Animas_River%2C_US_64_along_San_Juan_River%2C_Farmington_NM.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Aerial_from_SW_NM_516_along_Animas_River%2C_US_64_along_San_Juan_River%2C_Farmington_NM.jpg/960px-Aerial_from_SW_NM_516_along_Animas_River%2C_US_64_along_San_Juan_River%2C_Farmington_NM.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Aerial_from_SW_NM_516_along_Animas_River,_US_64_along_San_Juan_River,_Farmington_NM.jpg",
+        "author": "Dicklyon",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 962,
+        "from": "Commons category \"Farmington, New Mexico\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "aerial view of Farmington along the Animas and San Juan rivers"
+    },
+    "flagstaff": {
+      "photo": {
+        "file": "Atop Mount Elden.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/5/51/Atop_Mount_Elden.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Atop_Mount_Elden.jpg/960px-Atop_Mount_Elden.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Atop_Mount_Elden.jpg",
+        "author": "John Vetterli",
+        "licence": "CC BY-SA 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "width": 1600,
+        "height": 1067,
+        "from": "Commons category \"Flagstaff, Arizona\"",
+        "verified": "2026-10-22"
+      },
+      "reason": "Flagstaff seen from the forested hills"
     },
     "fresno": {
       "photo": {
@@ -151,6 +439,54 @@
       },
       "reason": "downtown Fresno skyline"
     },
+    "gallup": {
+      "photo": {
+        "file": "McKinley County New Mexico Court House.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/McKinley_County_New_Mexico_Court_House.jpg/1280px-McKinley_County_New_Mexico_Court_House.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/McKinley_County_New_Mexico_Court_House.jpg/960px-McKinley_County_New_Mexico_Court_House.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:McKinley_County_New_Mexico_Court_House.jpg",
+        "author": "AllenS",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 960,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "the McKinley County Courthouse in downtown Gallup"
+    },
+    "grand-canyon-village": {
+      "photo": {
+        "file": "Grand Canyon Village-Grand Canyon Railroad Station-1901-2.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg/1920px-Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg/960px-Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg",
+        "author": "Marine 69-71",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1600,
+        "height": 1200,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-22"
+      },
+      "reason": "the historic Grand Canyon Depot in the village"
+    },
+    "grand-coulee": {
+      "photo": {
+        "file": "Grand Coulee, WA — Main Street.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Grand_Coulee%2C_WA_%E2%80%94_Main_Street.jpg/1280px-Grand_Coulee%2C_WA_%E2%80%94_Main_Street.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Grand_Coulee%2C_WA_%E2%80%94_Main_Street.jpg/960px-Grand_Coulee%2C_WA_%E2%80%94_Main_Street.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Grand_Coulee,_WA_%E2%80%94_Main_Street.jpg",
+        "author": "Steven Pavlov",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 720,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "Main Street in Grand Coulee with the hills behind"
+    },
     "hilt": {
       "photo": {
         "file": "Roger Puta captured a runby at Hilt, CA in July 1982 at Semaphore 4020. Tunnel Motor SD45T-2 9184 led with more Tunnel Motors up front and mid-train -- 4 Photos (33081931672).jpg",
@@ -166,6 +502,22 @@
         "verified": "2026-10-21"
       },
       "reason": "freight train on the Siskiyou line near Hilt, mountains behind; the only free photos of the place show the railway"
+    },
+    "hobbs": {
+      "photo": {
+        "file": "Hobbs New Mexico Public Library.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Hobbs_New_Mexico_Public_Library.jpg/1280px-Hobbs_New_Mexico_Public_Library.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Hobbs_New_Mexico_Public_Library.jpg/960px-Hobbs_New_Mexico_Public_Library.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Hobbs_New_Mexico_Public_Library.jpg",
+        "author": "AllenS",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 960,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "the public library of Hobbs, a downtown building in daylight"
     },
     "huron": {
       "photo": {
@@ -215,6 +567,118 @@
       },
       "reason": "panorama of Jackpot on the Idaho state line"
     },
+    "kayenta": {
+      "photo": {
+        "file": "DESDE EL RINCON DE JOHN FORD - panoramio.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg/1920px-DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg/960px-DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg",
+        "author": "Manuel Velazquez",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+        "width": 1600,
+        "height": 1063,
+        "from": "Commons category \"Kayenta, Arizona\"",
+        "verified": "2026-10-22"
+      },
+      "reason": "Monument Valley buttes near Kayenta"
+    },
+    "kennewick": {
+      "photo": {
+        "file": "Kennewick-ColumbiaRiverAerial (31695765421).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Kennewick-ColumbiaRiverAerial_%2831695765421%29.jpg/1280px-Kennewick-ColumbiaRiverAerial_%2831695765421%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Kennewick-ColumbiaRiverAerial_%2831695765421%29.jpg/960px-Kennewick-ColumbiaRiverAerial_%2831695765421%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Kennewick-ColumbiaRiverAerial_(31695765421).jpg",
+        "author": "formulanone from Huntsville, United States",
+        "licence": "CC BY-SA 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Wikivoyage banner (P948)",
+        "verified": "2026-10-25"
+      },
+      "reason": "aerial view of Kennewick along the Columbia River"
+    },
+    "kingman": {
+      "photo": {
+        "file": "2012, View S, Kingman Cloudburst - panoramio.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/2012%2C_View_S%2C_Kingman_Cloudburst_-_panoramio.jpg/1920px-2012%2C_View_S%2C_Kingman_Cloudburst_-_panoramio.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/2012%2C_View_S%2C_Kingman_Cloudburst_-_panoramio.jpg/960px-2012%2C_View_S%2C_Kingman_Cloudburst_-_panoramio.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2012,_View_S,_Kingman_Cloudburst_-_panoramio.jpg",
+        "author": "Chris English",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1200,
+        "from": "Commons category \"Kingman, Arizona\"",
+        "verified": "2026-10-22"
+      },
+      "reason": "high desert at sunset near Kingman"
+    },
+    "klamath-falls": {
+      "photo": {
+        "file": "Klamath Falls (2022).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Klamath_Falls_%282022%29.jpg/1280px-Klamath_Falls_%282022%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Klamath_Falls_%282022%29.jpg/960px-Klamath_Falls_%282022%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Klamath_Falls_(2022).jpg",
+        "author": "Yuehai1981",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1280,
+        "height": 757,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-25"
+      },
+      "reason": "Klamath Falls and the lake with Mount Shasta in the distance"
+    },
+    "lake-havasu-city": {
+      "photo": {
+        "file": "London Bridge, Lake Havasu City - 2011 (Aerial Photo).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/London_Bridge%2C_Lake_Havasu_City_-_2011_%28Aerial_Photo%29.jpg/1920px-London_Bridge%2C_Lake_Havasu_City_-_2011_%28Aerial_Photo%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/London_Bridge%2C_Lake_Havasu_City_-_2011_%28Aerial_Photo%29.jpg/960px-London_Bridge%2C_Lake_Havasu_City_-_2011_%28Aerial_Photo%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:London_Bridge,_Lake_Havasu_City_-_2011_(Aerial_Photo).jpg",
+        "author": "S. Winkvist",
+        "licence": "CC0",
+        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 1600,
+        "height": 1067,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-22"
+      },
+      "reason": "aerial view of Lake Havasu City and London Bridge"
+    },
+    "lakeview": {
+      "photo": {
+        "file": "Lakeview, Oregon (3884211893).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Lakeview%2C_Oregon_%283884211893%29.jpg/1280px-Lakeview%2C_Oregon_%283884211893%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Lakeview%2C_Oregon_%283884211893%29.jpg/960px-Lakeview%2C_Oregon_%283884211893%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Lakeview,_Oregon_(3884211893).jpg",
+        "author": "brx0 from Portland, USA",
+        "licence": "CC BY-SA 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "historic brick buildings in downtown Lakeview"
+    },
+    "las-cruces": {
+      "photo": {
+        "file": "City of Las Cruces.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/City_of_Las_Cruces.jpg/1280px-City_of_Las_Cruces.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/City_of_Las_Cruces.jpg/960px-City_of_Las_Cruces.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:City_of_Las_Cruces.jpg",
+        "author": "Jpawela",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "the city in the Mesilla Valley with the Organ Mountains behind"
+    },
     "las-vegas": {
       "photo": {
         "file": "Center Strip Before Sunrise.jpg",
@@ -231,6 +695,22 @@
       },
       "reason": "the Las Vegas Strip at dusk"
     },
+    "longview": {
+      "photo": {
+        "file": "Longviewwa1.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Longviewwa1.jpg/1280px-Longviewwa1.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Longviewwa1.jpg/960px-Longviewwa1.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Longviewwa1.jpg",
+        "author": "khiara jones",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 960,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "a downtown street in Longview"
+    },
     "los-angeles": {
       "photo": {
         "file": "Los Angeles with Mount Baldy.jpg",
@@ -246,6 +726,22 @@
         "verified": "2026-10-21"
       },
       "reason": "downtown Los Angeles with snow on the San Gabriel Mountains"
+    },
+    "medford": {
+      "photo": {
+        "file": "Medford from Roxy Ann.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Medford_from_Roxy_Ann.jpg/1280px-Medford_from_Roxy_Ann.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Medford_from_Roxy_Ann.jpg/960px-Medford_from_Roxy_Ann.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Medford_from_Roxy_Ann.jpg",
+        "author": "ZabMilenko at English Wikipedia",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "Medford and the Rogue Valley seen from Roxy Ann Peak"
     },
     "modesto": {
       "photo": {
@@ -279,6 +775,38 @@
       },
       "reason": "desert highway near Mojave with Joshua trees"
     },
+    "newport": {
+      "photo": {
+        "file": "Newport.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Newport.jpg/1280px-Newport.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Newport.jpg/960px-Newport.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Newport.jpg",
+        "author": "Becherka",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1280,
+        "height": 960,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-25"
+      },
+      "reason": "the Yaquina Bay marina with the Yaquina Bay Bridge"
+    },
+    "nogales": {
+      "photo": {
+        "file": "Nogales.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/4/42/Nogales.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Nogales.jpg/960px-Nogales.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Nogales.jpg",
+        "author": "Salvador Vitanza",
+        "licence": "CC BY-SA 2.5",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "width": 1600,
+        "height": 1066,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-22"
+      },
+      "reason": "Nogales on its hills along the border"
+    },
     "oakland": {
       "photo": {
         "file": "OAKLAND, CA, USA - Skyline and Bridge.JPG",
@@ -294,6 +822,54 @@
         "verified": "2026-10-21"
       },
       "reason": "downtown Oakland with the Bay Bridge behind"
+    },
+    "olympia": {
+      "photo": {
+        "file": "Capitol Lake, Olympia, Washington, July 20, 2025 (cropped).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Capitol_Lake%2C_Olympia%2C_Washington%2C_July_20%2C_2025_%28cropped%29.jpg/1280px-Capitol_Lake%2C_Olympia%2C_Washington%2C_July_20%2C_2025_%28cropped%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Capitol_Lake%2C_Olympia%2C_Washington%2C_July_20%2C_2025_%28cropped%29.jpg/960px-Capitol_Lake%2C_Olympia%2C_Washington%2C_July_20%2C_2025_%28cropped%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Capitol_Lake,_Olympia,_Washington,_July_20,_2025_(cropped).jpg",
+        "author": "OceanLoop",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 641,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "Capitol Lake and downtown Olympia"
+    },
+    "omak": {
+      "photo": {
+        "file": "Omak, WA - bridge across the Okanagan River.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Omak%2C_WA_-_bridge_across_the_Okanagan_River.jpg/1280px-Omak%2C_WA_-_bridge_across_the_Okanagan_River.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Omak%2C_WA_-_bridge_across_the_Okanagan_River.jpg/960px-Omak%2C_WA_-_bridge_across_the_Okanagan_River.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Omak,_WA_-_bridge_across_the_Okanagan_River.jpg",
+        "author": "Joe Mabel",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "width": 1280,
+        "height": 960,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "the bridge across the Okanogan River in Omak"
+    },
+    "ontario": {
+      "photo": {
+        "file": "Park on Snake River in Ontario, Oregon 01.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Park_on_Snake_River_in_Ontario%2C_Oregon_01.jpg/1280px-Park_on_Snake_River_in_Ontario%2C_Oregon_01.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Park_on_Snake_River_in_Ontario%2C_Oregon_01.jpg/960px-Park_on_Snake_River_in_Ontario%2C_Oregon_01.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Park_on_Snake_River_in_Ontario,_Oregon_01.jpg",
+        "author": "Joe Mabel",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons category \"Ontario, Oregon\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a park on the Snake River in Ontario"
     },
     "oxnard": {
       "photo": {
@@ -311,6 +887,54 @@
       },
       "reason": "the Carnegie Art Museum in downtown Oxnard"
     },
+    "page": {
+      "photo": {
+        "file": "Lake Powell - Page, Arizona (50560887677).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Lake_Powell_-_Page%2C_Arizona_%2850560887677%29.jpg/1920px-Lake_Powell_-_Page%2C_Arizona_%2850560887677%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Lake_Powell_-_Page%2C_Arizona_%2850560887677%29.jpg/960px-Lake_Powell_-_Page%2C_Arizona_%2850560887677%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Lake_Powell_-_Page,_Arizona_(50560887677).jpg",
+        "author": "G. Lamar",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1600,
+        "height": 900,
+        "from": "Commons category \"Page, Arizona\"",
+        "verified": "2026-10-22"
+      },
+      "reason": "Lake Powell at Page under a dramatic sky"
+    },
+    "pendleton": {
+      "photo": {
+        "file": "Panoramic view of Pendleton, Oregon - June 2024.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Panoramic_view_of_Pendleton%2C_Oregon_-_June_2024.jpg/1280px-Panoramic_view_of_Pendleton%2C_Oregon_-_June_2024.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Panoramic_view_of_Pendleton%2C_Oregon_-_June_2024.jpg/960px-Panoramic_view_of_Pendleton%2C_Oregon_-_June_2024.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Pendleton,_Oregon_-_June_2024.jpg",
+        "author": "SounderBruce",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1280,
+        "height": 693,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-25"
+      },
+      "reason": "panoramic view of Pendleton in June 2024"
+    },
+    "phoenix": {
+      "photo": {
+        "file": "Downtown Phoenix Aerial Looking Northeast.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Downtown_Phoenix_Aerial_Looking_Northeast.jpg/1920px-Downtown_Phoenix_Aerial_Looking_Northeast.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Downtown_Phoenix_Aerial_Looking_Northeast.jpg/960px-Downtown_Phoenix_Aerial_Looking_Northeast.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Downtown_Phoenix_Aerial_Looking_Northeast.jpg",
+        "author": "DPPed",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1236,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-22"
+      },
+      "reason": "downtown Phoenix skyline with the mountains behind"
+    },
     "pioche": {
       "photo": {
         "file": "2015-01-15 12 29 35 View northeast across Pioche, Nevada from Nevada State Route 321.JPG",
@@ -327,6 +951,38 @@
       },
       "reason": "Pioche on its hillside with the valley behind"
     },
+    "port-angeles": {
+      "photo": {
+        "file": "Portangeles washington.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Portangeles_washington.jpg/1280px-Portangeles_washington.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Portangeles_washington.jpg/960px-Portangeles_washington.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Portangeles_washington.jpg",
+        "author": "own work",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "width": 1280,
+        "height": 960,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "the waterfront of Port Angeles with the Olympic Mountains behind"
+    },
+    "portland": {
+      "photo": {
+        "file": "Portland Oregon Aerial, June 2025.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Portland_Oregon_Aerial%2C_June_2025.jpg/1280px-Portland_Oregon_Aerial%2C_June_2025.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Portland_Oregon_Aerial%2C_June_2025.jpg/960px-Portland_Oregon_Aerial%2C_June_2025.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Portland_Oregon_Aerial,_June_2025.jpg",
+        "author": "Spicypepper999",
+        "licence": "CC0",
+        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 1280,
+        "height": 720,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-25"
+      },
+      "reason": "aerial view of downtown Portland with Mount Hood"
+    },
     "primm": {
       "photo": {
         "file": "Primmphoto.jpg",
@@ -342,6 +998,22 @@
         "verified": "2026-10-21"
       },
       "reason": "the casinos of Primm by Interstate 15"
+    },
+    "raton": {
+      "photo": {
+        "file": "Raton, New Mexico.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Raton%2C_New_Mexico.jpg/1280px-Raton%2C_New_Mexico.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Raton%2C_New_Mexico.jpg/960px-Raton%2C_New_Mexico.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Raton,_New_Mexico.jpg",
+        "author": "Quintin Soloviev",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-25"
+      },
+      "reason": "aerial view of downtown Raton with the mesa behind"
     },
     "redding": {
       "photo": {
@@ -375,6 +1047,22 @@
       },
       "reason": "aerial view of downtown Reno"
     },
+    "roswell": {
+      "photo": {
+        "file": "Roswell NM Main Street.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Roswell_NM_Main_Street.jpg/1280px-Roswell_NM_Main_Street.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Roswell_NM_Main_Street.jpg/960px-Roswell_NM_Main_Street.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Roswell_NM_Main_Street.jpg",
+        "author": "Phil Campbell",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "Main Street in Roswell"
+    },
     "sacramento": {
       "photo": {
         "file": "Sacramento, California skyline in 2023.jpg",
@@ -390,6 +1078,22 @@
         "verified": "2026-10-21"
       },
       "reason": "Sacramento skyline with the Tower Bridge"
+    },
+    "salem": {
+      "photo": {
+        "file": "Salem Oregon downtown.JPG",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Salem_Oregon_downtown.JPG/1280px-Salem_Oregon_downtown.JPG",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Salem_Oregon_downtown.JPG/960px-Salem_Oregon_downtown.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:Salem_Oregon_downtown.JPG",
+        "author": "M.O. Stevens",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1280,
+        "height": 834,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-25"
+      },
+      "reason": "downtown Salem seen from above"
     },
     "san-diego": {
       "photo": {
@@ -439,6 +1143,10 @@
       },
       "reason": "palm-lined street in San Jose in clear light"
     },
+    "san-simon": {
+      "photo": null,
+      "reason": "no free photo of the town on Commons that passes the rules; the wider search of phase B6 (2026-10-25) found only the San Simon Valley and River, not the town"
+    },
     "santa-cruz": {
       "photo": {
         "file": "Mission Santa Cruz (8321945663).jpg",
@@ -454,6 +1162,22 @@
         "verified": "2026-10-21"
       },
       "reason": "Mission Plaza in Santa Cruz; clear author credit (the boardwalk photo has no reliable author on Commons)"
+    },
+    "santa-fe": {
+      "photo": {
+        "file": "Palace of the Governors.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Palace_of_the_Governors.jpg/1280px-Palace_of_the_Governors.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Palace_of_the_Governors.jpg/960px-Palace_of_the_Governors.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Palace_of_the_Governors.jpg",
+        "author": "Tony Hisgett from Birmingham, UK",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 587,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-25"
+      },
+      "reason": "the Palace of the Governors on the Plaza"
     },
     "santa-maria": {
       "photo": {
@@ -471,249 +1195,21 @@
       },
       "reason": "aerial view of the city and the Santa Maria Valley towards the Pacific; found in the wider search of phase B6 (the earlier candidate was a thin banner)"
     },
-    "stockton": {
+    "seattle": {
       "photo": {
-        "file": "Aerial view of Stockton, California skyline.jpg",
-        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Aerial_view_of_Stockton%2C_California_skyline.jpg/1920px-Aerial_view_of_Stockton%2C_California_skyline.jpg",
-        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Aerial_view_of_Stockton%2C_California_skyline.jpg/960px-Aerial_view_of_Stockton%2C_California_skyline.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Stockton,_California_skyline.jpg",
-        "author": "Quintin Soloviev",
-        "licence": "CC BY 4.0",
-        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
-        "width": 1600,
-        "height": 987,
-        "from": "Wikidata image (P18)",
-        "verified": "2026-10-21"
-      },
-      "reason": "aerial view of downtown Stockton"
-    },
-    "tonopah": {
-      "photo": {
-        "file": "2013-09-19 12 59 58 View of downtown Tonopah, Nevada from the southwest.jpg",
-        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg/1920px-2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg",
-        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg/960px-2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:2013-09-19_12_59_58_View_of_downtown_Tonopah,_Nevada_from_the_southwest.jpg",
-        "author": "Famartin",
-        "licence": "CC BY-SA 3.0",
-        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "width": 1600,
-        "height": 1200,
-        "from": "Wikidata image (P18)",
-        "verified": "2026-10-21"
-      },
-      "reason": "Tonopah seen from the hills"
-    },
-    "truckee": {
-      "photo": {
-        "file": "Truckee.jpg",
-        "src": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Truckee.jpg",
-        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Truckee.jpg/960px-Truckee.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Truckee.jpg",
-        "author": "Finetooth",
-        "licence": "CC BY-SA 3.0",
-        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "width": 1600,
-        "height": 1018,
-        "from": "Wikidata image (P18)",
-        "verified": "2026-10-21"
-      },
-      "reason": "downtown Truckee with the Sierra Nevada behind"
-    },
-    "ukiah": {
-      "photo": {
-        "file": "Ukiah Civic Center.jpg",
-        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Ukiah_Civic_Center.jpg/1920px-Ukiah_Civic_Center.jpg",
-        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Ukiah_Civic_Center.jpg/960px-Ukiah_Civic_Center.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Ukiah_Civic_Center.jpg",
-        "author": "City of Ukiah - Dept. of Recreation",
+        "file": "Space Needle002.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Space_Needle002.jpg/1280px-Space_Needle002.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Space_Needle002.jpg/960px-Space_Needle002.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Space_Needle002.jpg",
+        "author": "Rattlhed at English Wikipedia",
         "licence": "Public domain",
         "licenceUrl": null,
-        "width": 1600,
-        "height": 1200,
-        "from": "Wikipedia lead image",
-        "verified": "2026-10-21"
-      },
-      "reason": "Ukiah civic center"
-    },
-    "winnemucca": {
-      "photo": {
-        "file": "2008-07-12 Downtown Winnemucca.jpg",
-        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/2008-07-12_Downtown_Winnemucca.jpg/1920px-2008-07-12_Downtown_Winnemucca.jpg",
-        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/2008-07-12_Downtown_Winnemucca.jpg/960px-2008-07-12_Downtown_Winnemucca.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:2008-07-12_Downtown_Winnemucca.jpg",
-        "author": "Famartin",
-        "licence": "CC BY-SA 3.0",
-        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "width": 1600,
-        "height": 1200,
-        "from": "Commons category \"Winnemucca, Nevada\"",
-        "verified": "2026-10-21"
-      },
-      "reason": "main street of Winnemucca with the hills behind"
-    },
-    "camp-verde": {
-      "photo": {
-        "file": "2016-366-205 Turn up the Monsoon to 11 (27891462433).jpg",
-        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/2016-366-205_Turn_up_the_Monsoon_to_11_%2827891462433%29.jpg/1920px-2016-366-205_Turn_up_the_Monsoon_to_11_%2827891462433%29.jpg",
-        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/2016-366-205_Turn_up_the_Monsoon_to_11_%2827891462433%29.jpg/960px-2016-366-205_Turn_up_the_Monsoon_to_11_%2827891462433%29.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:2016-366-205_Turn_up_the_Monsoon_to_11_(27891462433).jpg",
-        "author": "cogdogblog",
-        "licence": "CC BY 2.0",
-        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
-        "width": 1600,
-        "height": 862,
-        "from": "Commons category \"Camp Verde, Arizona\"",
-        "verified": "2026-10-22"
-      },
-      "reason": "high-desert sky and scrub near Camp Verde; the only landscape photo (the others are a thin banner, a historic portrait and a sunset silhouette)"
-    },
-    "clifton": {
-      "photo": {
-        "file": "Clifton, AZ train station.jpg",
-        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Clifton%2C_AZ_train_station.jpg/1920px-Clifton%2C_AZ_train_station.jpg",
-        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Clifton%2C_AZ_train_station.jpg/960px-Clifton%2C_AZ_train_station.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Clifton,_AZ_train_station.jpg",
-        "author": "Ron Reiring",
-        "licence": "CC BY-SA 2.0",
-        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-        "width": 1600,
-        "height": 1074,
+        "width": 1280,
+        "height": 665,
         "from": "Wikidata image (P18)",
-        "verified": "2026-10-22"
+        "verified": "2026-10-25"
       },
-      "reason": "the historic Clifton railroad depot below the canyon walls"
-    },
-    "flagstaff": {
-      "photo": {
-        "file": "Atop Mount Elden.jpg",
-        "src": "https://upload.wikimedia.org/wikipedia/commons/5/51/Atop_Mount_Elden.jpg",
-        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Atop_Mount_Elden.jpg/960px-Atop_Mount_Elden.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Atop_Mount_Elden.jpg",
-        "author": "John Vetterli",
-        "licence": "CC BY-SA 2.0",
-        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-        "width": 1600,
-        "height": 1067,
-        "from": "Commons category \"Flagstaff, Arizona\"",
-        "verified": "2026-10-22"
-      },
-      "reason": "Flagstaff seen from the forested hills"
-    },
-    "grand-canyon-village": {
-      "photo": {
-        "file": "Grand Canyon Village-Grand Canyon Railroad Station-1901-2.jpg",
-        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg/1920px-Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg",
-        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg/960px-Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_Village-Grand_Canyon_Railroad_Station-1901-2.jpg",
-        "author": "Marine 69-71",
-        "licence": "CC BY-SA 4.0",
-        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "width": 1600,
-        "height": 1200,
-        "from": "Wikidata image (P18)",
-        "verified": "2026-10-22"
-      },
-      "reason": "the historic Grand Canyon Depot in the village"
-    },
-    "kayenta": {
-      "photo": {
-        "file": "DESDE EL RINCON DE JOHN FORD - panoramio.jpg",
-        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg/1920px-DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg",
-        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg/960px-DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:DESDE_EL_RINCON_DE_JOHN_FORD_-_panoramio.jpg",
-        "author": "Manuel Velazquez",
-        "licence": "CC BY 3.0",
-        "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
-        "width": 1600,
-        "height": 1063,
-        "from": "Commons category \"Kayenta, Arizona\"",
-        "verified": "2026-10-22"
-      },
-      "reason": "Monument Valley buttes near Kayenta"
-    },
-    "kingman": {
-      "photo": {
-        "file": "2012, View S, Kingman Cloudburst - panoramio.jpg",
-        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/2012%2C_View_S%2C_Kingman_Cloudburst_-_panoramio.jpg/1920px-2012%2C_View_S%2C_Kingman_Cloudburst_-_panoramio.jpg",
-        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/2012%2C_View_S%2C_Kingman_Cloudburst_-_panoramio.jpg/960px-2012%2C_View_S%2C_Kingman_Cloudburst_-_panoramio.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:2012,_View_S,_Kingman_Cloudburst_-_panoramio.jpg",
-        "author": "Chris English",
-        "licence": "CC BY-SA 3.0",
-        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "width": 1600,
-        "height": 1200,
-        "from": "Commons category \"Kingman, Arizona\"",
-        "verified": "2026-10-22"
-      },
-      "reason": "high desert at sunset near Kingman"
-    },
-    "lake-havasu-city": {
-      "photo": {
-        "file": "London Bridge, Lake Havasu City - 2011 (Aerial Photo).jpg",
-        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/London_Bridge%2C_Lake_Havasu_City_-_2011_%28Aerial_Photo%29.jpg/1920px-London_Bridge%2C_Lake_Havasu_City_-_2011_%28Aerial_Photo%29.jpg",
-        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/London_Bridge%2C_Lake_Havasu_City_-_2011_%28Aerial_Photo%29.jpg/960px-London_Bridge%2C_Lake_Havasu_City_-_2011_%28Aerial_Photo%29.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:London_Bridge,_Lake_Havasu_City_-_2011_(Aerial_Photo).jpg",
-        "author": "S. Winkvist",
-        "licence": "CC0",
-        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "width": 1600,
-        "height": 1067,
-        "from": "Wikidata image (P18)",
-        "verified": "2026-10-22"
-      },
-      "reason": "aerial view of Lake Havasu City and London Bridge"
-    },
-    "nogales": {
-      "photo": {
-        "file": "Nogales.jpg",
-        "src": "https://upload.wikimedia.org/wikipedia/commons/4/42/Nogales.jpg",
-        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Nogales.jpg/960px-Nogales.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Nogales.jpg",
-        "author": "Salvador Vitanza",
-        "licence": "CC BY-SA 2.5",
-        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.5",
-        "width": 1600,
-        "height": 1066,
-        "from": "Wikidata image (P18)",
-        "verified": "2026-10-22"
-      },
-      "reason": "Nogales on its hills along the border"
-    },
-    "page": {
-      "photo": {
-        "file": "Lake Powell - Page, Arizona (50560887677).jpg",
-        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Lake_Powell_-_Page%2C_Arizona_%2850560887677%29.jpg/1920px-Lake_Powell_-_Page%2C_Arizona_%2850560887677%29.jpg",
-        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Lake_Powell_-_Page%2C_Arizona_%2850560887677%29.jpg/960px-Lake_Powell_-_Page%2C_Arizona_%2850560887677%29.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Lake_Powell_-_Page,_Arizona_(50560887677).jpg",
-        "author": "G. Lamar",
-        "licence": "CC BY 2.0",
-        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
-        "width": 1600,
-        "height": 900,
-        "from": "Commons category \"Page, Arizona\"",
-        "verified": "2026-10-22"
-      },
-      "reason": "Lake Powell at Page under a dramatic sky"
-    },
-    "phoenix": {
-      "photo": {
-        "file": "Downtown Phoenix Aerial Looking Northeast.jpg",
-        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Downtown_Phoenix_Aerial_Looking_Northeast.jpg/1920px-Downtown_Phoenix_Aerial_Looking_Northeast.jpg",
-        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Downtown_Phoenix_Aerial_Looking_Northeast.jpg/960px-Downtown_Phoenix_Aerial_Looking_Northeast.jpg",
-        "page": "https://commons.wikimedia.org/wiki/File:Downtown_Phoenix_Aerial_Looking_Northeast.jpg",
-        "author": "DPPed",
-        "licence": "CC BY-SA 3.0",
-        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "width": 1600,
-        "height": 1236,
-        "from": "Wikipedia lead image",
-        "verified": "2026-10-22"
-      },
-      "reason": "downtown Phoenix skyline with the mountains behind"
-    },
-    "san-simon": {
-      "photo": null,
-      "reason": "no free photo of the town on Commons that passes the rules; the wider search of phase B6 (2026-10-25) found only the San Simon Valley and River, not the town"
+      "reason": "the Space Needle and the downtown skyline with Mount Rainier at dusk"
     },
     "show-low": {
       "photo": {
@@ -747,6 +1243,118 @@
       },
       "reason": "Sierra Vista at dusk"
     },
+    "socorro": {
+      "photo": {
+        "file": "Junction 181 (9410826034).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Junction_181_%289410826034%29.jpg/1280px-Junction_181_%289410826034%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Junction_181_%289410826034%29.jpg/960px-Junction_181_%289410826034%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Junction_181_(9410826034).jpg",
+        "author": "Lachlan Donald from Melbourne, Australia",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 854,
+        "from": "Commons category \"Socorro, New Mexico\"",
+        "verified": "2026-10-25"
+      },
+      "reason": "a road junction in Socorro under a wide desert sky"
+    },
+    "spokane": {
+      "photo": {
+        "file": "Spokane, Washington skyline (cropped).jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Spokane%2C_Washington_skyline_%28cropped%29.jpg/1280px-Spokane%2C_Washington_skyline_%28cropped%29.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Spokane%2C_Washington_skyline_%28cropped%29.jpg/960px-Spokane%2C_Washington_skyline_%28cropped%29.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Spokane,_Washington_skyline_(cropped).jpg",
+        "author": "Quintin Soloviev",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1280,
+        "height": 704,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-25"
+      },
+      "reason": "downtown Spokane and the Spokane River"
+    },
+    "stockton": {
+      "photo": {
+        "file": "Aerial view of Stockton, California skyline.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Aerial_view_of_Stockton%2C_California_skyline.jpg/1920px-Aerial_view_of_Stockton%2C_California_skyline.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Aerial_view_of_Stockton%2C_California_skyline.jpg/960px-Aerial_view_of_Stockton%2C_California_skyline.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Stockton,_California_skyline.jpg",
+        "author": "Quintin Soloviev",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1600,
+        "height": 987,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "aerial view of downtown Stockton"
+    },
+    "tacoma": {
+      "photo": {
+        "file": "Tacoma Washington Aerial, June 2025.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Tacoma_Washington_Aerial%2C_June_2025.jpg/1280px-Tacoma_Washington_Aerial%2C_June_2025.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Tacoma_Washington_Aerial%2C_June_2025.jpg/960px-Tacoma_Washington_Aerial%2C_June_2025.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Tacoma_Washington_Aerial,_June_2025.jpg",
+        "author": "Spicypepper999",
+        "licence": "CC0",
+        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 1280,
+        "height": 720,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "aerial view of Tacoma with Mount Rainier"
+    },
+    "the-dalles": {
+      "photo": {
+        "file": "The Dalles OR with Columbia River.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/The_Dalles_OR_with_Columbia_River.jpg/1280px-The_Dalles_OR_with_Columbia_River.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/The_Dalles_OR_with_Columbia_River.jpg/960px-The_Dalles_OR_with_Columbia_River.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:The_Dalles_OR_with_Columbia_River.jpg",
+        "author": "Glenn Scofield Williams",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "width": 1280,
+        "height": 960,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-25"
+      },
+      "reason": "The Dalles and the Columbia River seen from the hills"
+    },
+    "tonopah": {
+      "photo": {
+        "file": "2013-09-19 12 59 58 View of downtown Tonopah, Nevada from the southwest.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg/1920px-2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg/960px-2013-09-19_12_59_58_View_of_downtown_Tonopah%2C_Nevada_from_the_southwest.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2013-09-19_12_59_58_View_of_downtown_Tonopah,_Nevada_from_the_southwest.jpg",
+        "author": "Famartin",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1200,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "Tonopah seen from the hills"
+    },
+    "truckee": {
+      "photo": {
+        "file": "Truckee.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Truckee.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Truckee.jpg/960px-Truckee.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Truckee.jpg",
+        "author": "Finetooth",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1018,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-21"
+      },
+      "reason": "downtown Truckee with the Sierra Nevada behind"
+    },
     "tucson": {
       "photo": {
         "file": "CatalinasAndTucsonAZ.jpg",
@@ -763,6 +1371,74 @@
       },
       "reason": "downtown Tucson with the Santa Catalina Mountains"
     },
+    "tucumcari": {
+      "photo": {
+        "file": "Quay County Courthouse.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Quay_County_Courthouse.jpg/1280px-Quay_County_Courthouse.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Quay_County_Courthouse.jpg/960px-Quay_County_Courthouse.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Quay_County_Courthouse.jpg",
+        "author": "Wordbuilder",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+        "width": 1280,
+        "height": 928,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "the Quay County Courthouse in Tucumcari"
+    },
+    "ukiah": {
+      "photo": {
+        "file": "Ukiah Civic Center.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Ukiah_Civic_Center.jpg/1920px-Ukiah_Civic_Center.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Ukiah_Civic_Center.jpg/960px-Ukiah_Civic_Center.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Ukiah_Civic_Center.jpg",
+        "author": "City of Ukiah - Dept. of Recreation",
+        "licence": "Public domain",
+        "licenceUrl": null,
+        "width": 1600,
+        "height": 1200,
+        "from": "Wikipedia lead image",
+        "verified": "2026-10-21"
+      },
+      "reason": "Ukiah civic center"
+    },
+    "vancouver": {
+      "photo": {
+        "file": "Vancouver WA Aerial, June 2024.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Vancouver_WA_Aerial%2C_June_2024.jpg/1280px-Vancouver_WA_Aerial%2C_June_2024.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Vancouver_WA_Aerial%2C_June_2024.jpg/960px-Vancouver_WA_Aerial%2C_June_2024.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Vancouver_WA_Aerial,_June_2024.jpg",
+        "author": "Spicypepper999",
+        "licence": "CC0",
+        "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "width": 1280,
+        "height": 549,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "the Vancouver waterfront on the Columbia River with Mount St. Helens"
+    },
+    "wenatchee": {
+      "photo": null,
+      "reason": "no free photo of the city among the candidates (a 1951 postal cover and power lines on a ridge)"
+    },
+    "winnemucca": {
+      "photo": {
+        "file": "2008-07-12 Downtown Winnemucca.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/2008-07-12_Downtown_Winnemucca.jpg/1920px-2008-07-12_Downtown_Winnemucca.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/2008-07-12_Downtown_Winnemucca.jpg/960px-2008-07-12_Downtown_Winnemucca.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:2008-07-12_Downtown_Winnemucca.jpg",
+        "author": "Famartin",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "width": 1600,
+        "height": 1200,
+        "from": "Commons category \"Winnemucca, Nevada\"",
+        "verified": "2026-10-21"
+      },
+      "reason": "main street of Winnemucca with the hills behind"
+    },
     "winslow": {
       "photo": {
         "file": "Arizona US 66 Standing on the Corner Park Winslow Arizona.jpg",
@@ -778,6 +1454,22 @@
         "verified": "2026-10-22"
       },
       "reason": "Standin on the Corner park on Route 66 in Winslow"
+    },
+    "yakima": {
+      "photo": {
+        "file": "Yakima, Washington skyline.jpg",
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Yakima%2C_Washington_skyline.jpg/1280px-Yakima%2C_Washington_skyline.jpg",
+        "src960": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Yakima%2C_Washington_skyline.jpg/960px-Yakima%2C_Washington_skyline.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Yakima,_Washington_skyline.jpg",
+        "author": "Quintin Soloviev",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "width": 1280,
+        "height": 768,
+        "from": "Wikidata image (P18)",
+        "verified": "2026-10-25"
+      },
+      "reason": "the Yakima skyline in daylight"
     },
     "yuma": {
       "photo": {

@@ -1,18 +1,19 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getI18n } from '../../i18n/index.mjs';
+import { stateList } from '../../lib/ats.mjs';
 import { scope, cities, photos } from '../../lib/data.mjs';
 import { statesWithCities, cityPath } from '../../lib/ats.mjs';
 
-const { t } = getI18n();
+const { t, meta } = getI18n();
 const states = statesWithCities(scope, cities);
 ---
-<BaseLayout title={t('atsIndex.title')} description={t('atsIndex.metaDescription')}>
+<BaseLayout title={t('atsIndex.title')} description={t('atsIndex.metaDescription', { states: stateList(scope, meta.intlLocale) })}>
   <div class="container page">
     <header class="head">
       <p class="eyebrow">{t('atsIndex.eyebrow')}</p>
       <h1>{t('atsIndex.title')}</h1>
-      <p class="soft lead">{t('atsIndex.lead')}</p>
+      <p class="soft lead">{t('atsIndex.lead', { states: stateList(scope, meta.intlLocale) })}</p>
     </header>
 
     {states.map((s) => (

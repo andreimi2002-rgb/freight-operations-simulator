@@ -11,6 +11,11 @@ export function cityParams(cities) {
   return cities.map((c) => ({ params: { state: c.state.toLowerCase(), city: c.id }, props: { cityId: c.id } }));
 }
 
+/** Names of the states in scope as one phrase ("California, Nevada and Arizona"), for texts with {states}. */
+export function stateList(scope, locale = 'en-US') {
+  return new Intl.ListFormat(locale, { style: 'long', type: 'conjunction' }).format(scope.states.map((s) => s.name));
+}
+
 /** States in scope order, each with its cities sorted by name. */
 export function statesWithCities(scope, cities) {
   return scope.states.map((s) => ({

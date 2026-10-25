@@ -164,7 +164,8 @@ function render(box, data, t, opts = {}) {
 
   // ---- View (pan / zoom) ----------------------------------------------------------
   const full = data.bounds.slice();
-  const initial = focus ?? [full[0] - 30, full[1] - 30, full[2] + 30, full[3] + 30];
+  // City labels sit to the right of their dot, so the full view keeps more room on the right.
+  const initial = focus ?? [full[0] - 30, full[1] - 30, full[2] + 110, full[3] + 30];
   let view = { x: 0, y: 0, k: 1 };
   const size = () => [box.clientWidth || 600, box.clientHeight || 400];
   const fit = (b) => {

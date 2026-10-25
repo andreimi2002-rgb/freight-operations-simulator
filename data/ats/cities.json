@@ -5,14 +5,17 @@
     "licence": "CC BY-SA 4.0",
     "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "attribution": "Game data from Truck Simulator Wiki contributors (trucksimulator.wiki.gg), CC BY-SA 4.0.",
-    "retrieved": "2026-10-22",
+    "retrieved": "2026-10-25",
     "generator": "scripts/ats/collect.mjs",
     "userAgent": "FreightWorldDataBot/0.1 (https://github.com/andreimi2002-rgb/freight-operations-simulator; fan project data collection)",
     "game": "ats",
     "states": [
       "CA",
       "NV",
-      "AZ"
+      "AZ",
+      "NM",
+      "OR",
+      "WA"
     ],
     "description": "Current cities of the game in the states in scope (removed and future cities excluded). Depots come from the company pages.",
     "extraSources": [
@@ -25,9 +28,512 @@
         "note": "Coordinates of the real-world city (P625), matched through the English Wikipedia article \"<City>, <State>\" and checked to lie in the state. They are real-world coordinates, not positions on the game map."
       }
     ],
-    "count": 50
+    "count": 94
   },
   "cities": [
+    {
+      "id": "aberdeen",
+      "gameId": null,
+      "name": "Aberdeen",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 46.97536,
+        "lon": -123.81572,
+        "wikidata": "Q233808"
+      },
+      "companyCount": 5,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_hrv",
+          "type": "Harvest site"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw1",
+          "type": "Small sawmill"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "page-and-price-paper",
+          "depotGameId": "pnp_wd_pln",
+          "type": "Plant"
+        },
+        {
+          "company": "sea-horizon",
+          "depotGameId": "sh_shp_mar",
+          "type": "Marina"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "rest"
+      ],
+      "facilityDetails": [
+        "Rest stop"
+      ],
+      "roads": [
+        "US 12",
+        "US 101"
+      ],
+      "neighbors": [
+        "astoria",
+        "olympia",
+        "port-angeles"
+      ],
+      "landmarks": [
+        "Aberdeen Station",
+        "Chehalis River Bridge",
+        "Heron Street Bridge",
+        "Hoquiam River Bridge (Hoquiam)",
+        "Riverside Avenue Bridge (Hoquiam)",
+        "Wishkah River Bridge",
+        "Wishkah River Railway Bridge"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Aberdeen_(Washington)",
+        "revid": 312375
+      }
+    },
+    {
+      "id": "alamogordo",
+      "gameId": null,
+      "name": "Alamogordo",
+      "state": "NM",
+      "dlc": "new-mexico",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Denver"
+      },
+      "coordinates": {
+        "lat": 32.90464,
+        "lon": -105.94183,
+        "wikidata": "Q467617"
+      },
+      "companyCount": 4,
+      "depots": [
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "On the south side of the city"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [
+        "International"
+      ],
+      "facilities": [
+        "dealer",
+        "gas",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Gallon Oil gas station",
+        "International truck dealer",
+        "Gallon Oil truck stop"
+      ],
+      "roads": [
+        "US 54",
+        "US 70",
+        "US 82"
+      ],
+      "neighbors": [
+        "artesia",
+        "las-cruces",
+        "tucumcari"
+      ],
+      "landmarks": [
+        "Scrap Metal Roadrunner"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Alamogordo",
+        "revid": 273756
+      }
+    },
+    {
+      "id": "albuquerque",
+      "gameId": null,
+      "name": "Albuquerque",
+      "state": "NM",
+      "dlc": "new-mexico",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Denver"
+      },
+      "coordinates": {
+        "lat": 35.08444,
+        "lon": -106.65028,
+        "wikidata": "Q34804"
+      },
+      "companyCount": 14,
+      "depots": [
+        {
+          "company": "abq-cargo-center",
+          "depotGameId": "aport_abq",
+          "type": null
+        },
+        {
+          "company": "american-lines",
+          "depotGameId": "aml_rail_wrk",
+          "type": "Work site"
+        },
+        {
+          "company": "apade",
+          "depotGameId": "apa_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "avalanche-steel",
+          "depotGameId": "avs_met_scr",
+          "type": "Scrapyard"
+        },
+        {
+          "company": "bloomscape",
+          "depotGameId": "blo_frm_str",
+          "type": "Storage"
+        },
+        {
+          "company": "hms-machinery",
+          "depotGameId": "hms_con_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "phoenix",
+          "depotGameId": "pho_oil_gst",
+          "type": null,
+          "location": "At the intersection of NM 500 and Central Avenue south of I-40 exit 149 on the east side of the city"
+        },
+        {
+          "company": "pioneer",
+          "depotGameId": "pio_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "rail-export",
+          "depotGameId": "re_train",
+          "type": "Depot"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "ultimus",
+          "depotGameId": "aport_ult",
+          "type": "Airplane"
+        },
+        {
+          "company": "usbb",
+          "depotGameId": "usb_food_pln",
+          "type": "Food plant"
+        },
+        {
+          "company": "wds",
+          "depotGameId": "wds_wst_whs",
+          "type": "Waste transfer station"
+        }
+      ],
+      "truckDealers": [
+        "Peterbilt"
+      ],
+      "facilities": [
+        "airport",
+        "dealer",
+        "garage",
+        "gas",
+        "recruitment",
+        "rest",
+        "service",
+        "viewpoint",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Recruitment agency",
+        "Peterbilt truck dealer",
+        "Gallon Oil truck stop",
+        "Phoenix truck stop with a service shop and weigh station"
+      ],
+      "roads": [
+        "I-25",
+        "I-40",
+        "US 85",
+        "US 550",
+        "NM 47",
+        "NM 333",
+        "NM 500",
+        "NM 556"
+      ],
+      "neighbors": [
+        "farmington",
+        "gallup",
+        "las-cruces",
+        "santa-fe",
+        "socorro",
+        "tucumcari"
+      ],
+      "landmarks": [
+        "66 Diner",
+        "500 Marquette",
+        "Albuquerque City Government Center",
+        "Albuquerque International Sunport",
+        "Albuquerque Marriott Pyramid North",
+        "Albuquerque Plaza",
+        "Alvarado Transportation Center",
+        "Bank of the West Building",
+        "Bernalillo County Courthouse",
+        "Big I",
+        "Blue Cross and Blue Shield of New Mexico",
+        "Century 14 Downtown",
+        "Crowne Plaza Albuquerque",
+        "Dennis Chavez Federal Building",
+        "DoubleTree by Hilton Hotel Albuquerque",
+        "Embassy Suites by Hilton Albuquerque",
+        "Encino Terrace",
+        "FBI Albuquerque Division",
+        "First Presbyterian Church",
+        "Gail Ryba Memorial Bridge",
+        "Heart Hospital of New Mexico",
+        "Hilton Garden Inn Albuquerque Uptown",
+        "Home2 Suites by Hilton Albuquerque/Downtown-University",
+        "KiMo Theatre",
+        "La Luz de Amistad Park",
+        "Lovelace Medical Center",
+        "Marriott Albuquerque",
+        "Metropolitan Courthouse",
+        "New Mexico Bank & Trust Building",
+        "New Mexico Scientific Laboratories",
+        "Old Town / Plaza Vieja",
+        "Pan American Building",
+        "Park Square",
+        "Pete V. Domenici United States Courthouse",
+        "Plaza del Sol",
+        "Positive Energy of New Mexico",
+        "Presbyterian Hospital",
+        "Residences at Anasazi",
+        "Route 66 Crossing sign",
+        "Sandia Resort & Casino",
+        "Santa Fe Machine Shop",
+        "The Carlisle",
+        "The Clyde Hotel",
+        "Third & Central",
+        "Tricentennial Towers",
+        "Tucanos Brazilian Grill",
+        "University of New Mexico Championship Golf Course sign",
+        "University of New Mexico Comprehensive Cancer Center",
+        "University of New Mexico Health Sciences Center Business & Communications Center",
+        "Volcanes Commons",
+        "Wells Fargo Bank Building",
+        "West Central/Rio Grande markers",
+        "Whitener Building"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Albuquerque",
+        "revid": 296705
+      }
+    },
+    {
+      "id": "artesia",
+      "gameId": null,
+      "name": "Artesia",
+      "state": "NM",
+      "dlc": "new-mexico",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Denver"
+      },
+      "coordinates": {
+        "lat": 32.84278,
+        "lon": -104.41222,
+        "wikidata": "Q707902"
+      },
+      "companyCount": 4,
+      "depots": [
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_farm",
+          "type": "Farm"
+        },
+        {
+          "company": "chemso",
+          "depotGameId": "chm_che_plnt",
+          "type": "Chemical plant"
+        },
+        {
+          "company": "rail-export",
+          "depotGameId": "re_train",
+          "type": "Depot"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Aron gas station (2x)",
+        "Rest stop",
+        "Service shop"
+      ],
+      "roads": [
+        "US 82",
+        "US 285"
+      ],
+      "neighbors": [
+        "alamogordo",
+        "carlsbad",
+        "hobbs",
+        "roswell"
+      ],
+      "landmarks": [
+        "Artesia sign",
+        "El Vaquero",
+        "F-84F Thunderstreak",
+        "First American Bank",
+        "First Lady of Artesia",
+        "Hotel Artesia",
+        "Land of the Sun Theatre",
+        "Navajo Refinery",
+        "The Derrick Floor",
+        "Trail Boss"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Artesia",
+        "revid": 296269
+      }
+    },
+    {
+      "id": "astoria",
+      "gameId": null,
+      "name": "Astoria",
+      "state": "OR",
+      "dlc": "oregon",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 46.18333,
+        "lon": -123.83472,
+        "wikidata": "Q490724"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "apade",
+          "depotGameId": "apa_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_plnt",
+          "type": "Cement plant"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_hrv",
+          "type": "Harvest site"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw1",
+          "type": "Small sawmill"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "viewpoint"
+      ],
+      "facilityDetails": [
+        "NAF gas station",
+        "Rest stop"
+      ],
+      "roads": [
+        "US 30",
+        "US 101",
+        "US 101 Bus."
+      ],
+      "neighbors": [
+        "aberdeen",
+        "longview",
+        "newport",
+        "portland"
+      ],
+      "landmarks": [
+        "Astor Building / Liberty Theater",
+        "Astoria–Megler Bridge",
+        "Astoria Riverfront Trolley",
+        "Astoria Victory Monument",
+        "Bethany Free Lutheran Church",
+        "Columbia River Maritime Museum",
+        "John Jacob Astor Hotel",
+        "New Youngs Bay Bridge",
+        "Owens Adair Apartments"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Astoria",
+        "revid": 285675
+      }
+    },
     {
       "id": "bakersfield",
       "gameId": null,
@@ -235,6 +741,200 @@
       }
     },
     {
+      "id": "bellingham",
+      "gameId": null,
+      "name": "Bellingham",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 48.75439,
+        "lon": -122.47883,
+        "wikidata": "Q430267"
+      },
+      "companyCount": 5,
+      "depots": [
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_hrv",
+          "type": "Harvest site"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw1",
+          "type": "Small sawmill"
+        },
+        {
+          "company": "fish-tail-foods",
+          "depotGameId": "ftf_food_pln",
+          "type": "Factory"
+        },
+        {
+          "company": "sea-horizon",
+          "depotGameId": "sh_shp_pln",
+          "type": "Plant"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [
+        "International"
+      ],
+      "facilities": [
+        "dealer",
+        "gas",
+        "recruitment",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Aron gas station with a rest stop",
+        "Recruitment agency",
+        "International truck dealer"
+      ],
+      "roads": [
+        "I-5",
+        "Minor road"
+      ],
+      "neighbors": [
+        "everett",
+        "seattle"
+      ],
+      "landmarks": [
+        "Bellingham International Airport",
+        "Bellingham Herald Building",
+        "Maritime Heritage Park",
+        "Rocket Donuts mural and sculpture",
+        "Sentinel",
+        "St. Paul's Episcopal Church",
+        "Whatcom Museum"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Bellingham",
+        "revid": 299246
+      }
+    },
+    {
+      "id": "bend",
+      "gameId": null,
+      "name": "Bend",
+      "state": "OR",
+      "dlc": "oregon",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 44.05639,
+        "lon": -121.30806,
+        "wikidata": "Q671288"
+      },
+      "companyCount": 8,
+      "depots": [
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_farm",
+          "type": "Farm"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_hrv",
+          "type": "Harvest site"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw",
+          "type": "Large sawmill"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "heartwood-furniture",
+          "depotGameId": "hf_wd_pln",
+          "type": "Factory"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit2",
+          "type": "House construction site"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "venture",
+          "depotGameId": "ven_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "garage",
+        "gas",
+        "hotel",
+        "recruitment",
+        "rest"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Aron gas station",
+        "Aron gas station with a rest stop in Terrebonne",
+        "NAF gas station",
+        "Hotel",
+        "Recruitment agency"
+      ],
+      "roads": [
+        "US 20",
+        "US 97",
+        "US 97 Bus."
+      ],
+      "neighbors": [
+        "burns",
+        "klamath-falls",
+        "newport",
+        "salem",
+        "the-dalles",
+        "yakima"
+      ],
+      "landmarks": [
+        "14 Northwest Kearny Avenue",
+        "2115 Northeast Division Street",
+        "Bend Police Department",
+        "Boot Barn",
+        "Christian Life Center",
+        "Department of Motor Vehicles Bend",
+        "Shilo Inn",
+        "Sun Mountain Fun Center"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Bend",
+        "revid": 298906
+      }
+    },
+    {
       "id": "blythe",
       "gameId": null,
       "name": "Blythe",
@@ -296,6 +996,81 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Blythe",
         "revid": 296951
+      }
+    },
+    {
+      "id": "burns",
+      "gameId": null,
+      "name": "Burns",
+      "state": "OR",
+      "dlc": "oregon",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 43.58626,
+        "lon": -119.0541,
+        "wikidata": "Q6178257"
+      },
+      "companyCount": 5,
+      "depots": [
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit2",
+          "type": "House construction site"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Aron gas station",
+        "Gallon Oil truck stop with a service shop and weigh station"
+      ],
+      "roads": [
+        "US 20",
+        "US 395",
+        "OR 78"
+      ],
+      "neighbors": [
+        "bend",
+        "lakeview",
+        "ontario",
+        "pendleton",
+        "winnemucca"
+      ],
+      "landmarks": [
+        "Burns High School",
+        "Desert Historic Theatre",
+        "Eddie's Truck & Auto Center",
+        "Harney County Historical Society Museum",
+        "Sewell's Taxidermy",
+        "Ye Olde Castle Family Restaurant & Antique Emporium"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Burns",
+        "revid": 299440
       }
     },
     {
@@ -377,6 +1152,76 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Camp_Verde",
         "revid": 296019
+      }
+    },
+    {
+      "id": "carlsbad",
+      "gameId": null,
+      "name": "Carlsbad",
+      "state": "NM",
+      "dlc": "new-mexico",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Denver"
+      },
+      "coordinates": {
+        "lat": 32.42575,
+        "lon": -104.23761,
+        "wikidata": "Q852577"
+      },
+      "companyCount": 4,
+      "depots": [
+        {
+          "company": "apade",
+          "depotGameId": "apa_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit1",
+          "type": "Building foundation"
+        },
+        {
+          "company": "tidbit",
+          "depotGameId": "tid_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "recruitment",
+        "rest"
+      ],
+      "facilityDetails": [
+        "Aron gas station",
+        "Recruitment agency",
+        "Rest stop"
+      ],
+      "roads": [
+        "US 62",
+        "US 180",
+        "US 285"
+      ],
+      "neighbors": [
+        "artesia",
+        "hobbs"
+      ],
+      "landmarks": [
+        "Eddy County Administration Complex",
+        "First National Bank of Eddy",
+        "Pecos River",
+        "Welcome to Carlsbad sign"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Carlsbad_(New_Mexico)",
+        "revid": 273970
       }
     },
     {
@@ -512,6 +1357,265 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Clifton",
         "revid": 294526
+      }
+    },
+    {
+      "id": "clovis",
+      "gameId": null,
+      "name": "Clovis",
+      "state": "NM",
+      "dlc": "new-mexico",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Denver"
+      },
+      "coordinates": {
+        "lat": 34.40547,
+        "lon": -103.20508,
+        "wikidata": "Q985559"
+      },
+      "companyCount": 5,
+      "depots": [
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "global-mills",
+          "depotGameId": "gm_chs_plnt",
+          "type": "Dairy plant"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit1",
+          "type": "Building foundation"
+        },
+        {
+          "company": "rail-export",
+          "depotGameId": "re_train",
+          "type": "Depot"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Gallon Oil gas station with a rest stop",
+        "Service shop"
+      ],
+      "roads": [
+        "US 60",
+        "US 70",
+        "US 84"
+      ],
+      "neighbors": [
+        "roswell",
+        "santa-fe"
+      ],
+      "landmarks": [
+        "CCG Grain Terminal",
+        "Mission Garden of Memories Cemetery",
+        "Veterans Park",
+        "Welcome to Clovis sign"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Clovis",
+        "revid": 261098
+      }
+    },
+    {
+      "id": "colville",
+      "gameId": null,
+      "name": "Colville",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 48.545,
+        "lon": -117.90083,
+        "wikidata": "Q2601326"
+      },
+      "companyCount": 8,
+      "depots": [
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_farm",
+          "type": "Farm"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw1",
+          "type": "Small sawmill"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "Along US 395"
+        },
+        {
+          "company": "sea-horizon",
+          "depotGameId": "sh_shp_mar",
+          "type": "Marina"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm_grg",
+          "type": "Garage"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest"
+      ],
+      "facilityDetails": [
+        "Gallon Oil gas station with a rest stop",
+        "Rest stop"
+      ],
+      "roads": [
+        "US 395",
+        "WA 20"
+      ],
+      "neighbors": [
+        "omak",
+        "spokane"
+      ],
+      "landmarks": [
+        "173 South Main Street",
+        "Colville \"C\"",
+        "Colville National Forest Headquarters",
+        "Grace Evangelical Free Church",
+        "Immaculate Conception Catholic Church",
+        "John Acorn Memorial Court",
+        "KeyBank"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Colville",
+        "revid": 285683
+      }
+    },
+    {
+      "id": "coos-bay",
+      "gameId": null,
+      "name": "Coos Bay",
+      "state": "OR",
+      "dlc": "oregon",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 43.36722,
+        "lon": -124.21333,
+        "wikidata": "Q913266"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw1",
+          "type": "Small sawmill"
+        },
+        {
+          "company": "olthon-homes",
+          "depotGameId": "oh_con_hom",
+          "type": "Factory"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm_grg",
+          "type": "Garage"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "hotel",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Gallon Oil gas station (x2)",
+        "Hotel",
+        "Service shop with a rest stop"
+      ],
+      "roads": [
+        "US 101"
+      ],
+      "neighbors": [
+        "eureka",
+        "newport"
+      ],
+      "landmarks": [
+        "Blue Heron Bistro",
+        "Conde B. McCullough Memorial Bridge",
+        "Coos Bay Boardwalk",
+        "Coos Bay Swing Span Bridge",
+        "Coos Bay Visitor Information Center",
+        "Egyptian Theatre",
+        "Simpson Park",
+        "Tioga Building",
+        "Tugboat mural"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Coos_Bay",
+        "revid": 298717
       }
     },
     {
@@ -756,6 +1860,109 @@
       }
     },
     {
+      "id": "eugene",
+      "gameId": null,
+      "name": "Eugene",
+      "state": "OR",
+      "dlc": "oregon",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 44.05222,
+        "lon": -123.0925,
+        "wikidata": "Q171224"
+      },
+      "companyCount": 8,
+      "depots": [
+        {
+          "company": "42-print",
+          "depotGameId": "42p_print",
+          "type": "Printing plant"
+        },
+        {
+          "company": "apade",
+          "depotGameId": "apa_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_plnt",
+          "type": "Cement plant"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "page-and-price-paper",
+          "depotGameId": "pnp_wd_pln",
+          "type": "Plant"
+        },
+        {
+          "company": "steeler",
+          "depotGameId": "st_met_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "venture",
+          "depotGameId": "ven_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [
+        "Volvo"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "recruitment",
+        "rest",
+        "service",
+        "viewpoint"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "NAF gas station",
+        "Recruitment agency",
+        "Volvo truck dealer"
+      ],
+      "roads": [
+        "I-5",
+        "I-105",
+        "OR 99",
+        "OR 126",
+        "OR 569"
+      ],
+      "neighbors": [
+        "klamath-falls",
+        "medford",
+        "portland",
+        "salem"
+      ],
+      "landmarks": [
+        "Candlewood Suites Eugene Springfield",
+        "Flame",
+        "I-5 Gateway Pedestrian Bridge",
+        "Kalapuya Sculpture",
+        "Oregon Community Credit Union",
+        "The Ten Coburg"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Eugene",
+        "revid": 261122
+      }
+    },
+    {
       "id": "eureka",
       "gameId": null,
       "name": "Eureka",
@@ -822,6 +2029,7 @@
         "Minor road"
       ],
       "neighbors": [
+        "coos-bay",
         "redding",
         "san-francisco",
         "ukiah"
@@ -838,6 +2046,184 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Eureka",
         "revid": 297723
+      }
+    },
+    {
+      "id": "everett",
+      "gameId": null,
+      "name": "Everett",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 47.96333,
+        "lon": -122.20056,
+        "wikidata": "Q392599"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "avalanche-steel",
+          "depotGameId": "avs_met_scr",
+          "type": "Scrapyard"
+        },
+        {
+          "company": "darwing",
+          "depotGameId": "dw_air_pln",
+          "type": "Aircraft plant"
+        },
+        {
+          "company": "hms-machinery",
+          "depotGameId": "hms_con_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "sea-horizon",
+          "depotGameId": "sh_shp_pln",
+          "type": "Plant"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "airport",
+        "gas",
+        "hotel",
+        "viewpoint"
+      ],
+      "facilityDetails": [
+        "Aron gas station",
+        "Hotel"
+      ],
+      "roads": [
+        "I-5",
+        "US 2",
+        "WA 526",
+        "WA 529"
+      ],
+      "neighbors": [
+        "bellingham",
+        "seattle",
+        "wenatchee"
+      ],
+      "landmarks": [
+        "Angel of the Winds Arena",
+        "Bethany Christian Assembly",
+        "Boeing Everett Factory (in-game name: Darwing)",
+        "Everett City Hall",
+        "Everett Public Library",
+        "Kaiser Permanente Everett Medical Center",
+        "Key Bank Tower",
+        "Kimberly-Clark Warehouse",
+        "Lehigh Cement Dome",
+        "Port of Everett",
+        "Snohomish County Administration Building",
+        "Snohomish County Courthouse",
+        "Snohomish County Jail",
+        "Steamboat Slough Bridges"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Everett",
+        "revid": 299229
+      }
+    },
+    {
+      "id": "farmington",
+      "gameId": null,
+      "name": "Farmington",
+      "state": "NM",
+      "dlc": "new-mexico",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Denver"
+      },
+      "coordinates": {
+        "lat": 36.72911,
+        "lon": -108.20544,
+        "wikidata": "Q1012695"
+      },
+      "companyCount": 5,
+      "depots": [
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "Along USBUS 64"
+        },
+        {
+          "company": "hms-machinery",
+          "depotGameId": "hms_con_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "namiq",
+          "depotGameId": "nmq_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_grg",
+          "type": "Garage"
+        }
+      ],
+      "truckDealers": [
+        "Volvo"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "recruitment",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Gallon Oil gas station (2x)",
+        "NAF gas station",
+        "Recruitment agency",
+        "Rest stop",
+        "Service shop",
+        "Volvo truck dealer"
+      ],
+      "roads": [
+        "US 64",
+        "US 64 Bus.",
+        "US 550"
+      ],
+      "neighbors": [
+        "albuquerque",
+        "kayenta",
+        "raton"
+      ],
+      "landmarks": [
+        "Anasazi Inn",
+        "Animas River",
+        "Blake's Lotaburger",
+        "San Juan Regional Medical Center"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Farmington",
+        "revid": 285702
       }
     },
     {
@@ -914,6 +2300,7 @@
         "US 180"
       ],
       "neighbors": [
+        "albuquerque",
         "camp-verde",
         "grand-canyon-village",
         "kayenta",
@@ -1072,6 +2459,98 @@
       }
     },
     {
+      "id": "gallup",
+      "gameId": null,
+      "name": "Gallup",
+      "state": "NM",
+      "dlc": "new-mexico",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Denver"
+      },
+      "coordinates": {
+        "lat": 35.52361,
+        "lon": -108.73417,
+        "wikidata": "Q577981"
+      },
+      "companyCount": 7,
+      "depots": [
+        {
+          "company": "american-lines",
+          "depotGameId": "aml_rail_wrk",
+          "type": "Work site"
+        },
+        {
+          "company": "chemso",
+          "depotGameId": "chm_che_plnt",
+          "type": "Chemical plant"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_qry",
+          "type": "Quarry"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "field-force",
+          "depotGameId": "ffe_frm_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_grg",
+          "type": "Garage"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest"
+      ],
+      "facilityDetails": [
+        "Vortex truck stop"
+      ],
+      "roads": [
+        "I-40",
+        "BL 31",
+        "US 491",
+        "NM 118",
+        "NM 602"
+      ],
+      "neighbors": [
+        "albuquerque",
+        "farmington",
+        "flagstaff"
+      ],
+      "landmarks": [
+        "Desert Indian Traders",
+        "Fire Rock Navajo Casino",
+        "Gallup Cultural Center",
+        "Gallup-McKinley County Chamber of Commerce and Visitors Center",
+        "Galoop",
+        "Hilton Garden Inn Gallup",
+        "Indian Kachina Statue",
+        "Pow Wow Indian Jewelry",
+        "Turquoise Canyon Outlet",
+        "Welcome to Historic Downtown Gallup sign",
+        "Zuni Pueblo Pottery"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Gallup",
+        "revid": 296534
+      }
+    },
+    {
       "id": "grand-canyon-village",
       "gameId": null,
       "name": "Grand Canyon Village",
@@ -1136,6 +2615,73 @@
       }
     },
     {
+      "id": "grand-coulee",
+      "gameId": null,
+      "name": "Grand Coulee",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 47.93972,
+        "lon": -119.00167,
+        "wikidata": "Q1508192"
+      },
+      "companyCount": 4,
+      "depots": [
+        {
+          "company": "aron",
+          "depotGameId": "aro_oil_gst",
+          "type": null,
+          "location": "Along WA 155"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit2",
+          "type": "House construction site"
+        },
+        {
+          "company": "tidbit",
+          "depotGameId": "tid_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "viewpoint"
+      ],
+      "facilityDetails": [
+        "Aron gas station",
+        "Rest stop"
+      ],
+      "roads": [
+        "WA 155"
+      ],
+      "neighbors": [
+        "spokane",
+        "wenatchee"
+      ],
+      "landmarks": [
+        "Grand Coulee Bridge",
+        "Grand Coulee Dam",
+        "Grand Coulee Dam Visitor Center"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Grand_Coulee",
+        "revid": 299236
+      }
+    },
+    {
       "id": "hilt",
       "gameId": null,
       "name": "Hilt",
@@ -1175,12 +2721,87 @@
         "I-5"
       ],
       "neighbors": [
+        "medford",
+        "portland",
         "redding"
       ],
       "landmarks": [],
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Hilt",
         "revid": 296954
+      }
+    },
+    {
+      "id": "hobbs",
+      "gameId": null,
+      "name": "Hobbs",
+      "state": "NM",
+      "dlc": "new-mexico",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Denver"
+      },
+      "coordinates": {
+        "lat": 32.71222,
+        "lon": -103.14056,
+        "wikidata": "Q1010782"
+      },
+      "companyCount": 5,
+      "depots": [
+        {
+          "company": "charged",
+          "depotGameId": "cha_el_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [
+        "Kenworth"
+      ],
+      "facilities": [
+        "dealer",
+        "gas",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Gallon Oil gas station",
+        "Rest stop",
+        "Kenworth truck dealer"
+      ],
+      "roads": [
+        "US 62",
+        "US 180",
+        "NM 18",
+        "NM 218"
+      ],
+      "neighbors": [
+        "artesia",
+        "carlsbad"
+      ],
+      "landmarks": [
+        "Don Garey Tower",
+        "Hobbs NM sign",
+        "Lea County Regional Airport"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Hobbs",
+        "revid": 274647
       }
     },
     {
@@ -1490,6 +3111,106 @@
       }
     },
     {
+      "id": "kennewick",
+      "gameId": null,
+      "name": "Kennewick",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 46.20348,
+        "lon": -119.15927,
+        "wikidata": "Q844033"
+      },
+      "companyCount": 7,
+      "depots": [
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit2",
+          "type": "House construction site"
+        },
+        {
+          "company": "rail-export",
+          "depotGameId": "re_train",
+          "type": "Depot"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "garage",
+        "gas",
+        "rest",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Rest stop",
+        "Gallon Oil truck stop with a weigh station"
+      ],
+      "roads": [
+        "I-82",
+        "I-182",
+        "US 12",
+        "US 395",
+        "WA 397"
+      ],
+      "neighbors": [
+        "pendleton",
+        "spokane",
+        "yakima"
+      ],
+      "landmarks": [
+        "American Rock Products (Pasco)",
+        "Cedars Restaurant",
+        "Clover Island Inn",
+        "Clover Island Lighthouse",
+        "Columbia Point",
+        "Ed Hendler Bridge",
+        "El Chapala Mexican Restaurant",
+        "Ice Harbor Brewery",
+        "Kennewick-Pasco Bridge",
+        "Lampson International Building",
+        "North Pacific Grain Growers Grain Elevator",
+        "Osprey Pointe (Pasco)",
+        "Pasco Yard (Pasco)",
+        "Pioneer Memorial Bridge",
+        "Washington True Value Hardware & Furniture"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Kennewick",
+        "revid": 299498
+      }
+    },
+    {
       "id": "kingman",
       "gameId": null,
       "name": "Kingman",
@@ -1600,6 +3321,77 @@
       }
     },
     {
+      "id": "klamath-falls",
+      "gameId": null,
+      "name": "Klamath Falls",
+      "state": "OR",
+      "dlc": "oregon",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 42.22333,
+        "lon": -121.7775,
+        "wikidata": "Q846146"
+      },
+      "companyCount": 3,
+      "depots": [
+        {
+          "company": "avalanche-steel",
+          "depotGameId": "avs_met_scr",
+          "type": "Scrapyard"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw1",
+          "type": "Small sawmill"
+        },
+        {
+          "company": "heartwood-furniture",
+          "depotGameId": "hf_wd_pln",
+          "type": "Factory"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Aron gas station",
+        "Gallon Oil gas station with a rest stop",
+        "Weigh station (x2)"
+      ],
+      "roads": [
+        "US 97",
+        "US 97 Bus.",
+        "OR 39",
+        "OR 140"
+      ],
+      "neighbors": [
+        "bend",
+        "eugene",
+        "lakeview",
+        "medford",
+        "redding",
+        "reno",
+        "san-francisco",
+        "winnemucca"
+      ],
+      "landmarks": [
+        "Klamath Surgery Center",
+        "Pelican Cinema",
+        "Welcome to Klamath Falls sign"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Klamath_Falls",
+        "revid": 298876
+      }
+    },
+    {
       "id": "lake-havasu-city",
       "gameId": null,
       "name": "Lake Havasu City",
@@ -1677,6 +3469,188 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Lake_Havasu_City",
         "revid": 311499
+      }
+    },
+    {
+      "id": "lakeview",
+      "gameId": null,
+      "name": "Lakeview",
+      "state": "OR",
+      "dlc": "oregon",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 42.18889,
+        "lon": -120.34583,
+        "wikidata": "Q1975591"
+      },
+      "companyCount": 5,
+      "depots": [
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw",
+          "type": "Large sawmill"
+        },
+        {
+          "company": "heartwood-furniture",
+          "depotGameId": "hf_wd_pln",
+          "type": "Factory"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit2",
+          "type": "House construction site"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Aron gas station with a service shop and rest stop"
+      ],
+      "roads": [
+        "US 395",
+        "OR 140"
+      ],
+      "neighbors": [
+        "bend",
+        "burns",
+        "klamath-falls",
+        "reno",
+        "winnemucca"
+      ],
+      "landmarks": [
+        "Alger Theater",
+        "Independent Order of Odd Fellows Cemetery",
+        "Lake County Courthouse",
+        "Lakeview Interagency Office",
+        "Lakeview Water Tanks",
+        "Old Perpetual",
+        "Safeway sign",
+        "St. Luke's Episcopal Church",
+        "Tallman",
+        "Tall Town Cafe & Bakery",
+        "William P. Heryford House"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Lakeview",
+        "revid": 285661
+      }
+    },
+    {
+      "id": "las-cruces",
+      "gameId": null,
+      "name": "Las Cruces",
+      "state": "NM",
+      "dlc": "new-mexico",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Denver"
+      },
+      "coordinates": {
+        "lat": 32.31403,
+        "lon": -106.77981,
+        "wikidata": "Q33264"
+      },
+      "companyCount": 7,
+      "depots": [
+        {
+          "company": "apade",
+          "depotGameId": "apa_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "charged",
+          "depotGameId": "cha_el_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "At I-10 exit 139"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "garage",
+        "gas",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Gallon Oil gas station",
+        "Rest stop",
+        "Service shop",
+        "Gallon Oil truck stop"
+      ],
+      "roads": [
+        "I-10",
+        "I-25",
+        "US 70",
+        "US 85",
+        "US 180",
+        "NM 292"
+      ],
+      "neighbors": [
+        "alamogordo",
+        "albuquerque",
+        "clifton",
+        "san-simon",
+        "socorro",
+        "tucson"
+      ],
+      "landmarks": [
+        "Agua Fria",
+        "City of Las Cruces City Hall",
+        "Emmanuel Lutheran Church",
+        "La Entrada",
+        "Las Cruces Scenic Overlook Rest Area",
+        "Recycled Roadrunner Sculpture",
+        "Third Judicial District Court",
+        "Thomas Branigan Memorial Library"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Las_Cruces",
+        "revid": 296130
       }
     },
     {
@@ -1820,6 +3794,72 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Las_Vegas",
         "revid": 306698
+      }
+    },
+    {
+      "id": "longview",
+      "gameId": null,
+      "name": "Longview",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 46.14,
+        "lon": -122.9375,
+        "wikidata": "Q983801"
+      },
+      "companyCount": 2,
+      "depots": [
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_hrv",
+          "type": "Harvest site"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw1",
+          "type": "Small sawmill"
+        },
+        {
+          "company": "page-and-price-paper",
+          "depotGameId": "pnp_wd_pln",
+          "type": "Plant"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest"
+      ],
+      "facilityDetails": [
+        "Aron gas station",
+        "Rest stop"
+      ],
+      "roads": [
+        "I-5",
+        "US 12",
+        "WA 432",
+        "WA 433"
+      ],
+      "neighbors": [
+        "astoria",
+        "olympia",
+        "portland",
+        "seattle",
+        "vancouver",
+        "yakima"
+      ],
+      "landmarks": [
+        "Lewis & Clark Bridge",
+        "Tennant Way Bridge"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Longview_(Washington)",
+        "revid": 299219
       }
     },
     {
@@ -2038,6 +4078,119 @@
       }
     },
     {
+      "id": "medford",
+      "gameId": null,
+      "name": "Medford",
+      "state": "OR",
+      "dlc": "oregon",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 42.33194,
+        "lon": -122.86167,
+        "wikidata": "Q836663"
+      },
+      "companyCount": 10,
+      "depots": [
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_farm",
+          "type": "Farm"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_hrv",
+          "type": "Harvest site"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw",
+          "type": "Large sawmill"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "At I-5 exit 99 in Canyonville"
+        },
+        {
+          "company": "heartwood-furniture",
+          "depotGameId": "hf_wd_pln",
+          "type": "Factory"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit2",
+          "type": "House construction site"
+        },
+        {
+          "company": "tidbit",
+          "depotGameId": "tid_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "venture",
+          "depotGameId": "ven_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [
+        "Peterbilt"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "hotel",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Hotel",
+        "Peterbilt truck dealer",
+        "Gallon Oil truck stop with a service shop"
+      ],
+      "roads": [
+        "I-5",
+        "OR 62",
+        "OR 99",
+        "OR 140"
+      ],
+      "neighbors": [
+        "coos-bay",
+        "eugene",
+        "eureka",
+        "hilt",
+        "klamath-falls",
+        "portland",
+        "redding"
+      ],
+      "landmarks": [
+        "Black Rock Coffee Bar",
+        "Rogue Valley Family Fun Center",
+        "Veterans Memorial Park",
+        "Witham Truck Stop"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Medford",
+        "revid": 285662
+      }
+    },
+    {
       "id": "modesto",
       "gameId": null,
       "name": "Modesto",
@@ -2228,6 +4381,101 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Mojave",
         "revid": 296959
+      }
+    },
+    {
+      "id": "newport",
+      "gameId": null,
+      "name": "Newport",
+      "state": "OR",
+      "dlc": "oregon",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 44.63667,
+        "lon": -124.05333,
+        "wikidata": "Q824111"
+      },
+      "companyCount": 7,
+      "depots": [
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_hrv",
+          "type": "Harvest site"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw",
+          "type": "Large sawmill"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "page-and-price-paper",
+          "depotGameId": "pnp_wd_pln",
+          "type": "Plant"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit2",
+          "type": "House construction site"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "tidbit",
+          "depotGameId": "tid_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service",
+        "viewpoint"
+      ],
+      "facilityDetails": [
+        "Gallon Oil gas station (x2)",
+        "Rest stop",
+        "Service shop (2x)"
+      ],
+      "roads": [
+        "US 20",
+        "US 101"
+      ],
+      "neighbors": [
+        "astoria",
+        "bend",
+        "coos-bay",
+        "salem"
+      ],
+      "landmarks": [
+        "Aquarium Village",
+        "Gray Whales off Oregon Coast",
+        "Newport City Hall",
+        "Sacred Heart Catholic Church",
+        "U.S. Coast Guard Air Station Yaquina Bay",
+        "Yaquina Bay Bridge",
+        "Yaquina Head Lighthouse"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Newport",
+        "revid": 298883
       }
     },
     {
@@ -2434,6 +4682,273 @@
       }
     },
     {
+      "id": "olympia",
+      "gameId": null,
+      "name": "Olympia",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 47.0425,
+        "lon": -122.89306,
+        "wikidata": "Q42735"
+      },
+      "companyCount": 8,
+      "depots": [
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw1",
+          "type": "Small sawmill"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "sea-horizon",
+          "depotGameId": "sh_shp_mar",
+          "type": "Marina"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "steeler",
+          "depotGameId": "st_met_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "garage",
+        "recruitment",
+        "service"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Recruitment agency",
+        "Service shop"
+      ],
+      "roads": [
+        "I-5",
+        "US 101",
+        "WA 8"
+      ],
+      "neighbors": [
+        "aberdeen",
+        "longview",
+        "port-angeles",
+        "portland",
+        "seattle",
+        "tacoma",
+        "yakima"
+      ],
+      "landmarks": [
+        "Capitol Boulevard Bridge",
+        "Filling Station Espresso",
+        "Olympia Municipal Court",
+        "Views on Fifth",
+        "Washington State Capitol",
+        "Washington Supreme Court"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Olympia",
+        "revid": 299230
+      }
+    },
+    {
+      "id": "omak",
+      "gameId": null,
+      "name": "Omak",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 48.4125,
+        "lon": -119.537,
+        "wikidata": "Q1509671"
+      },
+      "companyCount": 3,
+      "depots": [
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "On Riverside Dr USBUS 97 near the intersection with US 97 WA 20"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest"
+      ],
+      "facilityDetails": [
+        "Gallon Oil truck stop"
+      ],
+      "roads": [
+        "US 97",
+        "US 97 Bus.",
+        "WA 20"
+      ],
+      "neighbors": [
+        "colville",
+        "port-angeles",
+        "wenatchee"
+      ],
+      "landmarks": [
+        "Omak Travel Plaza",
+        "Stampede Mini Market",
+        "Valley Lanes Bowling and Arcade"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Omak",
+        "revid": 275301
+      }
+    },
+    {
+      "id": "ontario",
+      "gameId": null,
+      "name": "Ontario",
+      "state": "OR",
+      "dlc": "oregon",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Denver"
+      },
+      "coordinates": {
+        "lat": 44.02694,
+        "lon": -116.96861,
+        "wikidata": "Q1639059"
+      },
+      "companyCount": 9,
+      "depots": [
+        {
+          "company": "aron",
+          "depotGameId": "aro_oil_gst",
+          "type": null,
+          "location": "West of I-84 exit 376"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_plnt",
+          "type": "Cement plant"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "global-mills",
+          "depotGameId": "gm_food_plnt",
+          "type": "Food plant"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "olthon-homes",
+          "depotGameId": "oh_con_hom",
+          "type": "Factory"
+        },
+        {
+          "company": "steeler",
+          "depotGameId": "st_met_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        },
+        {
+          "company": "tidbit",
+          "depotGameId": "tid_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "garage",
+        "gas",
+        "recruitment",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Recruitment agency",
+        "Aron truck stop with a service shop and weigh station"
+      ],
+      "roads": [
+        "I-84",
+        "US 20",
+        "US 30",
+        "US 30 Bus.",
+        "OR 201"
+      ],
+      "neighbors": [
+        "burns",
+        "pendleton",
+        "portland",
+        "winnemucca"
+      ],
+      "landmarks": [
+        "Bethany Presbyterian Church",
+        "East Idaho Avenue Railway Overpass",
+        "Ontario High School",
+        "Ontario Municipal Airport",
+        "Oregon entrance",
+        "Rusty's Pancake & Steakhouse",
+        "The Outdoorsman",
+        "Veteran's Memorial Hall"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Ontario",
+        "revid": 291703
+      }
+    },
+    {
       "id": "oxnard",
       "gameId": null,
       "name": "Oxnard",
@@ -2613,6 +5128,93 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Page",
         "revid": 301219
+      }
+    },
+    {
+      "id": "pendleton",
+      "gameId": null,
+      "name": "Pendleton",
+      "state": "OR",
+      "dlc": "oregon",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 45.66972,
+        "lon": -118.79139,
+        "wikidata": "Q944507"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "apade",
+          "depotGameId": "apa_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "avalanche-steel",
+          "depotGameId": "avs_met_scr",
+          "type": "Scrapyard"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw1",
+          "type": "Small sawmill"
+        },
+        {
+          "company": "hms-machinery",
+          "depotGameId": "hms_con_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "steeler",
+          "depotGameId": "st_met_wrk",
+          "type": "Workshop"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [
+        "Mack"
+      ],
+      "facilities": [
+        "dealer",
+        "gas",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "NAF gas station",
+        "Rest stop",
+        "Mack truck dealer"
+      ],
+      "roads": [
+        "I-84",
+        "US 30",
+        "US 395"
+      ],
+      "neighbors": [
+        "burns",
+        "kennewick",
+        "ontario",
+        "portland",
+        "spokane",
+        "the-dalles",
+        "yakima"
+      ],
+      "landmarks": [
+        "Eastern Oregon Correctional Institution",
+        "Pendleton Bronze Trail - Cattle Drive",
+        "PGG KcKennon Station"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Pendleton",
+        "revid": 299462
       }
     },
     {
@@ -2806,6 +5408,269 @@
       }
     },
     {
+      "id": "port-angeles",
+      "gameId": null,
+      "name": "Port Angeles",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 48.1131,
+        "lon": -123.441,
+        "wikidata": "Q852584"
+      },
+      "companyCount": 9,
+      "depots": [
+        {
+          "company": "apade",
+          "depotGameId": "apa_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "avalanche-steel",
+          "depotGameId": "avs_met_scr",
+          "type": "Scrapyard"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_saw",
+          "type": "Large sawmill"
+        },
+        {
+          "company": "hms-machinery",
+          "depotGameId": "hms_con_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "page-and-price-paper",
+          "depotGameId": "pnp_wd_pln",
+          "type": "Plant"
+        },
+        {
+          "company": "sea-horizon",
+          "depotGameId": "sh_shp_mar",
+          "type": "Marina"
+        },
+        {
+          "company": "tidbit",
+          "depotGameId": "tid_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "hotel",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Aron gas station with a rest stop",
+        "Hotel",
+        "Service shop",
+        "Service shop with a rest stop"
+      ],
+      "roads": [
+        "US 101"
+      ],
+      "neighbors": [
+        "aberdeen",
+        "olympia",
+        "omak"
+      ],
+      "landmarks": [
+        "Clallam County Courthouse",
+        "Conrad Dyar Memorial Fountain",
+        "Gateway Transit Center",
+        "Jefferson Elementary School",
+        "Masonic Temple",
+        "McKinley Paper Company",
+        "Port Angeles Port Log Yard",
+        "Port Angeles Wharf",
+        "Sluicing the Hogback",
+        "U.S. Coast Guard Air Station Port Angeles"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Port_Angeles",
+        "revid": 285713
+      }
+    },
+    {
+      "id": "portland",
+      "gameId": null,
+      "name": "Portland",
+      "state": "OR",
+      "dlc": "oregon",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 45.515,
+        "lon": -122.67917,
+        "wikidata": "Q6106"
+      },
+      "companyCount": 10,
+      "depots": [
+        {
+          "company": "avalanche-steel",
+          "depotGameId": "avs_met_scr",
+          "type": "Scrapyard"
+        },
+        {
+          "company": "chemso",
+          "depotGameId": "chm_che_str",
+          "type": "Chemical storage"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "haddock-shipyard",
+          "depotGameId": "hds_met_shp",
+          "type": "Shipyard"
+        },
+        {
+          "company": "naf",
+          "depotGameId": "naf_oil_gst",
+          "type": null,
+          "location": "On Marine Dr east of I-5 exit 307"
+        },
+        {
+          "company": "portland-cargo-central",
+          "depotGameId": "aport_pcc",
+          "type": null
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "tidbit",
+          "depotGameId": "tid_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [
+        "Kenworth"
+      ],
+      "facilities": [
+        "airport",
+        "dealer",
+        "garage",
+        "gas",
+        "port",
+        "rest",
+        "service",
+        "viewpoint",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Aron gas station",
+        "Service shop",
+        "Kenworth truck dealer",
+        "NAF truck stop with a weigh station",
+        "Phoenix truck stop with a weigh station in Troutdale"
+      ],
+      "roads": [
+        "I-5",
+        "I-84",
+        "I-205",
+        "I-405",
+        "US 30"
+      ],
+      "neighbors": [
+        "astoria",
+        "salem",
+        "seattle",
+        "the-dalles",
+        "vancouver"
+      ],
+      "landmarks": [
+        "Burnside Bridge",
+        "Fremont Bridge",
+        "Hawthorne Bridge",
+        "Marquam Bridge",
+        "Steel Bridge",
+        "Tilikum Crossing",
+        "200 Market",
+        "2100 South River Parkway",
+        "American Plaza Towers",
+        "Bank of America Center",
+        "Block 17",
+        "Centennial Mills",
+        "Columbia Square",
+        "Congress Center",
+        "Cosmopolitan on the Park",
+        "Crown Plaza",
+        "Edith Green – Wendell Wyatt Federal Building",
+        "First & Main",
+        "Harrison Tower Apartments",
+        "KOIN Tower",
+        "MachineWorks",
+        "Mark O. Hatfield U.S. Courthouse",
+        "Moda Tower",
+        "Multnomah County Justice Center",
+        "NV",
+        "One Main Place",
+        "One Pacific Square",
+        "One World Trade Center",
+        "PacWest Center",
+        "Portland Marriott Downtown Waterfront",
+        "Residence Inn Portland Downtown/RiverPlace",
+        "Slabtown Center",
+        "Standard Insurance Center",
+        "Standard Plaza",
+        "The Encore",
+        "The Wyatt",
+        "Umpqua Bank Plaza",
+        "Waterfront Pearl",
+        "Wells Fargo Center",
+        "Moda Center",
+        "Oregon Convention Center",
+        "Parkrose/Sumner Transit Center",
+        "Portland International Airport",
+        "Portlander Inn",
+        "Swan Island Shipyard",
+        "Western Star Manufacturing Plant",
+        "Atwater Place",
+        "John Ross Tower",
+        "Mirabella Portland",
+        "OHSU Center for Health and Healing",
+        "Oregon Health & Science University",
+        "Portland Aerial Tram",
+        "Riva on the Park",
+        "Robertson Collaborative Life Sciences Building",
+        "The Ardea",
+        "The Meriwether",
+        "The Strand",
+        "USS Blueback"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Portland",
+        "revid": 299226
+      }
+    },
+    {
       "id": "primm",
       "gameId": null,
       "name": "Primm",
@@ -2865,6 +5730,95 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Primm",
         "revid": 298317
+      }
+    },
+    {
+      "id": "raton",
+      "gameId": null,
+      "name": "Raton",
+      "state": "NM",
+      "dlc": "new-mexico",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Denver"
+      },
+      "coordinates": {
+        "lat": 36.89694,
+        "lon": -104.44,
+        "wikidata": "Q990990"
+      },
+      "companyCount": 5,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "namiq",
+          "depotGameId": "nmq_min_plnt",
+          "type": "Cement plant"
+        },
+        {
+          "company": "namiq",
+          "depotGameId": "nmq_min_qry",
+          "type": "Quarry"
+        },
+        {
+          "company": "namiq",
+          "depotGameId": "nmq_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "rail-export",
+          "depotGameId": "re_train",
+          "type": "Depot"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Service shop",
+        "Gallon Oil truck stop",
+        "NAF truck stop"
+      ],
+      "roads": [
+        "I-25",
+        "BL 17",
+        "US 64",
+        "US 85",
+        "US 87"
+      ],
+      "neighbors": [
+        "farmington",
+        "santa-fe"
+      ],
+      "landmarks": [
+        "El Raton Theatre",
+        "M42 Duster Tank",
+        "Old Pass Gallery",
+        "Raton Power Plant",
+        "Raton Sign",
+        "Raton Station"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Raton",
+        "revid": 296131
       }
     },
     {
@@ -2979,8 +5933,12 @@
         "Minor road"
       ],
       "neighbors": [
+        "bend",
         "eureka",
         "hilt",
+        "klamath-falls",
+        "lakeview",
+        "portland",
         "reno",
         "sacramento"
       ],
@@ -3074,6 +6032,7 @@
       "neighbors": [
         "carson-city",
         "elko",
+        "lakeview",
         "sacramento",
         "truckee",
         "winnemucca"
@@ -3099,6 +6058,103 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Reno",
         "revid": 312580
+      }
+    },
+    {
+      "id": "roswell",
+      "gameId": null,
+      "name": "Roswell",
+      "state": "NM",
+      "dlc": "new-mexico",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Denver"
+      },
+      "coordinates": {
+        "lat": 33.39417,
+        "lon": -104.52278,
+        "wikidata": "Q33561"
+      },
+      "companyCount": 5,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "global-mills",
+          "depotGameId": "gm_food_plnt",
+          "type": "Food plant"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "garage",
+        "gas",
+        "hotel",
+        "recruitment",
+        "service",
+        "viewpoint"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Aron gas station",
+        "Hotel",
+        "Recruitment agency",
+        "Service shop"
+      ],
+      "roads": [
+        "US 70",
+        "US 70 Truck",
+        "US 285",
+        "US 285 Truck",
+        "US 380"
+      ],
+      "neighbors": [
+        "artesia",
+        "clovis",
+        "socorro"
+      ],
+      "landmarks": [
+        "3rd Rock From the Sun",
+        "400 Penn Plaza",
+        "Alien Zone Area 51",
+        "Ginsberg Music Co.",
+        "Inflatable alien",
+        "International UFO Museum and Research Center",
+        "Kings Treasure House",
+        "McDonald's",
+        "New Mexico Military Institute",
+        "Once Again Cosignment",
+        "Purified Water Windmill",
+        "Radio tower at 6102 West 2nd Street",
+        "Roswell Antiques Mall",
+        "Roswell Landing",
+        "Starchild",
+        "Sunwest Centre",
+        "Welcome to Roswell",
+        "Zone II Alien Headquarters"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Roswell",
+        "revid": 303171
       }
     },
     {
@@ -3240,6 +6296,104 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Sacramento",
         "revid": 298891
+      }
+    },
+    {
+      "id": "salem",
+      "gameId": null,
+      "name": "Salem",
+      "state": "OR",
+      "dlc": "oregon",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 44.94,
+        "lon": -123.03889,
+        "wikidata": "Q43919"
+      },
+      "companyCount": 7,
+      "depots": [
+        {
+          "company": "avalanche-steel",
+          "depotGameId": "avs_met_sml",
+          "type": "Steel mill"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "deepgrove",
+          "depotGameId": "dg_wd_hrv",
+          "type": "Harvest site"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "mon-coeur",
+          "depotGameId": "mon_farm",
+          "type": "Vineyard"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit3",
+          "type": "Warehouse construction site"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [
+        "International"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "hotel",
+        "recruitment",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Aron gas station",
+        "Gallon Oil gas station with a rest stop in Albany",
+        "Hotel",
+        "Recruitment agency",
+        "Rest stop in Albany",
+        "International truck dealer"
+      ],
+      "roads": [
+        "I-5",
+        "OR 22",
+        "OR 213",
+        "Minor road"
+      ],
+      "neighbors": [
+        "bend",
+        "eugene",
+        "newport",
+        "portland"
+      ],
+      "landmarks": [
+        "Geer Park",
+        "McNary Field",
+        "Mission Lake",
+        "Willamette Valley Vineyards"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Salem",
+        "revid": 285689
       }
     },
     {
@@ -3695,6 +6849,7 @@
         "Minor road"
       ],
       "neighbors": [
+        "las-cruces",
         "phoenix",
         "tucson"
       ],
@@ -3794,6 +6949,103 @@
       }
     },
     {
+      "id": "santa-fe",
+      "gameId": null,
+      "name": "Santa Fe",
+      "state": "NM",
+      "dlc": "new-mexico",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Denver"
+      },
+      "coordinates": {
+        "lat": 35.66667,
+        "lon": -105.96667,
+        "wikidata": "Q38555"
+      },
+      "companyCount": 9,
+      "depots": [
+        {
+          "company": "apade",
+          "depotGameId": "apa_car_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "charged",
+          "depotGameId": "cha_el_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "hms-machinery",
+          "depotGameId": "hms_con_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "namiq",
+          "depotGameId": "nmq_min_qry",
+          "type": "Quarry"
+        },
+        {
+          "company": "namiq",
+          "depotGameId": "nmq_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "garage",
+        "gas",
+        "recruitment",
+        "service",
+        "viewpoint"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "NAF gas station",
+        "Recruitment agency",
+        "Service shop"
+      ],
+      "roads": [
+        "I-25",
+        "US 84",
+        "US 85",
+        "US 285",
+        "NM 599"
+      ],
+      "neighbors": [
+        "albuquerque",
+        "clovis",
+        "las-cruces",
+        "raton"
+      ],
+      "landmarks": [],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Santa_Fe",
+        "revid": 296132
+      }
+    },
+    {
       "id": "santa-maria",
       "gameId": null,
       "name": "Santa Maria",
@@ -3885,6 +7137,132 @@
       }
     },
     {
+      "id": "seattle",
+      "gameId": null,
+      "name": "Seattle",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 47.605,
+        "lon": -122.33,
+        "wikidata": "Q5083"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "avalanche-steel",
+          "depotGameId": "avs_met_scr",
+          "type": "Scrapyard"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_plnt",
+          "type": "Cement plant"
+        },
+        {
+          "company": "port-of-seattle",
+          "depotGameId": "port_sea",
+          "type": null
+        },
+        {
+          "company": "rail-export",
+          "depotGameId": "re_train",
+          "type": "Depot"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [
+        "Kenworth"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "port",
+        "recruitment",
+        "rest",
+        "service",
+        "viewpoint"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Recruitment agency",
+        "Rest stop",
+        "Service shop with a rest stop",
+        "Kenworth truck dealer"
+      ],
+      "roads": [
+        "I-5",
+        "I-90",
+        "I-405",
+        "WA 900"
+      ],
+      "neighbors": [
+        "everett",
+        "portland",
+        "spokane",
+        "tacoma"
+      ],
+      "landmarks": [
+        "1000 Second Avenue",
+        "1111 Third Avenue",
+        "1201 Third Avenue",
+        "1521 Second Avenue",
+        "2 Union Square",
+        "800 Fifth Avenue",
+        "Century Square",
+        "Columbia Center",
+        "Docusign Tower",
+        "F5 Tower",
+        "Fourth & Madison Building",
+        "Helios",
+        "Henry M. Jackson Federal Building",
+        "Renaissance Seattle Hotel",
+        "Russel Investments Center",
+        "Safeco Plaza",
+        "Seattle Municipal Tower",
+        "Unigard Financial Center",
+        "West Edge Tower",
+        "Exchange Building",
+        "Harbor Steps Southeast",
+        "Harborview Medical Center",
+        "King County Courthouse",
+        "Newmark Tower",
+        "Norton Building",
+        "Pacific Tower",
+        "Park Place",
+        "Second & Seneca Building",
+        "Smith Tower",
+        "The Old Rainier Brewery",
+        "The Polyclinic Madison Center",
+        "William Kenzo Nakamura U.S. Courthouse",
+        "Watermark Tower",
+        "Convention Center / Freeway Park Lid",
+        "Homer M. Hadley Memorial Bridge",
+        "Jose Rizal Bridge",
+        "Lacey V. Murrow Memorial Bridge",
+        "Lumen Field",
+        "Mount Baker Tunnel",
+        "Seattle Convention Center",
+        "Seattle Great Wheel",
+        "Space Needle",
+        "Spokane Street Bridge",
+        "T-Mobile Park"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Seattle",
+        "revid": 304751
+      }
+    },
+    {
       "id": "show-low",
       "gameId": null,
       "name": "Show Low",
@@ -3951,6 +7329,7 @@
       "neighbors": [
         "camp-verde",
         "phoenix",
+        "socorro",
         "tucson"
       ],
       "landmarks": [
@@ -4027,6 +7406,206 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Sierra_Vista",
         "revid": 261010
+      }
+    },
+    {
+      "id": "socorro",
+      "gameId": null,
+      "name": "Socorro",
+      "state": "NM",
+      "dlc": "new-mexico",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Denver"
+      },
+      "coordinates": {
+        "lat": 34.06167,
+        "lon": -106.89944,
+        "wikidata": "Q503818"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "At I-25 exit 150"
+        },
+        {
+          "company": "namiq",
+          "depotGameId": "nmq_min_qry",
+          "type": "Quarry"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "rail-export",
+          "depotGameId": "re_train",
+          "type": "Depot"
+        },
+        {
+          "company": "shop-town",
+          "depotGameId": "sht_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "tidbit",
+          "depotGameId": "tid_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "hotel",
+        "service"
+      ],
+      "facilityDetails": [
+        "Aron gas station",
+        "Gallon Oil gas station",
+        "Hotel",
+        "Service shop"
+      ],
+      "roads": [
+        "I-25",
+        "BL 12",
+        "US 60",
+        "US 85"
+      ],
+      "neighbors": [
+        "albuquerque",
+        "las-cruces",
+        "roswell",
+        "show-low"
+      ],
+      "landmarks": [
+        "First Baptist Church",
+        "Knights of Pythias Hall",
+        "New Loma Theater",
+        "Old San Miguel Mission",
+        "Recycled Parts Flying Saucer"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Socorro",
+        "revid": 296133
+      }
+    },
+    {
+      "id": "spokane",
+      "gameId": null,
+      "name": "Spokane",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 47.65719,
+        "lon": -117.4235,
+        "wikidata": "Q187805"
+      },
+      "companyCount": 8,
+      "depots": [
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "haulett",
+          "depotGameId": "hau_oil_gst",
+          "type": null,
+          "location": "At I-90 exit 286"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "lumenauto",
+          "depotGameId": "lum_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit",
+          "type": "Building construction site"
+        },
+        {
+          "company": "rail-export",
+          "depotGameId": "re_train",
+          "type": "Depot"
+        },
+        {
+          "company": "steeler",
+          "depotGameId": "st_met_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [
+        "Volvo"
+      ],
+      "facilities": [
+        "dealer",
+        "garage",
+        "gas",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Volvo truck dealer",
+        "Haulett truck stop with a service shop and weigh station"
+      ],
+      "roads": [
+        "I-90",
+        "US 2",
+        "US 395"
+      ],
+      "neighbors": [
+        "colville",
+        "grand-coulee",
+        "kennewick",
+        "seattle",
+        "wenatchee"
+      ],
+      "landmarks": [
+        "101 West North River Drive",
+        "104 South Division Street",
+        "3201 North Division Street",
+        "Bank of America Financial Center",
+        "Catholic Charities Spokane",
+        "Davenport Grand Hotel",
+        "Davenport Hotel Tower",
+        "Flying J Travel Plaza",
+        "High Bridge",
+        "Holiday Inn Express Spokane-Downtown",
+        "Lumen Building",
+        "MultiCare Deaconess Hospital",
+        "New Community Church",
+        "Park Tower",
+        "Providence Sacred Heart Medical Center and Children's Hospital",
+        "Redemption Church Spokane",
+        "Spokane Convention Center",
+        "Sunset Boulevard Bridge",
+        "Washington Trust Bank Tower"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Spokane",
+        "revid": 308326
       }
     },
     {
@@ -4144,6 +7723,186 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Stockton",
         "revid": 298893
+      }
+    },
+    {
+      "id": "tacoma",
+      "gameId": null,
+      "name": "Tacoma",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 47.2525,
+        "lon": -122.4475,
+        "wikidata": "Q199797"
+      },
+      "companyCount": 7,
+      "depots": [
+        {
+          "company": "drake-car-dealer",
+          "depotGameId": "dc_car_dlr",
+          "type": "Dealership"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": "gal_oil_ref",
+          "type": "Refinery"
+        },
+        {
+          "company": "hms-machinery",
+          "depotGameId": "hms_con_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "phoenix",
+          "depotGameId": "pho_oil_gst",
+          "type": null,
+          "location": "At I-5 exit 136"
+        },
+        {
+          "company": "port-of-tacoma",
+          "depotGameId": "port_tac",
+          "type": null
+        },
+        {
+          "company": "venture",
+          "depotGameId": "ven_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [
+        "Peterbilt"
+      ],
+      "facilities": [
+        "dealer",
+        "gas",
+        "port",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Peterbilt truck dealer",
+        "Phoenix truck stop with a weigh station"
+      ],
+      "roads": [
+        "I-5"
+      ],
+      "neighbors": [
+        "olympia",
+        "portland",
+        "seattle"
+      ],
+      "landmarks": [
+        "1201 Pacific",
+        "909 A Street Building",
+        "East 21st Street Bridge",
+        "East 34th Street Bridge",
+        "Hotel Murano",
+        "Key Bank Center",
+        "Pacific Towers",
+        "Port of Tacoma",
+        "Tacoma Dome",
+        "Tacoma Financial Center",
+        "Tacoma Municipal Building",
+        "True Blue Building",
+        "Washington Building",
+        "World Trade Center Tacoma"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Tacoma",
+        "revid": 291355
+      }
+    },
+    {
+      "id": "the-dalles",
+      "gameId": null,
+      "name": "The Dalles",
+      "state": "OR",
+      "dlc": "oregon",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PDT",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 45.60111,
+        "lon": -121.18278,
+        "wikidata": "Q985271"
+      },
+      "companyCount": 6,
+      "depots": [
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_farm",
+          "type": "Farm"
+        },
+        {
+          "company": "home-store",
+          "depotGameId": "hs_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "plaster-and-sons",
+          "depotGameId": "pns_con_sit3",
+          "type": "Warehouse construction site"
+        },
+        {
+          "company": "rail-export",
+          "depotGameId": "re_train",
+          "type": "Depot"
+        },
+        {
+          "company": "steeler",
+          "depotGameId": "st_met_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "viewpoint"
+      ],
+      "facilityDetails": [
+        "Gallon Oil gas station with a rest stop"
+      ],
+      "roads": [
+        "I-84",
+        "US 30",
+        "US 197"
+      ],
+      "neighbors": [
+        "bend",
+        "pendleton",
+        "portland"
+      ],
+      "landmarks": [
+        "Clock Tower Ales",
+        "Lewis and Clark Festival Park",
+        "National Neon Sign Museum",
+        "Northern Oregon Regional Correctional Facility",
+        "Old St. Peter's Landmark",
+        "Spooky's Pizza",
+        "Sunshine Mill",
+        "The Dalles Bridge",
+        "The Dalles Lock and Dam",
+        "The Dalles Marina",
+        "The Dalles Overpass"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/The_Dalles",
+        "revid": 272003
       }
     },
     {
@@ -4378,6 +8137,7 @@
         "AZ 77"
       ],
       "neighbors": [
+        "las-cruces",
         "nogales",
         "phoenix",
         "san-simon",
@@ -4396,6 +8156,94 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Tucson",
         "revid": 296028
+      }
+    },
+    {
+      "id": "tucumcari",
+      "gameId": null,
+      "name": "Tucumcari",
+      "state": "NM",
+      "dlc": "new-mexico",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "MDT",
+        "iana": "America/Denver"
+      },
+      "coordinates": {
+        "lat": 35.16944,
+        "lon": -103.72556,
+        "wikidata": "Q986001"
+      },
+      "companyCount": 5,
+      "depots": [
+        {
+          "company": "american-lines",
+          "depotGameId": "aml_rail_wrk",
+          "type": "Work site"
+        },
+        {
+          "company": "eddys",
+          "depotGameId": "ed_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "gpw",
+          "depotGameId": "gpw_rd_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm_grg",
+          "type": "Garage"
+        },
+        {
+          "company": "venture",
+          "depotGameId": "ven_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Haulett truck stop with a weigh station",
+        "Phoenix truck stop with a service shop and weigh station"
+      ],
+      "roads": [
+        "I-40",
+        "BL 36",
+        "US 54",
+        "US 54 Bus.",
+        "NM 104",
+        "NM 237"
+      ],
+      "neighbors": [
+        "alamogordo",
+        "albuquerque"
+      ],
+      "landmarks": [
+        "Blue Swallow Motel sign",
+        "Historic Route 66 Motel sign",
+        "La Cita",
+        "Route 66 Monument",
+        "Tee Pee Curios",
+        "Trinity Baptist Church",
+        "Tucumcari Mountain",
+        "Tucumcari Union Station",
+        "Veterans Park"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Tucumcari",
+        "revid": 296590
       }
     },
     {
@@ -4455,6 +8303,186 @@
       }
     },
     {
+      "id": "vancouver",
+      "gameId": null,
+      "name": "Vancouver",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 45.63111,
+        "lon": -122.67167,
+        "wikidata": "Q234053"
+      },
+      "companyCount": 4,
+      "depots": [
+        {
+          "company": "charged",
+          "depotGameId": "cha_el_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_qry",
+          "type": "Quarry"
+        },
+        {
+          "company": "steeler",
+          "depotGameId": "st_met_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "steeler",
+          "depotGameId": "st_met_wrk",
+          "type": "Workshop"
+        },
+        {
+          "company": "tidbit",
+          "depotGameId": "tid_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "gas",
+        "rest"
+      ],
+      "facilityDetails": [
+        "Aron gas station with a rest stop",
+        "Gallon Oil gas station"
+      ],
+      "roads": [
+        "I-5",
+        "I-205",
+        "WA 14"
+      ],
+      "neighbors": [
+        "longview",
+        "portland",
+        "seattle"
+      ],
+      "landmarks": [
+        "805 Broadway Street",
+        "500 Broadway Street",
+        "Interstate Bridge",
+        "Pearson Field",
+        "Smith Tower Apartments"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Vancouver_(Washington)",
+        "revid": 299216
+      }
+    },
+    {
+      "id": "wenatchee",
+      "gameId": null,
+      "name": "Wenatchee",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 47.42333,
+        "lon": -120.32528,
+        "wikidata": "Q958596"
+      },
+      "companyCount": 8,
+      "depots": [
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_farm",
+          "type": "Farm"
+        },
+        {
+          "company": "enterpriser",
+          "depotGameId": "ent_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "North of US 2 US 97 in Sunnyslope"
+        },
+        {
+          "company": "hms-machinery",
+          "depotGameId": "hms_con_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "sell-goods",
+          "depotGameId": "sg_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "starbridge",
+          "depotGameId": "sb_whs",
+          "type": "Warehouse"
+        },
+        {
+          "company": "tidbit",
+          "depotGameId": "tid_mkt",
+          "type": "Market"
+        },
+        {
+          "company": "venture",
+          "depotGameId": "ven_whs",
+          "type": "Warehouse"
+        }
+      ],
+      "truckDealers": [],
+      "facilities": [
+        "garage",
+        "gas",
+        "recruitment",
+        "rest",
+        "service"
+      ],
+      "facilityDetails": [
+        "Garage",
+        "Recruitment agency",
+        "Gallon Oil truck stop with a service shop"
+      ],
+      "roads": [
+        "US 2",
+        "US 97",
+        "WA 285"
+      ],
+      "neighbors": [
+        "everett",
+        "grand-coulee",
+        "omak",
+        "spokane",
+        "yakima"
+      ],
+      "landmarks": [
+        "Apple Capital Loop Recreation Trail Bridge",
+        "Cascadian Apartments",
+        "Coast Wenatchee Center Hotel",
+        "Convergence",
+        "Dusty's In-N-Out",
+        "Pybus Public Market",
+        "SpringHill Suites Wenatchee",
+        "The Windmill Restaurant",
+        "Washington State Department of Transportation Building",
+        "Wenatchee \"Apple Capital of the World\" Sign",
+        "Wenatchee River Aqueduct Bridge",
+        "Wenatchee River Bridge",
+        "Wenatchee River Railroad Bridge"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Wenatchee",
+        "revid": 285728
+      }
+    },
+    {
       "id": "winnemucca",
       "gameId": null,
       "name": "Winnemucca",
@@ -4507,7 +8535,10 @@
         "US 95"
       ],
       "neighbors": [
+        "burns",
         "elko",
+        "lakeview",
+        "ontario",
         "reno",
         "tonopah"
       ],
@@ -4595,6 +8626,7 @@
         "AZ 99"
       ],
       "neighbors": [
+        "albuquerque",
         "flagstaff",
         "kingman"
       ],
@@ -4609,6 +8641,114 @@
       "wiki": {
         "url": "https://trucksimulator.wiki.gg/wiki/Winslow",
         "revid": 296029
+      }
+    },
+    {
+      "id": "yakima",
+      "gameId": null,
+      "name": "Yakima",
+      "state": "WA",
+      "dlc": "washington",
+      "addedInUpdate": null,
+      "timezone": {
+        "game": "PST",
+        "iana": "America/Los_Angeles"
+      },
+      "coordinates": {
+        "lat": 46.60194,
+        "lon": -120.50778,
+        "wikidata": "Q499203"
+      },
+      "companyCount": 8,
+      "depots": [
+        {
+          "company": "bitumen",
+          "depotGameId": "bit_rd_svc",
+          "type": "Service shop"
+        },
+        {
+          "company": "bushnell-farms",
+          "depotGameId": "bn_farm",
+          "type": "Farm"
+        },
+        {
+          "company": "coastline-mining",
+          "depotGameId": "cm_min_str",
+          "type": "Storage"
+        },
+        {
+          "company": "gallon-oil",
+          "depotGameId": null,
+          "type": "Gas station",
+          "location": "Along Rudkin Rd in Union Gap"
+        },
+        {
+          "company": "global-mills",
+          "depotGameId": "gm_food_plnt",
+          "type": "Food plant"
+        },
+        {
+          "company": "rail-export",
+          "depotGameId": "re_train",
+          "type": "Depot"
+        },
+        {
+          "company": "sunshine-crops",
+          "depotGameId": "sc_frm",
+          "type": "Farm"
+        },
+        {
+          "company": "wallbert",
+          "depotGameId": "wal_mkt",
+          "type": "Market"
+        }
+      ],
+      "truckDealers": [
+        "Mack"
+      ],
+      "facilities": [
+        "dealer",
+        "gas",
+        "recruitment",
+        "rest",
+        "service",
+        "weigh"
+      ],
+      "facilityDetails": [
+        "Recruitment agency",
+        "Mack truck dealer",
+        "Gallon Oil truck stop with a service shop and weigh station"
+      ],
+      "roads": [
+        "I-82",
+        "US 12",
+        "US 97"
+      ],
+      "neighbors": [
+        "bend",
+        "kennewick",
+        "longview",
+        "olympia",
+        "pendleton",
+        "seattle",
+        "wenatchee"
+      ],
+      "landmarks": [
+        "A. E. Larson Building",
+        "El Asadero Restaurant and Bar",
+        "First Baptist Church",
+        "Hilton Garden Inn Yakima Downtown",
+        "Hotel Maison Yakima",
+        "Memorial to the fallen of Company E",
+        "Miner's Drive-In Restaurant",
+        "Red Apple Motel",
+        "St. Michael's Episcopal Mission",
+        "The Tower",
+        "Wells Fargo Bank"
+      ],
+      "wiki": {
+        "url": "https://trucksimulator.wiki.gg/wiki/Yakima",
+        "revid": 285621
       }
     },
     {

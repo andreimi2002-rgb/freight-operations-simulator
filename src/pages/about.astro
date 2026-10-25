@@ -1,9 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getI18n } from '../i18n/index.mjs';
+import { scope as scopeFile } from '../lib/data.mjs';
+import { stateList } from '../lib/ats.mjs';
 import data from '../data/sources.json';
 
-const { t } = getI18n();
+const { t, meta } = getI18n();
 const rules = ['real', 'unknown', 'ids', 'images'];
 const attribution = ['footer.gameData', 'footer.weatherPhotos', 'footer.notAffiliated'];
 // A source without its own name (computed in the browser) takes its name from i18n.
@@ -26,7 +28,7 @@ const nameOf = (s) => s.name ?? t(`sources.${s.id}.name`);
 
     <section aria-labelledby="sources-title">
       <h2 id="sources-title">{t('about.sourcesTitle')}</h2>
-      <p class="soft intro">{t('about.sourcesIntro')}</p>
+      <p class="soft intro">{t('about.sourcesIntro', { states: stateList(scopeFile, meta.intlLocale) })}</p>
       <div class="table-wrap table-scroll">
         <table>
           <caption class="visually-hidden">{t('about.sourcesCaption')}</caption>

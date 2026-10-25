@@ -1,16 +1,26 @@
 ---
-// "My DLCs" dialog, opened from the header. The list of cargo DLCs comes from the data.
+// "My DLCs" dialog, opened from the header. The lists of map and cargo DLCs come from the data.
 import { getI18n } from '../i18n/index.mjs';
 import en from '../i18n/en.json';
-import { cargo } from '../lib/data.mjs';
+import { cargo, cities } from '../lib/data.mjs';
 
 const { t } = getI18n();
 const dlcs = [...new Set(cargo.map((c) => c.dlc).filter((d) => d && d !== 'base'))].sort();
+const mapDlcs = [...new Set(cities.map((c) => c.dlc).filter((d) => d && d !== 'base'))].sort();
 ---
 <dialog id="dlc-dialog" class="dlc-dialog" aria-labelledby="dlc-title">
   <form method="dialog" class="dlc-form">
     <h2 id="dlc-title">{t('dlcs.title')}</h2>
     <p class="soft">{t('dlcs.lead')}</p>
+    <fieldset>
+      <legend class="eyebrow">{t('dlcs.mapPacks')}</legend>
+      {mapDlcs.map((d) => (
+        <label class="check" for={`dlc-${d}`}>
+          <input type="checkbox" id={`dlc-${d}`} name="dlc" value={d} />
+          <span>{en.mapDlcNames[d] ?? d}</span>
+        </label>
+      ))}
+    </fieldset>
     <fieldset>
       <legend class="eyebrow">{t('dlcs.cargoPacks')}</legend>
       {dlcs.map((d) => (

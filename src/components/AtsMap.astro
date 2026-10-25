@@ -1,6 +1,8 @@
 ---
 // Map in a style close to the in-game ATS map (drawn by us from public-domain data).
 import { getI18n } from '../i18n/index.mjs';
+import { scope as scopeFile } from '../lib/data.mjs';
+import { stateList } from '../lib/ats.mjs';
 
 interface Props {
   mode?: 'full' | 'city' | 'route';
@@ -12,7 +14,7 @@ interface Props {
   defer?: boolean;
 }
 const { mode = 'full', city, from, to, height = '560px', interactive = true, defer = false } = Astro.props;
-const { t } = getI18n();
+const { t, meta } = getI18n();
 ---
 <figure class="fw-map-wrap">
   <div
@@ -24,7 +26,7 @@ const { t } = getI18n();
     data-map-to={to}
     data-map-interactive={interactive ? undefined : 'false'}
     data-map-defer={defer ? '' : undefined}
-    data-map-label={t('map.label')}
+    data-map-label={t('map.label', { states: stateList(scopeFile, meta.intlLocale) })}
   >
     <p class="fw-map-loading">{t('map.loading')}</p>
   </div>

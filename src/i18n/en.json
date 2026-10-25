@@ -50,9 +50,9 @@
   },
   "home": {
     "title": "Freight World",
-    "eyebrow": "American Truck Simulator · California, Nevada and Arizona",
+    "eyebrow": "American Truck Simulator · {states}",
     "lead": "A job generator in the style of ATS and ETS2, built on the real game map: cities, companies, depots, cargo and trailers that exist in the game, with live city pages.",
-    "status": "City pages, departures boards, the job generator, job sheets and the route planner cover the starting map: California, Nevada and Arizona.",
+    "status": "City pages, departures boards, the job generator, job sheets and the route planner cover {states}.",
     "aboutCta": "Sources and licences",
     "pillarsTitle": "What Freight World will show",
     "pillars": {
@@ -98,7 +98,7 @@
       "images": "No logos, screenshots or other images from the games. City photos come from Wikimedia Commons with author and licence. Trucks, trailers and cargo show a real-world photo marked illustrative, or a Freight World icon."
     },
     "sourcesTitle": "Sources and licences",
-    "sourcesIntro": "The sources Freight World uses. Game data covers the starting map of American Truck Simulator: California, Nevada and Arizona.",
+    "sourcesIntro": "The sources Freight World uses. Game data covers these states of American Truck Simulator: {states}.",
     "sourcesCaption": "Data sources, their use and their licences.",
     "cols": {
       "source": "Source",
@@ -173,10 +173,10 @@
   "atsIndex": {
     "title": "American Truck Simulator cities",
     "eyebrow": "American Truck Simulator",
-    "lead": "Every city of the starting map (California, Nevada and the free Arizona DLC), with its depots, facilities and roads. More states follow later.",
+    "lead": "Every city in {states}, with its depots, facilities and roads. Each city page says whether it comes with the base game or a map DLC. More states follow later.",
     "depots": "{n} depots",
     "cities": "{n} cities",
-    "metaDescription": "Cities of American Truck Simulator in California, Nevada and Arizona, with depots, local time and real weather."
+    "metaDescription": "Cities of American Truck Simulator in {states}, with depots, local time and real weather."
   },
   "city": {
     "metaDescription": "{name}, {state} in American Truck Simulator: {depots} depots, local time and real weather.",
@@ -294,7 +294,11 @@
     "farm-machinery": "Farm Machinery",
     "jcb-equipment-pack": "JCB Equipment Pack",
     "krone-agriculture-equipment": "KRONE Agriculture Equipment",
-    "bobcat-cargo-pack": "Bobcat Cargo Pack"
+    "bobcat-cargo-pack": "Bobcat Cargo Pack",
+    "arizona": "Arizona",
+    "new-mexico": "New Mexico",
+    "oregon": "Oregon",
+    "washington": "Washington"
   },
   "planner": {
     "title": "Route planner",
@@ -307,7 +311,7 @@
     "to": "To",
     "anyDestination": "Anywhere",
     "baseOnly": "Career start: base game only",
-    "baseOnlyHint": "Hides jobs that need a cargo DLC.",
+    "baseOnlyHint": "Hides jobs that need a DLC (a map DLC for a state on the route, or a cargo DLC).",
     "hazmat": "Include hazmat",
     "trailer": "Trailer",
     "anyTrailer": "Any trailer",
@@ -370,15 +374,16 @@
   "dlcs": {
     "button": "My DLCs",
     "title": "My DLCs",
-    "lead": "Tick the cargo DLCs you own. Boards mark the jobs you cannot take; the generator and the planner can hide them.",
+    "lead": "Tick the DLCs you own. A job needs the map DLC of every state it drives through and the cargo DLC of its cargo. Boards mark the jobs you cannot take; the generator and the planner can hide them.",
     "cargoPacks": "Cargo DLCs",
-    "note": "Saved only in this browser. Map DLCs (states) come with the next map expansion.",
+    "note": "Saved only in this browser. Until you save a choice, every job is shown.",
     "save": "Save",
     "clear": "Forget my choice",
     "close": "Close",
     "notOwned": "DLC not owned",
     "onlyMine": "Only jobs for my DLCs",
-    "notSet": "Set your DLCs first (My DLCs, top right)."
+    "notSet": "Set your DLCs first (My DLCs, top right).",
+    "mapPacks": "Map DLCs (states)"
   },
   "mission": {
     "title": "Job sheet",
@@ -458,13 +463,16 @@
     "chainAll": "All jobs from {city} in the planner"
   },
   "mapDlcNames": {
-    "arizona": "Arizona (free DLC)"
+    "arizona": "Arizona (free DLC)",
+    "new-mexico": "New Mexico map DLC",
+    "oregon": "Oregon map DLC",
+    "washington": "Washington map DLC"
   },
   "companies": {
     "title": "American Truck Simulator companies",
-    "metaDescription": "Every company with depots on the American Truck Simulator starting map: depots, cities, cargo offered and accepted.",
+    "metaDescription": "Every company with depots on the American Truck Simulator map so far: depots, cities, cargo offered and accepted.",
     "eyebrow": "American Truck Simulator",
-    "lead": "Every company with at least one depot on the starting map (California, Nevada, Arizona), grouped by category.",
+    "lead": "Every company with at least one depot in {states}, grouped by category.",
     "depots": "{n} depots",
     "cities": "{n} cities",
     "categories": {
@@ -488,7 +496,7 @@
     "depotsCount": "Depots",
     "citiesCount": "Cities",
     "depotTypesTitle": "Depots",
-    "depotTypesIntro": "Each kind of depot this company runs on the starting map, with its game ID, cities and cargo.",
+    "depotTypesIntro": "Each kind of depot this company runs on the map so far, with its game ID, cities and cargo.",
     "inCities": "In",
     "goesTitle": "Where its cargo goes",
     "goesIntro": "Companies that accept cargo {name} offers, in another city. Computed from the depot lists; every link is a job that exists in the game.",
@@ -497,17 +505,17 @@
     "cargoShared": "{n} cargo",
     "andMore": "and {n} more",
     "showAll": "Show all {n}",
-    "none": "None on the starting map.",
+    "none": "None on the map so far.",
     "generateTitle": "Generate a job from {name}",
     "wikiLink": "{name} on Truck Simulator Wiki",
     "monogramNote": "Monogram, not the company logo (game artwork is not used)."
   },
   "map": {
     "title": "Map",
-    "metaDescription": "Map of the American Truck Simulator starting map: California, Nevada and Arizona, with every city and the main roads.",
+    "metaDescription": "Map of American Truck Simulator: {states}, with every city and the main roads.",
     "eyebrow": "American Truck Simulator",
-    "lead": "The starting map: every city and the main roads. Zoom in for road numbers and city facilities, further for the companies in each city; click a city or a company to open it.",
-    "label": "Map of California, Nevada and Arizona with the cities of the game",
+    "lead": "Every city and the main roads of the states covered so far. Zoom in for road numbers and city facilities, further for the companies in each city; click a city or a company to open it.",
+    "label": "Map of {states} with the cities of the game",
     "loading": "Loading the map…",
     "error": "The map could not be loaded.",
     "caption": "Drawn by Freight World in the style of the in-game map from public-domain data (Natural Earth): real-world roads, so the in-game road network may differ. Not the game map.",
@@ -543,7 +551,7 @@
     "trailersMeta": "Trailer types of American Truck Simulator: dealer models, prices and the cargo each one carries.",
     "trailersLead": "Every trailer type the cargo list uses ({n}), with the dealer models and the cargo it carries.",
     "trucksTitle": "American Truck Simulator trucks",
-    "trucksMeta": "Trucks of American Truck Simulator: engines, horsepower, cabs and where to buy them on the starting map.",
+    "trucksMeta": "Trucks of American Truck Simulator: engines, horsepower, cabs and where to buy them on the map.",
     "trucksLead": "The released trucks of the game ({n}), with their engines and the cities with a dealer.",
     "cargoCount": "{n} cargo",
     "models": "{n} models",
@@ -570,10 +578,10 @@
     "unknown": "Unknown",
     "offeredTitle": "Offered by",
     "acceptedTitle": "Accepted by",
-    "nobody": "Nobody on the starting map.",
+    "nobody": "Nobody on the map so far.",
     "withDlc": "with {dlc}",
     "routesTitle": "Where it can go",
-    "routesIntro": "{n} city pairs on the starting map where a depot offers it and a depot in the other city accepts it.",
+    "routesIntro": "{n} city pairs on the map where a depot offers it and a depot in the other city accepts it.",
     "longest": "Longest",
     "shortest": "Shortest",
     "generateTitle": "Generate a job with {name}",
@@ -593,7 +601,7 @@
     "wikiLink": "Trailer page on Truck Simulator Wiki"
   },
   "truckPage": {
-    "meta": "{name} in American Truck Simulator: engines, horsepower, transmissions, cabs and dealers on the starting map.",
+    "meta": "{name} in American Truck Simulator: engines, horsepower, transmissions, cabs and dealers on the map.",
     "breadcrumb": "Trucks",
     "make": "Make",
     "maxHp": "Most powerful engine",
@@ -601,8 +609,8 @@
     "transmissions": "Transmissions",
     "cabs": "Cabs",
     "added": "Added",
-    "dealersTitle": "Where to buy it on the starting map",
-    "noDealers": "No dealer for this make on the starting map.",
+    "dealersTitle": "Where to buy it on the map",
+    "noDealers": "No dealer for this make on the map so far.",
     "wikiLink": "{name} on Truck Simulator Wiki",
     "electric": "Electric"
   },

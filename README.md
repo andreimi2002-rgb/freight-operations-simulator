@@ -31,6 +31,10 @@ Live at https://freight-operations-simulator.netlify.app (from `main`). The plan
 
 - A page for every company on the starting map (`/ats/company/<id>`): depots, cargo, where its cargo goes and who supplies it.
 
+### Phase S: New Mexico, Oregon, Washington
+
+- 44 more cities (94 in all), with depots, photos, distances and the map. A job needs the map DLC of every state its route touches, not only the two ends (`data/ats/route-states.json`, `npm run routes:ats`); "My DLCs" lists the map DLCs.
+
 ### Arizona
 
 - Arizona added (16 cities): the starting map of ATS (California, Nevada, Arizona) is complete with 50 cities. Other states come later.
