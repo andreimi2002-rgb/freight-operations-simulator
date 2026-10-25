@@ -3,7 +3,7 @@
     "description": "One photo per city for the city pages, from Wikimedia Commons, chosen by hand from data/photo-candidates.json (owner delegated the choice to Claude on 2026-10-21). Each entry gives the reason. photo null = placeholder.",
     "source": "Wikimedia Commons",
     "licences": "free licences per file (author and licence on each entry)",
-    "chosen": "2026-10-21 (CA, NV); 2026-10-22 (AZ)",
+    "chosen": "2026-10-21 (CA, NV); 2026-10-22 (AZ); 2026-10-25 (Santa Maria, phase B6)",
     "chosenBy": "Claude (delegated by the project owner)"
   },
   "photos": {
@@ -456,8 +456,20 @@
       "reason": "Mission Plaza in Santa Cruz; clear author credit (the boardwalk photo has no reliable author on Commons)"
     },
     "santa-maria": {
-      "photo": null,
-      "reason": "only a very thin banner (1600×229) is available, which would look blurry in the hero"
+      "photo": {
+        "file": "Aerial photograph of Santa Maria, CA.jpg",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Aerial_photograph_of_Santa_Maria%2C_CA.jpg/1920px-Aerial_photograph_of_Santa_Maria%2C_CA.jpg",
+        "src960": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Aerial_photograph_of_Santa_Maria%2C_CA.jpg/960px-Aerial_photograph_of_Santa_Maria%2C_CA.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Aerial_photograph_of_Santa_Maria,_CA.jpg",
+        "author": "Mertbiol",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "width": 1920,
+        "height": 909,
+        "from": "Commons search (phase B6, wider search)",
+        "verified": "2026-10-25"
+      },
+      "reason": "aerial view of the city and the Santa Maria Valley towards the Pacific; found in the wider search of phase B6 (the earlier candidate was a thin banner)"
     },
     "stockton": {
       "photo": {
@@ -701,7 +713,7 @@
     },
     "san-simon": {
       "photo": null,
-      "reason": "no free photo of the town on Commons that passes the rules"
+      "reason": "no free photo of the town on Commons that passes the rules; the wider search of phase B6 (2026-10-25) found only the San Simon Valley and River, not the town"
     },
     "show-low": {
       "photo": {

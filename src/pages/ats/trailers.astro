@@ -2,7 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CatalogTabs from '../../components/CatalogTabs.astro';
 import { getI18n } from '../../i18n/index.mjs';
-import { trailers } from '../../lib/data.mjs';
+import { trailers, categories, catalogPhotos } from '../../lib/data.mjs';
+import { trailerCategory, catalogPhoto, iconSvg } from '../../lib/media.mjs';
 import { trailerPath } from '../../lib/catalog.mjs';
 
 const { t } = getI18n();
@@ -20,6 +21,9 @@ const list = [...trailers].sort((a, b) => b.cargo.length - a.cargo.length || a.n
       {list.map((tr) => (
         <li>
           <a class="item" href={trailerPath(tr)}>
+            {catalogPhoto('trailers', tr.id, catalogPhotos)
+              ? <img class="thumb" src={catalogPhoto('trailers', tr.id, catalogPhotos).src500} alt="" width="500" height="333" loading="lazy" decoding="async" />
+              : <span class="thumb icon" set:html={iconSvg(trailerCategory(tr.id, categories))} />}
             <span class="name">{tr.name}</span>
             <span class="mono small soft">{t('catalog.cargoCount', { n: tr.cargo.length })}</span>
             <span class="small muted">{tr.models.length ? `${t('catalog.models', { n: tr.models.length })}: ${tr.models.map((m) => m.name).join(', ')}` : t('catalog.noModels')}</span>
@@ -41,5 +45,9 @@ const list = [...trailers].sort((a, b) => b.cargo.length - a.cargo.length || a.n
   .item:hover { border-color: var(--border-input); }
   .item:hover .name { color: var(--amber); }
   .name { font-weight: 600; font-size: 17px; }
+  .thumb { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; margin-bottom: var(--space-2); border-radius: var(--radius-sm); background: var(--panel-deep); }
+  .thumb.icon { display: grid; place-items: center; color: var(--text-muted); }
+  .thumb.icon :global(svg) { width: 56%; height: auto; }
+  .item:hover .thumb.icon { color: var(--amber); }
   .small { font-size: 13px; }
 </style>

@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.0.0-alpha.15 — 2026-10-25 (phase B6: images for trucks, trailers and cargo)
+
+- **Illustrative photos** on the truck, trailer and cargo pages: real-world photos from Wikimedia Commons, marked "Illustrative" ("Real-world …, not the model in the game"), with author, licence and Commons link. 16 of 19 trucks, 25 of 32 trailers and 76 generic cargo have one (grain, butter, logs, excavator, wind turbine blade…). Branded machines (Bobcat, JCB, Volvo, Krone…) and ambiguous cargo get no photo on purpose.
+- **Chosen by hand, never a wrong photo:** candidates from `scripts/photos/catalog-candidates.mjs` (`npm run photos:catalog`: Wikidata image and Commons search for the terms in `data/catalog-photo-queries.json`, same licence rules as the city photos). Claude looked at every candidate (owner's delegation) and wrote the reason for each choice and each refusal in `data/catalog-photos.json`. Truck generations were checked by eye: the Cascadia 2024 refresh, the Volvo VNR Electric and the Western Star 57X keep an icon because no free photo clearly shows them; files named "2022 T680" or "VNL 860" that show an older look were left out.
+- **Our own category icons** where there is no photo: 11 trailer categories (box van, refrigerated, flatbed, heavy haul, tank, bulk, container, vehicle transport, timber, livestock, special), plus truck and general cargo, drawn for Freight World (`src/lib/media.mjs`). The categories are data (`data/categories.json`); a cargo gets the category with most of its trailer types.
+- Icons in the cargo table; photos or icons on the trailer and truck lists. A chosen photo is also the link preview image of its page.
+- Commons serves thumbnails only at standard widths: the photos use 500 and 1280 px (all 234 links checked).
+- **Santa Maria** now has a city photo (aerial view of the city and the valley, found in a wider search). **San Simon** keeps its placeholder: the wider search found only the San Simon Valley and River, not the town.
+- Plan: phase S (New Mexico, Oregon, Washington, in one PR) after B6; phase B4 postponed; fewer Netlify deploys; the photo selection tool moved to phase H.
+- 5 new tests (119 in all).
+
 ## 2.0.0-alpha.14 — 2026-10-22 (phase B5: saved pages and history)
 
 - **Save** (star) on every city, company, cargo, trailer and truck page and on the job sheet. A job is saved under its canonical link as "cargo: from → to".

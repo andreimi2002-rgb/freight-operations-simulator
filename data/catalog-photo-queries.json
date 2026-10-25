@@ -1,0 +1,871 @@
+{
+  "meta": {
+    "description": "What scripts/photos/catalog-candidates.mjs searches on Wikimedia Commons and Wikidata for the illustrative photos of trucks, trailers and generic cargo (phase B6). Each entry: search terms (Commons file search and Wikidata item search) and, where it matters, a note on what the photo must show. Cargo that is a branded machine or ambiguous is left out on purpose and keeps its category icon.",
+    "updated": "2026-10-25"
+  },
+  "trucks": {
+    "freightliner-cascadia": {
+      "search": [
+        "Freightliner New Cascadia",
+        "Freightliner Cascadia 2019",
+        "Freightliner Cascadia fifth generation"
+      ],
+      "note": "fifth generation (2017–2023 look), not the 2008 model and not the 2024 refresh"
+    },
+    "freightliner-cascadia-2024": {
+      "search": [
+        "Freightliner Cascadia 2024",
+        "Freightliner Cascadia 2025",
+        "Freightliner Cascadia 2026"
+      ],
+      "note": "2024 refresh (thin LED headlights, new grille)"
+    },
+    "international-9900i": {
+      "search": [
+        "International 9900i",
+        "International 9900"
+      ],
+      "note": "9900 / 9900i long-nose"
+    },
+    "international-lonestar": {
+      "search": [
+        "International LoneStar"
+      ]
+    },
+    "international-lt": {
+      "search": [
+        "International LT tractor",
+        "International LT625",
+        "International LT truck"
+      ]
+    },
+    "kenworth-t680-2014": {
+      "search": [
+        "Kenworth T680"
+      ],
+      "note": "first generation T680 (2013–2021), not the Next Gen"
+    },
+    "kenworth-t680-2022": {
+      "search": [
+        "Kenworth T680 Next Gen",
+        "Kenworth T680 2022",
+        "Kenworth T680 2023"
+      ],
+      "note": "Next Gen T680 (2021 on)"
+    },
+    "kenworth-w900": {
+      "search": [
+        "Kenworth W900"
+      ]
+    },
+    "mack-anthem": {
+      "search": [
+        "Mack Anthem"
+      ]
+    },
+    "mack-pinnacle": {
+      "search": [
+        "Mack Pinnacle"
+      ],
+      "note": "the Pinnacle with the 2024 look if possible; any Pinnacle highway tractor otherwise"
+    },
+    "peterbilt-389": {
+      "search": [
+        "Peterbilt 389"
+      ]
+    },
+    "peterbilt-579": {
+      "search": [
+        "Peterbilt 579"
+      ]
+    },
+    "volvo-vnl-2014": {
+      "search": [
+        "Volvo VNL 670",
+        "Volvo VNL 780",
+        "Volvo VNL 2014"
+      ],
+      "note": "VNL of the 2004–2017 look"
+    },
+    "volvo-vnl-2018": {
+      "search": [
+        "Volvo VNL 760",
+        "Volvo VNL 860",
+        "Volvo VNL 2018"
+      ],
+      "note": "VNL of the 2018–2024 look"
+    },
+    "volvo-vnl-2025": {
+      "search": [
+        "Volvo VNL 2025",
+        "new Volvo VNL 2024",
+        "Volvo VNL 2026"
+      ],
+      "note": "the all-new VNL presented in 2024"
+    },
+    "volvo-vnr-electric": {
+      "search": [
+        "Volvo VNR Electric"
+      ]
+    },
+    "western-star-49x": {
+      "search": [
+        "Western Star 49X"
+      ]
+    },
+    "western-star-5700xe": {
+      "search": [
+        "Western Star 5700XE",
+        "Western Star 5700"
+      ]
+    },
+    "western-star-57x": {
+      "search": [
+        "Western Star 57X"
+      ]
+    }
+  },
+  "trailers": {
+    "blade-trailer": {
+      "search": [
+        "wind turbine blade transport truck",
+        "wind turbine blade trailer"
+      ]
+    },
+    "bulk-feed": {
+      "search": [
+        "bulk feed trailer",
+        "feed truck trailer",
+        "feed trailer auger"
+      ]
+    },
+    "car-transporter": {
+      "search": [
+        "car carrier trailer",
+        "car transporter truck USA"
+      ]
+    },
+    "chemical-tank": {
+      "search": [
+        "chemical tank trailer",
+        "stainless steel tank trailer"
+      ]
+    },
+    "chip-van": {
+      "search": [
+        "chip van trailer",
+        "wood chip trailer truck"
+      ]
+    },
+    "container-carrier": {
+      "search": [
+        "container chassis truck",
+        "intermodal container chassis"
+      ]
+    },
+    "drop-deck": {
+      "search": [
+        "step deck trailer",
+        "drop deck trailer",
+        "Fontaine trailer",
+        "step deck semi-trailer"
+      ]
+    },
+    "dry-bulk": {
+      "search": [
+        "pneumatic tank trailer",
+        "dry bulk tank trailer"
+      ]
+    },
+    "dry-van": {
+      "search": [
+        "dry van trailer",
+        "53 foot trailer",
+        "Wabash trailer",
+        "Great Dane trailer"
+      ]
+    },
+    "dumper": {
+      "search": [
+        "end dump trailer",
+        "dump trailer semi"
+      ]
+    },
+    "flatbed": {
+      "search": [
+        "flatbed semi-trailer",
+        "flatbed trailer truck"
+      ]
+    },
+    "food-tank": {
+      "search": [
+        "milk tank trailer",
+        "food grade tank trailer"
+      ]
+    },
+    "frac-tank": {
+      "search": [
+        "frac tank"
+      ],
+      "note": "a frac tank on the road or on a site"
+    },
+    "fuel-tank": {
+      "search": [
+        "fuel tanker truck USA",
+        "gasoline tank trailer"
+      ]
+    },
+    "gas-tank": {
+      "search": [
+        "propane tank trailer",
+        "LPG tank trailer"
+      ]
+    },
+    "hopper": {
+      "search": [
+        "hopper bottom trailer",
+        "grain trailer"
+      ]
+    },
+    "house-transporter": {
+      "search": [
+        "house moving truck",
+        "house being moved on truck"
+      ]
+    },
+    "insulated": {
+      "search": [
+        "insulated trailer",
+        "reefer trailer",
+        "Insulated semi-trailer"
+      ]
+    },
+    "knuckleboom-loader": {
+      "search": [
+        "knuckleboom loader",
+        "log loader trailer"
+      ]
+    },
+    "livestock": {
+      "search": [
+        "livestock trailer",
+        "cattle trailer truck",
+        "cattle pot trailer",
+        "Wilson livestock trailer"
+      ]
+    },
+    "log": {
+      "search": [
+        "log truck trailer",
+        "logging truck"
+      ]
+    },
+    "lowboy": {
+      "search": [
+        "lowboy trailer",
+        "lowboy trailer excavator"
+      ]
+    },
+    "lowboy-55l": {
+      "search": [
+        "heavy haul lowboy",
+        "55 ton lowboy trailer"
+      ]
+    },
+    "lowboy-boat": {
+      "search": [
+        "boat transport truck",
+        "yacht transport trailer"
+      ]
+    },
+    "lowboy-double": {
+      "search": [
+        "heavy haul trailer jeep dolly",
+        "multi-axle lowboy"
+      ]
+    },
+    "lowboy-triple": {
+      "search": [
+        "heavy haul truck superload",
+        "multi-axle heavy haul trailer"
+      ]
+    },
+    "mobile-barrier": {
+      "search": [
+        "mobile barrier trailer",
+        "MBT-1 mobile barrier"
+      ]
+    },
+    "refrigerated": {
+      "search": [
+        "refrigerated trailer",
+        "reefer trailer USA",
+        "Utility reefer trailer",
+        "Great Dane reefer",
+        "Thermo King trailer"
+      ]
+    },
+    "sliding-tarp": {
+      "search": [
+        "conestoga trailer",
+        "rolling tarp trailer",
+        "curtainside trailer"
+      ]
+    },
+    "truck-transporter": {
+      "search": [
+        "truck tractor transport piggyback",
+        "drive-away truck saddle mount",
+        "saddlemount trucks",
+        "truck driveaway"
+      ]
+    },
+    "tub-grinder": {
+      "search": [
+        "tub grinder",
+        "Vermeer tub grinder",
+        "Morbark tub grinder",
+        "horizontal grinder"
+      ]
+    },
+    "van-transporter": {
+      "search": [
+        "car hauler trailer pickup trucks",
+        "car carrier trailer pickups",
+        "wedge car hauler"
+      ]
+    }
+  },
+  "cargo": {
+    "almond-boxes": {
+      "search": [
+        "almonds"
+      ]
+    },
+    "aluminum-ingots": {
+      "search": [
+        "aluminium ingots"
+      ]
+    },
+    "all-terrain-crane": {
+      "search": [
+        "all terrain crane",
+        "mobile crane"
+      ]
+    },
+    "backhoe-loader": {
+      "search": [
+        "backhoe loader"
+      ]
+    },
+    "barley": {
+      "search": [
+        "barley grains",
+        "barley"
+      ]
+    },
+    "batteries": {
+      "search": [
+        "car batteries"
+      ]
+    },
+    "beverages": {
+      "search": [
+        "beverage cans pallet",
+        "soft drink bottles"
+      ]
+    },
+    "boat": {
+      "search": [
+        "motor boat on trailer",
+        "motorboat"
+      ]
+    },
+    "bulldozer": {
+      "search": [
+        "bulldozer"
+      ]
+    },
+    "butter": {
+      "search": [
+        "butter"
+      ]
+    },
+    "cable-reel": {
+      "search": [
+        "cable reel",
+        "cable drum"
+      ]
+    },
+    "cars": {
+      "search": [
+        "new cars parking lot",
+        "cars"
+      ]
+    },
+    "cattle-equipment": {
+      "search": [
+        "cattle panels",
+        "livestock feeder"
+      ]
+    },
+    "cement": {
+      "search": [
+        "cement powder",
+        "cement"
+      ]
+    },
+    "cheese": {
+      "search": [
+        "cheese wheels",
+        "cheese"
+      ]
+    },
+    "clothes": {
+      "search": [
+        "clothes rack store",
+        "clothing"
+      ]
+    },
+    "compact-tractor": {
+      "search": [
+        "compact tractor"
+      ]
+    },
+    "concrete-barrier": {
+      "search": [
+        "jersey barrier"
+      ]
+    },
+    "concrete-tubes-large": {
+      "search": [
+        "concrete pipes",
+        "concrete culvert pipe"
+      ]
+    },
+    "corn": {
+      "search": [
+        "corn kernels",
+        "maize grains"
+      ]
+    },
+    "cotton-lint": {
+      "search": [
+        "cotton bales",
+        "cotton lint"
+      ]
+    },
+    "cotton-seed": {
+      "search": [
+        "cottonseed"
+      ]
+    },
+    "crude-oil": {
+      "search": [
+        "crude oil sample",
+        "petroleum"
+      ]
+    },
+    "dry-fruits": {
+      "search": [
+        "dried fruit"
+      ]
+    },
+    "drywall": {
+      "search": [
+        "drywall sheets",
+        "gypsum board"
+      ]
+    },
+    "dump-truck": {
+      "search": [
+        "dump truck"
+      ]
+    },
+    "dumpster": {
+      "search": [
+        "roll-off dumpster",
+        "dumpster"
+      ]
+    },
+    "empty-pallets": {
+      "search": [
+        "stacked wooden pallets",
+        "pallets"
+      ]
+    },
+    "excavated-soil": {
+      "search": [
+        "excavated soil pile",
+        "soil heap"
+      ]
+    },
+    "excavator": {
+      "search": [
+        "excavator",
+        "hydraulic excavator"
+      ]
+    },
+    "flour": {
+      "search": [
+        "flour sacks",
+        "flour"
+      ]
+    },
+    "forklifts": {
+      "search": [
+        "forklift"
+      ]
+    },
+    "frozen-vegetables": {
+      "search": [
+        "frozen vegetables"
+      ]
+    },
+    "fruits": {
+      "search": [
+        "fruit crates",
+        "fruit"
+      ]
+    },
+    "furniture": {
+      "search": [
+        "furniture"
+      ]
+    },
+    "garbage-truck": {
+      "search": [
+        "garbage truck"
+      ]
+    },
+    "glass": {
+      "search": [
+        "glass sheets",
+        "float glass"
+      ]
+    },
+    "grain": {
+      "search": [
+        "grain pile",
+        "grains"
+      ]
+    },
+    "gravel": {
+      "search": [
+        "gravel"
+      ]
+    },
+    "gypsum": {
+      "search": [
+        "gypsum mineral",
+        "gypsum"
+      ]
+    },
+    "harvester": {
+      "search": [
+        "combine harvester"
+      ]
+    },
+    "hay": {
+      "search": [
+        "hay bales"
+      ]
+    },
+    "ibc-containers": {
+      "search": [
+        "intermediate bulk container",
+        "IBC tote"
+      ]
+    },
+    "ice-cream": {
+      "search": [
+        "ice cream"
+      ]
+    },
+    "iron-pipes": {
+      "search": [
+        "steel pipes",
+        "iron pipes"
+      ]
+    },
+    "limestone": {
+      "search": [
+        "limestone"
+      ]
+    },
+    "live-cattle": {
+      "search": [
+        "cattle"
+      ]
+    },
+    "live-pigs": {
+      "search": [
+        "domestic pigs",
+        "pigs"
+      ]
+    },
+    "live-sheep": {
+      "search": [
+        "sheep flock",
+        "sheep"
+      ]
+    },
+    "logs": {
+      "search": [
+        "log pile",
+        "logs"
+      ]
+    },
+    "lumber-beams": {
+      "search": [
+        "lumber beams",
+        "timber beams"
+      ]
+    },
+    "lumber-boards": {
+      "search": [
+        "lumber",
+        "wooden boards"
+      ]
+    },
+    "meat": {
+      "search": [
+        "meat",
+        "beef cuts"
+      ]
+    },
+    "metal-coil": {
+      "search": [
+        "steel coil",
+        "steel coils"
+      ]
+    },
+    "milk": {
+      "search": [
+        "milk"
+      ]
+    },
+    "motor-grader": {
+      "search": [
+        "motor grader",
+        "road grader"
+      ]
+    },
+    "nuts": {
+      "search": [
+        "mixed nuts",
+        "nuts"
+      ]
+    },
+    "packed-lumber": {
+      "search": [
+        "lumber yard",
+        "bundled lumber"
+      ]
+    },
+    "paper": {
+      "search": [
+        "paper rolls",
+        "paper reels"
+      ]
+    },
+    "potatoes": {
+      "search": [
+        "potatoes"
+      ]
+    },
+    "pumpjack": {
+      "search": [
+        "pumpjack"
+      ]
+    },
+    "rails": {
+      "search": [
+        "rails steel track",
+        "railway rails"
+      ]
+    },
+    "railcar": {
+      "search": [
+        "freight railcar",
+        "railroad car"
+      ]
+    },
+    "rice": {
+      "search": [
+        "rice grains",
+        "rice"
+      ]
+    },
+    "roadroller": {
+      "search": [
+        "road roller"
+      ]
+    },
+    "roof-shingles": {
+      "search": [
+        "asphalt shingles"
+      ]
+    },
+    "rye": {
+      "search": [
+        "rye grains",
+        "rye"
+      ]
+    },
+    "salt": {
+      "search": [
+        "salt pile",
+        "salt"
+      ]
+    },
+    "sand": {
+      "search": [
+        "sand pile",
+        "sand"
+      ]
+    },
+    "scaffolding": {
+      "search": [
+        "scaffolding"
+      ]
+    },
+    "school-bus": {
+      "search": [
+        "school bus"
+      ]
+    },
+    "scissor-lift": {
+      "search": [
+        "scissor lift"
+      ]
+    },
+    "scrap-metals": {
+      "search": [
+        "scrap metal"
+      ]
+    },
+    "scrapped-cars": {
+      "search": [
+        "scrapped cars",
+        "car scrapyard"
+      ]
+    },
+    "soybean": {
+      "search": [
+        "soybeans"
+      ]
+    },
+    "stones": {
+      "search": [
+        "stones pile",
+        "rocks"
+      ]
+    },
+    "sugar": {
+      "search": [
+        "sugar"
+      ]
+    },
+    "sugar-beet": {
+      "search": [
+        "sugar beets"
+      ]
+    },
+    "sulphur": {
+      "search": [
+        "sulfur",
+        "sulphur"
+      ]
+    },
+    "tires": {
+      "search": [
+        "tires stack",
+        "tyres"
+      ]
+    },
+    "tractor": {
+      "search": [
+        "farm tractor",
+        "tractor"
+      ]
+    },
+    "trees": {
+      "search": [
+        "nursery trees",
+        "young trees"
+      ]
+    },
+    "utility-poles": {
+      "search": [
+        "utility poles",
+        "wooden poles"
+      ]
+    },
+    "vegetables": {
+      "search": [
+        "vegetables"
+      ]
+    },
+    "waste-paper": {
+      "search": [
+        "waste paper bales",
+        "paper recycling"
+      ]
+    },
+    "wheat": {
+      "search": [
+        "wheat grains",
+        "wheat"
+      ]
+    },
+    "wheel-loader": {
+      "search": [
+        "wheel loader"
+      ]
+    },
+    "wind-turbine-blade": {
+      "search": [
+        "wind turbine blade"
+      ]
+    },
+    "wind-turbine-nacelle": {
+      "search": [
+        "wind turbine nacelle"
+      ]
+    },
+    "wind-turbine-tower": {
+      "search": [
+        "wind turbine tower section"
+      ]
+    },
+    "wood-shavings": {
+      "search": [
+        "wood shavings"
+      ]
+    },
+    "yogurt": {
+      "search": [
+        "yogurt"
+      ]
+    }
+  },
+  "cities": {
+    "santa-maria": {
+      "search": [
+        "Santa Maria, California",
+        "Santa Maria California downtown"
+      ],
+      "category": "Santa Maria, California",
+      "note": "the city in Santa Barbara County, California"
+    },
+    "san-simon": {
+      "search": [
+        "San Simon, Arizona",
+        "San Simon Arizona"
+      ],
+      "category": "San Simon, Arizona",
+      "note": "the town in Cochise County, Arizona"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "description": "Freight World trailer categories, for our own category icons (phase B6). Not game data: a grouping made by Freight World. Every trailer type of data/ats/trailers.json is in exactly one category. A cargo gets the category with the most of its trailer types; a tie goes to the category listed first.",
+    "updated": "2026-10-25"
+  },
+  "categories": [
+    { "id": "livestock", "trailers": ["livestock"] },
+    { "id": "tank", "trailers": ["fuel-tank", "chemical-tank", "gas-tank", "food-tank", "frac-tank"] },
+    { "id": "vehicles", "trailers": ["car-transporter", "van-transporter", "truck-transporter"] },
+    { "id": "timber", "trailers": ["log", "knuckleboom-loader"] },
+    { "id": "special", "trailers": ["blade-trailer", "house-transporter", "mobile-barrier", "tub-grinder", "lowboy-boat"] },
+    { "id": "bulk", "trailers": ["dry-bulk", "hopper", "bulk-feed", "dumper", "chip-van"] },
+    { "id": "heavy", "trailers": ["lowboy", "lowboy-55l", "lowboy-double", "lowboy-triple"] },
+    { "id": "box", "trailers": ["dry-van", "sliding-tarp"] },
+    { "id": "reefer", "trailers": ["refrigerated", "insulated"] },
+    { "id": "container", "trailers": ["container-carrier"] },
+    { "id": "flatbed", "trailers": ["flatbed", "drop-deck"] }
+  ]
+}
