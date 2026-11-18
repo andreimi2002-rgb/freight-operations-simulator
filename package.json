@@ -1,25 +1,31 @@
 {
-  "name": "freight-world",
-  "version": "2.0.0-alpha.16",
+  "name": "trucksim-command-center",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Freight World: an ATS / ETS2 job generator with live city pages.",
+  "description": "TruckSim Command Center: personal companion for Euro Truck Simulator 2 and American Truck Simulator.",
   "engines": {
-    "node": ">=22.12"
+    "node": ">=24"
   },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "test": "node --test \"tests/*.test.mjs\"",
-    "collect:ats": "node scripts/ats/collect.mjs",
-    "photos:candidates": "node scripts/photos/candidates.mjs",
-    "photos:catalog": "node scripts/photos/catalog-candidates.mjs",
-    "distances:ats": "node scripts/ats/distances.mjs",
-    "map:ats": "node scripts/map/build-map.mjs",
-    "routes:ats": "node scripts/map/route-states.mjs"
+    "dev": "npm run dev -w @trucksim/web",
+    "bridge": "npm run start -w @trucksim/bridge",
+    "bridge:demo": "npm run demo -w @trucksim/bridge",
+    "build": "npm run build -w @trucksim/web",
+    "test": "node --test \"packages/core/test/*.test.ts\" \"apps/bridge/test/*.test.ts\"",
+    "typecheck": "tsc -p packages/core && tsc -p apps/bridge && tsc -p apps/web",
+    "check": "npm run typecheck && npm test"
   },
-  "dependencies": {
-    "astro": "7.3.8"
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3"
+  },
+  "allowScripts": {
+    "koffi@2.16.4": true,
+    "esbuild@0.28.2": true
   }
 }

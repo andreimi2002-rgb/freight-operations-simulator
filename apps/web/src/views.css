@@ -1,0 +1,99 @@
+/* Job */
+.job-hero { padding: 18px; }
+.job-cargo { display: flex; align-items: center; gap: 14px; }
+.job-cargo .grow { flex: 1; min-width: 0; }
+.job-cargo-icon {
+  width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; flex-shrink: 0;
+  background: color-mix(in srgb, var(--orange) 18%, transparent); color: var(--orange);
+}
+.job-cargo-icon svg { width: 28px; height: 28px; }
+.job-cargo-name { font-size: 22px; font-weight: 700; line-height: 1.2; }
+.route-line { position: relative; margin-top: 18px; padding-left: 4px; }
+.route-line::before {
+  content: ""; position: absolute; left: 11px; top: 16px; bottom: 16px; width: 2.5px; border-radius: 2px;
+  background: linear-gradient(var(--green), var(--blue));
+}
+.route-stop { display: flex; align-items: center; gap: 14px; padding: 8px 0; position: relative; }
+.route-stop .grow { flex: 1; min-width: 0; }
+.route-dot { width: 16px; height: 16px; border-radius: 50%; background: var(--surface); border: 4px solid var(--green); flex-shrink: 0; z-index: 1; }
+.route-dot.end { border-color: var(--blue); }
+.route-city { font-size: 19px; font-weight: 600; }
+.route-stop .muted { font-size: 14px; }
+@media (max-width: 520px) { .route-stop { flex-wrap: wrap; } .route-stop > div:last-child:not(.grow) { width: 100%; padding-left: 30px; } }
+
+/* Truck dashboard */
+.dash { padding: 20px; }
+.dash-speed { display: flex; align-items: center; gap: 22px; }
+.dash-big { font-family: var(--font-rounded); font-size: 54px; font-weight: 700; line-height: 1; letter-spacing: -0.02em; }
+.dash-side { flex: 1; display: grid; gap: 8px; min-width: 0; }
+.dash-chip { display: flex; justify-content: space-between; align-items: baseline; background: var(--fill-2); border-radius: 12px; padding: 10px 14px; }
+.dash-chip .muted { font-size: 14px; }
+.dash-chip b { font-family: var(--font-rounded); font-size: 22px; }
+.lights { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+.light {
+  display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 600;
+  background: var(--fill-2); color: var(--label-3);
+}
+.light i { width: 7px; height: 7px; border-radius: 50%; }
+@media (max-width: 420px) { .dash-speed { flex-direction: column; } .dash-side { width: 100%; } }
+
+/* Copilot */
+/* The page itself does not scroll: only the conversation does, and the input
+   area sits below it in normal flow, so it can never cover a message. */
+.copilot-page { overflow: hidden; }
+.copilot-inner { display: flex; flex-direction: column; height: 100%; min-height: 0; width: 100%; }
+.chat {
+  flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain;
+  display: flex; flex-direction: column; gap: 4px;
+  margin: 0 calc(-1 * var(--gutter)); padding: 8px var(--gutter) 12px;
+}
+.chat-empty { text-align: center; margin: 30px auto; max-width: 380px; }
+.chat-empty h3 { font-size: 22px; margin: 14px 0 6px; }
+.chat-empty p { font-size: 15px; margin: 0; }
+.chat-orb {
+  width: 76px; height: 76px; border-radius: 50%; margin: 0 auto; display: grid; place-items: center; color: #fff;
+  background: conic-gradient(from 200deg, var(--blue), var(--purple), var(--orange), var(--teal), var(--blue));
+  box-shadow: 0 8px 30px color-mix(in srgb, var(--purple) 40%, transparent);
+}
+.chat-orb svg { width: 36px; height: 36px; }
+.bubble-wrap { display: flex; flex-direction: column; max-width: 82%; margin-top: 6px; }
+.bubble-wrap.user { align-self: flex-end; align-items: flex-end; }
+.bubble-wrap.assistant { align-self: flex-start; align-items: flex-start; }
+.bubble { padding: 9px 14px; border-radius: 20px; font-size: 17px; line-height: 1.38; white-space: pre-wrap; word-wrap: break-word; }
+.bubble.user { background: var(--blue); color: #fff; border-bottom-right-radius: 6px; }
+.bubble.assistant { background: var(--surface-2); border-bottom-left-radius: 6px; }
+:root[data-theme="light"] .bubble.assistant { background: #e9e9eb; }
+.bubble-meta { font-size: 11.5px; color: var(--label-3); margin: 3px 8px 0; }
+.typing { display: flex; gap: 5px; padding: 14px 16px; }
+.typing i { width: 8px; height: 8px; border-radius: 50%; background: var(--label-3); animation: blink 1.2s infinite; }
+.typing i:nth-child(2) { animation-delay: 0.2s; }
+.typing i:nth-child(3) { animation-delay: 0.4s; }
+@keyframes blink { 0%, 80%, 100% { opacity: 0.3; } 40% { opacity: 1; } }
+.chips { display: flex; gap: 8px; overflow-x: auto; padding: 4px 0 10px; scrollbar-width: none; flex-wrap: nowrap; margin: 0 calc(-1 * var(--gutter)); padding-left: var(--gutter); padding-right: var(--gutter); }
+.chips.wrap { flex-wrap: wrap; margin: 0; padding: 0; overflow: visible; }
+.chips::-webkit-scrollbar { display: none; }
+.chip {
+  border: 0.5px solid var(--separator); background: var(--surface); border-radius: 999px; padding: 7px 14px; min-height: 34px;
+  font-size: 14px; cursor: pointer; white-space: nowrap; color: var(--label);
+}
+.chip:disabled { cursor: default; color: var(--label-2); }
+.chip:not(:disabled):active { background: var(--fill); }
+.copilot-inner > .note { margin-top: 6px; flex-shrink: 0; }
+.copilot-inner > header, .copilot-inner > .pair-card, .copilot-inner > .callout { flex-shrink: 0; }
+.composer-dock { flex-shrink: 0; padding-top: 6px; border-top: 0.5px solid var(--separator); margin: 0 calc(-1 * var(--gutter)); padding-left: var(--gutter); padding-right: var(--gutter); }
+.composer-dock .chips { padding-bottom: 8px; }
+.composer {
+  display: flex; align-items: center; gap: 8px; padding: 6px; border-radius: 999px;
+}
+.composer input { flex: 1; min-width: 0; border: 0; background: transparent; outline: none; font-size: 17px; min-height: 44px; padding: 0 6px; }
+.composer .mic, .composer .send {
+  width: 44px; height: 44px; border-radius: 50%; border: 0; display: grid; place-items: center; cursor: pointer; flex-shrink: 0;
+}
+.composer .mic { background: var(--fill); color: var(--blue); }
+.composer .mic.on { background: var(--red); color: #fff; animation: ring 1.4s infinite; }
+.composer .mic:disabled { opacity: 0.4; }
+.composer .send { background: var(--blue); color: #fff; }
+.composer .send:disabled { background: var(--fill); color: var(--label-3); }
+.composer svg { width: 22px; height: 22px; }
+@keyframes ring { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--red) 50%, transparent); } 100% { box-shadow: 0 0 0 14px transparent; } }
+@media (max-width: 480px) { .grid-2.stack-sm { grid-template-columns: 1fr; } }

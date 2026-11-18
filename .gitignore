@@ -1,10 +1,12 @@
-# Local Netlify folder
-.netlify
-
-# Astro
 node_modules/
 dist/
-.astro/
+*.tsbuildinfo
+.netlify/
+.DS_Store
+*.log
 
-# Local caches (wiki data collection)
-.cache/
+# Bridge runtime state: token, trip database, recordings
+var/
+recordings/*
+!recordings/README.md
+!recordings/samples/

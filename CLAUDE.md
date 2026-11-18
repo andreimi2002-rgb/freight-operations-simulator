@@ -1,3 +1,3 @@
 @AGENTS.md
 
-The plan, stages and decision log are in `DEVELOPMENT_PLAN.md` (Romanian). The owner reads Romanian.
+The plan and decision log are in `docs/PLAN.md` (Romanian). The owner reads Romanian.

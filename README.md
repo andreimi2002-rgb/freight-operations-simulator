@@ -1,108 +1,83 @@
-# Freight World
+# TruckSim Command Center
 
-An ATS / ETS2 style job generator built on the real game map, with live city pages: real local time, real weather and a real city photo. Not a game and not a real freight exchange. Not affiliated with SCS Software.
+Companion personal pentru **Euro Truck Simulator 2** și **American Truck Simulator**: telemetrie live pe iPhone/iPad/PC, hartă în stil Apple Maps, copilot în română (text și voce), enciclopedie și jurnal de curse.
 
-Live at https://freight-operations-simulator.netlify.app (from `main`). The plan is in [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md) (Romanian) and the rules for contributors and tools in [AGENTS.md](AGENTS.md). The previous product, the Freight Operations Simulator (FOS), is kept as the git tag `fos-final`.
+Proiect personal, neafiliat cu SCS Software.
 
-## Current version: 2.0.0-alpha.14 (saved pages and history)
+```
+ETS2 / ATS ──► scs-telemetry.dll (plugin) ──► memorie partajată "Local\SCSTelemetry"
+                                                    │
+                                    apps/bridge (Node, pe PC-ul cu jocul)
+                                    · citește 20×/s, normalizează, detectează evenimente
+                                    · jurnal de curse (SQLite) · înregistrări (replay)
+                                    · copilot (Claude sau reguli locale)
+                                                    │  WebSocket + REST, cu token
+                                                    ▼
+                         apps/web (PWA React) ── Netlify sau servită chiar de bridge
+                         Hartă · Cursă · Camion · Copilot · Wiki · Carieră · Setări
+```
 
-- Star any city, company, cargo, trailer, truck or job sheet; `/saved` lists them with the recently opened pages. Only in this browser (localStorage), no account.
+## Pornire rapidă
 
-### Search and SEO
+Ai nevoie de Node 24+ (pe PC e instalat Node 26).
 
-- Search in the header (`/` or Ctrl+K): cities, companies, cargo, trailers, trucks.
-- sitemap.xml, robots.txt, link previews (Open Graph / Twitter) and schema.org structured data. The default preview image is `public/og-default.png`; after the data changes, regenerate it with `node scripts/og/card.mjs out.html` and a 1200x630 headless Chrome screenshot.
-
-### Cargo, trailer and truck pages
-
-
-- A page for every cargo (who offers it, who accepts it, where it can go), trailer and truck; lists with filter.
-
-### Phase A
-
-- The job sheet opens with a job offer card like the in-game market, with urgency and time to deliver, a driving plan under US Hours of Service (breaks and rests shown on the route map) and the next jobs from the destination.
-- Map icons: city facilities and companies when zoomed in.
-
-### Map
-
-- Map in the style of the in-game map (`/ats/map`), on city pages and with the route on job sheets; drawn from Natural Earth (public domain), `npm run map:ats`.
-
-### Company pages
-
-- A page for every company on the starting map (`/ats/company/<id>`): depots, cargo, where its cargo goes and who supplies it.
-
-### Phase S: New Mexico, Oregon, Washington
-
-- 44 more cities (94 in all), with depots, photos, distances and the map. A job needs the map DLC of every state its route touches, not only the two ends (`data/ats/route-states.json`, `npm run routes:ats`); "My DLCs" lists the map DLCs.
-
-### Arizona
-
-- Arizona added (16 cities): the starting map of ATS (California, Nevada, Arizona) is complete with 50 cities. Other states come later.
-
-### Stage 4
-
-- A full sheet for every job at `/ats/mission/<id>`: depots with game ids, cargo, hazmat, trailer with dealer models, recommended trucks, distance and arrival time, weather at both ends with bad-weather warnings, required DLCs.
-- "Generate a job" button; "My DLCs" saved in the browser and used by boards, generator and planner.
-- ATS trucks collected from the wiki (`data/ats/trucks.json`).
-
-### Stage 3
-
-- Live departures boards on every city page and on the home page, from a deterministic job generator (`src/engine/`): only jobs possible in the game, new ones every hour. Route planner at `/ats/planner`.
-- Estimated road distances between all cities (`data/ats/distances.json`, OpenStreetMap via OSRM); `npm run distances:ats`.
-
-### Stage 2
-
-- A page for every city at `/ats/<state>/<city>` with the real photo, live local time, real weather (MET Norway), depots with what they offer and accept, facilities, roads, neighbouring cities and landmarks. City list at `/ats/`. US / metric units switch.
-- City photos from Wikimedia Commons, one per city (`data/photos.json`); candidates with `npm run photos:candidates`.
-- Illustrative real-world photos of trucks, trailers and generic cargo (`data/catalog-photos.json`, candidates with `npm run photos:catalog` from `data/catalog-photo-queries.json`); our own category icons (`data/categories.json`, `src/lib/media.mjs`) where there is no suitable photo.
-
-### Stage 1
-
-- Game data collected from Truck Simulator Wiki (CC BY-SA 4.0) into [data/ats/](data/ats/): 34 cities, 59 companies, 244 depots at the time (now 50 cities with Arizona), 295 cargo, 32 trailer types, owner-approved name corrections in `aliases.json`, plus `issues.json` for manual checking. City coordinates from Wikidata (CC0). See [data/ats/README.md](data/ats/README.md).
-- Collector: `npm run collect:ats` (cached, one request per second).
-
-### Stage 0
-
-- Astro static site: home page with an empty departures board, `/about` with sources and licences, 404 page.
-- Design tokens, self-hosted Inter and JetBrains Mono, header with the ATS / ETS2 ("soon") switch, footer with the required attribution.
-
-## Run and test
-
-Requires Node 22.12 or newer.
-
-```sh
+```bash
 npm install
-npm run dev       # local site at http://localhost:4321 (the weather needs `netlify dev`)
-npm run build     # static site in dist/
-npm test          # node --test
-npm run collect:ats   # refresh data/ats/ from the wiki (cached)
-npm run photos:candidates   # photo candidates per city from Wikimedia Commons
-npm run photos:catalog      # photo candidates for trucks, trailers, generic cargo and cities without a photo
-npm run distances:ats       # estimated road distances between cities (OSRM)
-npm run map:ats             # map layers from Natural Earth (data/map/ats-map.json)
 ```
 
-## Structure
-
-```
-src/pages/         one file per URL (index, about, 404, ats/index, ats/[state]/[city], ats/planner, ats/mission)
-src/engine/        job generator and job dataset (pure, reusable)
-src/lib/           data access and pure helpers for the pages (units, weather, formatting)
-src/scripts/       browser code: clock, weather, units switch, departures boards, route planner
-src/layouts/       base page layout
-src/components/    header, footer, game switch, departures board
-src/styles/        tokens.css (design tokens), fonts.css, global.css
-src/i18n/          UI text (en.json) and the t() helper
-src/data/          sources.json (sources and licences shown on /about)
-data/ats/          ATS game data (CC BY-SA 4.0) and scope.json
-data/photos.json   chosen photo per city (Wikimedia Commons)
-scripts/photos/    photo candidates from Wikimedia Commons
-scripts/ats/       collector for data/ats/ (MediaWiki API, Wikidata)
-public/            fonts with licences, favicon
-tests/             node --test
-netlify/           weather function (/api/weather/<city>, MET Norway)
+```bash
+npm run build
 ```
 
-## Data and licences
+```bash
+npm run bridge
+```
 
-Game data comes from Truck Simulator Wiki contributors (trucksimulator.wiki.gg), CC BY-SA 4.0. Weather data from MET Norway (CC BY 4.0). City coordinates from Wikidata (CC0). City photos from Wikimedia Commons (author and licence on each photo). Distances estimated from OpenStreetMap (ODbL). The full list is on `/about` and in `src/data/sources.json`.
+Bridge-ul afișează adresa, tokenul și un **link de împerechere**. Deschide link-ul pe telefon (aceeași rețea Wi-Fi) și aplicația se conectează singură.
+
+- Fără joc: `npm run bridge:demo` rulează cursa demo Brașov → Ruse prin bridge.
+- Doar interfața, fără PC: deschide aplicația de pe Netlify. Pornește automat în modul demo, care rulează în browser.
+- Dezvoltare UI: `npm run dev` (Vite, http://localhost:5173).
+
+Pentru microfon și pentru aplicația de pe Netlify ai nevoie de HTTPS până la PC. Pașii sunt în [docs/SETUP.md](docs/SETUP.md).
+
+## Structură
+
+| Folder | Ce conține |
+| --- | --- |
+| `packages/core` | Schema comună (`Snapshot`, `Trip`, `GameEvent`), detecție evenimente, jurnal de curse, simulator demo, copilot local + unelte, căutare wiki, formatare unități. Rulează în Node și în browser. |
+| `apps/bridge` | Serviciul Windows: citire memorie partajată (koffi → kernel32), normalizare, WebSocket/REST, SQLite (`node:sqlite`), înregistrări `.jsonl.gz`, Claude. |
+| `apps/web` | PWA React + Vite: design Apple, hartă canvas cu vedere 3D, voce (Web Speech API). |
+| `data/ats` | Date ATS din Truck Simulator Wiki (CC BY-SA 4.0), moștenite din Freight World. |
+| `recordings/` | Sesiuni live înregistrate automat (ignorate de git), pentru replay și teste. |
+| `docs/` | Plan, instalare, validare pe jocul real. |
+
+## Verificare
+
+```bash
+npm run check
+```
+
+Rulează typecheck pe toate pachetele și testele (`node --test`): parser-ul memoriei pluginului pe offset-urile documentate, normalizare, evenimente, „cursa se salvează o singură dată”, copilotul care refuză să inventeze, căutare wiki.
+
+## Copilot AI
+
+Fără cheie, copilotul răspunde cu reguli locale în română, doar despre joc: distanță, combustibil, cursă, camion, odihnă, istoric, wiki.
+
+Cu un AI conectat devine un asistent general, care răspunde la orice. Cifrele din joc le ia tot doar din telemetrie. Se configurează din **Setări → Copilot AI**, fără terminal și fără repornire.
+
+| Furnizor | Cost | Cheie |
+| --- | --- | --- |
+| **Gemini** (recomandat) | gratuit, cu limite de cereri | aistudio.google.com/apikey: **Create API key → într-un proiect nou, fără facturare** |
+| Claude | plătit la folosire | console.anthropic.com → API Keys |
+| Local | gratuit, offline | nu e nevoie |
+
+Important pentru Gemini: o cheie dintr-un proiect Google cu facturare activă (de exemplu cu plată anticipată și credit zero) nu primește nivelul gratuit și dă eroarea 402. Folosește un proiect nou, fără facturare.
+
+La salvare, aplicația trimite un mesaj de test minim, alege automat cel mai bun model care răspunde și abia apoi salvează cheia, doar pe PC, în `var/ai.json` (ignorat de git). Cheia nu ajunge în browser. Cel mai sigur e s-o introduci de pe PC (`http://localhost:<port>`) sau prin HTTPS (Tailscale), nu prin HTTP pe Wi-Fi.
+
+Alternativ, merg și variabilele de mediu `GEMINI_API_KEY` sau `ANTHROPIC_API_KEY`. O cheie salvată din aplicație are prioritate.
+
+## Istoric
+
+Branch-ul `main` conținea **Freight World** (generator de curse ATS), salvat ca tag-ul `freight-world-final`. Proiectul de dinainte (FOS) e tag-ul `fos-final`.

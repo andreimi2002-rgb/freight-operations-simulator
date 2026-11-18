@@ -1,0 +1,22 @@
+{
+  "name": "@trucksim/bridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Windows bridge: reads ATS/ETS2 telemetry from the scs-sdk-plugin shared memory and serves it over WebSocket.",
+  "scripts": {
+    "start": "node src/main.ts",
+    "demo": "node src/main.ts --mode demo",
+    "replay": "node src/main.ts --mode replay"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.10.0",
+    "@google/genai": "^3.6.0",
+    "@trucksim/core": "*",
+    "koffi": "^2.14.1",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.1"
+  }
+}

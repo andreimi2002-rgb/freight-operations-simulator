@@ -1,0 +1,10 @@
+{
+  "name": "@trucksim/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Shared telemetry schema, event detection, trip tracking, demo simulator and copilot logic.",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}
