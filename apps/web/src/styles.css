@@ -36,6 +36,8 @@
   --nav-banner-2: #185a36;
 
   --map-bg: #191b20;
+  --map-road: #a1a8b5;
+  --map-road-edge: #333a45;
   --map-grid: rgba(255, 255, 255, 0.045);
   --map-grid-major: rgba(255, 255, 255, 0.08);
   --map-route: #0a84ff;
@@ -86,6 +88,8 @@
   --nav-banner: #1d7a46;
   --nav-banner-2: #17663a;
   --map-bg: #eef0ea;
+  --map-road: #657082;
+  --map-road-edge: #fcfdfc;
   --map-grid: rgba(0, 0, 0, 0.04);
   --map-grid-major: rgba(0, 0, 0, 0.07);
   --map-route: #007aff;
@@ -118,6 +122,8 @@
   --nav-banner: #163f2a;
   --nav-banner-2: #11331f;
   --map-bg: #0c0d10;
+  --map-road: #777f8f;
+  --map-road-edge: #2a303a;
   --map-grid: rgba(255, 255, 255, 0.025);
   --map-grid-major: rgba(255, 255, 255, 0.045);
   --map-route: #2f63ab;
@@ -429,8 +435,7 @@ input, textarea, select { font: inherit; color: inherit; }
 .nav-secondary { font-size: 14px; opacity: 0.72; margin-top: 2px; }
 
 .map-speed {
-  position: absolute; z-index: 5; left: calc(14px + var(--safe-left)); bottom: calc(var(--tabbar-h) + var(--safe-bottom) + 170px);
-  display: flex; flex-direction: column; gap: 10px; align-items: center;
+  display: flex; gap: 10px; align-items: center;
 }
 .speed-bubble {
   width: 74px; height: 74px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -462,16 +467,22 @@ input, textarea, select { font: inherit; color: inherit; }
   position: absolute; z-index: 5; left: calc(14px + var(--safe-left)); top: calc(var(--safe-top) + 130px);
   display: flex; flex-direction: column; gap: 8px; align-items: flex-start;
 }
+.map-layer-status {
+  max-width: min(230px, calc(100vw - 100px)); padding: 6px 9px; border-radius: 8px;
+  color: var(--label); font-size: 11px; line-height: 1.35;
+}
+.map-layer-status small { display: block; color: var(--label-2); font-size: inherit; }
 .map-scale {
   font-size: 11px; font-weight: 600; color: var(--label-2); border-bottom: 2px solid var(--label-2);
   border-left: 2px solid var(--label-2); border-right: 2px solid var(--label-2); height: 12px; line-height: 9px; padding-left: 4px;
 }
 
-.map-bottom {
+.map-dock {
   position: absolute; z-index: 6; left: 50%; transform: translateX(-50%);
   bottom: calc(var(--tabbar-h) + var(--safe-bottom) + 22px);
-  width: min(560px, calc(100% - 24px)); border-radius: 24px; padding: 16px 18px;
+  width: min(560px, calc(100% - 24px)); display: grid; gap: 10px; pointer-events: none;
 }
+.map-bottom { border-radius: 24px; padding: 16px 18px; pointer-events: auto; }
 .eta-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; text-align: center; }
 .eta-value { font-family: var(--font-rounded); font-size: 24px; font-weight: 700; letter-spacing: -0.01em; }
 .eta-label { font-size: 12px; color: var(--label-2); font-weight: 500; }
@@ -481,8 +492,8 @@ input, textarea, select { font: inherit; color: inherit; }
 
 @media (min-width: 900px) {
   .map-top { justify-content: flex-start; }
-  .map-bottom { left: auto; right: 24px; transform: none; bottom: 24px; width: 400px; }
-  .map-speed { bottom: 28px; }
+  .map-dock { left: auto; right: 24px; transform: none; bottom: 24px; width: 400px; }
+  .map-speed { position: absolute; right: calc(100% + 16px); bottom: 0; }
   .map-controls { top: auto; bottom: 200px; right: 24px; }
   .map-meta { top: calc(var(--safe-top) + 130px); }
 }

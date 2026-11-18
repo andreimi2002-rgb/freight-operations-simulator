@@ -9,7 +9,7 @@ import {
   type Trip,
 } from '@trucksim/core';
 import type { Recorder } from './recorder.ts';
-import { DemoSource, LiveSource, ReplaySource, type TelemetrySource } from './sources.ts';
+import { DemoSource, LiveSource, ReplaySource, type ScsSample, type TelemetrySource } from './sources.ts';
 import type { TripStore } from './store.ts';
 
 const BROADCAST_MS = 100; // 10 Hz to clients
@@ -70,15 +70,15 @@ export class Hub extends EventEmitter {
     this.mode = mode;
     this.replayFile = mode === 'replay' ? (opts.replayName ?? opts.replayPath ?? null) : null;
     this.source = src;
-    src.start((snap, events) => this.ingest(snap, events));
+    src.start((snap, events, scs) => this.ingest(snap, events, scs));
   }
 
-  private ingest(snap: Snapshot, sourceEvents: GameEvent[]): void {
+  private ingest(snap: Snapshot, sourceEvents: GameEvent[], scs?: ScsSample): void {
     const derived = this.derived.next(snap);
     const events = [...derived, ...sourceEvents];
     // Trips: demo and replay trips are stored too, marked by source, and hidden by default.
     this.trips.update(snap, events);
-    this.recorder.push(snap, sourceEvents);
+    this.recorder.push(snap, sourceEvents, scs);
     this.last = snap;
     for (const ev of events) {
       this.recentEvents.push(ev);

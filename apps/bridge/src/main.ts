@@ -2,8 +2,10 @@ import { randomInt } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import { networkInterfaces } from 'node:os';
 import { join } from 'node:path';
-import { WikiIndex, type WikiData } from '@trucksim/core';
+import type { WikiData } from '@trucksim/core';
 import { CoDriver } from './ai.ts';
+import { WikiProvider } from './gamedata/wiki.ts';
+import { startWorld } from './map/world.ts';
 import { BRIDGE_VERSION, loadConfig } from './config.ts';
 import { Hub } from './hub.ts';
 import { Recorder } from './recorder.ts';
@@ -12,7 +14,8 @@ import { TripStore } from './store.ts';
 
 const config = loadConfig();
 
-function loadWiki(): WikiIndex | null {
+/** Truck Simulator Wiki data for ATS (bundled, CC BY-SA 4.0). */
+function loadAtsWiki(): WikiData | null {
   try {
     const read = (f: string) => JSON.parse(readFileSync(join(config.dataDir, 'ats', f), 'utf8'));
     const cities = read('cities.json');
@@ -24,7 +27,7 @@ function loadWiki(): WikiIndex | null {
       trucks: read('trucks.json').trucks,
       trailers: read('trailers.json').trailers,
     };
-    return new WikiIndex(data);
+    return data;
   } catch (err) {
     console.warn('[wiki] could not load data/ats:', err instanceof Error ? err.message : err);
     return null;
@@ -43,7 +46,15 @@ const store = new TripStore(join(config.varDir, 'trips.sqlite'));
 const recorder = new Recorder(config.recordingsDir, config.record);
 const hub = new Hub(store, recorder);
 const ai = new CoDriver({ varDir: config.varDir });
-const wiki = loadWiki();
+const wiki = new WikiProvider(loadAtsWiki());
+// Extract game data from the installed games in the background (fast when nothing changed).
+void wiki.refresh().catch((err: unknown) => console.warn('[gamedata]', err));
+// The whole ETS2 map: loaded from the cache, or built in a worker thread when the game changed.
+try {
+  startWorld();
+} catch (err) {
+  console.warn('[world]', err instanceof Error ? err.message : err);
+}
 
 let replayPath: string | undefined;
 if (config.mode === 'replay') {

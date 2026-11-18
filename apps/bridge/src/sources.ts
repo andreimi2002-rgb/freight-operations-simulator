@@ -3,10 +3,21 @@ import { createInterface } from 'node:readline';
 import { createGunzip } from 'node:zlib';
 import { DemoSimulator, emptySnapshot, type GameEvent, type Snapshot } from '@trucksim/core';
 import { normalize, SdkEventDetector } from './normalize.ts';
-import { parseScs, SUPPORTED_REVISION } from './scs-layout.ts';
+import { parseScs, SUPPORTED_REVISION, type RawScs } from './scs-layout.ts';
 import { SharedMemoryReader } from './shm.ts';
+import { loadRegionalMap } from './map/regional.ts';
 
-export type Emit = (snap: Snapshot, events: GameEvent[]) => void;
+export interface ScsSample {
+  time: string;
+  sdkActive: boolean;
+  paused: boolean;
+  onJob: boolean;
+  jobFinished: boolean;
+  jobDelivered: boolean;
+  jobCancelled: boolean;
+}
+
+export type Emit = (snap: Snapshot, events: GameEvent[], scs?: ScsSample) => void;
 
 export interface TelemetrySource {
   readonly kind: 'live' | 'demo' | 'replay';
@@ -19,6 +30,14 @@ export interface TelemetrySource {
 const POLL_MS = 50;
 const STALE_MS = 3000;
 const REOPEN_MS = 10_000;
+
+export function liveSampleState(raw: Pick<RawScs, 'paused' | 'sdkActive'>, unchangedMs: number) {
+  const paused = raw.sdkActive && raw.paused;
+  return {
+    available: raw.sdkActive && (paused || unchangedMs < STALE_MS),
+    reopen: !paused && unchangedMs > REOPEN_MS,
+  };
+}
 
 /** Live telemetry from the plugin's shared memory. */
 export class LiveSource implements TelemetrySource {
@@ -61,20 +80,30 @@ export class LiveSource implements TelemetrySource {
           this.lastTime = raw.time;
           this.lastChange = now;
         }
-        const fresh = now - this.lastChange < STALE_MS;
+        if (raw.sdkActive && raw.paused) this.lastChange = now;
+        const state = liveSampleState(raw, now - this.lastChange);
+        const scs: ScsSample = {
+          time: raw.time.toString(),
+          sdkActive: raw.sdkActive,
+          paused: raw.paused,
+          onJob: raw.onJob,
+          jobFinished: raw.jobFinished,
+          jobDelivered: raw.jobDelivered,
+          jobCancelled: raw.jobCancelled,
+        };
         // The mapping stays alive while we hold it, even after the game exits:
         // when nothing changes for a while, release it and look again.
-        if (!fresh && now - this.lastChange > REOPEN_MS) {
+        if (state.reopen) {
           this.shm.close();
           this.sdkEvents.reset();
           this.lastTime = null;
-          emit(emptySnapshot('live', now), []);
+          emit(emptySnapshot('live', now), [], scs);
           return;
         }
-        const snap = normalize(raw, now, fresh);
-        const events = fresh ? this.sdkEvents.next(raw, snap) : [];
+        const snap = normalize(raw, now, state.available);
+        const events = state.available ? this.sdkEvents.next(raw, snap) : [];
         this.error = null;
-        emit(snap, events);
+        emit(snap, events, scs);
       } catch (err) {
         this.error = err instanceof Error ? err.message : String(err);
       }
@@ -96,11 +125,17 @@ export class LiveSource implements TelemetrySource {
 export class DemoSource implements TelemetrySource {
   readonly kind = 'demo' as const;
   private timer: NodeJS.Timeout | null = null;
-  private readonly sim = new DemoSimulator();
 
   start(emit: Emit): void {
+    let map: ReturnType<typeof loadRegionalMap> = null;
+    try {
+      map = loadRegionalMap();
+    } catch (error) {
+      console.warn('[demo map]', error);
+    }
+    const sim = new DemoSimulator(undefined, map?.demoRoute, map?.demoDestination);
     this.timer = setInterval(() => {
-      const { snapshot, events } = this.sim.tick(Date.now());
+      const { snapshot, events } = sim.tick(Date.now());
       emit(snapshot, events);
     }, 100);
   }

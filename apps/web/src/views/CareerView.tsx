@@ -160,6 +160,7 @@ function TripSheet({ trip, source, onClose }: { trip: Trip; source: 'bridge' | '
         <div className="row"><span className="grow">De la</span><span className="value truncate">{[full.sourceCompany, full.sourceCity].filter(Boolean).join(', ') || '—'}</span></div>
         <div className="row"><span className="grow">La</span><span className="value truncate">{[full.destinationCompany, full.destinationCity].filter(Boolean).join(', ') || '—'}</span></div>
         <div className="row"><span className="grow">Camion</span><span className="value">{full.truck ?? '—'}</span></div>
+        <div className="row"><span className="grow">Remorcă</span><span className="value truncate">{full.trailer ?? '—'}</span></div>
         <div className="row"><span className="grow">Amenzi / taxe</span><span className="value">{fmt.money(full.fines, full.gameId)} / {fmt.money(full.tolls, full.gameId)}</span></div>
         <div className="row"><span className="grow">Viteză maximă</span><span className="value">{fmt.speed(full.maxSpeedKmh, units)}</span></div>
         <div className="row"><span className="grow">Durată (joc)</span><span className="value">{full.startGameMin !== null && full.endGameMin !== null ? fmt.duration(full.endGameMin - full.startGameMin) : '—'}</span></div>

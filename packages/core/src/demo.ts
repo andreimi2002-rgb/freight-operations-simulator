@@ -1,4 +1,5 @@
 import { makeEvent } from './events.ts';
+import type { MapPoint, RegionalMap } from './regional-map.ts';
 import type { GameEvent, JobState, Snapshot, TruckState } from './types.ts';
 
 /**
@@ -30,25 +31,25 @@ const LIMITS: Array<[number, number]> = [
 
 interface Segment { x0: number; z0: number; x1: number; z1: number; len: number; start: number }
 
-function buildSegments(): { segs: Segment[]; total: number } {
-  const raw: Segment[] = [];
+function buildSegments(points: MapPoint[]): { segs: Segment[]; total: number } {
+  const segs: Segment[] = [];
   let total = 0;
-  for (let i = 0; i < WAYPOINTS.length - 1; i++) {
-    const [x0, z0] = WAYPOINTS[i]!;
-    const [x1, z1] = WAYPOINTS[i + 1]!;
+  for (let i = 0; i < points.length - 1; i++) {
+    const [x0, z0] = points[i]!;
+    const [x1, z1] = points[i + 1]!;
     const len = Math.hypot(x1 - x0, z1 - z0);
-    raw.push({ x0, z0, x1, z1, len, start: total });
+    if (!len) continue;
+    segs.push({ x0, z0, x1, z1, len, start: total });
     total += len;
   }
-  // Scale so the path length matches the world distance of the job.
-  const k = (WORLD_KM * 1000) / total;
-  const segs = raw.map((s) => ({
-    x0: s.x0 * k, z0: s.z0 * k, x1: s.x1 * k, z1: s.z1 * k, len: s.len * k, start: s.start * k,
-  }));
-  return { segs, total: total * k };
+  return { segs, total };
 }
 
-const { segs: SEGMENTS, total: TOTAL_M } = buildSegments();
+const schematic = buildSegments(WAYPOINTS);
+// Preserve the original offline scenario's planned distance.
+const k = WORLD_KM * 1000 / schematic.total;
+const DEFAULT_ROUTE: MapPoint[] = WAYPOINTS.map(([x, z]) => [x * k, z * k]);
+const DEFAULT_SEGMENTS = buildSegments(DEFAULT_ROUTE);
 
 function limitAt(f: number): number {
   let l = LIMITS[0]![1];
@@ -56,9 +57,9 @@ function limitAt(f: number): number {
   return l;
 }
 
-function pointAt(distM: number): { x: number; z: number; headingDeg: number } {
-  const d = Math.min(Math.max(distM, 0), TOTAL_M);
-  const seg = SEGMENTS.find((s) => d <= s.start + s.len) ?? SEGMENTS[SEGMENTS.length - 1]!;
+function pointAt(distM: number, { segs, total }: ReturnType<typeof buildSegments>): { x: number; z: number; headingDeg: number } {
+  const d = Math.min(Math.max(distM, 0), total);
+  const seg = segs.find((s) => d <= s.start + s.len) ?? segs[segs.length - 1]!;
   const t = seg.len === 0 ? 0 : (d - seg.start) / seg.len;
   const x = seg.x0 + (seg.x1 - seg.x0) * t;
   const z = seg.z0 + (seg.z1 - seg.z0) * t;
@@ -85,12 +86,21 @@ export class DemoSimulator {
   private delivered = false;
   private jobActive = true;
   private wobble = 0;
+  private readonly path: ReturnType<typeof buildSegments>;
+  private readonly plannedKm: number;
+  private readonly regional: boolean;
+  private readonly regionalDestination: RegionalMap['demoDestination'];
 
   /** @param startFraction start part-way along the route (0..1). */
-  constructor(startFraction = 0.08) {
-    this.distM = TOTAL_M * startFraction;
-    this.odometer += PLANNED_KM * startFraction;
-    this.fuel -= PLANNED_KM * startFraction * LITRES_PER_KM;
+  constructor(startFraction = 0.08, roadRoute?: MapPoint[] | null, destination?: RegionalMap['demoDestination']) {
+    const path = roadRoute && buildSegments(roadRoute);
+    this.regional = Boolean(path && path.total > 0);
+    this.regionalDestination = this.regional ? destination : undefined;
+    this.path = path && path.total > 0 ? path : DEFAULT_SEGMENTS;
+    this.plannedKm = this.regional ? this.path.total / 1000 * TIME_SCALE : PLANNED_KM;
+    this.distM = this.path.total * startFraction;
+    this.odometer += this.plannedKm * startFraction;
+    this.fuel -= this.plannedKm * startFraction * LITRES_PER_KM;
     this.gameMin += ((this.distM / 22) * TIME_SCALE) / 60;
     this.speedMs = 22;
   }
@@ -99,14 +109,14 @@ export class DemoSimulator {
     const dt = this.lastTs === null ? 0 : Math.min((now - this.lastTs) / 1000, 1);
     this.lastTs = now;
     const events: GameEvent[] = [];
-    const progress = this.distM / TOTAL_M;
+    const progress = this.distM / this.path.total;
 
     if (this.phase === 'driving') {
       const limit = limitAt(progress);
       this.wobble += dt * 0.35;
       // Mostly obeys the limit; overshoots a bit around 40% to show the speeding warning.
       const overshoot = progress > 0.38 && progress < 0.41 ? 14 : 0;
-      const remainingM = TOTAL_M - this.distM;
+      const remainingM = this.path.total - this.distM;
       const stopFactor = Math.min(1, remainingM / 350);
       const target = ((limit - 3 + overshoot + Math.sin(this.wobble) * 2.5) / 3.6) * Math.max(stopFactor, 0.12);
       const accel = target > this.speedMs ? 0.9 : 1.6;
@@ -119,7 +129,7 @@ export class DemoSimulator {
       this.fuel = Math.max(0, this.fuel - displayedKm * LITRES_PER_KM);
       this.gameMin += (dt * TIME_SCALE) / 60;
 
-      if (!this.tolled && progress > 0.93) {
+      if (!this.regional && !this.tolled && progress > 0.93) {
         this.tolled = true;
         events.push(makeEvent('tollgate', this.meta(now), { amount: 12 }));
       }
@@ -131,7 +141,7 @@ export class DemoSimulator {
         events.push(
           makeEvent('job.delivered', this.meta(now), {
             amount: 7840,
-            details: { xp: 512, cargoDamage: 0.004, autoParked: false, distanceKm: PLANNED_KM },
+            details: { xp: 512, cargoDamage: 0.004, autoParked: false, distanceKm: this.plannedKm },
           }),
         );
         this.jobActive = false;
@@ -171,12 +181,12 @@ export class DemoSimulator {
   }
 
   snapshot(now: number): Snapshot {
-    const progress = this.distM / TOTAL_M;
-    const p = pointAt(this.distM);
+    const progress = this.distM / this.path.total;
+    const p = pointAt(this.distM, this.path);
     const speedKmh = this.speedMs * 3.6;
     const gear = speedKmh < 1 ? 0 : Math.min(12, Math.max(1, Math.round(speedKmh / 7.5)));
     const rpm = speedKmh < 1 ? 650 : 1050 + ((speedKmh % 7.5) / 7.5) * 400;
-    const remainingKm = ((TOTAL_M - this.distM) / 1000) * TIME_SCALE;
+    const remainingKm = (Math.max(0, this.path.total - this.distM) / 1000) * TIME_SCALE;
     const truck: TruckState = {
       brand: 'Scania',
       name: 'S (demo)',
@@ -228,15 +238,15 @@ export class DemoSimulator {
           cargoLoaded: true,
           sourceCity: 'Brașov',
           sourceCityId: 'brasov',
-          sourceCompany: 'Subse',
-          sourceCompanyId: 'subse',
-          destinationCity: 'Ruse',
-          destinationCityId: 'ruse',
+          sourceCompany: this.regional ? null : 'Subse',
+          sourceCompanyId: this.regional ? null : 'subse',
+          destinationCity: this.regional && !this.regionalDestination ? 'Zona Brașov' : 'Ruse',
+          destinationCityId: this.regional && !this.regionalDestination ? null : 'ruse',
           destinationCompany: null,
           destinationCompanyId: null,
           income: 7840,
           deadlineAbsMin: START_GAME_MIN + 10 * 60,
-          plannedDistanceKm: PLANNED_KM,
+          plannedDistanceKm: this.plannedKm,
           market: 'freight_market',
           specialTransport: false,
         }
@@ -244,6 +254,7 @@ export class DemoSimulator {
     return {
       v: 1,
       source: 'demo',
+      ...(this.regional ? { demoRoute: 'regional' as const } : {}),
       ts: now,
       sdkActive: true,
       game: this.game(),
@@ -251,9 +262,14 @@ export class DemoSimulator {
       trailers: [
         {
           attached: true,
-          name: 'Refrigerated (demo)',
-          brand: null,
-          bodyType: 'refrigerated',
+          // Chocolate goes in a dry van or curtainsider in the game files.
+          id: 'krone.dryliner.single_3.dryvan',
+          name: 'Dry Liner',
+          brand: 'Krone',
+          brandId: 'krone',
+          bodyType: 'dryvan',
+          chainType: 'single',
+          wheels: 6,
           licensePlate: null,
           cargoDamage: 0.004,
           wear: { chassis: 0.01, wheels: 0.02, body: 0.008 },
@@ -263,7 +279,7 @@ export class DemoSimulator {
       navigation: {
         distanceKm: this.jobActive ? remainingKm : null,
         timeMin: this.jobActive ? (remainingKm / 72) * 60 : null,
-        speedLimitKmh: limitAt(progress),
+        speedLimitKmh: this.regional ? null : limitAt(progress),
       },
       position: { x: p.x, y: 0, z: p.z, headingDeg: p.headingDeg, pitchDeg: 0, rollDeg: 0 },
     };
@@ -272,8 +288,8 @@ export class DemoSimulator {
   /** The full demo route, for drawing it on the map. */
   static route(): Array<{ x: number; z: number }> {
     const pts: Array<{ x: number; z: number }> = [];
-    for (let d = 0; d <= TOTAL_M; d += 100) {
-      const p = pointAt(d);
+    for (let d = 0; d <= DEFAULT_SEGMENTS.total; d += 100) {
+      const p = pointAt(d, DEFAULT_SEGMENTS);
       pts.push({ x: p.x, z: p.z });
     }
     return pts;

@@ -1,4 +1,5 @@
 import * as f from './format.ts';
+import type { nearbyCity, UpcomingTurn } from './regional-map.ts';
 import type { Snapshot, Trip } from './types.ts';
 import { fold, type WikiIndex } from './wiki.ts';
 
@@ -17,6 +18,8 @@ export interface CopilotContext {
   now: number;
   trips: (limit: number) => Trip[] | Promise<Trip[]>;
   wiki: WikiIndex | null;
+  location?: () => ReturnType<typeof nearbyCity>;
+  nextTurn?: () => UpcomingTurn | null;
 }
 
 export type ToolName =
@@ -26,6 +29,7 @@ export type ToolName =
   | 'get_game_time'
   | 'list_trips'
   | 'search_wiki'
+  | 'get_location'
   | 'get_next_maneuver';
 
 export interface ToolSpec {
@@ -78,7 +82,7 @@ export const TOOL_SPECS: ToolSpec[] = [
   {
     name: 'search_wiki',
     description:
-      'Search the local game encyclopedia (cities, companies, cargo, trucks, trailers; currently American Truck Simulator data from Truck Simulator Wiki). Returns matching entries with facts and the source URL.',
+      'Search the encyclopedia of the game being played (cities, companies with their depots and cargo, cargo types; from the installed game files, plus Truck Simulator Wiki details for ATS). Returns matching entries with facts.',
     input_schema: {
       type: 'object',
       properties: { query: { type: 'string', description: 'Name or keywords, e.g. "Oakland" or "Walbert".' } },
@@ -87,9 +91,14 @@ export const TOOL_SPECS: ToolSpec[] = [
     },
   },
   {
+    name: 'get_location',
+    description: 'Estimate the nearest mapped in-game city and country from the truck position. Use when asked where the player is now or about the real-world counterpart. Distance is in game map coordinates.',
+    input_schema: noInput,
+  },
+  {
     name: 'get_next_maneuver',
     description:
-      'Next exit, turn and lane advice. Not available yet: our own road map and routing are a later phase. Returns the reason.',
+      'Next left or right turn inferred from the app-calculated route. This tool does not supply a lane, exit number, road sign or the official game GPS maneuver.',
     input_schema: noInput,
   },
 ];
@@ -196,16 +205,25 @@ export async function runTool(name: string, input: Record<string, unknown>, ctx:
       if (!ctx.wiki) return { available: false, note: 'Enciclopedia nu este încărcată.' };
       const hits = ctx.wiki.search(q, 5);
       return {
-        available: true, coverage: 'American Truck Simulator (CA, NV, AZ, NM, OR, WA). ETS2 data is not imported yet.',
+        available: true,
+        game: ctx.wiki.data.game ?? 'ats',
+        coverage: ctx.wiki.data.origin === 'game'
+          ? 'Complete data from the installed game files (base game and installed DLCs).'
+          : 'American Truck Simulator only (CA, NV, AZ, NM, OR, WA), from Truck Simulator Wiki.',
         attribution: ctx.wiki.data.meta.attribution,
         results: hits.map((h) => describeWiki(ctx.wiki!, h.kind, h.id)),
       };
     }
-    case 'get_next_maneuver':
-      return {
-        available: false,
-        reason: 'Ghidajul pe ieșiri și benzi are nevoie de harta rutieră extrasă din joc (faza Map Data Pipeline). Până atunci nu inventăm indicații.',
-      };
+    case 'get_location': {
+      const location = fr.live ? ctx.location?.() : null;
+      return location ? { available: true, ...fr, ...location, approximate: true }
+        : { available: false, ...fr, reason: 'Poziția nu poate fi asociată cu un oraș de pe harta disponibilă.' };
+    }
+    case 'get_next_maneuver': {
+      const turn = fr.live ? ctx.nextTurn?.() : null;
+      return turn ? { available: true, ...fr, ...turn, routeSource: 'app_calculated' }
+        : { available: false, ...fr, reason: 'Nu am un viraj apropiat pe ruta calculată.' };
+    }
     default:
       return { error: `Unknown tool ${name}` };
   }
@@ -216,7 +234,8 @@ function describeWiki(w: WikiIndex, kind: string, id: string): Record<string, un
     case 'city': {
       const c = w.city(id)!;
       return {
-        kind, name: c.name, state: c.state, dlc: c.dlc, companies: [...new Set((c.depots ?? []).map((d) => d.company))],
+        kind, name: c.name, state: c.state, dlc: c.dlc, population: c.population ?? null,
+        companies: [...new Set((c.depots ?? []).map((d) => w.company(d.company)?.name ?? d.company))],
         facilities: c.facilities, roads: c.roads, neighbors: c.neighbors, landmarks: c.landmarks?.slice(0, 6), url: c.wiki?.url,
       };
     }
@@ -224,13 +243,18 @@ function describeWiki(w: WikiIndex, kind: string, id: string): Record<string, un
       const c = w.company(id)!;
       return {
         kind, name: c.name, industry: c.industry, gameIds: c.defIds,
-        depots: c.depotTypes.map((d) => ({ type: d.type, cities: d.cities, provides: d.provides.slice(0, 12), accepts: d.accepts.slice(0, 12) })),
+        depots: c.depotTypes.map((d) => ({
+          type: d.type,
+          cities: d.cities.map((x) => w.city(x)?.name ?? x),
+          provides: d.provides.slice(0, 15).map((x) => w.cargo(x)?.name ?? x),
+          accepts: d.accepts.slice(0, 15).map((x) => w.cargo(x)?.name ?? x),
+        })),
         url: c.wiki?.url,
       };
     }
     case 'cargo': {
       const c = w.cargo(id)!;
-      return { kind, name: c.name, dlc: c.dlc, weightLb: c.weightLb, valuePerKm: c.valuePerKm, flags: c.flags, hazmatClass: c.hazmatClass, trailerTypes: c.trailerTypes, url: c.wiki?.url };
+      return { kind, name: c.name, dlc: c.dlc, weightLb: c.weightLb, unitMassKg: c.unitMassKg ?? null, valuePerKm: c.valuePerKm, flags: c.flags, hazmatClass: c.hazmatClass, trailerTypes: c.trailerTypes, url: c.wiki?.url };
     }
     case 'truck': {
       const t = w.truck(id)!;
@@ -248,9 +272,10 @@ function describeWiki(w: WikiIndex, kind: string, id: string): Record<string, un
 // ---------------------------------------------------------------------------
 
 type Intent =
-  | 'navigation' | 'fuel' | 'truck' | 'job' | 'speedLimit' | 'time' | 'rest' | 'trips' | 'wiki' | 'maneuver' | 'help';
+  | 'navigation' | 'fuel' | 'truck' | 'job' | 'speedLimit' | 'time' | 'rest' | 'trips' | 'wiki' | 'maneuver' | 'location' | 'help';
 
 const INTENTS: Array<[Intent, RegExp]> = [
+  ['location', /\b(unde sunt|unde suntem|unde ma aflu|locul unde sunt|locul in care sunt|orasul in care sunt)\b/],
   ['maneuver', /\b(iesire|iesirea|banda|benzi|viraj|virez|intersectie|urmatoarea manevra)\b/],
   ['trips', /\b(ieri|istoric|ultima cursa|ultimele curse|curse|cariera|castigat)\b/],
   ['rest', /\b(odihn|somn|dorm|obosit|pauza)/],
@@ -361,13 +386,21 @@ export async function answerLocally(question: string, ctx: CopilotContext): Prom
       const status = t.status === 'delivered' ? 'livrată' : t.status === 'cancelled' ? 'anulată' : 'neterminată';
       return `Ultima cursă (${when}, ${status}): ${t.cargo ?? 'marfă necunoscută'}, ${t.sourceCity ?? '?'} → ${t.destinationCity ?? '?'}, ${f.distance(t.drivenKm, f.defaultUnits(t.gameId))} condus${t.revenue !== null ? `, câștig ${f.money(t.revenue, t.gameId)}` : ''}${t.fines ? `, amenzi ${f.money(t.fines, t.gameId)}` : ''}. Am ${trips.length === 3 ? 'mai multe' : trips.length} curse în jurnal.`;
     }
-    case 'maneuver':
-      return 'Încă nu am harta rutieră a jocului, deci nu pot spune ieșiri sau benzi fără să ghicesc. Urmează indicațiile GPS-ului din joc.';
+    case 'location': {
+      const location = fr.live ? ctx.location?.() : null;
+      return location ? `Ești în zona orașului ${location.city}, după poziția din ETS2${tag}. Poziția față de oraș este aproximativă.`
+        : 'Nu pot identifica un oraș apropiat din poziția disponibilă.';
+    }
+    case 'maneuver': {
+      const turn = fr.live ? ctx.nextTurn?.() : null;
+      return turn ? `Pe ruta calculată de aplicație, traseul virează ${turn.direction === 'left' ? 'la stânga' : 'la dreapta'} în ${turn.mapMetres} m pe hartă${tag}.`
+        : 'Nu am un viraj apropiat pe ruta calculată și nu pot spune ieșiri sau benzi. Urmează indicațiile GPS-ului din joc.';
+    }
     case 'wiki': {
       if (!ctx.wiki) return 'Enciclopedia nu este încărcată.';
       const q = wikiQuery(question);
       const hits = q ? ctx.wiki.search(q, 3) : [];
-      if (hits.length === 0) return `Nu am găsit „${q}” în enciclopedie (acum conține doar date ATS).`;
+      if (hits.length === 0) return `Nu am găsit „${q}” în enciclopedie (pentru jocul curent).`;
       const h = hits[0]!;
       const d = describeWiki(ctx.wiki, h.kind, h.id);
       return wikiSentence(h.kind, d);
@@ -391,11 +424,11 @@ function wikiSentence(kind: string, d: Record<string, unknown>): string {
   const list = (v: unknown, n = 5) => (Array.isArray(v) ? v.slice(0, n).join(', ') : '');
   switch (kind) {
     case 'city':
-      return `${d.name} este un oraș în ${d.state} (ATS). Companii: ${list(d.companies, 6) || 'necunoscute'}. Drumuri: ${list(d.roads) || '—'}. Vecini: ${list(d.neighbors) || '—'}.`;
+      return `${d.name} este un oraș în ${d.state}. Companii: ${list(d.companies, 6) || 'necunoscute'}. Drumuri: ${list(d.roads) || '—'}. Vecini: ${list(d.neighbors) || '—'}.`;
     case 'company':
-      return `${d.name}: ${d.industry ?? 'companie'} în ATS. Depozite: ${(d.depots as Array<{ type: string; cities: string[] }>).map((x) => `${x.type} (${x.cities.join(', ')})`).slice(0, 3).join('; ')}.`;
+      return `${d.name}: ${d.industry ?? 'companie'}. Depozite: ${(d.depots as Array<{ type: string; cities: string[] }>).map((x) => `${x.type} (${x.cities.join(', ')})`).slice(0, 3).join('; ')}.`;
     case 'cargo':
-      return `${d.name} este o marfă ATS${d.dlc ? ` din DLC` : ''}. Remorci: ${list(d.trailerTypes)}.${d.valuePerKm ? ` Valoare de bază (wiki): ${d.valuePerKm}.` : ''}`;
+      return `${d.name} este o marfă${d.dlc ? ` din DLC` : ''}. Remorci: ${list(d.trailerTypes)}.${d.valuePerKm ? ` Valoare de bază (wiki): ${d.valuePerKm}.` : ''}`;
     case 'truck':
       return `${d.name} (${d.manufacturer}), până la ${d.maxHp ?? '?'} CP${d.electric ? ', electric' : ''}.`;
     default:

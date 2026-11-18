@@ -1,11 +1,33 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
+import { DerivedEventDetector } from '@trucksim/core';
+import { liveSampleState } from '../src/sources.ts';
 import { normalize, SdkEventDetector } from '../src/normalize.ts';
 import { MMF_SIZE, OFFSETS as O, parseScs } from '../src/scs-layout.ts';
 
 function writeStr(b: Buffer, off: number, s: string): void {
   b.write(s, off, 'utf8');
 }
+
+test('paused live telemetry keeps the job through a frozen simulation clock', () => {
+  const raw = parseScs(sample());
+  const detector = new DerivedEventDetector();
+  const initial = detector.next(normalize(raw, 1000, true));
+  assert.equal(initial.filter((event) => event.type === 'job.started').length, 1);
+  raw.paused = true;
+  for (const elapsed of [3000, 10_001, 60_000]) {
+    const state = liveSampleState(raw, elapsed);
+    assert.deepEqual(state, { available: true, reopen: false });
+    const snap = normalize(raw, 1000 + elapsed, state.available);
+    assert.ok(snap.game.paused && snap.job && snap.sdkActive);
+    assert.deepEqual(detector.next(snap).filter((event) => event.type.startsWith('job.') || event.type.startsWith('game.')), []);
+  }
+  raw.paused = false;
+  assert.equal(liveSampleState(raw, 0).available, true);
+  raw.paused = true;
+  raw.sdkActive = false;
+  assert.deepEqual(liveSampleState(raw, 10_001), { available: false, reopen: true });
+});
 
 /** A synthetic plugin memory block with known values at the documented offsets. */
 function sample(): Buffer {
@@ -49,6 +71,12 @@ function sample(): Buffer {
   b.writeBigUInt64LE(7840n, O.jobIncome);
   b[O.onJob] = 1;
   b[O.trailerBase + 80] = 1; // trailer 0 attached
+  writeStr(b, O.trailerBase + 920, 'krone.coolliner.single_3.reefer');
+  writeStr(b, O.trailerBase + 1112, 'krone');
+  writeStr(b, O.trailerBase + 1176, 'Krone');
+  writeStr(b, O.trailerBase + 1240, 'Cool Liner');
+  writeStr(b, O.trailerBase + 1304, 'single');
+  b.writeUInt32LE(6, O.trailerBase + 148);
   return b;
 }
 
@@ -62,6 +90,11 @@ test('parses the plugin layout at the documented offsets', () => {
   assert.equal(r.coordinateX, 12345.5);
   assert.equal(r.trailers.length, 1);
   assert.equal(r.trailers[0]!.attached, true);
+  assert.equal(r.trailers[0]!.id, 'krone.coolliner.single_3.reefer');
+  assert.equal(r.trailers[0]!.brandId, 'krone');
+  assert.equal(r.trailers[0]!.name, 'Cool Liner');
+  assert.equal(r.trailers[0]!.chainType, 'single');
+  assert.equal(r.trailers[0]!.wheelCount, 6);
 });
 
 test('normalizes units and keeps unknown values null', () => {

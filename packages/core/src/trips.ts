@@ -3,6 +3,14 @@ import type { GameEvent, Snapshot, Trip, TripPoint } from './types.ts';
 const PATH_MIN_DISTANCE_M = 150;
 const PATH_MAX_POINTS = 4000;
 
+function trailerLabel(snap: Snapshot): string | null {
+  const t = snap.trailers.find((x) => x.attached) ?? snap.trailers[0];
+  if (!t) return null;
+  const n = snap.trailers.filter((x) => x.attached).length;
+  const name = [t.brand, t.name].filter(Boolean).join(' ') || t.bodyType;
+  return name ? (n > 1 ? `${name} (+${n - 1})` : name) : null;
+}
+
 function tripId(snap: Snapshot): string {
   return `${snap.game.id ?? 'game'}-${snap.ts.toString(36)}`;
 }
@@ -56,6 +64,10 @@ export class TripTracker {
     const speed = snap.truck.speedKmh;
     if (speed !== null) t.maxSpeedKmh = Math.max(t.maxSpeedKmh ?? 0, speed);
     if (snap.job?.cargoDamage != null) t.cargoDamage = snap.job.cargoDamage;
+    if (snap.trailers.some((x) => x.attached)) {
+      t.trailer = trailerLabel(snap);
+      t.trailerId = snap.trailers.find((x) => x.attached)?.id ?? t.trailerId;
+    }
 
     const p = snap.position;
     if (p) {
@@ -154,6 +166,8 @@ export class TripTracker {
       tolls: 0,
       maxSpeedKmh: null,
       truck: [snap.truck.brand, snap.truck.name].filter(Boolean).join(' ') || null,
+      trailer: trailerLabel(snap),
+      trailerId: snap.trailers.find((t) => t.attached)?.id ?? snap.trailers[0]?.id ?? null,
       events: [],
       path: [],
       source: snap.source,

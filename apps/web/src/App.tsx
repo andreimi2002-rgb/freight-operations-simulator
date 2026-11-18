@@ -82,8 +82,8 @@ export function App() {
     history.replaceState(null, '', `#${t}`);
     setTab(t);
   };
-  const openWiki = (kind: WikiTarget['kind'], id: string) => {
-    setWikiTarget({ kind, id });
+  const openWiki = (kind: WikiTarget['kind'], id: string, game?: WikiTarget['game']) => {
+    setWikiTarget({ kind, id, game });
     go('wiki');
   };
 

@@ -7,7 +7,7 @@ import { loadLocalTrips } from '../lib/localTrips';
 import { updateSettings, useSettings } from '../lib/settings';
 import { bridgeHttp, useTelemetry, getTelemetryState } from '../lib/telemetry';
 import { listen, speak, speechInputSupport, stopSpeaking, type ListenHandle } from '../lib/voice';
-import { loadWiki } from '../lib/wiki';
+import { currentGame, loadWiki } from '../lib/wiki';
 
 interface Msg {
   id: number;
@@ -47,7 +47,7 @@ async function ask(question: string, history: Msg[]): Promise<{ text: string; me
       meta: 'Fără conexiune la PC',
     };
   }
-  const wiki = await loadWiki();
+  const wiki = await loadWiki(currentGame());
   const text = await answerLocally(question, {
     snapshot: t.snapshot,
     now: Date.now(),

@@ -112,9 +112,13 @@ export function normalize(raw: RawScs, ts: number, active: boolean): Snapshot {
     },
     trailers: raw.trailers.map((t) => ({
       attached: t.attached,
+      id: s(t.id),
       name: s(t.name),
       brand: s(t.brand),
+      brandId: s(t.brandId),
       bodyType: s(t.bodyType),
+      chainType: s(t.chainType),
+      wheels: t.wheelCount > 0 ? t.wheelCount : null,
       licensePlate: s(t.licensePlate),
       cargoDamage: n(t.cargoDamage),
       wear: { chassis: n(t.wearChassis), wheels: n(t.wearWheels), body: n(t.wearBody) },

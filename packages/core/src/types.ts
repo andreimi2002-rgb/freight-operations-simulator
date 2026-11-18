@@ -95,9 +95,15 @@ export interface TruckState {
 
 export interface TrailerState {
   attached: boolean;
+  /** Game trailer id, e.g. "krone.coolliner.single_3..." (matches the encyclopedia by prefix). */
+  id: string | null;
   name: string | null;
   brand: string | null;
+  brandId: string | null;
   bodyType: string | null;
+  /** single, double, b_double, hct... */
+  chainType: string | null;
+  wheels: number | null;
   licensePlate: string | null;
   cargoDamage: number | null;
   wear: { chassis: number | null; wheels: number | null; body: number | null };
@@ -152,6 +158,7 @@ export interface Position {
 export interface Snapshot {
   v: 1;
   source: DataSource;
+  demoRoute?: 'regional';
   /** Wall-clock time the snapshot was taken (epoch ms). */
   ts: number;
   /** True when the game is running and the SDK delivers data. */
@@ -233,6 +240,9 @@ export interface Trip {
   tolls: number;
   maxSpeedKmh: number | null;
   truck: string | null;
+  /** Trailer pulled on this job, e.g. "Krone Cool Liner". */
+  trailer: string | null;
+  trailerId: string | null;
   events: GameEvent[];
   path: TripPoint[];
   source: DataSource;

@@ -1,4 +1,5 @@
 import { useSyncExternalStore } from 'react';
+import type { RegionalMap } from '../../../../packages/core/src/regional-map.ts';
 import {
   DemoSimulator,
   DerivedEventDetector,
@@ -82,7 +83,7 @@ function pushSnapshot(snap: Snapshot, events: GameEvent[]): void {
 // --- Demo source (runs in the browser) -------------------------------------
 
 let demoTimer: number | null = null;
-let demoSim: DemoSimulator | null = null;
+let demoRequest: AbortController | null = null;
 const demoDerived = new DerivedEventDetector();
 const demoTrips = new TripTracker(
   (trip) => {
@@ -96,18 +97,30 @@ const demoTrips = new TripTracker(
 
 function startDemo(): void {
   stopDemo();
-  demoSim = new DemoSimulator();
+  const request = new AbortController();
+  demoRequest = request;
   demoDerived.reset();
-  set({ link: 'demo', linkError: null, status: null, trail: [], events: [] });
-  demoTimer = window.setInterval(() => {
-    const { snapshot, events } = demoSim!.tick(Date.now());
-    const all = [...demoDerived.next(snapshot), ...events];
-    demoTrips.update(snapshot, all);
-    pushSnapshot(snapshot, all);
-  }, 100);
+  set({ link: 'demo', linkError: null, snapshot: null, status: null, trail: [], events: [] });
+  const start = (map: RegionalMap | null) => {
+    if (request.signal.aborted) return;
+    const simulator = new DemoSimulator(undefined, map?.demoRoute, map?.demoDestination);
+    const tick = () => {
+      const { snapshot, events } = simulator.tick(Date.now());
+      const all = [...demoDerived.next(snapshot), ...events];
+      demoTrips.update(snapshot, all);
+      pushSnapshot(snapshot, all);
+    };
+    tick();
+    demoTimer = window.setInterval(tick, 100);
+  };
+  const settings = getSettings();
+  if (settings.bridgeUrl && settings.token) void fetchRegionalMap().then(start, () => start(null));
+  else start(null);
 }
 
 function stopDemo(): void {
+  demoRequest?.abort();
+  demoRequest = null;
   if (demoTimer !== null) window.clearInterval(demoTimer);
   demoTimer = null;
 }
@@ -125,6 +138,26 @@ export function bridgeHttp(path: string, init: RequestInit = {}): Promise<Respon
     ...init,
     headers: { ...(init.headers ?? {}), Authorization: `Bearer ${s.token}`, 'Content-Type': 'application/json' },
   });
+}
+
+let mapFetch: { url: string; token: string; result: Promise<RegionalMap> } | null = null;
+
+export function fetchRegionalMap(): Promise<RegionalMap> {
+  const { bridgeUrl, token } = getSettings();
+  if (mapFetch?.url === bridgeUrl && mapFetch.token === token) return mapFetch.result;
+  const result = bridgeHttp('/api/map/ets2/ro-bg', { signal: AbortSignal.timeout(5000) })
+    .then(async (response) => {
+      if (!response.ok) {
+        throw new Error(response.status === 404 ? 'Verifică versiunea bridge-ului și instalarea ETS2.' : `Bridge-ul a răspuns cu eroarea ${response.status}.`);
+      }
+      return await response.json() as RegionalMap;
+    })
+    .catch((error: unknown) => {
+      if (mapFetch?.result === result) mapFetch = null;
+      throw error;
+    });
+  mapFetch = { url: bridgeUrl, token, result };
+  return result;
 }
 
 function wsUrl(base: string): string {

@@ -17,10 +17,11 @@ export function SourceBadge({ compact = false }: { compact?: boolean }) {
   const now = useNow(1000);
   const f = freshness(t, now);
   const game = t.snapshot?.sdkActive ? t.snapshot.game.id : null;
+  const paused = f === 'live' && t.snapshot?.game.paused;
   return (
-    <span className={`badge ${f}`} role="status" aria-live="polite">
+    <span className={`badge ${paused ? 'stale' : f}`} role="status" aria-live="polite">
       <span className="dot" />
-      {LABEL[f]}
+      {paused ? 'Pauză' : LABEL[f]}
       {!compact && game ? ` · ${game.toUpperCase()}` : ''}
     </span>
   );

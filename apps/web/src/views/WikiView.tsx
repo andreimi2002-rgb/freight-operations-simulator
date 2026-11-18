@@ -1,10 +1,11 @@
 import { useMemo, useState, type ReactNode } from 'react';
-import type { WikiIndex, WikiKind } from '@trucksim/core';
+import type { WikiGame, WikiIndex, WikiKind } from '@trucksim/core';
 import { IconBack, IconBook, IconBox, IconBuilding, IconChevron, IconLink, IconPin, IconSearch, IconTruck } from '../components/Icons';
 import { Segmented } from '../components/ui';
-import { useWiki } from '../lib/wiki';
+import { currentGame, useWiki } from '../lib/wiki';
+import { useTelemetry } from '../lib/telemetry';
 
-export interface WikiTarget { kind: WikiKind; id: string }
+export interface WikiTarget { kind: WikiKind; id: string; game?: WikiGame }
 
 const KIND_ICON: Record<WikiKind, { icon: ReactNode; tone: string }> = {
   city: { icon: <IconPin />, tone: 'var(--blue)' },
@@ -17,25 +18,39 @@ const KIND_ICON: Record<WikiKind, { icon: ReactNode; tone: string }> = {
 type Filter = 'all' | WikiKind;
 
 export function WikiView({ target, setTarget }: { target: WikiTarget | null; setTarget: (t: WikiTarget | null) => void }) {
-  const wiki = useWiki();
+  const t = useTelemetry();
+  const [picked, setPicked] = useState<WikiGame>(() => currentGame());
+  const game = target?.game ?? picked;
+  const { wiki, loading } = useWiki(game);
   const [q, setQ] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
+  const open = (x: WikiTarget | null) => setTarget(x ? { ...x, game: x.game ?? game } : null);
 
-  if (target && wiki) return <Detail wiki={wiki} target={target} open={setTarget} />;
+  if (target && wiki) return <Detail wiki={wiki} target={target} open={open} />;
 
+  const origin = wiki?.data.origin === 'game' ? 'din jocul instalat pe PC' : wiki ? 'Truck Simulator Wiki' : null;
   return (
     <div className="page"><div className="page-inner">
       <h1 className="large-title">Wiki</h1>
-      <p className="page-sub">American Truck Simulator · {wiki ? `${wiki.data.cities.length} orașe, ${wiki.data.companies.length} companii, ${wiki.data.cargo.length} mărfuri` : 'se încarcă…'}</p>
+      <p className="page-sub">
+        {wiki ? `${origin} · ${wiki.data.cities.length} orașe, ${wiki.data.companies.length} companii, ${wiki.data.cargo.length} mărfuri` : loading ? 'se încarcă…' : ''}
+      </p>
+      <div style={{ marginBottom: 12 }}>
+        <Segmented<WikiGame> label="Joc" value={game} onChange={(g) => { setPicked(g); setTarget(null); }} options={[['ets2', 'Euro Truck Simulator 2'], ['ats', 'American Truck Simulator']]} />
+      </div>
       <div className="search" style={{ marginBottom: 12 }}>
         <IconSearch />
         <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Caută orașe, companii, mărfuri, camioane" aria-label="Caută în wiki" autoComplete="off" />
       </div>
       <Segmented<Filter>
         label="Categorie" value={filter} onChange={setFilter}
-        options={[['all', 'Tot'], ['city', 'Orașe'], ['company', 'Companii'], ['cargo', 'Mărfuri'], ['truck', 'Camioane']]}
+        options={[['all', 'Tot'], ['city', 'Orașe'], ['company', 'Companii'], ['cargo', 'Mărfuri'], ['truck', 'Camioane'], ['trailer', 'Remorci']]}
       />
-      {wiki ? <Results wiki={wiki} q={q} filter={filter} open={setTarget} /> : <p className="note">Se încarcă datele…</p>}
+      {wiki ? <Results wiki={wiki} q={q} filter={filter} open={open} />
+        : loading ? <p className="note">Se încarcă datele…</p>
+        : <p className="note" style={{ marginTop: 16 }}>{t.link === 'connected'
+            ? 'Bridge-ul nu are încă date pentru acest joc (extragerea rulează la pornire; jocul trebuie să fie instalat pe PC).'
+            : 'Enciclopedia completă vine de la PC: conectează aplicația la bridge. Fără PC e disponibil doar ATS (din Truck Simulator Wiki).'}</p>}
       <Attribution wiki={wiki} />
     </div></div>
   );
@@ -111,23 +126,24 @@ function Detail({ wiki, target, open }: { wiki: WikiIndex; target: WikiTarget; o
   if (target.kind === 'city') {
     const c = wiki.city(target.id);
     if (!c) return <Missing open={open} />;
-    title = c.name; subtitle = `Oraș · ${c.state}${c.dlc ? ` · DLC ${c.dlc}` : ''}`; url = c.wiki?.url;
+    title = c.name; subtitle = `Oraș · ${c.state}${c.dlc ? ` · ${dlcName(c.dlc)}` : ''}`; url = c.wiki?.url ?? undefined;
     const companies = [...new Set((c.depots ?? []).map((d) => d.company))];
     body = (
       <div className="list">
+        {c.population ? <Field label="Populație">{c.population.toLocaleString('ro-RO')}</Field> : null}
         <Field label="Companii"><Chips items={companies.map(companyChip)} open={go} /></Field>
-        <Field label="Depozite">{(c.depots ?? []).map((d) => d.type).filter(Boolean).join(', ') || '—'}</Field>
-        <Field label="Facilități">{c.facilityDetails?.length ? c.facilityDetails.join('; ') : c.facilities?.join(', ') || '—'}</Field>
-        <Field label="Drumuri">{c.roads?.join(', ') || '—'}</Field>
-        <Field label="Vecini"><Chips items={(c.neighbors ?? []).map(cityChip)} open={go} /></Field>
-        <Field label="Repere">{c.landmarks?.join(', ') || '—'}</Field>
-        <Field label="Fus orar">{c.timezone?.game ?? '—'}</Field>
+        {(c.depots ?? []).some((d) => d.type) ? <Field label="Depozite">{(c.depots ?? []).map((d) => d.type).filter(Boolean).join(', ')}</Field> : null}
+        {c.facilityDetails?.length || c.facilities?.length ? <Field label="Facilități">{c.facilityDetails?.length ? c.facilityDetails.join('; ') : c.facilities?.join(', ')}</Field> : null}
+        {c.roads?.length ? <Field label="Drumuri">{c.roads.join(', ')}</Field> : null}
+        {c.neighbors?.length ? <Field label="Vecini"><Chips items={c.neighbors.map(cityChip)} open={go} /></Field> : null}
+        {c.landmarks?.length ? <Field label="Repere">{c.landmarks.join(', ')}</Field> : null}
+        {c.timezone?.game ? <Field label="Fus orar">{c.timezone.game}</Field> : null}
       </div>
     );
   } else if (target.kind === 'company') {
     const c = wiki.company(target.id);
     if (!c) return <Missing open={open} />;
-    title = c.name; subtitle = `Companie · ${c.industry ?? c.category ?? ''}`; url = c.wiki?.url;
+    title = c.name; subtitle = [`Companie`, c.industry ?? c.category].filter(Boolean).join(" · "); url = c.wiki?.url;
     body = (
       <>
         <div className="list">
@@ -148,13 +164,14 @@ function Detail({ wiki, target, open }: { wiki: WikiIndex; target: WikiTarget; o
   } else if (target.kind === 'cargo') {
     const c = wiki.cargo(target.id);
     if (!c) return <Missing open={open} />;
-    title = c.name; subtitle = `Marfă${c.dlc ? ` · DLC ${c.dlc}` : ''}`; url = c.wiki?.url;
+    title = c.name; subtitle = `Marfă${c.dlc ? ` · ${dlcName(c.dlc)}` : ''}`; url = c.wiki?.url;
     const providers = wiki.data.companies.filter((co) => co.depotTypes.some((d) => d.provides.includes(c.id)));
     const receivers = wiki.data.companies.filter((co) => co.depotTypes.some((d) => d.accepts.includes(c.id)));
     body = (
       <div className="list">
-        <Field label="Greutate">{c.weightLb ? (c.weightLb.min === c.weightLb.max ? `${c.weightLb.min.toLocaleString('ro-RO')} lb` : `${c.weightLb.min.toLocaleString('ro-RO')}–${c.weightLb.max.toLocaleString('ro-RO')} lb`) : '—'}</Field>
-        <Field label="Valoare de bază">{c.valuePerKm ?? '—'}</Field>
+        {c.unitMassKg ? <Field label="Masă pe unitate">{`${c.unitMassKg.toLocaleString('ro-RO')} kg`}</Field> : null}
+        {c.weightLb ? <Field label="Greutate (wiki)">{c.weightLb.min === c.weightLb.max ? `${c.weightLb.min.toLocaleString('ro-RO')} lb` : `${c.weightLb.min.toLocaleString('ro-RO')}–${c.weightLb.max.toLocaleString('ro-RO')} lb`}</Field> : null}
+        <Field label="Plată de bază / unitate / km">{c.valuePerKm ?? '—'}</Field>
         <Field label="Caracteristici">{c.flags.length ? c.flags.join(', ') : '—'}{c.hazmatClass ? ` · ADR ${c.hazmatClass}` : ''}</Field>
         <Field label="Remorci">{c.trailerTypes.join(', ') || '—'}</Field>
         <Field label="Livrată de"><Chips items={providers.map((p) => companyChip(p.id))} open={go} /></Field>
@@ -164,20 +181,61 @@ function Detail({ wiki, target, open }: { wiki: WikiIndex; target: WikiTarget; o
   } else if (target.kind === 'truck') {
     const t = wiki.truck(target.id);
     if (!t) return <Missing open={open} />;
-    title = t.name; subtitle = `Camion · ${t.manufacturer ?? ''}`; url = t.wiki?.url;
+    title = t.name; subtitle = ['Camion', t.electric ? 'electric' : null, t.dlc ? dlcName(t.dlc) : t.availability].filter(Boolean).join(' · '); url = t.wiki?.url ?? undefined;
     body = (
-      <div className="list">
-        <Field label="Putere max.">{t.maxHp ? `${t.maxHp} CP` : '—'}{t.electric ? ' · electric' : ''}</Field>
-        <Field label="Cabine">{t.bodyStyles?.join(', ') || '—'}</Field>
-        <Field label="Transmisii">{t.transmissions?.join(', ') || '—'}</Field>
-        <Field label="Disponibil">{t.availability ?? '—'}</Field>
-      </div>
+      <>
+        <div className="list">
+          <Field label="Putere max.">{t.maxHp ? `${t.maxHp} CP` : '—'}</Field>
+          {t.bodyStyles?.length ? <Field label="Cabine">{t.bodyStyles.join(', ')}</Field> : null}
+          {t.chassis?.length ? <Field label="Șasiu">{t.chassis.join(', ')}</Field> : null}
+          {t.transmissions?.length ? <Field label="Cutii de viteze">{t.transmissions.join(', ')}</Field> : null}
+          {t.engines?.length ? null : <Field label="Disponibil">{t.availability ?? '—'}</Field>}
+        </div>
+        {t.engines?.length ? (
+          <>
+            <h2 className="section-title">Motoare ({t.engines.length})</h2>
+            <div className="list">
+              {t.engines.map((e, i) => (
+                <div className="row" key={i}>
+                  <div className="grow">
+                    <div className="title" style={{ fontSize: 16 }}>{e.name}</div>
+                    <div className="subtitle">
+                      {[e.torqueNm ? `${e.torqueNm.toLocaleString('ro-RO')} Nm` : null, e.volumeL ? `${e.volumeL} L` : null, e.unlock != null ? `nivel ${e.unlock}` : null].filter(Boolean).join(' · ')}
+                    </div>
+                  </div>
+                  <div className="value" style={{ fontWeight: 600, color: 'var(--label)' }}>{e.hp ? `${e.hp} CP` : e.kw ? `${e.kw} kW` : '—'}</div>
+                </div>
+              ))}
+            </div>
+          </>
+        ) : null}
+      </>
     );
   } else {
     const t = wiki.trailer(target.id);
     if (!t) return <Missing open={open} />;
-    title = t.name; subtitle = 'Remorcă';
-    body = <div className="list"><Field label="Mărfuri"><Chips items={t.cargo.map(cargoChip)} open={go} /></Field></div>;
+    title = t.name; subtitle = ['Remorcă', t.brand, t.dlc ? dlcName(t.dlc) : t.bodies ? 'joc de bază' : null].filter(Boolean).join(' · ');
+    body = (
+      <>
+        <div className="list">
+          {t.chassis?.length ? <Field label="Șasiu / axe">{t.chassis.join(', ')}</Field> : null}
+          {t.cargo.length ? <Field label="Mărfuri"><Chips items={t.cargo.map(cargoChip)} open={go} /></Field> : null}
+        </div>
+        {t.bodies?.length ? (
+          <>
+            <h2 className="section-title">Caroserii ({t.bodies.length})</h2>
+            <div className="list">
+              {t.bodies.map((b, i) => (
+                <div className="row" key={i}>
+                  <span className="grow">{b.name}</span>
+                  <span className="value">{[b.volumeM3 ? `${b.volumeM3} m³` : null, b.lengthM ? `${b.lengthM.toLocaleString('ro-RO')} m` : null].filter(Boolean).join(' · ')}</span>
+                </div>
+              ))}
+            </div>
+          </>
+        ) : null}
+      </>
+    );
   }
 
   return (
@@ -210,9 +268,37 @@ function Missing({ open }: { open: (t: null) => void }) {
   );
 }
 
+/** Display names of map DLCs; unknown ids are shown as they are. */
+const DLC_NAMES: Record<string, string> = {
+  balkan_e: 'DLC Road to the Black Sea', balkan_w: 'DLC West Balkans', balt: 'DLC Beyond the Baltic Sea', east: 'DLC Going East!',
+  north: 'DLC Scandinavia', fr: 'DLC Vive la France!', it: 'DLC Italia', iberia: 'DLC Iberia', greece: 'DLC Greece',
+  heart_russia: 'DLC Heart of Russia', nordic_horizons: 'DLC Nordic Horizons',
+  krone: 'DLC Krone Trailer Pack', schmitz: 'DLC Schmitz Cargobull Trailer Pack', kogel: 'DLC Kögel Trailer Pack',
+  wielton: 'DLC Wielton Trailer Pack', feldbinder: 'DLC Feldbinder Trailer Pack', kassbohrer: 'DLC Kässbohrer Trailer Pack',
+  schwarzmuller: 'DLC Schwarzmüller Trailer Pack', tirsan: 'DLC Tırsan Trailer Pack', lodeking: 'DLC Lode King & Prestige Trailers Pack',
+};
+function dlcName(id: string): string {
+  return DLC_NAMES[id] ?? `DLC ${id.replace(/_/g, ' ')}`;
+}
+
 function Attribution({ wiki }: { wiki: WikiIndex | null }) {
   if (!wiki) return null;
   const m = wiki.data.meta;
+  if (wiki.data.origin === 'game' && wiki.data.game === 'ets2') {
+    return (
+      <p className="note" style={{ marginTop: 24 }}>
+        <IconBook style={{ width: 14, height: 14, verticalAlign: -2 }} /> Date extrase pe PC din jocul tău instalat, cu DLC-urile tale. Conținut SCS Software; nu sunt publicate nicăieri.
+      </p>
+    );
+  }
+  if (wiki.data.origin === 'game') {
+    return (
+      <p className="note" style={{ marginTop: 24 }}>
+        <IconBook style={{ width: 14, height: 14, verticalAlign: -2 }} /> Date extrase pe PC din jocul tău instalat (conținut SCS Software, nepublicat). Detalii suplimentare (repere, drumuri, facilități) din Truck Simulator Wiki, licență{' '}
+        <a href={m.licenceUrl} target="_blank" rel="noopener noreferrer">{m.licence}</a>, preluate la {m.retrieved}.
+      </p>
+    );
+  }
   return (
     <p className="note" style={{ marginTop: 24 }}>
       <IconBook style={{ width: 14, height: 14, verticalAlign: -2 }} /> {m.attribution} Licență{' '}

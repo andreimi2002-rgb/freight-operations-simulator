@@ -10,3 +10,6 @@ var/
 recordings/*
 !recordings/README.md
 !recordings/samples/
+
+# Game data extracted from the local installation (SCS content, stays on this PC)
+data/generated/

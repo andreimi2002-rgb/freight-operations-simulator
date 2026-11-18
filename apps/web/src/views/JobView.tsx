@@ -1,6 +1,6 @@
 import type { ReactElement, SVGProps } from 'react';
 import { fmt, type GameEvent } from '@trucksim/core';
-import { IconBox, IconBuilding, IconChevron, IconClock, IconMoney, IconPin, IconRoute, IconShip, IconToll, IconWarn, IconWeight, IconBolt, IconFuel, IconBed, IconCheck } from '../components/Icons';
+import { IconBox, IconBuilding, IconChevron, IconTruck, IconClock, IconMoney, IconPin, IconRoute, IconShip, IconToll, IconWarn, IconWeight, IconBolt, IconFuel, IconBed, IconCheck } from '../components/Icons';
 import { Bar, Empty, PageHeader, Stat } from '../components/ui';
 import { useNow, useUnits } from '../lib/hooks';
 import { freshness, useTelemetry } from '../lib/telemetry';
@@ -54,13 +54,13 @@ export function EventRow({ e }: { e: GameEvent }) {
   );
 }
 
-export function JobView({ openWiki }: { openWiki: (kind: 'city' | 'company' | 'cargo', id: string) => void }) {
+export function JobView({ openWiki: openWikiFor }: { openWiki: (kind: 'city' | 'company' | 'cargo' | 'trailer', id: string, game?: 'ets2' | 'ats') => void }) {
   const t = useTelemetry();
   const now = useNow(1000);
   const f = freshness(t, now);
   const snap = t.snapshot;
   const units = useUnits(snap?.game.id ?? null);
-  const wiki = useWiki();
+  const { wiki } = useWiki(snap?.game.id ?? 'ets2');
   const live = snap?.sdkActive && f !== 'stale' && f !== 'offline';
   const j = live ? snap!.job : null;
 
@@ -83,17 +83,18 @@ export function JobView({ openWiki }: { openWiki: (kind: 'city' | 'company' | 'c
   }
 
   const game = snap.game.id;
+  const openWiki = (kind: 'city' | 'company' | 'cargo', id: string) => openWikiFor(kind, id, game ?? undefined);
   const left = j.deadlineAbsMin !== null && snap.game.timeAbsMin !== null ? j.deadlineAbsMin - snap.game.timeAbsMin : null;
   const nav = snap.navigation;
   const progress = j.plannedDistanceKm && nav.distanceKm !== null ? 1 - nav.distanceKm / j.plannedDistanceKm : null;
   const late = left !== null && nav.timeMin !== null && nav.timeMin > left;
 
-  // Link to the encyclopedia only when the ids match exactly (ATS data today).
-  const srcCompany = game === 'ats' && j.sourceCompanyId ? wiki?.companyByGameId(j.sourceCompanyId) : undefined;
-  const dstCompany = game === 'ats' && j.destinationCompanyId ? wiki?.companyByGameId(j.destinationCompanyId) : undefined;
-  const srcCity = game === 'ats' && j.sourceCityId ? wiki?.city(j.sourceCityId) : undefined;
-  const dstCity = game === 'ats' && j.destinationCityId ? wiki?.city(j.destinationCityId) : undefined;
-  const cargo = game === 'ats' && j.cargoId ? wiki?.cargo(j.cargoId) : undefined;
+  // Link to the encyclopedia only when the game ids match exactly.
+  const srcCompany = j.sourceCompanyId ? wiki?.companyByGameId(j.sourceCompanyId) : undefined;
+  const dstCompany = j.destinationCompanyId ? wiki?.companyByGameId(j.destinationCompanyId) : undefined;
+  const srcCity = j.sourceCityId ? wiki?.city(j.sourceCityId) : undefined;
+  const dstCity = j.destinationCityId ? wiki?.city(j.destinationCityId) : undefined;
+  const cargo = j.cargoId ? wiki?.cargo(j.cargoId) : undefined;
 
   return (
     <div className="page"><div className="page-inner">
@@ -115,7 +116,7 @@ export function JobView({ openWiki }: { openWiki: (kind: 'city' | 'company' | 'c
           <div className="route-stop">
             <span className="route-dot" />
             <div className="grow">
-              <div className="route-city">{j.sourceCity ?? 'Necunoscut'}</div>
+              <div className="route-city">{srcCity?.name ?? j.sourceCity ?? 'Necunoscut'}</div>
               <div className="muted">{j.sourceCompany ?? 'companie necunoscută'}</div>
             </div>
             <WikiLinks a={srcCompany && { label: 'Companie', on: () => openWiki('company', srcCompany.id) }} b={srcCity && { label: 'Oraș', on: () => openWiki('city', srcCity.id) }} />
@@ -123,7 +124,7 @@ export function JobView({ openWiki }: { openWiki: (kind: 'city' | 'company' | 'c
           <div className="route-stop">
             <span className="route-dot end" />
             <div className="grow">
-              <div className="route-city">{j.destinationCity ?? 'Necunoscut'}</div>
+              <div className="route-city">{dstCity?.name ?? j.destinationCity ?? 'Necunoscut'}</div>
               <div className="muted">{j.destinationCompany ?? 'companie necunoscută'}</div>
             </div>
             <WikiLinks a={dstCompany && { label: 'Companie', on: () => openWiki('company', dstCompany.id) }} b={dstCity && { label: 'Oraș', on: () => openWiki('city', dstCity.id) }} />
@@ -141,20 +142,20 @@ export function JobView({ openWiki }: { openWiki: (kind: 'city' | 'company' | 'c
         ) : null}
       </div>
 
+      <TrailerCard snap={snap} wikiTrailer={(id) => wiki?.trailerByGameId(id)} openTrailer={(id) => openWikiFor('trailer', id, game ?? undefined)} />
+
       <div className="grid grid-2" style={{ marginTop: 12 }}>
         <Stat icon={<IconMoney />} label="Plată" value={fmt.money(j.income, game)} tone="var(--green)" />
         <Stat
           icon={<IconClock />} label="Termen" tone={late ? 'var(--orange)' : 'var(--blue)'}
-          value={left === null ? 'Fără' : left >= 0 ? fmt.duration(left) : `−${fmt.duration(-left)}`}
+          value={left === null ? (j.deadlineAbsMin !== null ? '—' : 'Fără') : left >= 0 ? fmt.duration(left) : `−${fmt.duration(-left)}`}
           foot={j.deadlineAbsMin !== null ? `${fmt.gameClock(j.deadlineAbsMin)}${late ? ' · nu ajungi la timp' : ''}` : 'fără termen'}
         />
         <Stat icon={<IconRoute />} label="Rămas (GPS joc)" value={fmt.distance(nav.distanceKm, units)} foot={nav.timeMin !== null ? `${fmt.duration(nav.timeMin)} timp de joc` : 'fără rută setată'} />
         <Stat icon={<IconWeight />} label="Daune marfă" value={fmt.percent(j.cargoDamage, 1)} tone={j.cargoDamage && j.cargoDamage > 0.05 ? 'var(--red)' : undefined} />
       </div>
 
-      {game === 'ets2' ? (
-        <p className="note">Fișele din enciclopedie acoperă deocamdată doar ATS. Datele ETS2 (companii, orașe, mărfuri) vin într-o fază următoare, extrase din fișierele jocului.</p>
-      ) : null}
+      {!wiki ? <p className="note">Fișele din enciclopedie apar când telefonul e conectat la PC (datele se extrag din jocul instalat).</p> : null}
 
       <Events events={t.events} />
     </div></div>
@@ -191,6 +192,66 @@ function Events({ events }: { events: GameEvent[] }) {
     <>
       <h2 className="section-title">Evenimente recente</h2>
       <div className="list">{events.slice(0, 12).map((e) => <EventRow key={e.id} e={e} />)}</div>
+    </>
+  );
+}
+
+const BODY_RO: Record<string, string> = {
+  dryvan: 'Dubă', curtainside: 'Prelată', refrigerated: 'Frigorifică', insulated: 'Izotermă', flatbed: 'Platformă',
+  container: 'Container', tank: 'Cisternă', food_tank: 'Cisternă alimentară', chemtank: 'Cisternă chimică', fuel_tank: 'Cisternă carburant',
+  gas_tank: 'Cisternă gaz', silo: 'Siloz', dumper: 'Basculantă', log: 'Lemn', livestock: 'Animale vii', lowbed: 'Trailer agabaritic',
+  lowloader: 'Platformă joasă', car_transporter: 'Transport auto', dropdeck: 'Drop deck', hopper: 'Buncăr', moving_floor: 'Podea mobilă',
+};
+const CHAIN_RO: Record<string, string> = {
+  single: 'semiremorcă simplă', double: 'tren dublu', b_double: 'B-double', hct: 'HCT', triple: 'tren triplu', rmd: 'Rocky Mountain double', tpl: 'turnpike double',
+};
+
+function TrailerCard({ snap, wikiTrailer, openTrailer }: {
+  snap: NonNullable<ReturnType<typeof useTelemetry>['snapshot']>;
+  wikiTrailer: (id: string) => { id: string; name: string; dlc?: string | null } | undefined;
+  openTrailer: (id: string) => void;
+}) {
+  const attached = snap.trailers.filter((t) => t.attached);
+  if (!attached.length) {
+    return (
+      <div className="card" style={{ marginTop: 12, display: 'flex', gap: 12, alignItems: 'center' }}>
+        <div className="row-icon" style={{ background: 'var(--label-3)' }}><IconTruck /></div>
+        <div><b>Remorcă</b><div className="muted" style={{ fontSize: 14 }}>Nicio remorcă atașată acum{snap.job?.cargoLoaded === false ? ' (o iei de la expeditor)' : ''}.</div></div>
+      </div>
+    );
+  }
+  return (
+    <>
+      <h2 className="section-title">Remorcă{attached.length > 1 ? `i (${attached.length})` : ''}</h2>
+      <div className="list">
+        {attached.map((t, i) => {
+          const w = t.id ? wikiTrailer(t.id) : undefined;
+          const bodyLabel = t.bodyType ? BODY_RO[t.bodyType] : undefined;
+          const knownName = [t.brand, t.name].filter(Boolean).join(' ') || w?.name;
+          const name = knownName || (bodyLabel ? `Remorcă · ${bodyLabel}` : 'Remorcă');
+          const details = [
+            t.bodyType && (knownName || !bodyLabel) ? (bodyLabel ?? t.bodyType.replace(/_/g, ' ')) : null,
+            i === 0 && t.chainType ? (CHAIN_RO[t.chainType] ?? t.chainType) : null,
+            t.wheels ? `${t.wheels / 2} axe` : null,
+            t.licensePlate ? t.licensePlate.replace(/<[^>]+>/g, '').trim() : null,
+          ].filter(Boolean);
+          return (
+            <button key={i} className="row button" onClick={() => w && openTrailer(w.id)} disabled={!w} style={{ cursor: w ? 'pointer' : 'default' }}>
+              <div className="row-icon" style={{ background: 'var(--teal)' }}><IconTruck /></div>
+              <div className="grow">
+                <div className="title">{name}</div>
+                <div className="subtitle">{details.join(' · ') || '—'}</div>
+                <div style={{ display: 'flex', gap: 12, marginTop: 6, fontSize: 13 }} className="muted">
+                  <span>uzură șasiu {fmt.percent(t.wear.chassis, 1)}</span>
+                  <span>roți {fmt.percent(t.wear.wheels, 1)}</span>
+                  {t.cargoDamage !== null ? <span>marfă {fmt.percent(t.cargoDamage, 1)}</span> : null}
+                </div>
+              </div>
+              {w ? <IconChevron className="chev" /> : null}
+            </button>
+          );
+        })}
+      </div>
     </>
   );
 }

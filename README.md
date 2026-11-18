@@ -49,6 +49,7 @@ Pentru microfon și pentru aplicația de pe Netlify ai nevoie de HTTPS până la
 | `apps/bridge` | Serviciul Windows: citire memorie partajată (koffi → kernel32), normalizare, WebSocket/REST, SQLite (`node:sqlite`), înregistrări `.jsonl.gz`, Claude. |
 | `apps/web` | PWA React + Vite: design Apple, hartă canvas cu vedere 3D, voce (Web Speech API). |
 | `data/ats` | Date ATS din Truck Simulator Wiki (CC BY-SA 4.0), moștenite din Freight World. |
+| `data/generated/` | Date extrase de bridge din jocurile instalate pe PC (orașe, companii, mărfuri, ETS2 + ATS). Se refac singure la actualizări; nu se urcă pe GitHub (conținut SCS). |
 | `recordings/` | Sesiuni live înregistrate automat (ignorate de git), pentru replay și teste. |
 | `docs/` | Plan, instalare, validare pe jocul real. |
 

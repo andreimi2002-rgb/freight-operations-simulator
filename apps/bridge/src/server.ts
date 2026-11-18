@@ -3,7 +3,11 @@ import { createServer, type IncomingMessage, type ServerResponse } from 'node:ht
 import { extname, join, normalize as normPath, resolve, sep } from 'node:path';
 import { timingSafeEqual } from 'node:crypto';
 import { WebSocketServer, type WebSocket } from 'ws';
-import type { BridgeMode, ServerMessage, WikiIndex } from '@trucksim/core';
+import type { BridgeMode, GameId, ServerMessage } from '@trucksim/core';
+import type { WikiProvider } from './gamedata/wiki.ts';
+import { loadRegionalMap, regionalMapGzip, routeToCity } from './map/regional.ts';
+import { worldMeta, worldNearbyCity, worldOverview, worldRouteToCity, worldStatus, worldTile } from './map/world.ts';
+import { nearbyCity, nextRouteTurn } from '../../../packages/core/src/regional-map.ts';
 import type { CoDriver, ChatTurn } from './ai.ts';
 import { BRIDGE_VERSION, type Config } from './config.ts';
 import type { Hub } from './hub.ts';
@@ -28,7 +32,7 @@ interface Deps {
   store: TripStore;
   recorder: Recorder;
   ai: CoDriver;
-  wiki: WikiIndex | null;
+  wiki: WikiProvider;
   /** 6-digit code shown in the bridge window, new on every start. */
   pairCode: string;
 }
@@ -122,6 +126,74 @@ export function startServer(deps: Deps): { close: () => void } {
       }
       if (req.method === 'DELETE') return json(res, store.delete(id) ? 200 : 404, { deleted: id });
     }
+    if (req.method === 'GET' && path === '/api/gamedata') return json(res, 200, wiki.status);
+    if (req.method === 'POST' && path === '/api/gamedata/refresh') {
+      await wiki.refresh(true);
+      return json(res, 200, wiki.status);
+    }
+    const gd = /^\/api\/gamedata\/(ets2|ats)$/.exec(path);
+    if (req.method === 'GET' && gd) {
+      const body = wiki.gzipped(gd[1] as GameId);
+      if (!body) return json(res, 404, { error: 'no data for this game' });
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', 'Content-Encoding': 'gzip', 'Cache-Control': 'no-cache' });
+      res.end(body);
+      return;
+    }
+    if (req.method === 'GET' && path === '/api/map/ets2/route') {
+      const snapshot = hub.snapshot;
+      const destinationId = snapshot?.job?.destinationCityId ?? null;
+      const position = snapshot?.position;
+      if (snapshot?.source !== 'live' || !snapshot.sdkActive || snapshot.game.id !== 'ets2' || !destinationId || !position) {
+        return json(res, 200, { destinationId, points: null, turns: [] });
+      }
+      try {
+        // Whole-map router when ready; the regional (RO/BG) one while it builds.
+        const start: [number, number] = [position.x, position.z];
+        const plan = worldMeta()
+          ? worldRouteToCity(destinationId, start, position.headingDeg)
+          : routeToCity(destinationId, start, position.headingDeg);
+        return json(res, 200, { destinationId, points: plan?.points ?? null, turns: plan?.turns ?? [], network: worldMeta() ? 'europe' : 'ro-bg' });
+      } catch (error) {
+        console.warn('[map route]', error);
+        return json(res, 503, { error: 'ETS2 regional routing unavailable' });
+      }
+    }
+    if (req.method === 'GET' && path === '/api/map/ets2/world') {
+      const m = worldMeta();
+      const st = worldStatus();
+      return json(res, 200, {
+        state: st.state,
+        ...(st.state === 'error' ? { error: st.error } : st.state === 'missing' ? { error: st.reason } : {}),
+        meta: m ? { tileSize: m.tileSize, bounds: m.bounds, tiles: m.tiles, cities: m.cities, counts: m.counts, sectors: m.sectors, builtAt: m.builtAt } : null,
+      });
+    }
+    if (req.method === 'GET' && path === '/api/map/ets2/overview') {
+      const body = worldOverview();
+      if (!body) return json(res, 503, { error: 'map not ready' });
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', 'Content-Encoding': 'gzip', 'Cache-Control': 'no-cache' });
+      res.end(body);
+      return;
+    }
+    const tileMatch = /^\/api\/map\/ets2\/tile\/(-?\d+_-?\d+)$/.exec(path);
+    if (req.method === 'GET' && tileMatch) {
+      const body = worldTile(tileMatch[1]!);
+      if (!body) return json(res, 404, { error: 'no such tile' });
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', 'Content-Encoding': 'gzip', 'Cache-Control': 'no-cache' });
+      res.end(body);
+      return;
+    }
+    if (req.method === 'GET' && path === '/api/map/ets2/ro-bg') {
+      try {
+        const body = regionalMapGzip();
+        if (!body) return json(res, 404, { error: 'ETS2 installation unavailable' });
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', 'Content-Encoding': 'gzip', 'Cache-Control': 'no-store' });
+        res.end(body);
+      } catch (err) {
+        console.warn('[map]', err);
+        return json(res, 503, { error: 'ETS2 regional map unavailable' });
+      }
+      return;
+    }
     if (req.method === 'GET' && path === '/api/recordings') return json(res, 200, { recordings: recorder.list(), current: recorder.current });
     if (req.method === 'POST' && path === '/api/mode') {
       const body = (await readBody(req)) as { mode?: BridgeMode; file?: string; speed?: number };
@@ -166,12 +238,46 @@ export function startServer(deps: Deps): { close: () => void } {
             .slice(-10)
             .map((t) => ({ role: t.role, text: t.text.slice(0, 2000) }))
         : [];
-      const reply = await ai.ask(question, history, () => ({
-        snapshot: hub.snapshot,
-        now: Date.now(),
-        trips: (n) => store.list(n, { includeDemo: hub.mode !== 'live' }),
-        wiki,
-      }));
+      const reply = await ai.ask(question, history, () => {
+        const snapshot = hub.snapshot;
+        const position = snapshot?.position;
+        return {
+          snapshot,
+          now: Date.now(),
+          trips: (n) => store.list(n, { includeDemo: hub.mode !== 'live' }),
+          // The encyclopedia of the game being played (ETS2 when unknown).
+          wiki: wiki.index(snapshot?.sdkActive ? snapshot.game.id : null),
+          location: () => {
+            if (snapshot?.game.id !== 'ets2' || !position) return null;
+            try {
+              const near = worldNearbyCity(position);
+              if (near) return near;
+              const map = loadRegionalMap();
+              return map ? nearbyCity(map.cities, position) : null;
+            } catch {
+              return null;
+            }
+          },
+          nextTurn: () => {
+            if (snapshot?.game.id !== 'ets2' || !position) return null;
+            try {
+              if (snapshot.source === 'demo' && snapshot.demoRoute === 'regional') {
+                const map = loadRegionalMap();
+                return map?.demoRoute && map.demoTurns ? nextRouteTurn({ points: map.demoRoute, turns: map.demoTurns }, position) : null;
+              }
+              const destinationId = snapshot.job?.destinationCityId;
+              if (!destinationId) return null;
+              const start: [number, number] = [position.x, position.z];
+              const plan = worldMeta()
+                ? worldRouteToCity(destinationId, start, position.headingDeg)
+                : routeToCity(destinationId, start, position.headingDeg);
+              return plan ? nextRouteTurn(plan, position) : null;
+            } catch {
+              return null;
+            }
+          },
+        };
+      });
       return json(res, 200, reply);
     }
     return json(res, 404, { error: 'not found' });

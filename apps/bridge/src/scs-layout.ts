@@ -20,8 +20,12 @@ export interface RawTrailer {
   wearWheels: number;
   wearBody: number;
   id: string;
+  cargoAccessoryId: string;
   bodyType: string;
+  brandId: string;
   brand: string;
+  chainType: string;
+  wheelCount: number;
   name: string;
   licensePlate: string;
 }
@@ -163,9 +167,13 @@ function trailer(b: Buffer, i: number): RawTrailer {
     wearWheels: f32(b, o + 160),
     wearBody: f32(b, o + 164),
     id: str(b, o + 920),
+    cargoAccessoryId: str(b, o + 984),
     bodyType: str(b, o + 1048),
+    brandId: str(b, o + 1112),
     brand: str(b, o + 1176),
     name: str(b, o + 1240),
+    chainType: str(b, o + 1304),
+    wheelCount: u32(b, o + 148),
     licensePlate: str(b, o + 1368),
   };
 }
